@@ -56,6 +56,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_YpAamA": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "dp9z6mvai6cz4"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
@@ -145,12 +151,6 @@
             "content": "<p>Water, Glycerin, Hydrated Silica, Sorbitol, Silica, Hydroxyapatite*, Sodium Benzoate, Xylitol, Sodium Lauroyl Sarcosinate, Natural Flavor, Xanthan Gum, Maltodextrin, Lactobacillus paracasei, Dimethyl Sulfone, Stevia Rebaudiana Leaf/Stem Extract, Sodium Bicarbonate, Menthol, Aloe Barbadensis Leaf Juice, Camellia Sinensis Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract. *Nano</p>",
             "page": ""
           }
-        },
-        "tolstoy_shoppable_video_quiz_stories_block_YpAamA": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "dp9z6mvai6cz4"
-          }
         }
       },
       "block_order": [
@@ -161,6 +161,7 @@
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_Y3VetV",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_YpAamA",
         "quantity_selector",
         "ab30e277-8d13-4c9c-b973-b5f18ebcc515",
         "description",
@@ -169,8 +170,7 @@
         "8f4ac970-3a15-4b7d-823a-82ce6560b8df",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_iwBANr",
-        "collapsible_tab_NnPN3E",
-        "tolstoy_shoppable_video_quiz_stories_block_YpAamA"
+        "collapsible_tab_NnPN3E"
       ],
       "custom_css": [
         "@media screen and (min-width: 1100px) {.icon-with-text--inlined {justify-content: unset; }}",
