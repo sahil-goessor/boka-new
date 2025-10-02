@@ -501,7 +501,7 @@
         "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-1": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/boka_icons_dentist-approved.svg",
+            "image": "shopify://shop_images/Dentist-Approved.webp",
             "image_link": "",
             "title": "<strong>Dentist-approved</strong>",
             "text": "<p>All of our products are backed by science and proven to perform.</p>",
@@ -512,7 +512,7 @@
         "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-2": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/boka_icons_ultra-convenient.svg",
+            "image": "shopify://shop_images/Ultra-Convenient.webp",
             "image_link": "",
             "title": "<strong>Ultra-convenient</strong>",
             "text": "<p>Put your smile on repeat with our easy subscription program.</p>",
