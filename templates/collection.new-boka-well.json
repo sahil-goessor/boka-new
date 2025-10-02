@@ -171,6 +171,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_1_Freshens_Breath_1739dee9-74ff-44a9-8c81-b7417f5b861e.png",
+            "image_link": "",
             "title": "<strong>Freshens Breath</strong>",
             "text": "<p>Powered by BLIS K12, a probiotic strain, it lessens severity on bad breath.</p>",
             "link_label": "",
@@ -182,6 +183,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Icon_2_Supports_Oral_Health_03a05cba-8341-42d9-b76f-aeeb2e769af8.png",
+            "image_link": "",
             "title": "<strong>Supports Oral Health</strong>",
             "text": "<p>Our oral supplements support healthy levels of beneficial bacteria in the mouth.</p>",
             "link_label": "",
@@ -192,6 +194,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_3_Boosts_Gut_Health_1080379a-4936-4006-a4b1-ce834553856f.png",
+            "image_link": "",
             "title": "<strong>Improves Immune Function</strong>",
             "text": "<p>Our pre+probiotics helps maintain a healthy oral microbiome, affecting everything from the mouth to your immune system.</p>",
             "link_label": "",
@@ -202,6 +205,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Supports Healthy Teeth & Gums</strong>",
             "text": "<p>Helps maintain strong teeth and healthy gums, supporting overall oral cavity health for a cleaner, fresher mouth.</p>",
             "link_label": "",
@@ -386,6 +390,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Pro_Stix_How_to_use_1.png",
+            "image_link": "",
             "title": "<strong>Step 1: Brush Your Teeth</strong>",
             "text": "<p>Start by thoroughly brushing your teeth as you normally do to ensure a clean mouth.</p>",
             "link_label": "",
@@ -396,6 +401,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Pro_Stix_How_to_use_2.png",
+            "image_link": "",
             "title": "<strong>Step 2: Pour One Stick</strong>",
             "text": "<p>After brushing, take one stick and pour the powder in your mouth—it’s a simple way to add prebiotics and probiotics to your daily routine.</p>",
             "link_label": "",
@@ -406,6 +412,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Pro_Stix_How_to_use_3.png",
+            "image_link": "",
             "title": "<strong>Step 3: Feel the Difference </strong>",
             "text": "<p>Enjoy fresher breath, healthier gums, and a balanced oral microbiome over time.</p>",
             "link_label": "",
@@ -532,6 +539,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Vital_Bite_How_to_use_1_5a4697e9-9845-4743-ab24-6d3ca4ce4871.webp",
+            "image_link": "",
             "title": "<strong>Step 1: Brush Your Teeth</strong>",
             "text": "<p>Start by thoroughly brushing your teeth as you normally do to ensure a clean mouth.</p>",
             "link_label": "",
@@ -542,6 +550,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Vital_Bite_How_to_use_2.png",
+            "image_link": "",
             "title": "<strong>Step 2: Chew One Tablet</strong>",
             "text": "<p>After brushing, take one chewable tablet—it’s a simple way to add prebiotics and probiotics to your daily routine.</p>",
             "link_label": "",
@@ -552,6 +561,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Vital_Bite_How_to_use_3_0f9b73bc-5726-4530-8db7-a2f6f9a22acc.webp",
+            "image_link": "",
             "title": "<strong>Step 3: Feel the Difference </strong>",
             "text": "<p>Enjoy fresher breath, healthier gums, and a balanced oral microbiome over time.</p>",
             "link_label": "",
@@ -685,6 +695,7 @@
         "column_tqiNPe": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Just do it!!</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"If you have been searching for an answer for your bad breath, here it is!!!\"</p><p>- Hannah</p>",
             "link_label": "SHOP NOW",
@@ -694,6 +705,7 @@
         "column_rtnAzk": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Love the powder!</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"The ingredients feel so intentional—probiotics and antioxidants, calming chamomile and even vitamins K & D for bone health\"</p><p>- Sarah</p>",
             "link_label": "SHOP NOW",
@@ -703,6 +715,7 @@
         "column_iVPiqm": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>I love these!</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"These are so convenient and have a refreshing taste and for anyone committed to taking their oral care to the next level\"</p><p>- Victoria</p>",
             "link_label": "SHOP NOW",
@@ -712,6 +725,7 @@
         "column_dyxQ8x": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Just try it!</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"I’ve been using the Vital Bite Pre + Probiotic Tablets for about a month now, and I am beyond impressed!\"</p><p></p><p>- CJ H</p>",
             "link_label": "SHOP NOW",
@@ -1345,7 +1359,7 @@
           "settings": {
             "heading": "How do probiotics benefit oral health?",
             "icon": "question_mark",
-            "row_content": "<p>Probiotics balance the oral microbiome, helping good bacteria thrive for oral wellness.</p>",
+            "row_content": "<p>Probiotics support the oral microbiome, helping good bacteria thrive for oral wellness.</p>",
             "page": ""
           }
         },
