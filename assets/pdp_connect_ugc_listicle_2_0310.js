@@ -37,7 +37,7 @@ window.__WWAI__.WWAI_PRODUCT_GROUP_CONFIG = {
         "discountPercent": 0,
         "subscriptionDiscountPercent": 0,
         "defaultSubscriptionOption": null,
-        "useVariantCompareAtPriceForSubscription": true,
+        "useVariantCompareAtPriceForSubscription": false,
         "discountCodeToApply": [],
         "roundDiscount": true,
         "addOffSuffixToDiscount": false
@@ -103,7 +103,7 @@ window.__WWAI__.WWAI_PRODUCT_GROUP_CONFIG = {
         "discountPercent": 0,
         "subscriptionDiscountPercent": 0,
         "defaultSubscriptionOption": null,
-        "useVariantCompareAtPriceForSubscription": true,
+        "useVariantCompareAtPriceForSubscription": false,
         "discountCodeToApply": [],
         "roundDiscount": true,
         "addOffSuffixToDiscount": false
@@ -186,7 +186,7 @@ window.__WWAI__.WWAI_PRODUCT_GROUP_CONFIG = {
         "discountPercent": 0,
         "subscriptionDiscountPercent": 0,
         "defaultSubscriptionOption": null,
-        "useVariantCompareAtPriceForSubscription": true,
+        "useVariantCompareAtPriceForSubscription": false,
         "discountCodeToApply": [],
         "roundDiscount": true,
         "addOffSuffixToDiscount": false
