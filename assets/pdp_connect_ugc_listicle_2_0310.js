@@ -64,7 +64,7 @@ window.__WWAI__.WWAI_PRODUCT_GROUP_CONFIG = {
         }
       },
       "flowConfig": {
-        "destination": "checkout",
+        "destination": "cart",
         "loader": "add-to-cart-submit-button",
         "showSuccessNotification": false,
         "showErrorNotification": false,
