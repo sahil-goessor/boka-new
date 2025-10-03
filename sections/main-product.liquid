@@ -244,6 +244,13 @@
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
+              {%- liquid
+                assign has_content = false
+                if block.settings.content != blank or block.settings.page.content != blank
+                  assign has_content = true
+                endif
+              -%}
+              {%- if has_content -%}
               <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
                   <summary>
@@ -261,6 +268,7 @@
                   </div>
                 </details>
               </div>
+              {%- endif -%}
             {%- when 'yearly_subs_people' -%}
               {% render 'yearly-subscription', product: product, section: section %}
             {%- when 'quantity_selector' -%}
