@@ -87,7 +87,7 @@
             "layout": "vertical",
             "icon_1": "none",
             "image_1": "shopify://shop_images/Icon_2.svg",
-            "heading_1": "Help supports the oral microbiome",
+            "heading_1": "Help support the oral microbiome",
             "icon_2": "none",
             "image_2": "shopify://shop_images/Icon_4.svg",
             "heading_2": "Freshens Breath",
@@ -429,7 +429,7 @@
           "settings": {
             "position": "top-left",
             "icon": "shopify://shop_images/Icon_1.svg",
-            "title": "Promotes Oral <br>  Wellness",
+            "title": "Promotes Oral   Wellness",
             "description": ""
           }
         },
@@ -438,7 +438,7 @@
           "settings": {
             "position": "top-right",
             "icon": "shopify://shop_images/Icon_2.svg",
-            "title": "Designed for the <br> Oral Microbiome",
+            "title": "Help support the   oral microbiome",
             "description": ""
           }
         },
@@ -447,7 +447,7 @@
           "settings": {
             "position": "bottom-left",
             "icon": "shopify://shop_images/Icon_3.svg",
-            "title": "Supports Good <br>  Bacteria Growth",
+            "title": "Supports Good   Bacteria Growth",
             "description": ""
           }
         },
