@@ -222,21 +222,12 @@
             "yt_shorts_link": "{{ product.metafields.custom.ugc_url_3.value }}",
             "description": "Describe the video"
           }
-        },
-        "video_xqrKr4": {
-          "type": "video",
-          "name": "Video 4",
-          "settings": {
-            "yt_shorts_link": "{{ product.metafields.custom.ugc_url_4.value }}",
-            "description": "Describe the video"
-          }
         }
       },
       "block_order": [
         "video_HQXqqX",
         "video_WwHceX",
-        "video_a9HBAm",
-        "video_xqrKr4"
+        "video_a9HBAm"
       ],
       "disabled": true,
       "name": "t:sections.yt-shorts.presets.name",
@@ -338,6 +329,7 @@
           "name": "Step 1",
           "settings": {
             "image": "{{ product.metafields.custom.image1_how_to_use_refresh_your_routine.value }}",
+            "image_link": "",
             "title": "{{ product.metafields.custom.title_image_1_how_to_use_refresh_your_routine.value }}",
             "text": "<p>{{ product.metafields.custom.description_image_1_how_to_use_refresh_your_routine | metafield_tag }}</p>",
             "link_label": "",
@@ -349,6 +341,7 @@
           "name": "Step 2",
           "settings": {
             "image": "{{ product.metafields.custom.image2_how_to_use_refresh_your_routine.value }}",
+            "image_link": "",
             "title": "{{ product.metafields.custom.title_image_2_how_to_use_refresh_your_routine.value }}",
             "text": "<p>{{ product.metafields.custom.description_image_2_how_to_use_refresh_your_routine | metafield_tag }}</p>",
             "link_label": "",
@@ -360,6 +353,7 @@
           "name": "Step 3",
           "settings": {
             "image": "{{ product.metafields.custom.image3_how_to_use_refresh_your_routine.value }}",
+            "image_link": "",
             "title": "{{ product.metafields.custom.title_image_3_how_to_use_refresh_your_routine.value }}",
             "text": "<p>{{ product.metafields.custom.description_image_3_how_to_use_refresh_your_routine | metafield_tag }}</p>",
             "link_label": "",
@@ -450,6 +444,7 @@
           "name": "Ing 1",
           "settings": {
             "image": "shopify://shop_images/Nano-hydroxyapatite.webp",
+            "image_link": "",
             "title": "{{ product.metafields.custom.ingredients1_a_blend_of_science_flavor.value }}",
             "text": "<p>{{ product.metafields.custom.description_ingredients1_a_blend_of_science_flavor.value }}</p>",
             "link_label": "",
@@ -461,6 +456,7 @@
           "name": "Ing 2",
           "settings": {
             "image": "{{ product.metafields.custom.a_blend_of_science_flavor_2_ingredient_image.value }}",
+            "image_link": "",
             "title": "{{ product.metafields.custom.a_blend_of_science_flavor_2_ingredient_title.value }}",
             "text": "<p>{{ product.metafields.custom.a_blend_of_science_flavor_2_ingredient_desc.value }}</p>",
             "link_label": "",
@@ -472,6 +468,7 @@
           "name": "Ing 3",
           "settings": {
             "image": "{{ product.metafields.custom.a_blend_of_science_flavor_3_ingredient_image.value }}",
+            "image_link": "",
             "title": "{{ product.metafields.custom.a_blend_of_science_flavor_3_ingredient_title.value }}",
             "text": "<p>{{ product.metafields.custom.a_blend_of_science_flavor_3_ingredient_desc.value }}</p>",
             "link_label": "",
@@ -483,6 +480,7 @@
           "name": "Ing 4",
           "settings": {
             "image": "{{ product.metafields.custom.a_blend_of_science_flavor_4_ingredient_image.value }}",
+            "image_link": "",
             "title": "{{ product.metafields.custom.a_blend_of_science_flavor_4_ingredient_title.value }}",
             "text": "<p>{{ product.metafields.custom.a_blend_of_science_flavor_4_ingredient_desc.value }}</p>",
             "link_label": "",
