@@ -3624,3 +3624,7 @@ button.quick-add__submit.button.button--full-width.button--primary.card--horizon
 iframe#launcher {
     z-index: 998 !important;
 }
+
+p.s-price-item {
+    margin: unset;
+}
