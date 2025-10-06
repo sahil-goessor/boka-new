@@ -8,19 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "product.peppermint-blossom-prob-tp.json",
+  "parent": "product.refresh-mint-whitening-tp.json",
   "context": {
     "b2b": true
   },
-  "sections": {
-    "main": {
-      "settings": {},
-      "blocks": {
-        "recharge_subscriptions_subscription_widget_v2_Y3VetV": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
-    }
-  }
+  "sections": {}
 }
