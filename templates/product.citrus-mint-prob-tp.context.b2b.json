@@ -8,19 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "product.cinna-mint-tp.json",
+  "parent": "product.citrus-mint-prob-tp.json",
   "context": {
     "b2b": true
   },
-  "sections": {
-    "main": {
-      "settings": {},
-      "blocks": {
-        "recharge_subscriptions_subscription_widget_v2_haKXEy": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
-    }
-  }
+  "sections": {}
 }
