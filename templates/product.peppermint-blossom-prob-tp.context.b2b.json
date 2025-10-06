@@ -8,19 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "product.orange-cream.json",
+  "parent": "product.peppermint-blossom-prob-tp.json",
   "context": {
     "b2b": true
   },
-  "sections": {
-    "main": {
-      "settings": {},
-      "blocks": {
-        "recharge_subscriptions_subscription_widget_v2_chKBPg": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
-    }
-  }
+  "sections": {}
 }
