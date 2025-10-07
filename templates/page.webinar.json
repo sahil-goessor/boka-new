@@ -663,6 +663,9 @@
         "headline": "Main Panelist",
         "headline_font_size_desktop": 40,
         "headline_font_size_mobile": 30,
+        "desktop_layout": "slider",
+        "mobile_layout": "slider",
+        "desktop_columns": 3,
         "padding_top": 32,
         "padding_bottom": 40
       }
@@ -1249,6 +1252,9 @@
         "headline": "Meet the members",
         "headline_font_size_desktop": 32,
         "headline_font_size_mobile": 24,
+        "desktop_layout": "grid",
+        "mobile_layout": "slider",
+        "desktop_columns": 3,
         "padding_top": 40,
         "padding_bottom": 40
       }
