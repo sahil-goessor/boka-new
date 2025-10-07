@@ -1,15 +1,5 @@
-{%- assign is_b2b = false -%}
-{%- if customer -%}
-  {%- assign tags_downcase = customer.tags | downcase -%}
-  {%- if tags_downcase contains 'b2b' or tags_downcase contains 'wholesale' or tags_downcase contains 'business' -%}
-    {%- assign is_b2b = true -%}
-  {%- endif -%}
-{%- endif -%}
-
 {% if product.metafields.custom.badge %}
 <div class="card__badge {{ settings.badge_position }}">
-  {%- assign badge_text_down = badge_text | default: '' | downcase -%}
-  {%- unless is_b2b and badge_text_down == 'subscribe and donate' -%}
     <span
       id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
       class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }} badge--{{ product.metafields.custom.badge.value.badge_type | handleize }}"
@@ -17,6 +7,5 @@
     >
       {{ product.metafields.custom.badge.value.badge_text }}
     </span>
-  {%- endunless -%}
 </div>
 {% endif %}
