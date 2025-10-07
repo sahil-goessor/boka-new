@@ -16,13 +16,6 @@
     "quick_button_caEbwf": {
       "settings": {},
       "blocks": {
-        "button_FhD7Dx": {
-          "disabled": false,
-          "settings": {
-            "button_text": "Refresh Mint Whitening",
-            "button_link": "https://www.boka.com/products/refresh-mint-whitening-toothpaste"
-          }
-        },
         "button_TdRgtz": {
           "type": "button",
           "disabled": false,
@@ -31,20 +24,26 @@
             "button_link": "https://www.boka.com/products/ela-mint-toothpaste"
           }
         },
+        "button_FhD7Dx": {
+          "disabled": false,
+          "settings": {
+            "button_text": "Refresh Mint Whitening*",
+            "button_link": "https://www.boka.com/products/refresh-mint-whitening-toothpaste"
+          }
+        },
         "button_M9e73G": {
           "type": "button",
           "disabled": false,
           "settings": {
-            "button_text": "Toothpaste",
+            "button_text": "All Toothpaste",
             "button_link": "https://www.boka.com/collections/nano-hydroxyapatite_n-ha_toothpaste"
           }
         }
       },
       "block_order": [
-        "button_FhD7Dx",
         "button_TdRgtz",
-        "button_M9e73G",
-        "button_gnHgxC"
+        "button_FhD7Dx",
+        "button_M9e73G"
       ]
     },
     "e88125fd-54b1-4dc4-a7be-094d886854f5": {
