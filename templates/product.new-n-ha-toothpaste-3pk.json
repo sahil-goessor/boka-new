@@ -317,79 +317,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
-      "type": "image-with-bulleted-text",
-      "blocks": {
-        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Reduces sensitivity</p>",
-            "text_style": "body"
-          }
-        },
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Biocompatible</p>",
-            "text_style": "body"
-          }
-        },
-        "93b178e4-2598-45c7-b4a1-fd50f417768b": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Freshens breath</p>",
-            "text_style": "body"
-          }
-        },
-        "6f829075-8538-46cf-852c-3bb0c8fb002d": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Fluoride-free</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0",
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b",
-        "93b178e4-2598-45c7-b4a1-fd50f417768b",
-        "6f829075-8538-46cf-852c-3bb0c8fb002d"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/A_Content_Benefits_8e4dc48c-0de8-4c9a-b0ff-1c09c1aa0127.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "heading": "<em>Advanced</em> oral care in every flavor",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "caption": "Our proprietary and innovative formula includes Nano-hydroxyapatite (n-Ha) - a biomimetic mineral form of the same ingredient that naturally makes up 97% of your teeth material and 70% of your dentin. n-Ha has been the subject of significant research for decades with a wide variety of potential benefits across dentistry and oral care.",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "button_label": "SHOP NOW",
-        "button_link": "shopify://products/n-ha-toothpaste-3-pack",
-        "second_button_label": "",
-        "second_button_link": "",
-        "content_layout": "overlap",
-        "color_scheme": "custom",
-        "section_background_color": "#ffffff",
-        "custom_background_color": "#fafaf5",
-        "custom_text_color": "#433033",
-        "bullets_color": "#433033",
-        "bullets_line_color": "#433033",
-        "image_behavior": "none",
-        "mobile_heading_alignment": "center",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 18,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
     "custom_liquid_hL9Mbr": {
       "type": "custom-liquid",
       "disabled": true,
@@ -411,6 +338,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/n-Ha_3_Pack_How_To_Use_1.webp",
+            "image_link": "",
             "title": "<strong>Step 1: Prep</strong>",
             "text": "<p>Apply pea-sized amount to your toothbrush</p>",
             "link_label": "",
@@ -421,6 +349,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/n-Ha_3_Pack_How_To_Use_2.webp",
+            "image_link": "",
             "title": "<strong>Step 2: Brush</strong>",
             "text": "<p>Brush thoroughly for two minutes, twice daily</p>",
             "link_label": "",
@@ -431,6 +360,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/n-Ha_3_Pack_How_To_Use_3.webp",
+            "image_link": "",
             "title": "<strong>Step 3: Smile!</strong>",
             "text": "<p>Spit after brushing—skip the rinse to maximize contact time</p>",
             "link_label": "",
@@ -563,6 +493,7 @@
         "column_zGbat7": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Tremendously Effective</strong>",
             "text": "<p>\"In just 10 days, my teeth look noticeably brighter!\" </p><p><em>– Tamara D., US</em></p>",
             "link_label": "",
@@ -572,6 +503,7 @@
         "column_6jpf4F": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Loving This Stuff!</strong>",
             "text": "<p>\"I use it as a boost for my overall dental health—my gums and teeth feel amazing.\" </p><p><em>– Maria, US</em></p>",
             "link_label": "",
@@ -581,6 +513,7 @@
         "column_KLQE7q": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Works</strong>",
             "text": "<p>\"Actually starting to see my beautiful little bones once again.\" </p><p><em>– Mark S., US</em></p>",
             "link_label": "",
@@ -590,6 +523,7 @@
         "column_AJhqE4": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Dental Hygienist Approved</strong>",
             "text": "<p>\"My dental hygienist noticed the difference—even when I didn’t!\" </p><p><em>– Kristina, US</em></p>",
             "link_label": "",
@@ -641,6 +575,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Nano-hydroxyapatite.webp",
+            "image_link": "",
             "title": "<strong>Nano-hydroxyapatite</strong>",
             "text": "<p>mimics tooth enamel</p>",
             "link_label": "",
@@ -651,6 +586,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Alovera_Green_tea.webp",
+            "image_link": "",
             "title": "<strong>Green tea extract</strong>",
             "text": "<p> acts as an antioxidant</p>",
             "link_label": "",
@@ -661,6 +597,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Xylitol.webp",
+            "image_link": "",
             "title": "<strong>Xylitol</strong>",
             "text": "<p>refreshes your mouth with a mild, clean flavor</p>",
             "link_label": "",
@@ -671,6 +608,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Botanical_Extract_1.webp",
+            "image_link": "",
             "title": "<strong>Botanical extracts</strong>",
             "text": "<p>freshens breath</p>",
             "link_label": "",
@@ -1021,7 +959,6 @@
     "main",
     "yt_shorts_WMehiX",
     "collapsible_content_wEzzi8",
-    "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "custom_liquid_hL9Mbr",
     "multicolumn_3ryWNQ",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
