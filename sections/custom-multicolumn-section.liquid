@@ -237,6 +237,10 @@
     border: none;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
+  }
+  .custom-multicolumn-modal-trigger:hover {
+    background: #333;
   }
   .custom-multicolumn-modal {
     display: none;
@@ -258,6 +262,8 @@
     width: 100%;
     position: relative;
     text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
   }
   .custom-multicolumn-modal-photo {
     width: 126px;
@@ -294,6 +300,9 @@
     background: none;
     border: none;
     cursor: pointer;
+  }
+  .custom-multicolumn-modal-close:hover {
+    opacity: 0.7;
   }
   .slider-arrow {
     display: none !important;
@@ -369,79 +378,125 @@
 
 
 <script>
-  const grid = document.getElementById('custom-multicolumn-slider');
-  const paginationCurrent = document.getElementById('slider-current');
-  const paginationTotal = document.getElementById('slider-total');
-  const cards = grid.querySelectorAll('.custom-multicolumn-card');
-  const prevBtn = document.querySelector('.slider-arrow.left');
-  const nextBtn = document.querySelector('.slider-arrow.right');
-  let index = 0;
-  const updatePagination = () => {
-    paginationCurrent.textContent = index + 1;
-  };
-  updatePagination();
-  const scrollToCard = (i) => {
-    const card = cards[i];
-    if (card) card.scrollIntoView({ behavior: 'smooth', inline: 'center' });
-  };
-  nextBtn?.addEventListener('click', () => {
-    if (index < cards.length - 1) {
-      index++;
-      scrollToCard(index);
-      updatePagination();
-    }
-  });
-  prevBtn?.addEventListener('click', () => {
-    if (index > 0) {
-      index--;
-      scrollToCard(index);
-      updatePagination();
-    }
-  });
-  grid.addEventListener('scroll', () => {
-    let closest = 0;
-    let closestDistance = Infinity;
-    cards.forEach((card, i) => {
-      const box = card.getBoundingClientRect();
-      const distance = Math.abs(box.left - window.innerWidth / 2 + box.width / 2);
-      if (distance < closestDistance) {
-        closest = i;
-        closestDistance = distance;
-      }
-    });
-    index = closest;
-    updatePagination();
-  });
-document.querySelectorAll('.custom-multicolumn-toggle-quote').forEach(button => {
-  const quoteEl = document.getElementById(button.dataset.target);
-
-  // if the quote doesn't overflow its container, hide the toggle button
-  if (quoteEl.scrollHeight <= quoteEl.clientHeight) {
-    button.style.display = 'none';
-    return;
+(function() {
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMulticolumn);
+  } else {
+    initMulticolumn();
   }
 
-  // otherwise show the arrow and wire up expand/collapse
-  button.style.display = 'block';
-  button.innerHTML = '';
-  button.addEventListener('click', () => {
-    const isExpanded = quoteEl.classList.toggle('expanded');
-    button.classList.toggle('expanded', isExpanded);
-  });
-});
-  document.querySelectorAll('.custom-multicolumn-modal-trigger').forEach(button => {
-    button.addEventListener('click', () => {
-      document.getElementById(button.dataset.modal).classList.add('open');
+  function initMulticolumn() {
+    const grid = document.getElementById('custom-multicolumn-slider');
+    if (!grid) return;
+
+    const paginationCurrent = document.getElementById('slider-current');
+    const paginationTotal = document.getElementById('slider-total');
+    const cards = grid.querySelectorAll('.custom-multicolumn-card');
+    const prevBtn = document.querySelector('.slider-arrow.left');
+    const nextBtn = document.querySelector('.slider-arrow.right');
+    let index = 0;
+
+    const updatePagination = () => {
+      if (paginationCurrent) {
+        paginationCurrent.textContent = index + 1;
+      }
+    };
+    updatePagination();
+
+    const scrollToCard = (i) => {
+      const card = cards[i];
+      if (card) card.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    };
+
+    nextBtn?.addEventListener('click', () => {
+      if (index < cards.length - 1) {
+        index++;
+        scrollToCard(index);
+        updatePagination();
+      }
     });
-  });
-  document.querySelectorAll('.custom-multicolumn-modal-close').forEach(button => {
-    button.addEventListener('click', () => {
-      document.getElementById(button.dataset.modal).classList.remove('open');
+
+    prevBtn?.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        scrollToCard(index);
+        updatePagination();
+      }
     });
-  });
-  document.querySelectorAll('.custom-multicolumn-modal').forEach(modal => {
-    modal.addEventListener('click', e => {
-      if (e.target === modal) modal.classList.remove('open');
+
+    grid.addEventListener('scroll', () => {
+      let closest = 0;
+      let closestDistance = Infinity;
+      cards.forEach((card, i) => {
+        const box = card.getBoundingClientRect();
+        const distance = Math.abs(box.left - window.innerWidth / 2 + box.width / 2);
+        if (distance < closestDistance) {
+          closest = i;
+          closestDistance = distance;
+        }
+      });
+      index = closest;
+      updatePagination();
     });
-  });
+
+    // Quote toggle functionality
+    document.querySelectorAll('.custom-multicolumn-toggle-quote').forEach(button => {
+      const quoteEl = document.getElementById(button.dataset.target);
+      if (!quoteEl) return;
+
+      // if the quote doesn't overflow its container, hide the toggle button
+      if (quoteEl.scrollHeight <= quoteEl.clientHeight) {
+        button.style.display = 'none';
+        return;
+      }
+
+      // otherwise show the arrow and wire up expand/collapse
+      button.style.display = 'block';
+      button.innerHTML = '';
+      button.addEventListener('click', () => {
+        const isExpanded = quoteEl.classList.toggle('expanded');
+        button.classList.toggle('expanded', isExpanded);
+      });
+    });
+
+    // Modal trigger functionality - FIXED
+    document.querySelectorAll('.custom-multicolumn-modal-trigger').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+      });
+    });
+
+    // Modal close functionality
+    document.querySelectorAll('.custom-multicolumn-modal-close').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('open');
+          document.body.style.overflow = ''; // Restore scrolling
+        }
+      });
+    });
+
+    // Click outside to close modal
+    document.querySelectorAll('.custom-multicolumn-modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('open');
+          document.body.style.overflow = ''; // Restore scrolling
+        }
+      });
+    });
+  }
+})();
 </script>
