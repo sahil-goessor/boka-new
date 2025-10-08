@@ -88,11 +88,11 @@
             "orientation": "inlined",
             "layout": "vertical",
             "icon_1": "none",
-            "image_1": "shopify://shop_images/Soothing_aloe_vera.webp",
+            "image_1": "shopify://shop_images/Soothing_Aloe_Vera.png",
             "heading_1": "<strong>Soothing Aloe Vera</strong>",
             "icon_2": "none",
-            "image_2": "shopify://shop_images/Bacteria-fighting_xylitol.webp",
-            "heading_2": "<strong>Bacteria-fighting Xylitol</strong>",
+            "image_2": "shopify://shop_images/No_Artificial_Colors.png",
+            "heading_2": "No artificial flavors or colors",
             "padding_top": 14,
             "padding_bottom": 0
           }
@@ -103,7 +103,7 @@
             "orientation": "inlined",
             "layout": "vertical",
             "icon_1": "none",
-            "image_1": "shopify://shop_images/Antioxidant-rich_green_tea.webp",
+            "image_1": "shopify://shop_images/Antioxidant-Rich_Green_Tea.png",
             "heading_1": "<strong>Antioxidant-rich green tea</strong>",
             "icon_2": "none",
             "heading_2": "",
@@ -296,6 +296,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_To_Use_1_edd7b39d-e99b-41d8-a249-a3230322d817.webp",
+            "image_link": "",
             "title": "<strong>Step 1: Prep</strong>",
             "text": "<p>Apply a pea-sized amount to your toothbrush</p>",
             "link_label": "",
@@ -306,6 +307,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_To_Use_2_b6abf2d5-f95c-4001-9c54-3ef4b705e34a.webp",
+            "image_link": "",
             "title": "<strong>Step 2: Brush</strong>",
             "text": "<p>Brush thoroughly for two minutes, twice daily</p>",
             "link_label": "",
@@ -316,6 +318,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_To_Use_3_14b9919f-2412-4145-801f-64f274243532.webp",
+            "image_link": "",
             "title": "<strong>Step 3: Smile!</strong>",
             "text": "<p>Spit after brushing—skip the rinse to maximize contact time</p>",
             "link_label": "",
@@ -507,6 +510,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Nano-hydroxyapatite_c4f19140-f504-4ae6-8895-79847b11ac58.webp",
+            "image_link": "",
             "title": "<strong>Nano-hydroxyapatite</strong>",
             "text": "<p>mimics tooth enamel</p>",
             "link_label": "",
@@ -517,6 +521,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Green_Tea_Extract_808f8fcb-9cef-4ac7-a6f4-2c11c6a53298.webp",
+            "image_link": "",
             "title": "<strong>Green Tea Extract</strong>",
             "text": "<p>acts as an antioxidant</p>",
             "link_label": "",
@@ -527,6 +532,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Xylitol_fac264eb-d554-451d-a3ad-e75360fb296e.webp",
+            "image_link": "",
             "title": "<strong>Xylitol</strong>",
             "text": "<p>fights bacteria</p>",
             "link_label": "",
@@ -538,6 +544,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Blueberry_Dragon_Fruit_2ce381ad-d91f-4ba4-b400-e5bcca90000c.webp",
+            "image_link": "",
             "title": "<strong>Blueberry & Dragon Fruit</strong>",
             "text": "<p>a tasty twist</p>",
             "link_label": "",
