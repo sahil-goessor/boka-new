@@ -312,6 +312,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/BDF_How_To_Use_1_1.webp",
+            "image_link": "",
             "title": "<strong>Step 1: Prep</strong>",
             "text": "<p>Apply a pea-sized amount to your toothbrush</p>",
             "link_label": "",
@@ -322,6 +323,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/BDF_How_To_Use_2.webp",
+            "image_link": "",
             "title": "<strong>Step 2: Brush</strong>",
             "text": "<p>Brush thoroughly for two minutes, twice daily</p>",
             "link_label": "",
@@ -332,6 +334,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/BDF_How_To_Use_3.webp",
+            "image_link": "",
             "title": "<strong>Step 3: Smile!</strong>",
             "text": "<p>Spit after brushing—skip the rinse to maximize contact time</p>",
             "link_label": "",
@@ -559,6 +562,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Nano-hydroxyapatite.webp",
+            "image_link": "",
             "title": "<strong>Nano-hydroxyapatite</strong>",
             "text": "<p>mimics tooth enamel</p>",
             "link_label": "",
@@ -569,6 +573,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Green_Tea_Extract.webp",
+            "image_link": "",
             "title": "<strong>Green Tea Extract</strong>",
             "text": "<p>acts as an antioxidant</p>",
             "link_label": "",
@@ -579,8 +584,9 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Xylitol.webp",
+            "image_link": "",
             "title": "<strong>Xylitol</strong>",
-            "text": "<p>fights bacteria</p>",
+            "text": "<p>refreshes your mouth with a mild, clean flavor</p>",
             "link_label": "",
             "link": ""
           }
@@ -590,6 +596,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Blueberry_Dragon_Fruit_1.webp",
+            "image_link": "",
             "title": "<strong>Blueberry & Dragon Fruit</strong>",
             "text": "<p>a tasty twist</p>",
             "link_label": "",
