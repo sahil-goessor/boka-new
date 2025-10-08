@@ -64,23 +64,21 @@
         },
         "af067451-b82f-4114-8006-9a547e9c2157": {
           "type": "icon-with-text",
-          "disabled": true,
           "settings": {
             "orientation": "inlined",
             "layout": "vertical",
             "icon_1": "none",
-            "image_1": "shopify://shop_images/aloe_Vera.png",
+            "image_1": "shopify://shop_images/Soothing_Aloe_Vera.png",
             "heading_1": "Soothing aloe vera",
             "icon_2": "none",
-            "image_2": "shopify://shop_images/xylitol.png",
-            "heading_2": "Bacteria-fighting xylitol",
+            "image_2": "shopify://shop_images/No_Artificial_Colors.png",
+            "heading_2": "No artificial flavors or colors",
             "padding_top": 14,
             "padding_bottom": 0
           }
         },
         "b4620176-8a50-42c9-8121-6df15e9ca481": {
           "type": "icon-with-text",
-          "disabled": true,
           "settings": {
             "orientation": "inlined",
             "layout": "vertical",
