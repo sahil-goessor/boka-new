@@ -55,19 +55,16 @@
             "show_gift_card_recipient": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_KJFNEM": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
           "settings": {}
-        },
-        "ab30e277-8d13-4c9c-b973-b5f18ebcc515": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "text": "<h3><a href=\"/collections/nano-hydroxyapatite_n-ha_toothpaste\" title=\"Nano-hydroxyapatite (N-Ha) Toothpaste\">Shop Other Flavors</a></h3>",
-            "text_style": "subtitle",
-            "quick_add_hide": false
-          }
         },
         "description": {
           "type": "description",
@@ -154,8 +151,8 @@
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_Y3VetV",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_KJFNEM",
         "quantity_selector",
-        "ab30e277-8d13-4c9c-b973-b5f18ebcc515",
         "description",
         "af067451-b82f-4114-8006-9a547e9c2157",
         "b4620176-8a50-42c9-8121-6df15e9ca481",
