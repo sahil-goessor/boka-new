@@ -22,6 +22,12 @@
             "product": "{{product}}"
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -39,13 +45,6 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
-          }
-        },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-            "hide_on_subscription_products": true
           }
         },
         "quantity_selector": {
@@ -122,10 +121,10 @@
       "block_order": [
         "title",
         "yotpo_product_reviews_star_rating_jUVfkT",
+        "price",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_FrYmQD",
         "buy_buttons",
-        "price",
         "quantity_selector",
         "ab30e277-8d13-4c9c-b973-b5f18ebcc515",
         "description",
