@@ -16,15 +16,6 @@
           "type": "title",
           "settings": {}
         },
-        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "text": "",
-            "text_style": "body",
-            "quick_add_hide": false
-          }
-        },
         "yotpo_product_reviews_star_rating_agYJXH": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -52,6 +43,14 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
+        },
+        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Please note: Boka Electric Toothbrushes and Replacement Heads are being discontinued. All remaining inventory is currently 30% off, while supplies last!</p>",
+            "text_style": "body",
+            "quick_add_hide": false
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -131,12 +130,12 @@
       },
       "block_order": [
         "title",
-        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "yotpo_product_reviews_star_rating_agYJXH",
         "price",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_Qzb4LW",
         "quantity_selector",
+        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "buy_buttons",
         "description",
         "collapsible_tab_9Ri3zn",
@@ -265,6 +264,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_To_Use_1_9c9dadac-c31e-4d9e-b3e7-10ca7e41fe9e.webp",
+            "image_link": "",
             "title": "<strong>Step 1: Prep</strong>",
             "text": "<p>Apply a pea-sized amount to your toothbrush</p>",
             "link_label": "",
@@ -275,6 +275,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_To_Use_2_ac81a5f1-19ac-439d-bdbb-9b27fa913a72.webp",
+            "image_link": "",
             "title": "<strong>Step 2: Brush</strong>",
             "text": "<p>Brush thoroughly for two minutes, twice daily</p>",
             "link_label": "",
@@ -285,6 +286,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_To_Use_3_5c851a10-493d-4d2d-8763-01770fdb97a1.webp",
+            "image_link": "",
             "title": "<strong>Step 3: Smile!</strong>",
             "text": "<p>Spit after brushing—skip the rinse to maximize contact time</p>",
             "link_label": "",
@@ -513,6 +515,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Nano-hydroxyapatite_c4f19140-f504-4ae6-8895-79847b11ac58.webp",
+            "image_link": "",
             "title": "<strong>Nano-hydroxyapatite</strong>",
             "text": "<p>mimics tooth enamel</p>",
             "link_label": "",
@@ -523,6 +526,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Green_Tea_Extract_808f8fcb-9cef-4ac7-a6f4-2c11c6a53298.webp",
+            "image_link": "",
             "title": "<strong>Green Tea Extract</strong>",
             "text": "<p>acts as an antioxidant</p>",
             "link_label": "",
@@ -533,6 +537,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Xylitol_fac264eb-d554-451d-a3ad-e75360fb296e.webp",
+            "image_link": "",
             "title": "<strong>Xylitol</strong>",
             "text": "<p>fights bacteria</p>",
             "link_label": "",
@@ -544,6 +549,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Blueberry_Dragon_Fruit_2ce381ad-d91f-4ba4-b400-e5bcca90000c.webp",
+            "image_link": "",
             "title": "<strong>Blueberry & Dragon Fruit</strong>",
             "text": "<p>a tasty twist</p>",
             "link_label": "",
