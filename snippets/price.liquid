@@ -72,6 +72,18 @@
           </s>
         </p>
       {%- endunless -%}
+      {% if product and product.handle == 'nano-n-ha-toothpaste-whitening-3-pack' %}
+   <p class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</p>
+        <p class="s-price-item">
+          <s class="price-item price-item--regular">
+            {% if settings.currency_code_enabled %}
+              {{ compare_at_price | money_with_currency }}
+            {% else %}
+              {{ compare_at_price | money }}
+            {% endif %}
+          </s>
+        </p>
+{% endif %}
       <p class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</p>
       {% comment %} <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
