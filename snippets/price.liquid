@@ -73,9 +73,9 @@
         </p>
       {%- endunless -%}
       <p class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</p>
-      {% comment %} <span class="price-item price-item--sale price-item--last">
+      <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
-      </span> {% endcomment %}
+      </span>
 
       {% if show_discount_percentage and discount_percentage > 0 %}
         <p class="price-item price-item--sale price-item--last price-item--discount">
