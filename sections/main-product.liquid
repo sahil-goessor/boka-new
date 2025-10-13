@@ -1321,7 +1321,8 @@ document.addEventListener('DOMContentLoaded', function() {
           });
           
           const variant = product.variants.find(v => v.id == variantId);
-          if (!variant) return;
+          if (!variant) { variantEl.textContent = '';
+            return; }
 
           titleEl.textContent = product.title;
           variantEl.textContent = variant.title;
@@ -1334,7 +1335,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } else {
       const variant = currentProduct.variants.find(v => v.id == variantId);
-      if (!variant) return;
+      if (!variant) { variantEl.textContent = '';
+            return; }
 
       titleEl.textContent = currentProduct.title;
       variantEl.textContent = variant.title;
