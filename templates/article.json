@@ -120,6 +120,7 @@
         "collapsible_row_gbBJtA",
         "collapsible_row_rijDWi"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
@@ -132,7 +133,7 @@
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
