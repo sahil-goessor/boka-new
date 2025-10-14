@@ -22,6 +22,12 @@
             "product": "{{product}}"
           }
         },
+        "price": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -45,13 +51,6 @@
           "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "dp9z6mvai6cz4"
-          }
-        },
-        "price": {
-          "type": "price",
-          "disabled": true,
-          "settings": {
-            "hide_on_subscription_products": true
           }
         },
         "quantity_selector": {
@@ -128,11 +127,11 @@
       "block_order": [
         "title",
         "yotpo_product_reviews_star_rating_jUVfkT",
+        "price",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_FrYmQD",
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_qrgyjb",
-        "price",
         "quantity_selector",
         "ab30e277-8d13-4c9c-b973-b5f18ebcc515",
         "description",
