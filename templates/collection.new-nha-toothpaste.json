@@ -65,6 +65,9 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__description {max-width: 100%;}"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -502,6 +505,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Supports Enamel Health</strong>",
             "text": "<p>Biomimics the mineral component of tooth structure, helping maintain oral health.</p>",
             "link_label": "",
@@ -512,6 +516,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Helps Maintain a Whiter Smile</strong>",
             "text": "<p>Gently removes surface stains without harsh abrasives.</p>",
             "link_label": "",
@@ -522,6 +527,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Clean Formulation without Harsh Chemicals</strong>",
             "text": "<p>Free from SLS, parabens, and artificial flavors for a gentle clean.</p>",
             "link_label": "",
@@ -532,6 +538,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Balanced Oral Microbiome</strong>",
             "text": "<p>Formulated with xylitol and antioxidant-rich ingredients.</p>",
             "link_label": "",
@@ -542,6 +549,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>No Harsh Chemicals</strong>",
             "text": "<p>Free from fluoride, sulfates, artificial dyes, and preservatives.</p>",
             "link_label": "",
@@ -552,6 +560,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Safe for the Whole Family</strong>",
             "text": "<p>A fluoride-free, safe-to-swallow formula that kids can also use.</p>",
             "link_label": "",
@@ -562,6 +571,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Xylitol</strong>",
             "text": "<p>A naturally occurring sweetener that also helps promote a balanced oral microbiome.</p>",
             "link_label": "",
@@ -572,6 +582,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Aloe Vera</strong>",
             "text": "<p>Known for its soothing properties, it helps keep the gums comfortable.</p>",
             "link_label": "",
@@ -582,6 +593,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
+            "image_link": "",
             "title": "<strong>Green Tea Extract</strong>",
             "text": "<p>A natural antioxidant that supports oral microbiome balance.</p>",
             "link_label": "",
