@@ -65,6 +65,9 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__description {max-width: 100%;}"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
