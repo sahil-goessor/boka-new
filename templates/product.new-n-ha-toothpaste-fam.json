@@ -16,16 +16,16 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {
-            "hide_on_subscription_products": true
-          }
-        },
         "yotpo_product_reviews_star_rating_UNUTB3": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
           }
         },
         "variant_picker": {
@@ -140,8 +140,8 @@
       },
       "block_order": [
         "title",
-        "price",
         "yotpo_product_reviews_star_rating_UNUTB3",
+        "price",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_NiTVnd",
         "boka_subs_widget_Rq7gaC",
