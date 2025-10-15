@@ -24,9 +24,8 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
-            "hide_on_subscription_products": true
+            "hide_on_subscription_products": false
           }
         },
         "variant_picker": {
@@ -102,7 +101,8 @@
             "image_1": "shopify://shop_images/Antioxidant-Rich_Green_Tea.png",
             "heading_1": "Antioxidant-rich green tea",
             "icon_2": "none",
-            "heading_2": "",
+            "image_2": "shopify://shop_images/Fluoride-Free.webp",
+            "heading_2": "Fluoride-Free",
             "padding_top": 0,
             "padding_bottom": 0
           }
