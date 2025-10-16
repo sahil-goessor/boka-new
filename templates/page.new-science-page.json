@@ -492,7 +492,7 @@
         "column_HVUAVx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Artificial_additives.svg",
+            "image": "shopify://shop_images/Artificial_additives.webp",
             "image_link": "",
             "title": "<strong>Artificial additives</strong>",
             "text": "<p>❌ Parabens</p><p>❌ Artificial flavors and colors </p>",
@@ -503,7 +503,7 @@
         "column_yEzEWY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Unnecessary_fillers.svg",
+            "image": "shopify://shop_images/Unnecessary_fillers.webp",
             "image_link": "",
             "title": "<strong>Unnecessary fillers</strong>",
             "text": "<p>❌ Propylene glycol<br/>❌ Carrageenan <br/>❌ Titanium dioxide</p>",
