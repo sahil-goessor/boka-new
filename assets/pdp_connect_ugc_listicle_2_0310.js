@@ -148,7 +148,21 @@ window.__WWAI__.WWAI_PRODUCT_GROUP_CONFIG = {
     "ela-mint-toothpaste-sticky": {
       "pricingConfig": null,
       "uxConfig": null,
-      "flowConfig": null,
+      "flowConfig": {
+        "destination": "checkout",
+        "loader": "add-to-cart-submit-button",
+        "showSuccessNotification": false,
+        "showErrorNotification": false,
+        "sideCartLabel": "",
+        "successNotificationMessage": "✅ Added to cart!",
+        "errorNotificationMessage": "Oops, couldn't add item.",
+        "notificationOptions": {
+          "backgroundColor": "#E8DDFA",
+          "textColor": "#000000",
+          "borderColor": "transparent",
+          "fontFamily": "sans-serif"
+        }
+      },
       "variantDispatchConfig": {
         "defaultProduct": "ela-mint-toothpaste",
         "defaultVariantOption1": "1 Pack",
