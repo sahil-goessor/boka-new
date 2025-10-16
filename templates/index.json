@@ -579,7 +579,7 @@
             "collection": "whitening",
             "image": "shopify://shop_images/refresh-mint-hp.webp",
             "image_mobile": "shopify://shop_images/refresh-mint-hp.webp",
-            "custom_title": "Whitening"
+            "custom_title": "Whitening**"
           }
         }
       },
@@ -801,7 +801,7 @@
         "text_Q9qage": {
           "type": "text",
           "settings": {
-            "text": "<p>*Non-toxic when used as directed.</p>"
+            "text": "<p>*Non-toxic when used as directed.<br/>**Whitening: With Regular brushing, helps remove surface stains.</p>"
           }
         }
       },
