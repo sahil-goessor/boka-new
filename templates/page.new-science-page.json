@@ -136,7 +136,8 @@
         "column_KjXNnq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Protects.svg",
+            "image": "shopify://shop_images/For_Sensitive_Teeth.webp",
+            "image_link": "",
             "title": "<strong>Appropriate for Sensitive Teeth</strong>",
             "text": "<p>Fortifies the surface of teeth for daily oral wellness.</p>",
             "link_label": "",
@@ -147,6 +148,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Whitens.svg",
+            "image_link": "",
             "title": "<strong>Freshens</strong>",
             "text": "<p>Freshens breath for a confident smile.</p>",
             "link_label": "",
@@ -157,6 +159,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Thoughtfully_formulated.svg",
+            "image_link": "",
             "title": "<strong>Thoughtfully Formulated</strong>",
             "text": "<p>No fluoride, sulfates, peroxide, or artificial flavors.</p>",
             "link_label": "",
@@ -332,6 +335,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Nano-Hydroxyapatite_n-Ha.jpg",
+            "image_link": "",
             "title": "<strong>Nano-Hydroxyapatite (n-Ha)</strong>",
             "text": "<p>A revolutionary material that mimics tooth enamel</p>",
             "link_label": "",
@@ -342,6 +346,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Xylitol.jpg",
+            "image_link": "",
             "title": "<strong>Xylitol</strong>",
             "text": "<p>Refreshes your mouth with a mild, clean flavor</p>",
             "link_label": "",
@@ -353,6 +358,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Aloe_Vera.jpg",
+            "image_link": "",
             "title": "<strong>Aloe Vera</strong>",
             "text": "<p>Soothes and provides gentle care.</p>",
             "link_label": "",
@@ -364,6 +370,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Green_Tea_Extract.jpg",
+            "image_link": "",
             "title": "<strong> Green Tea Extract</strong>",
             "text": "<p>Rich in antioxidants for added oral wellness.</p>",
             "link_label": "",
@@ -374,6 +381,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Green_Tea_Extract_285e000e-3c85-4d9e-81a9-5dc0a265675e.jpg",
+            "image_link": "",
             "title": "<strong>Green Tea Extract</strong>",
             "text": "<p>Act as an antioxidant</p>",
             "link_label": "",
@@ -385,6 +393,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Probiotics.jpg",
+            "image_link": "",
             "title": "<strong>Probiotics</strong>",
             "text": "<p>Helps maintain a balanced oral environment.</p>",
             "link_label": "",
@@ -473,6 +482,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Harsh_foaming_agents.svg",
+            "image_link": "",
             "title": "<strong>Harsh foaming agents</strong>",
             "text": "<p>❌ Sodium lauryl sulfate (SLS)</p><p>❌ Sodium lauroyl sarcosinate</p>",
             "link_label": "",
@@ -483,6 +493,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Artificial_additives.svg",
+            "image_link": "",
             "title": "<strong>Artificial additives</strong>",
             "text": "<p>❌ Parabens</p><p>❌ Artificial flavors and colors </p>",
             "link_label": "",
@@ -493,6 +504,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Unnecessary_fillers.svg",
+            "image_link": "",
             "title": "<strong>Unnecessary fillers</strong>",
             "text": "<p>❌ Propylene glycol<br/>❌ Carrageenan <br/>❌ Titanium dioxide</p>",
             "link_label": "",
@@ -599,6 +611,7 @@
         "column_eWeWiz": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "★★★★★",
             "text": "<p>“Nano-hydroxyapatite is a revolutionary material with a wide use in dentistry. With regard to restorative and preventive ﬁelds, nano-hydroxyapatite has remarkable remineralizing effects on initial lesions of enamel, certainly higher than traditional ﬂuorides used until now for this purpose.\"<br/><br/><em>-Erlind Pepla, MD, et al</em></p>",
             "link_label": "",
@@ -608,6 +621,7 @@
         "column_mQBzw8": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "★★★★★",
             "text": "<p>“We love that Boka is a healthy and effective dental product to provide our patients.”<br/><br/><em>-Dr. Vladana Babcic Tal, DMD</em></p>",
             "link_label": "",
@@ -617,6 +631,7 @@
         "column_iaLMwM": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "★★★★★",
             "text": "<p>“I’m proud to recommend Boka to my patients. It’s a great way to bring high-quality and innovative oral health products directly to their door.”<br/><br/><em>-Dr. Amy HaTruong, DDS</em></p>",
             "link_label": "",
