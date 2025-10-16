@@ -57,7 +57,7 @@
             "orientation": "inlined",
             "layout": "vertical",
             "icon_1": "none",
-            "image_1": "shopify://shop_images/VB_Microbiome-balancing_BLIS_K12_c89cf902-2556-4144-9763-3e5dddaa0a0e.png",
+            "image_1": "shopify://shop_images/Microbiome_Balancing.webp",
             "heading_1": "Microbiome-balancing BLIS K12",
             "icon_2": "none",
             "image_2": "shopify://shop_images/PS_Oral_health-nurturing_prebiotic_blend.png",
@@ -356,6 +356,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Pro_Stix_How_to_use_1.webp",
+            "image_link": "",
             "title": "<strong>Step 1: Brush Your Teeth</strong>",
             "text": "<p>Start by thoroughly brushing your teeth as you normally do to ensure a clean mouth.</p>",
             "link_label": "",
@@ -366,6 +367,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Pro_Stix_How_to_use_2.webp",
+            "image_link": "",
             "title": "<strong>Step 2: Pour & Swallow Pro Stix</strong>",
             "text": "<p>After brushing, take one stick and pour the powder in your mouth—it’s a simple (and delicious) way to add prebiotics and probiotics to your daily routine.</p>",
             "link_label": "",
@@ -376,6 +378,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/PDP_Pro_Stix_How_to_use_3.webp",
+            "image_link": "",
             "title": "<strong>Step 3: Feel the Difference </strong>",
             "text": "<p>Enjoy fresher breath, healthier gums, and a balanced oral microbiome over time.</p>",
             "link_label": "",
@@ -610,6 +613,7 @@
         "column_aLh4Wp": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>A Game-Changer!</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"I can already feel the difference. My breath and gums feel so much healthier. It’s  easy to use!\"</p><p>- CJ H</p>",
             "link_label": "SHOP NOW",
@@ -619,6 +623,7 @@
         "column_fVFqUr": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Oral Routine</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"This probiotic fits perfectly into my daily routine. My gums feel healthier, and my breath is fresher than ever.\"</p><p></p><p>- Sarah</p>",
             "link_label": "SHOP NOW",
@@ -628,6 +633,7 @@
         "column_YWh8we": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Highly Recommended</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"I’ve tried many solutions for bad breath, but nothing works like this. It’s definitely a great product!\"</p><p></p><p>- John</p>",
             "link_label": "SHOP NOW",
@@ -637,6 +643,7 @@
         "column_FBErCh": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "<strong>Effective!</strong>",
             "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"This has been a fantastic addition to my daily regimen. My dentist even noticed the difference in my oral health!\"</p><p></p><p>- Kat</p>",
             "link_label": "SHOP NOW",
