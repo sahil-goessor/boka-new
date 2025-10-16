@@ -1,8 +1,240 @@
+function liveAnnouncement(liveText) {
+  const para = document.createElement("p");
+  para.innerText = liveText;
+  document.getElementById('live-ann').innerHTML = "";
+  setTimeout(function() {
+    document.getElementById('live-ann').appendChild(para);
+  },1000);
+}
+
+$(document).ready(function () {
+  console.log("Irf js working");
+
+  // $(".custom_subscription_container").attr({
+  //   role: "group",
+  //   "aria-label": "Purchase Section",
+  // });
+
+  $("div.smart-topic-collection").attr("role", "list");
+  $("div.smart-topic-collection *").attr("role", "listitem");
+
+  $(".a11y_links").each(function () {
+    var title = $(this).find(".image-with-text__heading").text().trim();
+
+    $(this)
+      .find(".button-container a")
+      .each(function () {
+        var linkText = $(this).text().trim();
+        $(this).attr("aria-label", linkText + " - " + title);
+      });
+  });
+
+  $(".multicolumn-list .multicolumn-list__item").each(function () {
+    var alt = $(this).find("img").attr("alt");
+    var linktext = $(this).find(".multicolumn-card__info a").text().trim();
+    $(this)
+      .find(".multicolumn-card__info a")
+      .attr("aria-label", linktext + " " + alt);
+  });
+
+  $(".slider-button,  .slider-counter__link--dots").click(function () {
+    liveAnnouncement("Slide changed");
+  });
+
+  $("button.product-form__submit").click(function () {
+    liveAnnouncement("Loading");
+  });
+
+
+  const modals = document.querySelectorAll(".quick-add-modal");
+
+  modals.forEach(function (modal) {
+    const observer = new MutationObserver(function (mutationsList) {
+      mutationsList.forEach(function (mutation) {
+        if (mutation.attributeName === "open") {
+          if (modal.hasAttribute("open")) {
+            console.log("A modal opened:", modal);
+          } else {
+            console.log("A modal closed:", modal);
+          }
+        }
+      });
+    });
+
+    observer.observe(modal, {
+      attributes: true,
+      attributeFilter: ["open"],
+    });
+  });
+
+  $(document).click(".quantity__button", function (event) {
+    const NewValue = $(event.target)
+      .closest(".quantity")
+      .find("input.quantity__input")
+      .val();
+    if (NewValue) {
+      liveAnnouncement("Quantity Updated to: " + NewValue);
+      console.log(NewValue);
+    }
+  });
+
+  $(".header__icon--menu.header__icon--summary").click(function () {
+    const siblings = $(this).parents().siblings();
+
+    siblings.each(function () {
+      const isHidden = $(this).attr("aria-hidden") === "true";
+      $(this).attr("aria-hidden", isHidden ? "false" : "true");
+    });
+  });
+
+  console.log("ready!");
+});
+
 window.addEventListener("DOMContentLoaded", function () {
+
+  $(".yotpo-search-label").append(`<span class="sr-only">Search</span>`);
+  $(".additional-checkout-buttons #shopify-subscription-policy-button").attr({
+    tabindex: "0",
+    role: "button",
+  });
+  $(document).on(
+    "keydown",
+    "#shopify-subscription-policy-button",
+    function (event) {
+      if (event.which === 13) {
+        event.preventDefault();
+        $(this).trigger("click");
+      }
+    }
+  );
+  $(".card__information .yotpo-reviews-star-ratings-widget svg").removeAttr(
+    "tabindex"
+  );
+  $(".product__info-container ul").attr("role", "list");
+  $(".product__info-container ul li").attr("role", "listitem");
+
+  setTimeout(function () {
+    // $("p#yotpo-summary-header-text").attr("aria-hidden", "true");
+
+    $(".yotpo-sr-bottom-line-summary svg").removeAttr("tabindex");
+
+    $(".yotpo-smart-topics-panel").each(function () {
+      var title = $(this).find(".yotpo-smart-topics-headline").text().trim();
+      $(".smart-topic-collection").attr({ role: "group", "aria-label": title });
+    });
+    $(".reviews-carousel-reviews-bottomline").each(function () {
+      var label = $(this).attr("aria-label");
+      $(this)
+        .find(".yotpo-star-ratings")
+        .attr({ role: "img", "aria-label": label });
+      $(this).removeAttr("aria-label");
+    });
+
+    $(
+      ".yotpo-reviews-list .yotpo-review-votes-wrapper .yotpo-review-votes-icons-container"
+    ).each(function () {
+      var label = $(this).find(".yotpo-review-votes-icons").attr("aria-label");
+      var count = $(this).find(".yotpo-review-votes-number").text().trim();
+      $(this)
+        .find(".yotpo-review-votes-icons")
+        .attr("aria-label", label + " " + count + " Reaction");
+    });
+
+    $(
+      "div.yotpo-sr-bottom-line-right-panel div.yotpo-sr-bottom-line-text"
+    ).removeAttr("tabindex");
+    
+  }, 200);
+
+
+
+  $(".product__description.quick-add-hidden > li").attr("role", "none");
+
+
+  console.log("window loaded");
+
+  console.log("ally demo");
+
+  // $(".icon-text img, #scrollParallaxSectionTrigger img").attr({
+  //   alt: ""
+  // });
+
+  $(".fade-in h4").attr({
+    role: "heading",
+    "aria-level": "2"
+  });
+    $(".selected-subscription-option .active select").attr("aria-label", "Subscribe & Save");
+  
+const label = document.querySelector('#ContactFooter .field__label');
+
+if (label) {
+  label.innerHTML += ' <span>* Required</span>';
+}
+    $(".sidebar-wrap .page-nav").attr({
+    role: "listitem"  });
+  $(".sidebar-wrap").attr({
+    role: "list"  });
+
+  $("#main-cart-items  .cart-item__details dl,#main-cart-items  .cart-item__details dt,#main-cart-items  .cart-item__details dd").attr({
+    role: "presentation"
+  });
+  $("#cart .button--tertiary").attr({
+    role:"button"
+  });
+  $(".rte h4").attr({
+    role: "heading",
+    "aria-level": "2"  });
+ 
+
+
+  $(".product--thumbnail_slider .custom_subscription_container, .product__info-container .custom_subscription_container")
+  .removeAttr("role")
+  .attr({
+    role: "group",
+    "aria-label": "Purchase"
+  });
+const slideshow = document.querySelector('slideshow-component');
+  slideshow.removeAttribute('role');
+  slideshow.removeAttribute('aria-roledescription');
+  slideshow.removeAttribute('aria-label');
+$("#Slide-template--15913578004523__e88125fd-54b1-4dc4-a7be-094d886854f5-1")
+  .removeAttr('role aria-roledescription aria-label');
+
+  
+  $("#Form0 .CzyqN").removeAttr("aria-label")
+  .attr({
+    "aria-label": "Country Code"    //theme not applied
+  });
+$('.hamburger-menu').attr({
+  tabindex: '0',
+  role: 'button'
+});
+$(".icon-with-text--inlined").attr({
+  role: "button"
+});
+
+
+$(".complementary-products-contains-quick-add aside").removeAttr("aria-label");
+ $(".complementary-products-contains-quick-add aside").attr({
+  role: 'none'
+});
+   $(".yotpo-media-filter #mediaInput").removeAttr("aria-label");
+
+  $(".shopify-policy__body .rte").attr({
+    role:'heading'
+  })
+  $(".card__information .card__heading").attr({
+  role: "heading",
+  "aria-level": "2"
+  });
+ 
+//  $("#mediaInput").attr({
+//   "aria-label": "Review with Media"
+// });
 
   document.addEventListener('keydown', function () {
   document.body.classList.add('keyboard-only');
-});
+  });
 
 document.addEventListener('mousemove', function () {
   document.body.classList.remove('keyboard-only');
@@ -262,11 +494,11 @@ document.addEventListener('focusin', (event) => {
       $buttonDiv.removeAttr("aria-label");
     });
 
-  $(
-    ".modal-opener button.product__media-toggle.quick-add-hidden span"
-  ).removeClass("visually-hidden");
+  // $(
+  //   ".modal-opener button.product__media-toggle.quick-add-hidden span"
+  // ).removeClass("visually-hidden");
 
-  $("button.quick-add-hidden span").removeClass("visually-hidden");
+  // $("button.quick-add-hidden span").removeClass("visually-hidden");
 
   $(".product__modal-opener").attr("aria-label", "View Gallery");
 
@@ -511,12 +743,12 @@ document.addEventListener('focusin', (event) => {
     }
   });
 
-  $(".as-seen-on-logos-wrapper").append(`
-    <div class="handle_btns">
-      <button class="btn-play" id="playBtn">Play</button>
-      <button class="btn-pause" id="pauseBtn">Pause</button>
-   </div>   
-    `);
+  // $(".as-seen-on-logos-wrapper").append(`
+  //   <div class="handle_btns">
+  //     <button class="btn-play" id="playBtn">Play</button>
+  //     <button class="btn-pause" id="pauseBtn">Pause</button>
+  //  </div>   
+  //   `);
   const $logoContainer = $(".as-seen-on-logos");
   $("#playBtn").on("click", function () {
     $logoContainer.removeClass("paused");
@@ -541,30 +773,30 @@ document.addEventListener('focusin', (event) => {
       }
     }
   });
-  observer.observe(document.getElementById("playBtn"), { attributes: true });
-  observer.observe(document.getElementById("pauseBtn"), { attributes: true });
+  // observer.observe(document.getElementById("playBtn"), { attributes: true });
+  // observer.observe(document.getElementById("pauseBtn"), { attributes: true });
 
-  const $prevBtn = $('<button class="slide-prev-sliderbtn">‹</button>');
-  const $nextBtn = $('<button class="slide-next-sliderbtn">›</button>');
-  $(".mobile-buttons-wrapper").after($nextBtn);
-  $(".mobile-buttons-wrapper").after($prevBtn);
-  const scrollAmount = 150;
-  $prevBtn.on("click", function () {
-    $(".mobile-buttons-wrapper").animate(
-      {
-        scrollLeft: "-=" + scrollAmount,
-      },
-      300
-    );
-  });
-  $nextBtn.on("click", function () {
-    $(".mobile-buttons-wrapper").animate(
-      {
-        scrollLeft: "+=" + scrollAmount,
-      },
-      300
-    );
-  });
+  // const $prevBtn = $('<button class="slide-prev-sliderbtn">‹</button>');
+  // const $nextBtn = $('<button class="slide-next-sliderbtn">›</button>');
+  // $(".mobile-buttons-wrapper").after($nextBtn);
+  // $(".mobile-buttons-wrapper").after($prevBtn);
+  // const scrollAmount = 150;
+  // $prevBtn.on("click", function () {
+  //   $(".mobile-buttons-wrapper").animate(
+  //     {
+  //       scrollLeft: "-=" + scrollAmount,
+  //     },
+  //     300
+  //   );
+  // });
+  // $nextBtn.on("click", function () {
+  //   $(".mobile-buttons-wrapper").animate(
+  //     {
+  //       scrollLeft: "+=" + scrollAmount,
+  //     },
+  //     300
+  //   );
+  // });
 
   $("slideshow-component").removeAttr("aria-label");
 
