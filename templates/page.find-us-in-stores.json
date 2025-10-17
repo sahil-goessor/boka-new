@@ -54,6 +54,12 @@
         "section_background_color": "#ffffff",
         "custom_background_color": "#edf3e7",
         "custom_text_color": "#000000",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 0,
@@ -67,10 +73,22 @@
     "multicolumn_jEH8kz": {
       "type": "multicolumn",
       "blocks": {
+        "column_9nhwqH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WalmartLogox300.webp",
+            "image_link": "https://www.walmart.com/brand/boka/10051714",
+            "title": "Shop at <a href=\"https://www.walmart.com/brand/boka/10051714\" target=\"_blank\" title=\"https://www.walmart.com/brand/boka/10051714\">Walmart.com</a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_KaLWEH": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Target_1.png",
+            "image_link": "",
             "title": "Shop at <a href=\"https://www.target.com/b/boka/-/N-1cpvx\" target=\"_blank\" title=\"https://www.target.com/b/boka/-/N-1cpvx\">Target.com</a>",
             "text": "",
             "link_label": "",
@@ -81,6 +99,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/CVS.png",
+            "image_link": "",
             "title": "Shop at <a href=\"https://www.cvs.com/search?searchTerm=boka\" target=\"_blank\" title=\"https://www.cvs.com/search?searchTerm=boka\">CVS.com</a>",
             "text": "",
             "link_label": "",
@@ -91,6 +110,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Erewhon.png",
+            "image_link": "",
             "title": "Shop at <a href=\"https://ship.erewhon.com/search?options%5Bprefix%5D=last&q=boka\" target=\"_blank\" title=\"https://ship.erewhon.com/search?options%5Bprefix%5D=last&q=boka\">Erewhon.com</a>",
             "text": "",
             "link_label": "",
@@ -101,6 +121,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Sprouts.png",
+            "image_link": "",
             "title": "Available In Store",
             "text": "",
             "link_label": "",
@@ -111,6 +132,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Heb.png",
+            "image_link": "",
             "title": "Available In Store",
             "text": "",
             "link_label": "",
@@ -121,6 +143,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Fresh_Thyme.png",
+            "image_link": "",
             "title": "Available In Store",
             "text": "",
             "link_label": "",
@@ -129,6 +152,7 @@
         }
       },
       "block_order": [
+        "column_9nhwqH",
         "column_KaLWEH",
         "column_RwiFka",
         "column_JQPynq",
