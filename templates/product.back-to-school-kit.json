@@ -16,15 +16,6 @@
           "type": "title",
           "settings": {}
         },
-        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
-          "type": "richtext",
-          "disabled": true,
-          "settings": {
-            "text": "<p><em><strong>NEW Bundle!</strong></em></p>",
-            "text_style": "body",
-            "quick_add_hide": false
-          }
-        },
         "yotpo_product_reviews_star_rating_agYJXH": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -33,7 +24,6 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
             "hide_on_subscription_products": false
           }
@@ -130,7 +120,6 @@
       },
       "block_order": [
         "title",
-        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "yotpo_product_reviews_star_rating_agYJXH",
         "price",
         "variant_picker",
