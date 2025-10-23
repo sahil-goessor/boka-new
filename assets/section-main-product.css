@@ -21,6 +21,8 @@
     position: sticky;
     top: 3rem;
     z-index: 2;
+    height: 100%; /* custom code */
+    max-width: 90%; /* custom code */
   }
 
   .product--thumbnail .thumbnail-list {
