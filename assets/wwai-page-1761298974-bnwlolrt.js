@@ -393,7 +393,7 @@ if (!customElements.get('carousel-slider')) {
 }
 
 document.addEventListener('click', function (e) {
-  const clickable = e.target.closest('.cta_button_button_class_section, .cta_button_button_class_block, .cta_button_product_button_block_class_custom');
+  const clickable = e.target.closest('.cta_button_button_class_section, .cta_button_button_class_block, .cta_button_product_button_block_class_custom, .buy_with_button_button_class_section');
   if (clickable && clickable.hasAttribute('href')) {
     e.preventDefault();
     e.stopImmediatePropagation();
