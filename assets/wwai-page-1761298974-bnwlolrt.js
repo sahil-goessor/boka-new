@@ -391,3 +391,12 @@ if (!customElements.get('carousel-slider')) {
   
   customElements.define('carousel-slider', CarouselSlider);
 }
+
+document.addEventListener('click', function (e) {
+  const clickable = e.target.closest('.cta_button_button_class_section, .cta_button_button_class_block, .cta_button_product_button_block_class_custom');
+  if (clickable && clickable.hasAttribute('href')) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    window.location.href = clickable.getAttribute('href');
+  }
+}, true);
