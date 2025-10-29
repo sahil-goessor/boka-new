@@ -23,28 +23,10 @@
     <script src="https://polaris.truevaultcdn.com/static/pc/7TU4VWIV6/polaris.js"></script>
     <!-- End of TrueVault Polaris Code Block -->
 
-    <!-- Google Tag Manager -->
-    {% comment %} <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TS8CKMK');</script> {% endcomment %}
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-928967429"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'AW-928967429');
-    </script>
-
     <!-- Boka - Organization Schema JSON-LD -->
 
     <!-- code for CORB -->
-<script>
+{% comment %} <script>
   (function(){
     const COLLECT_HOST_FRAGMENT = 'google-analytics.com/collect';
     const GA_ENDPOINT = 'https://www.google-analytics.com/collect';
@@ -163,7 +145,7 @@
     
     window.XMLHttpRequest = XHRProxy;
   })();
-</script>
+</script> {% endcomment %}
     <!-- End code for CORB -->
 
 {% if template == 'index' %}
@@ -364,18 +346,6 @@
       }
       </script>
     {% endif %}
-
-    {% comment %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q3MS0F7NE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-4Q3MS0F7NE');
-    </script>
-    {% endcomment %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -701,11 +671,6 @@
 
   <body class="gradient template-{{ template.name }}{% if template.suffix != blank %} template-{{ template.suffix }}{% endif %}">
     <script type="text/javascript">var ordnumber = Math.random() * 10000000000000;var sscUrl = ("https:" == document.location.protocol ? "https://" : "http://") + "trkn.us/pixel/conv/ppt=24263;g=sitewide;gid=60098;ord="+ordnumber+";v=120";var x = document.createElement("IMG");x.setAttribute("src", sscUrl);x.setAttribute("alt", "");x.setAttribute("width", "1");x.setAttribute("height", "1");document.body.appendChild(x);</script>
-
-  <!-- Google Tag Manager (noscript) -->
-  {% comment %} <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS8CKMK"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> {% endcomment %}
-  <!-- End Google Tag Manager (noscript) -->
 
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
