@@ -386,6 +386,15 @@
             "page": ""
           }
         },
+        "collapsible_row_pC7nBx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do the Black Friday and Cyber Monday deals last?",
+            "icon": "none",
+            "row_content": "<p>Our BFCM deals are available for a limited time only.</p>",
+            "page": ""
+          }
+        },
         "collapsible_row_hgN6ij": {
           "type": "collapsible_row",
           "settings": {
@@ -461,6 +470,7 @@
       },
       "block_order": [
         "collapsible_row_bMTpTh",
+        "collapsible_row_pC7nBx",
         "collapsible_row_hgN6ij",
         "collapsible_row_aJYYmM",
         "collapsible_row_cKabND",
