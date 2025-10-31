@@ -377,6 +377,15 @@
     "collapsible_content_GaTyNb": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_bMTpTh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What kinds of Black Friday and Cyber Monday deals can I expect from Boka?",
+            "icon": "none",
+            "row_content": "<p>We offer Black Friday deals on oral care products like our electric toothbrushes, Nano-hydroxyapatite toothpaste, teeth whitening kits, and oral care kits. Whether you're shopping for kids, looking to improve your brushing routine, or hoping to level up with a water flosser, Boka bundles it all with great discounts. These limited-time offers are the best time to upgrade your routine and save big.</p>",
+            "page": ""
+          }
+        },
         "collapsible_row_hgN6ij": {
           "type": "collapsible_row",
           "settings": {
@@ -451,6 +460,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_bMTpTh",
         "collapsible_row_hgN6ij",
         "collapsible_row_aJYYmM",
         "collapsible_row_cKabND",
