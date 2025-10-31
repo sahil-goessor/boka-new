@@ -94,7 +94,7 @@
           {{ money_price }} ({{ discount_percentage }}% off)
         </p>
       {%  else %}
-        <p class="price-item price-item--sale price-item--last {% if is_product_block %} your-custom-class{% endif %}">
+        <p class="price-item price-item--sale price-item--last {% if section.type == 'product' or section.type contains 'product' %} your-custom-class{% endif %}">
           {{ money_price }}
         </p>
       {% endif %}
