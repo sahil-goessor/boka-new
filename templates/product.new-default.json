@@ -103,36 +103,34 @@
             "page": ""
           }
         },
-        "af067451-b82f-4114-8006-9a547e9c2157": {
-          "type": "icon-with-text",
-          "name": "Claims 1 & 2",
-          "disabled": true,
-          "settings": {
-            "orientation": "inlined",
-            "layout": "vertical",
-            "icon_1": "none",
-            "image_1": "{{ product.metafields.custom.icon_w_claims_image_1.value }}",
-            "heading_1": "{{ product.metafields.custom.icon_w_claims_3.value }}",
-            "icon_2": "none",
-            "image_2": "{{ product.metafields.custom.icon_w_claims_image_2.value }}",
-            "heading_2": "{{ product.metafields.custom.icon_w_claims_title_2.value }}",
-            "padding_top": 14,
-            "padding_bottom": 0
-          }
-        },
         "icon_with_text_V6zWW9": {
           "type": "icon-with-text",
           "name": "Claims 3 & 4",
-          "disabled": true,
           "settings": {
             "orientation": "inlined",
-            "layout": "vertical",
+            "layout": "horizontal",
             "icon_1": "none",
             "image_1": "{{ product.metafields.custom.icon_w_claims_image_3.value }}",
             "heading_1": "{{ product.metafields.custom.icon_w_claims_title_3.value }}",
             "icon_2": "none",
             "image_2": "{{ product.metafields.custom.icon_w_claims_image_4.value }}",
             "heading_2": "{{ product.metafields.custom.icon_w_claims_title_4.value }}",
+            "padding_top": 14,
+            "padding_bottom": 0
+          }
+        },
+        "af067451-b82f-4114-8006-9a547e9c2157": {
+          "type": "icon-with-text",
+          "name": "Claims 1 & 2",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "{{ product.metafields.custom.icon_w_claims_image_1.value }}",
+            "heading_1": "{{ product.metafields.custom.icon_w_claims_3.value }}",
+            "icon_2": "none",
+            "image_2": "{{ product.metafields.custom.icon_w_claims_image_2.value }}",
+            "heading_2": "{{ product.metafields.custom.icon_w_claims_title_2.value }}",
             "padding_top": 14,
             "padding_bottom": 0
           }
@@ -152,8 +150,8 @@
         "8f4ac970-3a15-4b7d-823a-82ce6560b8df",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_NnPN3E",
-        "af067451-b82f-4114-8006-9a547e9c2157",
-        "icon_with_text_V6zWW9"
+        "icon_with_text_V6zWW9",
+        "af067451-b82f-4114-8006-9a547e9c2157"
       ],
       "custom_css": [
         "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}"
@@ -210,52 +208,6 @@
         "padding_bottom": 36,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
-      }
-    },
-    "yt_shorts_cRzjGH": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_HQXqqX": {
-          "type": "video",
-          "name": "Video 1",
-          "settings": {
-            "yt_shorts_link": "{{ product.metafields.custom.ugc_url.value }}",
-            "description": "Describe the video"
-          }
-        },
-        "video_WwHceX": {
-          "type": "video",
-          "name": "Video 2",
-          "settings": {
-            "yt_shorts_link": "{{ product.metafields.custom.ugc_url_2.value }}",
-            "description": "Describe the video"
-          }
-        },
-        "video_a9HBAm": {
-          "type": "video",
-          "name": "Video 3",
-          "settings": {
-            "yt_shorts_link": "{{ product.metafields.custom.ugc_url_3.value }}",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_HQXqqX",
-        "video_WwHceX",
-        "video_a9HBAm"
-      ],
-      "disabled": true,
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "{{ product.metafields.custom.ugc_title.value }}",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 4,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 84
       }
     },
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
@@ -740,7 +692,6 @@
   "order": [
     "main",
     "featured_collection_bk6RWf",
-    "yt_shorts_cRzjGH",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "multicolumn_6G7iCQ",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
