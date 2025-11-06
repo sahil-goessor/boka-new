@@ -213,6 +213,58 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_with_text_iqzxwN": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ErbBn8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Experience the best of Boka",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "text_NtbKgX": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Try the Boka Bestsellers Sample Pack to discover your favorite n-Ha toothpaste.</li><li>Discover three best-selling flavors. Plus, get a complimentary Classic Brush.</li></ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ErbBn8",
+        "text_NtbKgX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/option_1_cut.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#fafaf5",
+        "custom_background_color": "#DAE9CF",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 130,
+        "padding_bottom": 100,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
       "type": "image-with-bulleted-text",
       "blocks": {
@@ -255,6 +307,7 @@
         "93b178e4-2598-45c7-b4a1-fd50f417768b",
         "6f829075-8538-46cf-852c-3bb0c8fb002d"
       ],
+      "disabled": true,
       "name": "A clean you feel good about",
       "settings": {
         "image": "{{ product.metafields.custom.a_clean_you_can_feel_good_about_image.value }}",
@@ -693,6 +746,7 @@
   "order": [
     "main",
     "featured_collection_bk6RWf",
+    "image_with_text_iqzxwN",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "multicolumn_6G7iCQ",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
