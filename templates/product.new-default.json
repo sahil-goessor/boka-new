@@ -216,21 +216,24 @@
     "image_with_text_iqzxwN": {
       "type": "image-with-text",
       "blocks": {
-        "heading_Xpc4tV": {
+        "heading_tyVqWc": {
           "type": "heading",
-          "source": "{{ product.metafields.custom.a_heading.value }}",
-          "settings": {}
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
         },
         "text_NtbKgX": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Try the Boka Bestsellers Sample Pack to discover your favorite n-Ha toothpaste.</li><li>Discover three best-selling flavors. Plus, get a complimentary Classic Brush.</li></ul>",
+            "text": "<p>{{ product.metafields.custom.a_description | metafield_tag }}</p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_Xpc4tV",
+        "heading_tyVqWc",
         "text_NtbKgX"
       ],
       "name": "t:sections.image-with-text.presets.name",
