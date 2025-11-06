@@ -219,7 +219,7 @@
         "caption_XDQHTg": {
           "type": "caption",
           "settings": {
-            "caption": "Add a tagline{{ product.metafields.custom.a_title.value }}",
+            "caption": "{{ product.metafields.custom.a_title.value }}",
             "text_style": "caption-with-letter-spacing",
             "text_size": "large"
           }
