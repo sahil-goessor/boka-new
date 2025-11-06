@@ -42,6 +42,7 @@
         "text_mHAAEP",
         "button_JEV73i"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Top_Banner_800x800_26987000-64f4-4a78-86d7-9390f89724eb.webp",
@@ -202,6 +203,7 @@
         "text_wNzKaU",
         "button_zxbGpY"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Partnership_26566487-ab0f-4b25-8ae3-ab6e61b5d4b6.webp",
@@ -264,6 +266,7 @@
         "text_WcXzcx",
         "button_eRkkXA"
       ],
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Downloadable_PDF.webp",
