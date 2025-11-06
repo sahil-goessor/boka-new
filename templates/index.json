@@ -152,6 +152,29 @@
     "multicolumn_BWCRzU": {
       "type": "multicolumn",
       "blocks": {
+        "column_3cJ9YR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Holiday_Kit_Featured_Banner.png",
+            "image_link": "",
+            "title": "<strong>Treat someone special with the Boka Holiday Kit </strong>",
+            "text": "<p>The perfect mint duo that adds a little extra joy to their daily brush ritual.</p>",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/holiday-2-pack-gift-set"
+          }
+        },
+        "column_xWWrJU": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Featured_Banner_Peppermint_Blossom_1.webp",
+            "image_link": "shopify://products/peppermint-blossom-probiotic-n-ha-toothpaste",
+            "title": "<strong>Say hello to Peppermint Blossom Probiotic Toothpaste</strong>",
+            "text": "<p>Calm and soothe with a blend of peppermint and spearmint that dances with floral Ylang-ylang.</p>",
+            "link_label": "SHOP NOW",
+            "link": "shopify://products/peppermint-blossom-probiotic-n-ha-toothpaste"
+          }
+        },
         "column_BK9wUp": {
           "type": "column",
           "settings": {
@@ -161,17 +184,6 @@
             "text": "<p>New travel size toothpastes perfect for adventure or discovering your favorite flavor.</p>",
             "link_label": "SHOP TRAVEL SIZE",
             "link": "shopify://products/travel-size-n-ha-toothpaste"
-          }
-        },
-        "column_xWWrJU": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Featured_Banner_Peppermint_Blossom_1.webp",
-            "image_link": "shopify://products/peppermint-blossom-probiotic-n-ha-toothpaste",
-            "title": "<strong>Say hello to Peppermint Blossom Probiotic Toothpaste</strong>",
-            "text": "<p>Calm and soothe with a blend of peppermint and spearmint that dances with floral Ylang-ylang.</p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/peppermint-blossom-probiotic-n-ha-toothpaste"
           }
         },
         "column_mW3K7M": {
@@ -188,8 +200,9 @@
         }
       },
       "block_order": [
-        "column_BK9wUp",
+        "column_3cJ9YR",
         "column_xWWrJU",
+        "column_BK9wUp",
         "column_mW3K7M"
       ],
       "custom_css": [
@@ -351,6 +364,32 @@
         "padding_bottom_mobile": 58
       }
     },
+    "1761582983a017a1e7": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "ult1uqdfdzl9f"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_gife6h"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
     "rich_text_Bh9cg6": {
       "type": "rich-text",
       "blocks": {
@@ -466,32 +505,6 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 20
-      }
-    },
-    "1761582983a017a1e7": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "ult1uqdfdzl9f"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_gife6h"
-      ],
-      "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
       }
     },
     "custom_liquid_Pw6kPw": {
