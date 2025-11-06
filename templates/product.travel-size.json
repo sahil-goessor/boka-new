@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
           "type": "richtext",
@@ -535,7 +538,7 @@
             "image": "shopify://shop_images/Xylitol_fac264eb-d554-451d-a3ad-e75360fb296e.webp",
             "image_link": "",
             "title": "<strong>Xylitol</strong>",
-            "text": "<p>fights bacteria</p>",
+            "text": "<p>refreshes your mouth with a mild, clean flavor</p><p></p>",
             "link_label": "",
             "link": ""
           }
