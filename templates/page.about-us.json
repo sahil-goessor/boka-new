@@ -192,14 +192,14 @@
           "type": "heading",
           "settings": {
             "heading": "Boka x America’s ToothFair",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_tag": "default"
           }
         },
         "text_DQG8eL": {
           "type": "text",
           "settings": {
-            "text": "<p>Through our partnership with America's ToothFairy in 2025, we donated <em>2000</em> dental hygiene kits to help provide underserved children access to essential oral care and educate on tooth decay prevention. </p>",
+            "text": "<h2>Through our partnership with America's ToothFairy in 2025, we donated <em>2000</em> dental hygiene kits to help provide underserved children access to essential oral care and educate on tooth decay prevention. </h2>",
             "text_style": "body"
           }
         }
@@ -218,9 +218,9 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "section_background_color": "#FFFFFF",
-        "custom_background_color": "#DAE9CF",
-        "custom_text_color": "#FFFFFF",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#dae9cf",
+        "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
         "heading_font_size_desktop": 48,
         "text_font_size_mobile": 16,
