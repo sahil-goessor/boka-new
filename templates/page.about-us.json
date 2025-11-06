@@ -97,6 +97,7 @@
         "template--15146884726827__337cbb30-625d-474b-a88b-e0a384efdaff-1687382186094cb26d-1": {
           "type": "column",
           "settings": {
+            "image_link": "",
             "title": "",
             "text": "<p>Our passion for all-things-dental drives us to inspire more mindful oral care. It starts with proven ingredients and feel-good formulas — and culminates into a full-body experience. Because when you take care of your mouth, your whole body benefits. And when nature and science team up together, we all win.<br/><br/>So here’s to your health, starting with your smile and spreading far beyond.</p>",
             "link_label": "",
@@ -168,10 +169,68 @@
         "section_background_color": "#fdf7f5",
         "custom_background_color": "#ffffff",
         "custom_text_color": "#212529",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 60,
         "padding_bottom": 60,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "image_with_text_wUhbxi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WiQgjk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Boka x America’s ToothFair",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "text_DQG8eL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Through our partnership with America's ToothFairy in 2025, we donated <em>2000</em> dental hygiene kits to help provide underserved children access to essential oral care and educate on tooth decay prevention. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WiQgjk",
+        "text_DQG8eL"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Partnership_6256a425-ae57-4850-bc60-eb570750dcef.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#FFFFFF",
+        "custom_background_color": "#DAE9CF",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 130,
+        "padding_bottom": 100,
         "padding_top_tablet": 30,
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 20,
@@ -184,6 +243,7 @@
     "89d00474-c298-4f03-b3f1-0a95821c7fd7",
     "65d3441d-1fd8-4f9a-b94e-dea0047187a4",
     "337cbb30-625d-474b-a88b-e0a384efdaff",
-    "426de72d-0f22-4020-bfc5-da777f7540ee"
+    "426de72d-0f22-4020-bfc5-da777f7540ee",
+    "image_with_text_wUhbxi"
   ]
 }
