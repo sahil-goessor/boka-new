@@ -216,13 +216,10 @@
     "image_with_text_iqzxwN": {
       "type": "image-with-text",
       "blocks": {
-        "heading_ErbBn8": {
+        "heading_Xpc4tV": {
           "type": "heading",
-          "settings": {
-            "heading": "Experience the best of Boka",
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
+          "source": "{{ product.metafields.custom.a_heading.value }}",
+          "settings": {}
         },
         "text_NtbKgX": {
           "type": "text",
@@ -233,12 +230,12 @@
         }
       },
       "block_order": [
-        "heading_ErbBn8",
+        "heading_Xpc4tV",
         "text_NtbKgX"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Option_1.webp",
+        "image": "{{ product.metafields.custom.a_image.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -247,8 +244,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "section_background_color": "#fafaf5",
-        "custom_background_color": "#DAE9CF",
-        "custom_text_color": "#FFFFFF",
+        "custom_background_color": "#dae9cf",
+        "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
         "heading_font_size_desktop": 48,
         "text_font_size_mobile": 16,
