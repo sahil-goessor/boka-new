@@ -263,7 +263,7 @@
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "heading": "A clean you can feel <em>good</em> about",
+        "heading": "<em>10 Years \n</em> of Smiles with Boka",
         "heading_size": "h1",
         "heading_tag": "default",
         "caption": "{{ product.metafields.custom.description_a_clean_you_can_feel | metafield_text }}",
@@ -464,7 +464,6 @@
         "column_68Mc7p",
         "column_GefQYG"
       ],
-      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
         ".multicolumn-card {background-color: #fafaf5 !important;}",
