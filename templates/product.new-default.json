@@ -238,7 +238,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/option_1_cut.jpg",
+        "image": "shopify://shop_images/Option_1.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
