@@ -216,12 +216,12 @@
     "image_with_text_iqzxwN": {
       "type": "image-with-text",
       "blocks": {
-        "heading_tyVqWc": {
-          "type": "heading",
+        "caption_XDQHTg": {
+          "type": "caption",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1",
-            "heading_tag": "default"
+            "caption": "Add a tagline{{ product.metafields.custom.a_title.value }}",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
           }
         },
         "text_NtbKgX": {
@@ -233,7 +233,7 @@
         }
       },
       "block_order": [
-        "heading_tyVqWc",
+        "caption_XDQHTg",
         "text_NtbKgX"
       ],
       "name": "t:sections.image-with-text.presets.name",
