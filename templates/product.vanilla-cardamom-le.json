@@ -19,8 +19,17 @@
             "title_font_size_desktop": 40
           }
         },
+        "richtext_wjYgRm": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p><em>Limited Edition 10th Anniversary Flavor</em></p>",
+            "text_style": "body",
+            "quick_add_hide": false
+          }
+        },
         "yotpo_product_reviews_star_rating_Jpxdwz": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -141,6 +150,7 @@
       },
       "block_order": [
         "title",
+        "richtext_wjYgRm",
         "yotpo_product_reviews_star_rating_Jpxdwz",
         "price",
         "variant_picker",
@@ -180,48 +190,15 @@
         "padding_bottom_mobile": 60
       }
     },
-    "featured_collection_bk6RWf": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "title": "Complete Your Routine",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "best-sellers",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "image_with_text_iqzxwN": {
       "type": "image-with-text",
       "blocks": {
-        "caption_XDQHTg": {
-          "type": "caption",
+        "heading_jxFAL8": {
+          "type": "heading",
           "settings": {
-            "caption": "{{ product.metafields.custom.a_title.value }}",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "large"
+            "heading": "10 Years of Smiles With Boka",
+            "heading_size": "h1",
+            "heading_tag": "default"
           }
         },
         "text_NtbKgX": {
@@ -233,10 +210,9 @@
         }
       },
       "block_order": [
-        "caption_XDQHTg",
+        "heading_jxFAL8",
         "text_NtbKgX"
       ],
-      "disabled": true,
       "name": "A+ Content 1",
       "settings": {
         "image": "{{ product.metafields.custom.a_image.value }}",
@@ -264,200 +240,6 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 50
-      }
-    },
-    "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
-      "type": "image-with-bulleted-text",
-      "blocks": {
-        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0": {
-          "type": "text",
-          "name": "BP 1",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom[\"1st_bp_a_clean_you_can_feel\"].value }}</p>",
-            "text_style": "body"
-          }
-        },
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b": {
-          "type": "text",
-          "name": "BP 2",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom[\"2nd_bp_a_clean_you_can_feel\"].value }}</p>",
-            "text_style": "body"
-          }
-        },
-        "93b178e4-2598-45c7-b4a1-fd50f417768b": {
-          "type": "text",
-          "name": "BP 3",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom[\"3th_bp_a_clean_you_can_feel\"].value }}</p>",
-            "text_style": "body"
-          }
-        },
-        "6f829075-8538-46cf-852c-3bb0c8fb002d": {
-          "type": "text",
-          "name": "BP 4",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom[\"4th_bp_a_clean_you_can_feel\"].value }}</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0",
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b",
-        "93b178e4-2598-45c7-b4a1-fd50f417768b",
-        "6f829075-8538-46cf-852c-3bb0c8fb002d"
-      ],
-      "disabled": true,
-      "name": "A clean you feel good about",
-      "settings": {
-        "image": "{{ product.metafields.custom.a_clean_you_can_feel_good_about_image.value }}",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "heading": "A clean you can feel <em>good</em> about",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "caption": "{{ product.metafields.custom.description_a_clean_you_can_feel | metafield_text }}",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "button_label": "",
-        "button_link": "",
-        "second_button_label": "",
-        "second_button_link": "",
-        "content_layout": "overlap",
-        "color_scheme": "custom",
-        "section_background_color": "#ffffff",
-        "custom_background_color": "#fafaf5",
-        "custom_text_color": "#433033",
-        "bullets_color": "#433033",
-        "bullets_line_color": "#433033",
-        "image_behavior": "none",
-        "mobile_heading_alignment": "center",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 18,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "multicolumn_6G7iCQ": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_DXwrC6": {
-          "type": "column",
-          "name": "Step 1",
-          "settings": {
-            "image": "{{ product.metafields.custom.image1_how_to_use_refresh_your_routine.value }}",
-            "image_link": "",
-            "title": "{{ product.metafields.custom.title_image_1_how_to_use_refresh_your_routine.value }}",
-            "text": "<p>{{ product.metafields.custom.description_image_1_how_to_use_refresh_your_routine | metafield_tag }}</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_4nTd9b": {
-          "type": "column",
-          "name": "Step 2",
-          "settings": {
-            "image": "{{ product.metafields.custom.image2_how_to_use_refresh_your_routine.value }}",
-            "image_link": "",
-            "title": "{{ product.metafields.custom.title_image_2_how_to_use_refresh_your_routine.value }}",
-            "text": "<p>{{ product.metafields.custom.description_image_2_how_to_use_refresh_your_routine | metafield_tag }}</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_3U6yrb": {
-          "type": "column",
-          "name": "Step 3",
-          "settings": {
-            "image": "{{ product.metafields.custom.image3_how_to_use_refresh_your_routine.value }}",
-            "image_link": "",
-            "title": "{{ product.metafields.custom.title_image_3_how_to_use_refresh_your_routine.value }}",
-            "text": "<p>{{ product.metafields.custom.description_image_3_how_to_use_refresh_your_routine | metafield_tag }}</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_DXwrC6",
-        "column_4nTd9b",
-        "column_3U6yrb"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".inline-richtext {margin: auto;}",
-        "@media screen and (max-width: 749px) {.inline-richtext {margin-left: auto !important; margin-right: auto !important; text-align: center !important; }}"
-      ],
-      "name": "How to Use: Refresh Your Routine",
-      "settings": {
-        "title": "{{ product.metafields.custom.heading_how_to_use_refresh_your_routine.value }}",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "full_width_enabled": false,
-        "button_label": "",
-        "button_link": "",
-        "fadein_enabled": false,
-        "column_heading_background_color": "",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "columns_tablet": "1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
-    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
-      "type": "featured-collection",
-      "disabled": true,
-      "custom_css": [
-        ".title {text-align: center; font-size: 52px;}",
-        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
-      ],
-      "name": "Complete your Routine",
-      "settings": {
-        "title": "{{ product.metafields.custom.title_complete_your_routine.value }}",
-        "heading_size": "h1",
-        "heading_tag": "h3",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "{{ product.metafields.custom.complete_your_routine_collection.value }}",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "custom",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#433033",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 50,
-        "padding_bottom": 40,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
       }
     },
     "multicolumn_HYhLX7": {
@@ -518,7 +300,6 @@
         "column_68Mc7p",
         "column_GefQYG"
       ],
-      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
         ".multicolumn-card {background-color: #fafaf5 !important;}",
@@ -552,144 +333,39 @@
         "padding_bottom_mobile": 49
       }
     },
-    "672bfbbb-3f35-4988-bf92-66ed4484892b": {
-      "type": "collapsible-content",
-      "blocks": {
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1": {
-          "type": "collapsible_row",
-          "name": "Q1",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"1_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"1_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2": {
-          "type": "collapsible_row",
-          "name": "Q2",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"2_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"2_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3": {
-          "type": "collapsible_row",
-          "name": "Q3",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"3_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"3_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4": {
-          "type": "collapsible_row",
-          "name": "Q4",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"4_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"4_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_9qinTJ": {
-          "type": "collapsible_row",
-          "name": "Q5",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"5_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"5_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_rVMB4W": {
-          "type": "collapsible_row",
-          "name": "Q6",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"6_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"6_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_bXhKjK": {
-          "type": "collapsible_row",
-          "name": "Q7",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"7_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"7_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Fe6kif": {
-          "type": "collapsible_row",
-          "name": "Q8",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"8_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"8_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_QcLBtp": {
-          "type": "collapsible_row",
-          "name": "Q9",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"9_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"9_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_dnEjhR": {
-          "type": "collapsible_row",
-          "name": "Q10",
-          "settings": {
-            "heading": "{{ product.metafields.custom[\"10_faqs_title\"].value }}",
-            "icon": "question_mark",
-            "row_content": "<p>{{ product.metafields.custom[\"10_faqs_desc\"].value }}</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4",
-        "collapsible_row_9qinTJ",
-        "collapsible_row_rVMB4W",
-        "collapsible_row_bXhKjK",
-        "collapsible_row_Fe6kif",
-        "collapsible_row_QcLBtp",
-        "collapsible_row_dnEjhR"
-      ],
-      "disabled": true,
+    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
+      "type": "featured-collection",
       "custom_css": [
-        "@media screen and (max-width: 749px) {h1 {font-size: 30px; }}"
+        ".title {text-align: center; font-size: 52px;}",
+        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
       ],
-      "name": "Frequently Asked Questions",
+      "name": "Complete your Routine",
       "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h0",
-        "heading_tag": "h1",
-        "heading_alignment": "center",
+        "title": "{{ product.metafields.custom.title_complete_your_routine.value }}",
+        "heading_size": "h1",
+        "heading_tag": "h3",
         "description": "",
-        "layout": "none",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "{{ product.metafields.custom.complete_your_routine_collection.value }}",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "custom",
-        "container_color_scheme": "background-2",
         "custom_background_color": "#ffffff",
         "custom_text_color": "#433033",
-        "open_first_collapsible_row": false,
         "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 40,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
@@ -747,13 +423,9 @@
   },
   "order": [
     "main",
-    "featured_collection_bk6RWf",
     "image_with_text_iqzxwN",
-    "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
-    "multicolumn_6G7iCQ",
-    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
     "multicolumn_HYhLX7",
-    "672bfbbb-3f35-4988-bf92-66ed4484892b",
+    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
     "related-products",
     "1684207833f45c861d"
   ]
