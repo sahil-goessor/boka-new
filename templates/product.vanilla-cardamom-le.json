@@ -196,7 +196,7 @@
         "heading_jxFAL8": {
           "type": "heading",
           "settings": {
-            "heading": "10 Years of Smiles With Boka",
+            "heading": "<em>10 Years</em> of Smiles With Boka",
             "heading_size": "h1",
             "heading_tag": "default"
           }
@@ -249,7 +249,7 @@
           "type": "column",
           "name": "Ing 1",
           "settings": {
-            "image": "shopify://shop_images/Nano-hydroxyapatite.webp",
+            "image": "{{ product.metafields.custom.a_blend_of_science_flavor_1_ingredient_image.value }}",
             "image_link": "",
             "title": "{{ product.metafields.custom.ingredients1_a_blend_of_science_flavor.value }}",
             "text": "<p>{{ product.metafields.custom.description_ingredients1_a_blend_of_science_flavor.value }}</p>",
