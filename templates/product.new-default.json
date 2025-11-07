@@ -236,6 +236,7 @@
         "caption_XDQHTg",
         "text_NtbKgX"
       ],
+      "disabled": true,
       "name": "A+ Content 1",
       "settings": {
         "image": "{{ product.metafields.custom.a_image.value }}",
@@ -517,6 +518,7 @@
         "column_68Mc7p",
         "column_GefQYG"
       ],
+      "disabled": true,
       "custom_css": [
         ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
         ".multicolumn-card {background-color: #fafaf5 !important;}",
