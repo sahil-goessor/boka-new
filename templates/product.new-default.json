@@ -236,7 +236,7 @@
         "caption_XDQHTg",
         "text_NtbKgX"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "A+ Content 1",
       "settings": {
         "image": "{{ product.metafields.custom.a_image.value }}",
         "height": "adapt",
