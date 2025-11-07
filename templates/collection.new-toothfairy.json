@@ -508,6 +508,7 @@
         },
         "collapsible_row_d9AH6m": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How long will this run?",
             "icon": "none",
