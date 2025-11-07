@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 30
+          }
         },
         "yotpo_product_reviews_star_rating_nRVwYV": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -26,14 +29,6 @@
           "type": "price",
           "settings": {
             "hide_on_subscription_products": false
-          }
-        },
-        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
-          "type": "richtext",
-          "settings": {
-            "text": "<p><em>NEW FLAVOR!</em></p>",
-            "text_style": "body",
-            "quick_add_hide": false
           }
         },
         "variant_picker": {
@@ -150,7 +145,6 @@
         "title",
         "yotpo_product_reviews_star_rating_nRVwYV",
         "price",
-        "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_Y3VetV",
         "buy_buttons",
