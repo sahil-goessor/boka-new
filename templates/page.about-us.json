@@ -191,7 +191,7 @@
         "heading_WiQgjk": {
           "type": "heading",
           "settings": {
-            "heading": "Boka x America’s ToothFair",
+            "heading": "Boka x America’s ToothFairy",
             "heading_size": "h0",
             "heading_tag": "default"
           }
@@ -213,7 +213,7 @@
         "image": "shopify://shop_images/Partnership_6256a425-ae57-4850-bc60-eb570750dcef.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
