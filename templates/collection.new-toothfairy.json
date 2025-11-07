@@ -126,6 +126,7 @@
       "blocks": {
         "image_M6LiLQ": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Promo_Banner_Desktop.webp",
             "image_mobile": "shopify://shop_images/Promo_Banner_Mobile.webp",
@@ -447,6 +448,7 @@
       "blocks": {
         "collapsible_row_tJyKKh": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What’s the Boka x America’s ToothFairy partnership?",
             "icon": "none",
@@ -456,6 +458,7 @@
         },
         "collapsible_row_7W7Lpc": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What’s included in the kit?",
             "icon": "none",
@@ -465,6 +468,7 @@
         },
         "collapsible_row_8VHBzL": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How do I donate a kit?",
             "icon": "none",
