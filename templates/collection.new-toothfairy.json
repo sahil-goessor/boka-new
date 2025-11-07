@@ -478,6 +478,7 @@
         },
         "collapsible_row_jexD7x": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "I already have a subscription. Does that count?",
             "icon": "none",
@@ -487,6 +488,7 @@
         },
         "collapsible_row_JABJVy": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "What if I want to donate more than one kit?",
             "icon": "none",
@@ -496,6 +498,7 @@
         },
         "collapsible_row_yPB79G": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Does this apply to all Boka products?",
             "icon": "none",
@@ -514,6 +517,7 @@
         },
         "collapsible_row_ajqd7y": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "Who is America’s ToothFairy?",
             "icon": "none",
