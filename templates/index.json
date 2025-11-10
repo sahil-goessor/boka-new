@@ -647,70 +647,6 @@
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 0
       }
-    },
-    "image_banner_gMACFn": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_tw4M4t": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
-        },
-        "text_H4n79W": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_use_html": false,
-            "text_html": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_KBGq6x": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_tw4M4t",
-        "text_H4n79W",
-        "buttons_KBGq6x"
-      ],
-      "disabled": true,
-      "settings": {
-        "enable_fullwidth": false,
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_height_mobile": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "button_background_color": "#000000",
-        "button_foreground_color": "#ffffff",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "mobile_content_position": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 80,
-        "padding_bottom_tablet": 80,
-        "padding_top_mobile": 80,
-        "padding_bottom_mobile": 80
-      }
     }
   },
   "order": [
@@ -729,7 +665,6 @@
     "9862c4aa-f495-4304-9fba-832988e68c27",
     "custom_liquid_acJyKE",
     "custom_liquid_FaxRfE",
-    "7bdc6d37-1f4e-420c-8fbe-90c6654468b5",
-    "image_banner_gMACFn"
+    "7bdc6d37-1f4e-420c-8fbe-90c6654468b5"
   ]
 }
