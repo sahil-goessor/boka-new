@@ -163,18 +163,6 @@
             "link": "shopify://products/holiday-2-pack-gift-set"
           }
         },
-        "column_xWWrJU": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Featured_Banner_Peppermint_Blossom_1.webp",
-            "image_link": "shopify://products/peppermint-blossom-probiotic-n-ha-toothpaste",
-            "title": "<strong>Say hello to Peppermint Blossom Probiotic Toothpaste</strong>",
-            "text": "<p>Calm and soothe with a blend of peppermint and spearmint that dances with floral Ylang-ylang.</p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/peppermint-blossom-probiotic-n-ha-toothpaste"
-          }
-        },
         "column_BK9wUp": {
           "type": "column",
           "settings": {
@@ -185,25 +173,11 @@
             "link_label": "SHOP TRAVEL SIZE",
             "link": "shopify://products/travel-size-n-ha-toothpaste"
           }
-        },
-        "column_mW3K7M": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Featured_Banner_Bundle.webp",
-            "image_link": "",
-            "title": "<em><strong>Stock Up</strong></em><strong> On Microbiome Goodness!</strong>",
-            "text": "<p>Whether you’re in the mood for invigorating Citrus Mint or calming Peppermint Blossom, this flavor bundle is for you. </p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/probiotics-bundles"
-          }
         }
       },
       "block_order": [
         "column_3cJ9YR",
-        "column_xWWrJU",
-        "column_BK9wUp",
-        "column_mW3K7M"
+        "column_BK9wUp"
       ],
       "custom_css": [
         ".column-heading {padding: unset;}"
@@ -232,37 +206,6 @@
         "padding_top": 36,
         "padding_bottom": 0,
         "padding_top_mobile": 36,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "rich_text_fiC9M9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_JGicCc": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h2",
-            "heading_tag": "h6"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JGicCc"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "fadein_enabled": false,
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
     },
@@ -301,6 +244,7 @@
         ".collection__title--desktop-slider .title {text-align: center;}",
         ".learn-more {display: none !important;}"
       ],
+      "name": "Featured collection - Best Sellers",
       "settings": {
         "title": "",
         "heading_size": "h0",
@@ -928,7 +872,6 @@
     "d0c5cff0-67a0-44b2-909d-a8de23fae9f1",
     "e88125fd-54b1-4dc4-a7be-094d886854f5",
     "multicolumn_BWCRzU",
-    "rich_text_fiC9M9",
     "c6a93dd1-8311-4974-b863-f220a9ebe858",
     "486363a0-4f38-49ec-8de8-3bcdfd569298",
     "rich_text_AU4LYa",
