@@ -86,58 +86,13 @@
             "megamenu_url": "shopify://collections/mouthwash",
             "megamenu_link_text": "Shop Mouthwash"
           }
-        },
-        "6d29bf7e-5775-48ce-a4d5-9b16c7082645": {
-          "type": "megamenu_image",
-          "settings": {
-            "megamenu_link_name": "ABOUT",
-            "megamenu_image": "shopify://shop_images/Untitled-1-01_66ea1acc-46cd-497e-8f7a-ef363275d848.png",
-            "megamenu_caption": "",
-            "megamenu_url": "shopify://pages/about-us",
-            "megamenu_link_text": "About Us"
-          }
-        },
-        "04551dfe-a4fb-47ae-8732-90c6c8e0ce37": {
-          "type": "megamenu_image",
-          "disabled": true,
-          "settings": {
-            "megamenu_link_name": "ABOUT",
-            "megamenu_image": "shopify://shop_images/Untitled-1-03_b077d769-dc93-4ecd-b036-dc78adc3d91f.png",
-            "megamenu_caption": "",
-            "megamenu_url": "shopify://pages/our-science",
-            "megamenu_link_text": "Our Science"
-          }
-        },
-        "7a408156-e1b5-4d59-9bff-f48056addb3d": {
-          "type": "megamenu_image",
-          "settings": {
-            "megamenu_link_name": "ABOUT",
-            "megamenu_image": "shopify://shop_images/Navi_Option_1.webp",
-            "megamenu_caption": "",
-            "megamenu_url": "shopify://pages/press",
-            "megamenu_link_text": "Press & Awards"
-          }
-        },
-        "628d2d99-c956-4ecd-99db-736062a55279": {
-          "type": "megamenu_image",
-          "settings": {
-            "megamenu_link_name": "ABOUT",
-            "megamenu_image": "shopify://shop_images/Untitled-1-02_25d5d090-ac4b-4616-a9cd-14ff25171f3a.png",
-            "megamenu_caption": "",
-            "megamenu_url": "shopify://pages/dental-pros",
-            "megamenu_link_text": "Dental Pros"
-          }
         }
       },
       "block_order": [
         "e75362fa-bf4c-4f70-afef-189f9289bdfd",
         "ea0f43b8-50d2-43d4-b0dd-0cc7bbc103f0",
         "01078ff2-7b4b-4ff0-9c26-11bef9436cd8",
-        "264bd8de-503b-465d-b24a-0b9e9324bb44",
-        "6d29bf7e-5775-48ce-a4d5-9b16c7082645",
-        "04551dfe-a4fb-47ae-8732-90c6c8e0ce37",
-        "7a408156-e1b5-4d59-9bff-f48056addb3d",
-        "628d2d99-c956-4ecd-99db-736062a55279"
+        "264bd8de-503b-465d-b24a-0b9e9324bb44"
       ],
       "settings": {
         "logo_position": "middle-center",
