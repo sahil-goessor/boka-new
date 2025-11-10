@@ -498,157 +498,13 @@
         "padding_bottom_mobile": 0
       }
     },
-    "multicolumn_qUK96C": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_xgHyd6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Supports Enamel Health</strong>",
-            "text": "<p>Biomimics the mineral component of tooth structure, helping maintain oral health.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_UrqcQH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Helps Maintain a Whiter Smile</strong>",
-            "text": "<p>Gently removes surface stains without harsh abrasives.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_wQxDTJ": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Clean Formulation without Harsh Chemicals</strong>",
-            "text": "<p>Free from SLS, parabens, and artificial flavors for a gentle clean.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_eMKgRr": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Balanced Oral Microbiome</strong>",
-            "text": "<p>Formulated with xylitol and antioxidant-rich ingredients.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_8Uyhg6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>No Harsh Chemicals</strong>",
-            "text": "<p>Free from fluoride, sulfates, artificial dyes, and preservatives.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_E7kweE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Safe for the Whole Family</strong>",
-            "text": "<p>A fluoride-free, safe-to-swallow formula that kids can also use.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_WAYGeY": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Xylitol</strong>",
-            "text": "<p>A naturally occurring sweetener that also helps promote a balanced oral microbiome.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_4ELR3W": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Aloe Vera</strong>",
-            "text": "<p>Known for its soothing properties, it helps keep the gums comfortable.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_eXnNf6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
-            "image_link": "",
-            "title": "<strong>Green Tea Extract</strong>",
-            "text": "<p>A natural antioxidant that supports oral microbiome balance.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_xgHyd6",
-        "column_UrqcQH",
-        "column_wQxDTJ",
-        "column_eMKgRr",
-        "column_8Uyhg6",
-        "column_E7kweE",
-        "column_WAYGeY",
-        "column_4ELR3W",
-        "column_eXnNf6"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".inline-richtext {margin: auto;}"
-      ],
-      "settings": {
-        "title": "Benefits of Boka",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "image_width": "third",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "full_width_enabled": true,
-        "button_label": "",
-        "button_link": "",
-        "fadein_enabled": false,
-        "column_heading_background_color": "",
-        "color_scheme": "custom",
-        "custom_background_color": "#fafaf5",
-        "custom_text_color": "#000000",
-        "columns_tablet": "1",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 36
-      }
-    },
     "image_with_text_EFXdAa": {
       "type": "image-with-text",
       "blocks": {
         "heading_YxFB4L": {
           "type": "heading",
           "settings": {
-            "heading": "Does this Product <em>Help</em> Whiten Teeth?",
+            "heading": "Does this Product Help Whiten Teeth?",
             "heading_size": "h1",
             "heading_tag": "default"
           }
@@ -921,7 +777,6 @@
     "image_with_bulleted_text_PF74VT",
     "image_with_text_DeLViQ",
     "image_with_bulleted_text_WFNa3R",
-    "multicolumn_qUK96C",
     "image_with_text_EFXdAa",
     "image_with_bulleted_text_XQhctk",
     "a63323b9-7c26-46d5-9a1d-5b2882ad974c"
