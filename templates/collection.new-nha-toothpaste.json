@@ -498,70 +498,6 @@
         "padding_bottom_mobile": 0
       }
     },
-    "image_with_text_EFXdAa": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_YxFB4L": {
-          "type": "heading",
-          "settings": {
-            "heading": "Does this Product Help Whiten Teeth?",
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
-        },
-        "text_qAYKp7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our proprietary and innovative formula includes Nano-hydroxyapatite (n-Ha) - a biomimetic mineral form of the same ingredient that naturally makes up 97% of your teeth material and 70% of your dentin. n-Ha has been the subject of significant research for decades with a wide variety of potential benefits across dentistry and oral care.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_q8ieYC": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Whitening Toothpaste",
-            "button_link": "https://www.boka.com/collections/nano-hydroxyapatite_n-ha_toothpaste",
-            "second_button_label": "",
-            "second_button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_YxFB4L",
-        "text_qAYKp7",
-        "button_q8ieYC"
-      ],
-      "custom_css": [
-        "@media (min-width: 750px) {.image-with-text__media-item {padding-right: 80px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Image_6.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "custom",
-        "section_background_color": "rgba(0,0,0,0)",
-        "custom_background_color": "rgba(0,0,0,0)",
-        "custom_text_color": "#000000",
-        "heading_font_size_mobile": 28,
-        "heading_font_size_desktop": 48,
-        "text_font_size_mobile": 16,
-        "text_font_size_desktop": 18,
-        "caption_font_size_mobile": 14,
-        "caption_font_size_desktop": 16,
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_tablet": 30,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
-      }
-    },
     "image_with_bulleted_text_XQhctk": {
       "type": "image-with-bulleted-text",
       "blocks": {
@@ -607,7 +543,7 @@
         "image": "shopify://shop_images/Image_7.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "heading": "Fluoride-Free Oral Care: <br><em>Who Benefits Most?</br></em>",
@@ -777,7 +713,6 @@
     "image_with_bulleted_text_PF74VT",
     "image_with_text_DeLViQ",
     "image_with_bulleted_text_WFNa3R",
-    "image_with_text_EFXdAa",
     "image_with_bulleted_text_XQhctk",
     "a63323b9-7c26-46d5-9a1d-5b2882ad974c"
   ]
