@@ -27,8 +27,6 @@
       "disabled": true,
       "settings": {
         "enable_fullwidth": false,
-        "image": "shopify://shop_images/Collection_Banner_EB_Desktop_fbac22cd-c14f-43a2-9a58-fb42dbc3debd.webp",
-        "image_mobile": "shopify://shop_images/Collection_Banner_EB_Mobile_d14a3355-27ce-4606-a365-e0c1601ec8c7.webp",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_height_mobile": "adapt",
@@ -150,7 +148,7 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "enable_learn_more": true,
+        "enable_learn_more": false,
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
