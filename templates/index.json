@@ -599,7 +599,6 @@
           "settings": {
             "collection": "ela-mint",
             "image": "shopify://shop_images/052024_Heyday_Day12820.jpg",
-            "image_mobile": "shopify://shop_images/052024_Heyday_Day12820.jpg",
             "custom_title": "Our Bestseller"
           }
         },
@@ -608,7 +607,6 @@
           "settings": {
             "collection": "kids",
             "image": "shopify://shop_images/052024_Heyday_Day17246.jpg",
-            "image_mobile": "shopify://shop_images/052024_Heyday_Day17246.jpg",
             "custom_title": "Kids"
           }
         },
@@ -617,7 +615,6 @@
           "settings": {
             "collection": "whitening",
             "image": "shopify://shop_images/refresh-mint-hp.webp",
-            "image_mobile": "shopify://shop_images/refresh-mint-hp.webp",
             "custom_title": "Whitening**"
           }
         }
