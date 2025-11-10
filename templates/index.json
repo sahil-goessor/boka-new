@@ -208,7 +208,7 @@
       "custom_css": [
         ".column-heading {padding: unset;}"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Featured Banners",
       "settings": {
         "title": "",
         "heading_size": "h1",
