@@ -12,7 +12,7 @@
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
-        ".collection-hero__description {max-width: 100%; }"
+        ".collection-hero__description {max-width: 100%;}"
       ],
       "settings": {
         "show_collection_description": true,
@@ -32,7 +32,7 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "enable_learn_more": true,
+        "enable_learn_more": false,
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": false,
