@@ -342,75 +342,6 @@
         "padding_bottom_mobile": 80
       }
     },
-    "collapsible_content_NzBCN4": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_h9h7dR": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Blueberry Dragon Fruit",
-            "icon": "check_mark",
-            "row_content": "<p>Water (Aqua/Eau), Glycerin, Hydrated Silica, Sorbitol, Silica, Hydroxyapatite*, Sodium Benzoate, Xanthan Gum, Xylitol, Sodium Lauroyl Sarcosinate, Triacetin, Natural Flavor, Stevia Rebaudiana Leaf/Stem Extract, Dimethyl Sulfone, Sodium Bicarbonate, Aloe Barbadensis Leaf Juice, Camellia Sinensis Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract. *Nano</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_cwPeir": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Orange Cream",
-            "icon": "check_mark",
-            "row_content": "<p>Water (Aqua/Eau), Glycerin, Hydrated Silica, Sorbitol, Silica, Hydroxyapatite*, Sodium Benzoate, Xanthan Gum, Xylitol, Sodium Lauroyl Sarcosinate, Stevia Rebuadiana Leaf/Stem Extract, Dimethyl Sulfone, Natural Flavor (aroma), Sodium Bicarbonate, Benzyl Alcohol, Triacetin, Medium Chain Triglycerides, Aloe Barbadensis (Aloe Vera) Leaf Juice, Camellia Sinensis (Green Tea), Cucumis Sativus (Cucumber) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract. *Nano</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_i7bWMa": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Strawberry Mango",
-            "icon": "check_mark",
-            "row_content": "<p>Water (Aqua/Eau), Glycerin, Hydrated Silica, Sorbitol, Silica Hydroxyapatite*, Sodium Benzoate, Xanthan Gum, Xylitol, Triacetin, Sodium Lauroyl Sarcosinate, Stevia Rebaudiana Leaf/Stem Extract, Dimethyl Sulfone, Sodium Bicarbonate, Benzyl Alcohol, Natural Flavor (aroma), Medium Chain Triglycerides, Aloe Barbadensis (Aloe Vera) Leaf Juice, Camellia Sinensis (Green Tea), Cucumis Sativus (Cucumber) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract. *Nano</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_BHUiJp": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Watermelon Mint",
-            "icon": "check_mark",
-            "row_content": "<p>Water (Aqua/Eau), Glycerin, Hydrated Silica, Sorbitol, Silica, Hydroxyapatite*, Sodium Benzoate, Xanthan Gum, Xylitol, Triacetin, Sodium Lauroyl Sarcosinate, Stevia Rebaudiana Leaf/Stem Extract, Dimethyl Sulfone, Sodium Bicarbonate, Mentha Piperita (Peppermint) Oil, Natural Flavor, Aloe Barbadensis (Aloe Vera) Leaf Juice, Camellia Sinensis (Green Tea) Cudumis Sativus (Cucumber) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract. *Nano</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_h9h7dR",
-        "collapsible_row_cwPeir",
-        "collapsible_row_i7bWMa",
-        "collapsible_row_BHUiJp"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "<em>Ingredients",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "heading_alignment": "center",
-        "description": "",
-        "layout": "none",
-        "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "open_first_collapsible_row": false,
-        "image": "shopify://shop_images/Ingredients.gif",
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "image_banner_3RwNNJ": {
       "type": "image-banner",
       "disabled": true,
@@ -647,7 +578,6 @@
     "image_with_text_FnxcDy",
     "image_with_text_yBtTxx",
     "image_banner_8xz9cF",
-    "collapsible_content_NzBCN4",
     "image_banner_3RwNNJ",
     "e1c2be8a-c503-489a-b63e-982e50c35a28"
   ]
