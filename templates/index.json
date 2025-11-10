@@ -380,7 +380,6 @@
           "settings": {
             "collection": "boka-probiotics",
             "image": "shopify://shop_images/Collection_Banner.webp",
-            "image_mobile": "shopify://shop_images/Collection_Banner.webp",
             "custom_title": "BOKA PROBIOTICS"
           }
         },
@@ -389,7 +388,6 @@
           "settings": {
             "collection": "nano-hydroxyapatite_n-ha_toothpaste",
             "image": "shopify://shop_images/Boka_Homepage_PLP_Toothpaste_320x310_ec97aedc-afa7-484f-8101-33264d28481e.jpg",
-            "image_mobile": "shopify://shop_images/Boka_Homepage_PLP_Toothpaste_320x310_f5b962e8-e57f-4d92-ae0a-323bdfd0ca32.jpg",
             "custom_title": "TOOTHPASTE"
           }
         },
@@ -398,7 +396,6 @@
           "settings": {
             "collection": "toothbrushes",
             "image": "shopify://shop_images/Boka_toothbrushes.jpg",
-            "image_mobile": "shopify://shop_images/Boka_toothbrushes.jpg",
             "custom_title": "TOOTHBRUSHES"
           }
         },
@@ -407,7 +404,6 @@
           "settings": {
             "collection": "mouthwash",
             "image": "shopify://shop_images/Homepage_Liquid-Mouthwash_Mobile_Option-1.jpg",
-            "image_mobile": "shopify://shop_images/Homepage_Liquid-Mouthwash_Mobile_Option-1.jpg",
             "custom_title": "MOUTHWASH"
           }
         },
@@ -416,7 +412,6 @@
           "settings": {
             "collection": "oral-care-kits",
             "image": "shopify://shop_images/Boka_Homepage_PLP_KitsBundles_306x306_084a0e7f-0387-4fca-b2dc-2b30981a4490.jpg",
-            "image_mobile": "shopify://shop_images/Boka_Homepage_PLP_KitsBundles_306x306_911e1756-3b57-4fa9-bce4-d4b1d9a79de9.jpg",
             "custom_title": "KITS & BUNDLES"
           }
         }
