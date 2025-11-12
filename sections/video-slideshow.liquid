@@ -299,8 +299,11 @@
               </{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %}>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text custom_text rte{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %}" {{ block.shopify_attributes }}>
+              {% comment %} <div class="banner__text custom_text rte{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %}" {{ block.shopify_attributes }}>
                 <p>{{ block.settings.subheading }}</p>
+              </div> {% endcomment %}
+              <div class="banner__text custom_text rte{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %}" {{ block.shopify_attributes }}>
+                <p style="font-size: {{ block.settings.subheading_font_size }}px;">{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
