@@ -172,6 +172,14 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
+        @media screen and (max-width: 749px) {
+          #Slide-{{ section.id }}-{{ forloop.index }} .banner__heading {
+            font-size: {{ block.settings.heading_font_size_mobile }}px !important;
+          }
+          #Slide-{{ section.id }}-{{ forloop.index }} .banner__text p {
+            font-size: {{ block.settings.subheading_font_size_mobile }}px !important;
+          }
+        }
       </style>
 
       {% if block.settings.color_scheme == 'custom' %}
