@@ -1,13 +1,11 @@
 # --- Content signals (advisory) ---
-# Open posture: OK to index, AI grounding, and model training
+# Open posture: OK to index, ground AI answers, and train models
 User-agent: *
 Content-signal: search=yes,ai-input=yes,ai-train=yes
 
-# --- Core: allow public content for all bots ---
+# --- Core policy for everyone ---
 User-agent: *
-Disallow:
-
-# --- Private/transactional areas (robots is not security) ---
+# Private/transactional areas (robots is not security)
 Disallow: /admin
 Disallow: /account
 Disallow: /cart
@@ -18,7 +16,7 @@ Disallow: /orders
 Disallow: /.well-known/shopify/monorail
 Disallow: /a/downloads/-/*
 
-# --- Shopify dedupe / low-value patterns ---
+# Shopify dedupe / low-value patterns
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
 Disallow: */collections/*filter*&*filter*
@@ -33,7 +31,16 @@ Disallow: /*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]
 Disallow: /collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote
 Disallow: /*/collections/*/products/*-[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]-remote
 
-# --- AI / LLM crawlers: FULLY OPEN (training + live read) ---
+# Helpful explicit allowances (public sections)
+Allow: /collections/
+Allow: /products/
+Allow: /pages/
+Allow: /blogs/
+Allow: /policies/
+Allow: /llm.txt
+Allow: /llm.json
+
+# --- AI / LLM crawlers: FULLY OPEN (explicit) ---
 # OpenAI
 User-agent: GPTBot
 Allow: /
@@ -42,10 +49,9 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Google / Gemini (training & grounding)
+# Google / Gemini
 User-agent: Google-Extended
 Allow: /
-# (Standard search crawling continues via Googlebot.)
 
 # Anthropic (Claude)
 User-agent: ClaudeBot
@@ -73,16 +79,19 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# --- Helpful explicit allowances (public sections) ---
-Allow: /collections/
-Allow: /products/
-Allow: /pages/
-Allow: /blogs/
-Allow: /policies/
-Allow: /llm.json
-Allow: /llm.txt
+# Apple training
+User-agent: Applebot-Extended
+Allow: /
 
-# --- Crawl-rate hints (optional) ---
+# Common Crawl (used by many AI stacks)
+User-agent: CCBot
+Allow: /
+
+# ByteDance (Bytespider)
+User-agent: Bytespider
+Allow: /
+
+# Crawl-rate hints (optional)
 User-agent: AhrefsBot
 Crawl-delay: 10
 User-agent: AhrefsSiteAudit
@@ -96,6 +105,3 @@ Allow: /
 
 # Canonical discovery
 Sitemap: https://www.boka.com/sitemap.xml
-
-
-
