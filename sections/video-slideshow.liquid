@@ -749,24 +749,24 @@
           "label": "Image Link"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "type": "range",
+          "id": "heading_font_size",
+          "min": 20,
+          "max": 120,
+          "step": 2,
+          "unit": "px",
+          "label": "Heading font size",
+          "default": 52
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 16,
+          "max": 80,
+          "step": 2,
+          "unit": "px",
+          "label": "Heading font size (mobile)",
+          "default": 36
         },
         {
           "type": "select",
@@ -810,6 +810,26 @@
           "id": "subheading",
           "default": "Tell your brand's story through images",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "range",
+          "id": "subheading_font_size",
+          "min": 12,
+          "max": 48,
+          "step": 1,
+          "unit": "px",
+          "label": "Subheading font size",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "subheading_font_size_mobile",
+          "min": 12,
+          "max": 36,
+          "step": 1,
+          "unit": "px",
+          "label": "Subheading font size (mobile)",
+          "default": 14
         },
         {
           "type": "paragraph",
