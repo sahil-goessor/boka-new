@@ -202,11 +202,21 @@
             "text": "<h2>Through our partnership with America's ToothFairy in 2025, we donated <em>2000</em> dental hygiene kits to help provide underserved children access to essential oral care and educate on tooth decay prevention. </h2>",
             "text_style": "body"
           }
+        },
+        "button_QJ6kL6": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "https://www.americastoothfairy.org/stories/libraries-turn-storytime-into-smile-time",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
         }
       },
       "block_order": [
         "heading_WiQgjk",
-        "text_DQG8eL"
+        "text_DQG8eL",
+        "button_QJ6kL6"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
