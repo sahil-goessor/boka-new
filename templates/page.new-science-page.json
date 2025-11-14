@@ -29,9 +29,12 @@
             "image_mobile": "shopify://shop_images/Main_banner_mobile.webp",
             "heading": "A <em>smarter way</em> to <br> care for your smile</br>",
             "image_link": "",
-            "heading_size": "h1",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 36,
             "heading_tag": "default",
             "subheading": "Boka pairs nature and science to optimize your oral care routine. No harsh chemicals included.",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -139,7 +142,7 @@
             "image": "shopify://shop_images/For_Sensitive_Teeth.webp",
             "image_link": "",
             "title": "<strong>Appropriate for Sensitive Teeth</strong>",
-            "text": "<p>Fortifies the surface of teeth for daily oral wellness.</p>",
+            "text": "<p>Safe for daily use.</p>",
             "link_label": "",
             "link": ""
           }
