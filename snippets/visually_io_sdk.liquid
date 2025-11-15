@@ -10,6 +10,7 @@
     var jitsuKey =  "js.{{ shop.id }}";
     window.loomi_ctx = {...(window.loomi_ctx || {}),storeAlias:alias,jitsuKey,env};
     
+    
     {% if customer %}
       window.loomi_ctx.ctags = []
       {% for t in customer.tags %}
