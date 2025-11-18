@@ -11,6 +11,20 @@
     background: {{ section.settings.bullets_line_color }}
   }
 
+  {% comment %} Static mode styles {% endcomment %}
+  {% if section.settings.enable_scroll_animation == false %}
+    .section-{{ section.id }}-padding .bulleted-content-text li {
+      opacity: 1 !important;
+    }
+    .section-{{ section.id }}-padding .bulleted-content-text li::before {
+      background-color: {{ section.settings.bullets_color }} !important;
+    }
+    .section-{{ section.id }}-padding .bulleted-content-text .draw-line {
+      height: 100% !important;
+      opacity: 1 !important;
+    }
+  {% endif %}
+
   .section-{{ section.id }}-padding {
     background-color: {{ section.settings.section_background_color }};
     padding-top: {{ section.settings.padding_top_mobile }}px;
@@ -104,7 +118,7 @@
               <span class="default-line"></span>
               <span class="draw-line"></span>
               {%- for block in section.blocks -%}
-                <li>
+                <li{% if section.settings.enable_scroll_animation == false %} class="in-view"{% endif %}>
                 <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
                 </div>
@@ -139,6 +153,7 @@
 <script>
 // Timeline Scroll Section
 // --------------------------------------------------------------
+{% if section.settings.enable_scroll_animation %}
 function timeline(section){
 var items = $(section + " .bulleted-content-text li"),
 timelineHeight = $(section + " .bulleted-content-text ul").height(),
@@ -198,6 +213,7 @@ if(lineToDraw.length) {
 }
 
 timeline('.section-{{ section.id }}-padding');
+{% endif %}
 </script>
 
 {% schema %}
@@ -546,6 +562,17 @@ timeline('.section-{{ section.id }}-padding');
       "label": "Bullets line color",
       "id": "bullets_line_color",
       "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Scroll Animation"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_scroll_animation",
+      "label": "Enable scroll animation",
+      "info": "When enabled, bullets and line will animate as you scroll. When disabled, all bullets will be visible by default.",
+      "default": false
     },
     {
       "type": "header",
