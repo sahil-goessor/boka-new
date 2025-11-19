@@ -245,7 +245,7 @@
                         </li>
                       {%- endfor -%}
                     </ul>
-                    {% unless customer.b2b? %}
+                    {% comment %} {% unless customer.b2b? %}
                     {% if item.product.metafields.subscriptions.has_subscription == 'True' and item.product.metafields.subscriptions.shipping_interval_frequency contains '3' and item.variant.metafields.heyday.disable_subscription != true %}
                       {% assign discount_percentage = item.product.metafields.subscriptions.discount_percentage | plus: 0 %}
                       <div class="product-upgrade">
@@ -280,7 +280,7 @@
                         {% endfor %}
                       </div>
                     {% endif %}
-                    {% endunless %}
+                    {% endunless %} {% endcomment %}
                   </td>
 
                   <td class="cart-item__totals right medium-hide large-up-hide">
