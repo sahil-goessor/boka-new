@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_kEHHiX": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -183,57 +186,6 @@
         "padding_bottom_mobile": 60
       }
     },
-    "yt_shorts_CPAy9y": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_ze6DtJ": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/6rHcesEM2xU?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_QrKPHV": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/zVOBYsEe4hs",
-            "description": "Describe the video"
-          }
-        },
-        "video_UAAEmX": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/fSaAyN5onmc?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_kfrhhG": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/nJxHHKG9A3s",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_ze6DtJ",
-        "video_QrKPHV",
-        "video_UAAEmX",
-        "video_kfrhhG"
-      ],
-      "disabled": true,
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em> Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 4,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 56
-      }
-    },
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
       "type": "image-with-bulleted-text",
       "blocks": {
@@ -288,6 +240,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -308,135 +261,6 @@
         "custom_text_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 52,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
-    "image_banner_DBHfJY": {
-      "type": "image-banner",
-      "blocks": {
-        "buttons_9Q8Qt8": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "SHOP NOW",
-            "button_link_1": "https://www.boka.com/products/vital-bite-probiotic-tablets",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "buttons_9Q8Qt8"
-      ],
-      "disabled": true,
-      "settings": {
-        "enable_fullwidth": false,
-        "image": "shopify://shop_images/Why_Choose_Brightboost_Desktop.webp",
-        "image_mobile": "shopify://shop_images/Why_Choose_Brightboost_Mobile.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_height_mobile": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "custom",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#433033",
-        "button_background_color": "#000000",
-        "button_foreground_color": "#ffffff",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "mobile_content_position": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false,
-        "padding_top": 100,
-        "padding_bottom": 0,
-        "padding_top_tablet": 80,
-        "padding_bottom_tablet": 80,
-        "padding_top_mobile": 80,
-        "padding_bottom_mobile": 80
-      }
-    },
-    "multicolumn_PmqAnj": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_zGbat7": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "<strong>Tremendously Effective</strong>",
-            "text": "<p>\"In just 10 days, my teeth look noticeably brighter!\" </p><p><em>– Tamara D., US</em></p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6jpf4F": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "<strong>Loving This Stuff!</strong>",
-            "text": "<p>\"I use it as a boost for my overall dental health—my gums and teeth feel amazing.\" </p><p><em>– Maria, US</em></p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_KLQE7q": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "<strong>Works</strong>",
-            "text": "<p>\"Actually starting to see my beautiful little bones once again.\" </p><p><em>– Mark S., US</em></p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_AJhqE4": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "<strong>Dental Hygienist Approved</strong>",
-            "text": "<p>\"My dental hygienist noticed the difference—even when I didn’t!\" </p><p><em>– Kristina, US</em></p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_zGbat7",
-        "column_6jpf4F",
-        "column_KLQE7q",
-        "column_AJhqE4"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".inline-richtext {margin: auto;}",
-        "@media (max-width: 768px) {.inline-richtext {text-align: center; }}"
-      ],
-      "settings": {
-        "title": "Trusted by dentists, loved by customers",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "full_width_enabled": false,
-        "button_label": "",
-        "button_link": "",
-        "fadein_enabled": false,
-        "column_heading_background_color": "",
-        "color_scheme": "custom",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#000000",
-        "columns_tablet": "1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
@@ -564,137 +388,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "672bfbbb-3f35-4988-bf92-66ed4484892b": {
-      "type": "collapsible-content",
-      "blocks": {
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix are pre- and probiotic powder sticks designed to support oral health by promoting a balanced oral microbiome.</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How often should I take Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Take one Pro Stix daily by tearing the stick open and pouring the powder into your mouth. No water is needed.</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do I need to refrigerate Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>No refrigeration needed! Pro Stix powder are shelf-stable for up to 18 months from the manufacturing date, making them easy to store and perfect for maintaining a consistent oral care routine. With 30 pixie stix per box, convenient, long-lasting oral health is always within reach.</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is the flavor of Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix comes in a fun and refreshing lavender lemonade flavor, making them enjoyable to use.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_9qinTJ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Are there any allergens in Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix is nut-free, sodium-free, drug-free, and free from artificial flavors.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_rVMB4W": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can Pro Stix replace brushing or flossing?",
-            "icon": "question_mark",
-            "row_content": "<p>No, Pro Stix supplements your oral care routine and should be used alongside brushing and flossing.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_bXhKjK": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What makes Pro Stix convenient to use?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix comes in single-use sticks that can be poured directly into the mouth, making them easy to carry and consume without water.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Fe6kif": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does Pro Stix promote fresh breath?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix uses BLIS K12, a probiotic that targets harmful bacteria in the mouth, reducing the causes of bad breath.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_QcLBtp": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Are Pro Stix safe to use with other dietary supplements?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, Pro Stix can be used alongside other dietary supplements, but consult your doctor if you’re taking medication or have medical conditions.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_dnEjhR": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I take Pro Stix at any time of the day?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, Pro Stix can be taken anytime, but using it after brushing your teeth ensures better colonization of beneficial bacteria.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4",
-        "collapsible_row_9qinTJ",
-        "collapsible_row_rVMB4W",
-        "collapsible_row_bXhKjK",
-        "collapsible_row_Fe6kif",
-        "collapsible_row_QcLBtp",
-        "collapsible_row_dnEjhR"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {h1 {font-size: 30px; }}"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h0",
-        "heading_tag": "h1",
-        "heading_alignment": "center",
-        "description": "",
-        "layout": "none",
-        "color_scheme": "custom",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#433033",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "rich_text_H9x3E9": {
       "type": "rich-text",
       "blocks": {
@@ -798,14 +491,10 @@
   },
   "order": [
     "main",
-    "yt_shorts_CPAy9y",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "custom_liquid_hL9Mbr",
-    "image_banner_DBHfJY",
-    "multicolumn_PmqAnj",
     "multicolumn_HYhLX7",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
-    "672bfbbb-3f35-4988-bf92-66ed4484892b",
     "rich_text_H9x3E9",
     "related-products",
     "1745416045d57e0370"
