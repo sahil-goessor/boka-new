@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_gcYmn6": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -244,6 +247,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -262,6 +266,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_to_use_1.webp",
+            "image_link": "",
             "title": "<strong>Step 1</strong>",
             "text": "<p>Fill the cap with mouthwash</p>",
             "link_label": "",
@@ -272,6 +277,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_to_use_2.webp",
+            "image_link": "",
             "title": "<strong>Step 2</strong>",
             "text": "<p>Swish for 30–60 seconds, twice daily</p>",
             "link_label": "",
@@ -282,6 +288,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/How_to_use_3.webp",
+            "image_link": "",
             "title": "<strong>Step 3</strong>",
             "text": "<p>For best results, use before brushing and after flossing</p>",
             "link_label": "",
@@ -323,80 +330,6 @@
         "padding_bottom": 70,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 52
-      }
-    },
-    "image_with_bulleted_text_raLKD6": {
-      "type": "image-with-bulleted-text",
-      "blocks": {
-        "text_P4GUf6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Powered by probiotic cultures</p>",
-            "text_style": "body"
-          }
-        },
-        "text_3iC46M": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nut-free, sodium-free, and drug-free</p>",
-            "text_style": "body"
-          }
-        },
-        "text_LnyDbx": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Fun lavender lemonade flavor </p>",
-            "text_style": "body"
-          }
-        },
-        "text_pwdBk3": {
-          "type": "text",
-          "settings": {
-            "text": "<p>No artificial flavors added</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_P4GUf6",
-        "text_3iC46M",
-        "text_LnyDbx",
-        "text_pwdBk3"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/PDP_Pro_Stix_Ingredients_Flavor.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "heading": "<em>Power-Packed</em> Ingredients, Fun Flavor",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "caption": "Pro Stix combines clean ingredients with a fun and flavorful taste to bring you oral care that’s as effective as it is enjoyable. ",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "button_label": "SHOP NOW",
-        "button_link": "https://www.boka.com/products/pro-stix-probiotic-powder",
-        "second_button_label": "",
-        "second_button_link": "",
-        "content_layout": "no-overlap",
-        "color_scheme": "custom",
-        "section_background_color": "#ffffff",
-        "custom_background_color": "#f1ebdd",
-        "custom_text_color": "#433033",
-        "bullets_color": "#433033",
-        "bullets_line_color": "#433033",
-        "image_behavior": "none",
-        "mobile_heading_alignment": "center",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 100,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 60
       }
     },
     "image_banner_DBHfJY": {
@@ -453,6 +386,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Key_ingredients_1.webp",
+            "image_link": "",
             "title": "<strong>Prebiotics </strong>",
             "text": "<p>Help maintain a balanced oral ecosystem and support overall mouth health.</p>",
             "link_label": "",
@@ -463,6 +397,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Key_ingredients_2.webp",
+            "image_link": "",
             "title": "<strong>Peppermint & Lemongrass Oils</strong>",
             "text": "<p>Provide a refreshing, natural flavor while helping to freshen breath without harsh </p>",
             "link_label": "",
@@ -473,6 +408,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Key_ingredients_3.webp",
+            "image_link": "",
             "title": "<strong>Organic Acids & Bitter Orange Bioflavonoids</strong>",
             "text": "<p>Naturally give the mouthwash its subtle yellow hue while supporting oral freshness.</p>",
             "link_label": "",
@@ -517,79 +453,6 @@
         "padding_bottom_mobile": 49
       }
     },
-    "multicolumn_bKX4JG": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_LpFmdD": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>A Game-Changer!</strong>",
-            "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"I can already feel the difference. My breath and gums feel so much healthier. It’s  easy to use!\"</p><p>- CJ H</p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/replacement-heads-for-boka-pocket-brush"
-          }
-        },
-        "column_X3JY3h": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Oral Routine</strong>",
-            "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"This probiotic fits perfectly into my daily routine. My gums feel healthier, and my breath is fresher than ever.\"</p><p></p><p>- Sarah</p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/replacement-heads-for-boka-pocket-brush"
-          }
-        },
-        "column_pd93Gb": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Highly Recommended</strong>",
-            "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"I’ve tried many solutions for bad breath, but nothing works like this. It’s definitely a great product!\"</p><p></p><p>- John</p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/replacement-heads-for-boka-pocket-brush"
-          }
-        },
-        "column_Y7pBwn": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Effective!</strong>",
-            "text": "<p>⭐️⭐️⭐️⭐️⭐️<br/>\"This has been a fantastic addition to my daily regimen. My dentist even noticed the difference in my oral health!\"</p><p></p><p>- Kat</p>",
-            "link_label": "SHOP NOW",
-            "link": "shopify://products/replacement-heads-for-boka-pocket-brush"
-          }
-        }
-      },
-      "block_order": [
-        "column_LpFmdD",
-        "column_X3JY3h",
-        "column_pd93Gb",
-        "column_Y7pBwn"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "What Our <em>Customers </em>Are Saying",
-        "heading_size": "h0",
-        "heading_tag": "h1",
-        "image_width": "half",
-        "image_ratio": "circle",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "full_width_enabled": false,
-        "button_label": "",
-        "button_link": "",
-        "fadein_enabled": false,
-        "column_heading_background_color": "",
-        "color_scheme": "custom",
-        "custom_background_color": "#cdb87a",
-        "custom_text_color": "#433033",
-        "columns_tablet": "1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 69,
-        "padding_bottom": 100,
-        "padding_top_mobile": 12,
-        "padding_bottom_mobile": 49
-      }
-    },
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
       "type": "featured-collection",
       "custom_css": [
@@ -622,137 +485,6 @@
         "swipe_on_mobile": true,
         "padding_top": 50,
         "padding_bottom": 40,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
-    "672bfbbb-3f35-4988-bf92-66ed4484892b": {
-      "type": "collapsible-content",
-      "blocks": {
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix are pre- and probiotic powder sticks designed to support oral health by promoting a balanced oral microbiome.</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How often should I take Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Take one Pro Stix daily by tearing the stick open and pouring the powder into your mouth. No water is needed.</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do I need to refrigerate Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>No refrigeration needed! Pro Stix powder are shelf-stable for up to 18 months from the manufacturing date, making them easy to store and perfect for maintaining a consistent oral care routine. With 30 pixie stix per box, convenient, long-lasting oral health is always within reach.</p>",
-            "page": ""
-          }
-        },
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is the flavor of Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix comes in a fun and refreshing lavender lemonade flavor, making them enjoyable to use.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_9qinTJ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Are there any allergens in Pro Stix?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix is nut-free, sodium-free, drug-free, and free from artificial flavors.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_rVMB4W": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can Pro Stix replace brushing or flossing?",
-            "icon": "question_mark",
-            "row_content": "<p>No, Pro Stix supplements your oral care routine and should be used alongside brushing and flossing.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_bXhKjK": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What makes Pro Stix convenient to use?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix comes in single-use sticks that can be poured directly into the mouth, making them easy to carry and consume without water.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Fe6kif": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does Pro Stix promote fresh breath?",
-            "icon": "question_mark",
-            "row_content": "<p>Pro Stix uses BLIS K12, a probiotic that targets harmful bacteria in the mouth, reducing the causes of bad breath.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_QcLBtp": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Are Pro Stix safe to use with other dietary supplements?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, Pro Stix can be used alongside other dietary supplements, but consult your doctor if you’re taking medication or have medical conditions.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_dnEjhR": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I take Pro Stix at any time of the day?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, Pro Stix can be taken anytime, but using it after brushing your teeth ensures better colonization of beneficial bacteria.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3",
-        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4",
-        "collapsible_row_9qinTJ",
-        "collapsible_row_rVMB4W",
-        "collapsible_row_bXhKjK",
-        "collapsible_row_Fe6kif",
-        "collapsible_row_QcLBtp",
-        "collapsible_row_dnEjhR"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "@media screen and (max-width: 749px) {h1 {font-size: 30px; }}"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h0",
-        "heading_tag": "h1",
-        "heading_alignment": "center",
-        "description": "",
-        "layout": "none",
-        "color_scheme": "custom",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#433033",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
@@ -862,12 +594,9 @@
     "main",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "multicolumn_CUjKAz",
-    "image_with_bulleted_text_raLKD6",
     "image_banner_DBHfJY",
     "multicolumn_HYhLX7",
-    "multicolumn_bKX4JG",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
-    "672bfbbb-3f35-4988-bf92-66ed4484892b",
     "rich_text_H9x3E9",
     "related-products",
     "1741358557ff39c428"
