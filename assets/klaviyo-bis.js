@@ -3,8 +3,8 @@ document.querySelector('.back-in-stock-container .notify-me').addEventListener('
     const { value: email } = await Swal.fire({
       title: `${variant_title}`,
       input: "email",
-      confirmButtonText: "SUBSCRIBE",
-      inputLabel: "Please enter your email address to subscribe",
+      confirmButtonText: "JOIN THE WAITLIST",
+      inputLabel: "Please enter your email address to be notified when this product is back in stock.",
       inputPlaceholder: "Enter your email address"
     });
     if (email) {
