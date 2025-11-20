@@ -9,6 +9,59 @@
  */
 {
   "sections": {
+    "image_with_text_FVpnHw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RdGiyU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Boka Black Friday Deals are Here!",
+            "heading_size": "h1",
+            "heading_tag": "h1"
+          }
+        },
+        "text_GmcJaq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Brighter care. Better savings. Save up to 30% off  and enjoy free shipping on orders $35 & up! </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RdGiyU",
+        "text_GmcJaq"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Collection_Page_Banner_3.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "custom_css": [
@@ -20,35 +73,6 @@
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
         "custom_text_color": "#ffffff"
-      }
-    },
-    "image_banner_xPi8y3": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "enable_fullwidth": false,
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_height_mobile": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "button_background_color": "#000000",
-        "button_foreground_color": "#ffffff",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "mobile_content_position": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 80,
-        "padding_bottom_tablet": 80,
-        "padding_top_mobile": 80,
-        "padding_bottom_mobile": 80
       }
     },
     "1729844957c9ef4627": {
@@ -501,8 +525,8 @@
     }
   },
   "order": [
+    "image_with_text_FVpnHw",
     "banner",
-    "image_banner_xPi8y3",
     "1729844957c9ef4627",
     "rich_text_bfeYpP",
     "product-grid",
