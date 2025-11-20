@@ -10,14 +10,16 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
+      "type": "wwai-page-1761305469-idjntmdz",
+      "settings": {}
+    },
+    "main-1": {
+      "type": "wwai-page-1761305469-idjntmdz_pdp_connect",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "main-1"
   ]
 }
