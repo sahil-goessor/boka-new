@@ -15,7 +15,7 @@
         "heading_RdGiyU": {
           "type": "heading",
           "settings": {
-            "heading": "Boka Black Friday Deals are Here!",
+            "heading": "Black Friday Sale",
             "heading_size": "h1",
             "heading_tag": "h1"
           }
@@ -23,7 +23,7 @@
         "text_GmcJaq": {
           "type": "text",
           "settings": {
-            "text": "<p>Brighter care. Better savings. Save up to 30% off  and enjoy free shipping on orders $35 & up! </p>",
+            "text": "<p>Brighter care. Better savings.<br/>Save up to 30% off  and enjoy free shipping on orders $35 & up! Sale ends December 1st. Priced as marked, no promo code needed.</p>",
             "text_style": "body"
           }
         }
@@ -32,12 +32,11 @@
         "heading_RdGiyU",
         "text_GmcJaq"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/Collection_Page_Banner_3.webp",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -53,7 +52,7 @@
         "caption_font_size_mobile": 14,
         "caption_font_size_desktop": 16,
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 20,
         "padding_bottom": 20,
         "padding_top_tablet": 30,
@@ -64,6 +63,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "custom_css": [
         ".collection-hero__description {max-width: 100%;}"
       ],
@@ -110,7 +110,6 @@
       "blocks": {
         "heading_U89Kig": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Cyber Monday & Black Friday Sale",
             "heading_size": "h1",
@@ -147,6 +146,7 @@
         "heading_DTqM6k",
         "text_W6eqyg"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "desktop_content_position": "center",
