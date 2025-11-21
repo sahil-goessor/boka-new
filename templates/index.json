@@ -468,75 +468,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "6395b3fc-f553-46f1-ba02-561f193e1d1e": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Non-Toxic.webp",
-            "image_link": "",
-            "title": "<strong>Non-toxic*</strong>",
-            "text": "<p>We create mindful formulas free of harsh chemicals.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Dentist-Approved.webp",
-            "image_link": "",
-            "title": "<strong>Dentist-approved</strong>",
-            "text": "<p>All of our products are backed by science and proven to perform.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Ultra-Convenient.webp",
-            "image_link": "",
-            "title": "<strong>Ultra-convenient</strong>",
-            "text": "<p>Put your smile on repeat with our easy subscription program.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-0",
-        "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-1",
-        "template--15124824358955__6395b3fc-f553-46f1-ba02-561f193e1d1e-16842973057c2a9422-2"
-      ],
-      "name": "Multicolumn - USP icons",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "heading_tag": "default",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "full_width_enabled": false,
-        "button_label": "",
-        "button_link": "",
-        "fadein_enabled": false,
-        "column_heading_background_color": "linear-gradient(0deg, rgba(218, 233, 207, 0.5), rgba(218, 233, 207, 0.5) 100%)",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "columns_tablet": "2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 65,
-        "padding_bottom": 50,
-        "padding_top_mobile": 10,
-        "padding_bottom_mobile": 35
-      }
-    },
     "9862c4aa-f495-4304-9fba-832988e68c27": {
       "type": "collection-list",
       "blocks": {
@@ -664,7 +595,6 @@
     "rich_text_Bh9cg6",
     "3d719ebc-5747-4557-bde5-5de02b7b2fc5",
     "custom_liquid_Pw6kPw",
-    "6395b3fc-f553-46f1-ba02-561f193e1d1e",
     "9862c4aa-f495-4304-9fba-832988e68c27",
     "custom_liquid_acJyKE",
     "custom_liquid_FaxRfE",
