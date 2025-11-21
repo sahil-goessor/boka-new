@@ -155,6 +155,17 @@
     "multicolumn_BWCRzU": {
       "type": "multicolumn",
       "blocks": {
+        "column_yyRYPY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/VC_Featured_Banner_Op_2.webp",
+            "image_link": "shopify://products/vanilla-cardamom-n-ha-toothpaste",
+            "title": "A Limited-Edition Indulgence",
+            "text": "<p>Savor every brush with the comforting taste of vanilla and a hint of cardamom spice.</p>",
+            "link_label": "SHOP VANILLA CARDAMOM",
+            "link": "shopify://products/vanilla-cardamom-n-ha-toothpaste"
+          }
+        },
         "column_3cJ9YR": {
           "type": "column",
           "settings": {
@@ -165,22 +176,11 @@
             "link_label": "SHOP NOW",
             "link": "shopify://products/holiday-2-pack-gift-set"
           }
-        },
-        "column_BK9wUp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Travel_Size_Featured_Banner.webp",
-            "image_link": "shopify://products/travel-size-n-ha-toothpaste",
-            "title": "<strong>Elevate Your Oral Care Ritual, On the Go</strong>",
-            "text": "<p>New travel size toothpastes perfect for adventure or discovering your favorite flavor.</p>",
-            "link_label": "SHOP TRAVEL SIZE",
-            "link": "shopify://products/travel-size-n-ha-toothpaste"
-          }
         }
       },
       "block_order": [
-        "column_3cJ9YR",
-        "column_BK9wUp"
+        "column_yyRYPY",
+        "column_3cJ9YR"
       ],
       "custom_css": [
         ".column-heading {padding: unset;}"
