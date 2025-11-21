@@ -27,9 +27,8 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
-            "hide_on_subscription_products": true
+            "hide_on_subscription_products": false
           }
         },
         "variant_picker": {
