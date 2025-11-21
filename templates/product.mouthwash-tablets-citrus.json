@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 30
+          }
         },
         "yotpo_product_reviews_star_rating_EKcaEH": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
