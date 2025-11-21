@@ -51,10 +51,10 @@
           "type": "megamenu_image",
           "settings": {
             "megamenu_link_name": "SHOP",
-            "megamenu_image": "shopify://shop_images/Boka_Nav_Shop_All_325x325_d91d8a9c-7cb8-4ac7-a1cb-b2ae7ecbf1ee.jpg",
+            "megamenu_image": "shopify://shop_images/black-friday.webp",
             "megamenu_caption": "",
-            "megamenu_url": "shopify://collections/shop-all",
-            "megamenu_link_text": "Shop All"
+            "megamenu_url": "shopify://collections/bfcm",
+            "megamenu_link_text": "Black Friday Deals"
           }
         },
         "ea0f43b8-50d2-43d4-b0dd-0cc7bbc103f0": {
