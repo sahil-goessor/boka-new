@@ -44,7 +44,7 @@
         "color_scheme": "background-1",
         "section_background_color": "#ffffff",
         "custom_background_color": "#ffffff",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
         "heading_font_size_desktop": 48,
         "text_font_size_mobile": 16,
@@ -353,6 +353,7 @@
         "text_mFQYpt",
         "button_Erd8i8"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/BOK_web_contentblock_June24_Desktop_2500x800_v1.jpg",
         "height": "small",
