@@ -174,108 +174,6 @@
         "padding_bottom_mobile": 60
       }
     },
-    "yt_shorts_qg9cUc": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_wQUVrB": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/ECii2PrH2ZI?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_BzgxNB": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/MMMMVmmdS2Q?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_w49FMk": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        },
-        "video_QMTe4f": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_wQUVrB",
-        "video_BzgxNB",
-        "video_w49FMk",
-        "video_QMTe4f"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 2,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "85272ee1-d7ec-498c-985b-6761fcc6f38f": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "The power of n-Ha",
-            "heading_size": "h1",
-            "heading_tag": "h2"
-          }
-        },
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nano-hydroxyapatite (n-Ha) is a form of calcium that makes up 97% of your tooth enamel and 70% of your dentin. Because it comprises the primary foundation of teeth and bones, it's restorative for your smile.</p><p>First used by NASA astronauts in space, n-Ha rebuilds teeth without the toxins found in fluoride, making it safe to swallow. (And if it’s good enough for space missions, it’s good enough for us.)</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-0",
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Boka_Lifestyle_Dentist_n-Ha-798x634.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "custom",
-        "section_background_color": "rgba(0,0,0,0)",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#212529",
-        "heading_font_size_mobile": 28,
-        "heading_font_size_desktop": 48,
-        "text_font_size_mobile": 16,
-        "text_font_size_desktop": 18,
-        "caption_font_size_mobile": 14,
-        "caption_font_size_desktop": 16,
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 20,
-        "padding_bottom": 40,
-        "padding_top_tablet": 30,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 0
-      }
-    },
     "3bd72606-593e-4fc8-86e5-2cf49ee40344": {
       "type": "featured-collection",
       "settings": {
@@ -398,13 +296,6 @@
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
       "type": "image-with-bulleted-text",
       "blocks": {
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Reduces sensitivity</p>",
-            "text_style": "body"
-          }
-        },
         "93b178e4-2598-45c7-b4a1-fd50f417768b": {
           "type": "text",
           "settings": {
@@ -442,7 +333,6 @@
         }
       },
       "block_order": [
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b",
         "93b178e4-2598-45c7-b4a1-fd50f417768b",
         "6f829075-8538-46cf-852c-3bb0c8fb002d",
         "4aa669c9-1b55-40e7-a34e-9b5dd74e8c87",
@@ -473,6 +363,7 @@
         "custom_text_color": "#ffffff",
         "bullets_color": "#ffffff",
         "bullets_line_color": "#ffffff",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -1649,8 +1540,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_qg9cUc",
-    "85272ee1-d7ec-498c-985b-6761fcc6f38f",
     "3bd72606-593e-4fc8-86e5-2cf49ee40344",
     "related-products",
     "91480b05-d41b-49d7-86d2-128865d27814",
