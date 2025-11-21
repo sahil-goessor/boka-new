@@ -170,7 +170,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Holiday_Kit_Featured_Banner.webp",
-            "image_link": "",
+            "image_link": "shopify://products/holiday-2-pack-gift-set",
             "title": "<strong>Treat someone special with the Boka Holiday Kit </strong>",
             "text": "<p>The perfect mint duo that adds a little extra joy to their daily brush ritual.</p>",
             "link_label": "SHOP THE HOLIDAY KIT",
