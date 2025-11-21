@@ -79,7 +79,6 @@
         },
         "264bd8de-503b-465d-b24a-0b9e9324bb44": {
           "type": "megamenu_image",
-          "disabled": true,
           "settings": {
             "megamenu_link_name": "SHOP",
             "megamenu_image": "shopify://shop_images/Homepage_Liquid-Mouthwash_Mobile_Option-1.jpg",
