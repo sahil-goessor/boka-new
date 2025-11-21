@@ -27,9 +27,8 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {
-            "hide_on_subscription_products": true
+            "hide_on_subscription_products": false
           }
         },
         "variant_picker": {
@@ -214,56 +213,6 @@
         "padding_bottom_tablet": 30,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 0
-      }
-    },
-    "yt_shorts_ADBgWx": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_34LqHt": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/ECii2PrH2ZI?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_UNnJTx": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/MMMMVmmdS2Q?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_ninakC": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        },
-        "video_QMtpdQ": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_34LqHt",
-        "video_UNnJTx",
-        "video_ninakC",
-        "video_QMtpdQ"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 2,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 84
       }
     },
     "3bd72606-593e-4fc8-86e5-2cf49ee40344": {
@@ -463,6 +412,7 @@
         "custom_text_color": "#ffffff",
         "bullets_color": "#ffffff",
         "bullets_line_color": "#ffffff",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -1684,7 +1634,6 @@
   "order": [
     "main",
     "85272ee1-d7ec-498c-985b-6761fcc6f38f",
-    "yt_shorts_ADBgWx",
     "3bd72606-593e-4fc8-86e5-2cf49ee40344",
     "related-products",
     "91480b05-d41b-49d7-86d2-128865d27814",
