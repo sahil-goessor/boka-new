@@ -54,6 +54,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_xBLUaE": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -129,6 +135,7 @@
         "recharge_subscriptions_subscription_widget_v2_Qzb4LW",
         "quantity_selector",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_xBLUaE",
         "description",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_NnPN3E",
@@ -159,56 +166,6 @@
         "padding_bottom_tablet": 70,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 20
-      }
-    },
-    "yt_shorts_xGFHyB": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_WUghtt": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/Ek57iTe94X0",
-            "description": ""
-          }
-        },
-        "video_7YmTrz": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/ZIOM1LbIvyI",
-            "description": ""
-          }
-        },
-        "video_8L83Pp": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/9GynqcaP5jI",
-            "description": ""
-          }
-        },
-        "video_fMyiJc": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/3N-wNQw19IU",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_WUghtt",
-        "video_7YmTrz",
-        "video_8L83Pp",
-        "video_fMyiJc"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 4,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
@@ -784,7 +741,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_xGFHyB",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "custom_liquid_hL9Mbr",
     "multicolumn_6G7iCQ",
