@@ -154,7 +154,7 @@
         "@media (min-width: 750px) {.image-with-text__media-item {padding-left: 80px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Image_1.jpg",
+        "image": "shopify://shop_images/ela-mint-tp.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -218,7 +218,7 @@
         "@media (min-width: 750px) {.image-with-text__media-item {padding-right: 80px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Image_2.jpg",
+        "image": "shopify://shop_images/Image_2_1_copy_60866876-15a2-4c16-b49a-626249b9853a.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -284,7 +284,7 @@
         "text_Hb7rbU"
       ],
       "settings": {
-        "image": "shopify://shop_images/Image_3.jpg",
+        "image": "shopify://shop_images/Image_3_copy.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -307,6 +307,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#090909",
         "bullets_line_color": "#000000",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -355,7 +356,7 @@
         "@media (min-width: 750px) {.image-with-text__media-item {padding-right: 80px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Image_4.jpg",
+        "image": "shopify://shop_images/Image_4_copy.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -464,7 +465,7 @@
         ".image-with-text__content {padding-right: 40px;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Image_5.jpg",
+        "image": "shopify://shop_images/Image_5_copy.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -487,6 +488,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#090909",
         "bullets_line_color": "#000000",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -540,7 +542,7 @@
         ".image-with-text__content {padding-right: 40px;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Image_7.jpg",
+        "image": "shopify://shop_images/Image_7_copy.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -563,6 +565,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#090909",
         "bullets_line_color": "#000000",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -592,16 +595,6 @@
             "heading": "Which fluoride-alternative dental care product is best?",
             "icon": "none",
             "row_content": "<p>Among the growing brands that offer fluoride-free solutions, Boka is a great choice for those seeking a high-quality and effective oral care product. Boka uses nano-sized mineral particles, is free from harsh chemicals and abrasives, is fluoride-free, vegan, and cruelty-free. When compared with other hydroxyapatite products, Boka’s formula is gentle on dentin yet powerful enough to strengthen enamel and relieve sensitivity.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_KTjyMk": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "How long does it take for this ingredient to remineralize teeth?",
-            "icon": "check_mark",
-            "row_content": "<p>The timing to remineralize varies. It is a gradual process, and noticeable results may take weeks or months to become apparent. It is recommended to consistently use dental products with this ingredient for optimal results. Daily brushing ensures continuous deposition of the mineral into weakened dentin tubules, helping to strengthen and seal them over time.</p>",
             "page": ""
           }
         },
@@ -641,15 +634,6 @@
             "page": ""
           }
         },
-        "2b9ec7b5-c607-445c-b58d-f6acda643326": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What are the benefits of n-Ha toothpaste?",
-            "icon": "none",
-            "row_content": "<p>The benefits of our product include helping remove surface stains and freshening breath.</p>",
-            "page": ""
-          }
-        },
         "c0138dbe-6fcf-4244-b884-8bec29a6048d": {
           "type": "collapsible_row",
           "settings": {
@@ -672,12 +656,10 @@
       "block_order": [
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-1",
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-2",
-        "collapsible_row_KTjyMk",
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-4",
         "d5bd3503-d078-48f2-b735-2c8c183c85ed",
         "2d97e441-6520-4b04-b1a1-9b86cf754be7",
         "fb8955e1-fe28-4212-858c-e60b6677a0cf",
-        "2b9ec7b5-c607-445c-b58d-f6acda643326",
         "c0138dbe-6fcf-4244-b884-8bec29a6048d",
         "collapsible_row_NbXMhF"
       ],
