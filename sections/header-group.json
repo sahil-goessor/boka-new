@@ -51,7 +51,7 @@
           "type": "megamenu_image",
           "settings": {
             "megamenu_link_name": "SHOP",
-            "megamenu_image": "shopify://shop_images/black-friday.webp",
+            "megamenu_image": "shopify://shop_images/BF_Nav_Banner_1x1_1.webp",
             "megamenu_caption": "",
             "megamenu_url": "shopify://collections/bfcm",
             "megamenu_link_text": "Black Friday Deals"
