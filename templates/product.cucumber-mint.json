@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_agYJXH": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -261,7 +264,7 @@
         "text_ztqcXc"
       ],
       "settings": {
-        "image": "shopify://shop_images/A__Benefits.webp",
+        "image": "shopify://shop_images/A__Benefits_c99e2287-e92a-4901-96e1-3cd363901420.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -284,6 +287,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -315,7 +319,7 @@
         "column_DXwrC6": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_1_fd4d4d81-0e6b-40e4-9071-f00c32f8da57.webp",
+            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_1_1.webp",
             "image_link": "",
             "title": "<strong>Step 1: Prep</strong>",
             "text": "<p>Apply a pea-sized amount to your toothbrush</p>",
@@ -326,7 +330,7 @@
         "column_4nTd9b": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_2_3fc2b670-62bd-4233-81fc-c59a6e0d10c9.webp",
+            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_2_e1cec8ff-07e1-4636-acea-7791354ce6f0.webp",
             "image_link": "",
             "title": "<strong>Step 2: Brush</strong>",
             "text": "<p>Brush thoroughly for two minutes, twice daily</p>",
@@ -337,7 +341,7 @@
         "column_3U6yrb": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_3.png",
+            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_3_284aaf8b-447c-4b3c-8ffc-a540fdebe0ad.webp",
             "image_link": "",
             "title": "<strong>Step 3: Smile!</strong>",
             "text": "<p>Spit after brushing—skip the rinse to maximize contact time</p>",
