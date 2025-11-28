@@ -63,6 +63,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_FcfFTP": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -90,6 +96,7 @@
         "recharge_subscriptions_subscription_widget_v2_Rq9HUn",
         "quantity_selector",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_FcfFTP",
         "description",
         "c3eba924-ec22-4119-8a99-ad5347e4f930"
       ],
@@ -115,57 +122,6 @@
         "padding_bottom_tablet": 70,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 60
-      }
-    },
-    "yt_shorts_AgQkUy": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_Mb7aHR": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/B2P-DDRjrJA",
-            "description": "Describe the video"
-          }
-        },
-        "video_HLjGAT": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        },
-        "video_nHa9yg": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        },
-        "video_gzj6Kd": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_Mb7aHR",
-        "video_HLjGAT",
-        "video_nHa9yg",
-        "video_gzj6Kd"
-      ],
-      "disabled": true,
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 1,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "related-products": {
@@ -444,7 +400,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_AgQkUy",
     "related-products",
     "image_with_text_UMNHjH",
     "85272ee1-d7ec-498c-985b-6761fcc6f38f",
