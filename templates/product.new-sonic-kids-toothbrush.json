@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_agYJXH": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -57,6 +60,12 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_jBhWi7": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
           }
         },
         "description": {
@@ -137,6 +146,7 @@
         "quantity_selector",
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_jBhWi7",
         "description",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_NnPN3E",
@@ -232,6 +242,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
