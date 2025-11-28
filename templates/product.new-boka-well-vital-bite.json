@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_nRVwYV": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -37,6 +40,12 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_pLGCYj": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
           }
         },
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
@@ -139,6 +148,7 @@
         "price",
         "quantity_selector",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_pLGCYj",
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "ab30e277-8d13-4c9c-b973-b5f18ebcc515",
         "description",
@@ -171,57 +181,6 @@
         "padding_bottom_tablet": 70,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 60
-      }
-    },
-    "yt_shorts_UB9GXL": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_yMjf33": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/wSmOtINc64g?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_7qfjhT": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        },
-        "video_H7fRzT": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        },
-        "video_izwm4Q": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_yMjf33",
-        "video_7qfjhT",
-        "video_H7fRzT",
-        "video_izwm4Q"
-      ],
-      "disabled": true,
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 1,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
@@ -286,6 +245,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -624,6 +584,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -1112,7 +1073,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_UB9GXL",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "image_with_text_WcKrcP",
     "image_with_text_twAtaT",
