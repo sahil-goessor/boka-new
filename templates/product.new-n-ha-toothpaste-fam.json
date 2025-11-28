@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_UNUTB3": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -179,56 +182,6 @@
         "padding_bottom_mobile": 60
       }
     },
-    "yt_shorts_aAagqf": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_ChEXnT": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/ECii2PrH2ZI?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_YFBKqq": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/MMMMVmmdS2Q?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_BLkYGk": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/VzNY4atTdxI?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_6MFeeE": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/4gKdbhV1PPQ?feature=share",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_ChEXnT",
-        "video_YFBKqq",
-        "video_BLkYGk",
-        "video_6MFeeE"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 4,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "collapsible_content_wEzzi8": {
       "type": "collapsible-content",
       "blocks": {
@@ -379,6 +332,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -1030,7 +984,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_aAagqf",
     "collapsible_content_wEzzi8",
     "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
     "custom_liquid_hL9Mbr",
