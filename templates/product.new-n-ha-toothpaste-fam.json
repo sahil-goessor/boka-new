@@ -67,6 +67,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_EYmApp": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {}
@@ -150,6 +156,7 @@
         "boka_subs_widget_Rq7gaC",
         "quantity_selector",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_EYmApp",
         "description",
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "collapsible_tab_9Ri3zn",
