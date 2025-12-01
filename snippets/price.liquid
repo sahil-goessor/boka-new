@@ -99,9 +99,11 @@
         </p>
       {% endif %}
     </div>
-    {% if template contains 'collection'%}
-      <p class="col_disc">({{ discount_percentage }}% off)</p>
-    {% endif %}
+{% if template contains 'collection' %}
+  <p class="col_disc {% unless product.compare_at_price and product.compare_at_price > product.price %}hide-discount{% endunless %}">
+    ({{ discount_percentage }}% off)
+  </p>
+{% endif %}
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
