@@ -127,3 +127,11 @@
     </span>
   {%- endif -%}
 </div>
+{% if template contains 'collection' and product.compare_at_price > product.price %}
+<style>
+  .col_disc{
+  display: none;
+  }
+</style>
+{% endif %}
+
