@@ -49,6 +49,7 @@
       "blocks": {
         "e75362fa-bf4c-4f70-afef-189f9289bdfd": {
           "type": "megamenu_image",
+          "disabled": true,
           "settings": {
             "megamenu_link_name": "SHOP",
             "megamenu_image": "shopify://shop_images/BF_Nav_Banner_1x1_1.webp",
