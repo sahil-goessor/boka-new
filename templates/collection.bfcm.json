@@ -52,63 +52,6 @@
         "padding_bottom_mobile": 10
       }
     },
-    "rich_text_bfeYpP": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_U89Kig": {
-          "type": "heading",
-          "settings": {
-            "heading": "Cyber Monday & Black Friday Sale",
-            "heading_size": "h1",
-            "heading_tag": "h1"
-          }
-        },
-        "text_MMJCHj": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<h3>Save up to 65% off + get a free Whitening Pen on orders of $40+, while supplies last. Promo auto-applied at checkout!</h3>"
-          }
-        },
-        "heading_DTqM6k": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Black Friday Deals",
-            "heading_size": "h1",
-            "heading_tag": "h1"
-          }
-        },
-        "text_W6eqyg": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<h3>Save up to 65% off + get a free Whitening Pen on orders of $40+, while supplies last. Promo auto-applied at checkout!</h3>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_U89Kig",
-        "text_MMJCHj",
-        "heading_DTqM6k",
-        "text_W6eqyg"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "fadein_enabled": false,
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 0
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -475,7 +418,6 @@
   "order": [
     "banner",
     "1729844957c9ef4627",
-    "rich_text_bfeYpP",
     "product-grid",
     "rich_text_pPiEWz",
     "collection_list_gBGdbH",
