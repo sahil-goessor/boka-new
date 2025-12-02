@@ -1103,7 +1103,7 @@ a.product__text {
 
   .thumbnail-slider .thumbnail-list.slider--tablet-up {
     display: flex;
-    padding: 0.5rem;
+    padding: 0 .5rem .5rem .5rem;
     flex: 1;
     scroll-padding-left: 0.5rem;
   }
@@ -1276,7 +1276,8 @@ a.product__text {
   position: relative;
 }
 
-.thumbnail-list__item::before {
+/* Only apply aspect ratio padding for horizontal (bottom) thumbnails */
+.thumbnail-slider:not(.thumbnail-slider--vertical) .thumbnail-list__item::before {
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -1444,7 +1445,7 @@ a.product__text {
 
 @media screen and (min-width: 750px) {
   .product-media-container {
-    max-width: 97%;
+    max-width: 100%;
   }
 
   .product-media-container:not(.media-type-image) {
