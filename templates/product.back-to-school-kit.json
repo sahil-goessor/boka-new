@@ -220,7 +220,7 @@
         "text_style": "subtitle",
         "text_size": "medium",
         "button_label": "SHOP NOW",
-        "button_link": "shopify://products/back-to-school-kit",
+        "button_link": "shopify://products/kids-variety-pack",
         "second_button_label": "",
         "second_button_link": "",
         "content_layout": "overlap",
@@ -685,7 +685,7 @@
           "type": "button",
           "settings": {
             "button_label": "SHOP NOW",
-            "button_link": "shopify://products/back-to-school-kit",
+            "button_link": "shopify://products/kids-variety-pack",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
