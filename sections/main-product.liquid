@@ -66,7 +66,8 @@
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'custom-badge', product: product %}
 
-      {% render 'product-media-gallery', variant_images: variant_images, lazyload: section.settings.lazyload %}
+      {% comment %} {% render 'product-media-gallery', variant_images: variant_images, lazyload: section.settings.lazyload %} {% endcomment %}
+       {% render 'product-media-gallery', variant_images: variant_images, lazyload: section.settings.lazyload, thumbnail_position: section.settings.thumbnail_position %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <product-info
@@ -696,7 +697,8 @@
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
       <div class="grid__item product__media-wrapper small-hide">
-        {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
+        {% comment %} {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %} {% endcomment %}
+         {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true, thumbnail_position: section.settings.thumbnail_position %}
       </div>
     {%- endif -%}
   </div>
@@ -3514,6 +3516,23 @@ div#sticky-atc__button{
       ],
       "default": "stacked",
       "label": "t:sections.main-product.settings.gallery_layout.label"
+    },
+    {
+      "type": "select",
+      "id": "thumbnail_position",
+      "options": [
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "bottom",
+      "label": "Thumbnail position",
+      "info": "Choose where to display thumbnails relative to the main image"
     },
     {
       "type": "select",
