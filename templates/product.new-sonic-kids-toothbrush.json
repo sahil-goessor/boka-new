@@ -16,7 +16,7 @@
           "type": "title",
           "settings": {
             "title_font_size_mobile": 24,
-            "title_font_size_desktop": 40
+            "title_font_size_desktop": 30
           }
         },
         "yotpo_product_reviews_star_rating_agYJXH": {
@@ -166,6 +166,7 @@
         "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
