@@ -154,6 +154,7 @@
         "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
@@ -165,49 +166,6 @@
         "padding_bottom_tablet": 70,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 60
-      }
-    },
-    "yt_shorts_r7BMgA": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_eiRaee": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/4gKdbhV1PPQ?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_UjRELn": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/B2P-DDRjrJA?feature=share",
-            "description": "Describe the video"
-          }
-        },
-        "video_nYLAFh": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/oiNwxujnRYA?feature=share",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_eiRaee",
-        "video_UjRELn",
-        "video_nYLAFh"
-      ],
-      "disabled": true,
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em> Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 3,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 0,
-        "padding_bottom": 68
       }
     },
     "85272ee1-d7ec-498c-985b-6761fcc6f38f": {
@@ -396,6 +354,7 @@
         "custom_text_color": "#ffffff",
         "bullets_color": "#ffffff",
         "bullets_line_color": "#ffffff",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -533,7 +492,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_r7BMgA",
     "85272ee1-d7ec-498c-985b-6761fcc6f38f",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
     "related-products",
