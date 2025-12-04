@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 30
+          }
         },
         "yotpo_product_reviews_star_rating_nRVwYV": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -172,6 +175,7 @@
         "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
@@ -621,9 +625,12 @@
             "image_mobile": "shopify://shop_images/Say_Hi_To_Probiotics_Mobile_a3d4641b-ec3d-4b14-9cd5-f7c543713b90.webp",
             "heading": "The Future\nof Oral Care",
             "image_link": "",
-            "heading_size": "h1",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 36,
             "heading_tag": "default",
             "subheading": "Probiotics are more than just for your gut. Boka’s Probiotic Toothpaste is thoughtfully formulated to help support your oral microbiome so it can flourish naturally.",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
             "button_label": "TRY NOW",
             "link": "shopify://products/probiotics-bundles",
             "button_style_secondary": false,
