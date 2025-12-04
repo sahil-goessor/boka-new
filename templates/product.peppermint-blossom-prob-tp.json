@@ -50,6 +50,12 @@
             "show_gift_card_recipient": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_4AHxY4": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
@@ -148,6 +154,7 @@
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_Y3VetV",
         "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_4AHxY4",
         "quantity_selector",
         "ab30e277-8d13-4c9c-b973-b5f18ebcc515",
         "description",
@@ -169,6 +176,7 @@
         "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
@@ -180,56 +188,6 @@
         "padding_bottom_tablet": 70,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 60
-      }
-    },
-    "yt_shorts_UB9GXL": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_7qfjhT": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/K7zuH8pFEZc",
-            "description": "Describe the video"
-          }
-        },
-        "video_H7fRzT": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/bGV71szgaH8",
-            "description": "Describe the video"
-          }
-        },
-        "video_izwm4Q": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/KlzB6h3SmRQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_yMjf33": {
-          "type": "video",
-          "settings": {
-            "yt_shorts_link": "https://youtube.com/shorts/wSmOtINc64g?feature=share",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_7qfjhT",
-        "video_H7fRzT",
-        "video_izwm4Q",
-        "video_yMjf33"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "From Our <em>Boka Fam</em>",
-        "heading_size": "h1",
-        "auto_center": false,
-        "columns": 4,
-        "button_label": "Button label",
-        "button_link": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "image_with_text_MD37kF": {
@@ -669,9 +627,12 @@
             "image_mobile": "shopify://shop_images/Say_Hi_To_Probiotics_Mobile_a3d4641b-ec3d-4b14-9cd5-f7c543713b90.webp",
             "heading": "The Future\nof Oral Care",
             "image_link": "",
-            "heading_size": "h1",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 36,
             "heading_tag": "default",
             "subheading": "Probiotics are more than just for your gut. Boka’s Probiotic Toothpaste is thoughtfully formulated to help support your oral microbiome so it can flourish naturally.",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
             "button_label": "TRY NOW",
             "link": "#ProductInfo-template--16692648476715__main",
             "button_style_secondary": false,
@@ -958,7 +919,6 @@
   },
   "order": [
     "main",
-    "yt_shorts_UB9GXL",
     "image_with_text_MD37kF",
     "gif_icons_with_text_mNBBNg",
     "image_with_icons_XVJdzR",
