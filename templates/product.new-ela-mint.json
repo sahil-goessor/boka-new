@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 30
+          }
         },
         "yotpo_product_reviews_star_rating_Jpxdwz": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -150,6 +153,7 @@
         "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
@@ -268,6 +272,7 @@
         "custom_text_color": "#433033",
         "bullets_color": "#433033",
         "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
