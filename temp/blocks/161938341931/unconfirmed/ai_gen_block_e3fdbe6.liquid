@@ -1,6 +1,402 @@
+{% doc %}
+  @prompt
+    Bulleted list of hyperlinks with a recycling icon instead of a bullet point, Center align links on desktop
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-recycling-links-{{ ai_gen_id }} {
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-recycling-links__heading-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.spacing }}px;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    text-align: center;
+  }
+
+  .ai-recycling-links__list-{{ ai_gen_id }} {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.link_spacing }}px;
+    align-items: center;
+  }
+
+  .ai-recycling-links__item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.icon_spacing }}px;
+  }
+
+  .ai-recycling-links__icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-recycling-links__link-{{ ai_gen_id }} {
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+    font-size: {{ block.settings.link_size }}px;
+    transition: color 0.3s ease;
+  }
+
+  .ai-recycling-links__link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.link_hover_color }};
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-recycling-links-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding | times: 0.7 }}px;
+    }
+
+    .ai-recycling-links__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.9 }}px;
+    }
+
+    .ai-recycling-links__list-{{ ai_gen_id }} {
+      align-items: flex-start;
+    }
+
+    .ai-recycling-links__icon-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size | times: 0.8 }}px;
+      height: {{ block.settings.icon_size | times: 0.8 }}px;
+    }
+
+    .ai-recycling-links__link-{{ ai_gen_id }} {
+      font-size: {{ block.settings.link_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-recycling-links-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.heading != blank %}
+    <h2 class="ai-recycling-links__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+  {% endif %}
+
+  <ul class="ai-recycling-links__list-{{ ai_gen_id }}">
+    {% for i in (1..10) %}
+      {% liquid
+        assign link_text_key = 'link_text_' | append: i
+        assign link_url_key = 'link_url_' | append: i
+        assign link_text = block.settings[link_text_key]
+        assign link_url = block.settings[link_url_key]
+      %}
+
+      {% if link_text != blank and link_url != blank %}
+        <li class="ai-recycling-links__item-{{ ai_gen_id }}">
+          <svg
+            class="ai-recycling-links__icon-{{ ai_gen_id }}"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M7 19H6.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 12.5l-.004-.008-.004-.008-1.955-3.827a1.785 1.785 0 0 1 .004-1.784A1.83 1.83 0 0 1 6.815 6H7m0 13v-2.5m0 2.5h6m-6-2.5h.5a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H7m0 0V6m0 0h6"></path>
+            <path d="M17 6h.185c.593 0 1.14.292 1.566.881.317.464.348 1.07.004 1.784L16.804 12.5l.004.008.004.008 1.955 3.827c.344.714.313 1.32-.004 1.784A1.83 1.83 0 0 1 17.185 19H17m0-13v2.5m0-2.5h-6m6 2.5h-.5a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.5m0 0V19m0 0h-6"></path>
+            <path d="M12 22 9 19l3-3"></path>
+          </svg>
+          <a href="{{ link_url }}" class="ai-recycling-links__link-{{ ai_gen_id }}">
+            {{ link_text }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Recycling links",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recycling Resources"
+    },
+    {
+      "type": "header",
+      "content": "Link 1"
+    },
+    {
+      "type": "text",
+      "id": "link_text_1",
+      "label": "Link text",
+      "default": "How to recycle toothpaste tubes"
+    },
+    {
+      "type": "url",
+      "id": "link_url_1",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 2"
+    },
+    {
+      "type": "text",
+      "id": "link_text_2",
+      "label": "Link text",
+      "default": "Recycling program information"
+    },
+    {
+      "type": "url",
+      "id": "link_url_2",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 3"
+    },
+    {
+      "type": "text",
+      "id": "link_text_3",
+      "label": "Link text",
+      "default": "Find a recycling center near you"
+    },
+    {
+      "type": "url",
+      "id": "link_url_3",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 4"
+    },
+    {
+      "type": "text",
+      "id": "link_text_4",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_4",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 5"
+    },
+    {
+      "type": "text",
+      "id": "link_text_5",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_5",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 6"
+    },
+    {
+      "type": "text",
+      "id": "link_text_6",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_6",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 7"
+    },
+    {
+      "type": "text",
+      "id": "link_text_7",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_7",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 8"
+    },
+    {
+      "type": "text",
+      "id": "link_text_8",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_8",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 9"
+    },
+    {
+      "type": "text",
+      "id": "link_text_9",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_9",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Link 10"
+    },
+    {
+      "type": "text",
+      "id": "link_text_10",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url_10",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#22c55e"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover",
+      "default": "#22c55e"
+    },
+    {
+      "type": "range",
+      "id": "link_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Link size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 8,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Heading spacing",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "link_spacing",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Link spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_spacing",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon spacing",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recycling links"
+    }
+  ]
+}
 {% endschema %}
