@@ -11,13 +11,118 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
+    },
+    "image_with_text_XfxifM": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_3YmD7g": {
+          "type": "heading",
+          "settings": {
+            "heading": "Recycling",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "text_zxkB3K": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Recyclability depends on your province. Choose yours from the list below to learn more!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3YmD7g",
+        "text_zxkB3K"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 35,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "17652912245176c1d4": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e3fdbe6_CzqDa3": {
+          "type": "ai_gen_block_e3fdbe6",
+          "settings": {
+            "heading": "Recycling Resources",
+            "link_text_1": "Government link for province 1",
+            "link_url_1": "https://www.boka.com/",
+            "link_text_2": "Government link for province 2",
+            "link_url_2": "https://www.boka.com/",
+            "link_text_3": "Government link for province 3",
+            "link_url_3": "https://www.boka.com/",
+            "link_text_4": "",
+            "link_url_4": "",
+            "link_text_5": "",
+            "link_url_5": "",
+            "link_text_6": "",
+            "link_url_6": "",
+            "link_text_7": "",
+            "link_url_7": "",
+            "link_text_8": "",
+            "link_url_8": "",
+            "link_text_9": "",
+            "link_url_9": "",
+            "link_text_10": "",
+            "link_url_10": "",
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "heading_size": 24,
+            "icon_color": "#22c55e",
+            "icon_size": 24,
+            "link_color": "#000000",
+            "link_hover_color": "#22c55e",
+            "link_size": 16,
+            "padding": 40,
+            "spacing": 24,
+            "link_spacing": 16,
+            "icon_spacing": 12,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e3fdbe6_CzqDa3"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_XfxifM",
+    "17652912245176c1d4"
   ]
 }
