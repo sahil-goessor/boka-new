@@ -1,6 +1,907 @@
+{% doc %}
+  @prompt
+    Create a fully customizable Image + Text Section with these features:
+    
+    1. Layout & Image
+    
+    Option to place image left or right.
+    
+    Image upload field.
+    
+    Image container adapts to natural image size (no cropping unless selected).
+    
+    2. Text Block
+    
+    Headline field.
+    
+    Two subheadline fields below headline.
+    
+    Option to change subheadline container background color.
+    
+    Subheadline container with 36px border radius.
+    
+    Paragraph field below subheadlines.
+    
+    3. Customer Reviews Slider
+    
+    Upload up to 5 reviews. Each review includes:
+    
+    Bold highlight text (short key quote)
+    
+    Full review text
+    
+    Star rating selector
+    
+    Customer name + “Verified Buyer” label
+    
+    Optional checkmark badge upload
+    
+    Slider features: Next/Previous arrows, dot navigation, auto-adjust spacing/height.
+    
+    4. Section Styling
+    
+    Option to change overall section background color.
+    
+    Clean, balanced, responsive layout.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-text-section-{{ ai_gen_id }} {
+    background-color: {{ block.settings.section_bg_color }};
+    padding: 60px 20px;
+  }
+
+  .ai-image-text-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .ai-image-text-container-{{ ai_gen_id }}.ai-image-right-{{ ai_gen_id }} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ai-image-text-container-{{ ai_gen_id }}.ai-image-left-{{ ai_gen_id }} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ai-image-text-container-{{ ai_gen_id }}.ai-image-left-{{ ai_gen_id }} .ai-image-wrapper-{{ ai_gen_id }} {
+    order: -1;
+  }
+
+  .ai-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+  }
+
+  .ai-image-wrapper-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    {% if block.settings.crop_image %}
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    {% endif %}
+  }
+
+  .ai-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .ai-text-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ai-headline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.headline_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.headline_color }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-subheadlines-container-{{ ai_gen_id }} {
+    background-color: {{ block.settings.subheadline_bg_color }};
+    border-radius: 36px;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-subheadline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subheadline_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.subheadline_color }};
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .ai-paragraph-{{ ai_gen_id }} {
+    font-size: {{ block.settings.paragraph_size }}px;
+    color: {{ block.settings.paragraph_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-reviews-slider-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+
+  .ai-reviews-track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+
+  .ai-review-slide-{{ ai_gen_id }} {
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 24px;
+    background-color: {{ block.settings.review_bg_color }};
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ai-review-highlight-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 700;
+    color: {{ block.settings.review_text_color }};
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .ai-review-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.review_text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-review-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+  }
+
+  .ai-review-star-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    fill: {{ block.settings.star_color }};
+  }
+
+  .ai-review-footer-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ai-review-checkmark-{{ ai_gen_id }} {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .ai-review-checkmark-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-review-customer-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 600;
+    color: {{ block.settings.review_text_color }};
+    margin: 0;
+  }
+
+  .ai-review-verified-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.review_text_color }};
+    opacity: 0.7;
+  }
+
+  .ai-slider-controls-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .ai-slider-arrows-{{ ai_gen_id }} {
+    display: flex;
+    gap: 12px;
+  }
+
+  .ai-slider-arrow-{{ ai_gen_id }} {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: {{ block.settings.arrow_bg_color }};
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-slider-arrow-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  .ai-slider-arrow-{{ ai_gen_id }}:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .ai-slider-arrow-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    fill: {{ block.settings.arrow_color }};
+  }
+
+  .ai-slider-dots-{{ ai_gen_id }} {
+    display: flex;
+    gap: 8px;
+  }
+
+  .ai-slider-dot-{{ ai_gen_id }} {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    opacity: 0.3;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-slider-dot-{{ ai_gen_id }}.active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-image-text-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-image-text-container-{{ ai_gen_id }}.ai-image-left-{{ ai_gen_id }} .ai-image-wrapper-{{ ai_gen_id }} {
+      order: 0;
+    }
+
+    .ai-headline-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.headline_size }}px * 0.8);
+    }
+
+    .ai-subheadline-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.subheadline_size }}px * 0.9);
+    }
+
+    .ai-subheadlines-container-{{ ai_gen_id }} {
+      padding: 20px 24px;
+    }
+  }
+{% endstyle %}
+
+<image-text-reviews-{{ ai_gen_id }}
+  class="ai-image-text-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-image-text-container-{{ ai_gen_id }} ai-image-{{ block.settings.image_position }}-{{ ai_gen_id }}">
+    <div class="ai-image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 1200 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      {% else %}
+        <div class="ai-image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-text-content-{{ ai_gen_id }}">
+      {% if block.settings.headline != blank %}
+        <h2 class="ai-headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h2>
+      {% endif %}
+
+      {% if block.settings.subheadline_1 != blank or block.settings.subheadline_2 != blank %}
+        <div class="ai-subheadlines-container-{{ ai_gen_id }}">
+          {% if block.settings.subheadline_1 != blank %}
+            <p class="ai-subheadline-{{ ai_gen_id }}">{{ block.settings.subheadline_1 }}</p>
+          {% endif %}
+          {% if block.settings.subheadline_2 != blank %}
+            <p class="ai-subheadline-{{ ai_gen_id }}">{{ block.settings.subheadline_2 }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.paragraph != blank %}
+        <div class="ai-paragraph-{{ ai_gen_id }}">{{ block.settings.paragraph }}</div>
+      {% endif %}
+
+      {% liquid
+        assign review_count = 0
+        for i in (1..5)
+          assign review_name_key = 'review_' | append: i | append: '_name'
+          assign review_name = block.settings[review_name_key]
+          if review_name != blank
+            assign review_count = review_count | plus: 1
+          endif
+        endfor
+      %}
+
+      {% if review_count > 0 %}
+        <div class="ai-reviews-slider-{{ ai_gen_id }}">
+          <div class="ai-reviews-track-{{ ai_gen_id }}" data-track>
+            {% for i in (1..5) %}
+              {% liquid
+                assign review_highlight_key = 'review_' | append: i | append: '_highlight'
+                assign review_text_key = 'review_' | append: i | append: '_text'
+                assign review_stars_key = 'review_' | append: i | append: '_stars'
+                assign review_name_key = 'review_' | append: i | append: '_name'
+                assign review_badge_key = 'review_' | append: i | append: '_badge'
+
+                assign review_highlight = block.settings[review_highlight_key]
+                assign review_text = block.settings[review_text_key]
+                assign review_stars = block.settings[review_stars_key]
+                assign review_name = block.settings[review_name_key]
+                assign review_badge = block.settings[review_badge_key]
+              %}
+
+              {% if review_name != blank %}
+                <div class="ai-review-slide-{{ ai_gen_id }}">
+                  {% if review_highlight != blank %}
+                    <p class="ai-review-highlight-{{ ai_gen_id }}">{{ review_highlight }}</p>
+                  {% endif %}
+
+                  {% if review_text != blank %}
+                    <p class="ai-review-text-{{ ai_gen_id }}">{{ review_text }}</p>
+                  {% endif %}
+
+                  <div class="ai-review-stars-{{ ai_gen_id }}">
+                    {% for star in (1..review_stars) %}
+                      <svg class="ai-review-star-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    {% endfor %}
+                  </div>
+
+                  <div class="ai-review-footer-{{ ai_gen_id }}">
+                    {% if review_badge %}
+                      <div class="ai-review-checkmark-{{ ai_gen_id }}">
+                        <img
+                          src="{{ review_badge | image_url: width: 40 }}"
+                          alt="Verified badge"
+                          loading="lazy"
+                          width="20"
+                          height="20"
+                        >
+                      </div>
+                    {% endif %}
+                    <div>
+                      <p class="ai-review-customer-{{ ai_gen_id }}">{{ review_name }}</p>
+                      <p class="ai-review-verified-{{ ai_gen_id }}">Verified Buyer</p>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          {% if review_count > 1 %}
+            <div class="ai-slider-controls-{{ ai_gen_id }}">
+              <div class="ai-slider-arrows-{{ ai_gen_id }}">
+                <button class="ai-slider-arrow-{{ ai_gen_id }}" data-prev aria-label="Previous review">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                  </svg>
+                </button>
+                <button class="ai-slider-arrow-{{ ai_gen_id }}" data-next aria-label="Next review">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="ai-slider-dots-{{ ai_gen_id }}" data-dots></div>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</image-text-reviews-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ImageTextReviews{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.reviewCount = 0;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('[data-track]');
+        this.prevButton = this.querySelector('[data-prev]');
+        this.nextButton = this.querySelector('[data-next]');
+        this.dotsContainer = this.querySelector('[data-dots]');
+
+        if (!this.track) return;
+
+        this.slides = this.track.querySelectorAll('.ai-review-slide-{{ ai_gen_id }}');
+        this.reviewCount = this.slides.length;
+
+        if (this.reviewCount <= 1) return;
+
+        this.createDots();
+        this.updateSlider();
+
+        if (this.prevButton) {
+          this.prevButton.addEventListener('click', () => this.prevSlide());
+        }
+
+        if (this.nextButton) {
+          this.nextButton.addEventListener('click', () => this.nextSlide());
+        }
+      }
+
+      createDots() {
+        if (!this.dotsContainer) return;
+
+        for (let i = 0; i < this.reviewCount; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'ai-slider-dot-{{ ai_gen_id }}';
+          dot.setAttribute('aria-label', `Go to review ${i + 1}`);
+          dot.addEventListener('click', () => this.goToSlide(i));
+          this.dotsContainer.appendChild(dot);
+        }
+      }
+
+      updateSlider() {
+        const offset = -this.currentSlide * 100;
+        this.track.style.transform = `translateX(${offset}%)`;
+
+        if (this.prevButton) {
+          this.prevButton.disabled = this.currentSlide === 0;
+        }
+
+        if (this.nextButton) {
+          this.nextButton.disabled = this.currentSlide === this.reviewCount - 1;
+        }
+
+        if (this.dotsContainer) {
+          const dots = this.dotsContainer.querySelectorAll('.ai-slider-dot-{{ ai_gen_id }}');
+          dots.forEach((dot, index) => {
+            if (index === this.currentSlide) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+      }
+
+      prevSlide() {
+        if (this.currentSlide > 0) {
+          this.currentSlide--;
+          this.updateSlider();
+        }
+      }
+
+      nextSlide() {
+        if (this.currentSlide < this.reviewCount - 1) {
+          this.currentSlide++;
+          this.updateSlider();
+        }
+      }
+
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlider();
+      }
+    }
+
+    customElements.define('image-text-reviews-{{ ai_gen_id }}', ImageTextReviews{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Image + Text with Reviews",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "crop_image",
+      "label": "Crop image to square",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Premium Dental Care"
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Subheadlines"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_1",
+      "label": "Subheadline 1",
+      "default": "Clinically proven ingredients"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_2",
+      "label": "Subheadline 2",
+      "default": "Dentist recommended formulas"
+    },
+    {
+      "type": "range",
+      "id": "subheadline_size",
+      "min": 14,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "subheadline_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subheadline_bg_color",
+      "label": "Background color",
+      "default": "#fae5db"
+    },
+    {
+      "type": "header",
+      "content": "Paragraph"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "<p>Experience the difference with our premium oral care products, designed to give you a healthier, brighter smile.</p>"
+    },
+    {
+      "type": "range",
+      "id": "paragraph_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "paragraph_color",
+      "label": "Color",
+      "default": "#090909"
+    },
+    {
+      "type": "header",
+      "content": "Review 1"
+    },
+    {
+      "type": "text",
+      "id": "review_1_highlight",
+      "label": "Highlight text",
+      "default": "Best toothpaste I've ever used!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Full review",
+      "default": "I've been using this toothpaste for three months and my teeth have never felt cleaner. My dentist even noticed the difference!"
+    },
+    {
+      "type": "select",
+      "id": "review_1_stars",
+      "label": "Star rating",
+      "options": [
+        { "value": "1", "label": "1 star" },
+        { "value": "2", "label": "2 stars" },
+        { "value": "3", "label": "3 stars" },
+        { "value": "4", "label": "4 stars" },
+        { "value": "5", "label": "5 stars" }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Customer name",
+      "default": "Sarah M."
+    },
+    {
+      "type": "image_picker",
+      "id": "review_1_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 2"
+    },
+    {
+      "type": "text",
+      "id": "review_2_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Full review"
+    },
+    {
+      "type": "select",
+      "id": "review_2_stars",
+      "label": "Star rating",
+      "options": [
+        { "value": "1", "label": "1 star" },
+        { "value": "2", "label": "2 stars" },
+        { "value": "3", "label": "3 stars" },
+        { "value": "4", "label": "4 stars" },
+        { "value": "5", "label": "5 stars" }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_2_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 3"
+    },
+    {
+      "type": "text",
+      "id": "review_3_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Full review"
+    },
+    {
+      "type": "select",
+      "id": "review_3_stars",
+      "label": "Star rating",
+      "options": [
+        { "value": "1", "label": "1 star" },
+        { "value": "2", "label": "2 stars" },
+        { "value": "3", "label": "3 stars" },
+        { "value": "4", "label": "4 stars" },
+        { "value": "5", "label": "5 stars" }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_3_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 4"
+    },
+    {
+      "type": "text",
+      "id": "review_4_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_4_text",
+      "label": "Full review"
+    },
+    {
+      "type": "select",
+      "id": "review_4_stars",
+      "label": "Star rating",
+      "options": [
+        { "value": "1", "label": "1 star" },
+        { "value": "2", "label": "2 stars" },
+        { "value": "3", "label": "3 stars" },
+        { "value": "4", "label": "4 stars" },
+        { "value": "5", "label": "5 stars" }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "review_4_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_4_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 5"
+    },
+    {
+      "type": "text",
+      "id": "review_5_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_5_text",
+      "label": "Full review"
+    },
+    {
+      "type": "select",
+      "id": "review_5_stars",
+      "label": "Star rating",
+      "options": [
+        { "value": "1", "label": "1 star" },
+        { "value": "2", "label": "2 stars" },
+        { "value": "3", "label": "3 stars" },
+        { "value": "4", "label": "4 stars" },
+        { "value": "5", "label": "5 stars" }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "review_5_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_5_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review slider style"
+    },
+    {
+      "type": "color",
+      "id": "review_bg_color",
+      "label": "Review background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#FFD700"
+    },
+    {
+      "type": "color",
+      "id": "arrow_bg_color",
+      "label": "Arrow background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image + Text with Reviews"
+    }
+  ]
+}
 {% endschema %}
