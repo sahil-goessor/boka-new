@@ -9,6 +9,73 @@
  */
 {
   "sections": {
+    "17655422262dd9640d": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3689054_G6aMFr": {
+          "type": "ai_gen_block_3689054",
+          "settings": {
+            "section_bg_color": "#ffffff",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_horizontal": 20,
+            "container_max_width": 1200,
+            "column_gap": 60,
+            "image_border_radius": 0,
+            "content_gap": 24,
+            "headline": "1. Science-Backed & Gentle",
+            "headline_size": 36,
+            "headline_color": "#000000",
+            "badge_1_text": "FUNCTIONAL",
+            "badge_2_text": "DAILY/AM-PM ROUTINE",
+            "badge_size": 12,
+            "badge_text_color": "#ffffff",
+            "badge_bg_color": "#6b9080",
+            "badge_padding_vertical": 8,
+            "badge_padding_horizontal": 20,
+            "description": "<p>Our formula features nano-hydroxyapatite, a naturally occurring mineral that helps restore enamel and strengthen teeth. Gentle yet effective, it provides relief while supporting long-term oral health.</p>",
+            "description_size": 16,
+            "description_color": "#333333",
+            "review_1_enabled": true,
+            "review_1_headline": "Effective Relief",
+            "review_1_stars": 5,
+            "review_1_name": "Sarah M.",
+            "review_1_quote": "This toothpaste has been a game-changer for my sensitive teeth. I noticed relief within the first week of use.",
+            "review_2_enabled": true,
+            "review_2_headline": "Restores Enamel",
+            "review_2_stars": 5,
+            "review_2_name": "Michael T.",
+            "review_2_quote": "My dentist noticed a real improvement in my enamel health. The nano-hydroxyapatite really works!",
+            "review_3_enabled": true,
+            "review_3_headline": "Low-Foam Formula",
+            "review_3_stars": 5,
+            "review_3_name": "Jessica L.",
+            "review_3_quote": "I love the low-foam formula. It feels gentle and natural, and my mouth feels clean without the harsh chemicals.",
+            "review_bg_color": "#f5f5f5",
+            "review_padding": 30,
+            "review_headline_size": 20,
+            "review_headline_color": "#000000",
+            "star_size": 18,
+            "star_color": "#ffc107",
+            "star_empty_color": "#e0e0e0",
+            "reviewer_name_size": 14,
+            "reviewer_name_color": "#666666",
+            "review_quote_size": 15,
+            "review_quote_color": "#333333",
+            "nav_button_bg_color": "#e0e0e0",
+            "nav_button_hover_bg_color": "#6b9080",
+            "nav_button_icon_color": "#000000",
+            "dot_color": "#e0e0e0",
+            "dot_active_color": "#6b9080"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3689054_G6aMFr"
+      ],
+      "settings": {}
+    },
     "1765534182fed2e648": {
       "type": "_blocks",
       "blocks": {
@@ -407,6 +474,7 @@
     }
   },
   "order": [
+    "17655422262dd9640d",
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "image_with_text_qDqQeQ",
