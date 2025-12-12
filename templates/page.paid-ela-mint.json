@@ -535,6 +535,112 @@
         "padding_top_mobile": 80,
         "padding_bottom_mobile": 80
       }
+    },
+    "yt_shorts_FUHnAV": {
+      "type": "yt-shorts",
+      "blocks": {
+        "video_LrmH4L": {
+          "type": "video",
+          "settings": {
+            "yt_shorts_link": "",
+            "description": "Describe the video"
+          }
+        },
+        "video_KLygVe": {
+          "type": "video",
+          "settings": {
+            "yt_shorts_link": "",
+            "description": "Describe the video"
+          }
+        },
+        "video_WmEKeX": {
+          "type": "video",
+          "settings": {
+            "yt_shorts_link": "",
+            "description": "Describe the video"
+          }
+        },
+        "video_7bNqXW": {
+          "type": "video",
+          "settings": {
+            "yt_shorts_link": "",
+            "description": "Describe the video"
+          }
+        }
+      },
+      "block_order": [
+        "video_LrmH4L",
+        "video_KLygVe",
+        "video_WmEKeX",
+        "video_7bNqXW"
+      ],
+      "name": "t:sections.yt-shorts.presets.name",
+      "settings": {
+        "yt_shorts_title": "UGC Videos",
+        "heading_size": "h1",
+        "auto_center": false,
+        "columns": 4,
+        "button_label": "Button label",
+        "button_link": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_slideshow_DxNBHV": {
+      "type": "video-slideshow",
+      "blocks": {
+        "image_AyMjUN": {
+          "type": "image",
+          "settings": {
+            "heading": "Image slide",
+            "image_link": "",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 36,
+            "heading_tag": "default",
+            "subheading": "Tell your brand's story through images",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
+            "button_label": "SHOP",
+            "link": "",
+            "button_style_secondary": false,
+            "button_label2": "",
+            "link2": "",
+            "button_style_secondary2": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "custom_background_color": "#333333",
+            "custom_text_color": "#FFFFFF",
+            "mobile_custom_text_color": "#000000",
+            "button_background_color": "#000000",
+            "button_foreground_color": "#FFFFFF",
+            "button_background_color_mobile": "#000000",
+            "button_foreground_color_mobile": "#FFFFFF",
+            "bottom_text_background_color": "#DCE6CF",
+            "bottom_text_foreground_color": "#000000",
+            "text_alignment_mobile": "center",
+            "mobile_content_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "image_AyMjUN"
+      ],
+      "name": "Slideshow with Video",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "enable_video_buttons": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "fadein_enabled": false,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
     }
   },
   "order": [
@@ -547,6 +653,8 @@
     "multicolumn_WzyAgT",
     "image_with_text_kRh4Ve",
     "main",
-    "image_banner_wKMfJM"
+    "image_banner_wKMfJM",
+    "yt_shorts_FUHnAV",
+    "video_slideshow_DxNBHV"
   ]
 }
