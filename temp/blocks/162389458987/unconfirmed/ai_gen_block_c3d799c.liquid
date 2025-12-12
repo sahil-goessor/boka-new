@@ -118,7 +118,7 @@
     
     Plenty of margin between the image and text
     
-    Soft green highlight accents.”, in the effective relief , restores enamel ,low-foal formula , make it a slider customer reviews should have an option to add headline customer reviews , below that is star ratings and beside that is name then below that is full customer reviews quote, move the functional | daily/AM-PM routine below the science backed & gentle headline , improve the layout of it , add background color for the two text & add border radius 36px . responsive for all devices , please make the image and content responsive on mobile it should have enough margin for both left and right side and also the customer reviews should be responsive, please add margin to the left and right side for the container of the text and customer reviews
+    Soft green highlight accents.”, in the effective relief , restores enamel ,low-foal formula , make it a slider customer reviews should have an option to add headline customer reviews , below that is star ratings and beside that is name then below that is full customer reviews quote, move the functional | daily/AM-PM routine below the science backed & gentle headline , improve the layout of it , add background color for the two text & add border radius 36px . responsive for all devices , please make the image and content responsive on mobile it should have enough margin for both left and right side and also the customer reviews should be responsive, please add margin to the left and right side for the container of the text and customer reviews, please add margin to the left and right side for the container of the text and customer reviews
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
@@ -185,7 +185,6 @@
     display: flex;
     flex-direction: column;
     gap: {{ block.settings.content_gap }}px;
-    padding: 0 {{ block.settings.content_padding_horizontal }}px;
   }
 
   .ai-feature-headline-{{ ai_gen_id }} {
@@ -349,7 +348,7 @@
     }
 
     .ai-feature-content-{{ ai_gen_id }} {
-      padding: 0 {{ block.settings.content_padding_horizontal | times: 0.8 }}px;
+      padding: 0 20px;
     }
 
     .ai-feature-headline-{{ ai_gen_id }} {
@@ -389,7 +388,7 @@
 
     .ai-feature-content-{{ ai_gen_id }} {
       gap: {{ block.settings.content_gap | times: 0.8 }}px;
-      padding: 0 {{ block.settings.content_padding_horizontal | times: 0.6 }}px;
+      padding: 0 16px;
     }
 
     .ai-feature-headline-{{ ai_gen_id }} {
@@ -470,7 +469,7 @@
     }
 
     .ai-feature-content-{{ ai_gen_id }} {
-      padding: 0 {{ block.settings.content_padding_horizontal | times: 0.4 }}px;
+      padding: 0 12px;
     }
 
     .ai-feature-headline-{{ ai_gen_id }} {
@@ -776,16 +775,6 @@
       "unit": "px",
       "label": "Content gap",
       "default": 24
-    },
-    {
-      "type": "range",
-      "id": "content_padding_horizontal",
-      "min": 0,
-      "max": 60,
-      "step": 5,
-      "unit": "px",
-      "label": "Content padding horizontal",
-      "default": 20
     },
     {
       "type": "inline_richtext",
