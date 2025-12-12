@@ -1,6 +1,427 @@
+{% doc %}
+  @prompt
+    Create a fully customizable Moving Text / Marquee Section with the following features:
+    
+    1. Text Items
+    
+    Allow the merchant to add at least 10 text items.
+    
+    Each text item can optionally include an icon.
+    
+    Text items should scroll continuously (marquee effect).
+    
+    2. Speed Control
+    
+    Include an option to set the scrolling speed (in seconds, e.g., full scroll duration).
+    
+    Allow merchants to adjust the speed based on preference.
+    
+    3. Background Styling
+    
+    Option to change the background color of the moving text container.
+    
+    Ensure background color can be applied independently of page background.
+    
+    4. Responsiveness
+    
+    The moving text must be fully responsive for both desktop and mobile views.
+    
+    Text and icons should scale appropriately on smaller screens.
+    
+    5. Additional Design Options
+    
+    Optionally allow:
+    
+    Padding adjustments around the scrolling text
+    
+    Text color customization
+    
+    Icon size customization, please make sure the container width is equal
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-marquee-container-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .ai-marquee-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    width: fit-content;
+    animation: ai-marquee-scroll-{{ ai_gen_id }} {{ block.settings.scroll_speed }}s linear infinite;
+  }
+
+  .ai-marquee-content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: {{ block.settings.item_spacing }}px;
+    flex-shrink: 0;
+  }
+
+  .ai-marquee-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.icon_text_gap }}px;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: {{ block.settings.text_weight }};
+    flex-shrink: 0;
+  }
+
+  .ai-marquee-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    flex-shrink: 0;
+  }
+
+  .ai-marquee-icon-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @keyframes ai-marquee-scroll-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ai-marquee-wrapper-{{ ai_gen_id }}:hover {
+    {% if block.settings.pause_on_hover %}
+      animation-play-state: paused;
+    {% endif %}
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-marquee-container-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.7 }}px 0 {{ block.settings.padding_bottom | times: 0.7 }}px;
+    }
+
+    .ai-marquee-item-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.85 }}px;
+    }
+
+    .ai-marquee-icon-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size | times: 0.85 }}px;
+      height: {{ block.settings.icon_size | times: 0.85 }}px;
+    }
+
+    .ai-marquee-content-{{ ai_gen_id }} {
+      gap: {{ block.settings.item_spacing | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-marquee-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-marquee-wrapper-{{ ai_gen_id }}">
+    <div class="ai-marquee-content-{{ ai_gen_id }}">
+      {% for i in (1..10) %}
+        {% liquid
+          assign text_key = 'text_' | append: i
+          assign icon_key = 'icon_' | append: i
+          assign text_value = block.settings[text_key]
+          assign icon_value = block.settings[icon_key]
+        %}
+
+        {% if text_value != blank %}
+          <div class="ai-marquee-item-{{ ai_gen_id }}">
+            {% if icon_value != blank %}
+              <div class="ai-marquee-icon-{{ ai_gen_id }}">
+                <img
+                  src="{{ icon_value | image_url: width: 100 }}"
+                  alt="{{ text_value | escape }}"
+                  loading="lazy"
+                  width="100"
+                  height="100"
+                >
+              </div>
+            {% endif %}
+            <span>{{ text_value }}</span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="ai-marquee-content-{{ ai_gen_id }}" aria-hidden="true">
+      {% for i in (1..10) %}
+        {% liquid
+          assign text_key = 'text_' | append: i
+          assign icon_key = 'icon_' | append: i
+          assign text_value = block.settings[text_key]
+          assign icon_value = block.settings[icon_key]
+        %}
+
+        {% if text_value != blank %}
+          <div class="ai-marquee-item-{{ ai_gen_id }}">
+            {% if icon_value != blank %}
+              <div class="ai-marquee-icon-{{ ai_gen_id }}">
+                <img
+                  src="{{ icon_value | image_url: width: 100 }}"
+                  alt=""
+                  loading="lazy"
+                  width="100"
+                  height="100"
+                >
+              </div>
+            {% endif %}
+            <span>{{ text_value }}</span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Moving text marquee",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text items"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Text 1",
+      "default": "Free Shipping on Orders Over $35"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Text 2",
+      "default": "Dentist Approved Products"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Text 3",
+      "default": "Natural Ingredients"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Text 4",
+      "default": "Made in the USA"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon 4"
+    },
+    {
+      "type": "text",
+      "id": "text_5",
+      "label": "Text 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_5",
+      "label": "Icon 5"
+    },
+    {
+      "type": "text",
+      "id": "text_6",
+      "label": "Text 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_6",
+      "label": "Icon 6"
+    },
+    {
+      "type": "text",
+      "id": "text_7",
+      "label": "Text 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_7",
+      "label": "Icon 7"
+    },
+    {
+      "type": "text",
+      "id": "text_8",
+      "label": "Text 8"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_8",
+      "label": "Icon 8"
+    },
+    {
+      "type": "text",
+      "id": "text_9",
+      "label": "Text 9"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_9",
+      "label": "Icon 9"
+    },
+    {
+      "type": "text",
+      "id": "text_10",
+      "label": "Text 10"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_10",
+      "label": "Icon 10"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll speed",
+      "default": 30,
+      "info": "Lower values = faster scrolling"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Styling"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "Text weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "icon_text_gap",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon to text spacing",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Moving text marquee"
+    }
+  ]
+}
 {% endschema %}
