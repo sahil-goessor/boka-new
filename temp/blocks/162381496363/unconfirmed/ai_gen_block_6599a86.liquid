@@ -1,6 +1,723 @@
+{% doc %}
+  @prompt
+    Create a fully customizable Image + Text Section with the following functionalities and layout:
+    
+    1. Layout Options
+    
+    Provide an option to place the image either on the left or on the right side.
+    
+    Include an image upload field.
+    
+    The image container must be adaptive to the uploaded image’s natural size (no cropping unless chosen).
+    
+    2. Text Content Block (right or left depending on layout choice)
+    Headline
+    
+    Add a field to input a main headline.
+    
+    Two Subheadlines
+    
+    Below the headline, add two separate subheadline fields.
+    
+    Provide an option to change the background color of the subheadline container.
+    
+    The subheadline container should have a 36px border radius.
+    
+    Paragraph
+    
+    Below the subheadlines, add a field for a paragraph text block.
+    
+    3. Customer Reviews Slider
+    
+    Place this below the paragraph text.
+    
+    For each review, allow the following fields:
+    
+    Bold highlight text (short summary or key review quote)
+    
+    Full review text
+    
+    Star rating selector
+    
+    Customer name
+    
+    “Verified Buyer” label next to the name
+    
+    Checkmark badge upload option
+    
+    Slider Requirements:
+    
+    Ability to upload up to 5 reviews
+    
+    Include Next and Previous arrows
+    
+    Include dot navigation indicators at the bottom
+    
+    Slider should auto-adjust spacing and height based on content.
+    
+    4. Section Styling
+    
+    Add an option to change the overall section background color.
+    
+    Container spacing and layout should remain clean, balanced, and responsive for both mobile & desktop views. The name of the section would be Image and Text Paid
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-text-paid-{{ ai_gen_id }} {
+    background-color: {{ block.settings.section_bg_color }};
+    padding: 60px 20px;
+  }
+
+  .ai-image-text-paid-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .ai-image-text-paid-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    {% if block.settings.image_position == 'right' %}
+      order: 2;
+    {% endif %}
+  }
+
+  .ai-image-text-paid-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-image-text-paid-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+
+  .ai-image-text-paid-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .ai-image-text-paid-content-{{ ai_gen_id }} {
+    {% if block.settings.image_position == 'right' %}
+      order: 1;
+    {% endif %}
+  }
+
+  .ai-image-text-paid-headline-{{ ai_gen_id }} {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 24px;
+    color: #000000;
+    line-height: 1.2;
+  }
+
+  .ai-image-text-paid-subheadlines-{{ ai_gen_id }} {
+    background-color: {{ block.settings.subheadline_bg_color }};
+    border-radius: 36px;
+    padding: 24px 32px;
+    margin-bottom: 24px;
+  }
+
+  .ai-image-text-paid-subheadline-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #000000;
+    line-height: 1.4;
+  }
+
+  .ai-image-text-paid-subheadline-{{ ai_gen_id }}:first-child {
+    margin-bottom: 12px;
+  }
+
+  .ai-image-text-paid-paragraph-{{ ai_gen_id }} {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0 0 32px;
+  }
+
+  .ai-image-text-paid-reviews-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-image-text-paid-review-slide-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .ai-image-text-paid-review-slide-{{ ai_gen_id }}.active {
+    display: block;
+  }
+
+  .ai-image-text-paid-review-highlight-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #000000;
+  }
+
+  .ai-image-text-paid-review-text-{{ ai_gen_id }} {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0 0 16px;
+  }
+
+  .ai-image-text-paid-review-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .ai-image-text-paid-star-{{ ai_gen_id }} {
+    width: 18px;
+    height: 18px;
+    fill: #FFD700;
+  }
+
+  .ai-image-text-paid-star-empty-{{ ai_gen_id }} {
+    fill: #E0E0E0;
+  }
+
+  .ai-image-text-paid-review-footer-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ai-image-text-paid-review-name-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  .ai-image-text-paid-verified-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: #666666;
+  }
+
+  .ai-image-text-paid-checkmark-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ai-image-text-paid-slider-controls-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  .ai-image-text-paid-arrow-{{ ai_gen_id }} {
+    background: none;
+    border: 2px solid #000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .ai-image-text-paid-arrow-{{ ai_gen_id }}:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .ai-image-text-paid-arrow-{{ ai_gen_id }} svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ai-image-text-paid-dots-{{ ai_gen_id }} {
+    display: flex;
+    gap: 8px;
+  }
+
+  .ai-image-text-paid-dot-{{ ai_gen_id }} {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D0D0D0;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-image-text-paid-dot-{{ ai_gen_id }}.active {
+    background-color: #000000;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-image-text-paid-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-image-text-paid-image-wrapper-{{ ai_gen_id }},
+    .ai-image-text-paid-content-{{ ai_gen_id }} {
+      order: unset !important;
+    }
+
+    .ai-image-text-paid-headline-{{ ai_gen_id }} {
+      font-size: 28px;
+    }
+
+    .ai-image-text-paid-subheadlines-{{ ai_gen_id }} {
+      padding: 20px 24px;
+    }
+
+    .ai-image-text-paid-subheadline-{{ ai_gen_id }} {
+      font-size: 16px;
+    }
+  }
+{% endstyle %}
+
+<image-text-paid-{{ ai_gen_id }} class="ai-image-text-paid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-text-paid-container-{{ ai_gen_id }}">
+    <div class="ai-image-text-paid-image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 1200 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          class="ai-image-text-paid-image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-image-text-paid-image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-image-text-paid-content-{{ ai_gen_id }}">
+      {% if block.settings.headline != blank %}
+        <h2 class="ai-image-text-paid-headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h2>
+      {% endif %}
+
+      {% if block.settings.subheadline_1 != blank or block.settings.subheadline_2 != blank %}
+        <div class="ai-image-text-paid-subheadlines-{{ ai_gen_id }}">
+          {% if block.settings.subheadline_1 != blank %}
+            <p class="ai-image-text-paid-subheadline-{{ ai_gen_id }}">{{ block.settings.subheadline_1 }}</p>
+          {% endif %}
+          {% if block.settings.subheadline_2 != blank %}
+            <p class="ai-image-text-paid-subheadline-{{ ai_gen_id }}">{{ block.settings.subheadline_2 }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.paragraph != blank %}
+        <div class="ai-image-text-paid-paragraph-{{ ai_gen_id }}">{{ block.settings.paragraph }}</div>
+      {% endif %}
+
+      <div class="ai-image-text-paid-reviews-{{ ai_gen_id }}">
+        {% for i in (1..5) %}
+          {% liquid
+            assign review_highlight_key = 'review_' | append: i | append: '_highlight'
+            assign review_text_key = 'review_' | append: i | append: '_text'
+            assign review_stars_key = 'review_' | append: i | append: '_stars'
+            assign review_name_key = 'review_' | append: i | append: '_name'
+            assign review_badge_key = 'review_' | append: i | append: '_badge'
+
+            assign review_highlight = block.settings[review_highlight_key]
+            assign review_text = block.settings[review_text_key]
+            assign review_stars = block.settings[review_stars_key]
+            assign review_name = block.settings[review_name_key]
+            assign review_badge = block.settings[review_badge_key]
+          %}
+
+          {% if review_text != blank %}
+            <div class="ai-image-text-paid-review-slide-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-slide="{{ i }}">
+              {% if review_highlight != blank %}
+                <p class="ai-image-text-paid-review-highlight-{{ ai_gen_id }}">{{ review_highlight }}</p>
+              {% endif %}
+
+              <p class="ai-image-text-paid-review-text-{{ ai_gen_id }}">{{ review_text }}</p>
+
+              <div class="ai-image-text-paid-review-stars-{{ ai_gen_id }}">
+                {% for star in (1..5) %}
+                  <svg class="ai-image-text-paid-star-{{ ai_gen_id }} {% if star > review_stars %}ai-image-text-paid-star-empty-{{ ai_gen_id }}{% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                {% endfor %}
+              </div>
+
+              <div class="ai-image-text-paid-review-footer-{{ ai_gen_id }}">
+                {% if review_name != blank %}
+                  <span class="ai-image-text-paid-review-name-{{ ai_gen_id }}">{{ review_name }}</span>
+                {% endif %}
+                <span class="ai-image-text-paid-verified-{{ ai_gen_id }}">Verified Buyer</span>
+                {% if review_badge %}
+                  <img src="{{ review_badge | image_url: width: 32 }}" alt="Verified" class="ai-image-text-paid-checkmark-{{ ai_gen_id }}" width="16" height="16">
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="ai-image-text-paid-slider-controls-{{ ai_gen_id }}">
+          <button class="ai-image-text-paid-arrow-{{ ai_gen_id }} ai-image-text-paid-prev-{{ ai_gen_id }}" aria-label="Previous review">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="ai-image-text-paid-dots-{{ ai_gen_id }}">
+            {% for i in (1..5) %}
+              {% liquid
+                assign review_text_key = 'review_' | append: i | append: '_text'
+                assign review_text = block.settings[review_text_key]
+              %}
+              {% if review_text != blank %}
+                <button class="ai-image-text-paid-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}" data-slide="{{ i }}" aria-label="Go to review {{ i }}"></button>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <button class="ai-image-text-paid-arrow-{{ ai_gen_id }} ai-image-text-paid-next-{{ ai_gen_id }}" aria-label="Next review">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</image-text-paid-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ImageTextPaid{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 1;
+        this.slides = [];
+      }
+
+      connectedCallback() {
+        this.slides = Array.from(this.querySelectorAll('.ai-image-text-paid-review-slide-{{ ai_gen_id }}'));
+        this.totalSlides = this.slides.filter(slide => slide.querySelector('.ai-image-text-paid-review-text-{{ ai_gen_id }}')).length;
+        
+        if (this.totalSlides === 0) return;
+
+        this.prevButton = this.querySelector('.ai-image-text-paid-prev-{{ ai_gen_id }}');
+        this.nextButton = this.querySelector('.ai-image-text-paid-next-{{ ai_gen_id }}');
+        this.dots = this.querySelectorAll('.ai-image-text-paid-dot-{{ ai_gen_id }}');
+
+        this.prevButton.addEventListener('click', () => this.previousSlide());
+        this.nextButton.addEventListener('click', () => this.nextSlide());
+
+        this.dots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            const slideNumber = parseInt(e.target.getAttribute('data-slide'));
+            this.goToSlide(slideNumber);
+          });
+        });
+      }
+
+      goToSlide(slideNumber) {
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.dots.forEach(dot => dot.classList.remove('active'));
+
+        const targetSlide = this.querySelector(`.ai-image-text-paid-review-slide-{{ ai_gen_id }}[data-slide="${slideNumber}"]`);
+        const targetDot = this.querySelector(`.ai-image-text-paid-dot-{{ ai_gen_id }}[data-slide="${slideNumber}"]`);
+
+        if (targetSlide) {
+          targetSlide.classList.add('active');
+          this.currentSlide = slideNumber;
+        }
+
+        if (targetDot) {
+          targetDot.classList.add('active');
+        }
+      }
+
+      nextSlide() {
+        const visibleSlides = Array.from(this.slides).filter(slide => {
+          return slide.querySelector('.ai-image-text-paid-review-text-{{ ai_gen_id }}');
+        });
+
+        const currentIndex = visibleSlides.findIndex(slide => slide.classList.contains('active'));
+        const nextIndex = (currentIndex + 1) % visibleSlides.length;
+        const nextSlideNumber = parseInt(visibleSlides[nextIndex].getAttribute('data-slide'));
+
+        this.goToSlide(nextSlideNumber);
+      }
+
+      previousSlide() {
+        const visibleSlides = Array.from(this.slides).filter(slide => {
+          return slide.querySelector('.ai-image-text-paid-review-text-{{ ai_gen_id }}');
+        });
+
+        const currentIndex = visibleSlides.findIndex(slide => slide.classList.contains('active'));
+        const prevIndex = (currentIndex - 1 + visibleSlides.length) % visibleSlides.length;
+        const prevSlideNumber = parseInt(visibleSlides[prevIndex].getAttribute('data-slide'));
+
+        this.goToSlide(prevSlideNumber);
+      }
+    }
+
+    customElements.define('image-text-paid-{{ ai_gen_id }}', ImageTextPaid{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Image and Text Paid",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Text content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Premium Dental Care"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_1",
+      "label": "Subheadline 1",
+      "default": "Clinically proven ingredients"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_2",
+      "label": "Subheadline 2",
+      "default": "Recommended by dentists"
+    },
+    {
+      "type": "color",
+      "id": "subheadline_bg_color",
+      "label": "Subheadline background color",
+      "default": "#fae5db"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "<p>Experience the difference with our premium dental care products, designed to give you a healthier, brighter smile.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Review 1"
+    },
+    {
+      "type": "text",
+      "id": "review_1_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Review text",
+      "default": "This product has completely transformed my oral care routine. I've noticed whiter teeth and healthier gums in just a few weeks!"
+    },
+    {
+      "type": "range",
+      "id": "review_1_stars",
+      "label": "Star rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Customer name",
+      "default": "Sarah M."
+    },
+    {
+      "type": "image_picker",
+      "id": "review_1_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 2"
+    },
+    {
+      "type": "text",
+      "id": "review_2_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Review text"
+    },
+    {
+      "type": "range",
+      "id": "review_2_stars",
+      "label": "Star rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_2_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 3"
+    },
+    {
+      "type": "text",
+      "id": "review_3_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Review text"
+    },
+    {
+      "type": "range",
+      "id": "review_3_stars",
+      "label": "Star rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_3_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 4"
+    },
+    {
+      "type": "text",
+      "id": "review_4_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_4_text",
+      "label": "Review text"
+    },
+    {
+      "type": "range",
+      "id": "review_4_stars",
+      "label": "Star rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_4_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_4_badge",
+      "label": "Checkmark badge"
+    },
+    {
+      "type": "header",
+      "content": "Review 5"
+    },
+    {
+      "type": "text",
+      "id": "review_5_highlight",
+      "label": "Highlight text"
+    },
+    {
+      "type": "textarea",
+      "id": "review_5_text",
+      "label": "Review text"
+    },
+    {
+      "type": "range",
+      "id": "review_5_stars",
+      "label": "Star rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_5_name",
+      "label": "Customer name"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_5_badge",
+      "label": "Checkmark badge"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image and Text Paid"
+    }
+  ]
+}
 {% endschema %}
