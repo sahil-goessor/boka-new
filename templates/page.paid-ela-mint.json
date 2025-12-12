@@ -527,7 +527,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Featured collection",
+        "title": "Pairs perfectly with",
         "heading_size": "h1",
         "heading_tag": "default",
         "description": "",
