@@ -479,37 +479,37 @@
         "video_LrmH4L": {
           "type": "video",
           "settings": {
-            "yt_shorts_link": "",
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
           }
         },
-        "video_KLygVe": {
+        "video_nHYbjY": {
           "type": "video",
           "settings": {
-            "yt_shorts_link": "",
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
           }
         },
-        "video_WmEKeX": {
+        "video_XYXH99": {
           "type": "video",
           "settings": {
-            "yt_shorts_link": "",
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
           }
         },
-        "video_7bNqXW": {
+        "video_TA7BbK": {
           "type": "video",
           "settings": {
-            "yt_shorts_link": "",
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
           }
         }
       },
       "block_order": [
         "video_LrmH4L",
-        "video_KLygVe",
-        "video_WmEKeX",
-        "video_7bNqXW"
+        "video_nHYbjY",
+        "video_XYXH99",
+        "video_TA7BbK"
       ],
       "name": "t:sections.yt-shorts.presets.name",
       "settings": {
