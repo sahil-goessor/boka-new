@@ -1,6 +1,773 @@
+{% doc %}
+  @prompt
+    “Create a two-column feature section with the image on the left and text on the right.
+    
+    LEFT SIDE
+    
+    Add a tall, vertically oriented product photo of the toothpaste being squeezed on a toothbrush with a ceramic tile background.
+    
+    RIGHT SIDE
+    
+    At the top, add a small eyebrow label with tags: FUNCTIONAL | DAILY/AM-PM ROUTINE
+    
+    Add headline: ‘1. Science-Backed & Gentle’
+    
+    Add a short paragraph explaining nano-hydroxyapatite and enamel restoration.
+    
+    Under the paragraph, create three small callout boxes arranged vertically:
+    
+    Effective Relief (with a check icon)
+    
+    Restores Enamel (with a mineral icon)
+    
+    Low-Foam Formula (with a gentle bubble icon)
+    
+    STYLE
+    
+    White background
+    
+    Plenty of margin between the image and text
+    
+    Soft green highlight accents.”, SECTION 2 — FEATURE BLOCK: SCIENCE-BACKED
+    
+    Prompt:
+    “Create a two-column feature section with the image on the left and text on the right.
+    
+    LEFT SIDE
+    
+    Add a tall, vertically oriented product photo of the toothpaste being squeezed on a toothbrush with a ceramic tile background.
+    
+    RIGHT SIDE
+    
+    At the top, add a small eyebrow label with tags: FUNCTIONAL | DAILY/AM-PM ROUTINE
+    
+    Add headline: ‘1. Science-Backed & Gentle’
+    
+    Add a short paragraph explaining nano-hydroxyapatite and enamel restoration.
+    
+    Under the paragraph, create three small callout boxes arranged vertically:
+    
+    Effective Relief (with a check icon)
+    
+    Restores Enamel (with a mineral icon)
+    
+    Low-Foam Formula (with a gentle bubble icon)
+    
+    STYLE
+    
+    White background
+    
+    Plenty of margin between the image and text
+    
+    Soft green highlight accents.”, in the effective relief , restores enamel ,low-foal formula , make it a slider customer reviews should have an option to add headline customer reviews , below that is star ratings and beside that is name then below that is full customer reviews quote, move the functional | daily/AM-PM routine below the science backed & gentle headline , improve the layout of it , add background color for the two text & add border radius 36px . responsive for all devices 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-feature-section-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-feature-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: center;
+  }
+
+  .ai-feature-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+  }
+
+  .ai-feature-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-feature-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-feature-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-feature-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ai-feature-headline-{{ ai_gen_id }} {
+    font-size: {{ block.settings.headline_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.headline_color }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-feature-eyebrow-{{ ai_gen_id }} {
+    display: inline-block;
+    font-size: {{ block.settings.eyebrow_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.eyebrow_color }};
+    background-color: {{ block.settings.eyebrow_bg_color }};
+    padding: 8px 16px;
+    border-radius: {{ block.settings.eyebrow_border_radius }}px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-feature-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.description_color }};
+    margin: 0;
+  }
+
+  .ai-feature-slider-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .ai-feature-slider-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .ai-feature-review-slide-{{ ai_gen_id }} {
+    min-width: 100%;
+    flex-shrink: 0;
+  }
+
+  .ai-feature-review-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.review_bg_color }};
+    padding: 20px;
+    border-radius: {{ block.settings.review_border_radius }}px;
+  }
+
+  .ai-feature-review-header-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .ai-feature-review-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 2px;
+    color: {{ block.settings.star_color }};
+    font-size: 16px;
+  }
+
+  .ai-feature-review-name-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 600;
+    color: {{ block.settings.review_name_color }};
+  }
+
+  .ai-feature-review-text-{{ ai_gen_id }} {
+    font-size: 14px;
+    line-height: 1.5;
+    color: {{ block.settings.review_text_color }};
+    font-style: italic;
+  }
+
+  .ai-feature-slider-controls-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .ai-feature-slider-button-{{ ai_gen_id }} {
+    background-color: {{ block.settings.slider_button_color }};
+    color: {{ block.settings.slider_button_text_color }};
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-feature-slider-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.slider_button_hover_color }};
+  }
+
+  .ai-feature-slider-button-{{ ai_gen_id }}:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .ai-feature-slider-dots-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .ai-feature-slider-dot-{{ ai_gen_id }} {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_inactive_color }};
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-feature-slider-dot-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.dot_active_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-feature-container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .ai-feature-headline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.headline_size | times: 0.8 }}px;
+    }
+
+    .ai-feature-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<feature-section-{{ ai_gen_id }} class="ai-feature-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-feature-container-{{ ai_gen_id }}">
+    <div class="ai-feature-image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.product_image %}
+        <img
+          src="{{ block.settings.product_image | image_url: width: 800 }}"
+          alt="{{ block.settings.product_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.product_image.width }}"
+          height="{{ block.settings.product_image.height }}"
+          class="ai-feature-image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-feature-image-placeholder-{{ ai_gen_id }}">
+          {{ 'product-1' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-feature-content-{{ ai_gen_id }}">
+      {% if block.settings.headline != blank %}
+        <h2 class="ai-feature-headline-{{ ai_gen_id }}">{{ block.settings.headline }}</h2>
+      {% endif %}
+
+      {% if block.settings.eyebrow_text != blank %}
+        <span class="ai-feature-eyebrow-{{ ai_gen_id }}">{{ block.settings.eyebrow_text }}</span>
+      {% endif %}
+
+      {% if block.settings.description != blank %}
+        <div class="ai-feature-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+      {% endif %}
+
+      <div class="ai-feature-slider-{{ ai_gen_id }}">
+        <div class="ai-feature-slider-wrapper-{{ ai_gen_id }}">
+          {% for i in (1..3) %}
+            {% liquid
+              assign review_enabled_key = 'review_' | append: i | append: '_enabled'
+              assign review_headline_key = 'review_' | append: i | append: '_headline'
+              assign review_rating_key = 'review_' | append: i | append: '_rating'
+              assign review_name_key = 'review_' | append: i | append: '_name'
+              assign review_text_key = 'review_' | append: i | append: '_text'
+
+              assign review_enabled = block.settings[review_enabled_key]
+              assign review_headline = block.settings[review_headline_key]
+              assign review_rating = block.settings[review_rating_key]
+              assign review_name = block.settings[review_name_key]
+              assign review_text = block.settings[review_text_key]
+            %}
+
+            {% if review_enabled %}
+              <div class="ai-feature-review-slide-{{ ai_gen_id }}" data-slide="{{ i }}">
+                <div class="ai-feature-review-card-{{ ai_gen_id }}">
+                  {% if review_headline != blank %}
+                    <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: {{ block.settings.review_headline_color }};">{{ review_headline }}</h3>
+                  {% endif %}
+                  <div class="ai-feature-review-header-{{ ai_gen_id }}">
+                    <div class="ai-feature-review-stars-{{ ai_gen_id }}">
+                      {% for star in (1..review_rating) %}
+                        ★
+                      {% endfor %}
+                    </div>
+                    {% if review_name != blank %}
+                      <span class="ai-feature-review-name-{{ ai_gen_id }}">{{ review_name }}</span>
+                    {% endif %}
+                  </div>
+                  {% if review_text != blank %}
+                    <p class="ai-feature-review-text-{{ ai_gen_id }}">"{{ review_text }}"</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="ai-feature-slider-controls-{{ ai_gen_id }}">
+          <button class="ai-feature-slider-button-{{ ai_gen_id }} ai-feature-prev-{{ ai_gen_id }}" aria-label="Previous review">
+            ‹
+          </button>
+          <button class="ai-feature-slider-button-{{ ai_gen_id }} ai-feature-next-{{ ai_gen_id }}" aria-label="Next review">
+            ›
+          </button>
+        </div>
+
+        <div class="ai-feature-slider-dots-{{ ai_gen_id }}"></div>
+      </div>
+    </div>
+  </div>
+</feature-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class FeatureSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.slides = [];
+      }
+
+      connectedCallback() {
+        this.slider = this.querySelector('.ai-feature-slider-wrapper-{{ ai_gen_id }}');
+        this.slides = Array.from(this.querySelectorAll('.ai-feature-review-slide-{{ ai_gen_id }}'));
+        this.prevButton = this.querySelector('.ai-feature-prev-{{ ai_gen_id }}');
+        this.nextButton = this.querySelector('.ai-feature-next-{{ ai_gen_id }}');
+        this.dotsContainer = this.querySelector('.ai-feature-slider-dots-{{ ai_gen_id }}');
+
+        if (this.slides.length > 0) {
+          this.createDots();
+          this.setupEventListeners();
+          this.updateSlider();
+        }
+      }
+
+      createDots() {
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement('span');
+          dot.classList.add('ai-feature-slider-dot-{{ ai_gen_id }}');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => this.goToSlide(index));
+          this.dotsContainer.appendChild(dot);
+        });
+      }
+
+      setupEventListeners() {
+        this.prevButton.addEventListener('click', () => this.previousSlide());
+        this.nextButton.addEventListener('click', () => this.nextSlide());
+      }
+
+      updateSlider() {
+        this.slider.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+        
+        this.querySelectorAll('.ai-feature-slider-dot-{{ ai_gen_id }}').forEach((dot, index) => {
+          if (index === this.currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+
+        this.prevButton.disabled = this.currentSlide === 0;
+        this.nextButton.disabled = this.currentSlide === this.slides.length - 1;
+      }
+
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlider();
+      }
+
+      previousSlide() {
+        if (this.currentSlide > 0) {
+          this.currentSlide--;
+          this.updateSlider();
+        }
+      }
+
+      nextSlide() {
+        if (this.currentSlide < this.slides.length - 1) {
+          this.currentSlide++;
+          this.updateSlider();
+        }
+      }
+    }
+
+    customElements.define('feature-section-{{ ai_gen_id }}', FeatureSection{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Science-backed feature",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "1. Science-Backed & Gentle"
+    },
+    {
+      "type": "range",
+      "id": "headline_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Eyebrow label"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Text",
+      "default": "FUNCTIONAL | DAILY/AM-PM ROUTINE"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Size",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_bg_color",
+      "label": "Background color",
+      "default": "#7fb069"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Our toothpaste uses nano-hydroxyapatite, a naturally occurring mineral that helps restore enamel and reduce sensitivity. It's gentle, effective, and perfect for daily use.</p>"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Review slider style"
+    },
+    {
+      "type": "color",
+      "id": "review_bg_color",
+      "label": "Background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "review_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "review_headline_color",
+      "label": "Headline color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#ffc107"
+    },
+    {
+      "type": "color",
+      "id": "review_name_color",
+      "label": "Name color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Text color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "slider_button_color",
+      "label": "Button color",
+      "default": "#7fb069"
+    },
+    {
+      "type": "color",
+      "id": "slider_button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "slider_button_hover_color",
+      "label": "Button hover color",
+      "default": "#6a9a5a"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Active dot color",
+      "default": "#7fb069"
+    },
+    {
+      "type": "color",
+      "id": "dot_inactive_color",
+      "label": "Inactive dot color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Review 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "review_1_enabled",
+      "label": "Enable review 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_1_headline",
+      "label": "Headline",
+      "default": "Effective Relief"
+    },
+    {
+      "type": "range",
+      "id": "review_1_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Star rating",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Name",
+      "default": "Sarah M."
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Review text",
+      "default": "This toothpaste has completely eliminated my tooth sensitivity. I can finally enjoy cold drinks again!"
+    },
+    {
+      "type": "header",
+      "content": "Review 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "review_2_enabled",
+      "label": "Enable review 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_2_headline",
+      "label": "Headline",
+      "default": "Restores Enamel"
+    },
+    {
+      "type": "range",
+      "id": "review_2_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Star rating",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Name",
+      "default": "John D."
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Review text",
+      "default": "My dentist noticed a real improvement in my enamel health. This stuff really works!"
+    },
+    {
+      "type": "header",
+      "content": "Review 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "review_3_enabled",
+      "label": "Enable review 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_3_headline",
+      "label": "Headline",
+      "default": "Low-Foam Formula"
+    },
+    {
+      "type": "range",
+      "id": "review_3_rating",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Star rating",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Name",
+      "default": "Emily R."
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Review text",
+      "default": "I love the gentle, low-foam formula. It feels so much cleaner and more natural than traditional toothpaste."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Science-backed feature"
+    }
+  ]
+}
 {% endschema %}
