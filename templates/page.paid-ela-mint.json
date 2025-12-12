@@ -65,6 +65,42 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "1765546276a11604c6": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6c7c57f_XcPbjH": {
+          "type": "ai_gen_block_6c7c57f",
+          "settings": {
+            "text_1": "Free Shipping on Orders Over $35",
+            "text_2": "Dentist Approved Products",
+            "text_3": "Natural Ingredients",
+            "text_4": "Made in the USA",
+            "text_5": "",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "scroll_speed": 30,
+            "pause_on_hover": false,
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "text_size": 16,
+            "text_weight": "400",
+            "icon_size": 24,
+            "icon_text_gap": 8,
+            "item_spacing": 60,
+            "padding_top": 16,
+            "padding_bottom": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6c7c57f_XcPbjH"
+      ],
+      "settings": {}
+    },
     "17655422262dd9640d": {
       "type": "_blocks",
       "blocks": {
@@ -628,6 +664,7 @@
   },
   "order": [
     "video_slideshow_DxNBHV",
+    "1765546276a11604c6",
     "17655422262dd9640d",
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
