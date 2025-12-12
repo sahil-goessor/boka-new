@@ -1,6 +1,599 @@
+{% doc %}
+  @prompt
+    SECTION 2 — FEATURE BLOCK: SCIENCE-BACKED
+    
+    Prompt:
+    “Create a two-column feature section with the image on the left and text on the right.
+    
+    LEFT SIDE
+    
+    Add a tall, vertically oriented product photo of the toothpaste being squeezed on a toothbrush with a ceramic tile background.
+    
+    RIGHT SIDE
+    
+    At the top, add a small eyebrow label with tags: FUNCTIONAL | DAILY/AM-PM ROUTINE
+    
+    Add headline: ‘1. Science-Backed & Gentle’
+    
+    Add a short paragraph explaining nano-hydroxyapatite and enamel restoration.
+    
+    Under the paragraph, create three small callout boxes arranged vertically:
+    
+    Effective Relief (with a check icon)
+    
+    Restores Enamel (with a mineral icon)
+    
+    Low-Foam Formula (with a gentle bubble icon)
+    
+    STYLE
+    
+    White background
+    
+    Plenty of margin between the image and text
+    
+    Soft green highlight accents.”
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-science-feature-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px {{ block.settings.section_padding_horizontal }}px {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-science-feature__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: center;
+  }
+
+  .ai-science-feature__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-science-feature__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-science-feature__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-science-feature__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-science-feature__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-science-feature__content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_gap }}px;
+  }
+
+  .ai-science-feature__eyebrow-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: {{ block.settings.eyebrow_font_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.eyebrow_color }};
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-science-feature__eyebrow-divider-{{ ai_gen_id }} {
+    width: 1px;
+    height: 12px;
+    background-color: {{ block.settings.eyebrow_color }};
+    opacity: 0.5;
+  }
+
+  .ai-science-feature__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_font_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-science-feature__description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_font_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.description_color }};
+  }
+
+  .ai-science-feature__callouts-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.callout_gap }}px;
+  }
+
+  .ai-science-feature__callout-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: {{ block.settings.callout_padding }}px;
+    background-color: {{ block.settings.callout_background }};
+    border-radius: {{ block.settings.callout_border_radius }}px;
+    border: 1px solid {{ block.settings.callout_border_color }};
+  }
+
+  .ai-science-feature__callout-icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ block.settings.icon_background }};
+    border-radius: 50%;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-science-feature__callout-icon-{{ ai_gen_id }} svg {
+    width: calc({{ block.settings.icon_size }}px * 0.5);
+    height: calc({{ block.settings.icon_size }}px * 0.5);
+    stroke: currentColor;
+    fill: none;
+  }
+
+  .ai-science-feature__callout-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.callout_font_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.callout_text_color }};
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-science-feature__container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-science-feature__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_font_size }}px * 0.8);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-science-feature-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top | times: 0.6 }}px {{ block.settings.section_padding_horizontal | times: 0.6 }}px {{ block.settings.section_padding_bottom | times: 0.6 }}px;
+    }
+
+    .ai-science-feature__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_font_size }}px * 0.7);
+    }
+
+    .ai-science-feature__description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.description_font_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<div class="ai-science-feature-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-science-feature__container-{{ ai_gen_id }}">
+    <div class="ai-science-feature__image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 1000 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          class="ai-science-feature__image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-science-feature__image-placeholder-{{ ai_gen_id }}">
+          {{ 'product-1' | placeholder_svg_tag }}
+          <div class="ai-science-feature__empty-state-{{ ai_gen_id }}">
+            Add a product image
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-science-feature__content-{{ ai_gen_id }}">
+      {% if block.settings.eyebrow_text != blank %}
+        <div class="ai-science-feature__eyebrow-{{ ai_gen_id }}">
+          {{ block.settings.eyebrow_text }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-science-feature__heading-{{ ai_gen_id }}">
+          {{ block.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.description != blank %}
+        <div class="ai-science-feature__description-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div>
+      {% endif %}
+
+      <div class="ai-science-feature__callouts-{{ ai_gen_id }}">
+        {% if block.settings.callout_1_enabled %}
+          <div class="ai-science-feature__callout-{{ ai_gen_id }}">
+            <div class="ai-science-feature__callout-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="ai-science-feature__callout-text-{{ ai_gen_id }}">
+              {{ block.settings.callout_1_text }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.settings.callout_2_enabled %}
+          <div class="ai-science-feature__callout-{{ ai_gen_id }}">
+            <div class="ai-science-feature__callout-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="ai-science-feature__callout-text-{{ ai_gen_id }}">
+              {{ block.settings.callout_2_text }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.settings.callout_3_enabled %}
+          <div class="ai-science-feature__callout-{{ ai_gen_id }}">
+            <div class="ai-science-feature__callout-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <div class="ai-science-feature__callout-text-{{ ai_gen_id }}">
+              {{ block.settings.callout_3_text }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Science-backed feature",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow text",
+      "default": "FUNCTIONAL | DAILY/AM-PM ROUTINE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "1. Science-Backed & Gentle"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Our formula features nano-hydroxyapatite, a naturally occurring mineral that helps restore enamel and strengthen teeth. Clinically proven to remineralize and protect, it's gentle enough for daily use while delivering professional-grade results.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Callout 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "callout_1_enabled",
+      "label": "Enable callout 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "callout_1_text",
+      "label": "Text",
+      "default": "Effective Relief"
+    },
+    {
+      "type": "header",
+      "content": "Callout 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "callout_2_enabled",
+      "label": "Enable callout 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "callout_2_text",
+      "label": "Text",
+      "default": "Restores Enamel"
+    },
+    {
+      "type": "header",
+      "content": "Callout 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "callout_3_enabled",
+      "label": "Enable callout 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "callout_3_text",
+      "label": "Text",
+      "default": "Low-Foam Formula"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 1000,
+      "max": 1800,
+      "step": 100,
+      "unit": "px",
+      "label": "Container width",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Content gap",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow",
+      "default": "#6b8e6b"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "callout_background",
+      "label": "Callout background",
+      "default": "#f8fdf8"
+    },
+    {
+      "type": "color",
+      "id": "callout_border_color",
+      "label": "Callout border",
+      "default": "#e8f5e8"
+    },
+    {
+      "type": "color",
+      "id": "callout_text_color",
+      "label": "Callout text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "icon_background",
+      "label": "Icon background",
+      "default": "#6b8e6b"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_font_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Eyebrow size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "callout_font_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Callout size",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Callout style"
+    },
+    {
+      "type": "range",
+      "id": "callout_gap",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between callouts",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "callout_padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Callout padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "callout_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Callout border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Science-backed feature"
+    }
+  ]
+}
 {% endschema %}
