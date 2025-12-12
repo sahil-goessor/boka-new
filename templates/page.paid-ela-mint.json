@@ -9,10 +9,71 @@
  */
 {
   "sections": {
+    "1765534182fed2e648": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0cc02a9_MhjpXQ": {
+          "type": "ai_gen_block_0cc02a9",
+          "settings": {
+            "image_border_radius": 0,
+            "heading": "1. Science-Backed & Gentle",
+            "tag_1": "FUNCTIONAL",
+            "tag_2": "DAILY/AM-PM ROUTINE",
+            "description": "<p>Our formula features nano-hydroxyapatite, a naturally occurring mineral that helps restore enamel and strengthen teeth. Clinically proven to remineralize and protect, it's gentle enough for daily use while delivering professional-grade results.</p>",
+            "reviews_headline": "Customer Reviews",
+            "review_1_enabled": true,
+            "review_1_rating": 5,
+            "review_1_name": "Sarah M.",
+            "review_1_quote": "This toothpaste has completely transformed my sensitive teeth. I can finally enjoy cold drinks without wincing!",
+            "review_2_enabled": true,
+            "review_2_rating": 5,
+            "review_2_name": "Michael T.",
+            "review_2_quote": "I love the low-foam formula. It feels so much cleaner and I can actually tell it's working on my enamel.",
+            "review_3_enabled": true,
+            "review_3_rating": 5,
+            "review_3_name": "Jessica L.",
+            "review_3_quote": "Science-backed and gentle - exactly what I was looking for. My dentist even noticed the improvement!",
+            "container_width": 1400,
+            "column_gap": 80,
+            "content_gap": 24,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_horizontal": 40,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "tag_background_color": "#e8f5e8",
+            "tag_text_color": "#2d5a2d",
+            "description_color": "#333333",
+            "review_background": "#f8fdf8",
+            "review_border_color": "#e8f5e8",
+            "star_color": "#fbbf24",
+            "button_background": "#ffffff",
+            "button_hover_background": "#f8fdf8",
+            "button_border": "#e8f5e8",
+            "button_icon_color": "#000000",
+            "dot_color": "#6b8e6b",
+            "heading_font_size": 36,
+            "tag_font_size": 11,
+            "description_font_size": 16,
+            "reviews_headline_size": 18,
+            "reviewer_name_size": 14,
+            "review_quote_size": 15,
+            "review_padding": 20,
+            "review_border_radius": 8,
+            "star_size": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0cc02a9_MhjpXQ"
+      ],
+      "settings": {}
+    },
     "custom_liquid_CjtDWw": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"as-seen-on-section\">\n  <h1 class=\"as-seen-on-title\">Press: As Seen On</h1>\n  <div class=\"as-seen-on-logos-wrapper\">\n    <div class=\"as-seen-on-logos\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n      <!-- Duplicate logos for infinite scrolling -->\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n    </div>\n  </div>\n</div>\n\n<style>\n  .as-seen-on-section {\n    text-align: center;\n    padding: 40px 20px;\n    overflow: hidden;\n    background: #FAFAF5;\n    padding-bottom: 80px;\n    padding-top: 10px;\n  }\n\n  .as-seen-on-title {\n    font-size: 52px;\n    font-weight: regular;\n    margin-bottom: 80px;\n  }\n\n@media (max-width: 768px) {\n    .as-seen-on-title {\n      font-size: 32px;\n      margin-bottom: 40px;\n    }\n  }\n\n  .as-seen-on-logos-wrapper {\n    white-space: nowrap;\n    position: relative;\n    width: 100%;\n  }\n\n  .as-seen-on-logos {\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    animation: scroll-logos 25s linear infinite;\n    width: max-content;\n  }\n\n  .as-seen-on-logos img {\n    max-width: 160px;\n    height: auto;\n    display: inline-block;\n  }\n\n  @keyframes scroll-logos {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n    }\n  }\n</style>",
+        "custom_liquid": "<div class=\"as-seen-on-section\">\n  <h1 class=\"as-seen-on-title\">As Seen On</h1>\n  <div class=\"as-seen-on-logos-wrapper\">\n    <div class=\"as-seen-on-logos\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n      <!-- Duplicate logos for infinite scrolling -->\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n    </div>\n  </div>\n</div>\n\n<style>\n  .as-seen-on-section {\n    text-align: center;\n    padding: 40px 20px;\n    overflow: hidden;\n    background: #FAFAF5;\n    padding-bottom: 80px;\n    padding-top: 10px;\n  }\n\n  .as-seen-on-title {\n    font-size: 52px;\n    font-weight: regular;\n    margin-bottom: 80px;\n  }\n\n@media (max-width: 768px) {\n    .as-seen-on-title {\n      font-size: 32px;\n      margin-bottom: 40px;\n    }\n  }\n\n  .as-seen-on-logos-wrapper {\n    white-space: nowrap;\n    position: relative;\n    width: 100%;\n  }\n\n  .as-seen-on-logos {\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    animation: scroll-logos 25s linear infinite;\n    width: max-content;\n  }\n\n  .as-seen-on-logos img {\n    max-width: 160px;\n    height: auto;\n    display: inline-block;\n  }\n\n  @keyframes scroll-logos {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n    }\n  }\n</style>",
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
         "custom_text_color": "#ffffff",
@@ -55,6 +116,7 @@
         "text_JP8yaV",
         "button_RzcKTB"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 750px) {.image-with-text__media-item {padding-left: 80px; }}",
         ".image-with-text__content .button + .button {margin-left: 10px;}",
@@ -74,6 +136,12 @@
         "section_background_color": "rgba(0,0,0,0)",
         "custom_background_color": "rgba(0,0,0,0)",
         "custom_text_color": "#000000",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 70,
@@ -91,6 +159,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/harpersbazaar.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"You can feel especially good about squeezing a little on your toothbrush each day.\"</p>",
             "link_label": "Read more",
@@ -101,6 +170,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/oprahdaily.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"Fluoride is swapped with nano-hydroxyapatite to remineralize and fortify teeth.\"</p>",
             "link_label": "Read more",
@@ -111,6 +181,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/the-everygirl-logo-sm.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"Brushing with hydroxyapatite toothpaste strengthens, remineralizes, and protects tooth enamel without the use of fluoride.\"</p>",
             "link_label": "Read more",
@@ -123,6 +194,7 @@
         "column_GqXYCt",
         "column_nY4NAg"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -182,6 +254,7 @@
         "text_GwCAbb",
         "button_p9gw8c"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 750px) {.image-with-text__media-item {padding-right: 80px; }}",
         ".image-with-text__content .button + .button {margin-left: 10px;}",
@@ -201,6 +274,12 @@
         "section_background_color": "rgba(0,0,0,0)",
         "custom_background_color": "rgba(0,0,0,0)",
         "custom_text_color": "#000000",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 70,
@@ -218,6 +297,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/gq_47babaa6-ac87-430a-8cea-cb621d3aa3c2.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"Our preferred mouthwash isn’t really a wash at all: Boka’s Restore Tablets are hydroxyapatite tablets with powerful probiotics that are activated by your saliva—they do a bang-up job of freshening breath and soothing gums.\"</p>",
             "link_label": "Read more",
@@ -228,6 +308,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"Ela Mint Toothpaste has a subtle combination of peppermint and spearmint with a little wintergreen, green tea, and cardamom. And you’ll appreciate the absence of artificial flavors, artificial sweeteners, and mouth-irritating sodium lauryl sulfate. \"</p>",
             "link_label": "Read more",
@@ -276,14 +357,6 @@
             "heading_tag": "default"
           }
         },
-        "caption_NDUMwV": {
-          "type": "caption",
-          "settings": {
-            "caption": "Boka x Grillo's Pickles",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
         "text_XPt86m": {
           "type": "text",
           "settings": {
@@ -303,10 +376,10 @@
       },
       "block_order": [
         "heading_GkYYYF",
-        "caption_NDUMwV",
         "text_XPt86m",
         "button_JNTfmV"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 750px) {.image-with-text__media-item {padding-left: 80px; }}",
         ".image-with-text__content .button + .button {margin-left: 10px;}",
@@ -326,6 +399,12 @@
         "section_background_color": "rgba(0,0,0,0)",
         "custom_background_color": "rgba(0,0,0,0)",
         "custom_text_color": "#000000",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 70,
@@ -388,6 +467,12 @@
         "section_background_color": "rgba(0,0,0,0)",
         "custom_background_color": "rgba(0,0,0,0)",
         "custom_text_color": "#000000",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 36,
@@ -405,6 +490,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/harpersbazaar.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"You can feel especially good about squeezing a little on your toothbrush each day.\"</p>",
             "link_label": "Read more",
@@ -415,6 +501,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/oprahdaily.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"Fluoride is swapped with nano-hydroxyapatite to remineralize and fortify teeth.\"</p>",
             "link_label": "Read more",
@@ -425,6 +512,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/the-everygirl-logo-sm.png",
+            "image_link": "",
             "title": "",
             "text": "<p>\"Brushing with hydroxyapatite toothpaste strengthens, remineralizes, and protects tooth enamel without the use of fluoride.\"</p>",
             "link_label": "Read more",
@@ -476,6 +564,7 @@
     }
   },
   "order": [
+    "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "image_with_text_qDqQeQ",
     "multicolumn_gLPj6X",
