@@ -512,12 +512,9 @@
     "featured_product_TGCUYH": {
       "type": "featured-product",
       "blocks": {
-        "text_f7T7qD": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
+        "rating_QEkXF4": {
+          "type": "rating",
+          "settings": {}
         },
         "title_T9DDRE": {
           "type": "title",
@@ -543,7 +540,26 @@
         "buy_buttons_LXDgzw": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
+          }
+        },
+        "text_f7T7qD": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_M6awpA": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
           }
         },
         "share_zqXtY6": {
@@ -554,12 +570,14 @@
         }
       },
       "block_order": [
-        "text_f7T7qD",
+        "rating_QEkXF4",
         "title_T9DDRE",
         "price_46i4nh",
         "variant_picker_XeaPGM",
         "quantity_selector_qer7jh",
         "buy_buttons_LXDgzw",
+        "text_f7T7qD",
+        "icon_with_text_M6awpA",
         "share_zqXtY6"
       ],
       "name": "t:sections.featured-product.presets.name",
