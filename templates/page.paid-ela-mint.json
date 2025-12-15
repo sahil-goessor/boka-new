@@ -762,7 +762,9 @@
         "video_XYXH99",
         "video_TA7BbK"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "h1 {text-align: center; font-size: 40px;}"
+      ],
       "name": "t:sections.yt-shorts.presets.name",
       "settings": {
         "yt_shorts_title": "Tried and trusted by 3700+ people",
