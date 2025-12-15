@@ -510,6 +510,12 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_xDenk8": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"icon-text-container\">\n  <div class=\"icon-text\">\n    <img src=\"icon1.png\" alt=\"Icon 1\">\n    <span>Free Shipping</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"icon2.png\" alt=\"Icon 2\">\n    <span>24/7 Support</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"icon3.png\" alt=\"Icon 3\">\n    <span>Easy Returns</span>\n  </div>\n</div>\n\n<style>\n  .icon-text-container {\n    display: flex;\n    justify-content: space-between; /* Distribute icons evenly */\n    align-items: center;\n    gap: 20px; /* Space between each icon-text pair */\n  }\n\n  .icon-text {\n    display: flex;\n    align-items: center;\n    gap: 8px; /* Space between icon and text */\n  }\n\n  .icon-text img {\n    width: 24px;\n    height: 24px;\n  }\n\n  .icon-text span {\n    font-family: 'Neue Haas Unica Pro', Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    color: #000;\n  }\n\n  /* Responsive */\n  @media screen and (max-width: 768px) {\n    .icon-text-container {"
+          }
+        },
         "text_YRpR7X": {
           "type": "text",
           "settings": {
@@ -613,6 +619,7 @@
         "rating_QEkXF4",
         "title_T9DDRE",
         "price_46i4nh",
+        "custom_liquid_xDenk8",
         "text_YRpR7X",
         "icon_with_text_ANajtC",
         "variant_picker_XeaPGM",
