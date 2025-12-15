@@ -793,7 +793,8 @@
         "video_TA7BbK"
       ],
       "custom_css": [
-        "h1 {text-align: center; font-size: 40px;}"
+        "h2 {text-align: center;}",
+        "@media only screen and (min-width: 767px) {h2 {font-size: 30px !important; }}"
       ],
       "name": "t:sections.yt-shorts.presets.name",
       "settings": {
@@ -810,7 +811,8 @@
     "featured_collection_RackKr": {
       "type": "featured-collection",
       "custom_css": [
-        "h1 {text-align: center; font-size: 40px;}"
+        "h1 {text-align: center;}",
+        "@media only screen and (min-width: 767px) {h1 {text-align: center; font-size: 40px; }}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
