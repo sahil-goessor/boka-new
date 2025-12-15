@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "176576988231c5d138": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b9e5a1a_tWBzNm": {
+          "type": "ai_gen_block_b9e5a1a",
+          "settings": {
+            "show_reviews": true,
+            "reviews_text": "3,700+ Reviews",
+            "star_size": 20,
+            "star_color": "#FFD700",
+            "reviews_text_size": 14,
+            "headline": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
+            "body_text": "<p>A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.</p>",
+            "headline_size": 48,
+            "body_text_size": 16,
+            "content_spacing": 10,
+            "media_type": "image",
+            "image": "shopify://shop_images/swwai_asset__9_3f5e34369bdbe8a234448c68a6772bb62154ee518e91555dcbeefc55dbe7cbf9_1.webp",
+            "video_autoplay": true,
+            "video_loop": true,
+            "video_muted": true,
+            "video_controls": false,
+            "media_min_height": 300,
+            "media_border_radius": 0,
+            "container_width": 1400,
+            "column_gap": 60,
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "padding_horizontal": 20,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "mobile_layout": "content_first",
+            "mobile_headline_size": 32,
+            "mobile_body_text_size": 14,
+            "mobile_media_min_height": 300,
+            "mobile_gap": 30,
+            "mobile_padding_top": 40,
+            "mobile_padding_bottom": 40,
+            "mobile_padding_horizontal": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b9e5a1a_tWBzNm"
+      ],
+      "settings": {}
+    },
     "17657652337a3d99c7": {
       "type": "_blocks",
       "disabled": true,
@@ -858,6 +906,7 @@
     }
   },
   "order": [
+    "176576988231c5d138",
     "17657652337a3d99c7",
     "video_slideshow_DxNBHV",
     "1765546276a11604c6",
