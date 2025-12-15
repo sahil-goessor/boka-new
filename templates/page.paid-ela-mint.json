@@ -682,7 +682,7 @@
         "icon_size": 60,
         "section_background_color": "#FFFFFF",
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 80,
         "padding_top_tablet": 40,
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 20,
