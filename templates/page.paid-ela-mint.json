@@ -512,6 +512,7 @@
         },
         "icon_with_text_ANajtC": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "icon_1": "heart",
@@ -553,6 +554,7 @@
         },
         "icon_with_text_M6awpA": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "icon_1": "heart",
@@ -565,6 +567,7 @@
         },
         "share_zqXtY6": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
