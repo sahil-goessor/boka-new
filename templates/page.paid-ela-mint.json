@@ -774,7 +774,7 @@
       ],
       "name": "t:sections.yt-shorts.presets.name",
       "settings": {
-        "yt_shorts_title": "Tried and trusted by 3700+ people",
+        "yt_shorts_title": "Tried And Trusted By 3700+ People",
         "heading_size": "h1",
         "auto_center": true,
         "columns": 4,
@@ -791,7 +791,7 @@
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "title": "Pairs perfectly with",
+        "title": "Pairs Perfectly With",
         "heading_size": "h0",
         "heading_tag": "h1",
         "description": "",
