@@ -9,6 +9,66 @@
  */
 {
   "sections": {
+    "17657652337a3d99c7": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "video_slideshow_DxNBHV": {
+      "type": "video-slideshow",
+      "blocks": {
+        "image_AyMjUN": {
+          "type": "image",
+          "settings": {
+            "heading": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
+            "image_link": "",
+            "heading_font_size": 44,
+            "heading_font_size_mobile": 36,
+            "heading_tag": "default",
+            "subheading": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
+            "button_label": "TRY NOW FOR $11.75",
+            "link": "shopify://products/holiday-2-pack-gift-set",
+            "button_style_secondary": false,
+            "button_label2": "",
+            "link2": "",
+            "button_style_secondary2": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "custom_background_color": "#333333",
+            "custom_text_color": "#ffffff",
+            "mobile_custom_text_color": "#000000",
+            "button_background_color": "#000000",
+            "button_foreground_color": "#ffffff",
+            "button_background_color_mobile": "#000000",
+            "button_foreground_color_mobile": "#ffffff",
+            "bottom_text_background_color": "#dce6cf",
+            "bottom_text_foreground_color": "#000000",
+            "text_alignment_mobile": "center",
+            "mobile_content_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "image_AyMjUN"
+      ],
+      "name": "Slideshow with Video",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "enable_video_buttons": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "fadein_enabled": false,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "176576544784328569": {
       "type": "_blocks",
       "blocks": {
@@ -105,72 +165,107 @@
             "button_border_radius": 0
           },
           "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_46677d3_fVcWbb"
-      ],
-      "settings": {}
-    },
-    "17657652337a3d99c7": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "video_slideshow_DxNBHV": {
-      "type": "video-slideshow",
-      "blocks": {
-        "image_AyMjUN": {
-          "type": "image",
+        },
+        "ai_gen_block_46677d3_4ktG94": {
+          "type": "ai_gen_block_46677d3",
           "settings": {
-            "heading": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
-            "image_link": "",
-            "heading_font_size": 44,
-            "heading_font_size_mobile": 36,
-            "heading_tag": "default",
-            "subheading": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
-            "subheading_font_size": 16,
-            "subheading_font_size_mobile": 14,
-            "button_label": "TRY NOW FOR $11.75",
-            "link": "shopify://products/holiday-2-pack-gift-set",
-            "button_style_secondary": false,
-            "button_label2": "",
-            "link2": "",
-            "button_style_secondary2": false,
-            "box_align": "middle-left",
-            "show_text_box": true,
+            "layout": "image_right",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_2_e1cec8ff-07e1-4636-acea-7791354ce6f0.webp",
+            "image_border_radius": 0,
+            "heading": "2. Cares For Your Mouth As A Whole With Nano-Hydroxyapatite",
+            "subheadline_1": "Healthy Smile",
+            "subheadline_2": "Freshens Breath",
+            "body": "<p>Powered by n-Ha, a mineral that closely mimics tooth enamel to keep your smile clean, fresh, and bright.</p>",
             "text_alignment": "left",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "custom_background_color": "#333333",
-            "custom_text_color": "#ffffff",
-            "mobile_custom_text_color": "#000000",
-            "button_background_color": "#000000",
-            "button_foreground_color": "#ffffff",
-            "button_background_color_mobile": "#000000",
-            "button_foreground_color_mobile": "#ffffff",
-            "bottom_text_background_color": "#dce6cf",
-            "bottom_text_foreground_color": "#000000",
-            "text_alignment_mobile": "center",
-            "mobile_content_position": "bottom"
-          }
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#f4f4f4",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "#000000",
+            "subheadline_2_text_color": "#ffffff",
+            "button_text": "Learn more",
+            "button_link": "",
+            "review_1_highlight": "Excellent Toothpaste",
+            "review_1_quote": "I'm incredibly impressed by Boka's toothpaste. I've tried most of the natural brands on the market and so far Boka is my top favorite. It's non-irritating and my mouth feels cleaner than ever. I hope it continues to work well!",
+            "review_1_author": "Jill A.",
+            "review_2_highlight": "Love this toothpaste!",
+            "review_2_quote": "This toothpaste works very well. The taste is great and it leaves long lasting fresh breath. I trust the ingredients and have had a great experience with Boka for many months now!",
+            "review_2_author": "Cassidy G.",
+            "review_3_highlight": "Mint toothpaste",
+            "review_3_quote": "I mean just WOW. I have crazy sensitive teeth and this stuff gives a clean feel AND a clean and sensitive-free smile. 10\\10. Never going back!",
+            "review_3_author": "Tabitha H. us",
+            "review_bg_color": "#f9f9f9",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#000000",
+            "quote_color": "#333333",
+            "author_color": "#000000",
+            "verified_color": "#4CAF50",
+            "star_size": 20,
+            "star_color": "#FFD700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_text": "SHOP NOW",
+            "reviews_button_link": "shopify://products/ela-mint-toothpaste",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#ffffff",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#e6f4d4",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "image_AyMjUN"
+        "ai_gen_block_46677d3_fVcWbb",
+        "ai_gen_block_46677d3_4ktG94"
       ],
-      "name": "Slideshow with Video",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "enable_video_buttons": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "fadein_enabled": false,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
+      "settings": {}
     },
     "1765546276a11604c6": {
       "type": "_blocks",
@@ -667,9 +762,9 @@
     }
   },
   "order": [
-    "176576544784328569",
     "17657652337a3d99c7",
     "video_slideshow_DxNBHV",
+    "176576544784328569",
     "1765546276a11604c6",
     "17655422262dd9640d",
     "1765534182fed2e648",
