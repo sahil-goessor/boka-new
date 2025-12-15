@@ -569,50 +569,6 @@
           "settings": {
             "custom_liquid": "<style>\n  .accordion {\n    border-top: 1px solid #e5e5e5;\n    max-width: 800px;\n    color: #000;\n    font-family: \"Neue Haas Unica Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  }\n\n  .accordion details {\n    border-bottom: 1px solid #e5e5e5;\n    padding: 16px 0;\n    font-family: inherit;\n    color: inherit;\n  }\n\n  .accordion summary {\n    cursor: pointer;\n    font-weight: 600;\n    list-style: none;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion summary::-webkit-details-marker {\n    display: none;\n  }\n\n  .accordion summary::after {\n    content: \"+\";\n    font-size: 20px;\n    color: inherit;\n  }\n\n  .accordion details[open] summary::after {\n    content: \"–\";\n  }\n\n  .accordion .content {\n    padding-top: 12px;\n    font-size: 14px;\n    line-height: 1.6;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion .content p,\n  .accordion .content li,\n  .accordion .content a {\n    margin-bottom: 8px;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion .content a {\n    text-decoration: underline;\n  }\n</style>\n\n<div class=\"accordion\">\n\n  <details>\n    <summary>Ingredients</summary>\n    <div class=\"content\">\n      <p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (Aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>\n    </div>\n  </details>\n\n  <details>\n    <summary>How to Use</summary>\n    <div class=\"content\">\n      <p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>\n    </div>\n  </details>\n\n</div>"
           }
-        },
-        "icon_with_text_M6awpA": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "heart",
-            "image_1": "shopify://shop_images/swwai_asset__9_f6bf3106b8dc1528f7faef6e840425cdddb9ecd270bfed015de39a4fccecb673_58d81dc3-1e3d-4930-8559-12e49b00ab65.webp",
-            "heading_1": "Fluoride Free Care",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
-          }
-        },
-        "icon_with_text_AmVzVX": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "heart",
-            "heading_1": "Freshens Breath",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
-          }
-        },
-        "icon_with_text_8WxaJW": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "heart",
-            "heading_1": "Fresh Mint Clean",
-            "icon_2": "return",
-            "heading_2": "",
-            "icon_3": "truck",
-            "heading_3": ""
-          }
-        },
-        "share_zqXtY6": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -626,11 +582,7 @@
         "quantity_selector_qer7jh",
         "buy_buttons_LXDgzw",
         "icon_with_text_mfVAW3",
-        "custom_liquid_Qpix6f",
-        "icon_with_text_M6awpA",
-        "icon_with_text_AmVzVX",
-        "icon_with_text_8WxaJW",
-        "share_zqXtY6"
+        "custom_liquid_Qpix6f"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
