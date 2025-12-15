@@ -647,6 +647,140 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "custom_image_icon_background_FqMNG9": {
+      "type": "custom-image-icon-background",
+      "blocks": {
+        "heading_MzYbMk": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Makes Boka Work",
+            "heading_size": "h1",
+            "heading_font_size_desktop": 32,
+            "heading_font_size_mobile": 24,
+            "heading_tag": "default"
+          }
+        },
+        "icon_text_wHgEtm": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/n-Ha.webp",
+            "icon_alt": "Icon",
+            "heading": "Nano-Hydroxyapatite (n-Ha) -",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 21,
+            "text_font_size_mobile": 16,
+            "text": "<p>A breakthrough material inspired by nature and backed by science that mimics tooth enamel. Developed in the 1970s as a fluoride alternative.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_w8JqDJ": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Xylitol",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 21,
+            "text_font_size_mobile": 16,
+            "text": "<p>Refreshes your mouth with a mild, clean flavor.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_y44E3V": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/peppermint.webp",
+            "icon_alt": "Icon",
+            "heading": "Aloe Vera",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 21,
+            "text_font_size_mobile": 16,
+            "text": "<p>Included in our thoughtfully formulated blend.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_ryTd4U": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Green Tea Extract",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 21,
+            "text_font_size_mobile": 16,
+            "text": "<p>Rich in antioxidants.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_nKAcBR": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Xylitol_19069d56-c52b-4886-8315-38fa980b02b6.webp",
+            "icon_alt": "Icon",
+            "heading": "Mint",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 21,
+            "text_font_size_mobile": 16,
+            "text": "<p>Offers a fresh, clean feel.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bpWGPA": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/ela-mint-toothpaste",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_MzYbMk",
+        "icon_text_wHgEtm",
+        "icon_text_w8JqDJ",
+        "icon_text_y44E3V",
+        "icon_text_ryTd4U",
+        "icon_text_nKAcBR",
+        "button_bpWGPA"
+      ],
+      "custom_css": [
+        ".icon-text-item__content {text-align: left;}",
+        "@media only screen and (max-width: 749px) {.image-with-text__heading {text-align: center; }}"
+      ],
+      "name": "Image/gif icon bg text",
+      "settings": {
+        "media_type": "image",
+        "image": "shopify://shop_images/Ingredients_Section_Desktop_2.webp",
+        "mobile_image": "shopify://shop_images/Ingredients_Section_Mobile_2.webp",
+        "background_video": "",
+        "video_overlay_opacity": 30,
+        "desktop_content_alignment": "left",
+        "text_color": "#FFFFFF",
+        "container_text_color": "#000000",
+        "icon_heading_color": "#000000",
+        "icon_text_color": "#666666",
+        "mobile_text_color": "#000000",
+        "mobile_container_text_color": "#000000",
+        "mobile_icon_heading_color": "#000000",
+        "mobile_icon_text_color": "#666666",
+        "container_background_color": "#FFFFFF",
+        "container_border_radius": 12,
+        "icon_size": 60,
+        "section_background_color": "#FFFFFF",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
     }
   },
   "order": [
@@ -661,6 +795,7 @@
     "featured_product_TGCUYH",
     "yt_shorts_FUHnAV",
     "featured_collection_RackKr",
-    "main"
+    "main",
+    "custom_image_icon_background_FqMNG9"
   ]
 }
