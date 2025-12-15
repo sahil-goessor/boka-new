@@ -539,13 +539,6 @@
             "show_dynamic_checkout": false
           }
         },
-        "text_f7T7qD": {
-          "type": "text",
-          "settings": {
-            "text": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
-            "text_style": "body"
-          }
-        },
         "custom_liquid_Qpix6f": {
           "type": "custom_liquid",
           "settings": {
@@ -581,7 +574,6 @@
         "variant_picker_XeaPGM",
         "quantity_selector_qer7jh",
         "buy_buttons_LXDgzw",
-        "text_f7T7qD",
         "custom_liquid_Qpix6f",
         "icon_with_text_M6awpA",
         "share_zqXtY6"
