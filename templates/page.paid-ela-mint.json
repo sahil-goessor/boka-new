@@ -9,6 +9,64 @@
  */
 {
   "sections": {
+    "17657702727ebbe56b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_501d6ba_Jf8wrN": {
+          "type": "ai_gen_block_501d6ba",
+          "settings": {
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "content_gap": 20,
+            "section_padding_top_mobile": 40,
+            "section_padding_bottom_mobile": 40,
+            "content_gap_mobile": 20,
+            "show_reviews": true,
+            "review_text": "3,700+ Reviews",
+            "star_color": "#FFD700",
+            "star_size": 20,
+            "review_text_size": 14,
+            "headline": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
+            "headline_size": 40,
+            "headline_font_weight": "700",
+            "body_text": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
+            "body_text_size": 16,
+            "show_claim_1": true,
+            "claim_1_icon": "shopify://shop_images/swwai_asset__9_c21d9618f174fc8ba0bd7b20ecb8b436e90dd7208cd01fba676abb17afeeff05.png",
+            "claim_1_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science",
+            "show_claim_2": true,
+            "claim_2_icon": "shopify://shop_images/swwai_asset__9_70f1cde8701033cab5cab2e6cfd71925057c08e3fde0154d01ebf2bcdbd8575d_1.avif",
+            "claim_2_text": "Fluoride-free & clean ingredients",
+            "claim_icon_size": 40,
+            "claim_text_size": 14,
+            "button_text": "Shop Now",
+            "button_link": "",
+            "button_bg_color": "#000000",
+            "button_hover_bg_color": "#333333",
+            "button_text_color": "#ffffff",
+            "button_text_size": 16,
+            "button_border_radius": 0,
+            "button_width": 200,
+            "button_height": 52,
+            "button_width_mobile": 100,
+            "button_height_mobile": 52,
+            "hero_image": "shopify://shop_images/swwai_asset__9_3f5e34369bdbe8a234448c68a6772bb62154ee518e91555dcbeefc55dbe7cbf9_1.webp",
+            "hero_video": "",
+            "hero_image_mobile": "shopify://shop_images/swwai_asset__9_3f5e34369bdbe8a234448c68a6772bb62154ee518e91555dcbeefc55dbe7cbf9_1.webp",
+            "hero_video_mobile": "",
+            "media_border_radius": 0,
+            "mobile_content_alignment": "center"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_501d6ba_Jf8wrN"
+      ],
+      "settings": {}
+    },
     "17657652337a3d99c7": {
       "type": "_blocks",
       "disabled": true,
@@ -858,6 +916,7 @@
     }
   },
   "order": [
+    "17657702727ebbe56b",
     "17657652337a3d99c7",
     "video_slideshow_DxNBHV",
     "1765546276a11604c6",
