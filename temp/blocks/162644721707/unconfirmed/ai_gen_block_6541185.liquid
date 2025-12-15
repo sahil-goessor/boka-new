@@ -1,6 +1,1331 @@
+{% doc %}
+  @prompt
+    Create a image and text section. There should be option to change position like text can be on the left or right side same with the image. In the text it should have headline , body and cta button  then the iamge should be responsive center on the mobile. , below the headline add option to add a 2 seperate text/subheadline with background color and has border radius of 36px., Below the body, add a customer reviews slider. This slider should allow uploading customer reviews, including a highlighted review in bold text. Below the highlighted text, display a 5-star rating (all stars filled). Under the star rating, show the full customer review quote.
+    
+    Below the quote, display the reviewer’s name, with “Verified Buyer” text beside it and a check badge icon. The slider should include next and previous navigation buttons, as well as centered pagination dots.
+    
+    The slider must be fully responsive for both mobile and desktop views, with smooth animations that clearly display the customer review content when users click the next or previous arrows., Please fix the responsive layout of the whole image and text section that you creative the mobile version is not responsive please fic it, Please fix the previous arrow , it should be on the left side of the customer reviews container on mobile view, Fix the next and previous button on mobile it should be place at the left and right side of the customer reviews container just like on the desktop view, On mobile view, place the navigation arrows below the customer reviews container. The arrows should be positioned within the dot navigation area, with the pagination dots centered between the previous and next arrows., On desktop view, the next and previous arrows should remain inside the customer review container. On mobile view, the next and previous arrows should be positioned close to the dot navigation, with just enough spacing so they are not too far apart., On desktop view, instead of placing the arrows inside the reviews container, position them within the dot navigation—with the previous arrow, followed by the pagination dots in the center, and the next arrow—matching the same layout used on mobile view., Please add the Button CTA below the customer reviews section, The CTA button below the body , change its position and add below the customer reviews section right below the arrows
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-text-{{ ai_gen_id }} {
+    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-image-text-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-image-text-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: {{ block.settings.vertical_alignment }};
+    gap: {{ block.settings.gap }}px;
+    {% if block.settings.layout == 'image_left' %}
+      flex-direction: row;
+    {% else %}
+      flex-direction: row-reverse;
+    {% endif %}
+  }
+
+  .ai-image-text-image-column-{{ ai_gen_id }} {
+    flex: 0 0 {{ block.settings.image_width }}%;
+  }
+
+  .ai-image-text-content-column-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-image-text-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-image-text-image-wrapper-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-image-text-image-placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-text-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-image-text-content-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-image-text-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    line-height: 1.2;
+  }
+
+  .ai-image-text-subheadlines-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.subheadline_gap }}px;
+    margin-bottom: {{ block.settings.subheadline_spacing }}px;
+    flex-wrap: wrap;
+    {% if block.settings.text_alignment == 'center' %}
+      justify-content: center;
+    {% elsif block.settings.text_alignment == 'right' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .ai-image-text-subheadline-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.subheadline_padding_vertical }}px {{ block.settings.subheadline_padding_horizontal }}px;
+    border-radius: 36px;
+    font-size: {{ block.settings.subheadline_font_size }}px;
+    line-height: 1.4;
+  }
+
+  .ai-image-text-subheadline-1-{{ ai_gen_id }} {
+    background-color: {{ block.settings.subheadline_1_bg_color }};
+    color: {{ block.settings.subheadline_1_text_color }};
+  }
+
+  .ai-image-text-subheadline-2-{{ ai_gen_id }} {
+    background-color: {{ block.settings.subheadline_2_bg_color }};
+    color: {{ block.settings.subheadline_2_text_color }};
+  }
+
+  .ai-image-text-body-{{ ai_gen_id }} {
+    font-size: {{ block.settings.body_size }}px;
+    color: {{ block.settings.body_color }};
+    line-height: 1.6;
+    margin: 0 0 {{ block.settings.body_spacing }}px;
+  }
+
+  .ai-image-text-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-image-text-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+  }
+
+  .ai-reviews-slider-{{ ai_gen_id }} {
+    position: relative;
+    margin-top: {{ block.settings.slider_spacing }}px;
+  }
+
+  .ai-reviews-slider-wrapper-{{ ai_gen_id }} {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ai-reviews-slider-track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .ai-review-slide-{{ ai_gen_id }} {
+    min-width: 100%;
+    padding: {{ block.settings.review_padding }}px;
+    background-color: {{ block.settings.review_bg_color }};
+    border-radius: {{ block.settings.review_border_radius }}px;
+    box-sizing: border-box;
+  }
+
+  .ai-review-highlight-{{ ai_gen_id }} {
+    font-size: {{ block.settings.highlight_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.highlight_color }};
+    margin-bottom: {{ block.settings.highlight_spacing }}px;
+    line-height: 1.3;
+  }
+
+  .ai-review-stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+    margin-bottom: {{ block.settings.stars_spacing }}px;
+    {% if block.settings.text_alignment == 'center' %}
+      justify-content: center;
+    {% elsif block.settings.text_alignment == 'right' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .ai-review-star-{{ ai_gen_id }} {
+    width: {{ block.settings.star_size }}px;
+    height: {{ block.settings.star_size }}px;
+    fill: {{ block.settings.star_color }};
+    flex-shrink: 0;
+  }
+
+  .ai-review-quote-{{ ai_gen_id }} {
+    font-size: {{ block.settings.quote_size }}px;
+    color: {{ block.settings.quote_color }};
+    line-height: 1.6;
+    margin-bottom: {{ block.settings.quote_spacing }}px;
+  }
+
+  .ai-review-author-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: {{ block.settings.author_size }}px;
+    color: {{ block.settings.author_color }};
+    flex-wrap: wrap;
+    {% if block.settings.text_alignment == 'center' %}
+      justify-content: center;
+    {% elsif block.settings.text_alignment == 'right' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .ai-review-author-name-{{ ai_gen_id }} {
+    font-weight: 600;
+  }
+
+  .ai-review-verified-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: {{ block.settings.verified_color }};
+    white-space: nowrap;
+  }
+
+  .ai-review-check-icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    fill: {{ block.settings.verified_color }};
+    flex-shrink: 0;
+  }
+
+  .ai-slider-nav-{{ ai_gen_id }} {
+    background-color: {{ block.settings.nav_bg_color }};
+    color: {{ block.settings.nav_color }};
+    border: none;
+    width: {{ block.settings.nav_size }}px;
+    height: {{ block.settings.nav_size }}px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .ai-slider-nav-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.nav_hover_bg_color }};
+  }
+
+  .ai-slider-nav-{{ ai_gen_id }} svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  .ai-slider-pagination-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: {{ block.settings.pagination_spacing }}px;
+  }
+
+  .ai-slider-dots-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ai-slider-dot-{{ ai_gen_id }} {
+    width: {{ block.settings.dot_size }}px;
+    height: {{ block.settings.dot_size }}px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+  }
+
+  .ai-slider-dot-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.dot_active_color }};
+  }
+
+  .ai-reviews-cta-wrapper-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-top: {{ block.settings.cta_spacing }}px;
+  }
+
+  .ai-reviews-cta-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.cta_padding_vertical }}px {{ block.settings.cta_padding_horizontal }}px;
+    background-color: {{ block.settings.cta_bg_color }};
+    color: {{ block.settings.cta_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.cta_border_radius }}px;
+    font-size: {{ block.settings.cta_font_size }}px;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-reviews-cta-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.cta_hover_bg_color }};
+    color: {{ block.settings.cta_hover_text_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-text-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.6 }}px 0 {{ block.settings.padding_bottom | times: 0.6 }}px;
+    }
+
+    .ai-image-text-container-{{ ai_gen_id }} {
+      padding: 0 16px;
+    }
+
+    .ai-image-text-wrapper-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-image-text-image-column-{{ ai_gen_id }} {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    .ai-image-text-content-column-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-image-text-content-{{ ai_gen_id }} {
+      text-align: center;
+    }
+
+    .ai-image-text-subheadlines-{{ ai_gen_id }} {
+      justify-content: center;
+    }
+
+    .ai-image-text-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+      margin-bottom: {{ block.settings.heading_spacing | times: 0.8 }}px;
+    }
+
+    .ai-image-text-body-{{ ai_gen_id }} {
+      font-size: {{ block.settings.body_size | times: 0.9 }}px;
+      margin-bottom: {{ block.settings.body_spacing | times: 0.8 }}px;
+    }
+
+    .ai-image-text-subheadline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheadline_font_size | times: 0.85 }}px;
+      padding: {{ block.settings.subheadline_padding_vertical | times: 0.8 }}px {{ block.settings.subheadline_padding_horizontal | times: 0.8 }}px;
+    }
+
+    .ai-reviews-slider-{{ ai_gen_id }} {
+      margin-top: {{ block.settings.slider_spacing | times: 0.8 }}px;
+      padding: 0;
+    }
+
+    .ai-review-slide-{{ ai_gen_id }} {
+      padding: {{ block.settings.review_padding | times: 0.7 }}px;
+    }
+
+    .ai-review-highlight-{{ ai_gen_id }} {
+      font-size: {{ block.settings.highlight_size | times: 0.8 }}px;
+      margin-bottom: {{ block.settings.highlight_spacing | times: 0.8 }}px;
+    }
+
+    .ai-review-quote-{{ ai_gen_id }} {
+      font-size: {{ block.settings.quote_size | times: 0.9 }}px;
+      margin-bottom: {{ block.settings.quote_spacing | times: 0.8 }}px;
+    }
+
+    .ai-review-author-{{ ai_gen_id }} {
+      font-size: {{ block.settings.author_size | times: 0.9 }}px;
+    }
+
+    .ai-review-star-{{ ai_gen_id }} {
+      width: {{ block.settings.star_size | times: 0.8 }}px;
+      height: {{ block.settings.star_size | times: 0.8 }}px;
+    }
+
+    .ai-slider-nav-{{ ai_gen_id }} {
+      width: {{ block.settings.nav_size | times: 0.8 }}px;
+      height: {{ block.settings.nav_size | times: 0.8 }}px;
+    }
+
+    .ai-slider-nav-{{ ai_gen_id }} svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .ai-review-stars-{{ ai_gen_id }},
+    .ai-review-author-{{ ai_gen_id }} {
+      justify-content: center;
+    }
+
+    .ai-reviews-cta-wrapper-{{ ai_gen_id }} {
+      text-align: center;
+      margin-top: {{ block.settings.cta_spacing | times: 0.8 }}px;
+    }
+
+    .ai-reviews-cta-button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.cta_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.cta_padding_vertical | times: 0.9 }}px {{ block.settings.cta_padding_horizontal | times: 0.9 }}px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-image-text-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.6 }}px;
+    }
+
+    .ai-image-text-subheadline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheadline_font_size | times: 0.75 }}px;
+    }
+
+    .ai-review-highlight-{{ ai_gen_id }} {
+      font-size: {{ block.settings.highlight_size | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-image-text-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-text-container-{{ ai_gen_id }}">
+    <div class="ai-image-text-wrapper-{{ ai_gen_id }}">
+      <div class="ai-image-text-image-column-{{ ai_gen_id }}">
+        <div class="ai-image-text-image-wrapper-{{ ai_gen_id }}">
+          {% if block.settings.image %}
+            <img
+              src="{{ block.settings.image | image_url: width: 1200 }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+            >
+          {% else %}
+            <div class="ai-image-text-image-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-image-text-content-column-{{ ai_gen_id }}">
+        <div class="ai-image-text-content-{{ ai_gen_id }}">
+          {% if block.settings.heading != blank %}
+            <h2 class="ai-image-text-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+          {% endif %}
+
+          {% if block.settings.subheadline_1 != blank or block.settings.subheadline_2 != blank %}
+            <div class="ai-image-text-subheadlines-{{ ai_gen_id }}">
+              {% if block.settings.subheadline_1 != blank %}
+                <span class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-1-{{ ai_gen_id }}">
+                  {{ block.settings.subheadline_1 }}
+                </span>
+              {% endif %}
+              {% if block.settings.subheadline_2 != blank %}
+                <span class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-2-{{ ai_gen_id }}">
+                  {{ block.settings.subheadline_2 }}
+                </span>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if block.settings.body != blank %}
+            <div class="ai-image-text-body-{{ ai_gen_id }}">{{ block.settings.body }}</div>
+          {% endif %}
+
+          <review-slider-{{ ai_gen_id }} class="ai-reviews-slider-{{ ai_gen_id }}">
+            <div class="ai-reviews-slider-wrapper-{{ ai_gen_id }}">
+              <div class="ai-reviews-slider-track-{{ ai_gen_id }}">
+                {% if block.settings.review_1_highlight != blank %}
+                  <div class="ai-review-slide-{{ ai_gen_id }}">
+                    <div class="ai-review-highlight-{{ ai_gen_id }}">{{ block.settings.review_1_highlight }}</div>
+                    <div class="ai-review-stars-{{ ai_gen_id }}">
+                      {% for i in (1..5) %}
+                        <svg class="ai-review-star-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      {% endfor %}
+                    </div>
+                    <div class="ai-review-quote-{{ ai_gen_id }}">{{ block.settings.review_1_quote }}</div>
+                    <div class="ai-review-author-{{ ai_gen_id }}">
+                      <span class="ai-review-author-name-{{ ai_gen_id }}">{{ block.settings.review_1_author }}</span>
+                      <span class="ai-review-verified-{{ ai_gen_id }}">
+                        <svg class="ai-review-check-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        Verified Buyer
+                      </span>
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.review_2_highlight != blank %}
+                  <div class="ai-review-slide-{{ ai_gen_id }}">
+                    <div class="ai-review-highlight-{{ ai_gen_id }}">{{ block.settings.review_2_highlight }}</div>
+                    <div class="ai-review-stars-{{ ai_gen_id }}">
+                      {% for i in (1..5) %}
+                        <svg class="ai-review-star-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      {% endfor %}
+                    </div>
+                    <div class="ai-review-quote-{{ ai_gen_id }}">{{ block.settings.review_2_quote }}</div>
+                    <div class="ai-review-author-{{ ai_gen_id }}">
+                      <span class="ai-review-author-name-{{ ai_gen_id }}">{{ block.settings.review_2_author }}</span>
+                      <span class="ai-review-verified-{{ ai_gen_id }}">
+                        <svg class="ai-review-check-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        Verified Buyer
+                      </span>
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.review_3_highlight != blank %}
+                  <div class="ai-review-slide-{{ ai_gen_id }}">
+                    <div class="ai-review-highlight-{{ ai_gen_id }}">{{ block.settings.review_3_highlight }}</div>
+                    <div class="ai-review-stars-{{ ai_gen_id }}">
+                      {% for i in (1..5) %}
+                        <svg class="ai-review-star-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      {% endfor %}
+                    </div>
+                    <div class="ai-review-quote-{{ ai_gen_id }}">{{ block.settings.review_3_quote }}</div>
+                    <div class="ai-review-author-{{ ai_gen_id }}">
+                      <span class="ai-review-author-name-{{ ai_gen_id }}">{{ block.settings.review_3_author }}</span>
+                      <span class="ai-review-verified-{{ ai_gen_id }}">
+                        <svg class="ai-review-check-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        Verified Buyer
+                      </span>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="ai-slider-pagination-{{ ai_gen_id }}">
+              <button class="ai-slider-nav-{{ ai_gen_id }} ai-slider-nav-prev-{{ ai_gen_id }}" aria-label="Previous review">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/>
+                </svg>
+              </button>
+
+              <div class="ai-slider-dots-wrapper-{{ ai_gen_id }}"></div>
+
+              <button class="ai-slider-nav-{{ ai_gen_id }} ai-slider-nav-next-{{ ai_gen_id }}" aria-label="Next review">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12l-4.58 4.59z"/>
+                </svg>
+              </button>
+            </div>
+
+            {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+              <div class="ai-reviews-cta-wrapper-{{ ai_gen_id }}">
+                <a href="{{ block.settings.button_link }}" class="ai-image-text-button-{{ ai_gen_id }}">
+                  {{ block.settings.button_text }}
+                </a>
+              </div>
+            {% endif %}
+          </review-slider-{{ ai_gen_id }}>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    class ReviewSlider{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.slides = [];
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.ai-reviews-slider-track-{{ ai_gen_id }}');
+        this.slides = Array.from(this.querySelectorAll('.ai-review-slide-{{ ai_gen_id }}'));
+        this.prevButton = this.querySelector('.ai-slider-nav-prev-{{ ai_gen_id }}');
+        this.nextButton = this.querySelector('.ai-slider-nav-next-{{ ai_gen_id }}');
+        this.dotsWrapper = this.querySelector('.ai-slider-dots-wrapper-{{ ai_gen_id }}');
+
+        if (this.slides.length === 0) return;
+
+        this.createPagination();
+        this.setupEventListeners();
+        this.updateSlider();
+      }
+
+      createPagination() {
+        this.dotsWrapper.innerHTML = '';
+        
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement('button');
+          dot.classList.add('ai-slider-dot-{{ ai_gen_id }}');
+          dot.setAttribute('aria-label', `Go to review ${index + 1}`);
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => this.goToSlide(index));
+          this.dotsWrapper.appendChild(dot);
+        });
+        
+        this.dots = Array.from(this.querySelectorAll('.ai-slider-dot-{{ ai_gen_id }}'));
+      }
+
+      setupEventListeners() {
+        this.prevButton.addEventListener('click', () => this.prevSlide());
+        this.nextButton.addEventListener('click', () => this.nextSlide());
+      }
+
+      prevSlide() {
+        this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+        this.updateSlider();
+      }
+
+      nextSlide() {
+        this.currentSlide = this.currentSlide === this.slides.length - 1 ? 0 : this.currentSlide + 1;
+        this.updateSlider();
+      }
+
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlider();
+      }
+
+      updateSlider() {
+        const offset = -this.currentSlide * 100;
+        this.track.style.transform = `translateX(${offset}%)`;
+
+        this.dots.forEach((dot, index) => {
+          if (index === this.currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('review-slider-{{ ai_gen_id }}', ReviewSlider{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Image text reviews",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "image_left",
+          "label": "Image left"
+        },
+        {
+          "value": "image_right",
+          "label": "Image right"
+        }
+      ],
+      "default": "image_left"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Image width",
+      "default": 50
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Gap between columns",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 800,
+      "max": 1800,
+      "step": 100,
+      "unit": "px",
+      "label": "Container width",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Image and text"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_1",
+      "label": "Subheadline 1"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_2",
+      "label": "Subheadline 2"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Subheadline style"
+    },
+    {
+      "type": "range",
+      "id": "subheadline_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "subheadline_padding_vertical",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "subheadline_padding_horizontal",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "subheadline_gap",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between subheadlines",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "subheadline_1_bg_color",
+      "label": "Subheadline 1 background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "subheadline_1_text_color",
+      "label": "Subheadline 1 text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subheadline_2_bg_color",
+      "label": "Subheadline 2 background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subheadline_2_text_color",
+      "label": "Subheadline 2 text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Review 1"
+    },
+    {
+      "type": "text",
+      "id": "review_1_highlight",
+      "label": "Highlight text",
+      "default": "Amazing product!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_quote",
+      "label": "Review quote",
+      "default": "This product exceeded my expectations. The quality is outstanding and I've noticed a significant improvement since I started using it."
+    },
+    {
+      "type": "text",
+      "id": "review_1_author",
+      "label": "Author name",
+      "default": "Sarah M."
+    },
+    {
+      "type": "header",
+      "content": "Review 2"
+    },
+    {
+      "type": "text",
+      "id": "review_2_highlight",
+      "label": "Highlight text",
+      "default": "Highly recommend!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_quote",
+      "label": "Review quote",
+      "default": "I've been using this for months now and couldn't be happier. It's become an essential part of my daily routine."
+    },
+    {
+      "type": "text",
+      "id": "review_2_author",
+      "label": "Author name",
+      "default": "Michael R."
+    },
+    {
+      "type": "header",
+      "content": "Review 3"
+    },
+    {
+      "type": "text",
+      "id": "review_3_highlight",
+      "label": "Highlight text",
+      "default": "Best purchase ever!"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_quote",
+      "label": "Review quote",
+      "default": "The results speak for themselves. I've tried many similar products but this one truly delivers on its promises."
+    },
+    {
+      "type": "text",
+      "id": "review_3_author",
+      "label": "Author name",
+      "default": "Jessica L."
+    },
+    {
+      "type": "header",
+      "content": "Review slider style"
+    },
+    {
+      "type": "color",
+      "id": "review_bg_color",
+      "label": "Background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "review_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "review_padding",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "highlight_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Highlight font size",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Highlight color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Star size",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#FFD700"
+    },
+    {
+      "type": "range",
+      "id": "quote_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Quote font size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Quote color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "author_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Author font size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Author color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "verified_color",
+      "label": "Verified badge color",
+      "default": "#4CAF50"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "range",
+      "id": "nav_size",
+      "min": 30,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Button size",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "nav_bg_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_hover_bg_color",
+      "label": "Hover background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "dot_size",
+      "min": 6,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Dot size",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Active dot color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Heading spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "subheadline_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Subheadline spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "body_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Body spacing",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "slider_spacing",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Slider top spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "highlight_spacing",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Highlight spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "stars_spacing",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Stars spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "quote_spacing",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Quote spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "pagination_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Pagination spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "cta_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Button spacing",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Body size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Button vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Button horizontal padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image text reviews"
+    }
+  ]
+}
 {% endschema %}
