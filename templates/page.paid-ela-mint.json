@@ -510,6 +510,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_YRpR7X": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Boka’s formula features n-Ha</strong>, a science-backed mineral that mimics tooth enamel. Safe for daily use, it helps keep your smile clean, fresh, and bright.",
+            "text_style": "body"
+          }
+        },
         "icon_with_text_ANajtC": {
           "type": "icon-with-text",
           "disabled": true,
@@ -570,6 +577,7 @@
         "rating_QEkXF4",
         "title_T9DDRE",
         "price_46i4nh",
+        "text_YRpR7X",
         "icon_with_text_ANajtC",
         "variant_picker_XeaPGM",
         "quantity_selector_qer7jh",
