@@ -477,7 +477,7 @@
         "ai_gen_block_46677d3_fVcWbb"
       ],
       "custom_css": [
-        ".ai-reviews-cta-button-am09udxuvt0picxjjsaigenblock46677d3fvcwbb {color: #ffffff !important;}"
+        "a {color: #ffffff !important;}"
       ],
       "settings": {}
     },
