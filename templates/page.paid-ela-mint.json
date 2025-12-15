@@ -731,10 +731,10 @@
       "settings": {
         "yt_shorts_title": "Tried and trusted by 3700+ people",
         "heading_size": "h1",
-        "auto_center": false,
+        "auto_center": true,
         "columns": 4,
-        "button_label": "Button label",
-        "button_link": "",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://products/ela-mint-toothpaste",
         "padding_top": 36,
         "padding_bottom": 36
       }
