@@ -468,6 +468,93 @@
         "padding_bottom_mobile": 36
       }
     },
+    "featured_product_TGCUYH": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_QEkXF4": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_T9DDRE": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "price_46i4nh": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_XeaPGM": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_qer7jh": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_LXDgzw": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "text_f7T7qD": {
+          "type": "text",
+          "settings": {
+            "text": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_M6awpA": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "share_zqXtY6": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "rating_QEkXF4",
+        "title_T9DDRE",
+        "price_46i4nh",
+        "variant_picker_XeaPGM",
+        "quantity_selector_qer7jh",
+        "buy_buttons_LXDgzw",
+        "text_f7T7qD",
+        "icon_with_text_M6awpA",
+        "share_zqXtY6"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "ela-mint-toothpaste",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_image_icon_background_FqMNG9": {
       "type": "custom-image-icon-background",
       "blocks": {
@@ -602,93 +689,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "featured_product_TGCUYH": {
-      "type": "featured-product",
-      "blocks": {
-        "rating_QEkXF4": {
-          "type": "rating",
-          "settings": {}
-        },
-        "title_T9DDRE": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
-        },
-        "price_46i4nh": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_XeaPGM": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_qer7jh": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_LXDgzw": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false
-          }
-        },
-        "text_f7T7qD": {
-          "type": "text",
-          "settings": {
-            "text": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
-            "text_style": "body"
-          }
-        },
-        "icon_with_text_M6awpA": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "heart",
-            "heading_1": "Heading",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading"
-          }
-        },
-        "share_zqXtY6": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "rating_QEkXF4",
-        "title_T9DDRE",
-        "price_46i4nh",
-        "variant_picker_XeaPGM",
-        "quantity_selector_qer7jh",
-        "buy_buttons_LXDgzw",
-        "text_f7T7qD",
-        "icon_with_text_M6awpA",
-        "share_zqXtY6"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "ela-mint-toothpaste",
-        "color_scheme": "background-1",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "yt_shorts_FUHnAV": {
       "type": "yt-shorts",
       "blocks": {
@@ -792,8 +792,8 @@
     "17655422262dd9640d",
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
-    "custom_image_icon_background_FqMNG9",
     "featured_product_TGCUYH",
+    "custom_image_icon_background_FqMNG9",
     "yt_shorts_FUHnAV",
     "featured_collection_RackKr",
     "main"
