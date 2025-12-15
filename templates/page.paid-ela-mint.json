@@ -778,7 +778,7 @@
     "featured_collection_RackKr": {
       "type": "featured-collection",
       "custom_css": [
-        "h1 {text-align: center;}"
+        "h1 {text-align: center; font-size: 40px;}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
