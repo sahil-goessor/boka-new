@@ -741,11 +741,14 @@
     },
     "featured_collection_RackKr": {
       "type": "featured-collection",
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "Pairs perfectly with",
-        "heading_size": "h1",
-        "heading_tag": "default",
+        "heading_size": "h0",
+        "heading_tag": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -760,10 +763,10 @@
         "custom_background_color": "#333333",
         "custom_text_color": "#ffffff",
         "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
