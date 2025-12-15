@@ -546,6 +546,18 @@
             "show_dynamic_checkout": false
           }
         },
+        "icon_with_text_mfVAW3": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "truck",
+            "heading_1": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
         "custom_liquid_Qpix6f": {
           "type": "custom_liquid",
           "settings": {
@@ -557,6 +569,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "heart",
+            "image_1": "shopify://shop_images/swwai_asset__9_f6bf3106b8dc1528f7faef6e840425cdddb9ecd270bfed015de39a4fccecb673_58d81dc3-1e3d-4930-8559-12e49b00ab65.webp",
             "heading_1": "Fluoride Free Care",
             "icon_2": "return",
             "heading_2": "",
@@ -605,6 +618,7 @@
         "variant_picker_XeaPGM",
         "quantity_selector_qer7jh",
         "buy_buttons_LXDgzw",
+        "icon_with_text_mfVAW3",
         "custom_liquid_Qpix6f",
         "icon_with_text_M6awpA",
         "icon_with_text_AmVzVX",
