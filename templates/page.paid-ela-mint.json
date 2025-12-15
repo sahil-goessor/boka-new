@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "176577752500a4f33b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_49ab229_YTFKKF": {
+          "type": "ai_gen_block_49ab229",
+          "settings": {
+            "heading": "As Seen On",
+            "heading_alignment": "center",
+            "logo_1": "shopify://shop_images/Vice_Logo.png",
+            "logo_2": "shopify://shop_images/Vice_Logo.png",
+            "logo_height": 60,
+            "logo_max_width": 150,
+            "logo_spacing": 60,
+            "grayscale": true,
+            "logo_opacity": 60,
+            "animation_speed": 15,
+            "section_background_color": "#fae5db",
+            "heading_size": 24,
+            "heading_spacing": 30,
+            "heading_color": "#000000",
+            "section_padding_top": 50,
+            "section_padding_bottom": 50
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_49ab229_YTFKKF"
+      ],
+      "settings": {}
+    },
     "17657702727ebbe56b": {
       "type": "_blocks",
       "blocks": {
@@ -25,7 +56,7 @@
             "content_gap_mobile": 20,
             "show_reviews": true,
             "review_text": "3,700+ Reviews",
-            "star_color": "#FFD700",
+            "star_color": "#ffd700",
             "star_size": 20,
             "review_text_size": 14,
             "headline": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
@@ -203,9 +234,9 @@
             "highlight_color": "#000000",
             "quote_color": "#333333",
             "author_color": "#000000",
-            "verified_color": "#4CAF50",
+            "verified_color": "#4caf50",
             "star_size": 20,
-            "star_color": "#FFD700",
+            "star_color": "#ffd700",
             "nav_size": 40,
             "nav_bg_color": "#ffffff",
             "nav_hover_bg_color": "#f0f0f0",
@@ -297,9 +328,9 @@
             "highlight_color": "#000000",
             "quote_color": "#333333",
             "author_color": "#000000",
-            "verified_color": "#4CAF50",
+            "verified_color": "#4caf50",
             "star_size": 20,
-            "star_color": "#FFD700",
+            "star_color": "#ffd700",
             "nav_size": 40,
             "nav_bg_color": "#ffffff",
             "nav_hover_bg_color": "#f0f0f0",
@@ -391,9 +422,9 @@
             "highlight_color": "#000000",
             "quote_color": "#333333",
             "author_color": "#000000",
-            "verified_color": "#4CAF50",
+            "verified_color": "#4caf50",
             "star_size": 20,
-            "star_color": "#FFD700",
+            "star_color": "#ffd700",
             "nav_size": 40,
             "nav_bg_color": "#ffffff",
             "nav_hover_bg_color": "#f0f0f0",
@@ -669,7 +700,7 @@
         "background_video": "",
         "video_overlay_opacity": 30,
         "desktop_content_alignment": "left",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "container_text_color": "#000000",
         "icon_heading_color": "#000000",
         "icon_text_color": "#666666",
@@ -677,10 +708,10 @@
         "mobile_container_text_color": "#000000",
         "mobile_icon_heading_color": "#000000",
         "mobile_icon_text_color": "#666666",
-        "container_background_color": "#FFFFFF",
+        "container_background_color": "#ffffff",
         "container_border_radius": 12,
         "icon_size": 60,
-        "section_background_color": "#FFFFFF",
+        "section_background_color": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_tablet": 40,
@@ -787,6 +818,7 @@
     }
   },
   "order": [
+    "176577752500a4f33b",
     "17657702727ebbe56b",
     "17657747600d7cde40",
     "17657652337a3d99c7",
