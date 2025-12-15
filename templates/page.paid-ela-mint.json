@@ -50,7 +50,7 @@
             "review_bg_color": "#f9f9f9",
             "review_border_radius": 12,
             "review_padding": 30,
-            "highlight_size_desktop": 16,
+            "highlight_size_desktop": 18,
             "quote_size_desktop": 16,
             "author_size_desktop": 14,
             "highlight_size_mobile": 18,
