@@ -117,6 +117,32 @@
         "padding_bottom_mobile": 0
       }
     },
+    "1765897108b0174e15": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_EyJDh8": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "n0c9qqietla5c"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_EyJDh8"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
     "image_with_text_YhJdpy": {
       "type": "image-with-text",
       "blocks": {
@@ -690,6 +716,7 @@
     "e9540f45-142d-4b00-acd5-49caf5c23d70",
     "banner",
     "product-grid",
+    "1765897108b0174e15",
     "image_with_text_YhJdpy",
     "image_with_text_FAzRQh",
     "image_with_bulleted_text_PF74VT",
