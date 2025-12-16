@@ -757,6 +757,7 @@
       "blocks": {
         "video_LrmH4L": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
@@ -764,6 +765,7 @@
         },
         "video_nHYbjY": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
@@ -771,6 +773,7 @@
         },
         "video_XYXH99": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
@@ -778,6 +781,7 @@
         },
         "video_TA7BbK": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
             "description": "Describe the video"
@@ -800,14 +804,41 @@
         "heading_size": "h1",
         "auto_center": true,
         "columns": 4,
-        "button_label": "SHOP NOW",
-        "button_link": "shopify://products/ela-mint-toothpaste",
+        "button_label": "",
+        "button_link": "",
         "padding_top": 100,
         "padding_bottom": 36
       }
     },
+    "1765896441d3e5261a": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "u1004p66l3g40"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
     "featured_collection_RackKr": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         "h1 {text-align: center; font-size: 40px;}",
         "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}"
@@ -852,32 +883,6 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
-    },
-    "1765895101bbcd9ab6": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_MBtYAi": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "1yp7gh4q0j7ks"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_MBtYAi"
-      ],
-      "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
-      }
     }
   },
   "order": [
@@ -893,8 +898,8 @@
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
-    "1765895101bbcd9ab6",
     "yt_shorts_FUHnAV",
+    "1765896441d3e5261a",
     "featured_collection_RackKr",
     "main"
   ]
