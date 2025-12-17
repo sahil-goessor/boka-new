@@ -1,0 +1,905 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "176577886172b3a38b": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "176577752500a4f33b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_49ab229_YTFKKF": {
+          "type": "ai_gen_block_49ab229",
+          "settings": {
+            "heading": "As Seen On",
+            "heading_alignment": "center",
+            "logo_1": "shopify://shop_images/Vice_Logo.png",
+            "logo_2": "shopify://shop_images/Vice_Logo.png",
+            "logo_height": 60,
+            "logo_max_width": 150,
+            "logo_spacing": 60,
+            "grayscale": true,
+            "logo_opacity": 60,
+            "animation_speed": 15,
+            "section_background_color": "#fae5db",
+            "heading_size": 24,
+            "heading_spacing": 30,
+            "heading_color": "#000000",
+            "section_padding_top": 50,
+            "section_padding_bottom": 50
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_49ab229_YTFKKF"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "17657702727ebbe56b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_501d6ba_Jf8wrN": {
+          "type": "ai_gen_block_501d6ba",
+          "settings": {
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "content_gap": 20,
+            "section_padding_top_mobile": 40,
+            "section_padding_bottom_mobile": 40,
+            "content_gap_mobile": 20,
+            "show_reviews": true,
+            "review_text": "3,700+ Reviews",
+            "star_color": "#ffd700",
+            "star_size": 20,
+            "review_text_size": 14,
+            "headline": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
+            "headline_size": 40,
+            "headline_font_weight": "700",
+            "body_text": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
+            "body_text_size": 16,
+            "show_claim_1": true,
+            "claim_1_icon": "shopify://shop_images/swwai_asset__9_c21d9618f174fc8ba0bd7b20ecb8b436e90dd7208cd01fba676abb17afeeff05.png",
+            "claim_1_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science",
+            "show_claim_2": true,
+            "claim_2_icon": "shopify://shop_images/swwai_asset__9_70f1cde8701033cab5cab2e6cfd71925057c08e3fde0154d01ebf2bcdbd8575d_1.avif",
+            "claim_2_text": "Fluoride-free & clean ingredients",
+            "claim_icon_size": 40,
+            "claim_text_size": 14,
+            "button_text": "TRY NOW FOR $11.75",
+            "button_link": "",
+            "button_bg_color": "#000000",
+            "button_hover_bg_color": "#333333",
+            "button_text_color": "#ffffff",
+            "button_text_size": 16,
+            "button_border_radius": 0,
+            "button_width": 200,
+            "button_height": 52,
+            "button_width_mobile": 100,
+            "button_height_mobile": 52,
+            "hero_image": "shopify://shop_images/swwai_asset__9_3f5e34369bdbe8a234448c68a6772bb62154ee518e91555dcbeefc55dbe7cbf9_1.webp",
+            "hero_video": "",
+            "hero_image_mobile": "shopify://shop_images/swwai_asset__9_3f5e34369bdbe8a234448c68a6772bb62154ee518e91555dcbeefc55dbe7cbf9_1.webp",
+            "hero_video_mobile": "",
+            "media_border_radius": 0,
+            "mobile_content_alignment": "center"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_501d6ba_Jf8wrN"
+      ],
+      "custom_css": [
+        "a {color: #ffffff !important;}"
+      ],
+      "settings": {}
+    },
+    "17657747600d7cde40": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_01dc9c9_KTh4Wi": {
+          "type": "ai_gen_block_01dc9c9",
+          "settings": {
+            "item_1_enabled": true,
+            "item_1_icon": "shopify://shop_images/swwai_asset__9_c21d9618f174fc8ba0bd7b20ecb8b436e90dd7208cd01fba676abb17afeeff05.png",
+            "item_1_text": "Fluoride Free",
+            "item_2_enabled": true,
+            "item_2_icon": "shopify://shop_images/swwai_asset__9_70f1cde8701033cab5cab2e6cfd71925057c08e3fde0154d01ebf2bcdbd8575d_1.avif",
+            "item_2_text": "Nano-Hydroxyapatite",
+            "item_3_enabled": true,
+            "item_3_icon": "shopify://shop_images/swwai_asset__9_9ec108da2ad212eaec5c5cca28d5700fa48194b7bbe59ab5315da9ce7c5fa992.webp",
+            "item_3_text": "Cleaner Teeth",
+            "item_4_enabled": false,
+            "item_4_icon": "shopify://shop_images/swwai_asset__9_92e92ccc46faaed5e350b849efbb3d0e4eac65b20010ef3f5c38beb6dfdc3ed9.png",
+            "item_4_text": "Science-backed",
+            "item_5_enabled": true,
+            "item_5_icon": "shopify://shop_images/Gentle_Polishing_f965512d-823b-450f-958f-f4d77de33fcc.webp",
+            "item_5_text": "Fresh Mint Flavor",
+            "item_6_enabled": true,
+            "item_6_icon": "shopify://shop_images/Dentist-Approved.webp",
+            "item_6_text": "Non-Toxic* Oral Care",
+            "background_color": "#e6f4d4",
+            "container_height": 60,
+            "padding_top": 12,
+            "padding_bottom": 12,
+            "text_color": "#556045",
+            "text_size": 16,
+            "text_weight": "400",
+            "icon_size": 36,
+            "icon_text_gap": 8,
+            "item_spacing": 80,
+            "animation_speed": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_01dc9c9_KTh4Wi"
+      ],
+      "settings": {}
+    },
+    "17657652337a3d99c7": {
+      "type": "_blocks",
+      "disabled": true,
+      "settings": {}
+    },
+    "1765546276a11604c6": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6c7c57f_XcPbjH": {
+          "type": "ai_gen_block_6c7c57f",
+          "settings": {
+            "text_1": "Free Shipping on Orders Over $35",
+            "text_2": "Dentist Approved Products",
+            "text_3": "Natural Ingredients",
+            "text_4": "Made in the USA",
+            "text_5": "",
+            "text_6": "",
+            "text_7": "",
+            "text_8": "",
+            "text_9": "",
+            "text_10": "",
+            "scroll_speed": 30,
+            "pause_on_hover": false,
+            "background_color": "#000000",
+            "text_color": "#ffffff",
+            "text_size": 16,
+            "text_weight": "400",
+            "icon_size": 24,
+            "icon_text_gap": 8,
+            "item_spacing": 60,
+            "padding_top": 16,
+            "padding_bottom": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6c7c57f_XcPbjH"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "176576544784328569": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_46677d3_QNQPJq": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_left",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/swwai_asset__9_0d514b3f231b611ac09b787f6d9cdb9d5e40ddfebf2b4f6090187f4b145f5cb1.webp",
+            "image_border_radius": 0,
+            "heading": "1. Science-Backed & Gentle",
+            "subheadline_1": "Fluoride-Free",
+            "subheadline_2": "Clean Ingredients",
+            "body": "<p>This formula is packed with nature-inspired ingredients for gentle, effective care - no sulfates, no parabens, no bad stuff.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 15,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#57623c",
+            "subheadline_1_text_color": "#e6f4d4",
+            "subheadline_2_bg_color": "#e6f4d4",
+            "subheadline_2_text_color": "#57623c",
+            "button_text": "Learn more",
+            "button_link": "",
+            "review_1_highlight": "Excellent Toothpaste",
+            "review_1_quote": "\"I'm incredibly impressed by Boka's toothpaste. I've tried most of the natural brands on the market and so far Boka is my top favorite. It's non-irritating and my mouth feels cleaner than ever. I hope it continues to work well!\"",
+            "review_1_author": "Jill A.",
+            "review_2_highlight": "Love this toothpaste!",
+            "review_2_quote": "\"This toothpaste works very well. The taste is great and it leaves long lasting fresh breath. I trust the ingredients and have had a great experience with Boka for many months now!\"",
+            "review_2_author": "Cassidy G.",
+            "review_3_highlight": "Mint toothpaste",
+            "review_3_quote": "\"I mean just WOW. I have crazy sensitive teeth and this stuff gives a clean feel AND a clean and sensitive-free smile. 10\\10. Never going back!\"",
+            "review_3_author": "Tabitha H. us",
+            "review_bg_color": "#e6f4d4",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#57623c",
+            "quote_color": "#57623c",
+            "author_color": "#000000",
+            "verified_color": "#57623c",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_text": "SHOP NOW",
+            "reviews_button_link": "shopify://products/ela-mint-toothpaste",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_46677d3_4ktG94": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_right",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_2_e1cec8ff-07e1-4636-acea-7791354ce6f0.webp",
+            "image_border_radius": 0,
+            "heading": "2. Cares For Your Mouth As A Whole With Nano-Hydroxyapatite",
+            "subheadline_1": "Healthy Smile",
+            "subheadline_2": "Freshens Breath",
+            "body": "<p>Powered by n-Ha, a mineral that closely mimics tooth enamel to keep your smile clean, fresh, and bright.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#57623c",
+            "subheadline_1_text_color": "#e6f4d4",
+            "subheadline_2_bg_color": "#e6f4d4",
+            "subheadline_2_text_color": "#57623c",
+            "button_text": "Learn more",
+            "button_link": "",
+            "review_1_highlight": "Love it!",
+            "review_1_quote": "\"I have really appreciated this toothpaste, knowing its helping my teeth so much, in a healthy way. i don't know why more dentists aren't recommending hydroxyapatite.\"",
+            "review_1_author": "Lisa M.",
+            "review_2_highlight": "Best Toothpaste Ever!",
+            "review_2_quote": "\"So glad we found a fluoride free toothpaste that whitens our teeth and gives us fresh brush. Lifetime customer!\"",
+            "review_2_author": "Jennifer K. US",
+            "review_3_highlight": "“After starting using Boka, it changed everything”",
+            "review_3_quote": "\"I was getting to where my teeth where very sensitive. After starting using Boka, it changed everything, my teeth are not as sensitive and I have a sense of a cleaner mouth.\"",
+            "review_3_author": "Normal L.",
+            "review_bg_color": "#e6f4d4",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#57623c",
+            "quote_color": "#57623c",
+            "author_color": "#000000",
+            "verified_color": "#57623c",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_text": "SHOP NOW",
+            "reviews_button_link": "shopify://products/ela-mint-toothpaste",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_46677d3_fVcWbb": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_left",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/swwai_asset__9_f17ded4f50bd83dfa56e2ca289074de7d6f9595eb74993049b5fe873d4cd78cd.webp",
+            "image_border_radius": 0,
+            "heading": "3. Refreshing Mint + Cardamom Bliss",
+            "subheadline_1": "Fresh Feel",
+            "subheadline_2": "Mild Flavor",
+            "body": "<p>A spa day for your mouth. Sophisticated mint meets green tea and cardamom for a clean that lingers.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#57623c",
+            "subheadline_1_text_color": "#e6f4d4",
+            "subheadline_2_bg_color": "#e6f4d4",
+            "subheadline_2_text_color": "#57623c",
+            "button_text": "Learn more",
+            "button_link": "",
+            "review_1_highlight": "Minty Fresh & A Pearly White Smile",
+            "review_1_quote": "\"Love this toothpaste! Tried it first at a friend's house and knew I'd have to get some of my own to see how I liked it. I love it. Tastes great. Love that it's actually healthy! I recommend it to my kiddos and all my friends.\"",
+            "review_1_author": "Traci W. US",
+            "review_2_highlight": "The only toothpaste I LOVE",
+            "review_2_quote": "\"I've tried so many different toothpastes, this is by far the best. Great flavor and my teeth feel just as clean as when the dentist does a cleaning.\"",
+            "review_2_author": "Leslie S.",
+            "review_3_highlight": "Refreshing",
+            "review_3_quote": "Tastes great with out being over powering. Cleans and makes teeth and mouth feel very fresh. Recommending it to everyone!!!",
+            "review_3_author": "Rickey G. US",
+            "review_bg_color": "#e6f4d4",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#57623c",
+            "quote_color": "#57623c",
+            "author_color": "#000000",
+            "verified_color": "#57623c",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_text": "SHOP NOW",
+            "reviews_button_link": "shopify://products/ela-mint-toothpaste",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_46677d3_QNQPJq",
+        "ai_gen_block_46677d3_4ktG94",
+        "ai_gen_block_46677d3_fVcWbb"
+      ],
+      "custom_css": [
+        "a {color: #ffffff !important;}"
+      ],
+      "settings": {}
+    },
+    "17655422262dd9640d": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "featured_product_TGCUYH": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_QEkXF4": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_T9DDRE": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "price_46i4nh": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_xDenk8": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"icon-text-container\">\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_3.avif?v=1765793186\" alt=\"Icon 1\">\n    <span>Fluoride Free Care</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_2_534f46da-868d-4985-bed9-a528d00ebea3.webp?v=1765793186\" alt=\"Icon 2\">\n    <span>Freshens Breath</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_1.png?v=1765793186\" alt=\"Icon 3\">\n    <span>Fresh Mint Clean</span>\n  </div>\n</div>\n\n<style>\n  .icon-text-container {\n    display: flex;\n    justify-content: space-between; /* Spread evenly on desktop */\n    align-items: center;\n    gap: 40px;\n    flex-wrap: nowrap; /* Keep one line on desktop */\n  }\n\n  .icon-text {\n    display: flex;\n    align-items: center;\n    gap: 8px; /* Space between icon and text */\n    white-space: nowrap; /* Keep each icon + text inline */\n  }\n\n  .icon-text img {\n    width: 24px;\n    height: 24px;\n  }\n\n  .icon-text span {\n    font-family: 'Neue Haas Unica Pro', Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    color: #000;\n  }\n\n  /* Mobile: allow wrapping container into 2 lines and align left */\n  @media screen and (max-width: 768px) {\n    .icon-text-container {\n      flex-wrap: wrap; /* Container can wrap to 2 lines */\n      justify-content: flex-start; /* Align left on mobile */\n      gap: 20px;\n    }\n\n    .icon-text img {\n      width: 20px;\n      height: 20px;\n    }\n\n    .icon-text span {\n      font-size: 14px;\n    }\n  }\n</style>"
+          }
+        },
+        "text_YRpR7X": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Boka’s formula features n-Ha</strong>, a science-backed mineral that mimics tooth enamel. Safe for daily use, it helps keep your smile clean, fresh, and bright.",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_ANajtC": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "variant_picker_XeaPGM": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_qer7jh": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_LXDgzw": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "icon_with_text_mfVAW3": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "truck",
+            "heading_1": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "custom_liquid_Qpix6f": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .accordion {\n    border-top: 1px solid #e5e5e5;\n    max-width: 800px;\n    color: #000;\n    font-family: \"Neue Haas Unica Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  }\n\n  .accordion details {\n    border-bottom: 1px solid #e5e5e5;\n    padding: 16px 0;\n    font-family: inherit;\n    color: inherit;\n  }\n\n  .accordion summary {\n    cursor: pointer;\n    font-weight: 600;\n    list-style: none;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion summary::-webkit-details-marker {\n    display: none;\n  }\n\n  .accordion summary::after {\n    content: \"+\";\n    font-size: 20px;\n    color: inherit;\n  }\n\n  .accordion details[open] summary::after {\n    content: \"–\";\n  }\n\n  .accordion .content {\n    padding-top: 12px;\n    font-size: 14px;\n    line-height: 1.6;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion .content p,\n  .accordion .content li,\n  .accordion .content a {\n    margin-bottom: 8px;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion .content a {\n    text-decoration: underline;\n  }\n</style>\n\n<div class=\"accordion\">\n\n  <details>\n    <summary>Ingredients</summary>\n    <div class=\"content\">\n      <p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (Aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>\n    </div>\n  </details>\n\n  <details>\n    <summary>How to Use</summary>\n    <div class=\"content\">\n      <p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>\n    </div>\n  </details>\n\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "rating_QEkXF4",
+        "title_T9DDRE",
+        "price_46i4nh",
+        "custom_liquid_xDenk8",
+        "text_YRpR7X",
+        "icon_with_text_ANajtC",
+        "variant_picker_XeaPGM",
+        "quantity_selector_qer7jh",
+        "buy_buttons_LXDgzw",
+        "icon_with_text_mfVAW3",
+        "custom_liquid_Qpix6f"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "ela-mint-toothpaste",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1765534182fed2e648": {
+      "type": "_blocks",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_liquid_CjtDWw": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"as-seen-on-section\">\n  <h1 class=\"as-seen-on-title\">As Seen On</h1>\n  <div class=\"as-seen-on-logos-wrapper\">\n    <div class=\"as-seen-on-logos\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n      <!-- Duplicate logos for infinite scrolling -->\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n    </div>\n  </div>\n</div>\n\n<style>\n  .as-seen-on-section {\n    text-align: center;\n    padding: 40px 20px;\n    overflow: hidden;\n    background: #FAFAF5;\n    padding-bottom: 80px;\n    padding-top: 10px;\n  }\n\n  .as-seen-on-title {\n    font-size: 40px;\n    font-weight: regular;\n    margin-bottom: 80px;\n  }\n\n@media (max-width: 768px) {\n    .as-seen-on-title {\n      font-size: 30px;\n      margin-bottom: 40px;\n    }\n  }\n\n  .as-seen-on-logos-wrapper {\n    white-space: nowrap;\n    position: relative;\n    width: 100%;\n  }\n\n  .as-seen-on-logos {\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    animation: scroll-logos 25s linear infinite;\n    width: max-content;\n  }\n\n  .as-seen-on-logos img {\n    max-width: 160px;\n    height: auto;\n    display: inline-block;\n  }\n\n  @keyframes scroll-logos {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_image_icon_background_FqMNG9": {
+      "type": "custom-image-icon-background",
+      "blocks": {
+        "heading_MzYbMk": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Makes Boka Work",
+            "heading_size": "h1",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 30,
+            "heading_tag": "default"
+          }
+        },
+        "icon_text_wHgEtm": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/n-Ha.webp",
+            "icon_alt": "Icon",
+            "heading": "Nano-Hydroxyapatite (n-Ha) -",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>A breakthrough material inspired by nature and backed by science that mimics tooth enamel. Developed in the 1970s as a fluoride alternative.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_w8JqDJ": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Xylitol",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Refreshes your mouth with a mild, clean flavor.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_y44E3V": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/peppermint.webp",
+            "icon_alt": "Icon",
+            "heading": "Aloe Vera",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Included in our thoughtfully formulated blend.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_ryTd4U": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Green Tea Extract",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Rich in antioxidants.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_nKAcBR": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Xylitol_19069d56-c52b-4886-8315-38fa980b02b6.webp",
+            "icon_alt": "Icon",
+            "heading": "Mint",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Offers a fresh, clean feel.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bpWGPA": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/ela-mint-toothpaste",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_MzYbMk",
+        "icon_text_wHgEtm",
+        "icon_text_w8JqDJ",
+        "icon_text_y44E3V",
+        "icon_text_ryTd4U",
+        "icon_text_nKAcBR",
+        "button_bpWGPA"
+      ],
+      "custom_css": [
+        ".icon-text-item__content {text-align: left;}",
+        "@media only screen and (max-width: 749px) {.image-with-text__heading {text-align: center; }}"
+      ],
+      "name": "Image/gif icon bg text",
+      "settings": {
+        "media_type": "image",
+        "image": "shopify://shop_images/Ingredients_Section_Desktop_2.webp",
+        "mobile_image": "shopify://shop_images/Ingredients_Section_Mobile_2.webp",
+        "background_video": "",
+        "video_overlay_opacity": 30,
+        "desktop_content_alignment": "left",
+        "text_color": "#ffffff",
+        "container_text_color": "#000000",
+        "icon_heading_color": "#000000",
+        "icon_text_color": "#666666",
+        "mobile_text_color": "#000000",
+        "mobile_container_text_color": "#000000",
+        "mobile_icon_heading_color": "#000000",
+        "mobile_icon_text_color": "#666666",
+        "container_background_color": "#ffffff",
+        "container_border_radius": 12,
+        "icon_size": 60,
+        "section_background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "yt_shorts_FUHnAV": {
+      "type": "yt-shorts",
+      "blocks": {
+        "video_LrmH4L": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
+            "description": "Describe the video"
+          }
+        },
+        "video_nHYbjY": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
+            "description": "Describe the video"
+          }
+        },
+        "video_XYXH99": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
+            "description": "Describe the video"
+          }
+        },
+        "video_TA7BbK": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
+            "description": "Describe the video"
+          }
+        }
+      },
+      "block_order": [
+        "video_LrmH4L",
+        "video_nHYbjY",
+        "video_XYXH99",
+        "video_TA7BbK"
+      ],
+      "custom_css": [
+        "h2 {text-align: center; font-size: 40px !important;}",
+        "@media only screen and (max-width: 767px) {h2 {font-size: 30px !important; }}"
+      ],
+      "name": "t:sections.yt-shorts.presets.name",
+      "settings": {
+        "yt_shorts_title": "Tried And Trusted By 3,700+ People",
+        "heading_size": "h1",
+        "auto_center": true,
+        "columns": 4,
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "1765896441d3e5261a": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "u1004p66l3g40"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "featured_collection_RackKr": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h1 {text-align: center; font-size: 40px;}",
+        "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Pairs Perfectly With",
+        "heading_size": "h0",
+        "heading_tag": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "176577886172b3a38b",
+    "176577752500a4f33b",
+    "17657702727ebbe56b",
+    "17657747600d7cde40",
+    "17657652337a3d99c7",
+    "1765546276a11604c6",
+    "176576544784328569",
+    "17655422262dd9640d",
+    "featured_product_TGCUYH",
+    "1765534182fed2e648",
+    "custom_liquid_CjtDWw",
+    "custom_image_icon_background_FqMNG9",
+    "yt_shorts_FUHnAV",
+    "1765896441d3e5261a",
+    "featured_collection_RackKr",
+    "main"
+  ]
+}
