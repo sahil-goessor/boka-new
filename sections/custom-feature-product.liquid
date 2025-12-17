@@ -8,25 +8,6 @@
 {% if selected_product and selected_product != empty %}
   {%- assign product = selected_product -%}
 
-{%- comment -%} 
-  IMPORTANT: The complete code from your main-product.liquid should be pasted below
-  Replace this comment with the ENTIRE content from your main-product.liquid file
-  (everything from line 1 to the end of the </section> tag, before the {% schema %})
-  
-  Make sure to:
-  1. Keep {{ 'section-main-product.css' | asset_url | stylesheet_tag }} and all asset links
-  2. Keep all the JavaScript includes
-  3. Keep all the block logic ({% for block in section.blocks %})
-  4. Keep the sticky ATC code at the bottom
-  5. Don't include the {% schema %} part - that's added separately below
-{%- endcomment -%}
-
-{%- comment -%} 
-  PASTE YOUR COMPLETE MAIN-PRODUCT.LIQUID CONTENT HERE
-  Start from: <section id="MainProduct-{{ section.id }}"...
-  End at: </section> (before {% schema %})
-{%- endcomment -%}
-
 <section
   id="MainProduct-{{ section.id }}"
   class="page-width section-{{ section.id }}-padding"
