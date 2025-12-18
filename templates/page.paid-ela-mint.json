@@ -886,8 +886,35 @@
     "custom_feature_product_9Gkr6x": {
       "type": "custom-feature-product",
       "blocks": {
+        "icon_text_row_YH3FYW": {
+          "type": "icon_text_row",
+          "disabled": true,
+          "settings": {
+            "icon_1_image": "shopify://shop_images/icon_1.png",
+            "icon_1_text": "Fluoride Free Care",
+            "icon_2_text": "Freshens Breath",
+            "icon_3_text": "Fresh Mint Clean",
+            "icon_4_text": "",
+            "desktop_alignment": "space-between",
+            "gap_desktop": 40,
+            "icon_size_desktop": 24,
+            "font_size_desktop": 16,
+            "mobile_alignment": "flex-start",
+            "mobile_wrap": "wrap",
+            "gap_mobile": 20,
+            "icon_size_mobile": 20,
+            "font_size_mobile": 14,
+            "icon_text_gap": 8,
+            "font_family": "'Neue Haas Unica Pro', Helvetica, Arial, sans-serif",
+            "font_weight": "400",
+            "text_color": "#000000",
+            "margin_top": 20,
+            "margin_bottom": 20
+          }
+        },
         "custom_liquid_nB3TRi": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"icon-text-container\">\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_3.avif?v=1765793186\" alt=\"Icon 1\">\n    <span>Fluoride Free Care</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_2_534f46da-868d-4985-bed9-a528d00ebea3.webp?v=1765793186\" alt=\"Icon 2\">\n    <span>Freshens Breath</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_1.png?v=1765793186\" alt=\"Icon 3\">\n    <span>Fresh Mint Clean</span>\n  </div>\n</div>\n\n<style>\n  .icon-text-container {\n    display: flex;\n    justify-content: space-between; /* Spread evenly on desktop */\n    align-items: center;\n    gap: 40px;\n    flex-wrap: nowrap; /* Keep one line on desktop */\n  }\n\n  .icon-text {\n    display: flex;\n    align-items: center;\n    gap: 8px; /* Space between icon and text */\n    white-space: nowrap; /* Keep each icon + text inline */\n  }\n\n  .icon-text img {\n    width: 24px;\n    height: 24px;\n  }\n\n  .icon-text span {\n    font-family: 'Neue Haas Unica Pro', Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    color: #000;\n  }\n\n  /* Mobile: allow wrapping container into 2 lines and align left */\n  @media screen and (max-width: 768px) {\n    .icon-text-container {\n      flex-wrap: wrap; /* Container can wrap to 2 lines */\n      justify-content: flex-start; /* Align left on mobile */\n      gap: 20px;\n    }\n\n    .icon-text img {\n      width: 20px;\n      height: 20px;\n    }\n\n    .icon-text span {\n      font-size: 14px;\n    }\n  }\n</style>"
           }
@@ -922,6 +949,7 @@
         }
       },
       "block_order": [
+        "icon_text_row_YH3FYW",
         "custom_liquid_nB3TRi",
         "title_G7MRdz",
         "price_iedtX3",
