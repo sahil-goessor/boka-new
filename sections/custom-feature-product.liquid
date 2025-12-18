@@ -323,6 +323,42 @@
                 </details>
               </div>
               {%- endif -%}
+            {%- when 'yearly_subs_people' -%}
+              {% render 'yearly-subscription', product: product, section: section %}
+            
+            {%- when 'popup' -%}
+              <modal-opener
+                class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                data-modal="#PopupModal-{{ block.id }}"
+                {{ block.shopify_attributes }}
+              >
+                <button
+                  id="ProductPopup-{{ block.id }}"
+                  class="product-popup-modal__button link"
+                  type="button"
+                  aria-haspopup="dialog"
+                >
+                  {{ block.settings.text | default: block.settings.page.title }}
+                </button>
+              </modal-opener>
+              <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">
+                {{- block.settings.text -}}
+              </a>
+
+            {%- when 'share' -%}
+              {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
+              {% render 'share-button',
+                block: block,
+                share_link: share_url
+              %}
+
+            {%- when 'product_swatches' -%}
+              {% render 'product-swatches', block: block %}
+
+            {%- when 'custom_button' -%}
+              {% if block.settings.custom_button_url %}
+                  {% render 'product-custom-button', block: block %}
+              {% endif %}
           {%- endcase -%}
         {%- endfor -%}
       </product-info>
