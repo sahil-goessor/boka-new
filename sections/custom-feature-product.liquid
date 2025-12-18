@@ -149,6 +149,8 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
+              {%- when 'custom_liquid' -%}
+              {{ block.settings.custom_liquid }}
             {%- when 'quantity_selector' -%}
               {% unless customer.b2b? %}
               <div
