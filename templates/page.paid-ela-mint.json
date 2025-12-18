@@ -966,7 +966,7 @@
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
-        "thumbnail_position": "bottom",
+        "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
