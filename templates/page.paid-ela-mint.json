@@ -615,7 +615,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_mobile": 0,
-        "padding_bottom_mobile": 36
+        "padding_bottom_mobile": 6
       }
     },
     "custom_image_icon_background_FqMNG9": {
@@ -636,12 +636,26 @@
           "settings": {
             "icon": "shopify://shop_images/n-Ha.webp",
             "icon_alt": "Icon",
-            "heading": "Nano-Hydroxyapatite (n-Ha) -",
+            "heading": "Nano-Hydroxyapatite",
             "heading_font_size_desktop": 18,
             "text_font_size_desktop": 16,
             "heading_font_size_mobile": 18,
             "text_font_size_mobile": 14,
-            "text": "<p>A breakthrough material inspired by nature and backed by science that mimics tooth enamel. Developed in the 1970s as a fluoride alternative.</p>",
+            "text": "<p>Mimics tooth enamel</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_ryTd4U": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Green Tea Extract",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Acts as an antioxidant</p>",
             "text_style": "body"
           }
         },
@@ -659,34 +673,6 @@
             "text_style": "body"
           }
         },
-        "icon_text_y44E3V": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "shopify://shop_images/peppermint.webp",
-            "icon_alt": "Icon",
-            "heading": "Aloe Vera",
-            "heading_font_size_desktop": 18,
-            "text_font_size_desktop": 16,
-            "heading_font_size_mobile": 18,
-            "text_font_size_mobile": 14,
-            "text": "<p>Included in our thoughtfully formulated blend.</p>",
-            "text_style": "body"
-          }
-        },
-        "icon_text_ryTd4U": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "shopify://shop_images/Oral_Probiotics.webp",
-            "icon_alt": "Icon",
-            "heading": "Green Tea Extract",
-            "heading_font_size_desktop": 18,
-            "text_font_size_desktop": 16,
-            "heading_font_size_mobile": 18,
-            "text_font_size_mobile": 14,
-            "text": "<p>Rich in antioxidants.</p>",
-            "text_style": "body"
-          }
-        },
         "icon_text_nKAcBR": {
           "type": "icon_text",
           "settings": {
@@ -697,7 +683,7 @@
             "text_font_size_desktop": 16,
             "heading_font_size_mobile": 18,
             "text_font_size_mobile": 14,
-            "text": "<p>Offers a fresh, clean feel.</p>",
+            "text": "<p>Freshens breath</p>",
             "text_style": "body"
           }
         },
@@ -714,9 +700,8 @@
       "block_order": [
         "heading_MzYbMk",
         "icon_text_wHgEtm",
-        "icon_text_w8JqDJ",
-        "icon_text_y44E3V",
         "icon_text_ryTd4U",
+        "icon_text_w8JqDJ",
         "icon_text_nKAcBR",
         "button_bpWGPA"
       ],
@@ -727,8 +712,8 @@
       "name": "Image/gif icon bg text",
       "settings": {
         "media_type": "image",
-        "image": "shopify://shop_images/Ingredients_Section_Desktop_2.webp",
-        "mobile_image": "shopify://shop_images/Ingredients_Section_Mobile_2.webp",
+        "image": "shopify://shop_images/ela_mint_ingredients_desktop_banner.png",
+        "mobile_image": "shopify://shop_images/ela_mint_ingredients_mobile_banner.png",
         "background_video": "",
         "video_overlay_opacity": 30,
         "desktop_content_alignment": "left",
@@ -744,11 +729,11 @@
         "container_border_radius": 12,
         "icon_size": 60,
         "section_background_color": "#ffffff",
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_bottom": 60,
         "padding_top_tablet": 40,
         "padding_bottom_tablet": 40,
-        "padding_top_mobile": 20,
+        "padding_top_mobile": 0,
         "padding_bottom_mobile": 20
       }
     },
