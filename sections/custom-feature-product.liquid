@@ -470,7 +470,8 @@
 </script>
 
 <script>
-// Sticky ATC - Fixed version for reusable sections
+<script>
+// Sticky ATC - Shows everywhere except when viewing the product section
 document.addEventListener('DOMContentLoaded', function() {
   const sticky = document.getElementById('sticky-atc');
   if (!sticky) return;
@@ -485,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const mediaEl = document.getElementById('sticky-atc-media');
   const subEl = document.getElementById('sticky-atc-sub');
 
-  // Store product data directly (since we're not on a product page URL)
+  // Store product data directly
   let currentProduct = {{ product | json }};
 
   function updateSticky() {
@@ -532,21 +533,36 @@ document.addEventListener('DOMContentLoaded', function() {
     priceEl.innerHTML = priceHtml;
   }
 
-  // Show/hide on scroll
+  // Show/hide based on product section visibility
   function handleScroll() {
-    if (!mainForm) return;
+    if (!section) return;
     
-    const formBottom = mainForm.getBoundingClientRect().bottom;
+    const sectionRect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
     
-    if (formBottom < 0) {
+    // Calculate if the product section is in viewport
+    const sectionTop = sectionRect.top;
+    const sectionBottom = sectionRect.bottom;
+    
+    // Section is visible if:
+    // - Top is above viewport bottom AND
+    // - Bottom is below viewport top
+    const isVisible = sectionTop < windowHeight && sectionBottom > 0;
+    
+    if (isVisible) {
+      // Product section is visible - hide sticky bar
+      sticky.classList.add('hidden');
+    } else {
+      // Product section is NOT visible - show sticky bar
       sticky.classList.remove('hidden');
       updateSticky();
-    } else {
-      sticky.classList.add('hidden');
     }
   }
 
   window.addEventListener('scroll', handleScroll);
+  
+  // Initial check on page load
+  handleScroll();
 
   // Variant change listeners
   if (mainForm) {
@@ -619,6 +635,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial update
   updateSticky();
 });
+</script>
 </script>
 </section>
 
