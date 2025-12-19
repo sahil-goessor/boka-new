@@ -927,7 +927,8 @@
       "type": "featured-collection",
       "custom_css": [
         "h1 {text-align: center; font-size: 40px;}",
-        "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}"
+        "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}",
+        ".learn-more.small-hide.medium-hide {display: none !important;}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
