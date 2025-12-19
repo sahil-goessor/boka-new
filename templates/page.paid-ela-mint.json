@@ -941,6 +941,10 @@
         "variant_picker_7CE7P9",
         "buy_buttons_EEKMLy"
       ],
+      "custom_css": [
+        ".product-form__input input[type=\"radio\"]:checked + label {padding: 1rem 2rem; border-radius: 20px;}",
+        ".product-form__input input[type=\"radio\"] + label {padding: 1rem 2rem; border-radius: 20px;}"
+      ],
       "name": "Product Display",
       "settings": {
         "product_handle": "ela-mint-toothpaste",
