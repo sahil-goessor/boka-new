@@ -683,7 +683,11 @@
           "settings": {
             "block_heading": "Pairs well with",
             "make_collapsible_row": true,
+            "icon": "price_tag",
             "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
             "enable_quick_add": true
           }
         },
@@ -708,8 +712,14 @@
         "icon_with_text_8D7pgH": {
           "type": "icon-with-text",
           "settings": {
+            "orientation": "inlined",
+            "layout": "horizontal",
             "icon_1": "heart",
-            "heading_1": "<strong>Soothing Aloe Vera</strong>"
+            "heading_1": "<strong>Soothing Aloe Vera</strong>",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "padding_top": 0,
+            "padding_bottom": 0
           }
         }
       },
@@ -726,6 +736,7 @@
         "collapsible_tab_KEHY4h",
         "icon_with_text_8D7pgH"
       ],
+      "disabled": true,
       "custom_css": [
         ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
         ".product-form__input input[type=\"radio\"] + label {padding: 1.8rem 2rem; border-radius: 20px;}"
@@ -1022,6 +1033,68 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "custom_feature_product_section_dVeqDg": {
+      "type": "custom-feature-product-section",
+      "blocks": {
+        "title_HRGLrN": {
+          "type": "title",
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
+        },
+        "price_3GEhgT": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
+          }
+        },
+        "variant_picker_W7cQzg": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_names": "white, blue, mint, pink",
+            "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
+          }
+        },
+        "buy_buttons_VEh3dd": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "title_HRGLrN",
+        "price_3GEhgT",
+        "variant_picker_W7cQzg",
+        "buy_buttons_VEh3dd"
+      ],
+      "name": "Product Display-new-2",
+      "settings": {
+        "product_handle": "ela-mint-toothpaste",
+        "enable_sticky_info": true,
+        "enable_sticky_atc": true,
+        "media_size": "large",
+        "lazyload": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_tablet": 36,
+        "padding_bottom_tablet": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -1035,6 +1108,7 @@
     "17655422262dd9640d",
     "featured_product_TGCUYH",
     "custom_feature_product_9Gkr6x",
+    "custom_feature_product_section_dVeqDg",
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
