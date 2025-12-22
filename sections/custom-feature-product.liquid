@@ -843,25 +843,6 @@ document.addEventListener('DOMContentLoaded', function() {
   updateSticky();
 });
 </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const section = document.querySelector('[data-section="{{ section.id }}"]');
-  
-  // Listen for variant picker changes
-  section?.addEventListener('change', function(e) {
-    if (e.target.matches('input[type="radio"][name^="options"]')) {
-      setTimeout(() => {
-        // Trigger form update
-        const form = section.querySelector('product-form');
-        if (form && form.updateOptions) {
-          form.updateOptions();
-        }
-      }, 100);
-    }
-  });
-});
-</script>
 </section>
 
 <style>
