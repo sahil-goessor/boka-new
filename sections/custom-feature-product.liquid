@@ -1309,30 +1309,38 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       "type": "variant_picker",
-      "name": "Variant Picker",
+      "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
       "settings": [
         {
           "type": "select",
           "id": "picker_type",
           "options": [
-            {"value": "dropdown", "label": "Dropdown"},
-            {"value": "button", "label": "Button"}
+            {
+              "value": "dropdown",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
+            }
           ],
           "default": "button",
-          "label": "Picker type"
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
         },
         {
           "type": "textarea",
           "id": "color_names",
           "label": "Color variety names",
-          "default": "white, blue, mint, pink"
+          "default": "white, blue, mint, pink",
+          "info": "Values should be separated by a comma.  The order in which these values are placed corresponds to the order of the color hex values listed below."
         },
         {
           "type": "textarea",
           "id": "color_hex",
           "label": "Color variety values",
-          "default": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
+          "default": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7",
+          "info": "Values should be separated by a comma"
         }
       ]
     },
