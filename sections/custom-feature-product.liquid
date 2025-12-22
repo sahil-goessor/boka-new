@@ -722,45 +722,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 @media screen and (max-width: 749px) {
   .sticky-atc__inner {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.75rem;
-    align-items: stretch;
   }
 
   .sticky-atc__left {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .sticky-atc__texts {
     flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
   }
 
   .sticky-atc__right {
     width: 100%;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  {% comment %} .sticky-atc__price-wrapper {
-    display: none;
-  } {% endcomment %}
-
-  .sticky-atc__button {
-    width: 100%;
-    min-width: unset;
-  }
-
-  .sticky-atc__button .product-form__submit,
-  .sticky-atc__button button {
-    width: 100%;
+    justify-content: space-between;
   }
 
   .sticky-atc__media {
@@ -770,7 +742,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .sticky-atc__title {
     font-size: 14px;
-    flex: 1;
   }
 
   .sticky-atc__variant {
@@ -779,7 +750,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   .sticky-atc__price {
     font-size: 16px;
-    white-space: nowrap;
   }
 }
 
