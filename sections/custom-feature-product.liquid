@@ -287,6 +287,40 @@
                     }
                   </style>
                 {% endfor %}
+              {% else %}
+                <style>
+                  .product-form__input input[data-value="white"]:checked + label,
+                  .product-form__input input[data-value="white"] + label,
+                  .product-form__input input[data-value="blue"]:checked + label,
+                  .product-form__input input[data-value="blue"] + label,
+                  .product-form__input input[data-value="mint"]:checked + label,
+                  .product-form__input input[data-value="mint"] + label,
+                  .product-form__input input[data-value="pink"]:checked + label,
+                  .product-form__input input[data-value="pink"] + label {
+                    margin-top: 0;
+                    color: transparent !important;
+                    font-size: 0px !important;
+                    height: 24px;
+                    width: 24px;
+                    padding: 0;
+                  }
+                  .product-form__input input[data-value="white"]:checked + label,
+                  .product-form__input input[data-value="white"] + label {
+                    background-color: #fff;
+                  }
+                  .product-form__input input[data-value="blue"]:checked + label,
+                  .product-form__input input[data-value="blue"] + label {
+                    background-color: #46627B;
+                  }
+                  .product-form__input input[data-value="mint"]:checked + label,
+                  .product-form__input input[data-value="mint"] + label {
+                    background-color: #D5EBCD;
+                  }
+                  .product-form__input input[data-value="pink"]:checked + label,
+                  .product-form__input input[data-value="pink"] + label {
+                    background-color: #F4B6B7;
+                  }
+                </style>
               {% endif %}
 
               {% render 'product-variant-picker',
