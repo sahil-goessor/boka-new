@@ -46,30 +46,94 @@
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-  <script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize variant changes for section {{ section.id }}
-  const productInfo = document.querySelector('#ProductInfo-{{ section.id }}');
-  if (productInfo) {
-    // Force refresh of product info when variant changes
-    const variantSelects = productInfo.querySelectorAll('variant-radios, variant-selects');
-    variantSelects.forEach(function(variantSelect) {
-      variantSelect.addEventListener('change', function() {
-        // Trigger update
-        const form = document.querySelector('#product-form-{{ section.id }}');
-        if (form) {
-          const formData = new FormData(form);
-          const variantId = formData.get('id');
-          
-          // Update hidden input
-          const hiddenInput = form.querySelector('input[name="id"]');
-          if (hiddenInput) {
-            hiddenInput.value = variantId;
-          }
+  const section = document.querySelector('#MainProduct-{{ section.id }}');
+  if (!section) return;
+
+  const productInfo = section.querySelector('#ProductInfo-{{ section.id }}');
+  if (!productInfo) return;
+
+  // Listen for variant changes from variant-radios or variant-selects custom elements
+  productInfo.addEventListener('variant-change', function(event) {
+    const variant = event.detail?.variant;
+    if (!variant) return;
+
+    // Update all hidden inputs with variant ID
+    const forms = section.querySelectorAll('form[action*="/cart/add"]');
+    forms.forEach(form => {
+      const hiddenInput = form.querySelector('input[name="id"]');
+      if (hiddenInput) {
+        hiddenInput.value = variant.id;
+      }
+    });
+
+    // Update price displays
+    const priceContainer = section.querySelector('#price-{{ section.id }}');
+    if (priceContainer && variant.price !== undefined) {
+      updatePriceDisplay(priceContainer, variant);
+    }
+
+    // Update buy button state
+    updateBuyButton(section, variant);
+  });
+
+  function updatePriceDisplay(container, variant) {
+    const price = variant.price;
+    const compareAtPrice = variant.compare_at_price;
+    
+    // Find price elements
+    const priceElement = container.querySelector('.price-item--regular');
+    const compareElement = container.querySelector('.price-item--sale');
+    
+    if (priceElement) {
+      priceElement.textContent = formatMoney(price);
+    }
+    
+    if (compareElement && compareAtPrice && compareAtPrice > price) {
+      compareElement.textContent = formatMoney(compareAtPrice);
+      compareElement.style.display = '';
+    } else if (compareElement) {
+      compareElement.style.display = 'none';
+    }
+  }
+
+  function updateBuyButton(section, variant) {
+    const submitButtons = section.querySelectorAll('button[type="submit"][name="add"]');
+    
+    submitButtons.forEach(button => {
+      if (!variant) {
+        button.setAttribute('disabled', 'disabled');
+        return;
+      }
+
+      if (variant.available) {
+        button.removeAttribute('disabled');
+        const buttonText = button.querySelector('.add-to-cart-text');
+        if (buttonText) {
+          buttonText.textContent = button.dataset.addToCartText || 'Add to cart';
         }
-      });
+      } else {
+        button.setAttribute('disabled', 'disabled');
+        const buttonText = button.querySelector('.add-to-cart-text');
+        if (buttonText) {
+          buttonText.textContent = 'Sold out';
+        }
+      }
     });
   }
+
+  function formatMoney(cents) {
+    if (typeof Shopify !== 'undefined' && Shopify.formatMoney) {
+      return Shopify.formatMoney(cents, window.theme?.moneyFormat || '{{ shop.money_format }}');
+    }
+    return '$' + (cents / 100).toFixed(2);
+  }
+
+  // Trigger initial update
+  const initialVariantId = {{ product.selected_or_first_available_variant.id }};
+  const initialVariant = {{ product.selected_or_first_available_variant | json }};
+  updateBuyButton(section, initialVariant);
 });
 </script>
   {% if section.settings.image_zoom == 'hover' %}
