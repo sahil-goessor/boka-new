@@ -67,6 +67,14 @@
             "headline": "“My teeth are so sensitive, that’s why I love using Boka’s Ela Mint Toothpaste”",
             "headline_size": 40,
             "headline_font_weight": "700",
+            "show_customer_badge": false,
+            "badge_icon_size": 32,
+            "customer_name": "Sarah M.",
+            "customer_name_size": 14,
+            "show_verified_text": true,
+            "verified_text": "Verified Buyer",
+            "verified_text_size": 12,
+            "verified_text_color": "#666666",
             "body_text": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
             "body_text_size": 16,
             "show_claim_1": true,
@@ -93,7 +101,8 @@
             "hero_image_mobile": "shopify://shop_images/ela_mint_hero_banner.webp",
             "hero_video_mobile": "",
             "media_border_radius": 0,
-            "mobile_content_alignment": "center"
+            "mobile_content_alignment": "center",
+            "mobile_layout_order": "default"
           },
           "blocks": {}
         }
@@ -664,6 +673,44 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
+        },
+        "description_wpqWEy": {
+          "type": "description",
+          "settings": {}
+        },
+        "complementary_jxPWce": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "product_list_limit": 10,
+            "enable_quick_add": true
+          }
+        },
+        "collapsible_tab_9Bf7bQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "none",
+            "content": "<p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KEHY4h": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
+            "page": ""
+          }
+        },
+        "icon_with_text_8D7pgH": {
+          "type": "icon-with-text",
+          "settings": {
+            "icon_1": "heart",
+            "heading_1": "<strong>Soothing Aloe Vera</strong>"
+          }
         }
       },
       "block_order": [
@@ -672,7 +719,12 @@
         "title_G7MRdz",
         "price_iedtX3",
         "variant_picker_7CE7P9",
-        "buy_buttons_EEKMLy"
+        "buy_buttons_EEKMLy",
+        "description_wpqWEy",
+        "complementary_jxPWce",
+        "collapsible_tab_9Bf7bQ",
+        "collapsible_tab_KEHY4h",
+        "icon_with_text_8D7pgH"
       ],
       "custom_css": [
         ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
