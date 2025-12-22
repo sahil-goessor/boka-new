@@ -411,7 +411,14 @@
       {% if block.settings.show_customer_badge %}
         <div class="ai-hero-banner-customer-badge-{{ ai_gen_id }}">
           <div class="ai-hero-banner-customer-info-{{ ai_gen_id }}">
-            <div class="ai-hero-banner-badge-icon-{{ ai_gen_id }}">
+            
+            {% if block.settings.customer_name != blank %}
+              <span class="ai-hero-banner-customer-name-{{ ai_gen_id }}">
+                {{ block.settings.customer_name }}
+              </span>
+            {% endif %}
+          </div>
+          <div class="ai-hero-banner-badge-icon-{{ ai_gen_id }}">
               {% if block.settings.badge_icon %}
                 <img
                   src="{{ block.settings.badge_icon | image_url: width: 100 }}"
@@ -428,12 +435,6 @@
                 </div>
               {% endif %}
             </div>
-            {% if block.settings.customer_name != blank %}
-              <span class="ai-hero-banner-customer-name-{{ ai_gen_id }}">
-                {{ block.settings.customer_name }}
-              </span>
-            {% endif %}
-          </div>
           {% if block.settings.show_verified_text %}
             <span class="ai-hero-banner-verified-text-{{ ai_gen_id }}">
               {{ block.settings.verified_text }}
