@@ -736,7 +736,6 @@
         "collapsible_tab_KEHY4h",
         "icon_with_text_8D7pgH"
       ],
-      "disabled": true,
       "custom_css": [
         ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
         ".product-form__input input[type=\"radio\"] + label {padding: 1.8rem 2rem; border-radius: 20px;}"
@@ -1034,23 +1033,23 @@
         "padding_bottom_mobile": 36
       }
     },
-    "custom_feature_product_section_dVeqDg": {
+    "custom_feature_product_section_4f3nQW": {
       "type": "custom-feature-product-section",
       "blocks": {
-        "title_HRGLrN": {
+        "title_ytVQy6": {
           "type": "title",
           "settings": {
             "title_font_size_mobile": 24,
             "title_font_size_desktop": 40
           }
         },
-        "price_3GEhgT": {
+        "price_wQEKVG": {
           "type": "price",
           "settings": {
             "hide_on_subscription_products": false
           }
         },
-        "variant_picker_W7cQzg": {
+        "variant_picker_6tqKaH": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
@@ -1058,7 +1057,7 @@
             "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
           }
         },
-        "buy_buttons_VEh3dd": {
+        "buy_buttons_9jfMhw": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
@@ -1067,10 +1066,10 @@
         }
       },
       "block_order": [
-        "title_HRGLrN",
-        "price_3GEhgT",
-        "variant_picker_W7cQzg",
-        "buy_buttons_VEh3dd"
+        "title_ytVQy6",
+        "price_wQEKVG",
+        "variant_picker_6tqKaH",
+        "buy_buttons_9jfMhw"
       ],
       "name": "Product Display-new-2",
       "settings": {
@@ -1081,8 +1080,8 @@
         "lazyload": false,
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "thumbnail_position": "left",
+        "gallery_layout": "stacked",
+        "thumbnail_position": "bottom",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -1108,13 +1107,13 @@
     "17655422262dd9640d",
     "featured_product_TGCUYH",
     "custom_feature_product_9Gkr6x",
-    "custom_feature_product_section_dVeqDg",
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
     "yt_shorts_FUHnAV",
     "1765896441d3e5261a",
     "featured_collection_RackKr",
-    "main"
+    "main",
+    "custom_feature_product_section_4f3nQW"
   ]
 }
