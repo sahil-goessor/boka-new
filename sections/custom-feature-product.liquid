@@ -722,34 +722,80 @@ document.addEventListener('DOMContentLoaded', function() {
 
 @media screen and (max-width: 749px) {
   .sticky-atc__inner {
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.75rem;
+    padding: 1rem;
   }
 
   .sticky-atc__left {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .sticky-atc__texts {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .sticky-atc__media {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .sticky-atc__title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .sticky-atc__variant {
+    font-size: 14px;
+    display: block;
+    order: 2;
   }
 
   .sticky-atc__right {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .sticky-atc__media {
-    width: 50px;
-    height: 50px;
-  }
-
-  .sticky-atc__title {
-    font-size: 14px;
-  }
-
-  .sticky-atc__variant {
-    font-size: 12px;
+  .sticky-atc__price-wrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 
   .sticky-atc__price {
-    font-size: 16px;
+    font-size: 18px;
+    text-align: right;
+  }
+
+  .sticky-atc__compare {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.125rem;
+  }
+
+  .sticky-atc__sub {
+    display: none !important;
+  }
+
+  .sticky-atc__button {
+    width: 100%;
+    min-width: unset;
+    margin-top: 0;
+  }
+
+  .sticky-atc__button .product-form__submit,
+  .sticky-atc__button button {
+    width: 100%;
   }
 }
 
