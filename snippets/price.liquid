@@ -90,7 +90,7 @@
       </span> {% endcomment %}
 
       {% if show_discount_percentage and discount_percentage > 0 %}
-        <p class="price-item price-item--sale price-item--last price-item--discount {% if section.id == 'template--featured_product_section_custom' %}price-item--discount{% endif %}">
+        <p class="price-item price-item--sale price-item--last price-item--discount {% if section.id contains 'featured' or section.settings.section_type == 'featured-product' %}price-item--discount{% endif %}">
           {{ money_price }} ({{ discount_percentage }}% off)
         </p>
       {%  else %}
