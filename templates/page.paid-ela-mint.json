@@ -531,7 +531,6 @@
         },
         "quantity_selector_CharbJ": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {}
         },
         "buy_buttons_j3VN3h": {
