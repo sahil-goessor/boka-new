@@ -88,13 +88,20 @@
     <div class="featured-product product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col gradient color-{{ section.settings.color_scheme }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         {% render 'product-media-gallery', 
-          variant_images: variant_images, 
-          lazyload: section.settings.lazyload,
-          thumbnail_position: section.settings.thumbnail_position,
-          is_featured: true,
-          section_id: section.id,
-          product: product
-        %}
+            variant_images: variant_images, 
+            lazyload: section.settings.lazyload,
+            thumbnail_position: section.settings.thumbnail_position,
+            is_featured: true,
+            section_id: section.id,
+            product: product,
+            gallery_layout: section.settings.gallery_layout,
+            media_size: section.settings.media_size,
+            media_position: section.settings.media_position,
+            image_zoom: section.settings.image_zoom,
+            mobile_thumbnails: section.settings.mobile_thumbnails,
+            constrain_to_viewport: section.settings.constrain_to_viewport,
+            media_fit: section.settings.media_fit
+            %}
       </div>
       <div class="grid__item product__info-wrapper">
         <product-info
@@ -484,8 +491,15 @@
             thumbnail_position: section.settings.thumbnail_position,
             is_featured: true,
             section_id: section.id,
-            product: product
-          %}
+            product: product,
+            gallery_layout: section.settings.gallery_layout,
+            media_size: section.settings.media_size,
+            media_position: section.settings.media_position,
+            image_zoom: section.settings.image_zoom,
+            mobile_thumbnails: section.settings.mobile_thumbnails,
+            constrain_to_viewport: section.settings.constrain_to_viewport,
+            media_fit: section.settings.media_fit
+            %}
         </div>
       {%- endif -%}
     </div>
