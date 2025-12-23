@@ -869,26 +869,36 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Show/hide sticky bar on scroll
-    function handleScroll() {
-    if (!mainForm) return;
-    
-    const section = document.querySelector('.product-form__buttons');
-    if (!section) return;
-    
-    const sectionRect = section.getBoundingClientRect();
-    const wasHidden = sticky.classList.contains('hidden');
-    
-    // Show sticky when section is off-screen (either above or below)
-    if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) {
-        if (wasHidden) {
-        sticky.classList.remove('hidden');
-        updateSticky();
-        }
-    } else {
-        // Hide when section is visible
-        sticky.classList.add('hidden');
+function handleScroll() {
+  if (!mainForm) return;
+  
+  const section = document.querySelector('.product-form__buttons');
+  if (!section) return;
+  
+  const sectionRect = section.getBoundingClientRect();
+  const wasHidden = sticky.classList.contains('hidden');
+  
+  // Check if hero banner CTA is in view
+  const heroBannerCta = document.querySelector('.ai-hero-banner-cta-wrapper');
+  let heroBannerInView = false;
+  
+  if (heroBannerCta) {
+    const heroBannerRect = heroBannerCta.getBoundingClientRect();
+    // Check if any part of the hero banner is visible in viewport
+    heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
+  }
+  
+  // Show sticky when section is off-screen AND hero banner is not in view
+  if ((sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) && !heroBannerInView) {
+    if (wasHidden) {
+      sticky.classList.remove('hidden');
+      updateSticky();
     }
-    }
+  } else {
+    // Hide when section is visible OR hero banner is in view
+    sticky.classList.add('hidden');
+  }
+}
 
   window.addEventListener('scroll', handleScroll);
 
