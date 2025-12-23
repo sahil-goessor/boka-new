@@ -501,6 +501,83 @@
       "type": "_blocks",
       "settings": {}
     },
+    "featured_product_section_custom_UEHaA4": {
+      "type": "featured-product-section-custom",
+      "blocks": {
+        "text_pCjw83": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_d4zgQE": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "price_T7pXW7": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_QPkKgn": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_CharbJ": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_j3VN3h": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "share_AH6bja": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_pCjw83",
+        "title_d4zgQE",
+        "price_T7pXW7",
+        "variant_picker_QPkKgn",
+        "quantity_selector_CharbJ",
+        "buy_buttons_j3VN3h",
+        "share_AH6bja"
+      ],
+      "name": "feature product section new",
+      "settings": {
+        "product": "ela-mint-toothpaste",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "lazyload": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "featured_product_TGCUYH": {
       "type": "featured-product",
       "blocks": {
@@ -594,6 +671,10 @@
         "custom_liquid_Qpix6f"
       ],
       "disabled": true,
+      "custom_css": [
+        ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
+        ".product-form__input input[type=radio]+label {padding: 1.8rem 2rem; border-radius: 20px;}"
+      ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "ela-mint-toothpaste",
@@ -1096,83 +1177,6 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
-    },
-    "featured_product_section_custom_UEHaA4": {
-      "type": "featured-product-section-custom",
-      "blocks": {
-        "text_pCjw83": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_d4zgQE": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
-        },
-        "price_T7pXW7": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_QPkKgn": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_CharbJ": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
-        },
-        "buy_buttons_j3VN3h": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false
-          }
-        },
-        "share_AH6bja": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_pCjw83",
-        "title_d4zgQE",
-        "price_T7pXW7",
-        "variant_picker_QPkKgn",
-        "quantity_selector_CharbJ",
-        "buy_buttons_j3VN3h",
-        "share_AH6bja"
-      ],
-      "name": "feature product section new",
-      "settings": {
-        "product": "ela-mint-toothpaste",
-        "color_scheme": "background-1",
-        "secondary_background": false,
-        "media_size": "medium",
-        "lazyload": false,
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "thumbnail_position": "left",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
     }
   },
   "order": [
@@ -1184,6 +1188,7 @@
     "1765546276a11604c6",
     "176576544784328569",
     "17655422262dd9640d",
+    "featured_product_section_custom_UEHaA4",
     "featured_product_TGCUYH",
     "custom_feature_product_9Gkr6x",
     "1765534182fed2e648",
@@ -1193,7 +1198,6 @@
     "1765896441d3e5261a",
     "featured_collection_RackKr",
     "main",
-    "custom_feature_product_section_4f3nQW",
-    "featured_product_section_custom_UEHaA4"
+    "custom_feature_product_section_4f3nQW"
   ]
 }
