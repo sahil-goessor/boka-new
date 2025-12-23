@@ -599,6 +599,42 @@
       hiddenInput.value = event.currentTarget.value;
     });
   });
+
+  // Initialize media gallery for featured product section
+  if (typeof window.MediaGallery !== 'undefined') {
+    const galleryElement = document.querySelector('.featured-product [id^="MediaGallery-{{ section.id }}"]');
+    if (galleryElement && !galleryElement.classList.contains('media-gallery-initialized')) {
+      galleryElement.classList.add('media-gallery-initialized');
+      
+      // Trigger gallery initialization
+      const thumbnails = document.querySelectorAll('.featured-product .thumbnail-list button');
+      thumbnails.forEach(function(thumbnail) {
+        thumbnail.addEventListener('click', function(e) {
+          e.preventDefault();
+          const mediaId = this.getAttribute('data-target');
+          const mediaItem = document.querySelector('.featured-product [data-media-id="' + mediaId + '"]');
+          
+          if (mediaItem) {
+            // Hide all media
+            document.querySelectorAll('.featured-product .product__media-item').forEach(function(item) {
+              item.classList.remove('is-active');
+            });
+            
+            // Show clicked media
+            mediaItem.classList.add('is-active');
+            
+            // Update thumbnails
+            thumbnails.forEach(function(t) {
+              t.classList.remove('is-active');
+              t.setAttribute('aria-current', 'false');
+            });
+            this.classList.add('is-active');
+            this.setAttribute('aria-current', 'true');
+          }
+        });
+      });
+    }
+  }
 </script>
 
 {% schema %}
