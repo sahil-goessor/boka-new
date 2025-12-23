@@ -629,7 +629,7 @@
       "custom_css": [
         "a.link.product__view-details.animate-arrow {display: none;}",
         "h1.product__title.h1 {font-size: 30px;}",
-        "p.price-item.price-item--sale.price-item--last {padding-left: unset;}"
+        ".price .price-item {margin: 0 0 0 0;}"
       ],
       "name": "feature product section new",
       "settings": {
