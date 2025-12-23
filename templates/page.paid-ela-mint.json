@@ -581,7 +581,9 @@
         "collapsible_tab_X4QUJA",
         "share_AH6bja"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "a.link.product__view-details.animate-arrow {display: none;}"
+      ],
       "name": "feature product section new",
       "settings": {
         "product": "ela-mint-toothpaste",
