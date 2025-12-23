@@ -627,7 +627,8 @@
         "icon_with_text_kfTBKq"
       ],
       "custom_css": [
-        "a.link.product__view-details.animate-arrow {display: none;}"
+        "a.link.product__view-details.animate-arrow {display: none;}",
+        "h1.product__title.h1 {font-size: 30px;}"
       ],
       "name": "feature product section new",
       "settings": {
