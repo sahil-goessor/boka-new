@@ -504,6 +504,31 @@
     "featured_product_section_custom_UEHaA4": {
       "type": "featured-product-section-custom",
       "blocks": {
+        "icon_text_row_7jwFNT": {
+          "type": "icon_text_row",
+          "disabled": true,
+          "settings": {
+            "icon_1_text": "Fluoride Free Care",
+            "icon_2_text": "Freshens Breath",
+            "icon_3_text": "Fresh Mint Clean",
+            "icon_4_text": "",
+            "desktop_alignment": "space-between",
+            "gap_desktop": 40,
+            "icon_size_desktop": 24,
+            "font_size_desktop": 16,
+            "mobile_alignment": "flex-start",
+            "mobile_wrap": "wrap",
+            "gap_mobile": 20,
+            "icon_size_mobile": 20,
+            "font_size_mobile": 14,
+            "icon_text_gap": 8,
+            "font_family": "'Neue Haas Unica Pro', Helvetica, Arial, sans-serif",
+            "font_weight": "400",
+            "text_color": "#000000",
+            "margin_top": 20,
+            "margin_bottom": 20
+          }
+        },
         "text_pCjw83": {
           "type": "text",
           "disabled": true,
@@ -572,6 +597,7 @@
         }
       },
       "block_order": [
+        "icon_text_row_7jwFNT",
         "text_pCjw83",
         "title_d4zgQE",
         "price_T7pXW7",
