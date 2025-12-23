@@ -540,8 +540,8 @@
         "title_d4zgQE": {
           "type": "title",
           "settings": {
-            "heading_size": "h1",
-            "heading_tag": "default"
+            "heading_size": "h2",
+            "heading_tag": "h1"
           }
         },
         "price_T7pXW7": {
@@ -598,6 +598,18 @@
             "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
             "page": ""
           }
+        },
+        "icon_with_text_kfTBKq": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
         }
       },
       "block_order": [
@@ -611,7 +623,8 @@
         "description_9m494J",
         "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
-        "collapsible_tab_chH3cF"
+        "collapsible_tab_chH3cF",
+        "icon_with_text_kfTBKq"
       ],
       "custom_css": [
         "a.link.product__view-details.animate-arrow {display: none;}"
