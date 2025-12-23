@@ -506,6 +506,7 @@
       "blocks": {
         "text_pCjw83": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ section.settings.product.vendor }}",
             "text_style": "uppercase"
@@ -580,10 +581,7 @@
         "collapsible_tab_X4QUJA",
         "share_AH6bja"
       ],
-      "custom_css": [
-        ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
-        ".product-form__input input[type=\"radio\"] + label {padding: 1.8rem 2rem; border-radius: 20px;}"
-      ],
+      "custom_css": [],
       "name": "feature product section new",
       "settings": {
         "product": "ela-mint-toothpaste",
