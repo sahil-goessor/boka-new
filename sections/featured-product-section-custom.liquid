@@ -792,35 +792,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-// Show/hide sticky bar on scroll
-function handleScroll() {
-  if (!mainForm) return;
-  
-  // Find the buy button in the featured product section
-  let buyButton = mainForm.querySelector('.product-form__submit');
-  if (!buyButton) {
-    buyButton = mainForm.querySelector('button[type="submit"]');
-  }
-  if (!buyButton) {
-    buyButton = mainForm.querySelector('button[name="add"]');
-  }
-  
-  if (!buyButton) return;
-  
-  const buttonRect = buyButton.getBoundingClientRect();
-  const wasHidden = sticky.classList.contains('hidden');
-  
-  // Show sticky only when buy button has scrolled past the top of viewport
-  if (buttonRect.bottom < 0) {
-    if (wasHidden) {
-      sticky.classList.remove('hidden');
-      updateSticky();
+  // Show/hide sticky bar on scroll
+    function handleScroll() {
+    if (!mainForm) return;
+    
+    const section = document.querySelector('.featured-product');
+    if (!section) return;
+    
+    const sectionRect = section.getBoundingClientRect();
+    const wasHidden = sticky.classList.contains('hidden');
+    
+    // Show sticky when section is off-screen (either above or below)
+    if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) {
+        if (wasHidden) {
+        sticky.classList.remove('hidden');
+        updateSticky();
+        }
+    } else {
+        // Hide when section is visible
+        sticky.classList.add('hidden');
     }
-  } else {
-    // Hide when buy button is still visible
-    sticky.classList.add('hidden');
-  }
-}
+    }
 
   window.addEventListener('scroll', handleScroll);
 
