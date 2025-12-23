@@ -507,6 +507,33 @@
     </div>
     {% render 'product-media-modal', product: product, variant_images: variant_images %}
   </div>
+
+  <style>
+  /* Ensure only active media is visible in featured product */
+  .featured-product .product__media-item {
+    display: none;
+  }
+  
+  .featured-product .product__media-item.is-active {
+    display: block;
+  }
+  
+  /* Active thumbnail styling */
+  .featured-product .thumbnail-list__item button.is-active,
+  .featured-product .thumbnail-list__item button[aria-current="true"] {
+    border-color: rgb(var(--color-foreground));
+    opacity: 1;
+  }
+  
+  .featured-product .thumbnail-list__item button {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  
+  .featured-product .thumbnail-list__item button:hover {
+    opacity: 1;
+  }
+</style>
 </section>
 
 {%- if product.media.size > 0 -%}
