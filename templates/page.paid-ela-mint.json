@@ -564,6 +564,10 @@
             "show_dynamic_checkout": false
           }
         },
+        "description_9m494J": {
+          "type": "description",
+          "settings": {}
+        },
         "complementary_T3Ybgg": {
           "type": "complementary",
           "settings": {
@@ -604,6 +608,7 @@
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
         "buy_buttons_j3VN3h",
+        "description_9m494J",
         "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
         "collapsible_tab_chH3cF"
