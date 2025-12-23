@@ -584,9 +584,23 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sectionId = '{{ section.id }}';
   const sticky = document.getElementById('sticky-atc-featured');
-  const mainForm = document.querySelector(`#ProductInfo-${sectionId} form[action^="/cart/add"]`);
   
-  if (!sticky || !mainForm) return;
+  // Try multiple selectors to find the main form
+  let mainForm = document.querySelector(`#product-form-${sectionId}`);
+  if (!mainForm) {
+    mainForm = document.querySelector(`.featured-product form[action^="/cart/add"]`);
+  }
+  if (!mainForm) {
+    mainForm = document.querySelector(`#ProductInfo-${sectionId} form`);
+  }
+  
+  console.log('Featured Product - Section ID:', sectionId);
+  console.log('Featured Product - Form found:', mainForm);
+  
+  if (!sticky || !mainForm) {
+    console.error('Featured Product - Sticky bar or form not found');
+    return;
+  }
   
   // Cache DOM elements
   const titleEl = document.getElementById('sticky-atc-title-featured');
@@ -599,38 +613,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to update sticky bar content
   function updateSticky() {
-    if (!mainForm) return;
+    console.log('Featured Product - Updating sticky bar...');
     
-    const variantIdInput = mainForm.querySelector('[name="id"]');
-    if (!variantIdInput) return;
+    if (!mainForm) {
+      console.error('Featured Product - Form not available');
+      return;
+    }
+    
+    // Try different selectors for variant ID input
+    let variantIdInput = mainForm.querySelector('[name="id"]');
+    if (!variantIdInput) {
+      variantIdInput = mainForm.querySelector('input[data-name="id"]');
+    }
+    if (!variantIdInput) {
+      variantIdInput = mainForm.querySelector('select[name="id"]');
+    }
+    
+    console.log('Featured Product - Variant input:', variantIdInput);
+    
+    if (!variantIdInput) {
+      console.error('Featured Product - Variant input not found');
+      return;
+    }
     
     const variantId = variantIdInput.value;
+    console.log('Featured Product - Current variant ID:', variantId);
     
-    // Update media
-    const activeMediaImg = document.querySelector('.featured-product .product__media-item.is-active img');
+    // Update media - try multiple selectors
+    let activeMediaImg = document.querySelector('.featured-product .product__media-item.is-active img');
+    if (!activeMediaImg) {
+      activeMediaImg = document.querySelector('.featured-product .product__media-list img');
+    }
+    if (!activeMediaImg) {
+      activeMediaImg = document.querySelector('.featured-product img[src*="products"]');
+    }
+    
     if (activeMediaImg && activeMediaImg.src) {
       mediaEl.src = activeMediaImg.src;
       mediaEl.alt = activeMediaImg.alt || '';
+      console.log('Featured Product - Media updated:', activeMediaImg.src);
     }
 
     // Fetch product data if we don't have it
     if (!currentProduct) {
       const productHandle = '{{ section.settings.product.handle }}';
+      console.log('Featured Product - Fetching product data for:', productHandle);
+      
       fetch(`/products/${productHandle}.js`)
         .then(response => response.json())
         .then(product => {
+          console.log('Featured Product - Product data received:', product);
           currentProduct = product;
           updateProductInfo(product, variantId);
         })
-        .catch(error => console.error('Error fetching product:', error));
+        .catch(error => console.error('Featured Product - Error fetching product:', error));
     } else {
       updateProductInfo(currentProduct, variantId);
     }
   }
 
   function updateProductInfo(product, variantId) {
+    console.log('Featured Product - Updating product info for variant:', variantId);
+    
     const variant = product.variants.find(v => v.id == variantId);
-    if (!variant) return;
+    if (!variant) {
+      console.error('Featured Product - Variant not found:', variantId);
+      return;
+    }
+
+    console.log('Featured Product - Variant found:', variant);
 
     titleEl.textContent = product.title;
     
@@ -653,28 +704,91 @@ document.addEventListener('DOMContentLoaded', function() {
                      </span>`;
       }
     } else {
-      priceHtml = `$${(variant.price / 100).toFixed(2)}`;
+      priceHtml = `${(variant.price / 100).toFixed(2)}`;
       
       if (variant.compare_at_price && variant.compare_at_price > variant.price) {
-        priceHtml += `<span class="sticky-atc__compare">$${(variant.compare_at_price / 100).toFixed(2)}</span>`;
+        priceHtml += `<span class="sticky-atc__compare">${(variant.compare_at_price / 100).toFixed(2)}</span>`;
       }
     }
     
     priceEl.innerHTML = priceHtml;
+    console.log('Featured Product - Price updated:', priceHtml);
     
-    // Clone and update the buy button
-    const originalButton = mainForm.querySelector('.product-form__submit');
+    // Clone and update the buy button - try multiple selectors
+    let originalButton = mainForm.querySelector('.product-form__submit');
+    if (!originalButton) {
+      originalButton = mainForm.querySelector('button[type="submit"]');
+    }
+    if (!originalButton) {
+      originalButton = mainForm.querySelector('.shopify-payment-button button');
+    }
+    if (!originalButton) {
+      originalButton = mainForm.querySelector('button[name="add"]');
+    }
+    
+    console.log('Featured Product - Original button found:', originalButton);
+    
     if (originalButton) {
       const clonedButton = originalButton.cloneNode(true);
       clonedButton.id = 'sticky-buy-button-featured';
+      clonedButton.removeAttribute('form'); // Remove form attribute if present
       buttonContainerEl.innerHTML = '';
       buttonContainerEl.appendChild(clonedButton);
+      
+      console.log('Featured Product - Button cloned and added');
       
       // Add click handler to the cloned button
       clonedButton.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
+        console.log('Featured Product - Sticky button clicked, triggering original button');
+        
+        // Update the main form's variant ID before submitting
+        const variantInput = mainForm.querySelector('[name="id"]') || mainForm.querySelector('input[data-name="id"]');
+        if (variantInput) {
+          console.log('Featured Product - Submitting with variant:', variantInput.value);
+        }
+        
         originalButton.click();
       });
+    } else {
+      console.error('Featured Product - Original button not found');
+      // Create a fallback button
+      const fallbackButton = document.createElement('button');
+      fallbackButton.type = 'button';
+      fallbackButton.className = 'button button--full-width button--primary';
+      fallbackButton.textContent = 'Add to Cart';
+      fallbackButton.id = 'sticky-buy-button-featured';
+      
+      fallbackButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Featured Product - Fallback button clicked');
+        
+        // Try to submit the form directly
+        const formData = new FormData(mainForm);
+        const variantId = formData.get('id');
+        
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: 1
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Featured Product - Item added to cart:', data);
+          // Trigger cart refresh
+          window.location.reload();
+        })
+        .catch(error => console.error('Featured Product - Error adding to cart:', error));
+      });
+      
+      buttonContainerEl.innerHTML = '';
+      buttonContainerEl.appendChild(fallbackButton);
     }
   }
 
@@ -697,25 +811,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.addEventListener('scroll', handleScroll);
 
-  // Variant change listeners
-  if (mainForm) {
-    mainForm.addEventListener('change', function(e) {
-      if (e.target.name === 'id' || e.target.type === 'radio' || e.target.tagName === 'SELECT') {
-        setTimeout(updateSticky, 100);
+  // Variant change listeners - comprehensive approach
+  const productContainer = document.querySelector('.featured-product');
+  
+  if (productContainer) {
+    // Listen for any change events in the product container
+    productContainer.addEventListener('change', function(e) {
+      console.log('Featured Product - Change detected:', e.target);
+      if (e.target.name === 'id' || 
+          e.target.type === 'radio' || 
+          e.target.tagName === 'SELECT' ||
+          e.target.classList.contains('product-form__input')) {
+        setTimeout(updateSticky, 150);
+      }
+    });
+    
+    // Listen for clicks on variant options
+    productContainer.addEventListener('click', function(e) {
+      if (e.target.matches('.product-form__input input[type="radio"]') ||
+          e.target.matches('.product-form__input label') ||
+          e.target.closest('.product-form__input')) {
+        console.log('Featured Product - Variant option clicked');
+        setTimeout(updateSticky, 150);
       }
     });
   }
 
-  // Custom events
-  document.addEventListener('variant:change', updateSticky);
-  document.addEventListener('product:variant-change', updateSticky);
-
-  // Watch for variant ID changes
+  // Listen on the main form
   if (mainForm) {
-    const variantIdInput = mainForm.querySelector('[name="id"]');
+    mainForm.addEventListener('change', function(e) {
+      console.log('Featured Product - Form change event:', e.target.name);
+      setTimeout(updateSticky, 150);
+    });
+  }
+
+  // Custom events
+  document.addEventListener('variant:change', function(e) {
+    console.log('Featured Product - variant:change event');
+    updateSticky();
+  });
+  
+  document.addEventListener('product:variant-change', function(e) {
+    console.log('Featured Product - product:variant-change event');
+    updateSticky();
+  });
+
+  // Watch for variant ID changes with MutationObserver
+  if (mainForm) {
+    const variantIdInput = mainForm.querySelector('[name="id"]') || mainForm.querySelector('input[data-name="id"]');
     if (variantIdInput) {
       const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
+          console.log('Featured Product - Mutation detected:', mutation.attributeName);
           if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
             updateSticky();
           }
@@ -726,15 +873,29 @@ document.addEventListener('DOMContentLoaded', function() {
         attributes: true, 
         attributeFilter: ['value'] 
       });
+      
+      // Also poll for changes as backup
+      let lastValue = variantIdInput.value;
+      setInterval(function() {
+        if (variantIdInput.value !== lastValue) {
+          console.log('Featured Product - Variant changed via polling');
+          lastValue = variantIdInput.value;
+          updateSticky();
+        }
+      }, 500);
     }
   }
 
-  // Initial update
+  // Initial update with retry
   setTimeout(() => {
-    if (!sticky.classList.contains('hidden')) {
-      updateSticky();
-    }
+    console.log('Featured Product - Initial update');
+    updateSticky();
   }, 500);
+  
+  setTimeout(() => {
+    console.log('Featured Product - Retry update');
+    updateSticky();
+  }, 1500);
 });
 </script>
 
