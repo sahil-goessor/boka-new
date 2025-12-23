@@ -361,6 +361,76 @@
                 {%- endif -%}
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
+                {%- when 'icon_text_row' -%}
+                <div class="icon-text-container" {{ block.shopify_attributes }}>
+                  {% if block.settings.icon_1_image != blank or block.settings.icon_1_text != blank %}
+                    <div class="icon-text">
+                      {% if block.settings.icon_1_image != blank %}
+                        <img 
+                          src="{{ block.settings.icon_1_image | image_url: width: 48 }}" 
+                          alt="{{ block.settings.icon_1_text | escape }}"
+                          width="24"
+                          height="24"
+                          loading="lazy"
+                        >
+                      {% endif %}
+                      {% if block.settings.icon_1_text != blank %}
+                        <span>{{ block.settings.icon_1_text }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.icon_2_image != blank or block.settings.icon_2_text != blank %}
+                    <div class="icon-text">
+                      {% if block.settings.icon_2_image != blank %}
+                        <img 
+                          src="{{ block.settings.icon_2_image | image_url: width: 48 }}" 
+                          alt="{{ block.settings.icon_2_text | escape }}"
+                          width="24"
+                          height="24"
+                          loading="lazy"
+                        >
+                      {% endif %}
+                      {% if block.settings.icon_2_text != blank %}
+                        <span>{{ block.settings.icon_2_text }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.icon_3_image != blank or block.settings.icon_3_text != blank %}
+                    <div class="icon-text">
+                      {% if block.settings.icon_3_image != blank %}
+                        <img 
+                          src="{{ block.settings.icon_3_image | image_url: width: 48 }}" 
+                          alt="{{ block.settings.icon_3_text | escape }}"
+                          width="24"
+                          height="24"
+                          loading="lazy"
+                        >
+                      {% endif %}
+                      {% if block.settings.icon_3_text != blank %}
+                        <span>{{ block.settings.icon_3_text }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+
+                  {% if block.settings.icon_4_image != blank or block.settings.icon_4_text != blank %}
+                    <div class="icon-text">
+                      {% if block.settings.icon_4_image != blank %}
+                        <img 
+                          src="{{ block.settings.icon_4_image | image_url: width: 48 }}" 
+                          alt="{{ block.settings.icon_4_text | escape }}"
+                          width="24"
+                          height="24"
+                          loading="lazy"
+                        >
+                      {% endif %}
+                      {% if block.settings.icon_4_text != blank %}
+                        <span>{{ block.settings.icon_4_text }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
               {%- when 'collapsible_tab' -%}
                 {%- liquid
                   assign has_content = false
@@ -1583,6 +1653,237 @@ document.addEventListener('DOMContentLoaded', function() {
           "id": "enable_quick_add",
           "label": "t:sections.main-product.blocks.complementary_products.settings.enable_quick_add.label",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "icon_text_row",
+      "name": "Icon with Text Row",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Icon 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1_image",
+          "label": "Icon 1 Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_1_text",
+          "label": "Icon 1 Text",
+          "default": "Fluoride Free Care"
+        },
+        {
+          "type": "header",
+          "content": "Icon 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2_image",
+          "label": "Icon 2 Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_2_text",
+          "label": "Icon 2 Text",
+          "default": "Freshens Breath"
+        },
+        {
+          "type": "header",
+          "content": "Icon 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3_image",
+          "label": "Icon 3 Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_3_text",
+          "label": "Icon 3 Text",
+          "default": "Fresh Mint Clean"
+        },
+        {
+          "type": "header",
+          "content": "Icon 4 (Optional)"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4_image",
+          "label": "Icon 4 Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_4_text",
+          "label": "Icon 4 Text"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Settings"
+        },
+        {
+          "type": "select",
+          "id": "desktop_alignment",
+          "label": "Desktop Alignment",
+          "options": [
+            {"value": "flex-start", "label": "Left"},
+            {"value": "center", "label": "Center"},
+            {"value": "space-between", "label": "Space Between"},
+            {"value": "space-around", "label": "Space Around"},
+            {"value": "space-evenly", "label": "Space Evenly"}
+          ],
+          "default": "space-between"
+        },
+        {
+          "type": "range",
+          "id": "gap_desktop",
+          "min": 10,
+          "max": 100,
+          "step": 5,
+          "unit": "px",
+          "label": "Gap Between Items (Desktop)",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "icon_size_desktop",
+          "min": 16,
+          "max": 48,
+          "step": 2,
+          "unit": "px",
+          "label": "Icon Size (Desktop)",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "font_size_desktop",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size (Desktop)",
+          "default": 16
+        },
+        {
+          "type": "header",
+          "content": "Mobile Settings"
+        },
+        {
+          "type": "select",
+          "id": "mobile_alignment",
+          "label": "Mobile Alignment",
+          "options": [
+            {"value": "flex-start", "label": "Left"},
+            {"value": "center", "label": "Center"},
+            {"value": "space-between", "label": "Space Between"}
+          ],
+          "default": "flex-start"
+        },
+        {
+          "type": "select",
+          "id": "mobile_wrap",
+          "label": "Mobile Layout",
+          "options": [
+            {"value": "wrap", "label": "Wrap to multiple lines"},
+            {"value": "nowrap", "label": "Keep in one line"}
+          ],
+          "default": "wrap"
+        },
+        {
+          "type": "range",
+          "id": "gap_mobile",
+          "min": 10,
+          "max": 60,
+          "step": 5,
+          "unit": "px",
+          "label": "Gap Between Items (Mobile)",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "icon_size_mobile",
+          "min": 16,
+          "max": 32,
+          "step": 2,
+          "unit": "px",
+          "label": "Icon Size (Mobile)",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "font_size_mobile",
+          "min": 10,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size (Mobile)",
+          "default": 14
+        },
+        {
+          "type": "header",
+          "content": "Styling"
+        },
+        {
+          "type": "range",
+          "id": "icon_text_gap",
+          "min": 4,
+          "max": 20,
+          "step": 2,
+          "unit": "px",
+          "label": "Space Between Icon and Text",
+          "default": 8
+        },
+        {
+          "type": "text",
+          "id": "font_family",
+          "label": "Font Family",
+          "default": "'Neue Haas Unica Pro', Helvetica, Arial, sans-serif",
+          "info": "Enter a custom font family or leave default"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Font Weight",
+          "options": [
+            {"value": "300", "label": "Light"},
+            {"value": "400", "label": "Normal"},
+            {"value": "500", "label": "Medium"},
+            {"value": "600", "label": "Semi Bold"},
+            {"value": "700", "label": "Bold"}
+          ],
+          "default": "400"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Spacing"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "Margin Top",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "Margin Bottom",
+          "default": 20
         }
       ]
     },
