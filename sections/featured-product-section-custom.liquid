@@ -321,6 +321,12 @@
                   product_form_id: product_form_id,
                   section_id: section.id
                 -%}
+                {%- when 'description' -%}
+              {%- if product.description != blank -%}
+                <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                  {{ product.description }}
+                </div>
+              {%- endif -%}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'rating' -%}
@@ -1475,6 +1481,11 @@ document.addEventListener('DOMContentLoaded', function() {
           "content": "t:sections.featured-product.blocks.share.settings.title_info.content"
         }
       ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
     },
     {
       "type": "custom_liquid",
