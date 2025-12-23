@@ -793,21 +793,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Show/hide sticky bar on scroll
-  function handleScroll() {
+    function handleScroll() {
     if (!mainForm) return;
     
-    const formBottom = mainForm.getBoundingClientRect().bottom;
+    const section = document.querySelector('.featured-product');
+    if (!section) return;
+    
+    const sectionRect = section.getBoundingClientRect();
     const wasHidden = sticky.classList.contains('hidden');
     
-    if (formBottom < 0) {
-      if (wasHidden) {
+    // Show sticky when section is off-screen (either above or below)
+    if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) {
+        if (wasHidden) {
         sticky.classList.remove('hidden');
         updateSticky();
-      }
+        }
     } else {
-      sticky.classList.add('hidden');
+        // Hide when section is visible
+        sticky.classList.add('hidden');
     }
-  }
+    }
 
   window.addEventListener('scroll', handleScroll);
 
