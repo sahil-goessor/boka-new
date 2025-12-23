@@ -736,6 +736,7 @@
         "collapsible_tab_KEHY4h",
         "icon_with_text_8D7pgH"
       ],
+      "disabled": true,
       "custom_css": [
         ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
         ".product-form__input input[type=\"radio\"] + label {padding: 1.8rem 2rem; border-radius: 20px;}"
