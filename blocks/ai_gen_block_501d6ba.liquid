@@ -384,7 +384,7 @@
   }
 {% endstyle %}
 
-<div class="ai-hero-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+<div class="ai-hero-banner-{{ ai_gen_id }} ai_button_sticky_hide" {{ block.shopify_attributes }}>
   <div class="ai-hero-banner-container-{{ ai_gen_id }}">
     <div class="ai-hero-banner-content-{{ ai_gen_id }}">
       {% if block.settings.show_reviews %}
@@ -502,7 +502,7 @@
       </div>
 
       {% if block.settings.button_text != blank %}
-        <div class="ai-hero-banner-cta-wrapper-{{ ai_gen_id }} ai_button_sticky_hide">
+        <div class="ai-hero-banner-cta-wrapper-{{ ai_gen_id }}">
           <a
             href="{{ block.settings.button_link }}"
             class="ai-hero-banner-cta-{{ ai_gen_id }}"
