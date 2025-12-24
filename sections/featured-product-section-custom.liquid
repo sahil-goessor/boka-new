@@ -1174,10 +1174,10 @@ function handleScroll() {
 }
 
 }
-span.h4.inline-richtext {
+{% comment %} span.h4.inline-richtext {
     font-size: calc(var(--font-body-scale) * 1.6rem);
     line-height: calc(1.5 / var(--font-body-scale));
-}
+} {% endcomment %}
 
 @media screen and (min-width: 1200px) {
 span.h4.inline-richtext {
@@ -1200,6 +1200,12 @@ ul.icon-with-text.icon-with-text--vertical.icon-with-text--inlined.list-unstyled
 span.h4.inline-richtext {
     font-size: calc(var(--font-body-scale) * 1.6rem);
     line-height: calc(1.5 / var(--font-body-scale));
+}
+
+@media screen and (min-width: 990px) {
+    .featured-product:not(.product--no-media)>.product__info-wrapper {
+        padding: 0 0 0 4rem;
+    }
 }
 </style>
 
