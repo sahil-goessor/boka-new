@@ -614,6 +614,21 @@
             "padding_top": 0,
             "padding_bottom": 0
           }
+        },
+        "icon_with_text_HedUMR": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Antioxidant-Rich_Green_Tea.png",
+            "heading_1": "<strong>Antioxidant-rich green tea</strong>",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/Refreshing_Mint.png",
+            "heading_2": "<strong>Refreshing mint</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
         }
       },
       "block_order": [
@@ -628,7 +643,8 @@
         "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
         "collapsible_tab_chH3cF",
-        "icon_with_text_kfTBKq"
+        "icon_with_text_kfTBKq",
+        "icon_with_text_HedUMR"
       ],
       "custom_css": [
         "a.link.product__view-details.animate-arrow {display: none;}",
