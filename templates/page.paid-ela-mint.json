@@ -603,6 +603,7 @@
         "icon_with_text_kfTBKq": {
           "type": "icon-with-text",
           "settings": {
+            "orientation": "inlined",
             "layout": "vertical",
             "icon_1": "none",
             "image_1": "shopify://shop_images/Soothing_Aloe_Vera.png",
@@ -610,9 +611,8 @@
             "icon_2": "return",
             "image_2": "shopify://shop_images/No_Artificial_Colors.png",
             "heading_2": "<strong>No artificial flavors or colors</strong>",
-            "icon_3": "none",
-            "image_3": "shopify://shop_images/No_Artificial_Colors.png",
-            "heading_3": "<strong>No artificial flavors or colors</strong>"
+            "padding_top": 0,
+            "padding_bottom": 0
           }
         }
       },
