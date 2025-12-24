@@ -103,7 +103,7 @@
             "hero_video_mobile": "",
             "media_border_radius": 0,
             "mobile_content_alignment": "center",
-            "mobile_layout_order": "default"
+            "mobile_layout_order": "image_first"
           },
           "blocks": {}
         }
