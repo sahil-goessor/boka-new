@@ -649,7 +649,8 @@
       "custom_css": [
         "a.link.product__view-details.animate-arrow {display: none;}",
         "h1.product__title.h1 {font-size: 30px;}",
-        ".price .price-item {margin: 0 0 0 0;}"
+        ".price .price-item {margin: 0 0 0 0;}",
+        "@media (min-width: 990px) and (max-width: 1200px) {.featured-product .product__media-list {width: 90% !important; }}"
       ],
       "name": "feature product section new",
       "settings": {
