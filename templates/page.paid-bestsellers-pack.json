@@ -607,10 +607,10 @@
             "layout": "vertical",
             "icon_1": "none",
             "image_1": "shopify://shop_images/Soothing_Aloe_Vera.png",
-            "heading_1": "<strong>Soothing Aloe Vera</strong>",
+            "heading_1": "<strong>No artificial flavors or colors</strong>",
             "icon_2": "return",
             "image_2": "shopify://shop_images/No_Artificial_Colors.png",
-            "heading_2": "<strong>No artificial flavors or colors</strong>",
+            "heading_2": "<strong>Fluoride-Free</strong>",
             "padding_top": 0,
             "padding_bottom": 0
           }
@@ -622,10 +622,10 @@
             "layout": "vertical",
             "icon_1": "none",
             "image_1": "shopify://shop_images/Antioxidant-Rich_Green_Tea.png",
-            "heading_1": "<strong>Antioxidant-rich green tea</strong>",
+            "heading_1": "<strong>PETA Cruelty-free Certified</strong>",
             "icon_2": "none",
             "image_2": "shopify://shop_images/Refreshing_Mint.png",
-            "heading_2": "<strong>Refreshing mint</strong>",
+            "heading_2": "<strong>Vegan</strong>",
             "padding_top": 0,
             "padding_bottom": 0
           }
