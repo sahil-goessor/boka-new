@@ -1017,6 +1017,7 @@
         },
         "icon_text_nKAcBR": {
           "type": "icon_text",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/peppermint.webp",
             "icon_alt": "Icon",
