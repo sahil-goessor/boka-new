@@ -654,7 +654,7 @@
       ],
       "name": "feature product section new",
       "settings": {
-        "product": "ela-mint-toothpaste",
+        "product": "bestsellers-sample-pack",
         "color_scheme": "background-1",
         "secondary_background": false,
         "media_size": "medium",
