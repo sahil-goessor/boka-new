@@ -990,7 +990,7 @@
         "icon_text_ryTd4U": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify://shop_images/Green_Tea_Extract_38770462-6f0f-41d8-b7d3-94c6f044ffc9.webp",
+            "icon": "shopify://shop_images/perlite.png",
             "icon_alt": "Icon",
             "heading": "Perlite & Kaolin",
             "heading_font_size_desktop": 18,
@@ -1004,7 +1004,7 @@
         "icon_text_w8JqDJ": {
           "type": "icon_text",
           "settings": {
-            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon": "shopify://shop_images/vitamins.png",
             "icon_alt": "Icon",
             "heading": "Vitamins A, C & E",
             "heading_font_size_desktop": 18,
