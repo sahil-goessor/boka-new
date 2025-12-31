@@ -86,7 +86,7 @@
             "claim_2_text": "Fluoride-free & clean ingredients",
             "claim_icon_size": 40,
             "claim_text_size": 14,
-            "button_text": "TRY NOW FOR $11.75",
+            "button_text": "TRY NOW FOR $18.00",
             "button_link": "",
             "button_bg_color": "#000000",
             "button_hover_bg_color": "#333333",
@@ -651,7 +651,7 @@
         "h1.product__title.h1 {font-size: 30px;}",
         ".price .price-item {margin: 0 0 0 0;}",
         "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
-        ".product-form__input .swatch {padding-right: 6.7rem !important}"
+        ".product-form__input .swatch {padding-right: 6.7rem !important;}"
       ],
       "name": "feature product section new",
       "settings": {
