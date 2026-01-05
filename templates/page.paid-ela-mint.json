@@ -1044,8 +1044,14 @@
         "button_bpWGPA": {
           "type": "button",
           "settings": {
+            "button_action": "add_and_checkout",
+            "variant_id": "7744260046891",
+            "product_quantity": 1,
             "button_label": "SHOP NOW",
-            "button_link": "shopify://products/ela-mint-toothpaste",
+            "button_link": "",
+            "second_button_action": "link",
+            "second_variant_id": "",
+            "second_product_quantity": 1,
             "second_button_label": "",
             "second_button_link": ""
           }
