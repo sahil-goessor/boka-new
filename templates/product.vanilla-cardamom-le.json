@@ -54,7 +54,7 @@
         "richtext_QNXnBD": {
           "type": "richtext",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.text_above_buy_buttons.value }}</p>",
+            "text": "<p>Save 15% with code: VANILLA15 at checkout</p>",
             "text_style": "body",
             "quick_add_hide": false
           }
