@@ -166,7 +166,7 @@
     display: inline-block;
   }
 
-  .ai-hero-banner-cta-{{ ai_gen_id }} {
+  {% comment %} .ai-hero-banner-cta-{{ ai_gen_id }} {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -186,6 +186,50 @@
 
   .ai-hero-banner-cta-{{ ai_gen_id }}:hover {
     background-color: {{ block.settings.button_hover_bg_color }};
+  } {% endcomment %}
+
+  .ai-hero-banner-cta-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: {{ block.settings.button_width }}px;
+    height: {{ block.settings.button_height }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .ai-hero-banner-cta-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+  }
+
+  .ai-hero-banner-cta-{{ ai_gen_id }}:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .ai-hero-banner-cta-loader-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-hero-banner-cta-loader-{{ ai_gen_id }} svg {
+    animation: ai-hero-banner-spin-{{ ai_gen_id }} 1s linear infinite;
+  }
+
+  @keyframes ai-hero-banner-spin-{{ ai_gen_id }} {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
   .ai-hero-banner-media-{{ ai_gen_id }} {
@@ -504,12 +548,22 @@
 
       {% if block.settings.button_text != blank %}
         <div class="ai-hero-banner-cta-wrapper-{{ ai_gen_id }} ai_button_sticky_hide">
-          <a
-            href="{{ block.settings.button_link }}"
+          <button
+            type="button"
             class="ai-hero-banner-cta-{{ ai_gen_id }}"
+            data-button-action="{{ block.settings.button_action }}"
+            data-button-link="{{ block.settings.button_link }}"
+            data-variant-id="{{ block.settings.variant_id }}"
+            data-product-quantity="{{ block.settings.product_quantity }}"
           >
-            {{ block.settings.button_text }}
-          </a>
+            <span class="ai-hero-banner-cta-text-{{ ai_gen_id }}">{{ block.settings.button_text }}</span>
+            <span class="ai-hero-banner-cta-loader-{{ ai_gen_id }}" style="display: none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/>
+                <path d="M12 2 A10 10 0 0 1 22 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
         </div>
       {% endif %}
     </div>
@@ -594,6 +648,93 @@
     </div>
   </div>
 </div>
+
+<script>
+(function() {
+  const buttons = document.querySelectorAll('.ai-hero-banner-cta-{{ ai_gen_id }}');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', async function(e) {
+      e.preventDefault();
+      
+      const action = this.dataset.buttonAction;
+      const link = this.dataset.buttonLink;
+      const variantId = this.dataset.variantId;
+      const quantity = parseInt(this.dataset.productQuantity) || 1;
+      
+      // If action is regular link, just navigate
+      if (action === 'link' || !variantId) {
+        if (link) {
+          window.location.href = link;
+        }
+        return;
+      }
+      
+      // Show loader
+      const textEl = this.querySelector('.ai-hero-banner-cta-text-{{ ai_gen_id }}');
+      const loaderEl = this.querySelector('.ai-hero-banner-cta-loader-{{ ai_gen_id }}');
+      textEl.style.display = 'none';
+      loaderEl.style.display = 'inline-flex';
+      this.disabled = true;
+      
+      try {
+        // Add to cart via AJAX
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            items: [{
+              id: variantId,
+              quantity: quantity
+            }]
+          })
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to add to cart');
+        }
+        
+        // Trigger cart update event for themes that listen to it
+        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+          bubbles: true
+        }));
+        
+        // Redirect based on action
+        if (action === 'add_and_checkout') {
+          window.location.href = '/checkout';
+        } else if (action === 'add_and_cart') {
+          window.location.href = '/cart';
+        } else if (action === 'add_and_stay') {
+          // Just added to cart, show success briefly then reset button
+          textEl.textContent = '✓ Added to Cart';
+          textEl.style.display = 'inline';
+          loaderEl.style.display = 'none';
+          this.disabled = false;
+          
+          setTimeout(() => {
+            textEl.textContent = '{{ block.settings.button_text }}';
+          }, 2000);
+        }
+      } catch (error) {
+        console.error('Error adding to cart:', error);
+        
+        // Show error state
+        textEl.textContent = 'Error - Try Again';
+        textEl.style.display = 'inline';
+        loaderEl.style.display = 'none';
+        this.disabled = false;
+        
+        setTimeout(() => {
+          textEl.textContent = '{{ block.settings.button_text }}';
+        }, 2000);
+      }
+    });
+  });
+})();
+</script>
 
 {% schema %}
 {
@@ -936,6 +1077,44 @@
       "content": "Button"
     },
     {
+      "type": "select",
+      "id": "button_action",
+      "label": "Button action",
+      "options": [
+        {
+          "value": "link",
+          "label": "Regular link (no cart action)"
+        },
+        {
+          "value": "add_and_checkout",
+          "label": "Add to cart → Checkout"
+        },
+        {
+          "value": "add_and_cart",
+          "label": "Add to cart → Cart page"
+        },
+        {
+          "value": "add_and_stay",
+          "label": "Add to cart → Stay on page"
+        }
+      ],
+      "default": "link",
+      "info": "Choose what happens when button is clicked"
+    },
+    {
+      "type": "text",
+      "id": "variant_id",
+      "label": "Product Variant ID",
+      "info": "Required for 'Add to cart' actions. Find this in the product URL (e.g., ?variant=12345678)"
+    },
+    {
+      "type": "number",
+      "id": "product_quantity",
+      "label": "Quantity",
+      "default": 1,
+      "info": "Number of items to add to cart"
+    },
+    {
       "type": "text",
       "id": "button_text",
       "label": "Button text",
@@ -944,7 +1123,8 @@
     {
       "type": "url",
       "id": "button_link",
-      "label": "Button link"
+      "label": "Button link",
+      "info": "Used for 'Regular link' action or as fallback"
     },
     {
       "type": "color",
