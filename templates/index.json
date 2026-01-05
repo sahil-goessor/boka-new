@@ -160,9 +160,9 @@
           "settings": {
             "image": "shopify://shop_images/VC_Featured_Banner_Op_2.webp",
             "image_link": "shopify://products/vanilla-cardamom-n-ha-toothpaste",
-            "title": "A Limited-Edition Indulgence",
-            "text": "<p>Savor every brush with the comforting taste of vanilla and a hint of cardamom spice.</p>",
-            "link_label": "SHOP VANILLA CARDAMOM",
+            "title": "<em><strong>A Limited-Edition Indulgence</strong></em>",
+            "text": "<p>Limited quantities remaining! Get it before it's gone for good. Save 15% with code: VANILLA15.</p>",
+            "link_label": "Shop Vanilla Cardamom",
             "link": "shopify://products/vanilla-cardamom-n-ha-toothpaste"
           }
         },
@@ -171,9 +171,9 @@
           "settings": {
             "image": "shopify://shop_images/Holiday_Kit_Featured_Banner.webp",
             "image_link": "shopify://products/holiday-2-pack-gift-set",
-            "title": "<strong>Treat someone special with the Boka Holiday Kit </strong>",
+            "title": "<em><strong>Treat someone special with the Boka Holiday Kit </strong></em>",
             "text": "<p>The perfect mint duo that adds a little extra joy to their daily brush ritual.</p>",
-            "link_label": "SHOP THE HOLIDAY KIT",
+            "link_label": "Gift the Holiday Kit",
             "link": "shopify://products/holiday-2-pack-gift-set"
           }
         }
