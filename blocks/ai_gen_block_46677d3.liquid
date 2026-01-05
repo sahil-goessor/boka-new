@@ -118,7 +118,7 @@
     margin: 0 0 {{ block.settings.body_spacing }}px;
   }
 
-  .ai-image-text-button-{{ ai_gen_id }} {
+  {% comment %} .ai-image-text-button-{{ ai_gen_id }} {
     display: inline-block;
     padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
     background-color: {{ block.settings.button_bg_color }};
@@ -132,6 +132,43 @@
   .ai-image-text-button-{{ ai_gen_id }}:hover {
     background-color: {{ block.settings.button_hover_bg_color }};
     color: {{ block.settings.button_hover_text_color }};
+  } {% endcomment %}
+
+  .ai-image-text-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .ai-image-text-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+  }
+
+  .ai-image-text-button-{{ ai_gen_id }}:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .ai-image-text-button-loader-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-text-button-loader-{{ ai_gen_id }} svg {
+    animation: ai-image-text-spin-{{ ai_gen_id }} 1s linear infinite;
   }
 
   .ai-reviews-slider-{{ ai_gen_id }} {
@@ -287,7 +324,7 @@
     margin-top: {{ block.settings.cta_spacing }}px;
   }
 
-  .ai-reviews-cta-button-{{ ai_gen_id }} {
+  {% comment %} .ai-reviews-cta-button-{{ ai_gen_id }} {
     display: inline-block;
     padding: {{ block.settings.reviews_cta_padding_vertical }}px {{ block.settings.reviews_cta_padding_horizontal }}px;
     background-color: {{ block.settings.reviews_cta_bg_color }};
@@ -301,6 +338,48 @@
   .ai-reviews-cta-button-{{ ai_gen_id }}:hover {
     background-color: {{ block.settings.reviews_cta_hover_bg_color }};
     color: {{ block.settings.reviews_cta_hover_text_color }};
+  } {% endcomment %}
+
+  .ai-reviews-cta-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: {{ block.settings.reviews_cta_padding_vertical }}px {{ block.settings.reviews_cta_padding_horizontal }}px;
+    background-color: {{ block.settings.reviews_cta_bg_color }};
+    color: {{ block.settings.reviews_cta_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.reviews_cta_border_radius }}px;
+    font-size: {{ block.settings.reviews_cta_font_size }}px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .ai-reviews-cta-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.reviews_cta_hover_bg_color }};
+    color: {{ block.settings.reviews_cta_hover_text_color }};
+  }
+
+  .ai-reviews-cta-button-{{ ai_gen_id }}:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .ai-reviews-cta-button-loader-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-reviews-cta-button-loader-{{ ai_gen_id }} svg {
+    animation: ai-image-text-spin-{{ ai_gen_id }} 1s linear infinite;
+  }
+
+  @keyframes ai-image-text-spin-{{ ai_gen_id }} {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
   @media screen and (max-width: 749px) {
@@ -462,6 +541,25 @@
             <div class="ai-image-text-body-{{ ai_gen_id }}">{{ block.settings.body }}</div>
           {% endif %}
 
+          {% if block.settings.button_text != blank %}
+            <button
+              type="button"
+              class="ai-image-text-button-{{ ai_gen_id }}"
+              data-button-action="{{ block.settings.button_action }}"
+              data-button-link="{{ block.settings.button_link }}"
+              data-variant-id="{{ block.settings.variant_id }}"
+              data-product-quantity="{{ block.settings.product_quantity }}"
+            >
+              <span class="ai-image-text-button-text-{{ ai_gen_id }}">{{ block.settings.button_text }}</span>
+              <span class="ai-image-text-button-loader-{{ ai_gen_id }}" style="display: none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/>
+                  <path d="M12 2 A10 10 0 0 1 22 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </button>
+          {% endif %}
+
           <review-slider-{{ ai_gen_id }} class="ai-reviews-slider-{{ ai_gen_id }}">
             <div class="ai-reviews-slider-wrapper-{{ ai_gen_id }}">
               <div class="ai-reviews-slider-track-{{ ai_gen_id }}">
@@ -552,11 +650,24 @@
               </button>
             </div>
 
-            {% if block.settings.reviews_button_text != blank and block.settings.reviews_button_link != blank %}
+            {% if block.settings.reviews_button_text != blank %}
               <div class="ai-reviews-cta-wrapper-{{ ai_gen_id }}">
-                <a href="{{ block.settings.reviews_button_link }}" class="ai-reviews-cta-button-{{ ai_gen_id }}">
-                  {{ block.settings.reviews_button_text }}
-                </a>
+                <button
+                  type="button"
+                  class="ai-reviews-cta-button-{{ ai_gen_id }}"
+                  data-button-action="{{ block.settings.reviews_button_action }}"
+                  data-button-link="{{ block.settings.reviews_button_link }}"
+                  data-variant-id="{{ block.settings.reviews_variant_id }}"
+                  data-product-quantity="{{ block.settings.reviews_product_quantity }}"
+                >
+                  <span class="ai-reviews-cta-button-text-{{ ai_gen_id }}">{{ block.settings.reviews_button_text }}</span>
+                  <span class="ai-reviews-cta-button-loader-{{ ai_gen_id }}" style="display: none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/>
+                      <path d="M12 2 A10 10 0 0 1 22 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
               </div>
             {% endif %}
           </review-slider-{{ ai_gen_id }}>
@@ -639,6 +750,91 @@
     }
 
     customElements.define('review-slider-{{ ai_gen_id }}', ReviewSlider{{ ai_gen_id }});
+  })();
+
+  // Cart functionality for both buttons
+  (function() {
+    const buttons = document.querySelectorAll('.ai-image-text-button-{{ ai_gen_id }}, .ai-reviews-cta-button-{{ ai_gen_id }}');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', async function(e) {
+        e.preventDefault();
+        
+        const action = this.dataset.buttonAction;
+        const link = this.dataset.buttonLink;
+        const variantId = this.dataset.variantId;
+        const quantity = parseInt(this.dataset.productQuantity) || 1;
+        
+        // If action is regular link, just navigate
+        if (action === 'link' || !variantId) {
+          if (link) {
+            window.location.href = link;
+          }
+          return;
+        }
+        
+        // Show loader
+        const textEl = this.querySelector('[class$="-text-{{ ai_gen_id }}"]');
+        const loaderEl = this.querySelector('[class$="-loader-{{ ai_gen_id }}"]');
+        const originalText = textEl.textContent;
+        textEl.style.display = 'none';
+        loaderEl.style.display = 'inline-flex';
+        this.disabled = true;
+        
+        try {
+          // Add to cart via AJAX
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              items: [{
+                id: variantId,
+                quantity: quantity
+              }]
+            })
+          });
+          
+          if (!response.ok) {
+            throw new Error('Failed to add to cart');
+          }
+          
+          // Trigger cart update event
+          document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+            bubbles: true
+          }));
+          
+          // Redirect based on action
+          if (action === 'add_and_checkout') {
+            window.location.href = '/checkout';
+          } else if (action === 'add_and_cart') {
+            window.location.href = '/cart';
+          } else if (action === 'add_and_stay') {
+            textEl.textContent = '✓ Added to Cart';
+            textEl.style.display = 'inline';
+            loaderEl.style.display = 'none';
+            this.disabled = false;
+            
+            setTimeout(() => {
+              textEl.textContent = originalText;
+            }, 2000);
+          }
+        } catch (error) {
+          console.error('Error adding to cart:', error);
+          
+          textEl.textContent = 'Error - Try Again';
+          textEl.style.display = 'inline';
+          loaderEl.style.display = 'none';
+          this.disabled = false;
+          
+          setTimeout(() => {
+            textEl.textContent = originalText;
+          }, 2000);
+        }
+      });
+    });
   })();
 </script>
 
@@ -865,6 +1061,44 @@
       "content": "Button"
     },
     {
+      "type": "select",
+      "id": "button_action",
+      "label": "Button action",
+      "options": [
+        {
+          "value": "link",
+          "label": "Regular link (no cart action)"
+        },
+        {
+          "value": "add_and_checkout",
+          "label": "Add to cart → Checkout"
+        },
+        {
+          "value": "add_and_cart",
+          "label": "Add to cart → Cart page"
+        },
+        {
+          "value": "add_and_stay",
+          "label": "Add to cart → Stay on page"
+        }
+      ],
+      "default": "link",
+      "info": "Choose what happens when button is clicked"
+    },
+    {
+      "type": "text",
+      "id": "variant_id",
+      "label": "Product Variant ID",
+      "info": "Required for 'Add to cart' actions. Find this in the product URL (e.g., ?variant=12345678)"
+    },
+    {
+      "type": "number",
+      "id": "product_quantity",
+      "label": "Quantity",
+      "default": 1,
+      "info": "Number of items to add to cart"
+    },
+    {
       "type": "text",
       "id": "button_text",
       "label": "Button text",
@@ -873,7 +1107,8 @@
     {
       "type": "url",
       "id": "button_link",
-      "label": "Button link"
+      "label": "Button link",
+      "info": "Used for 'Regular link' action or as fallback"
     },
     {
       "type": "header",
@@ -1142,6 +1377,44 @@
       "content": "Reviews button"
     },
     {
+      "type": "select",
+      "id": "reviews_button_action",
+      "label": "Button action",
+      "options": [
+        {
+          "value": "link",
+          "label": "Regular link (no cart action)"
+        },
+        {
+          "value": "add_and_checkout",
+          "label": "Add to cart → Checkout"
+        },
+        {
+          "value": "add_and_cart",
+          "label": "Add to cart → Cart page"
+        },
+        {
+          "value": "add_and_stay",
+          "label": "Add to cart → Stay on page"
+        }
+      ],
+      "default": "link",
+      "info": "Choose what happens when button is clicked"
+    },
+    {
+      "type": "text",
+      "id": "reviews_variant_id",
+      "label": "Product Variant ID",
+      "info": "Required for 'Add to cart' actions. Find this in the product URL (e.g., ?variant=12345678)"
+    },
+    {
+      "type": "number",
+      "id": "reviews_product_quantity",
+      "label": "Quantity",
+      "default": 1,
+      "info": "Number of items to add to cart"
+    },
+    {
       "type": "text",
       "id": "reviews_button_text",
       "label": "Button text",
@@ -1150,7 +1423,8 @@
     {
       "type": "url",
       "id": "reviews_button_link",
-      "label": "Button link"
+      "label": "Button link",
+      "info": "Used for 'Regular link' action or as fallback"
     },
     {
       "type": "range",
