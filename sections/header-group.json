@@ -14,13 +14,6 @@
     "announcement_bar_slider_KXHDi9": {
       "type": "announcement-bar-slider",
       "blocks": {
-        "announcement_h4aykE": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free Toiletry Bag with all $60+ purchases!",
-            "link": "shopify://products/boka-toiletry-bag"
-          }
-        },
         "announcement_zEHeqc": {
           "type": "announcement",
           "settings": {
@@ -30,7 +23,6 @@
         }
       },
       "block_order": [
-        "announcement_h4aykE",
         "announcement_zEHeqc"
       ],
       "custom_css": [
