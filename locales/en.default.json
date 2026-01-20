@@ -488,6 +488,9 @@
         "refund_policy": "Returns & Exchanges",
         "terms_of_service": "Terms & Conditions",
         "privacy_policy": "Privacy Policy"
+      },
+      "payment": {
+        "purchase_options_agreement_label": "All cancellations are subject to the {{ cancellation_policy_label }}."
       }
     }
   }
