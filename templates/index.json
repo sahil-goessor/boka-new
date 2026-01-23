@@ -155,17 +155,6 @@
     "multicolumn_BWCRzU": {
       "type": "multicolumn",
       "blocks": {
-        "column_yyRYPY": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/VC_Featured_Banner_Op_2.webp",
-            "image_link": "shopify://products/vanilla-cardamom-n-ha-toothpaste",
-            "title": "<em><strong>A Limited-Edition Indulgence</strong></em>",
-            "text": "<p>Limited quantities remaining! Get it before it's gone for good. Save 15% with code: VANILLA15.</p>",
-            "link_label": "Shop Vanilla Cardamom",
-            "link": "shopify://products/vanilla-cardamom-n-ha-toothpaste"
-          }
-        },
         "column_3cJ9YR": {
           "type": "column",
           "settings": {
@@ -176,11 +165,22 @@
             "link_label": "Shop Mouthwash Tablets",
             "link": "shopify://products/restore-mouthwash"
           }
+        },
+        "column_yyRYPY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/VC_Featured_Banner_Op_2.webp",
+            "image_link": "shopify://products/vanilla-cardamom-n-ha-toothpaste",
+            "title": "<em><strong>A Limited-Edition Indulgence</strong></em>",
+            "text": "<p>Limited quantities remaining! Get it before it's gone for good. Save 15% with code: VANILLA15.</p>",
+            "link_label": "Shop Vanilla Cardamom",
+            "link": "shopify://products/vanilla-cardamom-n-ha-toothpaste"
+          }
         }
       },
       "block_order": [
-        "column_yyRYPY",
-        "column_3cJ9YR"
+        "column_3cJ9YR",
+        "column_yyRYPY"
       ],
       "custom_css": [
         ".column-heading {padding: unset;}"
