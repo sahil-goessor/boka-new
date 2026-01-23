@@ -101,8 +101,8 @@
         "image_RJU7Ux": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/HP_Banner_Desktop_2.webp",
-            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_2.webp",
+            "image": "shopify://shop_images/HP_Banner_Desktop_3.webp",
+            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_3b.webp",
             "heading": "Fluoride-Free Oral Care",
             "image_link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
             "heading_font_size": 40,
@@ -112,7 +112,7 @@
             "subheading_font_size": 20,
             "subheading_font_size_mobile": 16,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/shop-all",
+            "link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
             "button_style_secondary": true,
             "button_label2": "",
             "link2": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
