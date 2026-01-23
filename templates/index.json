@@ -169,12 +169,12 @@
         "column_yyRYPY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/VC_Featured_Banner_Op_2.webp",
-            "image_link": "shopify://products/vanilla-cardamom-n-ha-toothpaste",
-            "title": "<em><strong>A Limited-Edition Indulgence</strong></em>",
-            "text": "<p>Limited quantities remaining! Get it before it's gone for good. Save 15% with code: VANILLA15.</p>",
-            "link_label": "Shop Vanilla Cardamom",
-            "link": "shopify://products/vanilla-cardamom-n-ha-toothpaste"
+            "image": "shopify://shop_images/Option_3.png",
+            "image_link": "shopify://products/bestsellers-sample-pack",
+            "title": "<em><strong>Your Boka Starter Pack</strong></em>",
+            "text": "<p>Try three bestsellers and get a free toothbrush with our sample size starter pack!</p>",
+            "link_label": "Try Now",
+            "link": "shopify://products/bestsellers-sample-pack"
           }
         }
       },
