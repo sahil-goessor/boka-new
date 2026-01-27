@@ -51,13 +51,14 @@
       "blocks": {
         "image_RJU7Ux": {
           "settings": {
-            "image": "shopify://shop_images/Probiotics_HP_Desktop_1.webp",
-            "image_mobile": "shopify://shop_images/Probiotics_HP_Mobile_1.webp",
-            "heading": "Smile Brighter, Canada—We Now Ship to You!",
+            "image": "shopify://shop_images/HP_Banner_Desktop_3_d214b748-eb0d-46a2-81e0-f86052e1e8f4.webp",
+            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_3b_46a03bb7-4831-4149-8b1a-21c772def352.webp",
+            "heading": "Fluoride-Free Oral Care",
             "image_link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
-            "subheading": "Boka now delivers clean, effective oral care right to your doorstep, from coast to coast!",
+            "subheading": "Thoughtfully formulated without sulfates, parabens, artificial colors and dyes.",
             "link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
-            "link2": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste"
+            "link2": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
+            "subheading_font_size": 20
           }
         }
       }
