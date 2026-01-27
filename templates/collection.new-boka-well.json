@@ -26,7 +26,7 @@
         "heading_rPLNVg": {
           "type": "heading",
           "settings": {
-            "heading": "The <em>Advanced</em> n-Ha <br>Oral Probiotic Toothpaste",
+            "heading": "The <em>Advanced</em> n-Ha <br><h1 style=\"font-size: 48px !important;margin: 0;\">Oral Probiotic Toothpaste</h1>",
             "heading_size": "h1",
             "heading_tag": "default"
           }
@@ -372,6 +372,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#090909",
         "bullets_line_color": "#000000",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -521,6 +522,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#090909",
         "bullets_line_color": "#000000",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -883,6 +885,7 @@
         "custom_text_color": "#000000",
         "bullets_color": "#090909",
         "bullets_line_color": "#000000",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
@@ -1201,8 +1204,14 @@
           "type": "button",
           "disabled": true,
           "settings": {
+            "button_action": "link",
+            "variant_id": "",
+            "product_quantity": 1,
             "button_label": "Button label",
             "button_link": "",
+            "second_button_action": "link",
+            "second_variant_id": "",
+            "second_product_quantity": 1,
             "second_button_label": "",
             "second_button_link": ""
           }
@@ -1259,9 +1268,12 @@
             "image_mobile": "shopify://shop_images/Say_Hi_To_Probiotics_Mobile_a3d4641b-ec3d-4b14-9cd5-f7c543713b90.webp",
             "heading": "The Future\nof Oral Care",
             "image_link": "",
-            "heading_size": "h1",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 36,
             "heading_tag": "default",
             "subheading": "Probiotics are more than just for your gut. Boka’s Probiotic Toothpaste is thoughtfully formulated to support your oral microbiome, helping it nourish and flourish.",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
             "button_label": "TRY NOW",
             "link": "shopify://collections/boka-probiotics",
             "button_style_secondary": false,
