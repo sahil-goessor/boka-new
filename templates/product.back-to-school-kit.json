@@ -50,7 +50,7 @@
         "richtext_EexgDK": {
           "type": "richtext",
           "settings": {
-            "text": "<p><strong>Limited time offer: </strong>FREE <a href=\"https://www.boka.com/products/kids-sonic-toothbrush\" title=\"https://www.boka.com/products/kids-sonic-toothbrush\">Kids Sonic Toothbrush </a>with the purchase of a Kids n-Ha Toothpaste Variety Pack!</p>",
+            "text": "<p><strong>Limited time offer: </strong>FREE <a href=\"https://www.boka.com/products/kids-sonic-toothbrush\" title=\"https://www.boka.com/products/kids-sonic-toothbrush\">Kids Sonic Toothbrush </a>with the purchase of a Kids n-Ha Toothpaste Variety Pack! </p>",
             "text_style": "body",
             "quick_add_hide": false
           }
