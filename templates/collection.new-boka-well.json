@@ -34,7 +34,7 @@
         "text_kVpUhP": {
           "type": "text",
           "settings": {
-            "text": "<p>Formulated with <em>Lactobacillus paracasei </em>probiotics that are known to support the growth of good bacteria, promoting microbiome goodness with every brush.</p>",
+            "text": "<p>Formulated with <em>Lactobacillus paracasei </em>probiotics that are known to support the growth of good bacteria, promoting microbiome goodness with every brush. This fluoride-free toothpaste helps your teeth feel cleaner and delivers a noticeably fresher breath experience without harsh chemicals.</p><p>Designed to be gentle, SLS-free, and effective, Boka’s probiotic toothpaste works to help support a healthy-looking smile when used twice daily as part of your oral care routine.<br/></p>",
             "text_style": "body"
           }
         },
@@ -1132,7 +1132,7 @@
             "heading_size": "h1",
             "heading_font_size_desktop": 48,
             "heading_font_size_mobile": 30,
-            "heading_tag": "default"
+            "heading_tag": "h2"
           }
         },
         "text_BNLwfx": {
@@ -1153,7 +1153,7 @@
             "text_font_size_desktop": 18,
             "heading_font_size_mobile": 21,
             "text_font_size_mobile": 16,
-            "text": "<p>Designed for the oral microbiome</p>",
+            "text": "<p>Designed specifically for the oral microbiome, probiotics help promote good bacteria, support a balanced oral environment, and reduce the impact of harmful bacteria.</p>",
             "text_style": "body"
           }
         },
@@ -1167,7 +1167,7 @@
             "text_font_size_desktop": 18,
             "heading_font_size_mobile": 21,
             "text_font_size_mobile": 16,
-            "text": "<p>Mimics tooth enamel</p>",
+            "text": "<p>This hydroxyapatite toothpaste ingredient mimics natural tooth enamel</p>",
             "text_style": "body"
           }
         },
@@ -1196,7 +1196,7 @@
             "text_font_size_desktop": 18,
             "heading_font_size_mobile": 21,
             "text_font_size_mobile": 16,
-            "text": "<p>Provide refreshing flavors</p>",
+            "text": "<p>Carefully selected extracts provide refreshing mint flavor, citrus notes, and a clean taste without artificial additives, helping promote fresher breath and an enjoyable brushing experience.</p>",
             "text_style": "body"
           }
         },
@@ -1362,7 +1362,7 @@
           "settings": {
             "heading": "What is Boka Probiotic Toothpaste?",
             "icon": "question_mark",
-            "row_content": "<p>Boka Probiotic is a fluoride-free toothpaste formulated with clinically studied Lactobacillus paracasei probiotics. It supports a healthy oral microbiome.</p>",
+            "row_content": "<p>Boka Probiotic is a fluoride-free toothpaste formulated with clinically studied Lactobacillus paracasei probiotics. It supports a healthy oral microbiome for a balanced oral care routine, and helps maintain clean teeth and a confident smile.</p>",
             "page": ""
           }
         },
@@ -1371,7 +1371,7 @@
           "settings": {
             "heading": "How do probiotics benefit oral health?",
             "icon": "question_mark",
-            "row_content": "<p>Probiotics support the oral microbiome, helping good bacteria thrive for oral wellness.</p>",
+            "row_content": "<p>Probiotics support the oral microbiome by encouraging beneficial bacteria thrive. This balance supports gum condition, promotes fresher breath, and helps reduce the impact of harmful bacteria linked to oral discomfort.</p>",
             "page": ""
           }
         },
@@ -1380,7 +1380,7 @@
           "settings": {
             "heading": "What makes Boka Probiotic Toothpaste different from regular toothpaste?",
             "icon": "question_mark",
-            "row_content": "<p>Boka combines probiotics with nano-hydroxyapatite (n-Ha), a breakthrough mineral that mimics tooth enamel. It’s a fluoride-free alternative that’s suitable for daily use and has been researched for decades.</p>",
+            "row_content": "<p>Boka combines probiotics with nano-hydroxyapatite (n-Ha), a breakthrough hydroxyapatite mineral that mimics tooth enamel. It’s a fluoride-free alternative that’s suitable for daily use and has been researched for decades.</p>",
             "page": ""
           }
         },
@@ -1389,7 +1389,7 @@
           "settings": {
             "heading": "What flavors are available?",
             "icon": "question_mark",
-            "row_content": "<p>Choose from two flavors: Citrus Mint and Peppermint Blossom. Both mood-enhancing and fresh for your breath.</p>",
+            "row_content": "<p>Choose from two refreshing options: Citrus Mint and Peppermint Blossom. Both deliver a clean mint taste, promote fresher breath, and are designed to leave your mouth feeling fresh without being overpowering.</p>",
             "page": ""
           }
         },
@@ -1428,6 +1428,15 @@
             "row_content": "<p>No, it’s free from fluoride, sulfates, parabens, artificial flavors, and colors. It’s a clean, biocompatible formula. Just clean, safe ingredients for your oral health.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_AWMybV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will probiotic toothpaste help with fresher breath & brighter smile?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. By supporting the oral microbiome, probiotics help reduce odor-causing bacteria, leading to fresher breath. Combined with nano-hydroxyapatite, regular brushing may also help reduce surface stain buildup.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -1438,7 +1447,8 @@
         "collapsible_row_4Gr9nx",
         "collapsible_row_nmN7Ed",
         "collapsible_row_RpiabC",
-        "collapsible_row_3rDxHW"
+        "collapsible_row_3rDxHW",
+        "collapsible_row_AWMybV"
       ],
       "settings": {
         "caption": "",
