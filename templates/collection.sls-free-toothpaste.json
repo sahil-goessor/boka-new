@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Why should I choose SLS-free toothpaste?",
             "icon": "none",
-            "row_content": "<p>Going SLS-free means less irritation to delicate oral tissues, reduced dryness, and fewer flare-ups of mouth ulcers. Many dental professionals suggest an SLS-free toothpaste for patients who need a gentle, everyday oral care routine that still targets plaque and surface stains. </p>",
+            "row_content": "<p>Going SLS-free means less irritation to delicate oral tissues, reduced dryness, and fewer flare-ups of mouth ulcers. Many dental professionals suggest an SLS-free toothpaste for patients who need a gentle, everyday oral care routine that still targets tartar, plaque, and surface stains. </p>",
             "page": ""
           }
         },
@@ -87,7 +87,7 @@
           "settings": {
             "heading": "Does SLS-free toothpaste still provide effective cleaning?",
             "icon": "none",
-            "row_content": "<p>Our formulation relies on polishing hydrates and plant-derived oils that lift debris while nano-hydroxyapatite supplies essential minerals to repair weakened spots in the tooth surface. It’s proven to remove plaque as effectively as foamy pastes, minus the harshness.</p>",
+            "row_content": "<p>Yes. Our formula gently supports removal of debris and surface stains using non-abrasive cleansing agents. </p>",
             "page": ""
           }
         },
@@ -132,7 +132,7 @@
           "settings": {
             "heading": "Why is Boka considered one of the best SLS-free and fluoride-free toothpaste options for sensitive teeth?",
             "icon": "none",
-            "row_content": "<p>Boka stands out among brands because it combines science-backed protection with a clean-ingredients approach ideal for sensitive teeth. Our fluoride-free toothpaste is completely free from harsh chemicals and irritating surfactants like SLS, making it a top toothpaste choice for anyone looking to care for their teeth, gums, and overall oral health without compromise.</p><p>Unlike traditional whitening toothpaste that may be abrasive or containing artificial additives, Boka offers effective teeth whitening powered by nano-hydroxyapatite—a safe alternative that strengthens enamel and brightens your smile. The mint taste is crisp and refreshing, and the formula is 100% vegan, making it one of the best daily-use toothpaste options for individuals who prioritize performance, purity, and comfort.</p>",
+            "row_content": "<p>Boka stands out among brands because it combines science-backed protection with a clean-ingredients approach ideal for sensitive teeth. Our fluoride-free toothpaste is completely free from harsh chemicals and irritating surfactants like SLS, making it a top toothpaste choice for anyone looking to care for their teeth, gums, and overall oral health without compromise.</p><p>Unlike traditional whitening toothpaste that may be abrasive or contain artificial additives, Boka offers effective teeth whitening powered by nano-hydroxyapatite—a safe alternative that strengthens enamel and brightens your smile. The mint taste is crisp and refreshing, and the formula is 100% vegan, making it one of the best daily-use toothpaste options for individuals who prioritize performance, purity, and comfort.</p>",
             "page": ""
           }
         }
@@ -151,9 +151,9 @@
         "caption": "",
         "heading": "Questions About Boka SLS Free Toothpaste",
         "heading_size": "h1",
-        "heading_tag": "default",
+        "heading_tag": "h2",
         "heading_alignment": "center",
-        "description": "If you're curious about toothpaste without sodium lauryl sulfate, we've got you covered. We've put together some frequently asked questions about our toothpaste that we think you'll find helpful.",
+        "description": "If you're curious about toothpaste without sodium lauryl sulfate, we've got you covered. We've put together some frequently asked questions about our toothpaste to help you shop confidently and choose a formula that supports long-term oral comfort",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
