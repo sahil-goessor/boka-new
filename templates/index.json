@@ -602,6 +602,15 @@
             "row_content": "<p>Boka is made for people who want effective oral care without harsh ingredients. Our products are ideal for:</p><ul><li>Anyone looking for fluoride-free toothpaste<br/></li><li>People with sensitive teeth or enamel concerns<br/></li><li>Families shopping for safe oral care for kids<br/></li><li>Those avoiding harsh ingredients<br/></li><li>Customers who prefer convenient, subscription-based oral care</li></ul>",
             "page": ""
           }
+        },
+        "collapsible_row_dbzgDg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can kids use Boka toothpaste?",
+            "icon": "none",
+            "row_content": "<p>Yes! Boka offers gentle formulas designed for both adults and <a href=\"https://www.boka.com/collections/kids\" title=\"https://www.boka.com/collections/kids\">kids</a>.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -609,7 +618,8 @@
         "collapsible_row_rbiVL6",
         "collapsible_row_LTNXLJ",
         "collapsible_row_kNkxzc",
-        "collapsible_row_F8q9F7"
+        "collapsible_row_F8q9F7",
+        "collapsible_row_dbzgDg"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
