@@ -579,18 +579,18 @@
         "collapsible_row_kNkxzc": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "What products does Boka sell?",
+            "icon": "none",
+            "row_content": "<p>Boka offers a complete lineup of oral care essentials, including whitening powder, fluoride-free toothpaste and mouthwash, travel-size toothpaste for life on the go, and kid-friendly formulas. Our products are available as one-time purchases or convenient subscriptions.</p>",
             "page": ""
           }
         },
         "collapsible_row_F8q9F7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Who Boka Is For?",
+            "icon": "none",
+            "row_content": "<p>Boka is made for people who want effective oral care without harsh ingredients. Our products are ideal for:</p><ul><li>Anyone looking for fluoride-free toothpaste<br/></li><li>People with sensitive teeth or enamel concerns<br/></li><li>Families shopping for safe oral care for kids<br/></li><li>Those avoiding harsh ingredients<br/></li><li>Customers who prefer convenient, subscription-based oral care</li></ul>",
             "page": ""
           }
         }
