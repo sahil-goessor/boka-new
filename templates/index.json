@@ -555,6 +555,74 @@
         "padding_bottom_mobile": 36
       }
     },
+    "collapsible_content_HXMWKe": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_ETMVg6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Boka?",
+            "icon": "none",
+            "row_content": "<p>Boka is a modern oral care brand focused on strengthening teeth and supporting long-term oral health. We create fluoride-free toothpaste and mouthwash made with nano-hydroxyapatite, a biomimetic mineral that mimics tooth enamel. Boka products are non-toxic when used as directed, gentle, and designed for daily use by adults and kids alike.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LTNXLJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_kNkxzc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_F8q9F7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ETMVg6",
+        "collapsible_row_LTNXLJ",
+        "collapsible_row_kNkxzc",
+        "collapsible_row_F8q9F7"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h2",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "7bdc6d37-1f4e-420c-8fbe-90c6654468b5": {
       "type": "rich-text",
       "blocks": {
@@ -598,6 +666,7 @@
     "9862c4aa-f495-4304-9fba-832988e68c27",
     "custom_liquid_acJyKE",
     "custom_liquid_FaxRfE",
+    "collapsible_content_HXMWKe",
     "7bdc6d37-1f4e-420c-8fbe-90c6654468b5"
   ]
 }
