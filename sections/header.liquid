@@ -332,11 +332,11 @@
                         {%- endif -%}
                       </li>
                     {%- endfor -%}
-                    {% unless customer.b2b? %}
+                    {% comment %} {% unless customer.b2b? %}
                     <li data-item-name="item-{{ 'Manage Subscriptions' | handleize }}">
-                      <a href="{{ settings.subscription_portal_url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>MANAGE SUBSCRIPTIONS test</a>
+                      <a href="{{ settings.subscription_portal_url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>MANAGE SUBSCRIPTIONS</a>
                     </li>
-                    {% endunless %}
+                    {% endunless %} {% endcomment %}
                   </ul>
                 </nav>
                 <div class="menu-drawer__utility-links">
