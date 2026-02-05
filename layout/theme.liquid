@@ -901,115 +901,125 @@
     });
   </script>
 <script>
-// Configuration - UPDATE THESE VALUES
-const RECHARGE_CONFIG = {
-  storeIdentifier: 'boka-oral-care.myshopify.com',
-  storefrontAccessToken: 'sk_2x2_3f965bfdb004d17fc87d51f35ea1bb658e4455bf53446a2457ab2108c59f7ea2'
-};
+(function() {
+  // Configuration
+  const CONFIG = {
+    buttonId: 'custom-cancel-btn',
+    cancelEndpoint: '/tools/recurring/customer_portal/subscriptions/{{subscription_id}}/cancel',
+    debugMode: true // Set to false in production
+  };
 
-// Initialize Recharge SDK
-if (typeof recharge !== 'undefined') {
-  recharge.init({
-    storeIdentifier: RECHARGE_CONFIG.storeIdentifier,
-    storefrontAccessToken: RECHARGE_CONFIG.storefrontAccessToken,
-    appName: 'CancelButton',
-    appVersion: '1.0.0'
-  });
-}
+  // Utility function for logging
+  function log(message, data) {
+    if (CONFIG.debugMode) {
+      console.log('[Recharge Cancel Button]', message, data || '');
+    }
+  }
 
-// Get subscription ID from URL
-function getSubscriptionId() {
-  const urlParams = new URLSearchParams(window.location.search);
-  let subId = urlParams.get('subscription_id') || urlParams.get('id');
-  if (subId) return subId;
+  // Function to extract subscription ID from URL
+  function getSubscriptionId() {
+    const url = window.location.href;
+    const match = url.match(/\/subscriptions\/(\d+)/);
+    return match ? match[1] : null;
+  }
 
-  const hash = window.location.hash;
-  const match = hash.match(/subscription[s]?\/(\d+)/i);
-  return match ? match[1] : null;
-}
-
-// Handle cancel button click
-async function handleCancelClick() {
-  const btn = document.getElementById('cancel-now-btn');
-  
-  try {
+  // Function to handle the cancellation
+  function handleCancellation() {
     const subscriptionId = getSubscriptionId();
     
     if (!subscriptionId) {
-      alert('Unable to identify the subscription. Please use the "Continue to cancel" button.');
+      log('Error: Could not find subscription ID in URL');
+      alert('Unable to process cancellation. Please try again or contact support.');
       return;
     }
 
-    const confirmed = confirm('Are you sure you want to cancel this subscription immediately?');
-    if (!confirmed) return;
-
-    // Show loading state
-    btn.disabled = true;
-    btn.textContent = 'Cancelling...';
-    btn.style.opacity = '0.6';
-
-    // Get selected reason
-    const selectedReason = document.querySelector('input[type="radio"]:checked');
-    const reason = selectedReason?.nextElementSibling?.textContent?.trim() || 
-                   'Customer requested immediate cancellation';
-
-    // Cancel subscription
-    await recharge.subscription.updateSubscription(subscriptionId, {
-      status: 'cancelled',
-      cancellation_reason: reason
-    });
-
-    alert('Your subscription has been successfully cancelled!');
-    window.location.href = '/tools/recurring/portal/subscriptions';
-
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Error cancelling subscription. Please try the "Continue to cancel" button or contact support.');
+    // Confirm before cancelling
+    const confirmed = confirm('Are you sure you want to cancel your subscription?');
     
-    // Reset button
-    btn.disabled = false;
-    btn.textContent = 'Cancel Now';
-    btn.style.opacity = '1';
-  }
-}
+    if (!confirmed) {
+      log('Cancellation cancelled by user');
+      return;
+    }
 
-// MutationObserver to detect button
-const observer = new MutationObserver(() => {
-  const btn = document.getElementById('cancel-now-btn');
-  if (btn) {
-    console.log('found cancel button');
-    if (!btn.dataset.listenerAdded) {
-      btn.dataset.listenerAdded = 'true';
-      btn.addEventListener('click', handleCancelClick);
-      
-      // Add hover effect
-      btn.addEventListener('mouseenter', function() {
-        if (!this.disabled) this.style.backgroundColor = '#c82333';
-      });
-      btn.addEventListener('mouseleave', function() {
-        if (!this.disabled) this.style.backgroundColor = '#dc3545';
-      });
-      
-      console.log('cancel button initialized');
+    log('Processing cancellation for subscription:', subscriptionId);
+
+    // Find the actual Recharge cancel button and click it
+    // This triggers Recharge's built-in cancellation flow
+    const rechargeButtons = document.querySelectorAll('button, a');
+    let cancelButton = null;
+
+    for (let btn of rechargeButtons) {
+      const text = btn.textContent.toLowerCase().trim();
+      if (text.includes('cancel') && text.includes('subscription')) {
+        cancelButton = btn;
+        break;
+      }
+    }
+
+    if (cancelButton) {
+      log('Found Recharge cancel button, triggering click');
+      cancelButton.click();
+    } else {
+      log('Warning: Could not find Recharge cancel button, using fallback');
+      // Fallback: redirect to cancellation confirmation
+      window.location.href = `/tools/recurring/customer_portal/subscriptions/${subscriptionId}/cancel`;
     }
   }
-});
 
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-});
+  // Function to attach event listener to button
+  function attachButtonListener(btn) {
+    if (btn.dataset.listenerAdded) {
+      return; // Already attached
+    }
+
+    log('Attaching click listener to cancel button');
+    btn.dataset.listenerAdded = 'true';
+    
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      log('Cancel button clicked');
+      handleCancellation();
+    });
+  }
+
+  // Function to check for button
+  function checkForButton() {
+    const btn = document.getElementById(CONFIG.buttonId);
+    
+    if (btn) {
+      log('Found custom cancel button');
+      attachButtonListener(btn);
+      return true;
+    }
+    return false;
+  }
+
+  // Initial check when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkForButton);
+  } else {
+    checkForButton();
+  }
+
+  // Set up MutationObserver to watch for dynamically added content
+  const observer = new MutationObserver(function(mutations) {
+    // Check if button exists before processing mutations
+    if (!document.getElementById(CONFIG.buttonId)) {
+      if (checkForButton()) {
+        log('Button found via MutationObserver');
+      }
+    }
+  });
+
+  // Start observing
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  log('Recharge cancel button script initialized');
+})();
 </script>
-
-<style>
-  #cancel-now-btn:disabled {
-    cursor: not-allowed !important;
-  }
-  
-  #cancel-now-btn:hover:not(:disabled) {
-    background-color: #c82333 !important;
-  }
-</style>
 
 </body>
 </html>
