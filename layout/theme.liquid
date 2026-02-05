@@ -900,5 +900,27 @@
       colorScheme.initializeColorScheme();
     });
   </script>
+  <script>
+    const observer = new MutationObserver(() => {
+  const btn = document.getElementById('custom-cancel-btn');
+
+  if (btn) {
+    console.log('found cancel button');
+
+    if (!btn.dataset.listenerAdded) {
+      btn.dataset.listenerAdded = 'true';
+
+      btn.addEventListener('click', () => {
+        console.log('cancel clicked');
+      });
+    }
+  }
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
+  </script>
 </body>
 </html>
