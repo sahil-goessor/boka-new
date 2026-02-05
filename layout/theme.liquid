@@ -900,27 +900,116 @@
       colorScheme.initializeColorScheme();
     });
   </script>
-  <script>
-    const observer = new MutationObserver(() => {
-  const btn = document.getElementById('custom-cancel-btn');
+<script>
+// Configuration - UPDATE THESE VALUES
+const RECHARGE_CONFIG = {
+  storeIdentifier: 'boka-oral-care.myshopify.com',
+  storefrontAccessToken: 'sk_2x2_3f965bfdb004d17fc87d51f35ea1bb658e4455bf53446a2457ab2108c59f7ea2'
+};
 
+// Initialize Recharge SDK
+if (typeof recharge !== 'undefined') {
+  recharge.init({
+    storeIdentifier: RECHARGE_CONFIG.storeIdentifier,
+    storefrontAccessToken: RECHARGE_CONFIG.storefrontAccessToken,
+    appName: 'CancelButton',
+    appVersion: '1.0.0'
+  });
+}
+
+// Get subscription ID from URL
+function getSubscriptionId() {
+  const urlParams = new URLSearchParams(window.location.search);
+  let subId = urlParams.get('subscription_id') || urlParams.get('id');
+  if (subId) return subId;
+
+  const hash = window.location.hash;
+  const match = hash.match(/subscription[s]?\/(\d+)/i);
+  return match ? match[1] : null;
+}
+
+// Handle cancel button click
+async function handleCancelClick() {
+  const btn = document.getElementById('cancel-now-btn');
+  
+  try {
+    const subscriptionId = getSubscriptionId();
+    
+    if (!subscriptionId) {
+      alert('Unable to identify the subscription. Please use the "Continue to cancel" button.');
+      return;
+    }
+
+    const confirmed = confirm('Are you sure you want to cancel this subscription immediately?');
+    if (!confirmed) return;
+
+    // Show loading state
+    btn.disabled = true;
+    btn.textContent = 'Cancelling...';
+    btn.style.opacity = '0.6';
+
+    // Get selected reason
+    const selectedReason = document.querySelector('input[type="radio"]:checked');
+    const reason = selectedReason?.nextElementSibling?.textContent?.trim() || 
+                   'Customer requested immediate cancellation';
+
+    // Cancel subscription
+    await recharge.subscription.updateSubscription(subscriptionId, {
+      status: 'cancelled',
+      cancellation_reason: reason
+    });
+
+    alert('Your subscription has been successfully cancelled!');
+    window.location.href = '/tools/recurring/portal/subscriptions';
+
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error cancelling subscription. Please try the "Continue to cancel" button or contact support.');
+    
+    // Reset button
+    btn.disabled = false;
+    btn.textContent = 'Cancel Now';
+    btn.style.opacity = '1';
+  }
+}
+
+// MutationObserver to detect button
+const observer = new MutationObserver(() => {
+  const btn = document.getElementById('cancel-now-btn');
   if (btn) {
     console.log('found cancel button');
-
     if (!btn.dataset.listenerAdded) {
       btn.dataset.listenerAdded = 'true';
-
-      btn.addEventListener('click', () => {
-        console.log('cancel clicked');
+      btn.addEventListener('click', handleCancelClick);
+      
+      // Add hover effect
+      btn.addEventListener('mouseenter', function() {
+        if (!this.disabled) this.style.backgroundColor = '#c82333';
       });
+      btn.addEventListener('mouseleave', function() {
+        if (!this.disabled) this.style.backgroundColor = '#dc3545';
+      });
+      
+      console.log('cancel button initialized');
     }
   }
 });
 
 observer.observe(document.body, {
   childList: true,
-  subtree: true,
+  subtree: true
 });
-  </script>
+</script>
+
+<style>
+  #cancel-now-btn:disabled {
+    cursor: not-allowed !important;
+  }
+  
+  #cancel-now-btn:hover:not(:disabled) {
+    background-color: #c82333 !important;
+  }
+</style>
+
 </body>
 </html>
