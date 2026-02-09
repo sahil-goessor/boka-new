@@ -378,14 +378,6 @@
     "3d719ebc-5747-4557-bde5-5de02b7b2fc5": {
       "type": "collection-list",
       "blocks": {
-        "73c0b949-e66d-4387-afc1-9a703b3d17ea": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "boka-probiotics",
-            "image": "shopify://shop_images/Collection_Banner.webp",
-            "custom_title": "BOKA PROBIOTICS"
-          }
-        },
         "template--15124824358955__3d719ebc-5747-4557-bde5-5de02b7b2fc5-168429602056114b30-0": {
           "type": "featured_collection",
           "settings": {
@@ -402,6 +394,14 @@
             "custom_title": "TOOTHBRUSHES"
           }
         },
+        "bd853185-e53c-409b-b649-7bfe232991ed": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "oral-care-kits",
+            "image": "shopify://shop_images/Boka_Homepage_PLP_KitsBundles_306x306_084a0e7f-0387-4fca-b2dc-2b30981a4490.jpg",
+            "custom_title": "KITS & BUNDLES"
+          }
+        },
         "template--15124824358955__3d719ebc-5747-4557-bde5-5de02b7b2fc5-168429602056114b30-2": {
           "type": "featured_collection",
           "settings": {
@@ -410,21 +410,21 @@
             "custom_title": "MOUTHWASH"
           }
         },
-        "bd853185-e53c-409b-b649-7bfe232991ed": {
+        "73c0b949-e66d-4387-afc1-9a703b3d17ea": {
           "type": "featured_collection",
           "settings": {
-            "collection": "oral-care-kits",
-            "image": "shopify://shop_images/Boka_Homepage_PLP_KitsBundles_306x306_084a0e7f-0387-4fca-b2dc-2b30981a4490.jpg",
-            "custom_title": "KITS & BUNDLES"
+            "collection": "boka-probiotics",
+            "image": "shopify://shop_images/Collection_Banner.webp",
+            "custom_title": "BOKA PROBIOTICS"
           }
         }
       },
       "block_order": [
-        "73c0b949-e66d-4387-afc1-9a703b3d17ea",
         "template--15124824358955__3d719ebc-5747-4557-bde5-5de02b7b2fc5-168429602056114b30-0",
         "template--15124824358955__3d719ebc-5747-4557-bde5-5de02b7b2fc5-168429602056114b30-1",
+        "bd853185-e53c-409b-b649-7bfe232991ed",
         "template--15124824358955__3d719ebc-5747-4557-bde5-5de02b7b2fc5-168429602056114b30-2",
-        "bd853185-e53c-409b-b649-7bfe232991ed"
+        "73c0b949-e66d-4387-afc1-9a703b3d17ea"
       ],
       "settings": {
         "title": "",
@@ -633,7 +633,7 @@
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
