@@ -61,6 +61,44 @@
         "padding_bottom_mobile": 36
       }
     },
+    "collapsible_content_4J9xbR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_rAkqBn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Boka a good toothpaste for bad breath?",
+            "icon": "none",
+            "row_content": "<p>Boka’s n-Ha toothpaste is a top option for those seeking a toothpaste for bad breath when used as directed. It’s formulated with clean, non-toxic ingredients* like xylitol, green tea, and aloe vera to promote fresh breath. Our line includes fluoride-free options, offering peace of mind to users with varying preferences. You’ll also find flavors like <a href=\"https://www.boka.com/products/cinna-mint-toothpaste\"><span style=\"text-decoration:underline\">Cinna-Mint</span></a>, <a href=\"https://www.boka.com/products/refresh-mint-whitening-toothpaste\"><span style=\"text-decoration:underline\">Refresh Mint</span></a>, and <a href=\"https://www.boka.com/products/lemon-lavender-toothpaste\"><span style=\"text-decoration:underline\">Lemon Lavender</span></a> for a healthy smile and clean feel. Our formula is SLS-free and gentle, making it ideal for daily oral care routines. *when used as directed<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_rAkqBn"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Questions About Toothpaste for Bad Breath",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "Nano-hydroxyapatite (n-Ha) is a well-researched ingredient in oral care products, known for its similarity to the natural mineral structure of the tooth. Whether you prefer fresh mint, gentle mint, or citrus-forward flavors, Boka offers a range of toothpaste flavors that are free from sodium lauryl sulfate (SLS). In this FAQ section, we’ll explore how our toothpaste can help deliver fresh breath and support your everyday oral care routine.",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "collapsible_content_TQFrGX": {
       "type": "collapsible-content",
       "blocks": {
@@ -154,6 +192,7 @@
   "order": [
     "banner",
     "product-grid",
+    "collapsible_content_4J9xbR",
     "collapsible_content_TQFrGX"
   ]
 }
