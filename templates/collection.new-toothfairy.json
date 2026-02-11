@@ -19,6 +19,34 @@
         "custom_text_color": "#000000"
       }
     },
+    "rich_text_7BQdHT": {
+      "type": "rich-text",
+      "blocks": {
+        "text_6JgkW9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Boka’s kids oral care collection features pediatric‑friendly toothpaste for kids and fun, effective toothbrush options to make brushing more enjoyable for little smiles. Whether you’re reaching for a fluoride‑free toothpaste in tasty fruit flavors like watermelon, orange cream, or strawberry mango to assist healthy habits, this lineup helps support everyday oral care routines with a gentle touch. Choose from a variety of fun‑flavored tubes and kid‑approved designs that help make twice‑daily brushing feel like a treat.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_6JgkW9"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -256,6 +284,7 @@
   },
   "order": [
     "banner",
+    "rich_text_7BQdHT",
     "product-grid",
     "e1c2be8a-c503-489a-b63e-982e50c35a28"
   ]
