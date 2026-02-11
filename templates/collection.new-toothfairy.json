@@ -35,7 +35,7 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "left",
-        "content_alignment": "center",
+        "content_alignment": "left",
         "fadein_enabled": true,
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
