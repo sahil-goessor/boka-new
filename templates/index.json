@@ -152,6 +152,20 @@
         "accessibility_info": "A customers review."
       }
     },
+    "custom_liquid_acJyKE": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid - as seen on",
+      "settings": {
+        "custom_liquid": "<div class=\"as-seen-on-section\">\n  <h2 class=\"as-seen-on-title\">As Seen On</h2>\n  <div class=\"as-seen-on-logos-wrapper\">\n    <div class=\"as-seen-on-logos\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/real_simple.png?v=1741798410\" alt=\"Real simple logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/medium.png?v=1741798410\" alt=\"Medium logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/cnet.png?v=1741798411\" alt=\"Cnet logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/huffpost.png?v=1741798410\" alt=\"Huffpost logo\" loading=\"lazy\">\n      <!-- Duplicate logos for infinite scrolling -->\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/real_simple.png?v=1741798410\" alt=\"Real simple logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/medium.png?v=1741798410\" alt=\"Medium logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/cnet.png?v=1741798411\" alt=\"Cnet logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/huffpost.png?v=1741798410\" alt=\"Huffpost logo\" loading=\"lazy\">\n    </div>\n  </div>\n</div>\n\n\n<style>\n  .as-seen-on-section {\n    text-align: center;\n    padding: 40px 20px;\n    overflow: hidden;\n    background: #FAFAF5;\n    padding-bottom: 80px;\n    padding-top: 10px;\n  }\n\n  .as-seen-on-title {\n    font-size: 48px;\n    font-weight: regular;\n    margin-bottom: 80px;\n  }\n\n@media (max-width: 768px) {\n    .as-seen-on-title {\n      font-size: 32px;\n      margin-bottom: 40px;\n    }\n  }\n\n  .as-seen-on-logos-wrapper {\n    white-space: nowrap;\n    position: relative;\n    width: 100%;\n  }\n\n  .as-seen-on-logos {\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    animation: scroll-logos 25s linear infinite;\n    width: max-content;\n  }\n\n  .as-seen-on-logos img {\n    max-width: 160px;\n    height: auto;\n    display: inline-block;\n  }\n\n  @keyframes scroll-logos {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "multicolumn_BWCRzU": {
       "type": "multicolumn",
       "blocks": {
@@ -527,20 +541,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "custom_liquid_acJyKE": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid - as seen on",
-      "settings": {
-        "custom_liquid": "<div class=\"as-seen-on-section\">\n  <h2 class=\"as-seen-on-title\">As Seen On</h2>\n  <div class=\"as-seen-on-logos-wrapper\">\n    <div class=\"as-seen-on-logos\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/real_simple.png?v=1741798410\" alt=\"Real simple logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/medium.png?v=1741798410\" alt=\"Medium logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/cnet.png?v=1741798411\" alt=\"Cnet logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/huffpost.png?v=1741798410\" alt=\"Huffpost logo\" loading=\"lazy\">\n      <!-- Duplicate logos for infinite scrolling -->\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/real_simple.png?v=1741798410\" alt=\"Real simple logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/medium.png?v=1741798410\" alt=\"Medium logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/cnet.png?v=1741798411\" alt=\"Cnet logo\" loading=\"lazy\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/huffpost.png?v=1741798410\" alt=\"Huffpost logo\" loading=\"lazy\">\n    </div>\n  </div>\n</div>\n\n\n<style>\n  .as-seen-on-section {\n    text-align: center;\n    padding: 40px 20px;\n    overflow: hidden;\n    background: #FAFAF5;\n    padding-bottom: 80px;\n    padding-top: 10px;\n  }\n\n  .as-seen-on-title {\n    font-size: 48px;\n    font-weight: regular;\n    margin-bottom: 80px;\n  }\n\n@media (max-width: 768px) {\n    .as-seen-on-title {\n      font-size: 32px;\n      margin-bottom: 40px;\n    }\n  }\n\n  .as-seen-on-logos-wrapper {\n    white-space: nowrap;\n    position: relative;\n    width: 100%;\n  }\n\n  .as-seen-on-logos {\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    animation: scroll-logos 25s linear infinite;\n    width: max-content;\n  }\n\n  .as-seen-on-logos img {\n    max-width: 160px;\n    height: auto;\n    display: inline-block;\n  }\n\n  @keyframes scroll-logos {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n    }\n  }\n</style>",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "custom_liquid_FaxRfE": {
       "type": "custom-liquid",
       "name": "Custom Liquid - Yotpo widget",
@@ -675,16 +675,16 @@
     "quick_button_caEbwf",
     "d0c5cff0-67a0-44b2-909d-a8de23fae9f1",
     "e88125fd-54b1-4dc4-a7be-094d886854f5",
-    "multicolumn_BWCRzU",
     "c6a93dd1-8311-4974-b863-f220a9ebe858",
     "486363a0-4f38-49ec-8de8-3bcdfd569298",
     "rich_text_AU4LYa",
+    "custom_liquid_acJyKE",
+    "multicolumn_BWCRzU",
     "1761582983a017a1e7",
     "rich_text_Bh9cg6",
     "3d719ebc-5747-4557-bde5-5de02b7b2fc5",
     "custom_liquid_Pw6kPw",
     "9862c4aa-f495-4304-9fba-832988e68c27",
-    "custom_liquid_acJyKE",
     "custom_liquid_FaxRfE",
     "collapsible_content_HXMWKe",
     "7bdc6d37-1f4e-420c-8fbe-90c6654468b5"
