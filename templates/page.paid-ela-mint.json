@@ -61,6 +61,7 @@
             "content_gap_mobile": 20,
             "show_reviews": true,
             "review_text": "3,700+ Reviews",
+            "reviews_scroll_target": "section-template--17574539231275__yt_shorts_FUHnAV",
             "star_color": "#ffd700",
             "star_size": 20,
             "review_text_size": 14,
