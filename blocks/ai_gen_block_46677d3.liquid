@@ -230,7 +230,7 @@
   .ai-slider-nav-{{ ai_gen_id }} {
     background-color: {{ block.settings.nav_bg_color }};
     color: {{ block.settings.nav_color }};
-    border: none;
+    border: 1px solid #cccccc;
     width: {{ block.settings.nav_size }}px;
     height: {{ block.settings.nav_size }}px;
     border-radius: 50%;
@@ -240,6 +240,9 @@
     justify-content: center;
     transition: background-color 0.3s ease;
     flex-shrink: 0;
+  }
+
+  .ai-slider-nav-prev-{{ ai_gen_id }}{
   }
 
   .ai-slider-nav-{{ ai_gen_id }}:hover {
