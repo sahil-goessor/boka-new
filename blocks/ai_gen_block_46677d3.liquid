@@ -345,6 +345,73 @@
     to { transform: rotate(360deg); }
   }
 
+  .ai-subheadline-popup-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    display: inline-block;
+  }
+
+  .ai-subheadline-pill-{{ ai_gen_id }} {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .ai-subheadline-popup-{{ ai_gen_id }} {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    width: 280px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    z-index: 100;
+    text-align: left;
+  }
+
+  .ai-subheadline-popup-{{ ai_gen_id }}.is-open {
+    display: block;
+  }
+
+  /* Tail/arrow pointing down */
+  .ai-subheadline-popup-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,0.08));
+  }
+
+  .ai-subheadline-popup-text-{{ ai_gen_id }} {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222222;
+    margin: 0 0 14px;
+  }
+
+  .ai-subheadline-popup-link-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    color: #222222;
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+  }
+
+  .ai-subheadline-popup-link-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
   @media screen and (max-width: 749px) {
     .ai-image-text-{{ ai_gen_id }} {
       padding: {{ block.settings.padding_top | times: 0.6 }}px 0 {{ block.settings.padding_bottom | times: 0.6 }}px;
@@ -445,6 +512,12 @@
       width: 100%;
       max-width: 100%;
     }
+     .ai-subheadline-popup-{{ ai_gen_id }} {
+      width: 240px;
+      padding: 16px 18px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -485,7 +558,7 @@
             <h2 class="ai-image-text-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
           {% endif %}
 
-          {% if block.settings.subheadline_1 != blank or block.settings.subheadline_2 != blank %}
+          {% comment %} {% if block.settings.subheadline_1 != blank or block.settings.subheadline_2 != blank %}
             <div class="ai-image-text-subheadlines-{{ ai_gen_id }}">
               {% if block.settings.subheadline_1 != blank %}
                 <span class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-1-{{ ai_gen_id }}">
@@ -497,6 +570,66 @@
                   {{ block.settings.subheadline_2 }}
                 </span>
               {% endif %}
+            </div>
+          {% endif %} {% endcomment %}
+
+          {% if block.settings.subheadline_1 != blank or block.settings.subheadline_2 != blank %}
+            <div class="ai-image-text-subheadlines-{{ ai_gen_id }}">
+
+              {% if block.settings.subheadline_1 != blank %}
+                <div class="ai-subheadline-popup-wrapper-{{ ai_gen_id }}">
+                  <span
+                    class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-1-{{ ai_gen_id }} ai-subheadline-pill-{{ ai_gen_id }}"
+                    data-popup="subheadline-popup-1-{{ ai_gen_id }}"
+                    {% if block.settings.subheadline_1_popup_text == blank %}style="cursor:default"{% endif %}
+                  >
+                    {{ block.settings.subheadline_1 }}
+                  </span>
+                  {% if block.settings.subheadline_1_popup_text != blank %}
+                    <div class="ai-subheadline-popup-{{ ai_gen_id }}" id="subheadline-popup-1-{{ ai_gen_id }}">
+                      <p class="ai-subheadline-popup-text-{{ ai_gen_id }}">{{ block.settings.subheadline_1_popup_text }}</p>
+                      {% if block.settings.subheadline_1_popup_link_text != blank %}
+                        <button
+                          class="ai-subheadline-popup-link-{{ ai_gen_id }}"
+                          {% if block.settings.subheadline_1_popup_scroll_target != blank %}
+                            data-scroll-target="{{ block.settings.subheadline_1_popup_scroll_target }}"
+                          {% endif %}
+                        >
+                          {{ block.settings.subheadline_1_popup_link_text }} →
+                        </button>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {% if block.settings.subheadline_2 != blank %}
+                <div class="ai-subheadline-popup-wrapper-{{ ai_gen_id }}">
+                  <span
+                    class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-2-{{ ai_gen_id }} ai-subheadline-pill-{{ ai_gen_id }}"
+                    data-popup="subheadline-popup-2-{{ ai_gen_id }}"
+                    {% if block.settings.subheadline_2_popup_text == blank %}style="cursor:default"{% endif %}
+                  >
+                    {{ block.settings.subheadline_2 }}
+                  </span>
+                  {% if block.settings.subheadline_2_popup_text != blank %}
+                    <div class="ai-subheadline-popup-{{ ai_gen_id }}" id="subheadline-popup-2-{{ ai_gen_id }}">
+                      <p class="ai-subheadline-popup-text-{{ ai_gen_id }}">{{ block.settings.subheadline_2_popup_text }}</p>
+                      {% if block.settings.subheadline_2_popup_link_text != blank %}
+                        <button
+                          class="ai-subheadline-popup-link-{{ ai_gen_id }}"
+                          {% if block.settings.subheadline_2_popup_scroll_target != blank %}
+                            data-scroll-target="{{ block.settings.subheadline_2_popup_scroll_target }}"
+                          {% endif %}
+                        >
+                          {{ block.settings.subheadline_2_popup_link_text }} →
+                        </button>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
             </div>
           {% endif %}
 
@@ -780,6 +913,55 @@
       });
     }
   })();
+
+  // Subheadline popups
+(function() {
+  const pills = document.querySelectorAll('.ai-subheadline-pill-{{ ai_gen_id }}[data-popup]');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const targetId = this.dataset.popup;
+      const popup = document.getElementById(targetId);
+      if (!popup) return;
+
+      const isOpen = popup.classList.contains('is-open');
+
+      // Close all popups first
+      document.querySelectorAll('.ai-subheadline-popup-{{ ai_gen_id }}').forEach(p => {
+        p.classList.remove('is-open');
+      });
+
+      // Toggle the clicked one
+      if (!isOpen) {
+        popup.classList.add('is-open');
+      }
+    });
+  });
+
+  // Close popup when clicking outside
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.ai-subheadline-popup-{{ ai_gen_id }}').forEach(p => {
+      p.classList.remove('is-open');
+    });
+  });
+
+  // Scroll links inside popups
+  document.querySelectorAll('.ai-subheadline-popup-link-{{ ai_gen_id }}[data-scroll-target]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const targetId = this.dataset.scrollTarget;
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      // Close popup after clicking
+      document.querySelectorAll('.ai-subheadline-popup-{{ ai_gen_id }}').forEach(p => {
+        p.classList.remove('is-open');
+      });
+    });
+  });
+})();
 </script>
 
 {% schema %}
@@ -902,9 +1084,43 @@
       "label": "Subheadline 1"
     },
     {
+      "type": "textarea",
+      "id": "subheadline_1_popup_text",
+      "label": "Subheadline 1 — Popup description"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_1_popup_link_text",
+      "label": "Subheadline 1 — Popup link text",
+      "default": "View Key Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_1_popup_scroll_target",
+      "label": "Subheadline 1 — Scroll target ID",
+      "info": "Enter the section ID to scroll to (e.g. ingredients-section). No # needed."
+    },
+    {
       "type": "text",
       "id": "subheadline_2",
       "label": "Subheadline 2"
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline_2_popup_text",
+      "label": "Subheadline 2 — Popup description"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_2_popup_link_text",
+      "label": "Subheadline 2 — Popup link text",
+      "default": "View Key Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "subheadline_2_popup_scroll_target",
+      "label": "Subheadline 2 — Scroll target ID",
+      "info": "Enter the section ID to scroll to (e.g. ingredients-section). No # needed."
     },
     {
       "type": "richtext",
