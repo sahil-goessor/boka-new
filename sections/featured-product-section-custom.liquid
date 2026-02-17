@@ -139,7 +139,7 @@
                   <div
                     class="yotpo-widget-instance"
                     data-yotpo-instance-id="{{ block.settings.yotpo_instance_id }}"
-                    data-yotpo-product-id="{{ product.id }}"
+                    data-yotpo-product-id="{{ block.settings.yotpo_product_id | default: product.id }}"
                     data-yotpo-name="{{ product.title | escape }}"
                     data-yotpo-url="{{ shop.url }}{{ product.url }}"
                     data-yotpo-image-url="{{ product.featured_image | product_img_url: 'large' | prepend: 'https:' | replace: '?', '%3F' | replace: '&','%26' }}"
@@ -1800,10 +1800,9 @@ span.h4.inline-richtext {
       "settings": [
         {
           "type": "text",
-          "id": "yotpo_instance_id",
-          "label": "Yotpo Instance ID",
-          "default": "1002005",
-          "info": "Find this in your Yotpo dashboard. The product ID is pulled automatically from the selected product."
+          "id": "yotpo_product_id",
+          "label": "Yotpo Product ID",
+          "info": "Enter the Shopify product ID for this product. Find it in your Shopify Admin under Products — the number at the end of the URL (e.g. /admin/products/123456789). Leave empty to use the section's selected product automatically."
         }
       ]
     },
