@@ -135,7 +135,12 @@
                 </{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %}>
 
               {%- when 'yotpo_widget' -%}
-                <div class="yotpo-widget-wrapper-{{ section.id }}" {{ block.shopify_attributes }}>
+                <div class="yotpo-widget-wrapper-{{ section.id }}" {{ block.shopify_attributes }}
+                  {% if block.settings.yotpo_scroll_target != blank %}
+                    style="cursor: pointer;"
+                    data-yotpo-scroll-target="{{ block.settings.yotpo_scroll_target }}"
+                  {% endif %}
+                >
                   <div
                     class="yotpo-widget-instance"
                     data-yotpo-instance-id="1019166"
@@ -144,6 +149,24 @@
                     data-yotpo-section-id="{{ template.name }}"
                   ></div>
                 </div>
+
+                {% if block.settings.yotpo_scroll_target != blank %}
+                  <script>
+                    (function() {
+                      var wrapper = document.querySelector('.yotpo-widget-wrapper-{{ section.id }}[data-yotpo-scroll-target]');
+                      if (!wrapper) return;
+
+                      var target = wrapper.dataset.yotpoScrollTarget;
+
+                      wrapper.addEventListener('click', function(e) {
+                        var el = document.getElementById(target);
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      });
+                    })();
+                  </script>
+                {% endif %}
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -1798,7 +1821,13 @@ span.h4.inline-richtext {
           "type": "text",
           "id": "yotpo_product_id",
           "label": "Yotpo Product ID",
-          "info": "Enter the Shopify product ID for this product. Find it in your Shopify Admin under Products — the number at the end of the URL (e.g. /admin/products/123456789). Leave empty to use the section's selected product automatically."
+          "info": "Enter the Shopify product ID. Leave empty to use the section's selected product automatically."
+        },
+        {
+          "type": "text",
+          "id": "yotpo_scroll_target",
+          "label": "Scroll target section ID",
+          "info": "Enter the ID of the section to scroll to when reviews are clicked (e.g. reviews-section). No # needed. Leave empty to disable."
         }
       ]
     },
