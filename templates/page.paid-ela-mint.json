@@ -596,6 +596,24 @@
             "show_dynamic_checkout": false
           }
         },
+        "promo_banner_XkEUYc": {
+          "type": "promo_banner",
+          "settings": {
+            "promo_text": "Enjoy FREE Shipping on Your First Order — Auto - Applied at Checkout",
+            "icon_image": "shopify://shop_images/Vector_1.png",
+            "icon_size": 24,
+            "icon_gap": 8,
+            "background_color": "#fae5db",
+            "text_color": "#000000",
+            "text_size": 16,
+            "font_weight": "400",
+            "border_radius": 16,
+            "padding_vertical": 16,
+            "padding_horizontal": 16,
+            "margin_top": 0,
+            "margin_bottom": 16
+          }
+        },
         "description_9m494J": {
           "type": "description",
           "settings": {}
@@ -670,6 +688,7 @@
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
         "buy_buttons_j3VN3h",
+        "promo_banner_XkEUYc",
         "description_9m494J",
         "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
@@ -682,7 +701,7 @@
         "h1.product__title.h1 {font-size: 30px;}",
         ".price .price-item {margin: 0 0 0 0;}",
         "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
-        "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add{height:45px;}"
+        "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add {height: 45px;}"
       ],
       "name": "feature product section new",
       "settings": {
