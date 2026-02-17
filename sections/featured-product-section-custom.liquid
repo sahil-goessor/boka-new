@@ -133,6 +133,11 @@
                     {{ 'onboarding.product_title' | t }}
                   {%- endif -%}
                 </{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %}>
+
+                <script>
+<div class="yotpo-widget-instance" data-yotpo-instance-id="1002005" data-yotpo-product-id="647087685675" data-yotpo-name="{{ product.title | escape }}" data-yotpo-url="{{ shop.url }}{{ product.url }}" data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}" data-yotpo-price="{{ product.price | divided_by: 100.00 }}" data-yotpo-currency="{{ shop.currency }}" data-yotpo-description="{{ product.description | escape }}"></div>
+</script>
+
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
