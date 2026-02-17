@@ -138,14 +138,10 @@
                 <div class="yotpo-widget-wrapper-{{ section.id }}" {{ block.shopify_attributes }}>
                   <div
                     class="yotpo-widget-instance"
-                    data-yotpo-instance-id="1002005"
+                    data-yotpo-instance-id="1019166"
                     data-yotpo-product-id="{{ block.settings.yotpo_product_id | default: product.id }}"
-                    data-yotpo-name="{{ product.title | escape }}"
-                    data-yotpo-url="{{ shop.url }}{{ product.url }}"
-                    data-yotpo-image-url="{{ product.featured_image | product_img_url: 'large' | prepend: 'https:' | replace: '?', '%3F' | replace: '&','%26' }}"
-                    data-yotpo-price="{{ product.price | divided_by: 100.00 }}"
-                    data-yotpo-currency="{{ shop.currency }}"
-                    data-yotpo-description="{{ product.description | escape }}"
+                    data-yotpo-cart-product-id="{{ block.settings.yotpo_product_id | default: product.id }}"
+                    data-yotpo-section-id="{{ template.name }}"
                   ></div>
                 </div>
               {%- when 'price' -%}
