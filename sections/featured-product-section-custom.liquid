@@ -133,6 +133,21 @@
                     {{ 'onboarding.product_title' | t }}
                   {%- endif -%}
                 </{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %}>
+
+              {%- when 'yotpo_widget' -%}
+                <div class="yotpo-widget-wrapper-{{ section.id }}" {{ block.shopify_attributes }}>
+                  <div
+                    class="yotpo-widget-instance"
+                    data-yotpo-instance-id="{{ block.settings.yotpo_instance_id }}"
+                    data-yotpo-product-id="{{ product.id }}"
+                    data-yotpo-name="{{ product.title | escape }}"
+                    data-yotpo-url="{{ shop.url }}{{ product.url }}"
+                    data-yotpo-image-url="{{ product.featured_image | product_img_url: 'large' | prepend: 'https:' | replace: '?', '%3F' | replace: '&','%26' }}"
+                    data-yotpo-price="{{ product.price | divided_by: 100.00 }}"
+                    data-yotpo-currency="{{ shop.currency }}"
+                    data-yotpo-description="{{ product.description | escape }}"
+                  ></div>
+                </div>
               {%- when 'price' -%}
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -1775,6 +1790,20 @@ span.h4.inline-richtext {
           "id": "enable_quick_add",
           "label": "t:sections.main-product.blocks.complementary_products.settings.enable_quick_add.label",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "yotpo_widget",
+      "name": "Yotpo Reviews Widget",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "yotpo_instance_id",
+          "label": "Yotpo Instance ID",
+          "default": "1002005",
+          "info": "Find this in your Yotpo dashboard. The product ID is pulled automatically from the selected product."
         }
       ]
     },
