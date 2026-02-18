@@ -60,6 +60,10 @@
             "quick_add_hide": false
           }
         },
+        "recharge_subscriptions_subscription_widget_v2_WiWRBa": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -152,6 +156,7 @@
         "variant_picker",
         "quantity_selector",
         "richtext_QNXnBD",
+        "recharge_subscriptions_subscription_widget_v2_WiWRBa",
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_HeVqad",
         "description",
