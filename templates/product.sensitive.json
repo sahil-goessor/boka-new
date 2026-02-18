@@ -251,8 +251,8 @@
       ],
       "name": "Complete your Routine",
       "settings": {
-        "title": "{{ product.metafields.custom.title_complete_your_routine.value }}",
-        "heading_size": "h1",
+        "title": "Complete Your Routine",
+        "heading_size": "h2",
         "heading_tag": "h3",
         "description": "",
         "show_description": false,
