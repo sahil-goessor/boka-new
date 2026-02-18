@@ -53,6 +53,7 @@
         },
         "richtext_QNXnBD": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<p>Save 15% with code: VANILLA15 at checkout</p>",
             "text_style": "body",
