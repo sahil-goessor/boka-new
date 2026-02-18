@@ -19,14 +19,6 @@
             "title_font_size_desktop": 30
           }
         },
-        "richtext_wjYgRm": {
-          "type": "richtext",
-          "settings": {
-            "text": "<p><em>Limited Edition 10th Anniversary Flavor</em></p>",
-            "text_style": "body",
-            "quick_add_hide": false
-          }
-        },
         "yotpo_product_reviews_star_rating_Jpxdwz": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -150,7 +142,6 @@
       },
       "block_order": [
         "title",
-        "richtext_wjYgRm",
         "yotpo_product_reviews_star_rating_Jpxdwz",
         "price",
         "variant_picker",
@@ -189,43 +180,6 @@
         "padding_bottom_tablet": 70,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 60
-      }
-    },
-    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".title {text-align: center; font-size: 52px;}",
-        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
-      ],
-      "name": "Complete your Routine",
-      "settings": {
-        "title": "{{ product.metafields.custom.title_complete_your_routine.value }}",
-        "heading_size": "h1",
-        "heading_tag": "h3",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "best-sellers",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "custom",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#433033",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 50,
-        "padding_bottom": 40,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
       }
     },
     "image_with_text_kNPK78": {
@@ -287,6 +241,43 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 50
+      }
+    },
+    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title {text-align: center; font-size: 52px;}",
+        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
+      ],
+      "name": "Complete your Routine",
+      "settings": {
+        "title": "{{ product.metafields.custom.title_complete_your_routine.value }}",
+        "heading_size": "h1",
+        "heading_tag": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "custom",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#433033",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 40,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     },
     "related-products": {
