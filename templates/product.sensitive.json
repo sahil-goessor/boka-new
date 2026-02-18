@@ -348,7 +348,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "{{ product.metafields.custom.complete_your_routine_collection.value }}",
+        "collection": "best-sellers",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
