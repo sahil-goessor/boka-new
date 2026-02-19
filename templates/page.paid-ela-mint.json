@@ -579,7 +579,8 @@
         "yotpo_widget_aEd8ik": {
           "type": "yotpo_widget",
           "settings": {
-            "yotpo_product_id": "647087685675"
+            "yotpo_product_id": "647087685675",
+            "yotpo_scroll_target": ""
           }
         },
         "price_T7pXW7": {
@@ -1099,7 +1100,11 @@
             "second_variant_id": "",
             "second_product_quantity": 1,
             "second_button_label": "",
-            "second_button_link": ""
+            "second_button_link": "",
+            "popup_button_label": "",
+            "popup_button_style_secondary": false,
+            "popup_title": "Full Ingredients List",
+            "popup_content": "<p>Add your popup content here.</p>"
           }
         }
       },
@@ -1265,6 +1270,27 @@
         "padding_bottom_mobile": 36
       }
     },
+    "yotpo_reviews_widget_hbzYf6": {
+      "type": "yotpo-reviews-widget",
+      "name": "Yotpo Reviews Widget",
+      "settings": {
+        "product": "ela-mint-toothpaste",
+        "product_handle": "",
+        "yotpo_instance_id": "1002005",
+        "show_heading": false,
+        "heading_text": "Customer Reviews",
+        "heading_size": 32,
+        "heading_color": "#000000",
+        "heading_alignment": "center",
+        "heading_spacing": 32,
+        "container_width": 1350,
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -1357,6 +1383,7 @@
     "yt_shorts_FUHnAV",
     "1765896441d3e5261a",
     "featured_collection_RackKr",
+    "yotpo_reviews_widget_hbzYf6",
     "main",
     "custom_feature_product_section_4f3nQW"
   ]
