@@ -13,8 +13,8 @@
       overflow: hidden;
     }
     #shopify-section-{{ section.id }} .boka-left {
-      flex: 0 0 55%;
-      width: 55%;
+      flex: 0 0 {{ 100 | minus: section.settings.video_width_percent }}%;
+      width: {{ 100 | minus: section.settings.video_width_percent }}%;
       padding: {{ section.settings.left_padding }}px;
       display: flex;
       flex-direction: column;
@@ -23,8 +23,8 @@
       overflow-y: auto;
     }
     #shopify-section-{{ section.id }} .boka-right {
-      flex: 0 0 45%;
-      width: 45%;
+      flex: 0 0 {{ section.settings.video_width_percent }}%;
+      width: {{ section.settings.video_width_percent }}%;
       position: relative;
       overflow: hidden;
     }
@@ -624,6 +624,16 @@
     {
       "type": "header",
       "content": "🎬 Video"
+    },
+    {
+      "type": "range",
+      "id": "video_width_percent",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "%",
+      "label": "Video Column Width (Desktop)",
+      "default": 35
     },
     {
       "type": "text",
