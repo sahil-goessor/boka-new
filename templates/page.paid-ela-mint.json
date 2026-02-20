@@ -61,7 +61,7 @@
             "content_gap_mobile": 20,
             "show_reviews": true,
             "review_text": "3,815+ Reviews",
-            "reviews_scroll_target": "shopify-section-template--17574539231275__yt_shorts_FUHnAV",
+            "reviews_scroll_target": "shopify-section-template--17574539231275__yotpo_reviews_widget_hbzYf6",
             "star_color": "#ffd700",
             "star_size": 20,
             "review_text_size": 14,
@@ -1190,6 +1190,7 @@
         "video_XYXH99",
         "video_TA7BbK"
       ],
+      "disabled": true,
       "custom_css": [
         "h2 {text-align: center; font-size: 40px !important;}",
         "@media only screen and (max-width: 767px) {h2 {font-size: 30px !important; }}"
@@ -1219,6 +1220,7 @@
       "block_order": [
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "css_class": "",
