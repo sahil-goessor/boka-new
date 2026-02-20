@@ -1,0 +1,674 @@
+{{ 'boka_listicle_hero_banner.css' | asset_url | stylesheet_tag }}
+
+<div id="shopify-section-{{ section.id }}" style="
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: {{ section.settings.background_color }};
+">
+  <div class="font_fix_fa890cfb">
+    <div class="section-boka-hero">
+      <div class="outer_container" style="
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: {{ section.settings.section_min_height }}px;
+      ">
+
+        <!-- LEFT SIDE -->
+        <div class="inner_container_left_side" style="
+          flex: 1 1 50%;
+          padding: {{ section.settings.left_padding }}px;
+          max-width: 600px;
+        ">
+
+          <!-- Stars + Review Count -->
+          {% if section.settings.show_reviews %}
+          <div class="star_wrapper" style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <div class="main_star-wrap" style="display: flex; gap: 2px;">
+              {% assign star_count = section.settings.star_count | times: 1 %}
+              {% for i in (1..5) %}
+                {% if i <= star_count %}
+                  <svg fill="{{ section.settings.star_color }}" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="1"/>
+                  </svg>
+                {% else %}
+                  <svg fill="none" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="2"/>
+                  </svg>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <p style="
+              color: {{ section.settings.review_text_color }};
+              font-size: {{ section.settings.review_font_size }}px;
+              margin: 0;
+              font-weight: 500;
+            ">{{ section.settings.review_text }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Heading -->
+          <h1 style="
+            color: {{ section.settings.heading_color }};
+            font-size: {{ section.settings.heading_font_size }}px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 24px;
+          ">{{ section.settings.heading_text }}</h1>
+
+          <!-- CTA Button -->
+          {% if section.settings.cta_text != blank %}
+          <a href="{{ section.settings.cta_url }}" style="
+            display: inline-block;
+            background-color: {{ section.settings.button_bg_color }};
+            color: {{ section.settings.button_text_color }};
+            padding: 14px 28px;
+            font-size: {{ section.settings.button_font_size }}px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            border-radius: {{ section.settings.button_border_radius }}px;
+            margin-bottom: 20px;
+            transition: opacity 0.2s;
+          ">{{ section.settings.cta_text }}</a>
+          {% endif %}
+
+          <!-- Timer -->
+          {% if section.settings.show_timer %}
+          <div class="timer_wrapper" style="margin-bottom: 20px;">
+            <p style="
+              color: {{ section.settings.timer_text_color }};
+              font-size: {{ section.settings.body_font_size }}px;
+              margin: 0 0 4px;
+            ">{{ section.settings.timer_label_text }}</p>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <strong style="color: {{ section.settings.timer_text_color }}; font-size: {{ section.settings.body_font_size }}px;">Offer Ends in</strong>
+              <span
+                class="boka-countdown"
+                data-end="{{ section.settings.timer_end_date }}"
+                style="
+                  color: {{ section.settings.timer_countdown_color }};
+                  font-size: {{ section.settings.body_font_size }}px;
+                  font-weight: 700;
+                "
+              >--:--:--</span>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Free Shipping Banner -->
+          {% if section.settings.show_shipping_banner %}
+          <div style="
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: {{ section.settings.shipping_banner_bg }};
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+          ">
+            {% if section.settings.shipping_icon != blank %}
+              <img src="{{ section.settings.shipping_icon | img_url: '60x' }}" alt="Free Shipping" style="width: 36px; height: auto; flex-shrink: 0;">
+            {% else %}
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="4" fill="{{ section.settings.shipping_banner_bg }}"/>
+                <path d="M6 13h16v10H6zM22 15h5l3 4v4h-8V15z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
+                <circle cx="10" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
+                <circle cx="26" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
+              </svg>
+            {% endif %}
+            <p style="
+              color: {{ section.settings.shipping_text_color }};
+              font-size: {{ section.settings.body_font_size }}px;
+              font-weight: 600;
+              margin: 0;
+            ">{{ section.settings.shipping_text }}</p>
+          </div>
+          {% endif %}
+
+          <!-- Promo Banner -->
+          {% if section.settings.show_promo_banner and section.settings.promo_text != blank %}
+          <div style="
+            background-color: {{ section.settings.promo_bg_color }};
+            padding: 12px 16px;
+            border-radius: 6px;
+          ">
+            <p style="
+              color: {{ section.settings.promo_text_color }};
+              font-size: {{ section.settings.body_font_size }}px;
+              margin: 0;
+            ">
+              {% if section.settings.promo_heading != blank %}
+                <strong>{{ section.settings.promo_heading }}</strong>&nbsp;
+              {% endif %}
+              {{ section.settings.promo_text }}
+            </p>
+          </div>
+          {% endif %}
+
+        </div>
+
+        <!-- RIGHT SIDE — Video -->
+        <div class="inner_container_right_side" style="
+          flex: 1 1 40%;
+          position: relative;
+          overflow: hidden;
+          min-height: {{ section.settings.video_min_height }}px;
+        ">
+          {% if section.settings.video_url != blank %}
+          <video-player class="played" data-click="true">
+            <video
+              aria-label="{{ section.settings.video_aria_label }}"
+              {% if section.settings.video_autoplay %}autoplay{% endif %}
+              class="boka-hero-video"
+              {% if section.settings.video_loop %}loop{% endif %}
+              {% if section.settings.video_muted %}muted{% endif %}
+              playsinline
+              {% if section.settings.video_poster != blank %}poster="{{ section.settings.video_poster | img_url: 'master' }}"{% endif %}
+              preload="metadata"
+              width="100%"
+              style="width: 100%; height: 100%; object-fit: cover; display: block;"
+            >
+              <source src="{{ section.settings.video_url }}" type="video/mp4">
+              {% if section.settings.video_poster != blank %}
+                <img alt="{{ section.settings.video_aria_label }}" src="{{ section.settings.video_poster | img_url: 'master' }}">
+              {% endif %}
+            </video>
+
+            <!-- Play Button -->
+            <button aria-label="Play" class="boka-play-btn" style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: rgba(0,0,0,0.4);
+              border: none;
+              border-radius: 50%;
+              width: 56px;
+              height: 56px;
+              cursor: pointer;
+              display: none;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+            ">
+              <svg height="24" viewBox="0 0 18 18" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.562 8.1L3.87.225c-.818-.562-1.87 0-1.87.9v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z" fill="currentColor"/>
+              </svg>
+            </button>
+
+            <!-- Mute Button -->
+            <button aria-label="Toggle mute" class="boka-mute-btn" style="
+              position: absolute;
+              bottom: 12px;
+              right: 12px;
+              background: rgba(0,0,0,0.4);
+              border: none;
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+            ">
+              <svg height="20" viewBox="0 0 497 497" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M259.4 128.9c-3.4-1.8-7.5-1.7-10.8.4l-95.1 61.8h-35.2c-5.8 0-10.6 4.8-10.6 10.6v92.7c0 5.9 4.8 10.6 10.6 10.6h35.2l95.1 61.8c1.8 1.2 3.8 1.7 5.8 1.7 1.7 0 3.5-.4 5-1.3 3.4-1.8 5.6-5.4 5.6-9.3V138.2c0-3.9-2.2-7.4-5.6-9.3z" fill="currentColor"/>
+                <path d="M303.6 302.9c-3.8 0-7.5-1.4-10.3-4.3-5.7-5.6-5.7-14.9 0-20.6 7.2-7.2 11.2-16.8 11.2-27s-4-19.9-11.2-27.1c-5.7-5.7-5.7-14.9 0-20.6 5.7-5.7 14.9-5.7 20.6 0 12.7 12.7 19.7 29.6 19.7 47.6 0 18.1-7 35-19.7 47.7-2.9 2.9-6.6 4.3-10.3 4.3z" fill="currentColor"/>
+                <path d="M333.8 331.4c-3.8 0-7.6-1.4-10.5-4.3-5.7-5.8-5.7-15.1 0-20.9 32.3-32.2 32.3-84.8 0-117-5.7-5.8-5.7-15.1 0-20.9 5.8-5.7 15.1-5.7 20.9 0 43.8 43.8 43.8 115 0 158.8-2.9 2.9-6.7 4.3-10.4 4.3z" fill="currentColor"/>
+              </svg>
+            </button>
+          </video-player>
+          {% elsif section.settings.fallback_image != blank %}
+            <img src="{{ section.settings.fallback_image | img_url: 'master' }}" alt="{{ section.settings.video_aria_label }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .inner_container_left_side {
+    padding: {{ section.settings.left_padding }}px;
+  }
+
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .outer_container {
+      flex-direction: column-reverse !important;
+    }
+    #shopify-section-{{ section.id }} .inner_container_left_side {
+      flex: 1 1 100% !important;
+      max-width: 100% !important;
+      padding: {{ section.settings.mobile_padding }}px !important;
+    }
+    #shopify-section-{{ section.id }} .inner_container_right_side {
+      flex: 1 1 100% !important;
+      width: 100% !important;
+      min-height: {{ section.settings.mobile_video_height }}px !important;
+    }
+    #shopify-section-{{ section.id }} h1 {
+      font-size: {{ section.settings.mobile_heading_font_size }}px !important;
+    }
+  }
+
+  #shopify-section-{{ section.id }} a[href]:hover {
+    opacity: 0.85;
+  }
+</style>
+
+<script>
+(function() {
+  // Countdown Timer
+  var countdownEl = document.querySelector('#shopify-section-{{ section.id }} .boka-countdown');
+  if (countdownEl) {
+    var endDate = new Date(countdownEl.getAttribute('data-end')).getTime();
+    function updateTimer() {
+      var now = new Date().getTime();
+      var diff = endDate - now;
+      if (diff <= 0) {
+        countdownEl.textContent = '00:00:00';
+        return;
+      }
+      var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      var s = Math.floor((diff % (1000 * 60)) / 1000);
+      countdownEl.textContent =
+        String(h).padStart(2,'0') + ':' +
+        String(m).padStart(2,'0') + ':' +
+        String(s).padStart(2,'0');
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  // Mute Toggle
+  var video = document.querySelector('#shopify-section-{{ section.id }} video');
+  var muteBtn = document.querySelector('#shopify-section-{{ section.id }} .boka-mute-btn');
+  var playBtn = document.querySelector('#shopify-section-{{ section.id }} .boka-play-btn');
+
+  if (video && muteBtn) {
+    muteBtn.addEventListener('click', function() {
+      video.muted = !video.muted;
+      muteBtn.setAttribute('aria-label', video.muted ? 'Unmute' : 'Mute');
+    });
+  }
+
+  if (video && playBtn) {
+    video.addEventListener('pause', function() {
+      playBtn.style.display = 'flex';
+    });
+    video.addEventListener('play', function() {
+      playBtn.style.display = 'none';
+    });
+    playBtn.addEventListener('click', function() {
+      video.play();
+    });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Listicle Hero Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "🎨 Layout & Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F5F3EE"
+    },
+    {
+      "type": "range",
+      "id": "section_min_height",
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "label": "Section Min Height (Desktop)",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "left_padding",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Left Side Padding (Desktop)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding (Mobile)",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "⭐ Reviews"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show Review Stars",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "star_count",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Number of Filled Stars",
+      "default": 5
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#F5A623"
+    },
+    {
+      "type": "text",
+      "id": "review_text",
+      "label": "Review Count Text",
+      "default": "3700+ Reviews"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "review_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Review Text Font Size",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "📝 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "3 Reasons This Toothpaste (Yep, Boka's Ela Mint) Outsmarts, Outshines & Outlasts Them All"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1A1A1A"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading Font Size (Desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_font_size",
+      "min": 18,
+      "max": 42,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading Font Size (Mobile)",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Body / Label Font Size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "🛒 CTA Button"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button Text",
+      "default": "TRY NOW FOR $11.75"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#1A1A1A"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button Border Radius",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "⏱ Countdown Timer"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_timer",
+      "label": "Show Countdown Timer",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "timer_label_text",
+      "label": "Timer Label Text",
+      "default": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!"
+    },
+    {
+      "type": "text",
+      "id": "timer_end_date",
+      "label": "Timer End Date (e.g. Dec 31, 2025 23:59:59)",
+      "default": "Dec 31, 2025 23:59:59",
+      "info": "Format: Mon DD, YYYY HH:MM:SS"
+    },
+    {
+      "type": "color",
+      "id": "timer_text_color",
+      "label": "Timer Label Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "timer_countdown_color",
+      "label": "Countdown Number Color",
+      "default": "#1A1A1A"
+    },
+    {
+      "type": "header",
+      "content": "🚚 Free Shipping Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_banner",
+      "label": "Show Free Shipping Banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_text",
+      "label": "Shipping Banner Text",
+      "default": "Free Shipping on your first order with code: NEWTOBOKA"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_icon",
+      "label": "Shipping Icon (optional, overrides default)"
+    },
+    {
+      "type": "color",
+      "id": "shipping_banner_bg",
+      "label": "Shipping Banner Background",
+      "default": "#DFF0D8"
+    },
+    {
+      "type": "color",
+      "id": "shipping_text_color",
+      "label": "Shipping Banner Text Color",
+      "default": "#2D6A2D"
+    },
+    {
+      "type": "header",
+      "content": "🏷 Promo Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_promo_banner",
+      "label": "Show Promo Banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "promo_heading",
+      "label": "Promo Heading (Bold)",
+      "default": "Black Friday Cyber Monday Sale:"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promo Body Text",
+      "default": "Save up to 30% off on Ela Mint n-Ha Toothpaste now!"
+    },
+    {
+      "type": "color",
+      "id": "promo_bg_color",
+      "label": "Promo Banner Background",
+      "default": "#FFF3CD"
+    },
+    {
+      "type": "color",
+      "id": "promo_text_color",
+      "label": "Promo Banner Text Color",
+      "default": "#856404"
+    },
+    {
+      "type": "header",
+      "content": "🎬 Video"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video MP4 URL",
+      "info": "Paste a full CDN URL to your Shopify-hosted .mp4 video file",
+      "default": "https://cdn.shopify.com/videos/c/vp/63a37363b3c24e38956aad17d92957ce/63a37363b3c24e38956aad17d92957ce.HD-1080p-2.5Mbps-53596725.mp4"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster / Thumbnail Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback Image (shown if no video)"
+    },
+    {
+      "type": "text",
+      "id": "video_aria_label",
+      "label": "Video Accessibility Label",
+      "default": "Customer toothpaste review video"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "label": "Autoplay Video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_loop",
+      "label": "Loop Video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_muted",
+      "label": "Mute Video by Default",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "video_min_height",
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "label": "Video Min Height (Desktop)",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "mobile_video_height",
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "label": "Video Height (Mobile)",
+      "default": 380
+    }
+  ],
+  "presets": [
+    {
+      "name": "Listicle Hero Banner"
+    }
+  ]
+}
+{% endschema %}
