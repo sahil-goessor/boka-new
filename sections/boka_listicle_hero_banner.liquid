@@ -1,31 +1,38 @@
-<div id="shopify-section-{{ section.id }}" style="width: 100%; margin: 0 auto; box-sizing: border-box;">
+<div id="shopify-section-{{ section.id }}">
 
   <style>
     #shopify-section-{{ section.id }} {
       background-color: {{ section.settings.background_color }};
+      width: 100%;
+      box-sizing: border-box;
     }
     #shopify-section-{{ section.id }} .boka-outer {
       display: flex;
       align-items: stretch;
-      min-height: {{ section.settings.section_min_height }}px;
+      height: {{ section.settings.section_height }}px;
+      overflow: hidden;
     }
     #shopify-section-{{ section.id }} .boka-left {
-      flex: 1 1 50%;
+      flex: 0 0 55%;
+      width: 55%;
       padding: {{ section.settings.left_padding }}px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 600px;
       box-sizing: border-box;
+      overflow-y: auto;
     }
     #shopify-section-{{ section.id }} .boka-right {
-      flex: 1 1 50%;
+      flex: 0 0 45%;
+      width: 45%;
       position: relative;
       overflow: hidden;
-      min-height: {{ section.settings.video_min_height }}px;
     }
     #shopify-section-{{ section.id }} .boka-right video,
     #shopify-section-{{ section.id }} .boka-right img.boka-fallback {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -38,8 +45,9 @@
       margin-bottom: 14px;
     }
     #shopify-section-{{ section.id }} .boka-stars svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
     }
     #shopify-section-{{ section.id }} .boka-review-text {
       color: {{ section.settings.review_text_color }};
@@ -52,7 +60,7 @@
       font-size: {{ section.settings.heading_font_size }}px;
       line-height: 1.2;
       font-weight: 700;
-      margin: 0 0 24px 0;
+      margin: 0 0 20px 0;
     }
     #shopify-section-{{ section.id }} .boka-cta {
       display: inline-block;
@@ -64,9 +72,10 @@
       text-decoration: none;
       letter-spacing: 0.05em;
       border-radius: {{ section.settings.button_border_radius }}px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       transition: opacity 0.2s;
       text-align: center;
+      align-self: flex-start;
     }
     #shopify-section-{{ section.id }} .boka-cta:hover {
       opacity: 0.85;
@@ -80,7 +89,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     #shopify-section-{{ section.id }} .boka-timer-row strong {
       color: {{ section.settings.timer_text_color }};
@@ -96,9 +105,9 @@
       align-items: center;
       gap: 12px;
       background-color: {{ section.settings.shipping_banner_bg }};
-      padding: 12px 16px;
+      padding: 10px 14px;
       border-radius: 6px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     #shopify-section-{{ section.id }} .boka-shipping p {
       color: {{ section.settings.shipping_text_color }};
@@ -108,7 +117,7 @@
     }
     #shopify-section-{{ section.id }} .boka-promo {
       background-color: {{ section.settings.promo_bg_color }};
-      padding: 12px 16px;
+      padding: 10px 14px;
       border-radius: 6px;
     }
     #shopify-section-{{ section.id }} .boka-promo p {
@@ -131,6 +140,7 @@
       align-items: center;
       justify-content: center;
       color: #fff;
+      z-index: 2;
     }
     #shopify-section-{{ section.id }} .boka-mute-btn {
       position: absolute;
@@ -146,28 +156,32 @@
       align-items: center;
       justify-content: center;
       color: #fff;
+      z-index: 2;
     }
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
       #shopify-section-{{ section.id }} .boka-outer {
         flex-direction: column-reverse;
-        min-height: unset;
+        height: auto;
+        overflow: visible;
       }
       #shopify-section-{{ section.id }} .boka-left {
-        flex: 1 1 100%;
-        max-width: 100%;
+        flex: 1 1 auto;
+        width: 100%;
         padding: {{ section.settings.mobile_padding }}px;
+        overflow-y: visible;
       }
       #shopify-section-{{ section.id }} .boka-right {
-        flex: 1 1 100%;
+        flex: none;
         width: 100%;
-        min-height: {{ section.settings.mobile_video_height }}px;
+        height: {{ section.settings.mobile_video_height }}px;
       }
       #shopify-section-{{ section.id }} .boka-heading {
         font-size: {{ section.settings.mobile_heading_font_size }}px;
       }
       #shopify-section-{{ section.id }} .boka-cta {
+        align-self: stretch;
         width: 100%;
         box-sizing: border-box;
       }
@@ -176,25 +190,25 @@
 
   <div class="boka-outer">
 
-    {%- comment -%} ── LEFT SIDE ── {%- endcomment -%}
+    {%- comment -%} ── LEFT ── {%- endcomment -%}
     <div class="boka-left">
 
       {%- if section.settings.show_reviews -%}
-      <div class="boka-stars">
-        {%- assign star_count = section.settings.star_count -%}
-        {%- for i in (1..5) -%}
-          {%- if i <= star_count -%}
-            <svg fill="{{ section.settings.star_color }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="1"/>
-            </svg>
-          {%- else -%}
-            <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="2"/>
-            </svg>
-          {%- endif -%}
-        {%- endfor -%}
-        <p class="boka-review-text">{{ section.settings.review_text }}</p>
-      </div>
+        <div class="boka-stars">
+          {%- assign star_count = section.settings.star_count -%}
+          {%- for i in (1..5) -%}
+            {%- if i <= star_count -%}
+              <svg fill="{{ section.settings.star_color }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="1"/>
+              </svg>
+            {%- else -%}
+              <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="2"/>
+              </svg>
+            {%- endif -%}
+          {%- endfor -%}
+          <p class="boka-review-text">{{ section.settings.review_text }}</p>
+        </div>
       {%- endif -%}
 
       <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
@@ -207,10 +221,7 @@
         <p class="boka-timer-label">{{ section.settings.timer_label_text }}</p>
         <div class="boka-timer-row">
           <strong>Offer Ends in</strong>
-          <span
-            class="boka-countdown"
-            data-end="{{ section.settings.timer_end_date }}"
-          >--:--:--</span>
+          <span class="boka-countdown" data-end="{{ section.settings.timer_end_date }}">--:--:--</span>
         </div>
       {%- endif -%}
 
@@ -219,7 +230,7 @@
           {%- if section.settings.shipping_icon != blank -%}
             <img src="{{ section.settings.shipping_icon | img_url: '60x' }}" alt="" style="width:36px;height:auto;flex-shrink:0;">
           {%- else -%}
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
               <path d="M3 14h18v9H3z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
               <path d="M21 16h5l3 4v3h-8V16z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
               <circle cx="8" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
@@ -243,7 +254,7 @@
 
     </div>
 
-    {%- comment -%} ── RIGHT SIDE (Video) ── {%- endcomment -%}
+    {%- comment -%} ── RIGHT (Video) ── {%- endcomment -%}
     <div class="boka-right">
       {%- if section.settings.video_url != blank -%}
         <video
@@ -340,13 +351,13 @@
     },
     {
       "type": "range",
-      "id": "section_min_height",
+      "id": "section_height",
       "min": 300,
-      "max": 900,
+      "max": 800,
       "step": 10,
       "unit": "px",
-      "label": "Section Min Height (Desktop)",
-      "default": 600
+      "label": "Section Height (Desktop)",
+      "default": 520
     },
     {
       "type": "range",
@@ -439,7 +450,7 @@
       "step": 1,
       "unit": "px",
       "label": "Heading Font Size (Desktop)",
-      "default": 36
+      "default": 32
     },
     {
       "type": "range",
@@ -449,7 +460,7 @@
       "step": 1,
       "unit": "px",
       "label": "Heading Font Size (Mobile)",
-      "default": 28
+      "default": 26
     },
     {
       "type": "range",
@@ -654,16 +665,6 @@
       "id": "video_muted",
       "label": "Mute Video by Default",
       "default": true
-    },
-    {
-      "type": "range",
-      "id": "video_min_height",
-      "min": 300,
-      "max": 900,
-      "step": 10,
-      "unit": "px",
-      "label": "Video Height (Desktop)",
-      "default": 600
     },
     {
       "type": "range",
