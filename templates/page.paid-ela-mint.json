@@ -1101,17 +1101,17 @@
             "button_action": "add_and_checkout",
             "variant_id": "7744260046891",
             "product_quantity": 1,
-            "button_label": "SHOP NOW",
+            "button_label": "",
             "button_link": "",
             "second_button_action": "link",
             "second_variant_id": "",
             "second_product_quantity": 1,
             "second_button_label": "",
             "second_button_link": "",
-            "popup_button_label": "",
+            "popup_button_label": "VIEW FULL INGREDIENTS",
             "popup_button_style_secondary": false,
             "popup_title": "Full Ingredients List",
-            "popup_content": "<p>Add your popup content here.</p>"
+            "popup_content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>"
           }
         }
       },
