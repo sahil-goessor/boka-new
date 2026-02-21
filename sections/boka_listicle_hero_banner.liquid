@@ -209,68 +209,70 @@
 
     {%- comment -%} ── LEFT ── {%- endcomment -%}
     <div class="boka-left">
+      <div class="boka-left-inner">
 
-      {%- if section.settings.show_reviews -%}
-        <div class="boka-stars">
-          {%- assign star_count = section.settings.star_count -%}
-          {%- for i in (1..5) -%}
-            {%- if i <= star_count -%}
-              <svg fill="{{ section.settings.star_color }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="1"/>
-              </svg>
+        {%- if section.settings.show_reviews -%}
+          <div class="boka-stars">
+            {%- assign star_count = section.settings.star_count -%}
+            {%- for i in (1..5) -%}
+              {%- if i <= star_count -%}
+                <svg fill="{{ section.settings.star_color }}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="1"/>
+                </svg>
+              {%- else -%}
+                <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="2"/>
+                </svg>
+              {%- endif -%}
+            {%- endfor -%}
+            <p class="boka-review-text">{{ section.settings.review_text }}</p>
+          </div>
+        {%- endif -%}
+
+        <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
+
+        {%- if section.settings.cta_text != blank -%}
+          <a class="boka-cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+        {%- endif -%}
+
+        {%- if section.settings.show_timer -%}
+          <p class="boka-timer-label">{{ section.settings.timer_label_text }}</p>
+          <div class="boka-timer-row">
+            <strong>Offer Ends in</strong>
+            <span class="boka-countdown" data-end="{{ section.settings.timer_end_date }}">--:--:--</span>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.show_shipping_banner -%}
+          <div class="boka-shipping">
+            {%- if section.settings.shipping_icon != blank -%}
+              <img src="{{ section.settings.shipping_icon | img_url: '60x' }}" alt="" style="width:36px;height:auto;flex-shrink:0;">
             {%- else -%}
-              <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.6857 1.55835C11.8025 1.18368 12.3328 1.18368 12.4495 1.55835L14.7421 8.91577C14.7941 9.08292 14.9489 9.19678 15.124 9.19678H22.5772C22.9607 9.19678 23.1244 9.68407 22.8188 9.91561L16.7605 14.5054C16.6262 14.6072 16.57 14.7823 16.6202 14.9432L18.9274 22.3476C19.0431 22.7191 18.6141 23.0204 18.3039 22.7855L12.3092 18.2438C12.1663 18.1356 11.9689 18.1356 11.8261 18.2438L5.83131 22.7855C5.52117 23.0204 5.09211 22.7191 5.20787 22.3476L7.51506 14.9432C7.5652 14.7823 7.50907 14.6072 7.37472 14.5054L1.31645 9.91561C1.01084 9.68407 1.17458 9.19678 1.55801 9.19678H9.0113C9.18639 9.19678 9.34111 9.08292 9.3932 8.91577L11.6857 1.55835Z" stroke="{{ section.settings.star_color }}" stroke-width="2"/>
+              <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+                <path d="M3 14h18v9H3z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
+                <path d="M21 16h5l3 4v3h-8V16z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
+                <circle cx="8" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
+                <circle cx="26" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
               </svg>
             {%- endif -%}
-          {%- endfor -%}
-          <p class="boka-review-text">{{ section.settings.review_text }}</p>
-        </div>
-      {%- endif -%}
+            <p>{{ section.settings.shipping_text }}</p>
+          </div>
+        {%- endif -%}
 
-      <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
+        {%- if section.settings.show_promo_banner and section.settings.promo_text != blank -%}
+          <div class="boka-promo">
+            <p>
+              {%- if section.settings.promo_heading != blank -%}
+                <strong>{{ section.settings.promo_heading }}</strong>&nbsp;
+              {%- endif -%}
+              {{ section.settings.promo_text }}
+            </p>
+          </div>
+        {%- endif -%}
 
-      {%- if section.settings.cta_text != blank -%}
-        <a class="boka-cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
-      {%- endif -%}
-
-      {%- if section.settings.show_timer -%}
-        <p class="boka-timer-label">{{ section.settings.timer_label_text }}</p>
-        <div class="boka-timer-row">
-          <strong>Offer Ends in</strong>
-          <span class="boka-countdown" data-end="{{ section.settings.timer_end_date }}">--:--:--</span>
-        </div>
-      {%- endif -%}
-
-      {%- if section.settings.show_shipping_banner -%}
-        <div class="boka-shipping">
-          {%- if section.settings.shipping_icon != blank -%}
-            <img src="{{ section.settings.shipping_icon | img_url: '60x' }}" alt="" style="width:36px;height:auto;flex-shrink:0;">
-          {%- else -%}
-            <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-              <path d="M3 14h18v9H3z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
-              <path d="M21 16h5l3 4v3h-8V16z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
-              <circle cx="8" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
-              <circle cx="26" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
-            </svg>
-          {%- endif -%}
-          <p>{{ section.settings.shipping_text }}</p>
-        </div>
-      {%- endif -%}
-
-      {%- if section.settings.show_promo_banner and section.settings.promo_text != blank -%}
-        <div class="boka-promo">
-          <p>
-            {%- if section.settings.promo_heading != blank -%}
-              <strong>{{ section.settings.promo_heading }}</strong>&nbsp;
-            {%- endif -%}
-            {{ section.settings.promo_text }}
-          </p>
-        </div>
-      {%- endif -%}
-
+      </div>{%- comment -%}/.boka-left-inner{%- endcomment -%}
     </div>
-
+    
     {%- comment -%} ── RIGHT (Video) ── {%- endcomment -%}
     <div class="boka-right">
       {%- if section.settings.video_url != blank -%}
