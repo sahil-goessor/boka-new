@@ -15,12 +15,16 @@
     #shopify-section-{{ section.id }} .boka-left {
       flex: 0 0 {{ 100 | minus: section.settings.video_width_percent }}%;
       width: {{ 100 | minus: section.settings.video_width_percent }}%;
-      padding: {{ section.settings.left_padding }}px;
+      padding: {{ section.settings.left_padding }}px {{ section.settings.left_padding }}px {{ section.settings.left_padding }}px {{ section.settings.left_padding }}px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       box-sizing: border-box;
       overflow-y: auto;
+    }
+    /* Constrain content width so it doesn't stretch across the full left column */
+    #shopify-section-{{ section.id }} .boka-left-inner {
+      max-width: 520px;
     }
     #shopify-section-{{ section.id }} .boka-right {
       flex: 0 0 {{ section.settings.video_width_percent }}%;
@@ -162,20 +166,33 @@
     /* ── Mobile ── */
     @media (max-width: 768px) {
       #shopify-section-{{ section.id }} .boka-outer {
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: auto;
         overflow: visible;
+        position: relative;
       }
+      /* Video sits at top, full width */
+      #shopify-section-{{ section.id }} .boka-right {
+        flex: none;
+        width: 100%;
+        height: {{ section.settings.mobile_video_height }}px;
+        position: relative;
+      }
+      /* White card slides up over the video */
       #shopify-section-{{ section.id }} .boka-left {
         flex: 1 1 auto;
         width: 100%;
         padding: {{ section.settings.mobile_padding }}px;
         overflow-y: visible;
+        background: #ffffff;
+        border-radius: 20px 20px 0 0;
+        margin-top: -24px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
       }
-      #shopify-section-{{ section.id }} .boka-right {
-        flex: none;
-        width: 100%;
-        height: {{ section.settings.mobile_video_height }}px;
+      #shopify-section-{{ section.id }} .boka-left-inner {
+        max-width: 100%;
       }
       #shopify-section-{{ section.id }} .boka-heading {
         font-size: {{ section.settings.mobile_heading_font_size }}px;
