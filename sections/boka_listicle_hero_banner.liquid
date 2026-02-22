@@ -166,7 +166,7 @@
     /* ── Mobile ── */
     @media (max-width: 768px) {
       #shopify-section-{{ section.id }} .boka-outer {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
         overflow: visible;
         position: relative;
@@ -272,7 +272,7 @@
 
       </div>{%- comment -%}/.boka-left-inner{%- endcomment -%}
     </div>
-    
+
     {%- comment -%} ── RIGHT (Video) ── {%- endcomment -%}
     <div class="boka-right">
       {%- if section.settings.video_url != blank -%}
