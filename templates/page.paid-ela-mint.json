@@ -87,7 +87,7 @@
             "claim_2_text": "Fluoride-free & clean ingredients",
             "claim_icon_size": 40,
             "claim_text_size": 14,
-            "button_action": "add_and_checkout",
+            "button_action": "add_and_cart",
             "variant_id": "7744260046891",
             "product_quantity": 1,
             "button_text": "TRY NOW FOR $11.75",
