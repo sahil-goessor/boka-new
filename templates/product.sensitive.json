@@ -195,7 +195,7 @@
       ],
       "name": "Image with feature icons",
       "settings": {
-        "section_title": "Why Choose Boka Sensitive",
+        "section_title": "<em>Why Choose</em> Boka Sensitive",
         "background_color": "#fafaf5",
         "title_font_size_desktop": 40,
         "title_font_size_mobile": 32,
@@ -217,7 +217,7 @@
         "heading_JJEgeh": {
           "type": "heading",
           "settings": {
-            "heading": "Relief you can feel good about",
+            "heading": "<em>Relief</em> you can feel good about",
             "heading_size": "h1",
             "heading_tag": "default"
           }
