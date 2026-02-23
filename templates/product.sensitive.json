@@ -182,6 +182,69 @@
         "padding_bottom_mobile": 60
       }
     },
+    "image_with_icons_B7qBJG": {
+      "type": "image-with-icons",
+      "blocks": {
+        "feature_xjikK9": {
+          "type": "feature",
+          "settings": {
+            "position": "top-left",
+            "title": "5% Potassium Nitrate",
+            "description": "for effective sensitivity relief"
+          }
+        },
+        "feature_MqWAAC": {
+          "type": "feature",
+          "settings": {
+            "position": "top-right",
+            "title": "Nano-Hydroxyapatite",
+            "description": "mimics tooth enamel"
+          }
+        },
+        "feature_WpTCFC": {
+          "type": "feature",
+          "settings": {
+            "position": "bottom-left",
+            "title": "Refreshing Flavor",
+            "description": "Mint Coconut Cream taste"
+          }
+        },
+        "feature_WHw4GX": {
+          "type": "feature",
+          "settings": {
+            "position": "bottom-right",
+            "title": "Fluoride-Free",
+            "description": "No fluoride, sulfates, parabens or artificial colors"
+          }
+        }
+      },
+      "block_order": [
+        "feature_xjikK9",
+        "feature_MqWAAC",
+        "feature_WpTCFC",
+        "feature_WHw4GX"
+      ],
+      "custom_css": [
+        "@media only screen and (max-width: 749px) {h3 {font-weight: 400 !important; }}"
+      ],
+      "name": "Image with feature icons",
+      "settings": {
+        "section_title": "Why Choose Boka Sensitive",
+        "background_color": "#fafaf5",
+        "title_font_size_desktop": 40,
+        "title_font_size_mobile": 32,
+        "title_text_color": "#000000",
+        "feature_title_font_size_desktop": 24,
+        "feature_title_font_size_mobile": 20,
+        "feature_title_text_color": "#333333",
+        "feature_description_font_size_desktop": 16,
+        "feature_description_font_size_mobile": 14,
+        "feature_description_text_color": "#666666",
+        "icon_size": 60,
+        "text_alignment": "center",
+        "product_image": "shopify://shop_images/DTC_Sensitive_MainImage1pk.webp"
+      }
+    },
     "image_with_text_kNPK78": {
       "type": "image-with-text",
       "blocks": {
@@ -232,91 +295,6 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 50
-      }
-    },
-    "multicolumn_6LtGeY": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_PJa8Jd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Nano-hydroxyapatite_4ad703a3-be68-4474-b9bd-095f0b4a6296.webp",
-            "image_link": "",
-            "title": "<strong>Nano-hydroxyapatite</strong>",
-            "text": "<p>mimics tooth enamel</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_JjmpUQ": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_xPQUw3": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_BncQhL": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_PJa8Jd",
-        "column_JjmpUQ",
-        "column_xPQUw3",
-        "column_BncQhL"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
-        ".multicolumn-card {background-color: #fafaf5 !important;}",
-        ".multicolumn-card__info {padding: 3rem;}",
-        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "A Blend of <em>Science</em> & Flavor",
-        "heading_size": "h0",
-        "heading_tag": "h2",
-        "image_width": "half",
-        "image_ratio": "circle",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "full_width_enabled": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "fadein_enabled": true,
-        "column_heading_background_color": "",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#000000",
-        "columns_tablet": "1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
       }
     },
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
@@ -409,8 +387,8 @@
   },
   "order": [
     "main",
+    "image_with_icons_B7qBJG",
     "image_with_text_kNPK78",
-    "multicolumn_6LtGeY",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
     "related-products",
     "1684207833f45c861d"
