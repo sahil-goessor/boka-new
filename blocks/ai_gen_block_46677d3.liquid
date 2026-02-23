@@ -909,7 +909,44 @@
           if (action === 'add_and_checkout') {
             window.location.href = '/checkout';
           } else if (action === 'add_and_cart') {
-            window.location.href = '/cart';
+            // Attempt to open side cart drawer (tries common theme patterns)
+            document.documentElement.dispatchEvent(new CustomEvent('cart:open', { bubbles: true }));
+            document.dispatchEvent(new CustomEvent('cart:open', { bubbles: true }));
+
+            // Dawn / common Shopify themes
+            const cartDrawer = document.querySelector('cart-drawer');
+            if (cartDrawer && typeof cartDrawer.open === 'function') {
+              cartDrawer.open();
+            }
+
+            // Try toggling common side cart elements used by popular themes
+            const sideCartSelectors = [
+              '[data-drawer="cart"]',
+              '[data-cart-drawer]',
+              '#cart-drawer',
+              '.cart-drawer',
+              '#CartDrawer',
+              '.CartDrawer',
+              '[aria-controls="cart-drawer"]'
+            ];
+
+            sideCartSelectors.forEach(selector => {
+              const el = document.querySelector(selector);
+              if (el) {
+                el.classList.add('is-open', 'active', 'open');
+                el.setAttribute('aria-hidden', 'false');
+              }
+            });
+
+            // Reset button
+            textEl.textContent = '✓ Added to Cart';
+            textEl.style.display = 'inline';
+            loaderEl.style.display = 'none';
+            this.disabled = false;
+
+            setTimeout(() => {
+              textEl.textContent = '{{ block.settings.button_text }}';
+            }, 2000);
           } else if (action === 'add_and_stay') {
             textEl.textContent = '✓ Added to Cart';
             textEl.style.display = 'inline';
