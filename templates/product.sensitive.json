@@ -172,8 +172,8 @@
           "type": "feature",
           "settings": {
             "position": "bottom-left",
-            "title": "Refreshing Taste",
-            "description": "Mint Cream flavor freshens breath"
+            "title": "Refreshing Mint Cream Flavor",
+            "description": "freshens breath"
           }
         },
         "feature_WHw4GX": {
@@ -196,7 +196,7 @@
       ],
       "name": "Image with feature icons",
       "settings": {
-        "section_title": "<em>Why Choose</em> Boka Sensitive",
+        "section_title": "Why Choose Boka Sensitive",
         "background_color": "#fafaf5",
         "title_font_size_desktop": 40,
         "title_font_size_mobile": 32,
