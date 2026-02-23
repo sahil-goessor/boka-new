@@ -72,10 +72,20 @@
             "row_content": "<p>Boka’s toothpaste for sensitive teeth is formulated with 5% potassium nitrate to reduce sensitivity and build protection against cold, heat, acids and sweets!</p>",
             "page": ""
           }
+        },
+        "collapsible_row_NHfbJC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Boka a great option for people with sensitive teeth?",
+            "icon": "check_mark",
+            "row_content": "<p>Boka stands out because our sensitive toothpaste combines modern science with natural ingredients. Our formulas are free from fluoride, SLS, parabens, and artificial dyes, and are designed for people with sensitive gums or those prone to reactions from certain ingredients.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
-        "collapsible_row_rAkqBn"
+        "collapsible_row_rAkqBn",
+        "collapsible_row_NHfbJC"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
