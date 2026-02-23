@@ -106,38 +106,6 @@
             "content": "<p>{{ product.metafields.custom.ingredients_description | metafield_tag }}</p>",
             "page": ""
           }
-        },
-        "icon_with_text_V6zWW9": {
-          "type": "icon-with-text",
-          "name": "Claims 3 & 4",
-          "settings": {
-            "orientation": "inlined",
-            "layout": "horizontal",
-            "icon_1": "none",
-            "image_1": "{{ product.metafields.custom.icon_w_claims_image_3.value }}",
-            "heading_1": "{{ product.metafields.custom.icon_w_claims_title_3.value }}",
-            "icon_2": "none",
-            "image_2": "{{ product.metafields.custom.icon_w_claims_image_4.value }}",
-            "heading_2": "{{ product.metafields.custom.icon_w_claims_title_4.value }}",
-            "padding_top": 14,
-            "padding_bottom": 0
-          }
-        },
-        "af067451-b82f-4114-8006-9a547e9c2157": {
-          "type": "icon-with-text",
-          "name": "Claims 1 & 2",
-          "settings": {
-            "orientation": "inlined",
-            "layout": "horizontal",
-            "icon_1": "none",
-            "image_1": "{{ product.metafields.custom.icon_w_claims_image_1.value }}",
-            "heading_1": "{{ product.metafields.custom.icon_w_claims_3.value }}",
-            "icon_2": "none",
-            "image_2": "{{ product.metafields.custom.icon_w_claims_image_2.value }}",
-            "heading_2": "{{ product.metafields.custom.icon_w_claims_title_2.value }}",
-            "padding_top": 14,
-            "padding_bottom": 0
-          }
         }
       },
       "block_order": [
@@ -153,9 +121,7 @@
         "description",
         "8f4ac970-3a15-4b7d-823a-82ce6560b8df",
         "collapsible_tab_9Ri3zn",
-        "collapsible_tab_NnPN3E",
-        "icon_with_text_V6zWW9",
-        "af067451-b82f-4114-8006-9a547e9c2157"
+        "collapsible_tab_NnPN3E"
       ],
       "custom_css": [
         "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}"
