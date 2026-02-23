@@ -246,6 +246,16 @@
     "multicolumn_6LtGeY": {
       "type": "multicolumn",
       "blocks": {
+        "column_PJa8Jd": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "<strong>Nano-hydroxyapatite</strong>",
+            "text": "<p>mimics tooth enamel</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_JjmpUQ": {
           "type": "column",
           "settings": {
@@ -278,6 +288,7 @@
         }
       },
       "block_order": [
+        "column_PJa8Jd",
         "column_JjmpUQ",
         "column_xPQUw3",
         "column_BncQhL"
