@@ -172,7 +172,7 @@
           "settings": {
             "position": "bottom-left",
             "title": "Refreshing Flavor",
-            "description": "Mint Coconut Cream taste"
+            "description": "Mint Cream taste"
           }
         },
         "feature_WHw4GX": {
@@ -286,7 +286,7 @@
         "enable_desktop_slider": false,
         "color_scheme": "custom",
         "custom_background_color": "#ffffff",
-        "custom_text_color": "#433033",
+        "custom_text_color": "#000000",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
