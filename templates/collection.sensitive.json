@@ -77,15 +77,25 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What makes Boka a great option for people with sensitive teeth?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>Boka stands out because our sensitive toothpaste combines modern science with natural ingredients. Our formulas are free from fluoride, SLS, parabens, and artificial dyes, and are designed for people with sensitive gums or those prone to reactions from certain ingredients.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bykkBJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can Boka’s toothpaste help with surface stains if I have sensitive teeth?",
+            "icon": "none",
+            "row_content": "<p>Unlike some whitening formulas that may increase tooth sensitivity, Boka’s options are designed to gently remove surface stains without abrasive ingredients. Our toothpastes for sensitive teeth contain nano-hydroxyapatite and are formulated for daily use.</p>",
             "page": ""
           }
         }
       },
       "block_order": [
         "collapsible_row_rAkqBn",
-        "collapsible_row_NHfbJC"
+        "collapsible_row_NHfbJC",
+        "collapsible_row_bykkBJ"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
