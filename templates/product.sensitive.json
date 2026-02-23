@@ -199,33 +199,24 @@
             "text": "<p>Boka's n-Ha Toothpaste for Sensitive Teeth is safe for daily use, combining science-backed and nature-inspired ingredients to care for your smile.</p>",
             "text_style": "body"
           }
-        },
-        "button_LGJMxC": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "second_button_label": "",
-            "second_button_link": ""
-          }
         }
       },
       "block_order": [
         "heading_JJEgeh",
-        "text_V9HMNx",
-        "button_LGJMxC"
+        "text_V9HMNx"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Sensitive_PDP_A_Content.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "section_background_color": "#dae9cf",
-        "custom_background_color": "#dae9cf",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#ffffff",
         "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
         "heading_font_size_desktop": 48,
