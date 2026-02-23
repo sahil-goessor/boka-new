@@ -282,6 +282,12 @@
         "column_xPQUw3",
         "column_BncQhL"
       ],
+      "custom_css": [
+        ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
+        ".multicolumn-card {background-color: #fafaf5 !important;}",
+        ".multicolumn-card__info {padding: 3rem;}",
+        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "A Blend of <em>Science</em> & Flavor",
