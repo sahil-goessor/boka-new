@@ -90,12 +90,22 @@
             "row_content": "<p>Unlike some whitening formulas that may increase tooth sensitivity, Boka’s options are designed to gently remove surface stains without abrasive ingredients. Our toothpastes for sensitive teeth contain nano-hydroxyapatite and are formulated for daily use.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_cUEFfq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why do some people choose nano-hydroxyapatite toothpaste for sensitive teeth?",
+            "icon": "none",
+            "row_content": "<p>While ADA-approved toothpastes for sensitive teeth often contain fluoride or stannous fluoride, some people are interested in alternatives like nano-hydroxyapatite, an ingredient studied for use in oral care. Boka’s toothpaste is fluoride-free and made with natural ingredients for those who prefer a different option.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_rAkqBn",
         "collapsible_row_NHfbJC",
-        "collapsible_row_bykkBJ"
+        "collapsible_row_bykkBJ",
+        "collapsible_row_cUEFfq"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
