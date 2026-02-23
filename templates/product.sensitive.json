@@ -271,7 +271,7 @@
       ],
       "name": "Complete your Routine",
       "settings": {
-        "title": "Complete Your Routine",
+        "title": "<em>Complete</em> Your Routine",
         "heading_size": "h2",
         "heading_tag": "h3",
         "description": "",
@@ -349,6 +349,75 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 30
       }
+    },
+    "collapsible_content_cqMPHx": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_iEDkx4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_p3iLPQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_dVP4eh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_jQBzPr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_iEDkx4",
+        "collapsible_row_p3iLPQ",
+        "collapsible_row_dVP4eh",
+        "collapsible_row_jQBzPr"
+      ],
+      "disabled": true,
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<em>Frequently Asked Questions</em> about Boka's n-Ha Toothpaste for Sensitive Teeth",
+        "heading_size": "h1",
+        "heading_tag": "h3",
+        "heading_alignment": "center",
+        "description": "",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -357,6 +426,7 @@
     "image_with_text_kNPK78",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
     "related-products",
-    "1684207833f45c861d"
+    "1684207833f45c861d",
+    "collapsible_content_cqMPHx"
   ]
 }
