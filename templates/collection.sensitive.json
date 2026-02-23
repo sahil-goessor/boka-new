@@ -1,0 +1,198 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__description {max-width: 100%;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_learn_more": false,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "enable_merchandising_card": false,
+        "card_bg_color": "",
+        "card_text_color": "",
+        "card_columns": "two",
+        "card_column_position": 1,
+        "card_row_position": 2,
+        "image_as_bg": false,
+        "bg_image_position": "center",
+        "bg_image_link": "",
+        "card_image_url": "",
+        "card_text_alignment_desktop": "left",
+        "card_text_alignment_mobile": "center",
+        "card_text_position_desktop": "center",
+        "card_text_position_mobile": "flex-start",
+        "card_title": "",
+        "card_text": "",
+        "button_text": "",
+        "button_url": "",
+        "padding_top": 20,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "collapsible_content_4J9xbR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_rAkqBn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Boka a good toothpaste for bad breath?",
+            "icon": "none",
+            "row_content": "<p>Boka’s n-Ha toothpaste is a top option for those seeking a toothpaste for bad breath when used as directed. It’s formulated with clean, non-toxic ingredients* like xylitol, green tea, and aloe vera to promote fresh breath. Our line includes fluoride-free options, offering peace of mind to users with varying preferences. You’ll also find flavors like <a href=\"https://www.boka.com/products/cinna-mint-toothpaste\"><span style=\"text-decoration:underline\">Cinna-Mint</span></a>, <a href=\"https://www.boka.com/products/refresh-mint-whitening-toothpaste\"><span style=\"text-decoration:underline\">Refresh Mint</span></a>, and <a href=\"https://www.boka.com/products/lemon-lavender-toothpaste\"><span style=\"text-decoration:underline\">Lemon Lavender</span></a> for a healthy smile and clean feel. Our formula is SLS-free and gentle, making it ideal for daily oral care routines. *when used as directed<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_rAkqBn"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Questions About Toothpaste for Bad Breath",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "Nano-hydroxyapatite (n-Ha) is a well-researched ingredient in oral care products, known for its similarity to the natural mineral structure of the tooth. Whether you prefer fresh mint, gentle mint, or citrus-forward flavors, Boka offers a range of toothpaste flavors that are free from sodium lauryl sulfate (SLS). In this FAQ section, we’ll explore how our toothpaste can help deliver fresh breath and support your everyday oral care routine.",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "collapsible_content_TQFrGX": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_B3rHBg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ collection.metafields.custom[\"1_faqs_collection_title\"].value }}",
+            "icon": "none",
+            "row_content": "<p>{{ collection.metafields.custom[\"1_faqs_collection_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bET7mV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ collection.metafields.custom[\"2_faqs_collection_title\"].value }}",
+            "icon": "none",
+            "row_content": "<p>{{ collection.metafields.custom[\"2_faqs_collection_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_A7arqw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ collection.metafields.custom[\"3_faqs_collection_title\"].value }}",
+            "icon": "none",
+            "row_content": "<p>{{ collection.metafields.custom[\"3_faqs_collection_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PHBRCD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ collection.metafields.custom[\"4_faqs_collection_title\"].value }}",
+            "icon": "none",
+            "row_content": "<p>{{ collection.metafields.custom[\"4_faqs_collection_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Aim9kU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ collection.metafields.custom[\"5_faqs_collection_title\"].value }}",
+            "icon": "none",
+            "row_content": "<p>{{ collection.metafields.custom[\"5_faqs_collection_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_t3K6PH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ block.settings.page.metafields.custom[\"6_faqs_collection_title\"].value }}",
+            "icon": "none",
+            "row_content": "<p>{{ block.settings.page.metafields.custom[\"6_faqs_collection_desc\"].value }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_B3rHBg",
+        "collapsible_row_bET7mV",
+        "collapsible_row_A7arqw",
+        "collapsible_row_PHBRCD",
+        "collapsible_row_Aim9kU",
+        "collapsible_row_t3K6PH"
+      ],
+      "disabled": true,
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Questions",
+        "heading_size": "h0",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collapsible_content_4J9xbR",
+    "collapsible_content_TQFrGX"
+  ]
+}
