@@ -52,9 +52,9 @@
           "settings": {
             "megamenu_link_name": "SHOP",
             "megamenu_image": "shopify://shop_images/SensitiveBanner.webp",
-            "megamenu_caption": "Toothpaste for Sensitive Teeth",
+            "megamenu_caption": "",
             "megamenu_url": "shopify://products/toothpaste-for-sensitive-teeth",
-            "megamenu_link_text": "Sensitivity Relief"
+            "megamenu_link_text": "Toothpaste for Sensitive Teeth"
           }
         },
         "ea0f43b8-50d2-43d4-b0dd-0cc7bbc103f0": {
