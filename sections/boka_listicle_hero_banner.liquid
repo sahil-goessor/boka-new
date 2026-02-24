@@ -105,13 +105,14 @@
       font-weight: 700;
     }
     #shopify-section-{{ section.id }} .boka-shipping {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
       background-color: {{ section.settings.shipping_banner_bg }};
       padding: 10px 14px;
       border-radius: 6px;
       margin-bottom: 12px;
+      align-self: flex-start;
     }
     #shopify-section-{{ section.id }} .boka-shipping p {
       color: {{ section.settings.shipping_text_color }};
