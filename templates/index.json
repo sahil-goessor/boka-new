@@ -113,7 +113,7 @@
             "subheading_font_size_mobile": 16,
             "button_label": "SHOP NOW",
             "link": "shopify://products/toothpaste-for-sensitive-teeth",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "button_label2": "",
             "link2": "shopify://products/toothpaste-for-sensitive-teeth",
             "button_style_secondary2": false,
