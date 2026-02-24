@@ -638,10 +638,21 @@
 
     {% if page.handle == 'ntb-ela-mint-toothpaste' %}
       <style>
-        footer.footer {
+        footer.footer, nav.header__inline-menu, details-modal.header__search, header-menu.new-customer-account {
           display: none;
         }
-      </style>
+        {% comment %} nav.header__inline-menu {
+    display: none;
+}
+
+details-modal.header__search {
+    display: none !important;
+}
+
+header-menu.new-customer-account {
+    display: none;
+}
+      </style> {% endcomment %}
     {% endif %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
