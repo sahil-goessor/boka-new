@@ -15,7 +15,7 @@
       "settings": {
         "background_color": "#f5f3ee",
         "section_height": 720,
-        "left_padding": 60,
+        "left_padding": 90,
         "mobile_padding": 20,
         "show_reviews": true,
         "star_count": 5,
