@@ -163,6 +163,14 @@
       color: #fff;
       z-index: 2;
     }
+    #shopify-section-{{ section.id }} .boka-stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
@@ -239,7 +247,7 @@
       <div class="boka-left-inner">
 
         {%- if section.settings.show_reviews -%}
-          <div class="boka-stars">
+          <a class="boka-stars" href="#{{ section.settings.reviews_section_id }}">
             {%- assign star_count = section.settings.star_count -%}
             {%- for i in (1..5) -%}
               {%- if i <= star_count -%}
@@ -253,7 +261,7 @@
               {%- endif -%}
             {%- endfor -%}
             <p class="boka-review-text">{{ section.settings.review_text }}</p>
-          </div>
+          </a>
         {%- endif -%}
 
         <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
@@ -455,6 +463,12 @@
       "id": "review_text",
       "label": "Review Count Text",
       "default": "3700+ Reviews"
+    },
+    {
+      "type": "text",
+      "id": "reviews_section_id",
+      "label": "Reviews Section ID (for scroll link)",
+      "info": "Enter the HTML id of your reviews section, e.g. shopify-section-reviews. Leave blank to disable the link."
     },
     {
       "type": "color",
