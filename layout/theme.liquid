@@ -636,6 +636,14 @@
       }
     {% endstyle %}
 
+    {% if page.handle == 'ntb-ela-mint-toothpaste' %}
+      <style>
+        footer.footer {
+          display: none;
+        }
+      </style>
+    {% endif %}
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
