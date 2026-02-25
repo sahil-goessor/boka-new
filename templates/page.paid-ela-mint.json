@@ -21,7 +21,7 @@
         "star_count": 5,
         "star_color": "#f1c232",
         "review_text": "3815+ Reviews",
-        "reviews_section_id": "",
+        "reviews_section_id": "shopify-section-template--17574539231275__yotpo_reviews_widget_hbzYf6",
         "review_text_color": "#090909",
         "review_font_size": 15,
         "heading_text": "3 Reasons This Toothpaste (Yep, Boka's Ela Mint) Outsmarts, Outshines & Outlasts Them All",
@@ -32,7 +32,7 @@
         "cta_text": "TRY NOW FOR $11.75",
         "cta_url": "",
         "button_action": "add_and_cart",
-        "variant_id": "",
+        "variant_id": "7744260046891",
         "product_quantity": 1,
         "button_bg_color": "#1a1a1a",
         "button_text_color": "#ffffff",
@@ -167,6 +167,7 @@
       "block_order": [
         "ai_gen_block_501d6ba_Jf8wrN"
       ],
+      "disabled": true,
       "custom_css": [
         "a {color: #ffffff !important;}"
       ],
