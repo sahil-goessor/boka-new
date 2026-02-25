@@ -31,7 +31,7 @@
         "body_font_size": 14,
         "cta_text": "TRY NOW FOR $11.75",
         "cta_url": "",
-        "button_action": "link",
+        "button_action": "add_and_cart",
         "variant_id": "",
         "product_quantity": 1,
         "button_bg_color": "#1a1a1a",
