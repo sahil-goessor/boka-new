@@ -267,7 +267,22 @@
         <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
 
         {%- if section.settings.cta_text != blank -%}
-          <a class="boka-cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+          <button
+            type="button"
+            class="boka-cta"
+            data-button-action="{{ section.settings.button_action }}"
+            data-button-link="{{ section.settings.cta_url }}"
+            data-variant-id="{{ section.settings.variant_id }}"
+            data-product-quantity="{{ section.settings.product_quantity }}"
+          >
+            <span class="boka-cta-text">{{ section.settings.cta_text }}</span>
+            <span class="boka-cta-loader" style="display:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/>
+                <path d="M12 2 A10 10 0 0 1 22 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
         {%- endif -%}
 
         {%- if section.settings.show_timer -%}
@@ -546,6 +561,30 @@
       "type": "url",
       "id": "cta_url",
       "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "button_action",
+      "label": "Button Action",
+      "options": [
+        { "value": "link", "label": "Regular link (no cart action)" },
+        { "value": "add_and_checkout", "label": "Add to cart → Checkout" },
+        { "value": "add_and_cart", "label": "Add to cart → Cart page" },
+        { "value": "add_and_stay", "label": "Add to cart → Stay on page" }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "text",
+      "id": "variant_id",
+      "label": "Product Variant ID",
+      "info": "Required for Add to Cart actions. Find in product URL (?variant=XXXXXXXX)"
+    },
+    {
+      "type": "number",
+      "id": "product_quantity",
+      "label": "Quantity",
+      "default": 1
     },
     {
       "type": "color",
