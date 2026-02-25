@@ -171,6 +171,17 @@
       text-decoration: none;
       cursor: pointer;
     }
+    #shopify-section-{{ section.id }} .boka-cta-loader svg {
+      animation: boka-spin-{{ section.id }} 1s linear infinite;
+    }
+    @keyframes boka-spin-{{ section.id }} {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    #shopify-section-{{ section.id }} .boka-cta:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
@@ -398,6 +409,78 @@
     video.addEventListener('pause', function () { playBtn.style.display = 'flex'; });
     video.addEventListener('play',  function () { playBtn.style.display = 'none'; });
     playBtn.addEventListener('click', function () { video.play(); });
+  }
+
+  // ── CTA Button / Add to Cart ──
+  var ctaBtn = section.querySelector('.boka-cta');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+      var action    = this.dataset.buttonAction;
+      var link      = this.dataset.buttonLink;
+      var variantId = this.dataset.variantId;
+      var quantity  = parseInt(this.dataset.productQuantity) || 1;
+      var textEl    = this.querySelector('.boka-cta-text');
+      var loaderEl  = this.querySelector('.boka-cta-loader');
+      var originalText = textEl ? textEl.textContent : '';
+
+      // Regular link — just navigate
+      if (action === 'link' || !variantId) {
+        if (link) window.location.href = link;
+        return;
+      }
+
+      // Show loader
+      if (textEl) textEl.style.display = 'none';
+      if (loaderEl) loaderEl.style.display = 'inline-flex';
+      this.disabled = true;
+
+      try {
+        var response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ items: [{ id: variantId, quantity: quantity }] })
+        });
+
+        if (!response.ok) throw new Error('Failed to add to cart');
+
+        // Fire cart refresh events for theme compatibility
+        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+
+        if (action === 'add_and_checkout') {
+          window.location.href = '/checkout';
+
+        } else if (action === 'add_and_cart') {
+          // Try to open side cart drawer (works with Dawn and most themes)
+          document.documentElement.dispatchEvent(new CustomEvent('cart:open', { bubbles: true }));
+          document.dispatchEvent(new CustomEvent('cart:open', { bubbles: true }));
+          var cartDrawer = document.querySelector('cart-drawer');
+          if (cartDrawer && typeof cartDrawer.open === 'function') cartDrawer.open();
+          ['[data-drawer="cart"]','[data-cart-drawer]','#cart-drawer','.cart-drawer','#CartDrawer','.CartDrawer'].forEach(function(sel) {
+            var el = document.querySelector(sel);
+            if (el) { el.classList.add('is-open','active','open'); el.setAttribute('aria-hidden','false'); }
+          });
+          if (textEl) { textEl.textContent = '✓ Added!'; textEl.style.display = 'inline'; }
+          if (loaderEl) loaderEl.style.display = 'none';
+          this.disabled = false;
+          setTimeout(function() { if (textEl) textEl.textContent = originalText; }, 2000);
+
+        } else if (action === 'add_and_stay') {
+          if (textEl) { textEl.textContent = '✓ Added to Cart'; textEl.style.display = 'inline'; }
+          if (loaderEl) loaderEl.style.display = 'none';
+          this.disabled = false;
+          setTimeout(function() { if (textEl) textEl.textContent = originalText; }, 2000);
+        }
+
+      } catch (err) {
+        console.error('Add to cart error:', err);
+        if (textEl) { textEl.textContent = 'Error – Try Again'; textEl.style.display = 'inline'; }
+        if (loaderEl) loaderEl.style.display = 'none';
+        this.disabled = false;
+        setTimeout(function() { if (textEl) textEl.textContent = originalText; }, 2000);
+      }
+    });
   }
 })();
 </script>
