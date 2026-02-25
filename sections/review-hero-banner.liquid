@@ -1,0 +1,620 @@
+<div id="shopify-section-{{ section.id }}" class="boka-hero">
+  <div class="boka-hero__container">
+
+    <!-- LEFT COLUMN -->
+    <div class="boka-hero__left">
+
+      {% if section.settings.show_stars %}
+      <div class="boka-hero__stars-row">
+        <div class="boka-hero__stars">
+          {% for i in (1..5) %}
+            <svg width="20" height="20" viewBox="0 0 24 23" fill="{{ section.settings.star_color }}" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3388 0.532715L15.0742 8.95132H23.926L16.7647 14.1543L19.5001 22.5729L12.3388 17.3699L5.1775 22.5729L7.91287 14.1543L0.751577 8.95132H9.60343L12.3388 0.532715Z"/>
+            </svg>
+          {% endfor %}
+        </div>
+        {% if section.settings.review_text != blank %}
+          <span class="boka-hero__review-count">{{ section.settings.review_text }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h1 class="boka-hero__heading">{{ section.settings.heading }}</h1>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <p class="boka-hero__description">{{ section.settings.description }}</p>
+      {% endif %}
+
+      {% assign feature_blocks = section.blocks | where: "type", "feature" %}
+      {% if feature_blocks.size > 0 %}
+        <div class="boka-hero__features">
+          {% for block in feature_blocks %}
+            <div class="boka-hero__feature" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | img_url: '96x96', crop: 'center' }}" alt="" class="boka-hero__feature-icon" width="48" height="48" loading="lazy">
+              {% endif %}
+              {% if block.settings.feature_text != blank %}
+                <p class="boka-hero__feature-text">{{ block.settings.feature_text }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if section.settings.cta_text != blank and section.settings.cta_url != blank %}
+        <a class="boka-hero__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+      {% endif %}
+
+      {% if section.settings.show_timer %}
+        <div class="boka-hero__timer">
+          {% if section.settings.timer_text != blank %}
+            <p class="boka-hero__timer-subtext">{{ section.settings.timer_text }}</p>
+          {% endif %}
+          <p class="boka-hero__timer-line">
+            <strong>{{ section.settings.timer_label }}</strong>
+            <span class="boka-hero__countdown" data-deadline="{{ section.settings.timer_deadline }}"></span>
+          </p>
+        </div>
+      {% endif %}
+
+    </div>
+
+    <!-- RIGHT COLUMN: Review Cards -->
+    <div class="boka-hero__right">
+      {% assign review_blocks = section.blocks | where: "type", "review" %}
+      {% for block in review_blocks %}
+        <div class="boka-hero__review-card boka-hero__review-card--{{ forloop.index }}" {{ block.shopify_attributes }}>
+          <div class="boka-hero__review-card-top">
+            <span class="boka-hero__review-name">{{ block.settings.reviewer_name }}</span>
+            <div class="boka-hero__review-stars">
+              {% assign filled = block.settings.star_rating | default: 5 %}
+              {% for i in (1..5) %}
+                {% if i <= filled %}
+                  <span class="boka-hero__rstar boka-hero__rstar--filled">★</span>
+                {% else %}
+                  <span class="boka-hero__rstar">★</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <p class="boka-hero__review-body">{{ block.settings.review_text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* ── Base ── */
+  #shopify-section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  #shopify-section-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  /* ── Container ── */
+  #shopify-section-{{ section.id }} .boka-hero__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  /* ── Left ── */
+  #shopify-section-{{ section.id }} .boka-hero__left {
+    flex: 0 0 48%;
+    max-width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* Stars row */
+  #shopify-section-{{ section.id }} .boka-hero__stars-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__review-count {
+    font-size: 15px;
+    font-weight: 500;
+    color: {{ section.settings.text_color }};
+  }
+
+  /* Heading */
+  #shopify-section-{{ section.id }} .boka-hero__heading {
+    margin: 0;
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: {{ section.settings.heading_color }};
+    letter-spacing: -0.3px;
+  }
+
+  /* Description */
+  #shopify-section-{{ section.id }} .boka-hero__description {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: {{ section.settings.text_color }};
+  }
+
+  /* Features */
+  #shopify-section-{{ section.id }} .boka-hero__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+    margin-top: 4px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__feature-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__feature-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: {{ section.settings.text_color }};
+  }
+
+  /* CTA */
+  #shopify-section-{{ section.id }} .boka-hero__cta {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 32px;
+    background-color: {{ section.settings.cta_bg_color }};
+    color: {{ section.settings.cta_text_color }};
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+    width: 280px;
+    max-width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__cta:hover {
+    opacity: 0.85;
+  }
+
+  /* Timer */
+  #shopify-section-{{ section.id }} .boka-hero__timer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__timer-subtext {
+    margin: 0;
+    font-size: 14px;
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__timer-line {
+    margin: 0;
+    font-size: 14px;
+    color: {{ section.settings.text_color }};
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__countdown {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  /* ── Right: Review Cards ── */
+  #shopify-section-{{ section.id }} .boka-hero__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-top: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__review-card {
+    background-color: {{ section.settings.card_bg_color }};
+    color: {{ section.settings.card_text_color }};
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  /* Cascade offset — odd cards indent right, even indent further */
+  #shopify-section-{{ section.id }} .boka-hero__review-card--1 { margin-left: 0; }
+  #shopify-section-{{ section.id }} .boka-hero__review-card--2 { margin-left: 0; }
+  #shopify-section-{{ section.id }} .boka-hero__review-card--3 { margin-left: 0; }
+  #shopify-section-{{ section.id }} .boka-hero__review-card--4 { margin-left: 32px; }
+
+  #shopify-section-{{ section.id }} .boka-hero__review-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__review-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: {{ section.settings.card_text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__review-stars {
+    display: flex;
+    gap: 1px;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__rstar {
+    font-size: 16px;
+    color: #555;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__rstar--filled {
+    color: #ffffff;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__review-body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: {{ section.settings.card_text_color }};
+    opacity: 0.9;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 767px) {
+    #shopify-section-{{ section.id }} .boka-hero__container {
+      flex-direction: column;
+      padding: 32px 20px;
+      gap: 32px;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__left {
+      flex: 1 1 100%;
+      max-width: 100%;
+      gap: 16px;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__heading {
+      font-size: {{ section.settings.heading_size | minus: 8 }}px;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__features {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__cta {
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__right {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__review-card--1,
+    #shopify-section-{{ section.id }} .boka-hero__review-card--2,
+    #shopify-section-{{ section.id }} .boka-hero__review-card--3,
+    #shopify-section-{{ section.id }} .boka-hero__review-card--4 {
+      margin-left: 0;
+    }
+
+    /* Mobile: cards stacked with slight right offset like screenshot */
+    #shopify-section-{{ section.id }} .boka-hero__review-card--2 { margin-left: 16px; }
+    #shopify-section-{{ section.id }} .boka-hero__review-card--3 { margin-left: 32px; }
+    #shopify-section-{{ section.id }} .boka-hero__review-card--4 { margin-left: 48px; }
+  }
+</style>
+
+<script>
+(function () {
+  var els = document.querySelectorAll(
+    '#shopify-section-{{ section.id }} .boka-hero__countdown'
+  );
+  els.forEach(function (el) {
+    var deadline = el.getAttribute('data-deadline');
+    if (!deadline) return;
+    var end = new Date(deadline).getTime();
+    function tick() {
+      var diff = end - Date.now();
+      if (diff <= 0) { el.textContent = '00:00:00'; return; }
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      el.textContent =
+        String(h).padStart(2, '0') + ':' +
+        String(m).padStart(2, '0') + ':' +
+        String(s).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Boka Hero Banner",
+  "tag": "section",
+  "class": "boka-hero-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f0ede8"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Body Text Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#0d0d0d"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Review Card Background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Review Card Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Stars & Reviews"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Show Star Rating",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#f5a623"
+    },
+    {
+      "type": "text",
+      "id": "review_text",
+      "label": "Review Count Label",
+      "default": "3700+ Reviews"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "\"My Teeth Are So Sensitive, That's Why I Love Using Boka's Ela Mint Toothpaste\""
+    },
+    {
+      "type": "color",
+      "id": "heading_color_override",
+      "label": "Heading Color (overrides above)",
+      "default": "#0d0d0d"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size (px, desktop)",
+      "min": 22,
+      "max": 56,
+      "step": 1,
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals."
+    },
+    {
+      "type": "header",
+      "content": "CTA Button"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button Text",
+      "default": "TRY NOW FOR $11.75"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "color",
+      "id": "cta_bg_color",
+      "label": "Button Background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Countdown Timer"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_timer",
+      "label": "Show Timer",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "timer_text",
+      "label": "Timer Subtext",
+      "default": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!"
+    },
+    {
+      "type": "text",
+      "id": "timer_label",
+      "label": "Timer Label",
+      "default": "Offer Ends in"
+    },
+    {
+      "type": "text",
+      "id": "timer_deadline",
+      "label": "Deadline (e.g. Dec 31, 2025 23:59:59)",
+      "default": "Dec 31, 2025 23:59:59"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Product Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_text",
+          "label": "Feature Text",
+          "default": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name",
+          "default": "Mikayla M."
+        },
+        {
+          "type": "range",
+          "id": "star_rating",
+          "label": "Star Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "Best Toothpaste I've ever tried! Actually whitens!! My teeth felt cleaner and looked brighter after 1 use."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boka Hero Banner",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Fluoride-free & clean ingredients"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Mikayla M.",
+            "star_rating": 5,
+            "review_text": "Best Toothpaste I've ever tried! Actually whitens!! My teeth felt cleaner and looked brighter after 1 use."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Betsie P.",
+            "star_rating": 5,
+            "review_text": "I've been using Boka Mint for several years now. Can't be without it. And I recommend it to my friends!"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Patricia M.",
+            "star_rating": 5,
+            "review_text": "I love this toothpaste you only need a very small amount on your toothbrush. It is very refreshing and my teeth feel so clean."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Diane P.",
+            "star_rating": 5,
+            "review_text": "Love all the flavors but the mint is my go to. My gums no longer hurt.... Thank you so much!"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
