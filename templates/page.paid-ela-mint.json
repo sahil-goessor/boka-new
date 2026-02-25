@@ -11,6 +11,9 @@
   "sections": {
     "boka_listicle_hero_banner_X9DaRL": {
       "type": "boka_listicle_hero_banner",
+      "custom_css": [
+        ".boka-timer-row {display: none;}"
+      ],
       "name": "Listicle Hero Banner",
       "settings": {
         "background_color": "#f5f3ee",
