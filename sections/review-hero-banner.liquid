@@ -5,18 +5,18 @@
     <div class="boka-hero__left">
 
       {% if section.settings.show_stars %}
-      <div class="boka-hero__stars-row">
-        <div class="boka-hero__stars">
-          {% for i in (1..5) %}
-            <svg width="20" height="20" viewBox="0 0 24 23" fill="{{ section.settings.star_color }}" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.3388 0.532715L15.0742 8.95132H23.926L16.7647 14.1543L19.5001 22.5729L12.3388 17.3699L5.1775 22.5729L7.91287 14.1543L0.751577 8.95132H9.60343L12.3388 0.532715Z"/>
-            </svg>
-          {% endfor %}
+        <div class="boka-hero__stars-row">
+          <div class="boka-hero__stars">
+            {% for i in (1..5) %}
+              <svg width="22" height="22" viewBox="0 0 24 23" fill="{{ section.settings.star_color }}" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3388 0.532715L15.0742 8.95132H23.926L16.7647 14.1543L19.5001 22.5729L12.3388 17.3699L5.1775 22.5729L7.91287 14.1543L0.751577 8.95132H9.60343L12.3388 0.532715Z"/>
+              </svg>
+            {% endfor %}
+          </div>
+          {% if section.settings.review_text != blank %}
+            <span class="boka-hero__review-count">{{ section.settings.review_text }}</span>
+          {% endif %}
         </div>
-        {% if section.settings.review_text != blank %}
-          <span class="boka-hero__review-count">{{ section.settings.review_text }}</span>
-        {% endif %}
-      </div>
       {% endif %}
 
       {% if section.settings.heading != blank %}
@@ -33,7 +33,7 @@
           {% for block in feature_blocks %}
             <div class="boka-hero__feature" {{ block.shopify_attributes }}>
               {% if block.settings.icon != blank %}
-                <img src="{{ block.settings.icon | img_url: '96x96', crop: 'center' }}" alt="" class="boka-hero__feature-icon" width="48" height="48" loading="lazy">
+                <img src="{{ block.settings.icon | img_url: '96x96', crop: 'center' }}" alt="" class="boka-hero__feature-icon" width="44" height="44" loading="lazy">
               {% endif %}
               {% if block.settings.feature_text != blank %}
                 <p class="boka-hero__feature-text">{{ block.settings.feature_text }}</p>
@@ -53,7 +53,7 @@
             <p class="boka-hero__timer-subtext">{{ section.settings.timer_text }}</p>
           {% endif %}
           <p class="boka-hero__timer-line">
-            <strong>{{ section.settings.timer_label }}</strong>
+            <strong>{{ section.settings.timer_label }}</strong>&nbsp;
             <span class="boka-hero__countdown" data-deadline="{{ section.settings.timer_deadline }}"></span>
           </p>
         </div>
@@ -88,7 +88,6 @@
 </div>
 
 <style>
-  /* ── Base ── */
   #shopify-section-{{ section.id }} {
     background-color: {{ section.settings.bg_color }};
     width: 100%;
@@ -104,19 +103,22 @@
   #shopify-section-{{ section.id }} .boka-hero__container {
     display: flex;
     align-items: flex-start;
-    gap: 48px;
-    max-width: 1200px;
+    gap: 0;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 60px 40px 60px 80px;
+    min-height: 520px;
   }
 
-  /* ── Left ── */
+  /* ── LEFT COLUMN ── */
   #shopify-section-{{ section.id }} .boka-hero__left {
-    flex: 0 0 48%;
-    max-width: 48%;
+    flex: 0 0 44%;
+    max-width: 44%;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
+    padding-right: 40px;
+    padding-top: 10px;
   }
 
   /* Stars row */
@@ -128,7 +130,7 @@
 
   #shopify-section-{{ section.id }} .boka-hero__stars {
     display: flex;
-    gap: 2px;
+    gap: 3px;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__review-count {
@@ -142,9 +144,9 @@
     margin: 0;
     font-size: {{ section.settings.heading_size }}px;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.18;
     color: {{ section.settings.heading_color }};
-    letter-spacing: -0.3px;
+    letter-spacing: -0.5px;
   }
 
   /* Description */
@@ -153,14 +155,14 @@
     font-size: 15px;
     line-height: 1.65;
     color: {{ section.settings.text_color }};
+    max-width: 480px;
   }
 
-  /* Features */
+  /* Features — 2-col grid */
   #shopify-section-{{ section.id }} .boka-hero__features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px 20px;
-    margin-top: 4px;
+    gap: 12px 24px;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__feature {
@@ -179,27 +181,26 @@
   #shopify-section-{{ section.id }} .boka-hero__feature-text {
     margin: 0;
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.55;
     color: {{ section.settings.text_color }};
   }
 
-  /* CTA */
+  /* CTA Button */
   #shopify-section-{{ section.id }} .boka-hero__cta {
-    display: inline-block;
+    display: block;
     text-align: center;
     text-decoration: none;
-    padding: 16px 32px;
+    padding: 17px 28px;
     background-color: {{ section.settings.cta_bg_color }};
     color: {{ section.settings.cta_text_color }};
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
     transition: opacity 0.2s;
-    align-self: flex-start;
-    width: 280px;
+    width: 260px;
     max-width: 100%;
   }
 
@@ -211,7 +212,7 @@
   #shopify-section-{{ section.id }} .boka-hero__timer {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__timer-subtext {
@@ -226,7 +227,6 @@
     color: {{ section.settings.text_color }};
     display: flex;
     align-items: center;
-    gap: 6px;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__countdown {
@@ -234,52 +234,56 @@
     font-weight: 400;
   }
 
-  /* ── Right: Review Cards ── */
+  /* ── RIGHT COLUMN: Review Cards ── */
   #shopify-section-{{ section.id }} .boka-hero__right {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    position: relative;
-    padding-top: 20px;
+    gap: 12px;
+    padding-top: 0;
+    align-items: stretch;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__review-card {
     background-color: {{ section.settings.card_bg_color }};
     color: {{ section.settings.card_text_color }};
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin-bottom: 12px;
+    border-radius: 12px;
+    padding: 18px 22px;
     position: relative;
+    width: 100%;
   }
 
-  /* Cascade offset — odd cards indent right, even indent further */
-  #shopify-section-{{ section.id }} .boka-hero__review-card--1 { margin-left: 0; }
-  #shopify-section-{{ section.id }} .boka-hero__review-card--2 { margin-left: 0; }
-  #shopify-section-{{ section.id }} .boka-hero__review-card--3 { margin-left: 0; }
-  #shopify-section-{{ section.id }} .boka-hero__review-card--4 { margin-left: 32px; }
+  /* Cards 1–3: full right column width, card 4: indented left to create cascade */
+  #shopify-section-{{ section.id }} .boka-hero__review-card--1 { margin-left: 0; margin-right: 0; }
+  #shopify-section-{{ section.id }} .boka-hero__review-card--2 { margin-left: 0; margin-right: 0; }
+  #shopify-section-{{ section.id }} .boka-hero__review-card--3 { margin-left: 0; margin-right: 0; }
+  #shopify-section-{{ section.id }} .boka-hero__review-card--4 { margin-left: 36px; margin-right: 0; }
 
   #shopify-section-{{ section.id }} .boka-hero__review-card-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    gap: 12px;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__review-name {
     font-size: 15px;
     font-weight: 700;
     color: {{ section.settings.card_text_color }};
+    white-space: nowrap;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__review-stars {
     display: flex;
     gap: 1px;
+    flex-shrink: 0;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__rstar {
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
+    line-height: 1;
   }
 
   #shopify-section-{{ section.id }} .boka-hero__rstar--filled {
@@ -291,25 +295,40 @@
     font-size: 14px;
     line-height: 1.55;
     color: {{ section.settings.card_text_color }};
-    opacity: 0.9;
+    opacity: 0.88;
   }
 
-  /* ── Mobile ── */
+  /* ── TABLET ── */
+  @media (max-width: 1024px) {
+    #shopify-section-{{ section.id }} .boka-hero__container {
+      padding: 48px 32px;
+      gap: 32px;
+    }
+    #shopify-section-{{ section.id }} .boka-hero__left {
+      flex: 0 0 46%;
+      max-width: 46%;
+      padding-right: 24px;
+    }
+  }
+
+  /* ── MOBILE ── */
   @media (max-width: 767px) {
     #shopify-section-{{ section.id }} .boka-hero__container {
       flex-direction: column;
       padding: 32px 20px;
-      gap: 32px;
+      gap: 28px;
+      min-height: unset;
     }
 
     #shopify-section-{{ section.id }} .boka-hero__left {
       flex: 1 1 100%;
       max-width: 100%;
+      padding-right: 0;
       gap: 16px;
     }
 
     #shopify-section-{{ section.id }} .boka-hero__heading {
-      font-size: {{ section.settings.heading_size | minus: 8 }}px;
+      font-size: {{ section.settings.heading_size | minus: 10 }}px;
     }
 
     #shopify-section-{{ section.id }} .boka-hero__features {
@@ -323,17 +342,11 @@
 
     #shopify-section-{{ section.id }} .boka-hero__right {
       width: 100%;
-      padding-top: 0;
+      gap: 10px;
     }
 
-    #shopify-section-{{ section.id }} .boka-hero__review-card--1,
-    #shopify-section-{{ section.id }} .boka-hero__review-card--2,
-    #shopify-section-{{ section.id }} .boka-hero__review-card--3,
-    #shopify-section-{{ section.id }} .boka-hero__review-card--4 {
-      margin-left: 0;
-    }
-
-    /* Mobile: cards stacked with slight right offset like screenshot */
+    /* Mobile: progressive indent from left like the screenshot */
+    #shopify-section-{{ section.id }} .boka-hero__review-card--1 { margin-left: 0; }
     #shopify-section-{{ section.id }} .boka-hero__review-card--2 { margin-left: 16px; }
     #shopify-section-{{ section.id }} .boka-hero__review-card--3 { margin-left: 32px; }
     #shopify-section-{{ section.id }} .boka-hero__review-card--4 { margin-left: 48px; }
@@ -342,10 +355,9 @@
 
 <script>
 (function () {
-  var els = document.querySelectorAll(
+  document.querySelectorAll(
     '#shopify-section-{{ section.id }} .boka-hero__countdown'
-  );
-  els.forEach(function (el) {
+  ).forEach(function (el) {
     var deadline = el.getAttribute('data-deadline');
     if (!deadline) return;
     var end = new Date(deadline).getTime();
@@ -439,19 +451,13 @@
       "default": "\"My Teeth Are So Sensitive, That's Why I Love Using Boka's Ela Mint Toothpaste\""
     },
     {
-      "type": "color",
-      "id": "heading_color_override",
-      "label": "Heading Color (overrides above)",
-      "default": "#0d0d0d"
-    },
-    {
       "type": "range",
       "id": "heading_size",
-      "label": "Heading Font Size (px, desktop)",
+      "label": "Heading Font Size (px)",
       "min": 22,
       "max": 56,
       "step": 1,
-      "default": 36
+      "default": 38
     },
     {
       "type": "header",
