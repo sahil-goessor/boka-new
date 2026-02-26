@@ -70,7 +70,7 @@
         "left_column_width": 50,
         "columns_gap": 60,
         "section_padding_v": 48,
-        "section_padding_h": 0,
+        "section_padding_h": 90,
         "bg_color": "#f0ede8",
         "text_color": "#1a1a1a",
         "heading_color": "#0d0d0d",
