@@ -49,8 +49,23 @@
         </div>
       {% endif %}
 
-      {% if section.settings.cta_text != blank and section.settings.cta_url != blank %}
-        <a class="boka-hero__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_text }}</a>
+      {% if section.settings.cta_text != blank %}
+        <button
+          type="button"
+          class="boka-hero__cta"
+          data-button-action="{{ section.settings.button_action }}"
+          data-button-link="{{ section.settings.cta_url }}"
+          data-variant-id="{{ section.settings.variant_id }}"
+          data-product-quantity="{{ section.settings.product_quantity }}"
+        >
+          <span class="boka-hero__cta-text">{{ section.settings.cta_text }}</span>
+          <span class="boka-hero__cta-loader" style="display:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"/>
+              <path d="M12 2 A10 10 0 0 1 22 12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
       {% endif %}
 
       {% if section.settings.show_timer %}
@@ -357,6 +372,30 @@
       margin: 0;
     }
 
+    #shopify-section-{{ section.id }} .boka-hero__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__cta:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #shopify-section-{{ section.id }} .boka-hero__cta-loader svg {
+      animation: boka-hero-spin-{{ section.id }} 1s linear infinite;
+    }
+
+    @keyframes boka-hero-spin-{{ section.id }} {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
   /* ── TABLET ── */
   @media (max-width: 1024px) {
     #shopify-section-{{ section.id }} .boka-hero__container {
@@ -434,6 +473,7 @@
 
 <script>
 (function () {
+  // ── Countdown Timer ──
   document.querySelectorAll(
     '#shopify-section-{{ section.id }} .boka-hero__countdown'
   ).forEach(function (el) {
@@ -454,6 +494,77 @@
     tick();
     setInterval(tick, 1000);
   });
+
+  // ── CTA Button / Add to Cart ──
+  var ctaBtn = document.querySelector('#shopify-section-{{ section.id }} .boka-hero__cta');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+      var action    = this.dataset.buttonAction;
+      var link      = this.dataset.buttonLink;
+      var variantId = this.dataset.variantId;
+      var quantity  = parseInt(this.dataset.productQuantity) || 1;
+      var textEl    = this.querySelector('.boka-hero__cta-text');
+      var loaderEl  = this.querySelector('.boka-hero__cta-loader');
+      var originalText = textEl ? textEl.textContent : '';
+
+      // Regular link — just navigate
+      if (action === 'link' || !variantId) {
+        if (link) window.location.href = link;
+        return;
+      }
+
+      // Show loader
+      if (textEl) textEl.style.display = 'none';
+      if (loaderEl) loaderEl.style.display = 'inline-flex';
+      this.disabled = true;
+
+      try {
+        var response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ items: [{ id: variantId, quantity: quantity }] })
+        });
+
+        if (!response.ok) throw new Error('Failed to add to cart');
+
+        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', { bubbles: true }));
+
+        if (action === 'add_and_checkout') {
+          window.location.href = '/checkout';
+
+        } else if (action === 'add_and_cart') {
+          document.documentElement.dispatchEvent(new CustomEvent('cart:open', { bubbles: true }));
+          document.dispatchEvent(new CustomEvent('cart:open', { bubbles: true }));
+          var cartDrawer = document.querySelector('cart-drawer');
+          if (cartDrawer && typeof cartDrawer.open === 'function') cartDrawer.open();
+          ['[data-drawer="cart"]','[data-cart-drawer]','#cart-drawer','.cart-drawer','#CartDrawer','.CartDrawer'].forEach(function(sel) {
+            var el = document.querySelector(sel);
+            if (el) { el.classList.add('is-open','active','open'); el.setAttribute('aria-hidden','false'); }
+          });
+          if (textEl) { textEl.textContent = '✓ Added!'; textEl.style.display = 'inline'; }
+          if (loaderEl) loaderEl.style.display = 'none';
+          this.disabled = false;
+          var btn = this;
+          setTimeout(function() { if (textEl) textEl.textContent = originalText; }, 2000);
+
+        } else if (action === 'add_and_stay') {
+          if (textEl) { textEl.textContent = '✓ Added to Cart'; textEl.style.display = 'inline'; }
+          if (loaderEl) loaderEl.style.display = 'none';
+          this.disabled = false;
+          setTimeout(function() { if (textEl) textEl.textContent = originalText; }, 2000);
+        }
+
+      } catch (err) {
+        console.error('Add to cart error:', err);
+        if (textEl) { textEl.textContent = 'Error – Try Again'; textEl.style.display = 'inline'; }
+        if (loaderEl) loaderEl.style.display = 'none';
+        this.disabled = false;
+        setTimeout(function() { if (textEl) textEl.textContent = originalText; }, 2000);
+      }
+    });
+  }
 })();
 </script>
 
@@ -604,6 +715,30 @@
       "id": "cta_text_color",
       "label": "Button Text Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "button_action",
+      "label": "Button Action",
+      "options": [
+        { "value": "link", "label": "Regular link (no cart action)" },
+        { "value": "add_and_checkout", "label": "Add to cart → Checkout" },
+        { "value": "add_and_cart", "label": "Add to cart → Open cart" },
+        { "value": "add_and_stay", "label": "Add to cart → Stay on page" }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "text",
+      "id": "variant_id",
+      "label": "Product Variant ID",
+      "info": "Required for Add to Cart actions. Find in product URL (?variant=XXXXXXXX)"
+    },
+    {
+      "type": "number",
+      "id": "product_quantity",
+      "label": "Quantity",
+      "default": 1
     },
     {
       "type": "header",
