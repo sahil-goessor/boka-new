@@ -146,7 +146,7 @@
         "cta_url": "",
         "cta_bg_color": "#111111",
         "cta_text_color": "#ffffff",
-        "button_action": "link",
+        "button_action": "add_and_cart",
         "variant_id": "7744260046891",
         "product_quantity": 1,
         "show_timer": true,
