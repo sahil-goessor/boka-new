@@ -167,7 +167,7 @@
 
   #shopify-section-{{ section.id }} .boka-hero__feature {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
   }
 
@@ -180,9 +180,11 @@
 
   #shopify-section-{{ section.id }} .boka-hero__feature-text {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.6;
     color: {{ section.settings.text_color }};
+    font-weight: 400;
+    letter-spacing: normal;
   }
 
   /* CTA Button */
