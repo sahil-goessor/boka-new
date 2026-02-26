@@ -104,8 +104,8 @@
     display: flex;
     align-items: flex-start;
     gap: {{ section.settings.columns_gap }}px;
-    max-width: 1400px;
-    margin: 0 auto;
+    {% comment %} max-width: 1400px; {% endcomment %}
+    {% comment %} margin: 0 auto; {% endcomment %}
     padding: {{ section.settings.section_padding_v }}px {{ section.settings.section_padding_h }}px;
     min-height: 520px;
   }
