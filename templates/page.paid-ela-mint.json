@@ -121,6 +121,9 @@
         "review_kDLRQa",
         "review_XDyKCG"
       ],
+      "custom_css": [
+        "p.boka-hero__timer-line {display: none !important;}"
+      ],
       "name": "Review Hero Banner",
       "settings": {
         "left_column_width": 44,
