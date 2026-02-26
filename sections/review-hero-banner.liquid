@@ -65,6 +65,22 @@
         </div>
       {% endif %}
 
+      {%- if section.settings.show_shipping_banner -%}
+        <div class="boka-shipping">
+          {%- if section.settings.shipping_icon != blank -%}
+            <img src="{{ section.settings.shipping_icon | img_url: '60x' }}" alt="" style="width:36px;height:auto;flex-shrink:0;">
+          {%- else -%}
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+              <path d="M3 14h18v9H3z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
+              <path d="M21 16h5l3 4v3h-8V16z" stroke="{{ section.settings.shipping_text_color }}" stroke-width="1.5" fill="none"/>
+              <circle cx="8" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
+              <circle cx="26" cy="24" r="2" fill="{{ section.settings.shipping_text_color }}"/>
+            </svg>
+          {%- endif -%}
+          <p>{{ section.settings.shipping_text }}</p>
+        </div>
+      {%- endif -%}
+
     </div>
 
     <!-- RIGHT COLUMN: Review Cards -->
@@ -324,6 +340,23 @@
     opacity: 0.88;
   }
 
+  #shopify-section-{{ section.id }} .boka-shipping {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: {{ section.settings.shipping_banner_bg }};
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    #shopify-section-{{ section.id }} .boka-shipping p {
+      color: {{ section.settings.shipping_text_color }};
+      font-size: {{ section.settings.body_font_size }}px;
+      font-weight: 600;
+      margin: 0;
+    }
+
   /* ── TABLET ── */
   @media (max-width: 1024px) {
     #shopify-section-{{ section.id }} .boka-hero__container {
@@ -393,6 +426,9 @@
       font-size: 12px;
       line-height: 1.6;
     }
+    #shopify-section-{{ section.id }} .boka-shipping p {
+        line-height: normal;
+      }
   }
 </style>
 
@@ -596,6 +632,39 @@
       "id": "timer_deadline",
       "label": "Deadline (e.g. Dec 31, 2025 23:59:59)",
       "default": "Dec 31, 2025 23:59:59"
+    },
+    {
+      "type": "header",
+      "content": "🚚 Free Shipping Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_banner",
+      "label": "Show Free Shipping Banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_text",
+      "label": "Shipping Banner Text",
+      "default": "Free Shipping on your first order with code: NEWTOBOKA"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_icon",
+      "label": "Shipping Icon (optional)"
+    },
+    {
+      "type": "color",
+      "id": "shipping_banner_bg",
+      "label": "Shipping Banner Background",
+      "default": "#DFF0D8"
+    },
+    {
+      "type": "color",
+      "id": "shipping_text_color",
+      "label": "Shipping Banner Text Color",
+      "default": "#2D6A2D"
     }
   ],
   "blocks": [
