@@ -55,12 +55,6 @@
             "show_gift_card_recipient": false
           }
         },
-        "custom_liquid_WUtxqU": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<li> <strong>1, 2 or 3 Tubes of Toothpaste</strong>, 4oz </li>"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -117,7 +111,6 @@
         "recharge_subscriptions_subscription_widget_v2_bmDTCE",
         "quantity_selector",
         "buy_buttons",
-        "custom_liquid_WUtxqU",
         "description",
         "af067451-b82f-4114-8006-9a547e9c2157",
         "b4620176-8a50-42c9-8121-6df15e9ca481",
