@@ -79,6 +79,7 @@
         "show_stars": true,
         "star_color": "#f5a623",
         "review_text": "3700+ Reviews",
+        "reviews_anchor": "",
         "heading": "\"My Teeth Are So Sensitive, That's Why I Love Using Boka's Ela Mint Toothpaste\"",
         "heading_size": 40,
         "description": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
@@ -89,7 +90,11 @@
         "show_timer": true,
         "timer_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
         "timer_label": "Offer Ends in",
-        "timer_deadline": "Dec 31, 2025 23:59:59"
+        "timer_deadline": "Dec 31, 2025 23:59:59",
+        "show_shipping_banner": true,
+        "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#dff0d8",
+        "shipping_text_color": "#000000"
       }
     },
     "boka_listicle_hero_banner_4P4Kqn": {
