@@ -11,6 +11,7 @@
   "sections": {
     "boka_listicle_hero_banner_X9DaRL": {
       "type": "boka_listicle_hero_banner",
+      "disabled": true,
       "custom_css": [
         ".boka-timer-row {display: none;}"
       ],
@@ -62,6 +63,95 @@
         "video_loop": true,
         "video_muted": true,
         "mobile_video_height": 380
+      }
+    },
+    "review_hero_banner_VHPeMD": {
+      "type": "review-hero-banner",
+      "blocks": {
+        "feature_mBh9NP": {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science"
+          }
+        },
+        "feature_TAyGGd": {
+          "type": "feature",
+          "settings": {
+            "feature_text": "Fluoride-free & clean ingredients"
+          }
+        },
+        "review_pJXwiM": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Mikayla M.",
+            "star_rating": 5,
+            "review_text": "Best Toothpaste I've ever tried! Actually whitens!! My teeth felt cleaner and looked brighter after 1 use."
+          }
+        },
+        "review_tfWcnL": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Betsie P.",
+            "star_rating": 5,
+            "review_text": "I've been using Boka Mint for several years now. Can't be without it. And I recommend it to my friends!"
+          }
+        },
+        "review_kDLRQa": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Patricia M.",
+            "star_rating": 5,
+            "review_text": "I love this toothpaste you only need a very small amount on your toothbrush. It is very refreshing and my teeth feel so clean."
+          }
+        },
+        "review_XDyKCG": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Diane P.",
+            "star_rating": 5,
+            "review_text": "Love all the flavors but the mint is my go to. My gums no longer hurt.... Thank you so much!"
+          }
+        }
+      },
+      "block_order": [
+        "feature_mBh9NP",
+        "feature_TAyGGd",
+        "review_pJXwiM",
+        "review_tfWcnL",
+        "review_kDLRQa",
+        "review_XDyKCG"
+      ],
+      "name": "Review Hero Banner",
+      "settings": {
+        "left_column_width": 44,
+        "columns_gap": 40,
+        "bg_color": "#f0ede8",
+        "text_color": "#1a1a1a",
+        "heading_color": "#0d0d0d",
+        "card_bg_color": "#111111",
+        "card_text_color": "#ffffff",
+        "show_stars": true,
+        "star_color": "#f5a623",
+        "review_text": "3700+ Reviews",
+        "reviews_anchor": "",
+        "heading": "\"My Teeth Are So Sensitive, That's Why I Love Using Boka's Ela Mint Toothpaste\"",
+        "heading_size": 38,
+        "description": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
+        "cta_text": "TRY NOW FOR $11.75",
+        "cta_url": "",
+        "cta_bg_color": "#111111",
+        "cta_text_color": "#ffffff",
+        "button_action": "link",
+        "variant_id": "",
+        "product_quantity": 1,
+        "show_timer": true,
+        "timer_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
+        "timer_label": "Offer Ends in",
+        "timer_deadline": "Dec 31, 2025 23:59:59",
+        "show_shipping_banner": true,
+        "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#DFF0D8",
+        "shipping_text_color": "#2D6A2D"
       }
     },
     "176577886172b3a38b": {
@@ -1557,6 +1647,7 @@
   },
   "order": [
     "boka_listicle_hero_banner_X9DaRL",
+    "review_hero_banner_VHPeMD",
     "176577886172b3a38b",
     "176577752500a4f33b",
     "17657702727ebbe56b",
