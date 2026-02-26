@@ -103,21 +103,21 @@
   #shopify-section-{{ section.id }} .boka-hero__container {
     display: flex;
     align-items: flex-start;
-    gap: 0;
+    gap: {{ section.settings.columns_gap }}px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 40px 60px 80px;
+    padding: {{ section.settings.section_padding_v }}px {{ section.settings.section_padding_h }}px;
     min-height: 520px;
   }
 
   /* ── LEFT COLUMN ── */
   #shopify-section-{{ section.id }} .boka-hero__left {
-    flex: 0 0 44%;
-    max-width: 44%;
+    flex: 0 0 {{ section.settings.left_column_width }}%;
+    max-width: {{ section.settings.left_column_width }}%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-right: 40px;
+    padding-right: 0;
     padding-top: 10px;
   }
 
@@ -383,6 +383,50 @@
   "tag": "section",
   "class": "boka-hero-section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Layout & Spacing"
+    },
+    {
+      "type": "range",
+      "id": "left_column_width",
+      "label": "Left Column Width (%)",
+      "min": 30,
+      "max": 60,
+      "step": 1,
+      "default": 44,
+      "info": "Controls how wide the text column is. Right column takes remaining space."
+    },
+    {
+      "type": "range",
+      "id": "columns_gap",
+      "label": "Gap Between Columns (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40,
+      "info": "Space between the left text column and the review cards."
+    },
+    {
+      "type": "range",
+      "id": "section_padding_v",
+      "label": "Section Vertical Padding (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60,
+      "info": "Top and bottom padding of the section."
+    },
+    {
+      "type": "range",
+      "id": "section_padding_h",
+      "label": "Section Horizontal Padding (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 40,
+      "info": "Left and right padding of the section."
+    },
     {
       "type": "header",
       "content": "Colors"
