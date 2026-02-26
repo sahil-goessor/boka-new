@@ -71,12 +71,14 @@
         "feature_mBh9NP": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Screenshot_2026-02-26_at_2.06.34_PM.png",
             "feature_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science"
           }
         },
         "feature_TAyGGd": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Screenshot_2026-02-26_at_2.06.42_PM.png",
             "feature_text": "Fluoride-free & clean ingredients"
           }
         },
