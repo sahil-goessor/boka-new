@@ -6,6 +6,9 @@
 
       {% if section.settings.show_stars %}
         <div class="boka-hero__stars-row">
+          {% if section.settings.reviews_anchor != blank %}
+            <a href="#{{ section.settings.reviews_anchor }}" class="boka-hero__stars-link">
+          {% endif %}
           <div class="boka-hero__stars">
             {% for i in (1..5) %}
               <svg width="22" height="22" viewBox="0 0 24 23" fill="{{ section.settings.star_color }}" xmlns="http://www.w3.org/2000/svg">
@@ -15,6 +18,9 @@
           </div>
           {% if section.settings.review_text != blank %}
             <span class="boka-hero__review-count">{{ section.settings.review_text }}</span>
+          {% endif %}
+          {% if section.settings.reviews_anchor != blank %}
+            </a>
           {% endif %}
         </div>
       {% endif %}
@@ -137,6 +143,24 @@
     font-size: 15px;
     font-weight: 500;
     color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__stars-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__stars-link:hover {
+    opacity: 0.75;
+  }
+
+  #shopify-section-{{ section.id }} .boka-hero__stars-link .boka-hero__review-count {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   /* Heading */
@@ -482,6 +506,12 @@
       "id": "review_text",
       "label": "Review Count Label",
       "default": "3700+ Reviews"
+    },
+    {
+      "type": "text",
+      "id": "reviews_anchor",
+      "label": "Reviews Section Anchor ID",
+      "info": "Enter the section ID to scroll to when stars are clicked. E.g. if your reviews section has id='customer-reviews', enter: customer-reviews"
     },
     {
       "type": "header",
