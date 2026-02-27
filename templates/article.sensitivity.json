@@ -44,142 +44,63 @@
       ],
       "settings": {}
     },
-    "collapsible_content_9H6KBT": {
-      "type": "collapsible-content",
+    "featured_product_nw467J": {
+      "type": "featured-product",
       "blocks": {
-        "collapsible_row_AUeE3z": {
-          "type": "collapsible_row",
+        "title_VRbzBX": {
+          "type": "title",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
+            "heading_size": "h2",
+            "heading_tag": "default"
           }
         },
-        "collapsible_row_j6UEDn": {
-          "type": "collapsible_row",
+        "price_7eYnLE": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_HM3ibE": {
+          "type": "variant_picker",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
+            "picker_type": "dropdown"
           }
         },
-        "collapsible_row_R8RKhc": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
-          }
+        "quantity_selector_txhQfb": {
+          "type": "quantity_selector",
+          "settings": {}
         },
-        "collapsible_row_niwJjT": {
-          "type": "collapsible_row",
+        "buy_buttons_eDprNw": {
+          "type": "buy_buttons",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_KGwx4F": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_gbBJtA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_rijDWi": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
+            "show_dynamic_checkout": false
           }
         }
       },
       "block_order": [
-        "collapsible_row_AUeE3z",
-        "collapsible_row_j6UEDn",
-        "collapsible_row_R8RKhc",
-        "collapsible_row_niwJjT",
-        "collapsible_row_KGwx4F",
-        "collapsible_row_gbBJtA",
-        "collapsible_row_rijDWi"
+        "title_VRbzBX",
+        "price_7eYnLE",
+        "variant_picker_HM3ibE",
+        "quantity_selector_txhQfb",
+        "buy_buttons_eDprNw"
       ],
-      "disabled": true,
-      "name": "t:sections.collapsible_content.presets.name",
+      "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "heading_alignment": "center",
-        "description": "",
-        "layout": "none",
+        "product": "toothpaste-for-sensitive-teeth",
         "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
-    "featured_collection_XcPc3B": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "collapsible_content_9H6KBT",
-    "featured_collection_XcPc3B"
+    "featured_product_nw467J"
   ]
 }
