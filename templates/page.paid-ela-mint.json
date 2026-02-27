@@ -154,8 +154,8 @@
         "timer_label": "Offer Ends in",
         "timer_deadline": "Dec 31, 2025 23:59:59",
         "show_shipping_banner": true,
-        "shipping_text": "Enjoy FREE Shipping on Your First Order — Auto-Applied at Checkout",
-        "shipping_banner_bg": "#dff0d8",
+        "shipping_text": "Free Shipping* on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#fae5db",
         "shipping_text_color": "#090909"
       }
     },
@@ -757,7 +757,7 @@
         "promo_banner_XkEUYc": {
           "type": "promo_banner",
           "settings": {
-            "promo_text": "Enjoy FREE Shipping on Your First Order — Auto-Applied at Checkout",
+            "promo_text": "Free Shipping* on your first order with code: NEWTOBOKA",
             "icon_image": "shopify://shop_images/Vector_1.png",
             "icon_size": 24,
             "icon_gap": 0,
