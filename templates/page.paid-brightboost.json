@@ -66,6 +66,9 @@
         "review_wPgR3V"
       ],
       "disabled": true,
+      "custom_css": [
+        "p.boka-hero__timer-line {display: none !important;}"
+      ],
       "name": "Review Hero Banner",
       "settings": {
         "left_column_width": 50,
@@ -77,16 +80,16 @@
         "card_text_color": "#ffffff",
         "show_stars": true,
         "star_color": "#f5a623",
-        "review_text": "3700+ Reviews",
+        "review_text": "3815+ Reviews",
         "reviews_anchor": "",
         "heading": "\"My Teeth Are So Sensitive, That's Why I Love Using Boka's Ela Mint Toothpaste\"",
-        "heading_size": 38,
+        "heading_size": 40,
         "description": "A dentist-recommended toothpaste with nano-hydroxyapatite - a safe, science backed, fluoride alternative that mimics tooth enamel, freshens breath, and skips the harsh chemicals.",
-        "cta_text": "TRY NOW FOR $11.75",
+        "cta_text": "TRY NOW FOR $21.00",
         "cta_url": "",
         "cta_bg_color": "#111111",
         "cta_text_color": "#ffffff",
-        "button_action": "link",
+        "button_action": "add_and_cart",
         "variant_id": "",
         "product_quantity": 1,
         "show_timer": true,
@@ -95,8 +98,8 @@
         "timer_deadline": "Dec 31, 2025 23:59:59",
         "show_shipping_banner": true,
         "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
-        "shipping_banner_bg": "#DFF0D8",
-        "shipping_text_color": "#2D6A2D"
+        "shipping_banner_bg": "#fae5db",
+        "shipping_text_color": "#090909"
       }
     },
     "176577886172b3a38b": {
