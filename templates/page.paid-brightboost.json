@@ -67,7 +67,6 @@
         "review_KpppAL",
         "review_wPgR3V"
       ],
-      "disabled": true,
       "custom_css": [
         "p.boka-hero__timer-line {display: none !important;}"
       ],
@@ -95,7 +94,7 @@
         "variant_id": "",
         "product_quantity": 1,
         "show_timer": true,
-        "timer_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
+        "timer_text": "Grab everyone's favorite BrightBoost Whitening Powder Now!",
         "timer_label": "Offer Ends in",
         "timer_deadline": "Dec 31, 2025 23:59:59",
         "show_shipping_banner": true,
