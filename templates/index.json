@@ -101,8 +101,8 @@
         "image_RJU7Ux": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Sensitive_HP_Banner_-_Desktop_1_1.webp",
-            "image_mobile": "shopify://shop_images/Sensitive_HP_Banner-Mobile.webp",
+            "image": "shopify://shop_images/Sensitive_HP_Banner_-_Desktop_2.webp",
+            "image_mobile": "shopify://shop_images/SensitiveHPBannerMobile2.webp",
             "heading": "<em>Introducing</em> Boka Sensitive",
             "image_link": "shopify://products/toothpaste-for-sensitive-teeth",
             "heading_font_size": 40,
