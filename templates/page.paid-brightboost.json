@@ -1358,12 +1358,12 @@
         "heading_color": "#000000",
         "heading_alignment": "center",
         "heading_spacing": 32,
-        "container_width": 1200,
+        "container_width": 1350,
         "background_color": "#ffffff",
         "padding_top": 0,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "main": {
