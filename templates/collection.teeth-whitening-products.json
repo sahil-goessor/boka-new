@@ -67,23 +67,24 @@
         "collapsible_row_GGcFRf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are teeth whitening products safe to use?",
+            "heading": "How do Boka teeth whitening* products work?",
             "icon": "none",
-            "row_content": "<p>Yes, Boka’s teeth whitening products are thoughtfully formulated with carefully selected ingredients. Our whitening toothpaste and related products focus on natural solutions for daily use. When used as directed, these products help remove surface stains without the need for harsh bleaching agents</p>",
+            "row_content": "<p>Boka’s teeth whitening* products are formulated to help remove surface stains caused by everyday factors like coffee, food, and drink, without relying on harsh bleaching agents. Options like <a href=\"https://www.boka.com/products/refresh-mint-whitening-toothpaste\"><span style=\"text-decoration:underline\">whitening* toothpaste</span></a>, <a href=\"https://www.boka.com/products/brightboost-whitening-powder\"><span style=\"text-decoration:underline\">BrightBoost Whitening* Powder</span></a>, and the <a href=\"https://www.boka.com/products/brightboost-whitening-kit\"><span style=\"text-decoration:underline\">BrightBoost Whitening* Kit</span></a>use ingredients to gently polish teeth as part of your daily oral care routine. These products are designed to be effective yet gentle, making them suitable for people with sensitive teeth concerns. Results may vary depending on use and habits, but consistent brushing can help maintain a visibly fresh-looking smile over time.<br/><br/></p>",
             "page": ""
           }
         },
         "collapsible_row_aJYYmM": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How long does it take to see results?",
+            "heading": "Are Boka whitening* kits suitable for at-home use?",
             "icon": "none",
-            "row_content": "<p>The timeframe for visible results can vary depending on the product and the degree of discoloration. Boka’s teeth whitening products are designed to help reduce the appearance of surface stains from foods, drinks, and daily habits over time.</p>",
+            "row_content": "<p>Yes, Boka’s teeth whitening* kits are created specifically for at-homeuse and are easy to incorporate into your routine. Products like the BrightBoost Whitening*Kit and <a href=\"https://www.boka.com/products/nano-n-ha-toothpaste-whitening-3-pack\"><span style=\"text-decoration:underline\">whitening* n-Ha toothpaste 3-pack</span></a> are designed to be used regularly, helping to address surface stains. Boka’s approach prioritizes gentlecare, making it a good option for those seeking a best-fit solution for ongoing maintenance rather than rapid changes. These products work best when paired with regular brushing, mindful habits, and routine dentalcare.</p>",
             "page": ""
           }
         },
         "collapsible_row_cKabND": {
           "type": "collapsible_row",
+          "disabled": true,
           "settings": {
             "heading": "How long do the effects of teeth whitening last?",
             "icon": "none",
@@ -108,14 +109,13 @@
         "collapsible_row_cKabND",
         "collapsible_row_BWhNk3"
       ],
-      "disabled": true,
       "settings": {
         "caption": "",
-        "heading": "Questions About Boka Teeth Whitening Products",
+        "heading": "Questions About Teeth Whitening* Products",
         "heading_size": "h1",
         "heading_tag": "default",
         "heading_alignment": "center",
-        "description": "Are you curious about Boka Teeth Whitening Products? Don't worry; we've got you covered. Take a look at these frequently asked questions below to get the answers you need.",
+        "description": "Whitening* toothpaste containing n-Ha can fit into your daily routine. Boka’s teeth whitening* options are designed for home use and focus on addressing surface stains. These products are intended to complement—not replace—regular dental visits and cleanings. In this FAQ section, we’ll address common questions about how Boka’s whitening* products can be used safely and effectively.",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
@@ -162,7 +162,7 @@
   "order": [
     "banner",
     "product-grid",
-    "collapsible_content_GaTyNb",
-    "rich_text_RqXiAN"
+    "rich_text_RqXiAN",
+    "collapsible_content_GaTyNb"
   ]
 }
