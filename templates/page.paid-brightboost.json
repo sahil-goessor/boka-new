@@ -630,13 +630,6 @@
     "featured_product_section_custom_UEHaA4": {
       "type": "featured-product-section-custom",
       "blocks": {
-        "yotpo_widget_YBJTAy": {
-          "type": "yotpo_widget",
-          "settings": {
-            "yotpo_product_id": "7277090537515",
-            "yotpo_scroll_target": ""
-          }
-        },
         "icon_text_row_7jwFNT": {
           "type": "icon_text_row",
           "disabled": true,
@@ -675,6 +668,13 @@
           "settings": {
             "heading_size": "h1",
             "heading_tag": "h1"
+          }
+        },
+        "yotpo_widget_YBJTAy": {
+          "type": "yotpo_widget",
+          "settings": {
+            "yotpo_product_id": "7277090537515",
+            "yotpo_scroll_target": ""
           }
         },
         "price_T7pXW7": {
@@ -764,10 +764,10 @@
         }
       },
       "block_order": [
-        "yotpo_widget_YBJTAy",
         "icon_text_row_7jwFNT",
         "text_pCjw83",
         "title_d4zgQE",
+        "yotpo_widget_YBJTAy",
         "price_T7pXW7",
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
