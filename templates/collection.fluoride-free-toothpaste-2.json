@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__description {max-width: 100%;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_learn_more": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "enable_merchandising_card": false,
+        "card_bg_color": "",
+        "card_text_color": "",
+        "card_columns": "two",
+        "card_column_position": 1,
+        "card_row_position": 2,
+        "image_as_bg": false,
+        "bg_image_position": "center",
+        "bg_image_link": "",
+        "card_image_url": "",
+        "card_text_alignment_desktop": "left",
+        "card_text_alignment_mobile": "center",
+        "card_text_position_desktop": "center",
+        "card_text_position_mobile": "flex-start",
+        "card_title": "",
+        "card_text": "",
+        "button_text": "",
+        "button_url": "",
+        "padding_top": 20,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "collapsible_content_GaTyNb": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_GGcFRf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do Boka teeth whitening* products work?",
+            "icon": "none",
+            "row_content": "<p>Boka’s teeth whitening* products are formulated to help remove surface stains caused by everyday factors like coffee, food, and drink, without relying on harsh bleaching agents. Options like <a href=\"https://www.boka.com/products/refresh-mint-whitening-toothpaste\"><span style=\"text-decoration:underline\">whitening* toothpaste</span></a>, <a href=\"https://www.boka.com/products/brightboost-whitening-powder\"><span style=\"text-decoration:underline\">BrightBoost Whitening* Powder</span></a>, and the <a href=\"https://www.boka.com/products/brightboost-whitening-kit\"><span style=\"text-decoration:underline\">BrightBoost Whitening* Kit</span></a>use ingredients to gently polish teeth as part of your daily oral care routine. These products are designed to be effective yet gentle, making them suitable for people with sensitive teeth concerns. Results may vary depending on use and habits, but consistent brushing can help maintain a visibly fresh-looking smile over time.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aJYYmM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Boka whitening* kits suitable for at-home use?",
+            "icon": "none",
+            "row_content": "<p>Yes, Boka’s teeth whitening* kits are created specifically for at-homeuse and are easy to incorporate into your routine. Products like the BrightBoost Whitening*Kit and <a href=\"https://www.boka.com/products/nano-n-ha-toothpaste-whitening-3-pack\"><span style=\"text-decoration:underline\">whitening* n-Ha toothpaste 3-pack</span></a> are designed to be used regularly, helping to address surface stains. Boka’s approach prioritizes gentlecare, making it a good option for those seeking a best-fit solution for ongoing maintenance rather than rapid changes. These products work best when paired with regular brushing, mindful habits, and routine dentalcare.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cKabND": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "How long do the effects of teeth whitening last?",
+            "icon": "none",
+            "row_content": "<p>The duration of visible effects depends on lifestyle habits and how often staining substances are consumed. Continued use of Boka’s teeth whitening products may help reduce the appearance of surface stains over time. Unlike some bleaching treatments, Boka’s formulas use natural ingredients. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BWhNk3": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "What are the benefits of Boka’s whitening products compared to other brands?",
+            "icon": "none",
+            "row_content": "<p>Unlike some over-the-counter whitening products with peroxide, Boka’s toothpaste and oral care collection offer a gentle option for those looking to reduce the appearance of surface stains from daily routines. Our products are formulated with carefully selected ingredients and provide a clean, refreshing mint flavor—without the need for LED light kits, bleaching gel, or other aggressive treatments.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_GGcFRf",
+        "collapsible_row_aJYYmM",
+        "collapsible_row_cKabND",
+        "collapsible_row_BWhNk3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Questions About Teeth Whitening* Products",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "Whitening* toothpaste containing n-Ha can fit into your daily routine. Boka’s teeth whitening* options are designed for home use and focus on addressing surface stains. These products are intended to complement—not replace—regular dental visits and cleanings. In this FAQ section, we’ll address common questions about how Boka’s whitening* products can be used safely and effectively.",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "rich_text_RqXiAN": {
+      "type": "rich-text",
+      "blocks": {
+        "text_9JMAQ3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*Whitening: With regular brushing, helps remove surface stains.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_9JMAQ3"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "rich_text_RqXiAN",
+    "collapsible_content_GaTyNb"
+  ]
+}
