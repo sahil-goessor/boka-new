@@ -630,6 +630,13 @@
     "featured_product_section_custom_UEHaA4": {
       "type": "featured-product-section-custom",
       "blocks": {
+        "yotpo_widget_YBJTAy": {
+          "type": "yotpo_widget",
+          "settings": {
+            "yotpo_product_id": "7277090537515",
+            "yotpo_scroll_target": ""
+          }
+        },
         "icon_text_row_7jwFNT": {
           "type": "icon_text_row",
           "disabled": true,
@@ -757,6 +764,7 @@
         }
       },
       "block_order": [
+        "yotpo_widget_YBJTAy",
         "icon_text_row_7jwFNT",
         "text_pCjw83",
         "title_d4zgQE",
