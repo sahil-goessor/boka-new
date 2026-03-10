@@ -1345,6 +1345,27 @@
         "padding_bottom_mobile": 36
       }
     },
+    "yotpo_reviews_widget_kWhWWh": {
+      "type": "yotpo-reviews-widget",
+      "name": "Yotpo Reviews Widget",
+      "settings": {
+        "product": "brightboost-whitening-powder",
+        "product_handle": "",
+        "yotpo_instance_id": "1002005",
+        "show_heading": true,
+        "heading_text": "Customer Reviews",
+        "heading_size": 32,
+        "heading_color": "#000000",
+        "heading_alignment": "center",
+        "heading_spacing": 32,
+        "container_width": 1200,
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -1438,6 +1459,7 @@
     "yt_shorts_FUHnAV",
     "1765896441d3e5261a",
     "featured_collection_RackKr",
+    "yotpo_reviews_widget_kWhWWh",
     "main",
     "custom_feature_product_section_4f3nQW"
   ]
