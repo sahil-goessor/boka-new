@@ -20,7 +20,7 @@
         "section_height": 720,
         "left_padding": 100,
         "mobile_padding": 20,
-        "show_reviews": true,
+        "show_reviews": false,
         "star_count": 5,
         "star_color": "#f1c232",
         "review_text": "3815+ Reviews",
