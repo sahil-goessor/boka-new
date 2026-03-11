@@ -11,7 +11,6 @@
   "sections": {
     "boka_listicle_hero_banner_X9DaRL": {
       "type": "boka_listicle_hero_banner",
-      "disabled": true,
       "custom_css": [
         ".boka-timer-row {display: none;}"
       ],
@@ -123,6 +122,7 @@
         "review_kDLRQa",
         "review_XDyKCG"
       ],
+      "disabled": true,
       "custom_css": [
         "p.boka-hero__timer-line {display: none !important;}"
       ],
