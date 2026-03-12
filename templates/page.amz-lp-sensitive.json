@@ -538,34 +538,8 @@
     "featured_product_section_custom_UEHaA4": {
       "type": "featured-product-section-custom",
       "blocks": {
-        "icon_text_row_7jwFNT": {
-          "type": "icon_text_row",
-          "disabled": true,
-          "settings": {
-            "icon_1_text": "Fluoride Free Care",
-            "icon_2_text": "Freshens Breath",
-            "icon_3_text": "Fresh Mint Clean",
-            "icon_4_text": "",
-            "desktop_alignment": "space-between",
-            "gap_desktop": 40,
-            "icon_size_desktop": 24,
-            "font_size_desktop": 16,
-            "mobile_alignment": "flex-start",
-            "mobile_wrap": "wrap",
-            "gap_mobile": 20,
-            "icon_size_mobile": 20,
-            "font_size_mobile": 14,
-            "icon_text_gap": 8,
-            "font_family": "'Neue Haas Unica Pro', Helvetica, Arial, sans-serif",
-            "font_weight": "400",
-            "text_color": "#000000",
-            "margin_top": 20,
-            "margin_bottom": 20
-          }
-        },
         "text_pCjw83": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "{{ section.settings.product.vendor }}",
             "text_style": "uppercase"
@@ -589,38 +563,10 @@
           "type": "price",
           "settings": {}
         },
-        "variant_picker_QPkKgn": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_CharbJ": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons_j3VN3h": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
-          }
-        },
-        "promo_banner_XkEUYc": {
-          "type": "promo_banner",
-          "settings": {
-            "promo_text": "Free Shipping* on your first order with code: NEWTOBOKA",
-            "icon_image": "shopify://shop_images/Vector_1.png",
-            "icon_size": 24,
-            "icon_gap": 0,
-            "background_color": "#fae5db",
-            "text_color": "#000000",
-            "text_size": 16,
-            "font_weight": "400",
-            "border_radius": 16,
-            "padding_vertical": 16,
-            "padding_horizontal": 16,
-            "margin_top": 0,
-            "margin_bottom": 16
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
@@ -696,15 +642,11 @@
         }
       },
       "block_order": [
-        "icon_text_row_7jwFNT",
         "text_pCjw83",
         "title_d4zgQE",
         "yotpo_widget_aEd8ik",
         "price_T7pXW7",
-        "variant_picker_QPkKgn",
-        "quantity_selector_CharbJ",
         "buy_buttons_j3VN3h",
-        "promo_banner_XkEUYc",
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
         "description_9m494J",
         "complementary_T3Ybgg",
@@ -722,7 +664,7 @@
       ],
       "name": "feature product section new",
       "settings": {
-        "product": "ela-mint-toothpaste",
+        "product": "toothpaste-for-sensitive-teeth",
         "color_scheme": "background-1",
         "secondary_background": false,
         "media_size": "medium",
