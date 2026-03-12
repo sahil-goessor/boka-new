@@ -675,7 +675,8 @@
         ".price .price-item {margin: 0 0 0 0;}",
         "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
         "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add {height: 45px;}",
-        "div#sticky-atc-variant-featured {display: none !important;}"
+        "div#sticky-atc-variant-featured {display: none !important;}",
+        ".sticky-atc__button > .boka-featured-amazon-btn strong {font-size: 15px;}"
       ],
       "name": "feature product section new",
       "settings": {
