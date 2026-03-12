@@ -726,7 +726,10 @@
 -%}
 
 <!-- Sticky Add to Cart Bar -->
-<div id="sticky-atc-featured" class="sticky-atc sticky-atc-featured hidden">
+{% assign amazon_block = section.blocks | where: "type", "amazon_button" | first %}
+<div id="sticky-atc-featured" 
+  class="sticky-atc sticky-atc-featured hidden"
+  data-amazon-url="{% if amazon_block and amazon_block.settings.replace_sticky_atc %}{{ amazon_block.settings.amazon_url }}{% endif %}">
   <div class="sticky-atc__inner">
     <div class="sticky-atc__left">
       <img id="sticky-atc-media-featured" class="sticky-atc__media" src="" alt="">
@@ -1657,6 +1660,13 @@ span.h4.inline-richtext {
           "type": "url",
           "id": "amazon_url",
           "label": "Amazon Product URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "replace_sticky_atc",
+          "label": "Replace sticky Add to Cart with Amazon button",
+          "default": false,
+          "info": "When enabled, the sticky bar's Add to Cart button will be replaced with the Buy on Amazon button"
         }
       ]
     },
