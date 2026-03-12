@@ -1156,6 +1156,34 @@
         "padding_bottom_mobile": 36
       }
     },
+    "rich_text_TnxPaa": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rmTWDt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*with twice daily brushing and when used as directed - see packaging for details.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_rmTWDt"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "custom_collapsible_content_p9cV6M": {
       "type": "custom-collapsible-content",
       "blocks": {
@@ -1391,6 +1419,7 @@
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
     "featured_collection_RackKr",
+    "rich_text_TnxPaa",
     "custom_collapsible_content_p9cV6M",
     "yotpo_reviews_widget_hbzYf6",
     "main",
