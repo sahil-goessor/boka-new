@@ -449,9 +449,9 @@
             "subheadline_2_text_color": "#57623c",
             "button_text": "",
             "button_link": "",
-            "review_1_highlight": "Minty Fresh & A Pearly White Smile",
-            "review_1_quote": "\"Love this toothpaste! Tried it first at a friend's house and knew I'd have to get some of my own to see how I liked it. I love it. Tastes great. Love that it's actually healthy! I recommend it to my kiddos and all my friends.\"",
-            "review_1_author": "Traci W. US",
+            "review_1_highlight": "\"Love this toothpaste\"",
+            "review_1_quote": "\"After consistent use, my teeth feel protected, my gums are happy, and I don’t get that sharp zing anymore. It genuinely feels like a premium, science-backed toothpaste that delivers real results. If you struggle with sensitivity and want something gentle, effective, and thoughtfully formulated, this one is absolutely worth it.\"",
+            "review_1_author": "Drowsy D.",
             "review_2_highlight": "The only toothpaste I LOVE",
             "review_2_quote": "\"I've tried so many different toothpastes, this is by far the best. Great flavor and my teeth feel just as clean as when the dentist does a cleaning.\"",
             "review_2_author": "Leslie S.",
@@ -548,8 +548,8 @@
         "title_d4zgQE": {
           "type": "title",
           "settings": {
-            "heading_size": "h1",
-            "heading_tag": "h1"
+            "heading_size": "h2",
+            "heading_tag": "h4"
           }
         },
         "yotpo_widget_aEd8ik": {
