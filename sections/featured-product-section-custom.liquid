@@ -1317,7 +1317,7 @@ span.h4.inline-richtext {
     }
 }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn {
+.boka-featured-amazon-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1328,33 +1328,33 @@ span.h4.inline-richtext {
   font-size: 16px;
   font-weight: 700;
   padding: 13px 40px;
-  border-radius: 12px;
+  border-radius: 50px;
   width: 320px;
   max-width: 100%;
   transition: background-color 0.2s;
-  letter-spacing: 0.3px;
+  margin-top: 8px;
 }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn strong {
+.boka-featured-amazon-btn strong {
   color: #ffffff;
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
-  text-transform: uppercase;
 }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn svg {
+.boka-featured-amazon-btn svg {
   display: block;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn:hover {
+.boka-featured-amazon-btn:hover {
   background-color: #0e85e8;
 }
 
-@media (max-width: 767px) {
-  #shopify-section-{{ section.id }} .boka-hero__amazon-btn {
+@media screen and (max-width: 749px) {
+  .boka-featured-amazon-btn {
     width: 100%;
+    padding: 13px 20px;
   }
 }
 </style>
