@@ -580,7 +580,7 @@
         "amazon_button_C8Byrd": {
           "type": "amazon_button",
           "settings": {
-            "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_AE70DAEF8AF0BDBFD73A9E14700B81E0_afap_abs&ref_=aa_maas&tag=maas",
+            "amazon_url": "https://www.amazon.com/s?maas=maas_adg_CE56AC9471831D20D18111AB31984570_afap_abs&ref_=aa_maas&tag=maas&k=sensitive+toothpaste&hidden-keywords=B0CYJ5ZS34&gclid=q7fn3OQ21uCcQls4JzfjYUGcDxXpTOuTOlSxjeX58yVmpI2MDCctPiG",
             "replace_sticky_atc": true
           }
         },
