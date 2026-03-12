@@ -559,6 +559,7 @@
         },
         "yotpo_widget_aEd8ik": {
           "type": "yotpo_widget",
+          "disabled": true,
           "settings": {
             "yotpo_product_id": "647087685675",
             "yotpo_scroll_target": "shopify-section-template--17574539231275__yotpo_reviews_widget_hbzYf6"
@@ -566,6 +567,7 @@
         },
         "price_T7pXW7": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons_j3VN3h": {
@@ -586,6 +588,36 @@
           "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
+          }
+        },
+        "icon_with_text_kfTBKq": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Check_1.webp",
+            "heading_1": "<strong>Fluoride-Free</strong>",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Check_1.webp",
+            "heading_2": "<strong>Science-backed</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "icon_with_text_HedUMR": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Check_1.webp",
+            "heading_1": "<strong>Made for Sensitive Teeth</strong>",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/Check_1.webp",
+            "heading_2": "<strong>Dentist Approved</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
           }
         },
         "description_9m494J": {
@@ -622,36 +654,6 @@
             "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
             "page": ""
           }
-        },
-        "icon_with_text_kfTBKq": {
-          "type": "icon-with-text",
-          "settings": {
-            "orientation": "inlined",
-            "layout": "vertical",
-            "icon_1": "none",
-            "image_1": "shopify://shop_images/Soothing_Aloe_Vera.png",
-            "heading_1": "<strong>Soothing Aloe Vera</strong>",
-            "icon_2": "return",
-            "image_2": "shopify://shop_images/No_Artificial_Colors.png",
-            "heading_2": "<strong>No artificial flavors or colors</strong>",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        },
-        "icon_with_text_HedUMR": {
-          "type": "icon-with-text",
-          "settings": {
-            "orientation": "inlined",
-            "layout": "vertical",
-            "icon_1": "none",
-            "image_1": "shopify://shop_images/Antioxidant-Rich_Green_Tea.png",
-            "heading_1": "<strong>Antioxidant-rich green tea</strong>",
-            "icon_2": "none",
-            "image_2": "shopify://shop_images/Refreshing_Mint.png",
-            "heading_2": "<strong>Refreshing mint</strong>",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
         }
       },
       "block_order": [
@@ -662,12 +664,12 @@
         "buy_buttons_j3VN3h",
         "amazon_button_C8Byrd",
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
+        "icon_with_text_kfTBKq",
+        "icon_with_text_HedUMR",
         "description_9m494J",
         "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
-        "collapsible_tab_chH3cF",
-        "icon_with_text_kfTBKq",
-        "icon_with_text_HedUMR"
+        "collapsible_tab_chH3cF"
       ],
       "custom_css": [
         "a.link.product__view-details.animate-arrow {display: none;}",
@@ -1091,8 +1093,8 @@
       "name": "Image/gif icon bg text",
       "settings": {
         "media_type": "image",
-        "image": "shopify://shop_images/ela_mint_ingredients_desktop_banner_1.webp",
-        "mobile_image": "shopify://shop_images/ela_mint_ingredient_mobile_banner_e7e796cb-f05c-4134-b1ef-f2895953f1eb.webp",
+        "image": "shopify://shop_images/Sensitive_HP_Banner_-_Desktop_2.webp",
+        "mobile_image": "shopify://shop_images/Sensitive_PDP_A_Content.webp",
         "background_video": "",
         "video_overlay_opacity": 30,
         "desktop_content_alignment": "left",
