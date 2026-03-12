@@ -587,7 +587,7 @@
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
           "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
-            "publishId": "liw7h8lj8ye2o"
+            "publishId": "2xltcx7temkfn"
           }
         },
         "icon_with_text_kfTBKq": {
@@ -1176,7 +1176,7 @@
         "fadein_enabled": true,
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52,
