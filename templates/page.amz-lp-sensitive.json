@@ -1162,7 +1162,7 @@
         "text_rmTWDt": {
           "type": "text",
           "settings": {
-            "text": "<p>*with twice daily brushing and when used as directed - see packaging for details.</p>"
+            "text": "<p><em>*with twice daily brushing and when used as directed - see packaging for details.</em></p>"
           }
         }
       },
