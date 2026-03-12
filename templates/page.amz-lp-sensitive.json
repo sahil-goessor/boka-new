@@ -1307,92 +1307,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "yt_shorts_FUHnAV": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_LrmH4L": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_nHYbjY": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_XYXH99": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_TA7BbK": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_LrmH4L",
-        "video_nHYbjY",
-        "video_XYXH99",
-        "video_TA7BbK"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {text-align: center; font-size: 40px !important;}",
-        "@media only screen and (max-width: 767px) {h2 {font-size: 30px !important; }}"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "Tried And Trusted By 3,700+ People",
-        "heading_size": "h1",
-        "auto_center": true,
-        "columns": 4,
-        "button_label": "",
-        "button_link": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
-    "1765896441d3e5261a": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "liw7h8lj8ye2o"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
-      }
-    },
     "featured_collection_RackKr": {
       "type": "featured-collection",
       "custom_css": [
@@ -1548,7 +1462,7 @@
       "type": "yotpo-reviews-widget",
       "name": "Yotpo Reviews Widget",
       "settings": {
-        "product": "ela-mint-toothpaste",
+        "product": "toothpaste-for-sensitive-teeth",
         "product_handle": "",
         "yotpo_instance_id": "1002005",
         "show_heading": false,
@@ -1668,8 +1582,6 @@
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
-    "yt_shorts_FUHnAV",
-    "1765896441d3e5261a",
     "featured_collection_RackKr",
     "custom_collapsible_content_p9cV6M",
     "yotpo_reviews_widget_hbzYf6",
