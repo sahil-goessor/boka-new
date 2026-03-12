@@ -986,37 +986,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ── Show/hide sticky bar on scroll ──
   function handleScroll() {
-    // Use multiple fallback anchors — works even when buy_buttons block is removed
-    let anchorEl = document.querySelector('.product-form__buttons') ||
-                   document.querySelector(`#price-${sectionId}`) ||
-                   document.querySelector(`#ProductInfo-${sectionId}`) ||
-                   document.querySelector('.featured-product .product__info-wrapper') ||
-                   document.querySelector('.featured-product');
+  // Use multiple fallback anchors — works even when buy_buttons block is removed
+  let anchorEl = document.querySelector('.product-form__buttons') ||
+                 document.querySelector(`#price-${sectionId}`) ||
+                 document.querySelector(`#ProductInfo-${sectionId}`) ||
+                 document.querySelector('.featured-product .product__info-wrapper') ||
+                 document.querySelector('.featured-product');
 
-    if (!anchorEl) return;
+  if (!anchorEl) return;
 
-    const anchorRect = anchorEl.getBoundingClientRect();
-    const wasHidden = sticky.classList.contains('hidden');
+  const anchorRect = anchorEl.getBoundingClientRect();
+  const wasHidden = sticky.classList.contains('hidden');
 
-    // Check if hero banner is in view
-    const heroBannerCta = document.querySelector('.boka-hero__container');
-    let heroBannerInView = false;
-    if (heroBannerCta) {
-      const heroBannerRect = heroBannerCta.getBoundingClientRect();
-      heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
-    }
-
-    // Show sticky when scrolled past anchor AND hero not in view
-    if (anchorRect.bottom < 0 && !heroBannerInView) {
-      if (wasHidden) {
-        sticky.classList.remove('hidden');
-        updateSticky();
-      }
-    } else {
-      sticky.classList.add('hidden');
-    }
+  // Check if hero banner is in view
+  const heroBannerCta = document.querySelector('.boka-hero__container');
+  let heroBannerInView = false;
+  if (heroBannerCta) {
+    const heroBannerRect = heroBannerCta.getBoundingClientRect();
+    heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
   }
 
+  // Original logic: show when anchor is off-screen (either scrolled past OR not yet reached)
+  // AND hero banner is not in view
+  const anchorOffScreen = anchorRect.bottom < 0 || anchorRect.top > window.innerHeight;
+
+  if (anchorOffScreen && !heroBannerInView) {
+    if (wasHidden) {
+      sticky.classList.remove('hidden');
+      updateSticky();
+    }
+  } else {
+    sticky.classList.add('hidden');
+  }
+}
   window.addEventListener('scroll', handleScroll);
 
   // ── Variant change listeners ──
