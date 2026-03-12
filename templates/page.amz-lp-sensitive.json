@@ -567,9 +567,15 @@
         },
         "buy_buttons_j3VN3h": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
-            "show_dynamic_checkout": false,
-            "amazon_url": ""
+            "show_dynamic_checkout": false
+          }
+        },
+        "amazon_button_C8Byrd": {
+          "type": "amazon_button",
+          "settings": {
+            "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_AE70DAEF8AF0BDBFD73A9E14700B81E0_afap_abs&ref_=aa_maas&tag=maas"
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
@@ -650,6 +656,7 @@
         "yotpo_widget_aEd8ik",
         "price_T7pXW7",
         "buy_buttons_j3VN3h",
+        "amazon_button_C8Byrd",
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
         "description_9m494J",
         "complementary_T3Ybgg",
