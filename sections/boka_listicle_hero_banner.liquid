@@ -327,7 +327,9 @@
 
         <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
 
-        <h2 class="boka-subheading">{{ section.settings.subheading_text }}</h2>
+        {%- if section.settings.subheading_text != blank -%}
+          <h2 class="boka-subheading">{{ section.settings.subheading_text }}</h2>
+        {%- endif -%}
 
         {%- if section.settings.cta_text != blank -%}
           <button
