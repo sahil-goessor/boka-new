@@ -68,6 +68,16 @@
         </button>
       {% endif %}
 
+      {% if section.settings.amazon_url != blank %}
+        <a href="{{ section.settings.amazon_url }}" target="_blank" rel="noopener" class="boka-hero__amazon-btn">
+          <strong>Buy on amazon</strong>
+          <svg width="38" height="18" viewBox="0 0 120 36" xmlns="http://www.w3.org/2000/svg">
+            <path d="M74.9 27.8C67.8 33 57.5 35.8 48.6 35.8c-12.2 0-23.2-4.5-31.5-12 -.7-.6-.07-1.4.7-.94 8.97 5.22 20.07 8.36 31.53 8.36 7.73 0 16.24-1.6 24.07-4.92 1.18-.5 2.17.77.98 1.63z" fill="white"/>
+            <path d="M77.8 24.5c-.89-1.14-5.89-.54-8.14-.27-.68.08-.79-.51-.17-.94 3.99-2.8 10.53-2 11.26-1.06.73.95-.2 7.5-3.95 10.63-.57.48-1.12.22-.87-.41.84-2.1 2.73-6.8 1.84-7.94z" fill="white"/>
+          </svg>
+        </a>
+      {% endif %}
+
       {% if section.settings.show_timer %}
         <div class="boka-hero__timer">
           {% if section.settings.timer_text != blank %}
@@ -469,6 +479,37 @@
         line-height: normal;
       }
   }
+
+  #shopify-section-{{ section.id }} .boka-hero__amazon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #1a98ff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 13px 30px;
+  border-radius: 50px;
+  width: 260px;
+  max-width: 100%;
+  transition: background-color 0.2s;
+}
+
+#shopify-section-{{ section.id }} .boka-hero__amazon-btn strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+#shopify-section-{{ section.id }} .boka-hero__amazon-btn:hover {
+  background-color: #0e85e8;
+}
+
+@media (max-width: 767px) {
+  #shopify-section-{{ section.id }} .boka-hero__amazon-btn {
+    width: 100%;
+  }
+}
 </style>
 
 <script>
@@ -703,6 +744,12 @@
       "type": "url",
       "id": "cta_url",
       "label": "Button URL"
+    },
+    {
+      "type": "url",
+      "id": "amazon_url",
+      "label": "Amazon Product URL",
+      "info": "If filled, a 'Buy on Amazon' button will appear below the main CTA"
     },
     {
       "type": "color",
