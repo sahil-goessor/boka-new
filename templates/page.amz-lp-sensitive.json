@@ -123,6 +123,7 @@
         "review_kDLRQa",
         "review_XDyKCG"
       ],
+      "disabled": true,
       "custom_css": [
         "p.boka-hero__timer-line {display: none !important;}"
       ],
@@ -567,7 +568,8 @@
         "buy_buttons_j3VN3h": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false
+            "show_dynamic_checkout": false,
+            "amazon_url": ""
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
