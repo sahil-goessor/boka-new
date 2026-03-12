@@ -250,47 +250,55 @@
       }
     }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background-color: #1a98ff;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 13px 40px;
-  border-radius: 12px;
-  width: 320px;
-  max-width: 100%;
-  transition: background-color 0.2s;
-  letter-spacing: 0.3px;
-  margin-bottom: 12px;
-}
+    #shopify-section-{{ section.id }} .boka-hero__amazon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #1a98ff;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 13px 40px;
+      border-radius: 12px;
+      width: 320px;
+      max-width: 100%;
+      transition: background-color 0.2s;
+      letter-spacing: 0.3px;
+      margin-bottom: 12px;
+    }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn strong {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1;
-  text-transform: uppercase;
-}
+    #shopify-section-{{ section.id }} .boka-hero__amazon-btn strong {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn svg {
-  display: block;
-  margin-top: 8px;
-}
+    #shopify-section-{{ section.id }} .boka-hero__amazon-btn svg {
+      display: block;
+      margin-top: 8px;
+    }
 
-#shopify-section-{{ section.id }} .boka-hero__amazon-btn:hover {
-  background-color: #0e85e8;
-}
+    #shopify-section-{{ section.id }} .boka-hero__amazon-btn:hover {
+      background-color: #0e85e8;
+    }
 
-@media (max-width: 767px) {
-  #shopify-section-{{ section.id }} .boka-hero__amazon-btn {
-    width: 100%;
-  }
-}
+    @media (max-width: 767px) {
+      #shopify-section-{{ section.id }} .boka-hero__amazon-btn {
+        width: 100%;
+      }
+    }
+
+    #shopify-section-{{ section.id }} .boka-subheading {
+      color: {{ section.settings.subheading_color }};
+      font-size: {{ section.settings.subheading_font_size }}px;
+      line-height: 1.5;
+      font-weight: 400;
+      margin: -12px 0 20px 0;
+    }
   </style>
 
   <div class="boka-outer">
@@ -318,6 +326,8 @@
         {%- endif -%}
 
         <h1 class="boka-heading">{{ section.settings.heading_text }}</h1>
+
+        <h2 class="boka-subheading">{{ section.settings.subheading_text }}</h2>
 
         {%- if section.settings.cta_text != blank -%}
           <button
@@ -669,6 +679,28 @@
       "unit": "px",
       "label": "Heading Font Size (Mobile)",
       "default": 26
+    },
+    {
+      "type": "textarea",
+      "id": "subheading_text",
+      "label": "Subheading Text",
+      "default": "Here's why thousands of customers are making the switch..."
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#555555"
+    },
+    {
+      "type": "range",
+      "id": "subheading_font_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading Font Size",
+      "default": 18
     },
     {
       "type": "range",
