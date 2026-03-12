@@ -31,6 +31,9 @@
         "heading_color": "#090909",
         "heading_font_size": 40,
         "mobile_heading_font_size": 20,
+        "subheading_text": "Here's why thousands of customers are making the switch...",
+        "subheading_color": "#555555",
+        "subheading_font_size": 18,
         "body_font_size": 14,
         "cta_text": "",
         "cta_url": "",
@@ -575,7 +578,8 @@
         "amazon_button_C8Byrd": {
           "type": "amazon_button",
           "settings": {
-            "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_AE70DAEF8AF0BDBFD73A9E14700B81E0_afap_abs&ref_=aa_maas&tag=maas"
+            "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_AE70DAEF8AF0BDBFD73A9E14700B81E0_afap_abs&ref_=aa_maas&tag=maas",
+            "replace_sticky_atc": true
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
