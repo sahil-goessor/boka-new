@@ -208,48 +208,6 @@
       "name": "scrolling icons",
       "settings": {}
     },
-    "17657652337a3d99c7": {
-      "type": "_blocks",
-      "disabled": true,
-      "settings": {}
-    },
-    "1765546276a11604c6": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_6c7c57f_XcPbjH": {
-          "type": "ai_gen_block_6c7c57f",
-          "settings": {
-            "text_1": "Free Shipping on Orders Over $35",
-            "text_2": "Dentist Approved Products",
-            "text_3": "Natural Ingredients",
-            "text_4": "Made in the USA",
-            "text_5": "",
-            "text_6": "",
-            "text_7": "",
-            "text_8": "",
-            "text_9": "",
-            "text_10": "",
-            "scroll_speed": 30,
-            "pause_on_hover": false,
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "text_size": 16,
-            "text_weight": "400",
-            "icon_size": 24,
-            "icon_text_gap": 8,
-            "item_spacing": 60,
-            "padding_top": 16,
-            "padding_bottom": 16
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_6c7c57f_XcPbjH"
-      ],
-      "disabled": true,
-      "settings": {}
-    },
     "176576544784328569": {
       "type": "_blocks",
       "blocks": {
@@ -264,13 +222,13 @@
             "container_width": 1200,
             "image": "shopify://shop_images/swwai_asset__9_0d514b3f231b611ac09b787f6d9cdb9d5e40ddfebf2b4f6090187f4b145f5cb1.webp",
             "image_border_radius": 0,
-            "heading": "1. Science-Backed & Gentle",
-            "subheadline_1": "Fluoride-Free",
+            "heading": "5% Potassium Nitrate",
+            "subheadline_1": "Reduces Tooth Sensitivity",
             "subheadline_1_popup_text": "",
-            "subheadline_1_popup_link_text": "View Key Ingredients",
+            "subheadline_1_popup_link_text": "",
             "subheadline_1_popup_scroll_target": "",
-            "subheadline_2": "Clean Ingredients",
-            "subheadline_2_popup_text": "Made only with safe, science-backed ingredients you can feel good about using.",
+            "subheadline_2": "Builds Protection",
+            "subheadline_2_popup_text": "A commonly used ingredient in sensitivity formulas that helps calm the nerves inside teeth over time.",
             "subheadline_2_popup_link_text": "View Key Ingredients",
             "subheadline_2_popup_scroll_target": "shopify-section-template--17574539231275__custom_image_icon_background_FqMNG9",
             "body": "<p>This formula is packed with nature-inspired ingredients for gentle, effective care - no sulfates, no parabens, no bad stuff.</p>",
@@ -1464,8 +1422,6 @@
     "review_hero_banner_VHPeMD",
     "176577886172b3a38b",
     "17657747600d7cde40",
-    "17657652337a3d99c7",
-    "1765546276a11604c6",
     "176576544784328569",
     "17655422262dd9640d",
     "featured_product_section_custom_UEHaA4",
