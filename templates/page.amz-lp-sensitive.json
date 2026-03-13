@@ -1124,44 +1124,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "featured_collection_RackKr": {
-      "type": "featured-collection",
-      "custom_css": [
-        "h1 {text-align: center; font-size: 40px;}",
-        "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}",
-        ".learn-more.small-hide.medium-hide {display: none !important;}"
-      ],
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "title": "Pairs Perfectly With",
-        "heading_size": "h0",
-        "heading_tag": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "complete-your-routine",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "rich_text_TnxPaa": {
       "type": "rich-text",
       "blocks": {
@@ -1423,7 +1385,6 @@
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
-    "featured_collection_RackKr",
     "rich_text_TnxPaa",
     "custom_collapsible_content_p9cV6M",
     "yotpo_reviews_widget_hbzYf6",
