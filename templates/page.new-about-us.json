@@ -549,6 +549,14 @@
     "image_with_text_kXUR9h": {
       "type": "image-with-text",
       "blocks": {
+        "caption_ACwgYn": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our Impact",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "heading_nWdcbL": {
           "type": "heading",
           "settings": {
@@ -575,6 +583,7 @@
         }
       },
       "block_order": [
+        "caption_ACwgYn",
         "heading_nWdcbL",
         "text_y4WdAQ",
         "button_KhbGa4"
