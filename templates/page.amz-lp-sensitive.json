@@ -596,36 +596,6 @@
             "publishId": "2xltcx7temkfn"
           }
         },
-        "icon_with_text_kfTBKq": {
-          "type": "icon-with-text",
-          "settings": {
-            "orientation": "inlined",
-            "layout": "vertical",
-            "icon_1": "none",
-            "image_1": "shopify://shop_images/Check_1.webp",
-            "heading_1": "<strong>Fluoride-Free</strong>",
-            "icon_2": "return",
-            "image_2": "shopify://shop_images/Check_1.webp",
-            "heading_2": "<strong>Science-backed</strong>",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        },
-        "icon_with_text_HedUMR": {
-          "type": "icon-with-text",
-          "settings": {
-            "orientation": "inlined",
-            "layout": "vertical",
-            "icon_1": "none",
-            "image_1": "shopify://shop_images/Check_1.webp",
-            "heading_1": "<strong>Made for Sensitive Teeth</strong>",
-            "icon_2": "none",
-            "image_2": "shopify://shop_images/Check_1.webp",
-            "heading_2": "<strong>Dentist Approved</strong>",
-            "padding_top": 0,
-            "padding_bottom": 0
-          }
-        },
         "description_9m494J": {
           "type": "description",
           "settings": {}
@@ -660,6 +630,36 @@
             "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
             "page": ""
           }
+        },
+        "icon_with_text_HedUMR": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Check_1.webp",
+            "heading_1": "<strong>Made for Sensitive Teeth</strong>",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/Check_1.webp",
+            "heading_2": "<strong>Dentist Approved</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "icon_with_text_kfTBKq": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Check_1.webp",
+            "heading_1": "<strong>Fluoride-Free</strong>",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Check_1.webp",
+            "heading_2": "<strong>Science-backed</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
         }
       },
       "block_order": [
@@ -670,12 +670,12 @@
         "buy_buttons_j3VN3h",
         "amazon_button_C8Byrd",
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
-        "icon_with_text_kfTBKq",
-        "icon_with_text_HedUMR",
         "description_9m494J",
         "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
-        "collapsible_tab_chH3cF"
+        "collapsible_tab_chH3cF",
+        "icon_with_text_HedUMR",
+        "icon_with_text_kfTBKq"
       ],
       "custom_css": [
         "a.link.product__view-details.animate-arrow {display: none;}",
