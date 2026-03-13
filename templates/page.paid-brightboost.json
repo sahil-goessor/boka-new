@@ -88,6 +88,7 @@
         "description": "Brighten your smile with Boka BrightBoost Whitening Powder. It gently whitens and soothes with nano-hydroxyapatite, aloe, and essential vitamins.",
         "cta_text": "TRY NOW FOR $21.00",
         "cta_url": "",
+        "amazon_url": "",
         "cta_bg_color": "#111111",
         "cta_text_color": "#ffffff",
         "button_action": "add_and_cart",
@@ -256,48 +257,7 @@
       "block_order": [
         "ai_gen_block_01dc9c9_KTh4Wi"
       ],
-      "settings": {}
-    },
-    "17657652337a3d99c7": {
-      "type": "_blocks",
-      "disabled": true,
-      "settings": {}
-    },
-    "1765546276a11604c6": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_6c7c57f_XcPbjH": {
-          "type": "ai_gen_block_6c7c57f",
-          "settings": {
-            "text_1": "Free Shipping on Orders Over $35",
-            "text_2": "Dentist Approved Products",
-            "text_3": "Natural Ingredients",
-            "text_4": "Made in the USA",
-            "text_5": "",
-            "text_6": "",
-            "text_7": "",
-            "text_8": "",
-            "text_9": "",
-            "text_10": "",
-            "scroll_speed": 30,
-            "pause_on_hover": false,
-            "background_color": "#000000",
-            "text_color": "#ffffff",
-            "text_size": 16,
-            "text_weight": "400",
-            "icon_size": 24,
-            "icon_text_gap": 8,
-            "item_spacing": 60,
-            "padding_top": 16,
-            "padding_bottom": 16
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_6c7c57f_XcPbjH"
-      ],
-      "disabled": true,
+      "name": "auto sliding icons+text",
       "settings": {}
     },
     "176576544784328569": {
@@ -623,10 +583,6 @@
       ],
       "settings": {}
     },
-    "17655422262dd9640d": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "featured_product_section_custom_UEHaA4": {
       "type": "featured-product-section-custom",
       "blocks": {
@@ -683,6 +639,7 @@
         },
         "variant_picker_QPkKgn": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button"
           }
@@ -700,19 +657,6 @@
         "description_9m494J": {
           "type": "description",
           "settings": {}
-        },
-        "complementary_T3Ybgg": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": true,
-            "icon": "price_tag",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": true
-          }
         },
         "collapsible_tab_X4QUJA": {
           "type": "collapsible_tab",
@@ -773,7 +717,6 @@
         "quantity_selector_CharbJ",
         "buy_buttons_j3VN3h",
         "description_9m494J",
-        "complementary_T3Ybgg",
         "collapsible_tab_X4QUJA",
         "collapsible_tab_chH3cF",
         "icon_with_text_kfTBKq",
@@ -1075,11 +1018,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "1765534182fed2e648": {
-      "type": "_blocks",
-      "disabled": true,
-      "settings": {}
-    },
     "custom_liquid_CjtDWw": {
       "type": "custom-liquid",
       "settings": {
@@ -1223,64 +1161,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "yt_shorts_FUHnAV": {
-      "type": "yt-shorts",
-      "blocks": {
-        "video_LrmH4L": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_nHYbjY": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_XYXH99": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        },
-        "video_TA7BbK": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "yt_shorts_link": "https://www.youtube.com/shorts/F7WBjXLyJpQ",
-            "description": "Describe the video"
-          }
-        }
-      },
-      "block_order": [
-        "video_LrmH4L",
-        "video_nHYbjY",
-        "video_XYXH99",
-        "video_TA7BbK"
-      ],
-      "custom_css": [
-        "h2 {text-align: center; font-size: 40px !important;}",
-        "@media only screen and (max-width: 767px) {h2 {font-size: 30px !important; }}"
-      ],
-      "name": "t:sections.yt-shorts.presets.name",
-      "settings": {
-        "yt_shorts_title": "Tried And Trusted By 3,700+ People",
-        "heading_size": "h1",
-        "auto_center": true,
-        "columns": 4,
-        "button_label": "",
-        "button_link": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
     "1765896441d3e5261a": {
       "type": "apps",
       "blocks": {
@@ -1375,69 +1255,6 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
-    },
-    "custom_feature_product_section_4f3nQW": {
-      "type": "custom-feature-product-section",
-      "blocks": {
-        "title_ytVQy6": {
-          "type": "title",
-          "settings": {
-            "title_font_size_mobile": 24,
-            "title_font_size_desktop": 40
-          }
-        },
-        "price_wQEKVG": {
-          "type": "price",
-          "settings": {
-            "hide_on_subscription_products": false
-          }
-        },
-        "variant_picker_6tqKaH": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "color_names": "white, blue, mint, pink",
-            "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
-          }
-        },
-        "buy_buttons_9jfMhw": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
-          }
-        }
-      },
-      "block_order": [
-        "title_ytVQy6",
-        "price_wQEKVG",
-        "variant_picker_6tqKaH",
-        "buy_buttons_9jfMhw"
-      ],
-      "disabled": true,
-      "name": "Product Display-new-2",
-      "settings": {
-        "product_handle": "ela-mint-toothpaste",
-        "enable_sticky_info": true,
-        "enable_sticky_atc": true,
-        "media_size": "large",
-        "lazyload": false,
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "thumbnail_position": "bottom",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_tablet": 36,
-        "padding_bottom_tablet": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
     }
   },
   "order": [
@@ -1446,21 +1263,15 @@
     "176577752500a4f33b",
     "17657702727ebbe56b",
     "17657747600d7cde40",
-    "17657652337a3d99c7",
-    "1765546276a11604c6",
     "176576544784328569",
-    "17655422262dd9640d",
     "featured_product_section_custom_UEHaA4",
     "featured_product_TGCUYH",
     "custom_feature_product_9Gkr6x",
-    "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
-    "yt_shorts_FUHnAV",
     "1765896441d3e5261a",
     "featured_collection_RackKr",
     "yotpo_reviews_widget_kWhWWh",
-    "main",
-    "custom_feature_product_section_4f3nQW"
+    "main"
   ]
 }
