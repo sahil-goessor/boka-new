@@ -687,7 +687,7 @@
           "type": "heading",
           "settings": {
             "heading": "Loved by Many, <br>\n<em>Many Mouths</em>",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_tag": "default"
           }
         },
