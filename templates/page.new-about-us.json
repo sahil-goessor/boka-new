@@ -25,12 +25,12 @@
         "image_rreFMt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Main_banner_desktop.webp",
-            "image_mobile": "shopify://shop_images/Main_banner_mobile.webp",
+            "image": "shopify://shop_images/new_about_hero_banner_desktop.webp",
+            "image_mobile": "shopify://shop_images/new_about_hero_banner_mobile.webp",
             "heading": "A Better Smile Starts Here",
             "image_link": "",
-            "heading_font_size": 52,
-            "heading_font_size_mobile": 36,
+            "heading_font_size": 40,
+            "heading_font_size_mobile": 24,
             "heading_tag": "default",
             "subheading": "Science-backed, feel-good formulas that care for your mouth as whole.",
             "subheading_font_size": 16,
@@ -56,7 +56,7 @@
             "bottom_text_background_color": "#dce6cf",
             "bottom_text_foreground_color": "#000000",
             "text_alignment_mobile": "center",
-            "mobile_content_position": "center"
+            "mobile_content_position": "top"
           }
         }
       },
@@ -66,14 +66,14 @@
       "custom_css": [],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "adapt_image",
         "slider_visual": "none",
-        "enable_video_buttons": false,
+        "enable_video_buttons": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
         "fadein_enabled": false,
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
