@@ -94,7 +94,8 @@
   }
 
   .ai-image-text-subheadline-{{ ai_gen_id }} {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: {{ block.settings.subheadline_padding_vertical }}px {{ block.settings.subheadline_padding_horizontal }}px;
     border-radius: 36px;
     font-size: {{ block.settings.subheadline_font_size }}px;
@@ -422,6 +423,16 @@
     opacity: 0.7;
   }
 
+  .ai-subheadline-icon-{{ ai_gen_id }} {
+    display: inline-block;
+    width: {{ block.settings.subheadline_icon_size }}px;
+    height: {{ block.settings.subheadline_icon_size }}px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
   @media screen and (max-width: 749px) {
     .ai-image-text-{{ ai_gen_id }} {
       padding: {{ block.settings.padding_top | times: 0.6 }}px 0 {{ block.settings.padding_bottom | times: 0.6 }}px;
@@ -600,11 +611,18 @@
 
               {% if block.settings.subheadline_1 != blank %}
                 <div class="ai-subheadline-popup-wrapper-{{ ai_gen_id }}">
-                  <span
-                    class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-1-{{ ai_gen_id }} ai-subheadline-pill-{{ ai_gen_id }}"
-                    data-popup="subheadline-popup-1-{{ ai_gen_id }}"
+                  <span class="ai-image-text-subheadline-{{ ai_gen_id }} ai-image-text-subheadline-1-{{ ai_gen_id }} ai-subheadline-pill-{{ ai_gen_id }}" data-popup="subheadline-popup-1-{{ ai_gen_id }}"
                     {% if block.settings.subheadline_1_popup_text == blank %}style="cursor:default"{% endif %}
                   >
+                    {% if block.settings.subheadline_1_icon %}
+                      <img
+                        src="{{ block.settings.subheadline_1_icon | image_url: width: 40 }}"
+                        alt=""
+                        class="ai-subheadline-icon-{{ ai_gen_id }}"
+                        width="20"
+                        height="20"
+                      >
+                    {% endif %}
                     {{ block.settings.subheadline_1 }}
                   </span>
                   {% if block.settings.subheadline_1_popup_text != blank %}
@@ -632,6 +650,15 @@
                     data-popup="subheadline-popup-2-{{ ai_gen_id }}"
                     {% if block.settings.subheadline_2_popup_text == blank %}style="cursor:default"{% endif %}
                   >
+                    {% if block.settings.subheadline_2_icon %}
+                      <img
+                        src="{{ block.settings.subheadline_2_icon | image_url: width: 40 }}"
+                        alt=""
+                        class="ai-subheadline-icon-{{ ai_gen_id }}"
+                        width="20"
+                        height="20"
+                      >
+                    {% endif %}
                     {{ block.settings.subheadline_2 }}
                   </span>
                   {% if block.settings.subheadline_2_popup_text != blank %}
@@ -1143,6 +1170,11 @@
       "label": "Subheadline 1"
     },
     {
+      "type": "image_picker",
+      "id": "subheadline_1_icon",
+      "label": "Subheadline 1 icon"
+    },
+    {
       "type": "textarea",
       "id": "subheadline_1_popup_text",
       "label": "Subheadline 1 — Popup description"
@@ -1165,6 +1197,11 @@
       "label": "Subheadline 2"
     },
     {
+      "type": "image_picker",
+      "id": "subheadline_2_icon",
+      "label": "Subheadline 2 icon"
+    },
+    {
       "type": "textarea",
       "id": "subheadline_2_popup_text",
       "label": "Subheadline 2 — Popup description"
@@ -1180,6 +1217,16 @@
       "id": "subheadline_2_popup_scroll_target",
       "label": "Subheadline 2 — Scroll target ID",
       "info": "Enter the section ID to scroll to (e.g. ingredients-section). No # needed."
+    },
+    {
+      "type": "range",
+      "id": "subheadline_icon_size",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
     },
     {
       "type": "richtext",
