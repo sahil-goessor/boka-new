@@ -661,7 +661,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Boka_Committee_HP_Banner.webp",
+        "image": "shopify://shop_images/toothfairy_thank_you.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
