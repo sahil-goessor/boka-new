@@ -565,9 +565,8 @@
         },
         "yotpo_widget_aEd8ik": {
           "type": "yotpo_widget",
-          "disabled": true,
           "settings": {
-            "yotpo_product_id": "647087685675",
+            "yotpo_product_id": "7788398772267",
             "yotpo_scroll_target": "shopify-section-template--17574539231275__yotpo_reviews_widget_hbzYf6"
           }
         },
