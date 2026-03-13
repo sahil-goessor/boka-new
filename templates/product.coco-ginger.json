@@ -141,58 +141,6 @@
         "padding_bottom_mobile": 60
       }
     },
-    "85272ee1-d7ec-498c-985b-6761fcc6f38f": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "The power of n-Ha",
-            "heading_size": "h1",
-            "heading_tag": "h2"
-          }
-        },
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nano-hydroxyapatite (n-Ha) is a form of calcium that makes up 97% of your tooth enamel and 70% of your dentin. Because it comprises the primary foundation of teeth and bones, it's restorative for your smile.</p><p>First used by NASA astronauts in space, n-Ha rebuilds teeth without the toxins found in fluoride, making it safe to swallow. (And if it’s good enough for space missions, it’s good enough for us.)</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-0",
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Boka_Lifestyle_Dentist_n-Ha-798x634.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "custom",
-        "section_background_color": "rgba(0,0,0,0)",
-        "custom_background_color": "#ffffff",
-        "custom_text_color": "#212529",
-        "heading_font_size_mobile": 28,
-        "heading_font_size_desktop": 48,
-        "text_font_size_mobile": 16,
-        "text_font_size_desktop": 18,
-        "caption_font_size_mobile": 14,
-        "caption_font_size_desktop": 16,
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 20,
-        "padding_bottom": 40,
-        "padding_top_tablet": 30,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 0
-      }
-    },
     "86292521-895f-400b-937b-25527348dbb6": {
       "type": "featured-collection",
       "settings": {
@@ -310,134 +258,6 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
-      }
-    },
-    "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
-      "type": "image-with-bulleted-text",
-      "blocks": {
-        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Reduces sensitivity</p>",
-            "text_style": "body"
-          }
-        },
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Safe for daily use</p>",
-            "text_style": "body"
-          }
-        },
-        "93b178e4-2598-45c7-b4a1-fd50f417768b": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Biocompatible</p>",
-            "text_style": "body"
-          }
-        },
-        "6f829075-8538-46cf-852c-3bb0c8fb002d": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Freshens breath</p>",
-            "text_style": "body"
-          }
-        },
-        "4aa669c9-1b55-40e7-a34e-9b5dd74e8c87": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Fluoride-free</p>",
-            "text_style": "body"
-          }
-        },
-        "text_a6wREh": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Non-toxic when used as directed</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0",
-        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b",
-        "93b178e4-2598-45c7-b4a1-fd50f417768b",
-        "6f829075-8538-46cf-852c-3bb0c8fb002d",
-        "4aa669c9-1b55-40e7-a34e-9b5dd74e8c87",
-        "text_a6wREh"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Boka_Lifestyle_Powerbrush_798x634_11ce6a89-ccb3-4796-aab1-e8e48e29b63d.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "heading": "Features",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "caption": "Our proprietary and innovative formula includes Nano-hydroxyapatite (n-Ha) - a biomimetic mineral form of the same ingredient that naturally makes up 97% of your teeth material and 70% of your dentin. n-Ha has been the subject of significant research for decades with a wide variety of potential benefits across dentistry and oral care.",
-        "text_style": "subtitle",
-        "text_size": "medium",
-        "button_label": "",
-        "button_link": "",
-        "second_button_label": "",
-        "second_button_link": "",
-        "content_layout": "no-overlap",
-        "color_scheme": "custom",
-        "section_background_color": "#9b7c64",
-        "custom_background_color": "#9b7c64",
-        "custom_text_color": "#ffffff",
-        "bullets_color": "#ffffff",
-        "bullets_line_color": "#ffffff",
-        "enable_scroll_animation": false,
-        "image_behavior": "none",
-        "mobile_heading_alignment": "center",
-        "mobile_content_alignment": "left",
-        "padding_top": 70,
-        "padding_bottom": 68,
-        "padding_top_tablet": 30,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "7d820780-0e5e-48bc-bcfa-883b4d728f1c": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15159058989099__7d820780-0e5e-48bc-bcfa-883b4d728f1c-168749917871881e00-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Ingredients",
-            "heading_size": "h1",
-            "heading_tag": "h2"
-          }
-        },
-        "d39e24c6-17e8-4e48-9b29-746b5e489a2e": {
-          "type": "caption",
-          "settings": {
-            "caption": "Glycerin, Water, Hydrated Silica, Erythritol, Silica, Natural Flavors (Coconut and Ginger), Hydroxyapatite (nano), Xanthan Gum, Sodium Benzoate, Aloe Barbadensis (Aloe Vera) Leaf Juice, Chamomilla Recutita (Chamomile) Flower Extract, Methylsulfonylmethane (MSM), Potassium Chloride, Sodium Bicarbonate, Stevia Rebaudiana Extract Powder, Sodium Lauroyl Sarcosinate.Products are made in the same facility and on shared line as peanuts, tree nuts, dairy, eggs, and sunflower.",
-            "text_style": "subtitle",
-            "text_size": "medium"
-          }
-        }
-      },
-      "block_order": [
-        "template--15159058989099__7d820780-0e5e-48bc-bcfa-883b4d728f1c-168749917871881e00-0",
-        "d39e24c6-17e8-4e48-9b29-746b5e489a2e"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "fadein_enabled": false,
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "full_width": false,
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
       }
     },
     "13bf477d-9ff5-4e98-aa65-67538cea8e94": {
@@ -1459,75 +1279,6 @@
         "margin_bottom_mobile": 40
       }
     },
-    "b7ac07b0-395f-4897-9ce0-955f10fbcd38": {
-      "type": "collapsible-content",
-      "blocks": {
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-1": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Does this Coco Ginger Toothpaste offer teeth-whitening benefits?",
-            "icon": "none",
-            "row_content": "<p>Yes, our toothpaste contains ingredients that contribute to teeth whitening, enhancing your smile and overall oral hygiene.</p>",
-            "page": ""
-          }
-        },
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is this toothpaste suitable for individuals with tooth sensitivity?",
-            "icon": "none",
-            "row_content": "<p>Absolutely, our toothpaste is specifically formulated with nano-hydroxyapatite (n-Ha), a mineral that helps fortify enamel and reduce tooth sensitivity by closing enamel gaps. Its gentle yet effective action makes it an ideal choice for individuals with sensitive teeth, promoting oral comfort and overall dental health.</p>",
-            "page": ""
-          }
-        },
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can children use Coco Ginger Toothpaste?",
-            "icon": "none",
-            "row_content": "<p>Yes, our toothpaste is suitable for children, offering a gentle and option for the whole family.</p>",
-            "page": ""
-          }
-        },
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does this toothpaste contain fluoride?",
-            "icon": "none",
-            "row_content": "<p>No, our toothpaste is fluoride-free. Instead, it features nano-hydroxyapatite (n-Ha), a revolutionary advancement in dentistry, ensuring strong enamel and reduced tooth sensitivity. Additionally, our toothpaste is SLS-free and paraben-free, prioritizing your oral health without compromising on safety.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-1",
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-2",
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-3",
-        "template--15159058989099__b7ac07b0-395f-4897-9ce0-955f10fbcd38-collapsible_row-4"
-      ],
-      "disabled": true,
-      "settings": {
-        "caption": "",
-        "heading": "Questions About Boka Coco Ginger Toothpaste",
-        "heading_size": "h1",
-        "heading_tag": "h2",
-        "heading_alignment": "center",
-        "description": "Get quick, straightforward answers about Coco Ginger Toothpaste. Learn about its fluoride-free formula and ingredients, ensuring a refreshing dental experience.",
-        "layout": "none",
-        "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "17400803985e10db32": {
       "type": "apps",
       "blocks": {
@@ -1557,14 +1308,10 @@
   },
   "order": [
     "main",
-    "85272ee1-d7ec-498c-985b-6761fcc6f38f",
     "86292521-895f-400b-937b-25527348dbb6",
     "related-products",
     "91480b05-d41b-49d7-86d2-128865d27814",
-    "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
-    "7d820780-0e5e-48bc-bcfa-883b4d728f1c",
     "13bf477d-9ff5-4e98-aa65-67538cea8e94",
-    "b7ac07b0-395f-4897-9ce0-955f10fbcd38",
     "17400803985e10db32"
   ]
 }
