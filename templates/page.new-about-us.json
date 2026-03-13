@@ -646,8 +646,8 @@
         "button_cwwCUP": {
           "type": "button",
           "settings": {
-            "button_label": "Meet the Committee",
-            "button_link": "https://www.boka.com/pages/oral-health-advisory-committee",
+            "button_label": "LEARN MORE",
+            "button_link": "https://www.americastoothfairy.org/stories/libraries-turn-storytime-into-smile-time",
             "second_button_label": "",
             "second_button_link": ""
           }
@@ -664,7 +664,7 @@
         "image": "shopify://shop_images/Boka_Committee_HP_Banner.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
