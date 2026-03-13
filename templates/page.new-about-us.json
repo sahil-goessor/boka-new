@@ -675,10 +675,18 @@
     "rich_text_qNft9C": {
       "type": "rich-text",
       "blocks": {
+        "caption_j4PR6E": {
+          "type": "caption",
+          "settings": {
+            "caption": "customer testimonials",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "heading_QCent6": {
           "type": "heading",
           "settings": {
-            "heading": "Nano-hydroxyapatite: <br>A \n<em>fluoride-free</em> breakthrough <br> in oral care",
+            "heading": "Loved by Many, <br>\n<em>Many Mouths</em>",
             "heading_size": "h1",
             "heading_tag": "default"
           }
@@ -686,7 +694,7 @@
         "text_AkkFDh": {
           "type": "text",
           "settings": {
-            "text": "<p>Research-backed, dentist-approved</p>"
+            "text": "<p>Don't just take our word for it. Hear directly from our community about their favorite Boka moments.</p>"
           }
         },
         "button_zxieFg": {
@@ -703,6 +711,7 @@
         }
       },
       "block_order": [
+        "caption_j4PR6E",
         "heading_QCent6",
         "text_AkkFDh",
         "button_zxieFg"
