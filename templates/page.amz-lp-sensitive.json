@@ -992,7 +992,7 @@
         "heading_MzYbMk": {
           "type": "heading",
           "settings": {
-            "heading": "What Makes Boka Work",
+            "heading": "Key Ingredients",
             "heading_size": "h1",
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 30,
@@ -1004,12 +1004,12 @@
           "settings": {
             "icon": "shopify://shop_images/Oral_Probiotics.webp",
             "icon_alt": "Icon",
-            "heading": "Nano-Hydroxyapatite",
+            "heading": "5% Potassium Nitrate",
             "heading_font_size_desktop": 18,
             "text_font_size_desktop": 16,
             "heading_font_size_mobile": 18,
             "text_font_size_mobile": 14,
-            "text": "<p>Mimics tooth enamel</p>",
+            "text": "<p>Helps reduce sensitivity*</p>",
             "text_style": "body"
           }
         },
@@ -1046,7 +1046,7 @@
           "settings": {
             "icon": "shopify://shop_images/peppermint.webp",
             "icon_alt": "Icon",
-            "heading": "Mint",
+            "heading": "Mint Cream Flavor",
             "heading_font_size_desktop": 18,
             "text_font_size_desktop": 16,
             "heading_font_size_mobile": 18,
