@@ -104,42 +104,6 @@
         "shipping_text_color": "#090909"
       }
     },
-    "176577886172b3a38b": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "176577752500a4f33b": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_49ab229_YTFKKF": {
-          "type": "ai_gen_block_49ab229",
-          "settings": {
-            "heading": "As Seen On",
-            "heading_alignment": "center",
-            "logo_1": "shopify://shop_images/Vice_Logo.png",
-            "logo_2": "shopify://shop_images/Vice_Logo.png",
-            "logo_height": 60,
-            "logo_max_width": 150,
-            "logo_spacing": 60,
-            "grayscale": true,
-            "logo_opacity": 60,
-            "animation_speed": 15,
-            "section_background_color": "#fae5db",
-            "heading_size": 24,
-            "heading_spacing": 30,
-            "heading_color": "#000000",
-            "section_padding_top": 50,
-            "section_padding_bottom": 50
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_49ab229_YTFKKF"
-      ],
-      "disabled": true,
-      "settings": {}
-    },
     "17657702727ebbe56b": {
       "type": "_blocks",
       "blocks": {
@@ -210,9 +174,11 @@
       "block_order": [
         "ai_gen_block_501d6ba_Jf8wrN"
       ],
+      "disabled": true,
       "custom_css": [
         "a {color: #ffffff !important;}"
       ],
+      "name": "Hero banner 1",
       "settings": {}
     },
     "17657747600d7cde40": {
@@ -243,7 +209,7 @@
             "container_height": 60,
             "padding_top": 12,
             "padding_bottom": 12,
-            "text_color": "#556045",
+            "text_color": "#000000",
             "text_size": 16,
             "text_weight": "400",
             "icon_size": 36,
@@ -1259,8 +1225,6 @@
   },
   "order": [
     "review_hero_banner_YtFMBD",
-    "176577886172b3a38b",
-    "176577752500a4f33b",
     "17657702727ebbe56b",
     "17657747600d7cde40",
     "176576544784328569",
