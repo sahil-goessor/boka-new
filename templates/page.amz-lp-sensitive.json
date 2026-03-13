@@ -1034,20 +1034,6 @@
             "text_style": "body"
           }
         },
-        "icon_text_w8JqDJ": {
-          "type": "icon_text",
-          "settings": {
-            "icon": "shopify://shop_images/Xylitol_19069d56-c52b-4886-8315-38fa980b02b6.webp",
-            "icon_alt": "Icon",
-            "heading": "Xylitol",
-            "heading_font_size_desktop": 18,
-            "text_font_size_desktop": 16,
-            "heading_font_size_mobile": 18,
-            "text_font_size_mobile": 14,
-            "text": "<p>Refreshes your mouth with a mild, clean flavor.</p>",
-            "text_style": "body"
-          }
-        },
         "icon_text_nKAcBR": {
           "type": "icon_text",
           "settings": {
@@ -1059,6 +1045,20 @@
             "heading_font_size_mobile": 18,
             "text_font_size_mobile": 14,
             "text": "<p>Freshens breath</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_w8JqDJ": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Xylitol_19069d56-c52b-4886-8315-38fa980b02b6.webp",
+            "icon_alt": "Icon",
+            "heading": "Xylitol",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Refreshes your mouth with a mild, clean flavor.</p>",
             "text_style": "body"
           }
         },
@@ -1086,8 +1086,8 @@
         "heading_MzYbMk",
         "icon_text_wHgEtm",
         "icon_text_ryTd4U",
-        "icon_text_w8JqDJ",
         "icon_text_nKAcBR",
+        "icon_text_w8JqDJ",
         "button_bpWGPA"
       ],
       "custom_css": [
