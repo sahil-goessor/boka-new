@@ -573,7 +573,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/toothfairy_thank_you.webp",
+        "image": "shopify://shop_images/new_about_toothfairy_3.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
