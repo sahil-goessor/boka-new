@@ -25,7 +25,7 @@
         "image_rreFMt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/new_about_hero_banner_desktop.webp",
+            "image": "shopify://shop_images/new_about_hero_banner.webp",
             "image_mobile": "shopify://shop_images/new_about_hero_banner_mobile.webp",
             "heading": "A Better Smile Starts Here",
             "image_link": "",
@@ -590,7 +590,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Boka_Committee_HP_Banner.webp",
+        "image": "shopify://shop_images/new_about_tube_banner_desktop.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
