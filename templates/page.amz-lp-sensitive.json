@@ -683,7 +683,7 @@
         "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
         "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add {height: 45px;}",
         "div#sticky-atc-variant-featured {display: none !important;}",
-        "span.yotpo-sr-bottom-line-right-panel {display: none !important;}"
+        "span.yotpo-sr-bottom-line-right-panel, span.yotpo-sr-vertical-border {display: none !important;}"
       ],
       "name": "feature product section new",
       "settings": {
