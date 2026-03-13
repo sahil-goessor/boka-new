@@ -164,10 +164,6 @@
         "shipping_text_color": "#090909"
       }
     },
-    "176577886172b3a38b": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "17657747600d7cde40": {
       "type": "_blocks",
       "blocks": {
@@ -1409,7 +1405,6 @@
   "order": [
     "boka_listicle_hero_banner_X9DaRL",
     "review_hero_banner_VHPeMD",
-    "176577886172b3a38b",
     "17657747600d7cde40",
     "176576544784328569",
     "17655422262dd9640d",
