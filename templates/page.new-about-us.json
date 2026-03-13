@@ -617,6 +617,77 @@
         "padding_bottom_mobile": 10
       }
     },
+    "image_with_text_pPMr3J": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_tELRM9": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our Impact",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_rChtKj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Boka x America’s\n<em>ToothFairy </em>",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "text_98UTkH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Through our partnership with America's ToothFairy in 2025, we donated 2000 dental hygiene kits to help provide underserved children access to essential oral care and educate on tooth decay prevention.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_cwwCUP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Meet the Committee",
+            "button_link": "https://www.boka.com/pages/oral-health-advisory-committee",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "caption_tELRM9",
+        "heading_rChtKj",
+        "text_98UTkH",
+        "button_cwwCUP"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Boka_Committee_HP_Banner.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#dae9cf",
+        "custom_text_color": "#ffffff",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 10
+      }
+    },
     "multicolumn_VAUgL6": {
       "type": "multicolumn",
       "blocks": {
@@ -733,6 +804,7 @@
     "rich_text_w4YWrh",
     "multicolumn_ttLgWG",
     "image_with_text_kXUR9h",
+    "image_with_text_pPMr3J",
     "multicolumn_VAUgL6",
     "featured_collection_Uhw3nt"
   ]
