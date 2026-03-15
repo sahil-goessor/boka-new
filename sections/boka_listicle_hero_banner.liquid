@@ -466,6 +466,9 @@
     muteBtn.addEventListener('click', function () {
       video.muted = !video.muted;
     });
+    video.addEventListener('click', function () {
+      video.muted = !video.muted;
+    });
   }
   if (video && playBtn) {
     video.addEventListener('pause', function () { playBtn.style.display = 'flex'; });
