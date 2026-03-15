@@ -677,13 +677,11 @@
         "icon_with_text_kfTBKq"
       ],
       "custom_css": [
-        "a.link.product__view-details.animate-arrow {display: none;}",
         "h1.product__title.h1 {font-size: 30px;}",
         ".price .price-item {margin: 0 0 0 0;}",
         "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
         "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add {height: 45px;}",
-        "div#sticky-atc-variant-featured {display: none !important;}",
-        "span.yotpo-sr-bottom-line-right-panel, span.yotpo-sr-vertical-border {display: none !important;}"
+        "span.yotpo-sr-bottom-line-right-panel,span.yotpo-sr-vertical-border,div#sticky-atc-variant-featured, a.link.product__view-details.animate-arrow {display: none !important;}"
       ],
       "name": "feature product section new",
       "settings": {
