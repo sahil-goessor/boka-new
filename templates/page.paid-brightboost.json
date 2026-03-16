@@ -985,6 +985,15 @@
             "row_content": "<p>Yes! BrightBoost is safe for daily use and is a seamless addition to your morning or nightly oral hygiene routine to boost your pearly whites.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_VpVBX9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does BrightBoost Whitening Powder contain nano-hydroxyapatite (n-Ha)?",
+            "icon": "none",
+            "row_content": "<p>It does. We included n-Ha because it mimics tooth enamel. While the PAP polishes teeth, the nano-hydroxyapatite supports enamel care, providing a holistic approach to your smile’s health. </p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -994,7 +1003,8 @@
         "collapsible_row_a9yPEf",
         "collapsible_row_tGJ8At",
         "collapsible_row_KQENhP",
-        "collapsible_row_DJy4D8"
+        "collapsible_row_DJy4D8",
+        "collapsible_row_VpVBX9"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
