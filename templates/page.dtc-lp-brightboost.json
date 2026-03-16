@@ -792,6 +792,32 @@
         "padding_bottom_mobile": 36
       }
     },
+    "1765896441d3e5261a": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "9xt9akry8myme"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
     "custom_image_icon_background_FqMNG9": {
       "type": "custom-image-icon-background",
       "blocks": {
@@ -920,32 +946,6 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 20
-      }
-    },
-    "1765896441d3e5261a": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "er9t0j291u0hn"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
-      ],
-      "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
       }
     },
     "featured_collection_RackKr": {
@@ -1153,8 +1153,8 @@
     "17657747600d7cde40",
     "176576544784328569",
     "featured_product_section_custom_UEHaA4",
-    "custom_image_icon_background_FqMNG9",
     "1765896441d3e5261a",
+    "custom_image_icon_background_FqMNG9",
     "featured_collection_RackKr",
     "collapsible_content_yGxDGR",
     "yotpo_reviews_widget_kWhWWh",
