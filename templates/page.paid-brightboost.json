@@ -945,7 +945,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How to use whitening powder without toothpaste?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>To use BrightBoost powder without toothpaste, lightly wet the toothbrush and dip the bristles into the powder to coat, then brush as usual. It’s a water-free, portable option that’s perfect for travel or a quick on-the-go refresh.</p>",
             "page": ""
           }
@@ -978,7 +978,7 @@
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
