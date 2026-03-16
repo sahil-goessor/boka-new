@@ -9,6 +9,62 @@
  */
 {
   "sections": {
+    "boka_listicle_hero_banner_znr8Bg": {
+      "type": "boka_listicle_hero_banner",
+      "name": "Listicle Hero Banner",
+      "settings": {
+        "background_color": "#F5F3EE",
+        "section_height": 520,
+        "left_padding": 60,
+        "mobile_padding": 20,
+        "show_reviews": true,
+        "star_count": 5,
+        "star_color": "#F5A623",
+        "review_text": "See Why Customers Love It",
+        "reviews_section_id": "",
+        "review_text_color": "#333333",
+        "review_font_size": 15,
+        "heading_text": "The Easy Way to Get a Brighter Smile (Without Harsh Whitening)",
+        "heading_color": "#1A1A1A",
+        "heading_font_size": 32,
+        "mobile_heading_font_size": 26,
+        "subheading_text": "Coffee. Tea. Wine. Everyday foods slowly stain your teeth.",
+        "subheading_color": "#555555",
+        "subheading_font_size": 18,
+        "body_font_size": 14,
+        "cta_text": "TRY NOW FOR $20.99",
+        "cta_url": "",
+        "amazon_url": "",
+        "button_action": "link",
+        "variant_id": "",
+        "product_quantity": 1,
+        "button_bg_color": "#1A1A1A",
+        "button_text_color": "#FFFFFF",
+        "button_font_size": 14,
+        "button_border_radius": 4,
+        "show_timer": false,
+        "timer_label_text": "",
+        "timer_end_date": "",
+        "timer_text_color": "#333333",
+        "timer_countdown_color": "#1A1A1A",
+        "show_shipping_banner": true,
+        "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#fae5db",
+        "shipping_text_color": "#000000",
+        "show_promo_banner": true,
+        "promo_heading": "",
+        "promo_text": "",
+        "promo_bg_color": "#FFF3CD",
+        "promo_text_color": "#856404",
+        "video_width_percent": 35,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/562d35e8399145cbb662dcb9f24fd063.mp4",
+        "video_aria_label": "Customer toothpaste review video",
+        "video_autoplay": true,
+        "video_loop": true,
+        "video_muted": true,
+        "mobile_video_height": 380
+      }
+    },
     "review_hero_banner_YtFMBD": {
       "type": "review-hero-banner",
       "blocks": {
@@ -67,6 +123,7 @@
         "review_KpppAL",
         "review_wPgR3V"
       ],
+      "disabled": true,
       "custom_css": [
         "p.boka-hero__timer-line {display: none !important;}"
       ],
@@ -1081,6 +1138,7 @@
     }
   },
   "order": [
+    "boka_listicle_hero_banner_znr8Bg",
     "review_hero_banner_YtFMBD",
     "17657702727ebbe56b",
     "17657747600d7cde40",
