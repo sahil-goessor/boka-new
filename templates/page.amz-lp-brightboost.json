@@ -794,6 +794,36 @@
         "padding_bottom_mobile": 36
       }
     },
+    "rich_text_ibVXfB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9f8B6C": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Routines in Action",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9f8B6C"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": true,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "1765896441d3e5261a": {
       "type": "apps",
       "blocks": {
@@ -1155,6 +1185,7 @@
     "17657747600d7cde40",
     "176576544784328569",
     "featured_product_section_custom_UEHaA4",
+    "rich_text_ibVXfB",
     "1765896441d3e5261a",
     "custom_image_icon_background_FqMNG9",
     "featured_collection_RackKr",
