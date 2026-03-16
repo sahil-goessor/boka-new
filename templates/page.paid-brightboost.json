@@ -958,13 +958,23 @@
             "row_content": "<p>No. We’ve swapped harsh bleaching agents for PAP to help remove surface stains gently and effectively. </p>",
             "page": ""
           }
+        },
+        "collapsible_row_tGJ8At": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this whitening powder safe for sensitive teeth?",
+            "icon": "none",
+            "row_content": "<p>Absolutely. Many people search for whitening for sensitive teeth, and BrightBoost powder is thoughtfully formulated to be exactly that. Our powder is also infused with aloe vera to ensure your whitening ritual is gentle and feel-good.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_qJgpbq",
         "collapsible_row_8eKAd6",
         "collapsible_row_UedG3C",
-        "collapsible_row_a9yPEf"
+        "collapsible_row_a9yPEf",
+        "collapsible_row_tGJ8At"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
