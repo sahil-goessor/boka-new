@@ -1003,6 +1003,15 @@
             "row_content": "<p>We use Perlite and Kaolin, which are gentle, mineral-derived ingredients. These natural polishers work to smooth the tooth surface, helping to maintain brightness and leave your teeth feeling incredibly clean.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_FNKwU7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Boka BrightBoost Whitening Powder vegan and cruelty-free?",
+            "icon": "none",
+            "row_content": "<p>Integrity is our priority. BrightBoost Whitening Powder is PETA cruelty-free certified, vegan, and dye-free. It’s also packed with Vitamins A, C, and E to support your oral wellness while keeping your breath fresh with lemongrass mint.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -1014,7 +1023,8 @@
         "collapsible_row_KQENhP",
         "collapsible_row_DJy4D8",
         "collapsible_row_VpVBX9",
-        "collapsible_row_PknFhE"
+        "collapsible_row_PknFhE",
+        "collapsible_row_FNKwU7"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
