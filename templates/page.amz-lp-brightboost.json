@@ -51,7 +51,7 @@
         "timer_end_date": "",
         "timer_text_color": "#333333",
         "timer_countdown_color": "#1a1a1a",
-        "show_shipping_banner": true,
+        "show_shipping_banner": false,
         "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
         "shipping_banner_bg": "#fae5db",
         "shipping_text_color": "#000000",
