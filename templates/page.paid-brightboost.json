@@ -687,6 +687,12 @@
             "show_dynamic_checkout": false
           }
         },
+        "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "dp9z6mvai6cz4"
+          }
+        },
         "description_9m494J": {
           "type": "description",
           "settings": {}
@@ -749,6 +755,7 @@
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
         "buy_buttons_j3VN3h",
+        "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB",
         "description_9m494J",
         "collapsible_tab_X4QUJA",
         "collapsible_tab_chH3cF",
