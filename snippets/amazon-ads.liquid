@@ -1,0 +1,47 @@
+{% comment %}
+  Amazon Ads Event Tracking Snippet
+  TTL: 14 days = 1,209,600 seconds
+  Dynamic email & phone pulled from logged-in customer session
+{% endcomment %}
+
+<script>
+  !function(w,d,s,t,a){
+    if(w.amzn)return;
+    w.amzn=a=function(){w.amzn.q.push([arguments,(new Date).getTime()])};
+    a.q=[];a.version="0.0";
+    s=d.createElement("script");
+    s.src="https://c.amazon-adsystem.com/aat/amzn.js";
+    s.id="amzn-pixel";
+    s.async=true;
+    t=d.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(s,t);
+  }(window,document);
+
+  amzn("setRegion", "NA");
+  amzn("addTag", "d8d1b689-b27f-4c27-9da6-026fa6d0b37d");
+
+  {% if customer %}
+    var userData = {
+      {% if customer.email != blank %}
+        email: {{ customer.email | downcase | strip | json }},
+      {% endif %}
+      {% if customer.phone != blank %}
+        phonenumber: {{ customer.phone | remove: '+' | remove: '-' | remove: ' ' | remove: '(' | remove: ')' | json }},
+      {% endif %}
+      gdpr: {
+        enabled: false
+      },
+      ttl: 1209600
+    };
+    amzn("setUserData", userData);
+  {% endif %}
+
+  amzn('trackEvent', 'PageView');
+</script>
+
+<noscript>
+  <img
+    src="https://s.amazon-adsystem.com/iu3?pid=d8d1b689-b27f-4c27-9da6-026fa6d0b27d&event=PageView"
+    width="1" height="1" border="0" alt="" style="display:none;"
+  >
+</noscript>
