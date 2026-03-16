@@ -920,6 +920,74 @@
         "padding_bottom_mobile": 36
       }
     },
+    "collapsible_content_yGxDGR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_qJgpbq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does Boka BrightBoost Whitening Powder work?",
+            "icon": "none",
+            "row_content": "<p>BrightBoost is an innovative, multi-benefit peroxide-free whitening formula. Formulated with stain-targeting PAP (Phthalimido-Peroxy-Caproic Acid), nano-hydroxyapatite, and probiotics, it is designed to gently brighten teeth, support enamel care, and promote oral wellness. BrightBoost powder removes surface stains without the harsh chemicals or sensitivity often found in traditional teeth whitening products.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8eKAd6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_UedG3C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_a9yPEf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_qJgpbq",
+        "collapsible_row_8eKAd6",
+        "collapsible_row_UedG3C",
+        "collapsible_row_a9yPEf"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "Everything you need to know about peroxide-free teeth whitening. Curious about how PAP whitening works or how to use a whitening powder with your n-Ha toothpaste? Get the facts here and discover how to brighten your smile through a mindful daily oral hygiene ritual.",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "yotpo_reviews_widget_kWhWWh": {
       "type": "yotpo-reviews-widget",
       "name": "Yotpo Reviews Widget",
@@ -961,6 +1029,7 @@
     "custom_image_icon_background_FqMNG9",
     "1765896441d3e5261a",
     "featured_collection_RackKr",
+    "collapsible_content_yGxDGR",
     "yotpo_reviews_widget_kWhWWh",
     "main"
   ]
