@@ -9,62 +9,6 @@
  */
 {
   "sections": {
-    "boka_listicle_hero_banner_znr8Bg": {
-      "type": "boka_listicle_hero_banner",
-      "name": "Listicle Hero Banner",
-      "settings": {
-        "background_color": "#f5f3ee",
-        "section_height": 520,
-        "left_padding": 60,
-        "mobile_padding": 20,
-        "show_reviews": true,
-        "star_count": 5,
-        "star_color": "#f5a623",
-        "review_text": "See Why Customers Love It",
-        "reviews_section_id": "shopify-section-template--17740738527275__yotpo_reviews_widget_kWhWWh",
-        "review_text_color": "#333333",
-        "review_font_size": 15,
-        "heading_text": "The Easy Way to Get a Brighter Smile (Without Harsh Whitening)",
-        "heading_color": "#1a1a1a",
-        "heading_font_size": 32,
-        "mobile_heading_font_size": 26,
-        "subheading_text": "Coffee. Tea. Wine. Everyday foods slowly stain your teeth.",
-        "subheading_color": "#555555",
-        "subheading_font_size": 18,
-        "body_font_size": 14,
-        "cta_text": "TRY NOW FOR $20.99",
-        "cta_url": "",
-        "amazon_url": "",
-        "button_action": "link",
-        "variant_id": "",
-        "product_quantity": 1,
-        "button_bg_color": "#1a1a1a",
-        "button_text_color": "#ffffff",
-        "button_font_size": 14,
-        "button_border_radius": 4,
-        "show_timer": false,
-        "timer_label_text": "",
-        "timer_end_date": "",
-        "timer_text_color": "#333333",
-        "timer_countdown_color": "#1a1a1a",
-        "show_shipping_banner": true,
-        "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
-        "shipping_banner_bg": "#fae5db",
-        "shipping_text_color": "#000000",
-        "show_promo_banner": true,
-        "promo_heading": "",
-        "promo_text": "",
-        "promo_bg_color": "#fff3cd",
-        "promo_text_color": "#856404",
-        "video_width_percent": 35,
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/562d35e8399145cbb662dcb9f24fd063.mp4",
-        "video_aria_label": "Customer toothpaste review video",
-        "video_autoplay": true,
-        "video_loop": true,
-        "video_muted": true,
-        "mobile_video_height": 380
-      }
-    },
     "review_hero_banner_YtFMBD": {
       "type": "review-hero-banner",
       "blocks": {
@@ -123,9 +67,9 @@
         "review_KpppAL",
         "review_wPgR3V"
       ],
-      "disabled": true,
       "custom_css": [
-        "p.boka-hero__timer-line {display: none !important;}"
+        "p.boka-hero__timer-line {display: none !important;}",
+        ".boka-review-text {text-decoration: underline;}"
       ],
       "name": "Review Hero Banner",
       "settings": {
@@ -138,7 +82,7 @@
         "card_text_color": "#ffffff",
         "show_stars": true,
         "star_color": "#f5a623",
-        "review_text": "See Why Customers Love It",
+        "review_text": "3815+ Reviews",
         "reviews_anchor": "shopify-section-template--17740738527275__yotpo_reviews_widget_kWhWWh",
         "heading": "“This product is incredible...No harmful ingredients. It’s perfect!”",
         "heading_size": 40,
@@ -245,23 +189,23 @@
           "type": "ai_gen_block_01dc9c9",
           "settings": {
             "item_1_enabled": true,
-            "item_1_icon": "shopify://shop_images/Stain_Targeting_PAP.png",
-            "item_1_text": "Stain-Targeting PAP",
+            "item_1_icon": "shopify://shop_images/vegan_icon_e5c978c3-ed95-458b-9207-e63bac08f020.png",
+            "item_1_text": "Stain Targeting PAP",
             "item_2_enabled": true,
-            "item_2_icon": "shopify://shop_images/Nano-Hydroxyapatite_1.png",
-            "item_2_text": "Enamel-supporting nano-hydroxyapatite",
+            "item_2_icon": "shopify://shop_images/cruelty_free_icon_2b6de596-153a-47a8-a699-992d76f737e1.png",
+            "item_2_text": "Nano-Hydroxyapatite",
             "item_3_enabled": true,
-            "item_3_icon": "shopify://shop_images/Gentle_Polishing.png",
-            "item_3_text": "Gentle-polishing perlite and kaolin",
+            "item_3_icon": "shopify://shop_images/no_fluoride_icon..png",
+            "item_3_text": "Cleaner Teeth",
             "item_4_enabled": false,
             "item_4_icon": "shopify://shop_images/no_sls_icon_c02a375f-12a5-4ee2-8a42-e918e37ad410.png",
-            "item_4_text": "",
-            "item_5_enabled": false,
+            "item_4_text": "Refreshing Peppermint",
+            "item_5_enabled": true,
             "item_5_icon": "shopify://shop_images/no_parabens_icon_a27a7b53-47b6-4769-874c-d54b9cf0cb4d.png",
-            "item_5_text": "",
+            "item_5_text": "No Parabens",
             "item_6_enabled": false,
             "item_6_icon": "shopify://shop_images/Dentist-Approved.webp",
-            "item_6_text": "Gentle Polishing Perlite & Kaolin",
+            "item_6_text": "Gentle Polishing",
             "background_color": "#e6f4d4",
             "container_height": 60,
             "padding_top": 12,
@@ -297,28 +241,26 @@
             "container_width": 1200,
             "image": "shopify://shop_images/Brightboost_Benefit_1.webp",
             "image_border_radius": 0,
-            "heading": "1. Peroxide-Free PAP",
+            "heading": "1. Gentle Whitening",
             "subheadline_1": "Powered by PAP",
-            "subheadline_1_icon": "shopify://shop_images/check_icon_1.png",
             "subheadline_1_popup_text": "",
             "subheadline_1_popup_link_text": "View Key Ingredients",
             "subheadline_1_popup_scroll_target": "",
             "subheadline_2": "Peroxide-Free",
-            "subheadline_2_icon": "shopify://shop_images/check_icon_1.png",
             "subheadline_2_popup_text": "",
             "subheadline_2_popup_link_text": "View Key Ingredients",
             "subheadline_2_popup_scroll_target": "",
             "subheadline_icon_size": 20,
-            "body": "<p>A modern whitening ingredient that helps reduce surface stains without hydrogen peroxide.</p>",
+            "body": "<p>Works to maintain a bright, healthy-looking smile without peroxide. Nano-hydroxyapatite gently polishes teeth and helps to remove stains.</p>",
             "text_alignment": "left",
             "subheadline_font_size": 15,
             "subheadline_padding_vertical": 8,
             "subheadline_padding_horizontal": 16,
             "subheadline_gap": 8,
-            "subheadline_1_bg_color": "#fafaf5",
-            "subheadline_1_text_color": "#000000",
-            "subheadline_2_bg_color": "#fafaf6",
-            "subheadline_2_text_color": "#000000",
+            "subheadline_1_bg_color": "#57623c",
+            "subheadline_1_text_color": "#e6f4d4",
+            "subheadline_2_bg_color": "#e6f4d4",
+            "subheadline_2_text_color": "#57623c",
             "button_text": "SHOP NOW",
             "button_link": "",
             "review_1_highlight": "My teeth are 3 shades whiter",
@@ -403,28 +345,26 @@
             "container_width": 1200,
             "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_2_e1cec8ff-07e1-4636-acea-7791354ce6f0.webp",
             "image_border_radius": 0,
-            "heading": "2. Nano-Hydroxyapatite",
+            "heading": "2. Fluoride-Free, Nutrient-Rich Freshness",
             "subheadline_1": "Clean Ingredients",
-            "subheadline_1_icon": "shopify://shop_images/check_icon_1.png",
             "subheadline_1_popup_text": "",
             "subheadline_1_popup_link_text": "View Key Ingredients",
             "subheadline_1_popup_scroll_target": "",
             "subheadline_2": "Freshens Breath",
-            "subheadline_2_icon": "shopify://shop_images/check_icon_1.png",
             "subheadline_2_popup_text": "",
             "subheadline_2_popup_link_text": "View Key Ingredients",
             "subheadline_2_popup_scroll_target": "",
             "subheadline_icon_size": 20,
-            "body": "<p>A biomimetic mineral that supports enamel and helps maintain overall tooth health.</p>",
+            "body": "<p>Packed with vitamins A, C, and E, plus lemongrass mint and plant oils, it keeps breath fresh and gums healthy—a gentle, fluoride-free way to care for your smile daily.</p>",
             "text_alignment": "left",
             "subheadline_font_size": 14,
             "subheadline_padding_vertical": 8,
             "subheadline_padding_horizontal": 16,
             "subheadline_gap": 8,
-            "subheadline_1_bg_color": "#fafaf5",
-            "subheadline_1_text_color": "#000000",
-            "subheadline_2_bg_color": "#fafaf5",
-            "subheadline_2_text_color": "#090909",
+            "subheadline_1_bg_color": "#57623c",
+            "subheadline_1_text_color": "#e6f4d4",
+            "subheadline_2_bg_color": "#e6f4d4",
+            "subheadline_2_text_color": "#57623c",
             "button_text": "SHOP NOW",
             "button_link": "",
             "review_1_highlight": "A boost to my overall dental health",
@@ -461,7 +401,7 @@
             "reviews_button_action": "add_and_cart",
             "reviews_variant_id": "41190050627627",
             "reviews_product_quantity": 1,
-            "reviews_button_text": "",
+            "reviews_button_text": "SHOP NOW",
             "reviews_button_link": "",
             "reviews_cta_font_size": 16,
             "reviews_cta_padding_vertical": 12,
@@ -509,28 +449,26 @@
             "container_width": 1200,
             "image": "shopify://shop_images/Brightboost_Benefit_3.webp",
             "image_border_radius": 0,
-            "heading": "3. Perlite & Kaolin",
+            "heading": "3. Gentle, Soothing & On-the-Go",
             "subheadline_1": "Soothes Sensitive Teeth",
-            "subheadline_1_icon": "shopify://shop_images/check_icon_1.png",
             "subheadline_1_popup_text": "",
             "subheadline_1_popup_link_text": "View Key Ingredients",
             "subheadline_1_popup_scroll_target": "",
             "subheadline_2": "Travel Friendly",
-            "subheadline_2_icon": "shopify://shop_images/check_icon_1.png",
             "subheadline_2_popup_text": "",
             "subheadline_2_popup_link_text": "View Key Ingredients",
             "subheadline_2_popup_scroll_target": "",
             "subheadline_icon_size": 20,
-            "body": "<p>Ingredients that gently polish the surface of teeth to maintain brightness and remove buildup.</p>",
+            "body": "<p>Aloe vera and natural polishers remove tartar and stains without irritating sensitive teeth. Water-free and portable, it’s a convenient toothpaste alternative anytime, anywhere.</p>",
             "text_alignment": "left",
             "subheadline_font_size": 14,
             "subheadline_padding_vertical": 8,
             "subheadline_padding_horizontal": 16,
             "subheadline_gap": 8,
-            "subheadline_1_bg_color": "#fafaf5",
-            "subheadline_1_text_color": "#000000",
-            "subheadline_2_bg_color": "#fafaf5",
-            "subheadline_2_text_color": "#000000",
+            "subheadline_1_bg_color": "#57623c",
+            "subheadline_1_text_color": "#e6f4d4",
+            "subheadline_2_bg_color": "#e6f4d4",
+            "subheadline_2_text_color": "#57623c",
             "button_text": "SHOP NOW",
             "button_link": "",
             "review_1_highlight": "Very sensitive teeth .. this product helped me!",
@@ -687,12 +625,6 @@
             "show_dynamic_checkout": false
           }
         },
-        "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "dp9z6mvai6cz4"
-          }
-        },
         "description_9m494J": {
           "type": "description",
           "settings": {}
@@ -755,7 +687,6 @@
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
         "buy_buttons_j3VN3h",
-        "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB",
         "description_9m494J",
         "collapsible_tab_X4QUJA",
         "collapsible_tab_chH3cF",
@@ -984,134 +915,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "collapsible_content_yGxDGR": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_qJgpbq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does Boka BrightBoost Whitening Powder work?",
-            "icon": "none",
-            "row_content": "<p>BrightBoost is an innovative, multi-benefit peroxide-free whitening formula. Formulated with stain-targeting PAP (Phthalimido-Peroxy-Caproic Acid), nano-hydroxyapatite, and probiotics, it is designed to gently brighten teeth, support enamel care, and promote oral wellness. BrightBoost powder removes surface stains without the harsh chemicals or sensitivity often found in traditional teeth whitening products.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_8eKAd6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do you use whitening powder with n-Ha toothpaste?",
-            "icon": "none",
-            "row_content": "<p>It’s simple! Apply your favorite nano-hydroxyapatite toothpaste to your brush, then dip the bristles into the BrightBoost powder. Brush thoroughly for two minutes and spit. For the best results, skip the rinse to allow the biomimetic minerals to stay in contact with your teeth longer.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_UedG3C": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How to use whitening powder without toothpaste?",
-            "icon": "none",
-            "row_content": "<p>To use BrightBoost powder without toothpaste, lightly wet the toothbrush and dip the bristles into the powder to coat, then brush as usual. It’s a water-free, portable option that’s perfect for travel or a quick on-the-go refresh.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_a9yPEf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does BrightBoost use hydrogen peroxide?",
-            "icon": "none",
-            "row_content": "<p>No. We’ve swapped harsh bleaching agents for PAP to help remove surface stains gently and effectively. </p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_tGJ8At": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is this whitening powder safe for sensitive teeth?",
-            "icon": "none",
-            "row_content": "<p>Absolutely. Many people search for whitening for sensitive teeth, and BrightBoost powder is thoughtfully formulated to be exactly that. Our powder is also infused with aloe vera to ensure your whitening ritual is gentle and feel-good.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_KQENhP": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is PAP whitening and how does it work?",
-            "icon": "none",
-            "row_content": "<p>Stain-targeting PAP is a science-backed ingredient that focuses on breaking down discolorations from coffee, tea, or wine while remaining gentle on your enamel. It’s a nature-inspired way to achieve a bright, healthy-looking smile through regular brushing.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_DJy4D8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I use BrightBoost Whitening Powder every day?",
-            "icon": "none",
-            "row_content": "<p>Yes! BrightBoost is safe for daily use and is a seamless addition to your morning or nightly oral hygiene routine to boost your pearly whites.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_VpVBX9": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does BrightBoost Whitening Powder contain nano-hydroxyapatite (n-Ha)?",
-            "icon": "none",
-            "row_content": "<p>It does. We included n-Ha because it mimics tooth enamel. While the PAP polishes teeth, the nano-hydroxyapatite supports enamel care, providing a holistic approach to your smile’s health. </p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_PknFhE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What are the best ingredients for natural teeth polishing?",
-            "icon": "none",
-            "row_content": "<p>We use Perlite and Kaolin, which are gentle, mineral-derived ingredients. These natural polishers work to smooth the tooth surface, helping to maintain brightness and leave your teeth feeling incredibly clean.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_FNKwU7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is Boka BrightBoost Whitening Powder vegan and cruelty-free?",
-            "icon": "none",
-            "row_content": "<p>Integrity is our priority. BrightBoost Whitening Powder is PETA cruelty-free certified, vegan, and dye-free. It’s also packed with Vitamins A, C, and E to support your oral wellness while keeping your breath fresh with lemongrass mint.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_qJgpbq",
-        "collapsible_row_8eKAd6",
-        "collapsible_row_UedG3C",
-        "collapsible_row_a9yPEf",
-        "collapsible_row_tGJ8At",
-        "collapsible_row_KQENhP",
-        "collapsible_row_DJy4D8",
-        "collapsible_row_VpVBX9",
-        "collapsible_row_PknFhE",
-        "collapsible_row_FNKwU7"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h1",
-        "heading_tag": "default",
-        "heading_alignment": "center",
-        "description": "Everything you need to know about peroxide-free teeth whitening. Curious about how PAP whitening works or how to use a whitening powder with your n-Ha toothpaste? Get the facts here and discover how to brighten your smile through a mindful daily oral hygiene ritual.",
-        "layout": "none",
-        "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "yotpo_reviews_widget_kWhWWh": {
       "type": "yotpo-reviews-widget",
       "name": "Yotpo Reviews Widget",
@@ -1145,7 +948,6 @@
     }
   },
   "order": [
-    "boka_listicle_hero_banner_znr8Bg",
     "review_hero_banner_YtFMBD",
     "17657702727ebbe56b",
     "17657747600d7cde40",
@@ -1154,7 +956,6 @@
     "custom_image_icon_background_FqMNG9",
     "1765896441d3e5261a",
     "featured_collection_RackKr",
-    "collapsible_content_yGxDGR",
     "yotpo_reviews_widget_kWhWWh",
     "main"
   ]
