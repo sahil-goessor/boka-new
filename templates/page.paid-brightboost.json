@@ -953,9 +953,9 @@
         "collapsible_row_a9yPEf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Does BrightBoost use hydrogen peroxide?",
+            "icon": "none",
+            "row_content": "<p>No. We’ve swapped harsh bleaching agents for PAP to help remove surface stains gently and effectively. </p>",
             "page": ""
           }
         }
