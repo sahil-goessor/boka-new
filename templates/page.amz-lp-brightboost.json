@@ -357,7 +357,7 @@
             "dot_size": 10,
             "dot_color": "#cccccc",
             "dot_active_color": "#000000",
-            "reviews_button_action": "add_and_cart",
+            "reviews_button_action": "link",
             "reviews_variant_id": "",
             "reviews_product_quantity": 0,
             "reviews_button_text": "SHOP NOW",
