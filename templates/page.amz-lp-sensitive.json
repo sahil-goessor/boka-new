@@ -1156,60 +1156,76 @@
         "collapsible_row_giWPe8": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What makes Boka Ela Mint Toothpaste different from regular toothpaste?",
-            "row_content": "<p>Boka Ela Mint is a fluoride-free toothpaste powered by nano-hydroxyapatite (n-Ha), a breakthrough material that mimics tooth enamel. n-Ha is inspired by nature, backed by science, and has been the subject of significant research for decades.</p>",
+            "heading": "How does Boka toothpaste for sensitive teeth work?",
+            "row_content": "<p>Our toothpaste for sensitive teeth uses 5% potassium nitrate, a science-backed ingredient that reduces and prevents sensitivity by soothing the nerves. With twice-daily brushing for two minutes, it builds protection against common triggers like cold, heat, acids, and sweets.</p>",
             "page": ""
           }
         },
         "collapsible_row_3brPNJ": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Is this toothpaste safe for sensitive teeth?",
-            "row_content": "<p>Yes, it’s appropriate for sensitive teeth. Our formula is thoughtfully designed to freshen breath and deliver the benefits of n-Ha in a gentle, daily-use paste.</p>",
+            "heading": " What makes Boka Sensitive Toothpaste different from other sensitivity toothpastes?",
+            "row_content": "<p>Unlike many traditional options, Boka offers a fluoride-free sensitivity toothpaste powered by a combination of potassium nitrate and nano-hydroxyapatite (n-Ha). Originally developed for astronauts in the 1970s, n-Ha is a revolutionary material that mimics tooth enamel. </p><p>While potassium nitrate makes our paste appropriate for sensitive teeth, the addition of n-Ha means you’re brushing with a science-backed ingredient that naturally makes up 97% of your enamel. It’s a biocompatible, thoughtfully formulated solution that is free from SLS, parabens, and artificial colors.</p>",
             "page": ""
           }
         },
         "collapsible_row_xnRnWY": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Does Boka Ela Mint contain fluoride?",
-            "row_content": "<p>No, it’s fluoride-free. This makes it an excellent choice for those seeking gentle care or those exploring fluoride-free toothpaste options.</p>",
+            "heading": "Does this toothpaste provide 24/7 sensitivity protection?",
+            "row_content": "<p>Yes. With twice-daily brushing and when used as directed, Boka Sensitive Toothpaste helps provide 24/7 protection against tooth sensitivity by building protection against cold drinks, ice cream, hot soup, acidic beverages, and other triggers.</p>",
             "page": ""
           }
         },
         "collapsible_row_9VYexg": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Can kids use Boka Ela Mint Toothpaste?",
-            "row_content": "<p>Yes. Since Boka Ela Mint toothpaste is biocompatible and non-toxic when used as directed, it’s a great choice for children. It’s free of harsh ingredients like sulfates, parabens, and artificial colors.</p>",
+            "heading": "What does \"Mint Cream\" taste like?",
+            "row_content": "<p>Our Mint Cream flavor is a mild and refreshing blend of Mint, Coconut, and Cream. It’s a silky-smooth flavor designed to make your daily brush more pleasant, providing a delicious taste without the use of artificial colors, sodium saccharin, or sucralose.</p>",
             "page": ""
           }
         },
         "collapsible_row_zy7XFj": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Is it cruelty-free and vegan?",
-            "row_content": "<p>Yes! Boka Ela Mint toothpaste is PETA cruelty-free certified and vegan.</p>",
+            "heading": " Is Boka sensitive toothpaste safe for children?",
+            "row_content": "<p>Boka Sensitive toothpaste is recommended for adults and children 12 years of age and older. For children under 12 years of age, we recommend consulting a dentist or doctor before use.</p>",
             "page": ""
           }
         },
         "collapsible_row_APpybE": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How often should I use Boka Ela Mint Toothpaste?",
-            "row_content": "<p>For best results, we recommend brushing for two minutes, twice daily. Safe for daily use, this routine supports enamel care and overall oral care.</p>",
+            "heading": "How do I use Boka Sensitivity Toothpaste for best results?",
+            "row_content": "<p>Apply at least a 1-inch strip of toothpaste onto a soft-bristle toothbrush. Brush thoroughly for two minutes, twice daily, making sure to focus on all sensitive areas of the teeth. </p>",
             "page": ""
           }
         },
         "collapsible_row_PbXL77": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What does Boka Ela Mint Toothpaste taste like?",
-            "row_content": "<p>Ela Mint features a refreshing, mild flavor that combines mint, green tea, and a subtle hint of cardamom. It is not intense or spicy, making it pleasant to use.</p>",
+            "heading": "Does this toothpaste help with bad breath?",
+            "row_content": "<p>Yes. Along with providing sensitivity relief, our formula contains Xylitol and botanical extracts that refresh your mouth with a mild, clean flavor. It effectively freshens breath while you brush, leaving your mouth feeling invigorated.</p>",
             "page": ""
           }
         },
         "collapsible_row_UUDFxQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use Boka Sensitive Toothpaste every day?",
+            "row_content": "<p>Yes. Boka Sensitive Toothpaste is safe for daily use and non-toxic when used as directed. This way, you maintain sensitivity relief and keep your mouth feeling fresh.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DajVkF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Boka Sensitive Toothpaste vegan and cruelty-free?",
+            "row_content": "<p>Integrity is our priority. Our sensitive toothpaste is PETA cruelty-free certified and 100% vegan.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7dTA9p": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Do you have more questions about Boka?",
@@ -1236,13 +1252,15 @@
         "collapsible_row_APpybE",
         "collapsible_row_PbXL77",
         "collapsible_row_UUDFxQ",
+        "collapsible_row_DajVkF",
+        "collapsible_row_7dTA9p",
         "collapsible_row_dXKLmM"
       ],
       "disabled": true,
       "name": "Custom Collapsible Cont",
       "settings": {
         "caption": "",
-        "heading": "Frequently Asked Questions",
+        "heading": "Frequently Asked Questions about Boka n-Ha Toothpaste for Sensitive Teeth",
         "heading_size": "h1",
         "heading_tag": "default",
         "heading_alignment": "center",
