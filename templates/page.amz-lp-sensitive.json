@@ -1062,6 +1062,13 @@
             "text_style": "body"
           }
         },
+        "text_KQdfaj": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>*with twice daily brushing and when used as directed - see packaging for details.</em></p>",
+            "text_style": "body"
+          }
+        },
         "button_bpWGPA": {
           "type": "button",
           "settings": {
@@ -1088,6 +1095,7 @@
         "icon_text_ryTd4U",
         "icon_text_nKAcBR",
         "icon_text_w8JqDJ",
+        "text_KQdfaj",
         "button_bpWGPA"
       ],
       "custom_css": [
@@ -1135,6 +1143,7 @@
       "block_order": [
         "text_rmTWDt"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
