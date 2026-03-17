@@ -38,7 +38,7 @@
         "cta_text": "TRY NOW FOR $20.99",
         "cta_url": "",
         "amazon_url": "",
-        "button_action": "link",
+        "button_action": "add_and_cart",
         "variant_id": "41190050627627",
         "product_quantity": 1,
         "button_bg_color": "#1a1a1a",
