@@ -12,7 +12,8 @@
     "boka_listicle_hero_banner_X9DaRL": {
       "type": "boka_listicle_hero_banner",
       "custom_css": [
-        ".boka-timer-row {display: none;}"
+        ".boka-timer-row {display: none;}",
+        ".boka-review-text {text-decoration: underline;}"
       ],
       "name": "Listicle Hero Banner",
       "settings": {
