@@ -799,7 +799,7 @@
           "type": "heading",
           "settings": {
             "heading": "Real Routines in Action",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_tag": "default"
           }
         }
@@ -811,7 +811,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "fadein_enabled": true,
+        "fadein_enabled": false,
         "color_scheme": "custom",
         "custom_background_color": "#ffffff",
         "custom_text_color": "#000000",
@@ -1010,7 +1010,7 @@
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 50,
         "padding_bottom": 36,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
@@ -1129,7 +1129,7 @@
         "heading_size": "h1",
         "heading_tag": "default",
         "heading_alignment": "center",
-        "description": "Everything you need to know about peroxide-free teeth whitening. Curious about how PAP whitening works or how to use a whitening powder with your n-Ha toothpaste? Get the facts here and discover how to brighten your smile through a mindful daily oral hygiene ritual.",
+        "description": "",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
