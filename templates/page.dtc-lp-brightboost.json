@@ -854,7 +854,7 @@
         "heading_MzYbMk": {
           "type": "heading",
           "settings": {
-            "heading": "What Makes Boka Work",
+            "heading": "What Makes BrightBoost Work",
             "heading_size": "h1",
             "heading_font_size_desktop": 40,
             "heading_font_size_mobile": 30,
@@ -1127,7 +1127,7 @@
         "caption": "",
         "heading": "Frequently Asked Questions",
         "heading_size": "h1",
-        "heading_tag": "default",
+        "heading_tag": "h1",
         "heading_alignment": "center",
         "description": "",
         "layout": "none",
