@@ -18,7 +18,7 @@
       "name": "Listicle Hero Banner",
       "settings": {
         "background_color": "#f5f3ee",
-        "section_height": 800,
+        "section_height": 520,
         "left_padding": 60,
         "mobile_padding": 20,
         "show_reviews": true,
