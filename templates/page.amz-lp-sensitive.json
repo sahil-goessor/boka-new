@@ -172,22 +172,22 @@
           "type": "ai_gen_block_01dc9c9",
           "settings": {
             "item_1_enabled": true,
-            "item_1_icon": "shopify://shop_images/Check_1.webp",
+            "item_1_icon": "shopify://shop_images/Science-Backed_1.png",
             "item_1_text": "Science-Backed",
             "item_2_enabled": true,
-            "item_2_icon": "shopify://shop_images/Check_1.webp",
+            "item_2_icon": "shopify://shop_images/Fluoride-Free.png",
             "item_2_text": "Fluoride-Free",
             "item_3_enabled": true,
-            "item_3_icon": "shopify://shop_images/Check_1.webp",
+            "item_3_icon": "shopify://shop_images/For_Sensitive_Teeth.png",
             "item_3_text": "For Sensitive Teeth",
             "item_4_enabled": true,
-            "item_4_icon": "shopify://shop_images/Check_1.webp",
+            "item_4_icon": "shopify://shop_images/Nano-Hydroxyapatite_c11186da-1160-424c-9f50-0402c5fcfe49.png",
             "item_4_text": "Nano-Hydroxyapatite",
             "item_5_enabled": true,
-            "item_5_icon": "shopify://shop_images/Check_1.webp",
+            "item_5_icon": "shopify://shop_images/Non-Toxic__Oral_Care.png",
             "item_5_text": "Non-Toxic* Oral Care",
             "item_6_enabled": true,
-            "item_6_icon": "shopify://shop_images/Check_1.webp",
+            "item_6_icon": "shopify://shop_images/Dentist-Formulated.png",
             "item_6_text": "Dentist-Formulated",
             "background_color": "#ffffff",
             "container_height": 60,
@@ -199,7 +199,7 @@
             "icon_size": 36,
             "icon_text_gap": 8,
             "item_spacing": 80,
-            "animation_speed": 40
+            "animation_speed": 60
           },
           "blocks": {}
         }
