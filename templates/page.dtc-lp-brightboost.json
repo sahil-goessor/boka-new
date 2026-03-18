@@ -13,6 +13,7 @@
       "type": "boka_listicle_hero_banner",
       "custom_css": [
         ".boka-review-text {text-decoration: underline;}",
+        "@media only screen and (min-width: 1200px) {.boka-right video {height: 158%; }}",
         "@media screen and (max-width: 768px) {.boka-review-text {font-size: 12px; } .boka-stars {gap: 3px; }}"
       ],
       "name": "Listicle Hero Banner",
