@@ -636,7 +636,7 @@
       }
     {% endstyle %}
 
-    {% comment %} {% if page.handle == 'ntb-ela-mint-toothpaste' %}
+    {% if page.handle == 'ab-test' %}
       <style>
         footer.footer, nav.header__inline-menu, header-menu.new-customer-account {
           display: none;
@@ -649,7 +649,7 @@
           cursor: default;
         }
       </style>
-    {% endif %} {% endcomment %}
+    {% endif %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
