@@ -9,20 +9,6 @@
  */
 {
   "sections": {
-    "custom_liquid_Grdazg": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"klaviyo-form-UCEjPV\"><meta charset=\"utf-8\"> <meta charset=\"utf-8\">",
-        "color_scheme": "background-1",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "main": {
       "type": "main-page",
       "custom_css": [
@@ -37,7 +23,6 @@
     }
   },
   "order": [
-    "custom_liquid_Grdazg",
     "main"
   ]
 }
