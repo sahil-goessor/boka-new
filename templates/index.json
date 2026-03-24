@@ -274,11 +274,11 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Whitening_Duo_featured.webp",
-            "image_link": "shopify://products/brightboost-whitening-kit",
+            "image_link": "https://www.boka.com/products/brightboost-whitening-kit?variant=41216166068267",
             "title": "<em><strong>Let Your Smile Bloom Brighter</strong></em>",
             "text": "<p>This spring, explore fluoride-free, peroxide-free, gentle whitening.</p>",
             "link_label": "Shop Whitening Kit",
-            "link": "shopify://products/brightboost-whitening-kit"
+            "link": "https://www.boka.com/products/brightboost-whitening-kit?variant=41216166068267"
           }
         },
         "column_yyRYPY": {
