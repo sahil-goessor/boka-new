@@ -270,6 +270,17 @@
     "multicolumn_BWCRzU": {
       "type": "multicolumn",
       "blocks": {
+        "column_3cJ9YR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Whitening_Duo_featured.webp",
+            "image_link": "shopify://products/brightboost-whitening-kit",
+            "title": "<em><strong>Let Your Smile Bloom Brighter</strong></em>",
+            "text": "<p>This spring, explore fluoride-free, peroxide-free, gentle whitening.</p>",
+            "link_label": "Shop Whitening Kit",
+            "link": "shopify://products/brightboost-whitening-kit"
+          }
+        },
         "column_yyRYPY": {
           "type": "column",
           "settings": {
@@ -280,22 +291,11 @@
             "link_label": "Try Now",
             "link": "shopify://products/bestsellers-sample-pack"
           }
-        },
-        "column_3cJ9YR": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/RM_VDay_HP_Featured_Banner_1.webp",
-            "image_link": "shopify://products/restore-mouthwash",
-            "title": "<em><strong>Fresh Breath for Every Moment</strong></em>",
-            "text": "<p>Chew, swish, spit, smile! Enjoy minty-fresh breath that lasts.</p>",
-            "link_label": "Shop Mouthwash Tablets",
-            "link": "shopify://products/restore-mouthwash"
-          }
         }
       },
       "block_order": [
-        "column_yyRYPY",
-        "column_3cJ9YR"
+        "column_3cJ9YR",
+        "column_yyRYPY"
       ],
       "custom_css": [
         ".column-heading {padding: unset;}"
