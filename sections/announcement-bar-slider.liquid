@@ -162,6 +162,13 @@
     .announcement-bar-slider-{{ section.id }} .slider-button .icon path {
         fill: {{ section.settings.text_color }};
     }
+
+    /* Disable announcement bar links on one specific page only */
+    body.template-pages page-ab-test .announcement-bar__link {
+        pointer-events: none !important;
+        cursor: default !important;
+        text-decoration: none !important;
+    }
 {% endstyle %}
 
 
