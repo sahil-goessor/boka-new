@@ -41,6 +41,23 @@
   {% endstyle %}
 {% endif %}
 
+{% if page.handle == 'pages/ab-test' %}
+<style>
+  .featured-product .complementary-products .card__media a,
+  .featured-product .complementary-products .card__media a * {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  .featured-product .complementary-products .card__heading a {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+</style>
+{% endif %}
+
 <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
