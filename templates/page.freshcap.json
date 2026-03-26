@@ -122,6 +122,58 @@
         "padding_bottom_mobile": 50
       }
     },
+    "image_with_text_JUJy7d": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_phGPKe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Okay, Now This Part Is Real…",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "text_a7aP8M": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re giving away the ultimate elevated morning bundle.</p><h3><strong>Grand Prize (1 Winner)</strong></h3><h3>• $100 Boka Gift Card<br/>\t• $150 FreshCap Gift Card</h3><h3><strong>25 Additional Winners</strong></h3><p>• 1 Boka Sensitive Toothpaste, 1 Boka Toiletry Bag<br/>\t• 1 FreshCap Mushroom Coffee Pack</p><p>And because we love a win-win… Everyone who enters will receive a special discount code to use on their first subscription order, just for joining!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_phGPKe",
+        "text_a7aP8M"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/coco-ginger-4.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "rgba(0,0,0,0)",
+        "custom_background_color": "#DAE9CF",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 130,
+        "padding_bottom": 100,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
     "1774280282d99ccc8d": {
       "type": "_blocks",
       "blocks": {
@@ -157,6 +209,7 @@
     "video_slideshow_QJmA3c",
     "main",
     "image_with_text_hyi3yz",
+    "image_with_text_JUJy7d",
     "1774280282d99ccc8d"
   ]
 }
