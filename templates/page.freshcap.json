@@ -158,11 +158,21 @@
             "text": "<h3>We’re giving away the ultimate elevated morning bundle.<br/><br/><strong>Grand Prize (1 Winner)</strong><br/>• $100 Boka Gift Card<br/>• $150 FreshCap Gift Card<br/><br/><strong>25 Additional Winners</strong><br/>• 1 Boka Sensitive Toothpaste, 1 Boka Toiletry Bag<br/>• 1 FreshCap Mushroom Coffee Pack<br/><br/>And because we love a win-win… Everyone who enters will receive a special discount code to use on their first subscription order, just for joining!</h3>",
             "text_style": "body"
           }
+        },
+        "button_GfbPVr": {
+          "type": "button",
+          "settings": {
+            "button_label": "ENTER THE GIVEAWAY",
+            "button_link": "https://www.boka.com/",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
         }
       },
       "block_order": [
         "heading_phGPKe",
-        "text_a7aP8M"
+        "text_a7aP8M",
+        "button_GfbPVr"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
