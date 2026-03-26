@@ -193,8 +193,8 @@
           "settings": {
             "image": "shopify://shop_images/coco-ginger-4.webp",
             "image_link": "",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "",
+            "text": "<p>FreshCap’s Mushroom Coffee blends 6 functional mushrooms with smooth Arabica coffee for focused, balanced energy without the jitters. Each serving has 12,000 mg of raw mushrooms and 29% beta glucans for verifiable potency. </p>",
             "link_label": "",
             "link": ""
           }
