@@ -180,6 +180,7 @@
         "column_dqeket": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/coco-ginger-4.webp",
             "image_link": "",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -190,6 +191,7 @@
         "column_PwRQ9D": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/coco-ginger-4.webp",
             "image_link": "",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
