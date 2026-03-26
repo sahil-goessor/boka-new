@@ -240,24 +240,16 @@
     "rich_text_d4ihGi": {
       "type": "rich-text",
       "blocks": {
-        "heading_mnfi6t": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
-        },
         "text_qM9eKT": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Together? An indulgent morning ritual that sets the tone for your day.</p>"
           }
         },
         "button_Azkpmf": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "ENTER THE GIVEAWAY",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -267,7 +259,6 @@
         }
       },
       "block_order": [
-        "heading_mnfi6t",
         "text_qM9eKT",
         "button_Azkpmf"
       ],
@@ -278,7 +269,7 @@
         "fadein_enabled": false,
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52,
