@@ -155,7 +155,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
         "color_scheme": "background-1",
-        "section_background_color": "#dce6cf",
+        "section_background_color": "#fafaf5",
         "custom_background_color": "#dae9cf",
         "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
