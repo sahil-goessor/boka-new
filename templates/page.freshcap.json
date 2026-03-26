@@ -206,9 +206,9 @@
       ],
       "custom_css": [
         ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
-        ".multicolumn-card {background-color: #f1ebdd !important;}",
+        ".multicolumn-card {background-color: #fafaf5 !important;}",
         ".multicolumn-card__info {padding: 3rem;}",
-        ".multicolumn-card {background-color: #ffffff !important;}"
+        ".multicolumn-card {background-color: #fafaf5 !important;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
