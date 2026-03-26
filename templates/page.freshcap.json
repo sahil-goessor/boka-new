@@ -182,8 +182,8 @@
           "settings": {
             "image": "shopify://shop_images/coco-ginger-4.webp",
             "image_link": "",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "",
+            "text": "<p>Boka's products are powered by nature + n-Ha (nano-hydroxyapatite), a modern evolution in dentistry (hydroxyapatite makes up the primary foundation of teeth and bones).  All Boka toothpastes are fluoride-free, paraben-free, SLS-free, free of artificial colors, and powered by n-Ha.</p>",
             "link_label": "",
             "link": ""
           }
