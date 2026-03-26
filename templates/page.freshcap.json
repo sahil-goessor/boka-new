@@ -104,8 +104,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "section_background_color": "rgba(0,0,0,0)",
-        "custom_background_color": "#DAE9CF",
-        "custom_text_color": "#FFFFFF",
+        "custom_background_color": "#dae9cf",
+        "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
         "heading_font_size_desktop": 48,
         "text_font_size_mobile": 16,
@@ -156,8 +156,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "section_background_color": "rgba(0,0,0,0)",
-        "custom_background_color": "#DAE9CF",
-        "custom_text_color": "#FFFFFF",
+        "custom_background_color": "#dae9cf",
+        "custom_text_color": "#ffffff",
         "heading_font_size_mobile": 28,
         "heading_font_size_desktop": 48,
         "text_font_size_mobile": 16,
@@ -172,6 +172,61 @@
         "padding_bottom_tablet": 40,
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 50
+      }
+    },
+    "multicolumn_RiGMmT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_dqeket": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PwRQ9D": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_dqeket",
+        "column_PwRQ9D"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Boka and FreshCap: An Elevated Morning Ritual",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "full_width_enabled": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "fadein_enabled": false,
+        "column_heading_background_color": "",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "columns_tablet": "1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     },
     "1774280282d99ccc8d": {
@@ -210,6 +265,7 @@
     "main",
     "image_with_text_hyi3yz",
     "image_with_text_JUJy7d",
+    "multicolumn_RiGMmT",
     "1774280282d99ccc8d"
   ]
 }
