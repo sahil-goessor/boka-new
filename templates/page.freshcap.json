@@ -82,6 +82,14 @@
     "image_with_text_hyi3yz": {
       "type": "image-with-text",
       "blocks": {
+        "heading_g7hhj8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need headline here",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
         "text_kDECMN": {
           "type": "text",
           "settings": {
@@ -91,6 +99,7 @@
         }
       },
       "block_order": [
+        "heading_g7hhj8",
         "text_kDECMN"
       ],
       "name": "t:sections.image-with-text.presets.name",
