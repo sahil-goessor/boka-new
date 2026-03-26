@@ -96,11 +96,21 @@
             "text": "<p>We may not be launching mushroom coffee toothpaste (yet (wink emoji), but Boka n-Ha Toothpaste + FreshCap Mushroom Coffee is the elevated morning pairing your routine deserves.</p>",
             "text_style": "body"
           }
+        },
+        "button_AxRFRi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "https://www.boka.com/",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
         }
       },
       "block_order": [
         "heading_g7hhj8",
-        "text_kDECMN"
+        "text_kDECMN",
+        "button_AxRFRi"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
