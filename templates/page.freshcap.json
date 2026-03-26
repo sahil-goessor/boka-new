@@ -204,6 +204,12 @@
         "column_dqeket",
         "column_PwRQ9D"
       ],
+      "custom_css": [
+        ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
+        ".multicolumn-card {background-color: #f1ebdd !important;}",
+        ".multicolumn-card__info {padding: 3rem;}",
+        ".multicolumn-card {background-color: #ffffff !important;}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Boka and FreshCap: An Elevated Morning Ritual",
