@@ -291,9 +291,9 @@
         "custom_text_color": "#ffffff",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 52,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom": 70,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 50
       }
     },
     "1774280282d99ccc8d": {
