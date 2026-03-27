@@ -53,6 +53,9 @@
       "block_order": [
         "image_fACLaR"
       ],
+      "custom_css": [
+        ".banner__heading.inline-richtext {line-height: 1.4;}"
+      ],
       "name": "Slideshow with Video",
       "settings": {
         "layout": "full_bleed",
