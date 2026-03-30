@@ -281,14 +281,14 @@
           {% unless link.title == 'California Privacy Notice' %}
             <small><a href="{{ link.url }}">{{ link.title }}</a></small>
           {% else %}
-            <small><a class="truevault-polaris-privacy-notice" href="{{ link.url }}" noreferrer noopener hidden>{{ link.title }}</a></small>
+            {% comment %} <small><a class="truevault-polaris-privacy-notice" href="{{ link.url }}" noreferrer noopener hidden>{{ link.title }}</a></small> {% endcomment %}
           {% endunless %}
         </li>
       {%- endfor %}
     </ul>
-    <div style="margin-top: 10px;">
+    {% comment %} <div style="margin-top: 10px;">
       <a class="truevault-polaris-optout" style="text-decoration: none; color: #212529 !important;" href="https://privacy.boka.com/opt-out" noreferrer noopener hidden><img src="https://polaris.truevaultcdn.com/static/assets/icons/optout-icon-black.svg" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" style="vertical-align:middle" height="14px" loading="lazy" />Your Privacy Choices</a>
-    </div>
+    </div> {% endcomment %}
   </div>
   {%- endif -%}
 
