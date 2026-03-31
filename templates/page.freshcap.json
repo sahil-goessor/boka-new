@@ -96,6 +96,9 @@
       "block_order": [
         "text_zMRikM"
       ],
+      "custom_css": [
+        "p {font-size: 18px; line-height: 30px;}"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
