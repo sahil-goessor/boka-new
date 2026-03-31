@@ -179,7 +179,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Boka_FreshCap_Web_Assets_02.webp",
+        "image": "shopify://shop_images/Boka_FreshCap_Web_Assets_02_fa69d89f-99b3-4699-af2b-e6e1eb1d53e4.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -223,7 +223,7 @@
         "column_PwRQ9D": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Boka_FreshCap_Web_Assets_04.webp",
+            "image": "shopify://shop_images/Boka_FreshCap_Web_Assets_04_1.webp",
             "image_link": "",
             "title": "",
             "text": "<h3>FreshCap’s Mushroom Coffee blends 6 functional mushrooms with smooth Arabica coffee for focused, balanced energy without the jitters. Each serving has 12,000 mg of raw mushrooms and 29% beta glucans for verifiable potency. </h3>",
