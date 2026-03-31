@@ -83,6 +83,34 @@
         "padding_bottom_mobile": 36
       }
     },
+    "rich_text_TwVFFq": {
+      "type": "rich-text",
+      "blocks": {
+        "text_zMRikM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By joining, you agree to receive our newsletter and promotional emails, and you accept the <a href=\"https://www.boka.com/pages/freshcap/#shopify-section-template--25990236930091__1774280282d99ccc8d\" target=\"_blank\">terms and conditions</a> of this giveaway.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_zMRikM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 36
+      }
+    },
     "image_with_text_hyi3yz": {
       "type": "image-with-text",
       "blocks": {
@@ -344,6 +372,7 @@
   "order": [
     "video_slideshow_QJmA3c",
     "main",
+    "rich_text_TwVFFq",
     "image_with_text_hyi3yz",
     "image_with_text_JUJy7d",
     "multicolumn_RiGMmT",
