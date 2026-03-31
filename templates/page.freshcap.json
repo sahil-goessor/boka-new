@@ -97,7 +97,8 @@
         "text_zMRikM"
       ],
       "custom_css": [
-        "p {font-size: 16px; line-height: 26px; width: 80%; max-width: 500px; margin: 0 auto; text-align: center;}"
+        "p {font-size: 16px; line-height: 26px; width: 80%; max-width: 500px; margin: 0 auto; text-align: center;}",
+        "@media screen and (max-width: 767px) {p {width: 100%; font-size: 14px; line-height: 22px; }}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
