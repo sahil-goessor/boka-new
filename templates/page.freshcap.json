@@ -54,7 +54,8 @@
         "image_fACLaR"
       ],
       "custom_css": [
-        ".banner__heading.inline-richtext {line-height: 1.4;}"
+        ".banner__heading.inline-richtext {line-height: 1.4;}",
+        "@media screen and (min-width: 768px) {.banner__text.custom_text.rte {max-width: 500px; }}"
       ],
       "name": "Slideshow with Video",
       "settings": {
