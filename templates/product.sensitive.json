@@ -220,13 +220,13 @@
           "settings": {
             "heading": "<em>Relief</em> you can feel good about",
             "heading_size": "h1",
-            "heading_tag": "default"
+            "heading_tag": "h2"
           }
         },
         "text_V9HMNx": {
           "type": "text",
           "settings": {
-            "text": "<p>Boka's n-Ha Toothpaste for Sensitive Teeth is safe for daily use, combining science-backed and nature-inspired ingredients to care for your smile.</p>",
+            "text": "<p>Boka's n-Ha sensitive toothpaste is designed for daily use and combines science-backed and nature-inspired ingredients to support your oral health routine. The formula helps leave your mouth feeling fresh, while the thoughtful ingredient profile delivers a gentle experience for those seeking a modern toothpaste for sensitive teeth option.</p>",
             "text_style": "body"
           }
         }
@@ -301,6 +301,54 @@
         "padding_bottom_mobile": 36
       }
     },
+    "collapsible_content_cqMPHx": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_iEDkx4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does Boka’s sensitive teeth toothpaste compare to traditional formulas?",
+            "icon": "none",
+            "row_content": "<p>Boka’s sensitive teeth toothpaste uses a modern approach by combining nano-hydroxyapatite with potassium nitrate, rather than relying on traditional ingredients often found in many products. Boka’s formula emphasizes a gentle, everyday oral care experience.</p><p>It’s designed to fit seamlessly into your daily brushing routine, helping maintain a clean feel with a fresh mint flavor while supporting overall comfort for sensitiveteeth. This makes it a great product option for those looking for a more balanced alternative to conventional toothpaste offerings.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_p3iLPQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this toothpaste suitable for long-term daily use?",
+            "icon": "none",
+            "row_content": "<p>Yes, this toothpaste for sensitive teeth is designed for consistent daily use and can be used as part of a complete oralhealth routine. The inclusion of potassium nitrate and nano-hydroxyapatite aligns with ingredients commonly used in sensitivity protectionproducts, while maintaining a gentle and refreshing brushing experience.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_iEDkx4",
+        "collapsible_row_p3iLPQ"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<em>Questions</em> about n-Ha Toothpaste for Sensitive Teeth",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "description": "Nano-hydroxyapatite (n-Ha) is a well-researched ingredient in oral care products, recognized for its similarity to the natural mineral structure of the tooth. As an alternative to traditional fluoride formulas, it offers a gentle approach for those exploring different sensitive toothpaste options. Many modern products combine n-Ha with ingredients like potassium nitrate to support everyday brushing comfort. In this FAQ section, we’ll address common questions about how this toothpaste for sensitive teeth fits into your daily routine.",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -350,75 +398,6 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 30
       }
-    },
-    "collapsible_content_cqMPHx": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_iEDkx4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_p3iLPQ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_dVP4eh": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_jQBzPr": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_iEDkx4",
-        "collapsible_row_p3iLPQ",
-        "collapsible_row_dVP4eh",
-        "collapsible_row_jQBzPr"
-      ],
-      "disabled": true,
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "<em>Frequently Asked Questions</em> about Boka's n-Ha Toothpaste for Sensitive Teeth",
-        "heading_size": "h1",
-        "heading_tag": "h3",
-        "heading_alignment": "center",
-        "description": "",
-        "layout": "none",
-        "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
     }
   },
   "order": [
@@ -426,8 +405,8 @@
     "image_with_icons_B7qBJG",
     "image_with_text_kNPK78",
     "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
+    "collapsible_content_cqMPHx",
     "related-products",
-    "1684207833f45c861d",
-    "collapsible_content_cqMPHx"
+    "1684207833f45c861d"
   ]
 }
