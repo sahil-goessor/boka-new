@@ -97,7 +97,7 @@
         "text_zMRikM"
       ],
       "custom_css": [
-        "p {font-size: 18px; line-height: 30px;}"
+        "p {font-size: 16px; line-height: 26px;}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
