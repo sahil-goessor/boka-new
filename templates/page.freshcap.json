@@ -360,7 +360,7 @@
             "heading_spacing": 20,
             "text_size": 14,
             "line_height": 1.6,
-            "background_color": "#ffffff",
+            "background_color": "#f8f8f8",
             "heading_color": "#000000",
             "text_color": "#090909"
           },
