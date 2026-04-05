@@ -141,7 +141,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
+        "slide_height": "medium",
         "slider_visual": "none",
         "enable_video_buttons": true,
         "auto_rotate": false,
