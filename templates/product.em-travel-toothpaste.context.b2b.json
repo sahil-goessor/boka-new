@@ -10,7 +10,7 @@
 {
   "parent": "product.em-travel-toothpaste.json",
   "context": {
-    "b2b": true
+    "market": "all-b2b"
   },
   "sections": {
     "main": {

@@ -10,7 +10,7 @@
 {
   "parent": "product.back-to-school-kit.json",
   "context": {
-    "b2b": true
+    "market": "all-b2b"
   },
   "sections": {
     "main": {
