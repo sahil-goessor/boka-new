@@ -273,7 +273,7 @@
         "column_3cJ9YR": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Whitening_Duo_featured.webp",
+            "image": "shopify://shop_images/Featured-Banner.jpg",
             "image_link": "https://www.boka.com/products/brightboost-whitening-kit?variant=41216166068267",
             "title": "<em><strong>Let Your Smile Bloom Brighter</strong></em>",
             "text": "<p>This spring, explore fluoride-free, peroxide-free, gentle whitening.</p>",
@@ -284,7 +284,7 @@
         "column_yyRYPY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Option_3.png",
+            "image": "shopify://shop_images/Featured-Banner-2.jpg",
             "image_link": "shopify://products/bestsellers-sample-pack",
             "title": "<em><strong>Your Boka Starter Pack</strong></em>",
             "text": "<p>Try three bestsellers and get a free toothbrush with our sample size starter pack!</p>",
