@@ -63,7 +63,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_HeVqad": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "dp9z6mvai6cz4"
           }
@@ -71,20 +71,6 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "8f4ac970-3a15-4b7d-823a-82ce6560b8df": {
-          "type": "complementary",
-          "name": "Pairs well with",
-          "settings": {
-            "block_heading": "{{ product.metafields.custom.title_pairs_well_with.value }}",
-            "make_collapsible_row": true,
-            "icon": "price_tag",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": true
-          }
         },
         "collapsible_tab_9Ri3zn": {
           "type": "collapsible_tab",
@@ -137,6 +123,20 @@
             "padding_top": 14,
             "padding_bottom": 0
           }
+        },
+        "8f4ac970-3a15-4b7d-823a-82ce6560b8df": {
+          "type": "complementary",
+          "name": "Pairs well with",
+          "settings": {
+            "block_heading": "{{ product.metafields.custom.title_pairs_well_with.value }}",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
         }
       },
       "block_order": [
@@ -150,11 +150,11 @@
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_HeVqad",
         "description",
-        "8f4ac970-3a15-4b7d-823a-82ce6560b8df",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_NnPN3E",
         "icon_with_text_V6zWW9",
-        "af067451-b82f-4114-8006-9a547e9c2157"
+        "af067451-b82f-4114-8006-9a547e9c2157",
+        "8f4ac970-3a15-4b7d-823a-82ce6560b8df"
       ],
       "custom_css": [
         "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}"
