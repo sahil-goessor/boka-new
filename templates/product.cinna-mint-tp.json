@@ -14,7 +14,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
         },
         "yotpo_product_reviews_star_rating_MRDffP": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
@@ -27,6 +30,10 @@
           "settings": {
             "hide_on_subscription_products": false
           }
+        },
+        "google_youtube_automated_discounts_price_JHxhmW": {
+          "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -125,6 +132,7 @@
         "title",
         "yotpo_product_reviews_star_rating_MRDffP",
         "price",
+        "google_youtube_automated_discounts_price_JHxhmW",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_haKXEy",
         "boka_subs_widget_DLzx3K",
@@ -147,6 +155,7 @@
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
+        "thumbnail_position": "bottom",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -409,6 +418,7 @@
         "custom_text_color": "#ffffff",
         "bullets_color": "#ffffff",
         "bullets_line_color": "#ffffff",
+        "enable_scroll_animation": false,
         "image_behavior": "none",
         "mobile_heading_alignment": "center",
         "mobile_content_alignment": "left",
