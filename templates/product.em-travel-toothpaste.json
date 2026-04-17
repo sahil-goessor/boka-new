@@ -61,6 +61,10 @@
             "hide_on_subscription_products": true
           }
         },
+        "google_youtube_automated_discounts_price_nAWDWf": {
+          "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -69,7 +73,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_fgRKB4": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "publishId"
           }
@@ -138,6 +142,7 @@
         "boka_subs_widget_RycTQr",
         "quantity_selector",
         "price",
+        "google_youtube_automated_discounts_price_nAWDWf",
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_fgRKB4",
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
