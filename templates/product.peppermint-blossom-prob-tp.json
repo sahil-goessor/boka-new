@@ -31,6 +31,10 @@
             "hide_on_subscription_products": false
           }
         },
+        "google_youtube_automated_discounts_price_CQXLf8": {
+          "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -51,7 +55,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_4AHxY4": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "publishId"
           }
@@ -151,6 +155,7 @@
         "title",
         "yotpo_product_reviews_star_rating_nRVwYV",
         "price",
+        "google_youtube_automated_discounts_price_CQXLf8",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_Y3VetV",
         "buy_buttons",
@@ -570,10 +575,20 @@
         "button_d7Kj9t": {
           "type": "button",
           "settings": {
+            "button_action": "link",
+            "variant_id": "",
+            "product_quantity": 1,
             "button_label": "",
             "button_link": "#",
+            "second_button_action": "link",
+            "second_variant_id": "",
+            "second_product_quantity": 1,
             "second_button_label": "",
-            "second_button_link": ""
+            "second_button_link": "",
+            "popup_button_label": "",
+            "popup_button_style_secondary": false,
+            "popup_title": "Full Ingredients List",
+            "popup_content": "<p>Add your popup content here.</p>"
           }
         }
       },
