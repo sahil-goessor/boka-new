@@ -31,6 +31,10 @@
             "hide_on_subscription_products": false
           }
         },
+        "google_youtube_automated_discounts_price_ANRiqc": {
+          "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -107,6 +111,7 @@
         "title",
         "yotpo_product_reviews_star_rating_Lk8fk3",
         "price",
+        "google_youtube_automated_discounts_price_ANRiqc",
         "variant_picker",
         "recharge_subscriptions_subscription_widget_v2_bmDTCE",
         "quantity_selector",
