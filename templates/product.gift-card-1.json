@@ -25,6 +25,10 @@
             "hide_on_subscription_products": true
           }
         },
+        "google_youtube_automated_discounts_price_8NnCdh": {
+          "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
+          "settings": {}
+        },
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3": {
           "type": "richtext",
           "settings": {
@@ -110,6 +114,7 @@
       "block_order": [
         "title",
         "price",
+        "google_youtube_automated_discounts_price_8NnCdh",
         "76b0a144-e4d8-4d75-b59d-b96b0674c3a3",
         "variant_picker",
         "quantity_selector",
