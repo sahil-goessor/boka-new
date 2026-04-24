@@ -38,9 +38,9 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown",
-            "color_names": "white, blue, mint, pink",
-            "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
+            "picker_type": "button",
+            "color_names": "",
+            "color_hex": ""
           }
         },
         "recharge_subscriptions_subscription_widget_v2_YmxgLa": {
