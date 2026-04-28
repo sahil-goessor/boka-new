@@ -101,18 +101,18 @@
         "image_RJU7Ux": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ela_Mint_Desktop_1.webp",
-            "image_mobile": "shopify://shop_images/Ela_Mint_Mobile_1.webp",
-            "heading": "Your Smile, <em>in Full Bloom</em>",
-            "image_link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
-            "heading_font_size": 40,
-            "heading_font_size_mobile": 24,
+            "image": "shopify://shop_images/4oz_Cherry_Blossom_Image_7.png",
+            "image_mobile": "shopify://shop_images/4oz_Cherry_Blossom_Image_7_2fb91d67-e3a3-4521-b886-aa70676143f4.png",
+            "heading": "Back By <span class=\"cherry-text\"> <em>Popular Demand</em> </span>",
+            "image_link": "shopify://products/cherry-blossom-n-ha-toothpaste",
+            "heading_font_size": 46,
+            "heading_font_size_mobile": 30,
             "heading_tag": "default",
-            "subheading": "Let your smile flourish with gentle, fluoride-free oral care.",
+            "subheading": "<span class=\"cherry-text\">Cherry Blossom </span> n-Ha Toothpaste is here to stay. Enjoy spring’s best flavor, forever.",
             "subheading_font_size": 22,
-            "subheading_font_size_mobile": 16,
+            "subheading_font_size_mobile": 17,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
+            "link": "shopify://products/cherry-blossom-n-ha-toothpaste",
             "button_style_secondary": false,
             "button_label2": "",
             "link2": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
@@ -120,24 +120,27 @@
             "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "left",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 20,
             "color_scheme": "custom",
             "custom_background_color": "#000000",
-            "custom_text_color": "#000000",
+            "custom_text_color": "#ffffff",
             "mobile_custom_text_color": "#ffffff",
-            "button_background_color": "#000000",
-            "button_foreground_color": "#ffffff",
-            "button_background_color_mobile": "#000000",
-            "button_foreground_color_mobile": "#ffffff",
+            "button_background_color": "#f7cfe1",
+            "button_foreground_color": "#000000",
+            "button_background_color_mobile": "#f7cfe1",
+            "button_foreground_color_mobile": "#000000",
             "bottom_text_background_color": "#000000",
             "bottom_text_foreground_color": "#000000",
             "text_alignment_mobile": "center",
-            "mobile_content_position": "top"
+            "mobile_content_position": "center"
           }
         }
       },
       "block_order": [
         "image_RJU7Ux"
+      ],
+      "custom_css": [
+        ".cherry-text {color: #f7cfe1;}"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -331,7 +334,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "ult1uqdfdzl9f"
           }
