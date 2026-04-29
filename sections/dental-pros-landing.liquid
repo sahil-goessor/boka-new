@@ -1291,28 +1291,6 @@
     </div>
   </section>
 
-  <section class="dp-strip" aria-label="Program summary">
-    <div class="dp-wrap">
-      <div class="dp-strip__grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'strip_card' %}
-            <div
-              class="dp-strip__cell {% if block.settings.highlight_card %}dp-strip__cell--lead{% endif %}"
-              {{ block.shopify_attributes }}
-            >
-              {% if block.settings.number != blank %}
-                <span class="dp-strip__num">{{ block.settings.number }}</span>
-              {% endif %}
-              {% if block.settings.text != blank %}
-                <p class="dp-strip__label">{{ block.settings.text }}</p>
-              {% endif %}
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
   <section class="dp-section dp-b2b" id="practice-benefits" aria-label="Boka Pro benefits and current B2B information">
     <div class="dp-wrap">
       <div class="dp-b2b-box">
@@ -1365,6 +1343,28 @@
     </div>
   </section>
 
+  <section class="dp-strip" aria-label="Program summary">
+    <div class="dp-wrap">
+      <div class="dp-strip__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'strip_card' %}
+            <div
+              class="dp-strip__cell {% if block.settings.highlight_card %}dp-strip__cell--lead{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.number != blank %}
+                <span class="dp-strip__num">{{ block.settings.number }}</span>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-strip__label">{{ block.settings.text }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
   <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
     <div class="dp-wrap">
       <div class="dp-split">
