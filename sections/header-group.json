@@ -109,7 +109,7 @@
         "type_nav_font": "sans_serif_n4",
         "custom_nav_font_enabled": false,
         "custom_nav_font": "CeraProRegular",
-        "nav_font_size": 18,
+        "nav_font_size": 16,
         "nav_item_font_size": 24,
         "nav_font_size_mobile": 14,
         "enable_country_selector": false,
