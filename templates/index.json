@@ -101,14 +101,14 @@
         "image_RJU7Ux": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/4oz_Cherry_Blossom_Image_7.png",
-            "image_mobile": "shopify://shop_images/4oz_Cherry_Blossom_Image_7_2fb91d67-e3a3-4521-b886-aa70676143f4.png",
-            "heading": "Back By <span class=\"cherry-text\"> <em>Popular Demand</em> </span>",
+            "image": "shopify://shop_images/Cherry_Blossom_Main_Banner_Desktop.webp",
+            "image_mobile": "shopify://shop_images/Cherry_Blossom_Main_Banner_Mobile.webp",
+            "heading": "Back By <em>Popular Demand</em> </span>",
             "image_link": "shopify://products/cherry-blossom-n-ha-toothpaste",
             "heading_font_size": 46,
             "heading_font_size_mobile": 30,
             "heading_tag": "default",
-            "subheading": "<span class=\"cherry-text\">Cherry Blossom  </span>n-Ha Toothpaste is here to stay. Enjoy spring’s best flavor, forever.",
+            "subheading": "Cherry Blossom  n-Ha Toothpaste is here to stay. Enjoy spring’s best flavor, forever.",
             "subheading_font_size": 18,
             "subheading_font_size_mobile": 17,
             "button_label": "SHOP NOW",
@@ -117,22 +117,22 @@
             "button_label2": "",
             "link2": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
             "button_style_secondary2": false,
-            "box_align": "middle-left",
+            "box_align": "bottom-left",
             "show_text_box": false,
             "text_alignment": "left",
-            "image_overlay_opacity": 20,
+            "image_overlay_opacity": 0,
             "color_scheme": "custom",
-            "custom_background_color": "#000000",
-            "custom_text_color": "#ffffff",
+            "custom_background_color": "#ffffff",
+            "custom_text_color": "#000000",
             "mobile_custom_text_color": "#ffffff",
-            "button_background_color": "#f7cfe1",
-            "button_foreground_color": "#000000",
-            "button_background_color_mobile": "#f7cfe1",
-            "button_foreground_color_mobile": "#000000",
+            "button_background_color": "#000000",
+            "button_foreground_color": "#ffffff",
+            "button_background_color_mobile": "#000000",
+            "button_foreground_color_mobile": "#ffffff",
             "bottom_text_background_color": "#000000",
             "bottom_text_foreground_color": "#000000",
             "text_alignment_mobile": "center",
-            "mobile_content_position": "center"
+            "mobile_content_position": "top"
           }
         }
       },
@@ -140,7 +140,9 @@
         "image_RJU7Ux"
       ],
       "custom_css": [
-        ".cherry-text {color: #f7cfe1;}"
+        ".slideshow__text {background: linear-gradient( 180deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.14) ) !important; padding: 24px 28px !important; border-radius: 18px !important; max-width: 620px;}",
+        ".slideshow__text .banner__heading,.slideshow__text .banner__text,.slideshow__text .banner__text p,.slideshow__text .inline-richtext {color: #ffffff !important;}",
+        "@media screen and (max-width: 749px) {.slideshow__text {padding: 18px 20px !important; border-radius: 16px !important; max-width: calc(100vw - 32px); margin-left: auto; margin-right: auto; }}"
       ],
       "settings": {
         "layout": "full_bleed",
