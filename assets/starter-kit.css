@@ -1,8 +1,3 @@
-/* ============================================================
-   BOKA Starter Kit PDP
-   Combined and cleaned CSS asset
-   Replace the contents of assets/starter-kit.css with this file.
-   ============================================================ */
 
 :root {
   --starter-sage: #d3e7c0;
@@ -44,10 +39,6 @@
   padding-right: 40px;
 }
 
-/* ============================================================
-   Main product layout
-   ============================================================ */
-
 @media screen and (min-width: 1200px) {
   .starter-kit-template .product.grid {
     display: grid !important;
@@ -80,19 +71,9 @@
   padding: 0 !important;
   box-shadow: none !important;
 }
-.starter-kit-template .product__media-list .product__media-item {
-  border: 1px solid var(--starter-border);
-  background: var(--starter-white);
-}
 
-.starter-kit-template .product__media-list .product__media-item,
-.starter-kit-template .product__media-list .product__media,
-.starter-kit-template .product__media-list .product-media-container,
-.starter-kit-template .product__media-list .product-media-container .media {
-  overflow: hidden !important;
-  border-radius: var(--starter-radius-lg);
-  background: linear-gradient(145deg, #f7f6f0, #efede5);
-}
+
+
 
 .starter-kit-template .product__media-list,
 .starter-kit-template .product__media,
@@ -820,3 +801,239 @@
   font-size: 12px;
   line-height: 1.35;
 }
+
+/* ============================================================
+   Media gallery orientation override
+   Goal: left thumbnail rail outside the main image card + large fill image
+   Paste-safe: this appears at the bottom so it overrides earlier gallery rules.
+   ============================================================ */
+
+/* Outer product media column should not be the card. */
+.starter-kit-template .product__media-wrapper {
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Gallery wrapper: thumbnail rail on left, main viewer on right. */
+@media screen and (min-width: 990px) {
+  .starter-kit-template media-gallery {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .starter-kit-template .media-gallery__main-wrapper,
+  .starter-kit-template .media-gallery__main-wrapper.media-gallery--left {
+    display: grid !important;
+    grid-template-columns: 72px minmax(0, 1fr) !important;
+    column-gap: 16px !important;
+    align-items: start !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .starter-kit-template .thumbnail-slider,
+  .starter-kit-template .thumbnail-slider--vertical {
+    grid-column: 1 !important;
+    width: 72px !important;
+    max-width: 72px !important;
+    min-width: 72px !important;
+    margin: 0 !important;
+  }
+
+  .starter-kit-template [id^="GalleryViewer"],
+  .starter-kit-template .product__media-list {
+    grid-column: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* Main media card only. This creates the clean image box. */
+.starter-kit-template .product__media-list .product__media-item {
+  width: 100% !important;
+  max-width: none !important;
+  border: 1px solid var(--starter-border) !important;
+  border-radius: var(--starter-radius-lg) !important;
+  background: var(--starter-white) !important;
+  overflow: hidden !important;
+}
+
+/* Remove extra internal constraints that keep the image small. */
+.starter-kit-template .product__media-list .product-media-container,
+.starter-kit-template .product__media-list .product__media,
+.starter-kit-template .product__media-list .media,
+.starter-kit-template .product__media-list .global-media-settings {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  border: 0 !important;
+  border-radius: var(--starter-radius-lg) !important;
+  background: linear-gradient(145deg, #f7f6f0, #efede5) !important;
+  overflow: hidden !important;
+}
+
+/* Large canvas for the main image. Adjust this if you want it shorter/taller. */
+@media screen and (min-width: 990px) {
+  .starter-kit-template .product__media-list .product-media-container,
+  .starter-kit-template .product__media-list .product__media,
+  .starter-kit-template .product__media-list .media {
+    min-height: clamp(620px, 58vw, 780px) !important;
+  }
+}
+
+/* Force the actual product image to use the full main image canvas. */
+.starter-kit-template .product__media-list .product__media img,
+.starter-kit-template .product__media-list .product-media-container img,
+.starter-kit-template .product__media-list .media > img,
+.starter-kit-template .product__media-list img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: clamp(620px, 58vw, 780px) !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* Shopify media images are commonly absolutely positioned. */
+.starter-kit-template .product__media-list .media > img,
+.starter-kit-template .product__media-list .product__media > img {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+/* Thumbnail rail styling: outside the main card, compact and clean. */
+.starter-kit-template .thumbnail-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 72px !important;
+  max-width: 72px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.starter-kit-template .thumbnail-list__item,
+.starter-kit-template .thumbnail-list .slider__slide {
+  width: 72px !important;
+  height: 72px !important;
+  flex: 0 0 72px !important;
+  max-width: 72px !important;
+}
+
+.starter-kit-template .thumbnail {
+  width: 72px !important;
+  height: 72px !important;
+  border: 1px solid var(--starter-border) !important;
+  border-radius: 8px !important;
+  background: var(--starter-white) !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.starter-kit-template .thumbnail img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+}
+
+.starter-kit-template .thumbnail[aria-current],
+.starter-kit-template .thumbnail[aria-current="true"] {
+  border-color: var(--starter-ink) !important;
+  box-shadow: 0 0 0 1px var(--starter-ink) !important;
+}
+
+/* Hide vertical rail arrows when the thumbnails fit naturally. */
+.starter-kit-template .thumbnail-slider .slider-button {
+  display: none !important;
+}
+
+/* Tablet/mobile: stack thumbnails below the main image. */
+@media screen and (max-width: 989px) {
+  .starter-kit-template .media-gallery__main-wrapper,
+  .starter-kit-template .media-gallery__main-wrapper.media-gallery--left {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .starter-kit-template [id^="GalleryViewer"],
+  .starter-kit-template .product__media-list {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .starter-kit-template .product__media-list .product-media-container,
+  .starter-kit-template .product__media-list .product__media,
+  .starter-kit-template .product__media-list .media {
+    min-height: 460px !important;
+  }
+
+  .starter-kit-template .product__media-list .product__media img,
+  .starter-kit-template .product__media-list .product-media-container img,
+  .starter-kit-template .product__media-list .media > img,
+  .starter-kit-template .product__media-list img {
+    min-height: 460px !important;
+    object-fit: cover !important;
+  }
+
+  .starter-kit-template .thumbnail-slider,
+  .starter-kit-template .thumbnail-slider--vertical {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .starter-kit-template .thumbnail-list {
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    padding-bottom: 2px !important;
+  }
+
+  .starter-kit-template .thumbnail-list__item,
+  .starter-kit-template .thumbnail-list .slider__slide,
+  .starter-kit-template .thumbnail {
+    width: 58px !important;
+    height: 58px !important;
+    flex: 0 0 58px !important;
+    max-width: 58px !important;
+  }
+}
+
+/* Small mobile: keep image large without overwhelming the page. */
+@media screen and (max-width: 749px) {
+  .starter-kit-template .product__media-list .product-media-container,
+  .starter-kit-template .product__media-list .product__media,
+  .starter-kit-template .product__media-list .media {
+    min-height: 390px !important;
+  }
+
+  .starter-kit-template .product__media-list .product__media img,
+  .starter-kit-template .product__media-list .product-media-container img,
+  .starter-kit-template .product__media-list .media > img,
+  .starter-kit-template .product__media-list img {
+    min-height: 390px !important;
+  }
+}
+
+/* Use this instead of cover if you need the entire kit visible:
+.starter-kit-template .product__media-list .product__media img,
+.starter-kit-template .product__media-list .product-media-container img,
+.starter-kit-template .product__media-list .media > img,
+.starter-kit-template .product__media-list img {
+  object-fit: contain !important;
+}
+*/
