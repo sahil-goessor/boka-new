@@ -1,0 +1,1880 @@
+{{ 'https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap' | stylesheet_tag }}
+
+<style>
+  :root {
+    --dp-ink: #222721;
+    --dp-forest: #737c5b;
+    --dp-sage: #a5bc8b;
+    --dp-mint: #bfd6a5;
+    --dp-pale: #d3e7c0;
+    --dp-frost: #e6f4d4;
+    --dp-cream: #fafaf5;
+    --dp-porcelain: #f7f7f0;
+    --dp-white: #ffffff;
+    --dp-petal: #f9e5db;
+    --dp-rose: #efd5ca;
+    --dp-terracotta: #aa7a6b;
+    --dp-stone: #c1beb0;
+    --dp-warm-gray: #8c8773;
+    --dp-line: rgba(34, 39, 33, 0.12);
+    --dp-shadow: 0 22px 70px rgba(34, 39, 33, 0.08);
+    --dp-radius: 22px;
+    --dp-radius-sm: 14px;
+    --dp-max: 1180px;
+    --dp-font-sans: 'Archivo', 'Neue Haas Unica W1G', Helvetica, Arial, sans-serif;
+    --dp-font-serif: Georgia, 'Times New Roman', serif;
+  }
+
+  .dp-page,
+  .dp-page * {
+    box-sizing: border-box;
+  }
+
+  .dp-page {
+    margin: 0;
+    overflow: hidden;
+    background: var(--dp-cream);
+    color: var(--dp-ink);
+    font-family: var(--dp-font-sans);
+    letter-spacing: -0.01em;
+  }
+
+  .dp-page a {
+    color: inherit;
+  }
+
+  .dp-wrap {
+    width: min(var(--dp-max), calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  .dp-section {
+    padding: clamp(70px, 8vw, 128px) 0;
+  }
+
+  .dp-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.17em;
+    color: var(--dp-forest);
+    text-transform: uppercase;
+  }
+
+  .dp-kicker::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.55;
+  }
+
+  .dp-h1,
+  .dp-h2,
+  .dp-h3,
+  .dp-page p {
+    margin-block-start: 0;
+  }
+
+  .dp-h1,
+  .dp-h2,
+  .dp-h3 {
+    letter-spacing: -0.045em;
+    font-weight: 300;
+  }
+
+  .dp-h1 {
+    max-width: 780px;
+    margin-bottom: 24px;
+    font-size: clamp(46px, 7vw, 92px);
+    line-height: 0.94;
+  }
+
+  .dp-h2 {
+    margin-bottom: 18px;
+    font-size: clamp(34px, 4.2vw, 62px);
+    line-height: 1;
+  }
+
+  .dp-h3 {
+    margin-bottom: 12px;
+    font-size: clamp(22px, 2.2vw, 34px);
+    line-height: 1.08;
+  }
+
+  .dp-em {
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+  }
+
+  .dp-copy {
+    max-width: 650px;
+    margin-bottom: 24px;
+    color: rgba(34, 39, 33, 0.72);
+    font-size: clamp(16px, 1.3vw, 18px);
+    font-weight: 300;
+    line-height: 1.72;
+  }
+
+  .dp-copy--sm {
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .dp-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .dp-btn {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--dp-ink);
+    border-radius: 999px;
+    padding: 14px 24px;
+    background: transparent;
+    color: var(--dp-ink);
+    font-family: var(--dp-font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
+  }
+
+  .dp-btn:hover {
+    transform: translateY(-1px);
+    background: var(--dp-ink);
+    color: var(--dp-cream);
+  }
+
+  .dp-btn--primary {
+    border-color: var(--dp-forest);
+    background: var(--dp-forest);
+    color: var(--dp-white);
+  }
+
+  .dp-btn--primary:hover {
+    border-color: var(--dp-ink);
+    background: var(--dp-ink);
+    color: var(--dp-white);
+  }
+
+  .dp-btn--light {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: var(--dp-white);
+  }
+
+  .dp-btn--light:hover {
+    border-color: var(--dp-white);
+    background: var(--dp-white);
+    color: var(--dp-ink);
+  }
+
+  .dp-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    border: 1px solid var(--dp-line);
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: rgba(255,255,255,0.58);
+    color: rgba(34, 39, 33, 0.72);
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .dp-card {
+    border: 1px solid var(--dp-line);
+    border-radius: var(--dp-radius);
+    background: rgba(255,255,255,0.66);
+    box-shadow: var(--dp-shadow);
+  }
+
+  /* HERO */
+  .dp-hero {
+    position: relative;
+    min-height: 760px;
+    padding: clamp(52px, 7vw, 96px) 0;
+    background:
+      radial-gradient(circle at 78% 14%, rgba(191, 214, 165, 0.70), transparent 34%),
+      linear-gradient(135deg, var(--dp-cream) 0%, var(--dp-frost) 55%, var(--dp-petal) 100%);
+  }
+
+  .dp-hero::before,
+  .dp-hero::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    border: 1px solid rgba(115, 124, 91, 0.22);
+    border-radius: 999px 999px 999px 24px;
+    pointer-events: none;
+  }
+
+  .dp-hero::before {
+    width: 470px;
+    height: 470px;
+    top: 8%;
+    right: -150px;
+    transform: rotate(18deg);
+  }
+
+  .dp-hero::after {
+    width: 280px;
+    height: 280px;
+    left: -115px;
+    bottom: 12%;
+    transform: rotate(-16deg);
+  }
+
+  .dp-hero__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.78fr);
+    gap: clamp(34px, 5vw, 72px);
+    align-items: center;
+  }
+
+  .dp-hero__content {
+    padding-top: 34px;
+  }
+
+  .dp-hero__sub {
+    max-width: 680px;
+    margin-bottom: 28px;
+    color: rgba(34, 39, 33, 0.76);
+    font-size: clamp(17px, 1.55vw, 21px);
+    font-weight: 300;
+    line-height: 1.58;
+  }
+
+  .dp-hero__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0 0;
+  }
+
+  .dp-hero__visual {
+    position: relative;
+  }
+
+  .dp-hero__media-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,255,255,0.55), rgba(255,255,255,0.12) 52%, rgba(255,255,255,0) 78%),
+    var(--dp-sage);
+  box-shadow: 0 38px 90px rgba(34, 39, 33, 0.16);
+}
+
+  .dp-hero__image {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  display: block;
+  object-fit: contain;
+  object-position: center center;
+  padding: 24px;
+}
+
+  .dp-hero__placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 38px;
+    text-align: center;
+  }
+
+  .dp-logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(75%, 310px);
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(255,255,255,0.48);
+    border-radius: 42% 58% 48% 52% / 56% 44% 56% 44%;
+    background: rgba(250, 250, 245, 0.18);
+    color: var(--dp-white);
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 300;
+    letter-spacing: 0.36em;
+    text-indent: 0.36em;
+  }
+
+  .dp-hero__note {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    width: min(310px, calc(100% - 44px));
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 22px;
+    padding: 20px;
+    background: rgba(250,250,245,0.80);
+    backdrop-filter: blur(14px);
+  }
+
+  .dp-hero__note-title {
+    margin: 0 0 7px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--dp-forest);
+    text-transform: uppercase;
+  }
+
+  .dp-hero__note-copy {
+    margin: 0;
+    color: rgba(34, 39, 33, 0.72);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* INTRO STRIP */
+.dp-strip {
+  position: relative;
+  z-index: 2;
+  margin-top: -54px;
+  padding-bottom: 42px;
+  background: transparent;
+  color: var(--dp-ink);
+}
+
+.dp-strip__grid {
+  display: grid;
+  grid-template-columns: 1.1fr repeat(3, 0.9fr);
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(115, 124, 91, 0.16);
+  border-radius: 30px;
+  background: rgba(250, 250, 245, 0.72);
+  box-shadow: 0 28px 80px rgba(34, 39, 33, 0.10);
+  backdrop-filter: blur(14px);
+}
+
+.dp-strip__cell {
+  min-height: 150px;
+  padding: 26px;
+  border: 1px solid rgba(34, 39, 33, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.dp-strip__cell--lead {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(211, 231, 192, 0.95), transparent 42%),
+    var(--dp-forest);
+  color: var(--dp-white);
+}
+
+.dp-strip__num {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--dp-forest);
+  font-family: var(--dp-font-serif);
+  font-size: 38px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.dp-strip__cell--lead .dp-strip__num {
+  color: var(--dp-pale);
+}
+
+.dp-strip__label {
+  margin: 0;
+  color: rgba(34, 39, 33, 0.68);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.dp-strip__cell--lead .dp-strip__label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+  /* CONTENT GRIDS */
+  .dp-split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: clamp(36px, 6vw, 92px);
+    align-items: center;
+  }
+
+  .dp-split--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .dp-ingredient-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(28px, 4vw, 54px);
+    background: var(--dp-pale);
+  }
+
+  .dp-ingredient-card::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: -70px;
+    bottom: -70px;
+    border: 1px solid rgba(115,124,91,0.25);
+    border-radius: 44% 56% 42% 58%;
+    transform: rotate(20deg);
+  }
+
+  .dp-check-list {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .dp-check-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: rgba(34, 39, 33, 0.76);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .dp-check-list li::before {
+    content: "";
+    flex: 0 0 9px;
+    width: 9px;
+    height: 9px;
+    margin-top: 7px;
+    border-radius: 999px;
+    background: var(--dp-forest);
+  }
+
+  .dp-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .dp-mini {
+    border: 1px solid var(--dp-line);
+    border-radius: 18px;
+    padding: 22px;
+    background: rgba(255,255,255,0.62);
+  }
+
+  .dp-mini__title {
+    margin: 0 0 8px;
+    color: var(--dp-ink);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .dp-mini__copy {
+    margin: 0;
+    color: rgba(34, 39, 33, 0.70);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* WHY HYGIENISTS */
+  .dp-why {
+    background:
+      radial-gradient(circle at top left, rgba(191,214,165,0.56), transparent 28%),
+      var(--dp-porcelain);
+  }
+
+  .dp-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 44px;
+  }
+
+  .dp-info-card {
+    padding: clamp(24px, 3vw, 34px);
+    border-radius: var(--dp-radius);
+    background: rgba(255,255,255,0.68);
+    border: 1px solid var(--dp-line);
+  }
+
+  .dp-info-card__icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    background: var(--dp-frost);
+    color: var(--dp-forest);
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+    font-size: 22px;
+  }
+
+  .dp-info-card__title {
+    margin: 0 0 11px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .dp-info-card__copy {
+    margin: 0;
+    color: rgba(34, 39, 33, 0.68);
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  /* VIDEO */
+  .dp-video {
+    background: var(--dp-petal);
+  }
+
+  .dp-video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
+    background: var(--dp-ink);
+    box-shadow: var(--dp-shadow);
+  }
+
+  .dp-video-card::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+  }
+
+  .dp-video-card iframe,
+  .dp-video-card video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .dp-video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+    background:
+      linear-gradient(180deg, rgba(34,39,33,0.15), rgba(34,39,33,0.72)),
+      var(--dp-sage);
+    text-align: center;
+  }
+
+  .dp-play {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+    border-radius: 999px;
+    background: rgba(250,250,245,0.88);
+    color: var(--dp-forest);
+  }
+
+  .dp-play svg {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    fill: currentColor;
+  }
+
+  .dp-video-placeholder p {
+    max-width: 360px;
+    margin: 0 auto;
+    color: var(--dp-cream);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .dp-advisor {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 26px;
+    border: 1px solid rgba(170,122,107,0.20);
+    border-radius: 20px;
+    padding: 16px;
+    background: rgba(255,255,255,0.56);
+  }
+
+  .dp-advisor__avatar {
+    display: grid;
+    place-items: center;
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: var(--dp-rose);
+    color: var(--dp-terracotta);
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+  }
+
+  .dp-advisor__name {
+    margin: 0 0 3px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .dp-advisor__role {
+    margin: 0;
+    color: rgba(34,39,33,0.62);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* HOW IT WORKS */
+  .dp-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 44px;
+  }
+
+  .dp-step {
+    position: relative;
+    min-height: 250px;
+    border: 1px solid var(--dp-line);
+    border-radius: var(--dp-radius);
+    padding: 24px;
+    background: rgba(255,255,255,0.66);
+  }
+
+  .dp-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 28px;
+    border-radius: 999px;
+    background: var(--dp-frost);
+    color: var(--dp-forest);
+    font-family: var(--dp-font-serif);
+    font-size: 19px;
+    font-style: italic;
+  }
+
+  .dp-step__title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.18;
+  }
+
+  .dp-step__copy {
+    margin: 0;
+    color: rgba(34,39,33,0.68);
+    font-size: 13px;
+    line-height: 1.58;
+  }
+
+  .dp-commission {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 24px;
+    margin-top: 24px;
+    border-radius: 34px;
+    padding: clamp(28px, 4vw, 52px);
+    background: var(--dp-forest);
+    color: var(--dp-white);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .dp-commission::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    bottom: -140px;
+    width: 340px;
+    height: 340px;
+    border-radius: 48% 52% 44% 56%;
+    border: 1px solid rgba(255,255,255,0.22);
+    transform: rotate(18deg);
+  }
+
+  .dp-commission__copy {
+    color: rgba(255,255,255,0.78);
+  }
+
+  .dp-rates {
+    display: grid;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .dp-rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 18px;
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.09);
+  }
+
+  .dp-rate span:first-child {
+    color: rgba(255,255,255,0.72);
+    font-size: 13px;
+  }
+
+  .dp-rate span:last-child {
+    color: var(--dp-pale);
+    font-family: var(--dp-font-serif);
+    font-size: 32px;
+    font-style: italic;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* CURRENT B2B INFO */
+  .dp-b2b {
+    background: var(--dp-frost);
+  }
+
+  .dp-b2b-box {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(26px, 5vw, 70px);
+    align-items: start;
+    border-radius: 34px;
+    padding: clamp(28px, 5vw, 60px);
+    background: rgba(250,250,245,0.78);
+    border: 1px solid rgba(115,124,91,0.20);
+  }
+
+  .dp-process {
+    display: grid;
+    gap: 12px;
+    counter-reset: prostep;
+  }
+
+  .dp-process__item {
+    position: relative;
+    min-height: 70px;
+    border: 1px solid var(--dp-line);
+    border-radius: 18px;
+    padding: 20px 20px 20px 72px;
+    background: rgba(255,255,255,0.62);
+    counter-increment: prostep;
+  }
+
+  .dp-process__item::before {
+    content: counter(prostep, decimal-leading-zero);
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: var(--dp-pale);
+    color: var(--dp-forest);
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  .dp-process__title {
+    margin: 0 0 5px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .dp-process__copy {
+    margin: 0;
+    color: rgba(34,39,33,0.66);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .dp-note {
+    margin-top: 18px;
+    border-left: 1px solid var(--dp-terracotta);
+    padding-left: 18px;
+    color: rgba(34,39,33,0.64);
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+  /* TESTIMONIALS */
+  .dp-testimonials {
+    background: var(--dp-porcelain);
+  }
+
+  .dp-quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .dp-quote {
+    padding: clamp(24px, 3vw, 38px);
+    border: 1px solid var(--dp-line);
+    border-radius: var(--dp-radius);
+    background: rgba(255,255,255,0.70);
+  }
+
+  .dp-quote__text {
+    margin: 0 0 24px;
+    color: rgba(34,39,33,0.82);
+    font-family: var(--dp-font-serif);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+  }
+
+  .dp-quote__name {
+    margin: 0 0 4px;
+    color: var(--dp-forest);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .dp-quote__role {
+    margin: 0;
+    color: rgba(34,39,33,0.56);
+    font-size: 12px;
+  }
+
+  /* FORM */
+  .dp-signup {
+    background:
+      radial-gradient(circle at 90% 0%, rgba(191,214,165,0.50), transparent 28%),
+      var(--dp-cream);
+  }
+
+  .dp-form-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(30px, 5vw, 72px);
+    align-items: start;
+  }
+
+  .dp-form {
+    border: 1px solid var(--dp-line);
+    border-radius: 34px;
+    padding: clamp(24px, 4vw, 46px);
+    background: rgba(255,255,255,0.72);
+    box-shadow: var(--dp-shadow);
+  }
+
+  .dp-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .dp-field--full {
+    grid-column: 1 / -1;
+  }
+
+  .dp-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dp-forest);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .dp-input,
+  .dp-select,
+  .dp-textarea {
+    width: 100%;
+    border: 1px solid rgba(34,39,33,0.18);
+    border-radius: 14px;
+    padding: 14px 15px;
+    background: var(--dp-white);
+    color: var(--dp-ink);
+    font-family: var(--dp-font-sans);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+    -webkit-appearance: none;
+  }
+
+  .dp-textarea {
+    min-height: 108px;
+    resize: vertical;
+  }
+
+  .dp-input:focus,
+  .dp-select:focus,
+  .dp-textarea:focus {
+    border-color: var(--dp-forest);
+    box-shadow: 0 0 0 4px rgba(115,124,91,0.12);
+  }
+
+  .dp-checkbox {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 22px 0 28px;
+    color: rgba(34,39,33,0.66);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .dp-checkbox input {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--dp-forest);
+  }
+
+  .dp-form .dp-btn {
+    width: 100%;
+  }
+
+  .dp-form__fine {
+    margin: 14px 0 0;
+    color: rgba(34,39,33,0.48);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* FAQ */
+  .dp-faq {
+    background: var(--dp-pale);
+  }
+
+  .dp-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+    margin-top: 38px;
+  }
+
+  .dp-faq-item {
+    border-top: 1px solid rgba(34,39,33,0.14);
+    padding-top: 20px;
+  }
+
+  .dp-faq-item h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  .dp-faq-item p {
+    margin: 0;
+    color: rgba(34,39,33,0.66);
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .dp-final {
+    padding: 74px 0;
+    background: var(--dp-ink);
+    color: var(--dp-cream);
+    text-align: center;
+  }
+
+  .dp-final .dp-copy {
+    margin-inline: auto;
+    color: rgba(250,250,245,0.70);
+  }
+
+  @media (max-width: 990px) {
+    .dp-hero {
+      min-height: auto;
+    }
+
+    .dp-hero__grid,
+    .dp-split,
+    .dp-split--reverse,
+    .dp-b2b-box,
+    .dp-form-shell,
+    .dp-commission {
+      grid-template-columns: 1fr;
+    }
+
+    .dp-hero__media-card,
+    .dp-hero__image {
+      min-height: 430px;
+      height: 430px;
+    }
+
+    .dp-strip__grid,
+    .dp-card-grid,
+    .dp-steps {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .dp-wrap {
+      width: min(100% - 28px, var(--dp-max));
+    }
+
+    .dp-h1 {
+      font-size: clamp(42px, 15vw, 64px);
+    }
+
+    .dp-btn-row,
+    .dp-btn {
+      width: 100%;
+    }
+
+    .dp-strip__grid,
+    .dp-card-grid,
+    .dp-mini-grid,
+    .dp-steps,
+    .dp-quote-grid,
+    .dp-fields,
+    .dp-faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dp-strip__cell {
+      min-height: auto;
+      padding: 24px;
+    }
+
+    .dp-hero__media-card,
+    .dp-hero__image {
+      min-height: 360px;
+      height: 360px;
+      border-radius: 26px;
+    }
+
+    .dp-logo-mark {
+      font-size: 34px;
+    }
+
+    .dp-hero__note {
+      position: static;
+      width: auto;
+      margin: 14px;
+    }
+
+    .dp-section {
+      padding: 64px 0;
+    }
+  }
+</style>
+
+<main class="dp-page" id="dental-pros-page">
+  <section class="dp-hero" aria-label="Boka Dental Pros Program">
+    <div class="dp-wrap">
+      <div class="dp-hero__grid">
+        <div class="dp-hero__content">
+          {% if section.settings.hero_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.hero_kicker }}</span>
+          {% endif %}
+
+          {% if section.settings.hero_heading != blank %}
+            <h1 class="dp-h1">{{ section.settings.hero_heading }}</h1>
+          {% endif %}
+
+          {% if section.settings.hero_text != blank %}
+            <p class="dp-hero__sub">{{ section.settings.hero_text }}</p>
+          {% endif %}
+
+          <div class="dp-btn-row">
+            {% if section.settings.hero_primary_label != blank %}
+              <a class="dp-btn dp-btn--primary" href="{{ section.settings.hero_primary_link }}">
+                {{ section.settings.hero_primary_label }}
+              </a>
+            {% endif %}
+
+            {% if section.settings.hero_secondary_label != blank %}
+              <a class="dp-btn" href="{{ section.settings.hero_secondary_link }}">
+                {{ section.settings.hero_secondary_label }}
+              </a>
+            {% endif %}
+          </div>
+
+          <div class="dp-hero__trust" aria-label="Program highlights">
+            {% for block in section.blocks %}
+              {% if block.type == 'hero_pill' %}
+                <span class="dp-pill" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </span>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="dp-hero__visual">
+          <div class="dp-hero__media-card">
+            {% if section.settings.hero_image != blank %}
+              {{
+                section.settings.hero_image
+                | image_url: width: 1400
+                | image_tag:
+                  class: 'dp-hero__image',
+                  loading: 'eager',
+                  fetchpriority: 'high',
+                  alt: section.settings.hero_image_alt
+              }}
+            {% elsif section.settings.hero_image_url != blank %}
+              <img
+                class="dp-hero__image"
+                src="{{ section.settings.hero_image_url }}"
+                alt="{{ section.settings.hero_image_alt | escape }}"
+                loading="eager"
+                fetchpriority="high"
+                width="900"
+                height="1100"
+              >
+            {% else %}
+              <div class="dp-hero__placeholder" aria-hidden="true">
+                <div class="dp-logo-mark">BOKA</div>
+              </div>
+            {% endif %}
+
+            {% if section.settings.hero_note_title != blank or section.settings.hero_note_text != blank %}
+              <div class="dp-hero__note">
+                {% if section.settings.hero_note_title != blank %}
+                  <p class="dp-hero__note-title">{{ section.settings.hero_note_title }}</p>
+                {% endif %}
+                {% if section.settings.hero_note_text != blank %}
+                  <p class="dp-hero__note-copy">{{ section.settings.hero_note_text }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-strip" aria-label="Program summary">
+    <div class="dp-wrap">
+      <div class="dp-strip__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'strip_card' %}
+            <div
+              class="dp-strip__cell {% if block.settings.highlight_card %}dp-strip__cell--lead{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.number != blank %}
+                <span class="dp-strip__num">{{ block.settings.number }}</span>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-strip__label">{{ block.settings.text }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
+    <div class="dp-wrap">
+      <div class="dp-split">
+        <div>
+          {% if section.settings.what_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
+          {% endif %}
+
+          {% if section.settings.what_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
+          {% endif %}
+
+          {% if section.settings.what_text_1 != blank %}
+            <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
+          {% endif %}
+
+          {% if section.settings.what_text_2 != blank %}
+            <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
+          {% endif %}
+
+          <div class="dp-mini-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'what_mini_card' %}
+                <div class="dp-mini" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <p class="dp-mini__title">{{ block.settings.title }}</p>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <p class="dp-mini__copy">{{ block.settings.text }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="dp-card dp-ingredient-card">
+          {% if section.settings.ingredient_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>
+          {% endif %}
+
+          {% if section.settings.ingredient_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>
+          {% endif %}
+
+          <ul class="dp-check-list">
+            {% for block in section.blocks %}
+              {% if block.type == 'ingredient_bullet' %}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-why" id="why-hygienists" aria-label="Why this program is for hygienists">
+    <div class="dp-wrap">
+      {% if section.settings.why_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
+      {% endif %}
+
+      {% if section.settings.why_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.why_text != blank %}
+        <p class="dp-copy">{{ section.settings.why_text }}</p>
+      {% endif %}
+
+      <div class="dp-card-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'why_card' %}
+            <article class="dp-info-card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-video" id="advisory-video" aria-label="Dental Advisory Committee video">
+    <div class="dp-wrap">
+      <div class="dp-split dp-split--reverse">
+        <div>
+          <div class="dp-video-card">
+            {% if section.settings.video_embed_code != blank %}
+              {{ section.settings.video_embed_code }}
+            {% else %}
+              <div class="dp-video-placeholder">
+                <div>
+                  <span class="dp-play" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </span>
+                  <p>{{ section.settings.video_placeholder_text }}</p>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div>
+          {% if section.settings.video_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.video_kicker }}</span>
+          {% endif %}
+          {% if section.settings.video_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.video_heading }}</h2>
+          {% endif %}
+          {% if section.settings.video_text != blank %}
+            <p class="dp-copy">{{ section.settings.video_text }}</p>
+          {% endif %}
+
+          {% if section.settings.advisor_name != blank or section.settings.advisor_role != blank %}
+            <div class="dp-advisor">
+              <div class="dp-advisor__avatar">{{ section.settings.advisor_avatar }}</div>
+              <div>
+                {% if section.settings.advisor_name != blank %}
+                  <p class="dp-advisor__name">{{ section.settings.advisor_name }}</p>
+                {% endif %}
+                {% if section.settings.advisor_role != blank %}
+                  <p class="dp-advisor__role">{{ section.settings.advisor_role }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
+    <div class="dp-wrap">
+      {% if section.settings.how_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+      {% endif %}
+      {% if section.settings.how_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
+      {% endif %}
+      {% if section.settings.how_text != blank %}
+        <p class="dp-copy">{{ section.settings.how_text }}</p>
+      {% endif %}
+
+      <div class="dp-steps">
+        {% for block in section.blocks %}
+          {% if block.type == 'how_step' %}
+            <article class="dp-step" {{ block.shopify_attributes }}>
+              {% if block.settings.number != blank %}
+                <span class="dp-step__num">{{ block.settings.number }}</span>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="dp-step__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-step__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="dp-commission">
+        <div>
+          {% if section.settings.commission_kicker != blank %}
+            <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
+          {% endif %}
+          {% if section.settings.commission_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.commission_heading }}</h3>
+          {% endif %}
+          {% if section.settings.commission_text != blank %}
+            <p class="dp-copy dp-commission__copy">{{ section.settings.commission_text }}</p>
+          {% endif %}
+        </div>
+        <div class="dp-rates">
+          {% for block in section.blocks %}
+            {% if block.type == 'commission_rate' %}
+              <div class="dp-rate" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.label }}</span>
+                <span>{{ block.settings.value }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-b2b" id="practice-benefits" aria-label="Boka Pro benefits and current B2B information">
+    <div class="dp-wrap">
+      <div class="dp-b2b-box">
+        <div>
+          {% if section.settings.b2b_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.b2b_kicker }}</span>
+          {% endif %}
+          {% if section.settings.b2b_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.b2b_heading }}</h2>
+          {% endif %}
+          {% if section.settings.b2b_text != blank %}
+            <p class="dp-copy">{{ section.settings.b2b_text }}</p>
+          {% endif %}
+
+          <div class="dp-btn-row">
+            {% if section.settings.b2b_primary_label != blank %}
+              <a class="dp-btn dp-btn--primary" href="{{ section.settings.b2b_primary_link }}">
+                {{ section.settings.b2b_primary_label }}
+              </a>
+            {% endif %}
+            {% if section.settings.b2b_secondary_label != blank %}
+              <a class="dp-btn" href="{{ section.settings.b2b_secondary_link }}">
+                {{ section.settings.b2b_secondary_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+        <div>
+          <div class="dp-process">
+            {% for block in section.blocks %}
+              {% if block.type == 'process_item' %}
+                <div class="dp-process__item" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <p class="dp-process__title">{{ block.settings.title }}</p>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <p class="dp-process__copy">{{ block.settings.text }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          {% if section.settings.b2b_note != blank %}
+            <p class="dp-note">{{ section.settings.b2b_note }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist approved">
+    <div class="dp-wrap">
+      {% if section.settings.testimonials_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.testimonials_kicker }}</span>
+      {% endif %}
+      {% if section.settings.testimonials_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.testimonials_heading }}</h2>
+      {% endif %}
+
+      <div class="dp-quote-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'quote' %}
+            <article class="dp-quote" {{ block.shopify_attributes }}>
+              {% if block.settings.quote != blank %}
+                <p class="dp-quote__text">“{{ block.settings.quote }}”</p>
+              {% endif %}
+              {% if block.settings.name != blank %}
+                <p class="dp-quote__name">{{ block.settings.name }}</p>
+              {% endif %}
+              {% if block.settings.role != blank %}
+                <p class="dp-quote__role">{{ block.settings.role }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
+    <div class="dp-wrap">
+      <div class="dp-form-shell">
+        <div>
+          {% if section.settings.form_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.form_kicker }}</span>
+          {% endif %}
+          {% if section.settings.form_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.form_heading }}</h2>
+          {% endif %}
+          {% if section.settings.form_text != blank %}
+            <p class="dp-copy">{{ section.settings.form_text }}</p>
+          {% endif %}
+
+          <ul class="dp-check-list">
+            {% for block in section.blocks %}
+              {% if block.type == 'form_bullet' %}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="dp-form">
+          {% form 'contact' %}
+            {% if form.posted_successfully? %}
+              <p class="dp-copy">{{ section.settings.form_success_message }}</p>
+            {% endif %}
+
+            {% if form.errors %}
+              <div class="dp-note" style="margin: 0 0 18px;">{{ section.settings.form_error_message }}</div>
+            {% endif %}
+
+            <input type="hidden" name="contact[form_name]" value="{{ section.settings.form_name }}">
+
+            <div class="dp-fields">
+              <div>
+                <label class="dp-label" for="dp-first-name-{{ section.id }}">{{ section.settings.form_first_name_label }}</label>
+                <input class="dp-input" id="dp-first-name-{{ section.id }}" name="contact[first_name]" type="text" autocomplete="given-name" required>
+              </div>
+
+              <div>
+                <label class="dp-label" for="dp-last-name-{{ section.id }}">{{ section.settings.form_last_name_label }}</label>
+                <input class="dp-input" id="dp-last-name-{{ section.id }}" name="contact[last_name]" type="text" autocomplete="family-name" required>
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-email-{{ section.id }}">{{ section.settings.form_email_label }}</label>
+                <input class="dp-input" id="dp-email-{{ section.id }}" name="contact[email]" type="email" autocomplete="email" required>
+              </div>
+
+              <div>
+                <label class="dp-label" for="dp-role-{{ section.id }}">{{ section.settings.form_role_label }}</label>
+                <select class="dp-select" id="dp-role-{{ section.id }}" name="contact[role]" required>
+                  <option value="" disabled selected>{{ section.settings.form_role_placeholder }}</option>
+                  <option value="Dental Hygienist">Dental hygienist</option>
+                  <option value="Dentist">Dentist</option>
+                  <option value="Orthodontist">Orthodontist</option>
+                  <option value="Practice Owner">Practice owner</option>
+                  <option value="Other Dental Professional">Other dental professional</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="dp-label" for="dp-state-{{ section.id }}">{{ section.settings.form_state_label }}</label>
+                <input class="dp-input" id="dp-state-{{ section.id }}" name="contact[state]" type="text" placeholder="{{ section.settings.form_state_placeholder }}" required>
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-practice-{{ section.id }}">{{ section.settings.form_practice_label }}</label>
+                <input class="dp-input" id="dp-practice-{{ section.id }}" name="contact[practice]" type="text" placeholder="{{ section.settings.form_practice_placeholder }}">
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-share-{{ section.id }}">{{ section.settings.form_share_label }}</label>
+                <select class="dp-select" id="dp-share-{{ section.id }}" name="contact[sharing_method]" required>
+                  <option value="" disabled selected>{{ section.settings.form_share_placeholder }}</option>
+                  <option value="Chair-side recommendation">Chair-side recommendation</option>
+                  <option value="Patient follow-up emails">Patient follow-up emails</option>
+                  <option value="Social media">Social media</option>
+                  <option value="Practice website / blog">Practice website / blog</option>
+                  <option value="Multiple channels">Multiple channels</option>
+                </select>
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-message-{{ section.id }}">{{ section.settings.form_message_label }}</label>
+                <textarea class="dp-textarea" id="dp-message-{{ section.id }}" name="contact[body]" placeholder="{{ section.settings.form_message_placeholder }}"></textarea>
+              </div>
+            </div>
+
+            <label class="dp-checkbox" for="dp-consent-{{ section.id }}">
+              <input type="checkbox" id="dp-consent-{{ section.id }}" name="contact[consent]" value="yes" required>
+              <span>{{ section.settings.form_consent_text }}</span>
+            </label>
+
+            <button class="dp-btn dp-btn--primary" type="submit">{{ section.settings.form_submit_label }}</button>
+
+            {% if section.settings.form_fine_print != blank %}
+              <p class="dp-form__fine">{{ section.settings.form_fine_print }}</p>
+            {% endif %}
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-faq" aria-label="Dental Pros Program FAQ">
+    <div class="dp-wrap">
+      {% if section.settings.faq_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.faq_kicker }}</span>
+      {% endif %}
+      {% if section.settings.faq_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.faq_heading }}</h2>
+      {% endif %}
+
+      <div class="dp-faq-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'faq' %}
+            <div class="dp-faq-item" {{ block.shopify_attributes }}>
+              {% if block.settings.question != blank %}
+                <h3>{{ block.settings.question }}</h3>
+              {% endif %}
+              {% if block.settings.answer != blank %}
+                <p>{{ block.settings.answer }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-final" aria-label="Final call to action">
+    <div class="dp-wrap">
+      {% if section.settings.final_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.final_heading }}</h2>
+      {% endif %}
+      {% if section.settings.final_text != blank %}
+        <p class="dp-copy">{{ section.settings.final_text }}</p>
+      {% endif %}
+      <div class="dp-btn-row" style="justify-content: center;">
+        {% if section.settings.final_button_label != blank %}
+          <a class="dp-btn dp-btn--light" href="{{ section.settings.final_button_link }}">
+            {{ section.settings.final_button_label }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</main>
+
+{% schema %}
+{
+  "name": "Dental Pros Landing",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_kicker", "label": "Hero eyebrow", "default": "Boka Dental Pros" },
+    { "type": "html", "id": "hero_heading", "label": "Hero heading", "default": "Recommend oral care that feels <span class=\"dp-em\">easy</span> to love." },
+    { "type": "textarea", "id": "hero_text", "label": "Hero body text", "default": "Boka blends science and nature to create effective, feel-good oral care. The Dental Pros Program gives hygienists and dental professionals a simple way to share Boka with patients, access practice benefits, and earn commission on qualifying referrals." },
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
+    { "type": "text", "id": "hero_image_url", "label": "Fallback hero image URL", "default": "https://cdn.shopify.com/s/files/1/2656/6094/files/strawberry-mango-6.jpg?v=1741373408" },
+    { "type": "text", "id": "hero_image_alt", "label": "Hero image alt text", "default": "Boka oral care product lifestyle image" },
+    { "type": "text", "id": "hero_note_title", "label": "Hero image note title", "default": "For chair-side confidence" },
+    { "type": "textarea", "id": "hero_note_text", "label": "Hero image note text", "default": "Give patients a clear, approachable option for daily oral care powered by nano-hydroxyapatite (n-Ha)." },
+    { "type": "text", "id": "hero_primary_label", "label": "Primary button label", "default": "Apply now" },
+    { "type": "text", "id": "hero_primary_link", "label": "Primary button link", "default": "#signup" },
+    { "type": "text", "id": "hero_secondary_label", "label": "Secondary button label", "default": "See how it works" },
+    { "type": "text", "id": "hero_secondary_link", "label": "Secondary button link", "default": "#how-it-works" },
+
+    { "type": "header", "content": "What Boka is" },
+    { "type": "text", "id": "what_kicker", "label": "Eyebrow", "default": "What Boka is" },
+    { "type": "html", "id": "what_heading", "label": "Heading", "default": "Science-backed care, made for the <span class=\"dp-em\">everyday</span>." },
+    { "type": "textarea", "id": "what_text_1", "label": "Body text 1", "default": "Boka creates oral care that supports the mouth as part of whole-body wellness. Our formulas are designed to be effective, elevated, and easy to recommend without making oral care feel clinical or complicated." },
+    { "type": "textarea", "id": "what_text_2", "label": "Body text 2", "default": "Our n-Ha toothpastes are powered by nano-hydroxyapatite, a form of calcium that makes up the primary foundation of teeth and bones. It helps support tooth enamel health while giving patients a thoughtful alternative in their daily routine." },
+    { "type": "text", "id": "ingredient_kicker", "label": "Ingredient card eyebrow", "default": "Why patients ask about it" },
+    { "type": "html", "id": "ingredient_heading", "label": "Ingredient card heading", "default": "More mindful oral care, without the scare tactics." },
+
+    { "type": "header", "content": "Why Hygienists" },
+    { "type": "text", "id": "why_kicker", "label": "Eyebrow", "default": "Why hygienists" },
+    { "type": "html", "id": "why_heading", "label": "Heading", "default": "You are already the trusted voice in the <span class=\"dp-em\">chair</span>." },
+    { "type": "textarea", "id": "why_text", "label": "Body text", "default": "Hygienists translate oral care into everyday habits. This program is built for the moments when patients ask what to use at home, want a fluoride-free option, or need a routine they will actually stick with." },
+
+    { "type": "header", "content": "Video" },
+    { "type": "html", "id": "video_embed_code", "label": "Video embed code", "info": "Paste the full YouTube, Vimeo, or Shopify-hosted video embed here." },
+    { "type": "textarea", "id": "video_placeholder_text", "label": "Video placeholder text", "default": "Short video from a Boka Dental Advisory Committee member explaining why they recommend Boka." },
+    { "type": "text", "id": "video_kicker", "label": "Video eyebrow", "default": "Advisory committee perspective" },
+    { "type": "html", "id": "video_heading", "label": "Video heading", "default": "A quick expert note before patients buy." },
+    { "type": "textarea", "id": "video_text", "label": "Video body text", "default": "Use this space for a short, human video that gives hygienists and patients confidence. The best version should be under 60 seconds, clearly explain why the advisor recommends Boka, and end with a simple invitation to try the routine." },
+    { "type": "text", "id": "advisor_avatar", "label": "Advisor avatar text", "default": "Dr." },
+    { "type": "text", "id": "advisor_name", "label": "Advisor name", "default": "Dental Advisory Committee Member" },
+    { "type": "text", "id": "advisor_role", "label": "Advisor role", "default": "Replace with name, credentials, and specialty once the final video is approved." },
+
+    { "type": "header", "content": "How it works / commission" },
+    { "type": "text", "id": "how_kicker", "label": "Eyebrow", "default": "How commissions work" },
+    { "type": "html", "id": "how_heading", "label": "Heading", "default": "A simple affiliate flow built around <span class=\"dp-em\">authentic</span> recommendations." },
+    { "type": "textarea", "id": "how_text", "label": "Body text", "default": "Once approved, you receive a unique referral link and/or promo code. When a patient shops through your link, the order is tracked to you and commission is paid on qualifying purchases." },
+    { "type": "text", "id": "commission_kicker", "label": "Commission eyebrow", "default": "Commission example" },
+    { "type": "html", "id": "commission_heading", "label": "Commission heading", "default": "Set the actual rates here before launch." },
+    { "type": "textarea", "id": "commission_text", "label": "Commission body text", "default": "These values are placeholders based on the current draft. Update them to match your final affiliate platform and legal terms." },
+
+    { "type": "header", "content": "Practice benefits / B2B" },
+    { "type": "text", "id": "b2b_kicker", "label": "Eyebrow", "default": "Practice benefits" },
+    { "type": "html", "id": "b2b_heading", "label": "Heading", "default": "The B2B details from the current Dental Pros page." },
+    { "type": "textarea", "id": "b2b_text", "label": "Body text", "default": "Keep the practical Boka Pro information on the page so dental professionals understand both sides of the program: affiliate referrals for patients and discounted ordering for their practice." },
+    { "type": "text", "id": "b2b_primary_label", "label": "Primary button label", "default": "Apply now" },
+    { "type": "text", "id": "b2b_primary_link", "label": "Primary button link", "default": "#signup" },
+    { "type": "text", "id": "b2b_secondary_label", "label": "Secondary button label", "default": "Already approved? Log in" },
+    { "type": "text", "id": "b2b_secondary_link", "label": "Secondary button link", "default": "https://account.boka.com" },
+    { "type": "textarea", "id": "b2b_note", "label": "B2B note", "default": "Please note: customers outside of the U.S. and Canada are not being accepted at this time. All Boka Pros purchases are final sale. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts." },
+
+    { "type": "header", "content": "Testimonials" },
+    { "type": "text", "id": "testimonials_kicker", "label": "Eyebrow", "default": "Dentist & hygienist approved" },
+    { "type": "html", "id": "testimonials_heading", "label": "Heading", "default": "Recommended by professionals who care about the daily routine." },
+
+    { "type": "header", "content": "Form" },
+    { "type": "text", "id": "form_kicker", "label": "Eyebrow", "default": "Apply now" },
+    { "type": "html", "id": "form_heading", "label": "Heading", "default": "Join the Boka Dental Pros Program." },
+    { "type": "textarea", "id": "form_text", "label": "Body text", "default": "Use this form for the Shopify page draft, or replace it with your final affiliate platform form embed once the program is ready." },
+    { "type": "text", "id": "form_name", "label": "Hidden form name", "default": "Dental Pros Program Application" },
+    { "type": "text", "id": "form_success_message", "label": "Success message", "default": "Thank you for applying. We’ll review your information and follow up by email." },
+    { "type": "text", "id": "form_error_message", "label": "Error message", "default": "Please check the required fields and try again." },
+    { "type": "text", "id": "form_first_name_label", "label": "First name label", "default": "First name" },
+    { "type": "text", "id": "form_last_name_label", "label": "Last name label", "default": "Last name" },
+    { "type": "text", "id": "form_email_label", "label": "Email label", "default": "Email" },
+    { "type": "text", "id": "form_role_label", "label": "Role label", "default": "Professional role" },
+    { "type": "text", "id": "form_role_placeholder", "label": "Role placeholder", "default": "Select one" },
+    { "type": "text", "id": "form_state_label", "label": "State / province label", "default": "State / Province" },
+    { "type": "text", "id": "form_state_placeholder", "label": "State / province placeholder", "default": "Illinois" },
+    { "type": "text", "id": "form_practice_label", "label": "Practice label", "default": "Practice / employer name" },
+    { "type": "text", "id": "form_practice_placeholder", "label": "Practice placeholder", "default": "Lakeside Family Dental" },
+    { "type": "text", "id": "form_share_label", "label": "Share method label", "default": "How do you plan to share Boka?" },
+    { "type": "text", "id": "form_share_placeholder", "label": "Share method placeholder", "default": "Select primary method" },
+    { "type": "text", "id": "form_message_label", "label": "Message label", "default": "Anything else we should know?" },
+    { "type": "textarea", "id": "form_message_placeholder", "label": "Message placeholder", "default": "Tell us about your patient base, practice, or interest in Boka." },
+    { "type": "textarea", "id": "form_consent_text", "label": "Consent text", "default": "I confirm I am a dental professional and agree to Boka’s program terms and privacy policy. I understand commissions apply only to qualifying purchases made through my unique referral link or code." },
+    { "type": "text", "id": "form_submit_label", "label": "Submit button label", "default": "Apply to the program" },
+    { "type": "textarea", "id": "form_fine_print", "label": "Fine print", "default": "Approval timing, commission eligibility, and payment terms should match your final affiliate program rules." },
+
+    { "type": "header", "content": "FAQ" },
+    { "type": "text", "id": "faq_kicker", "label": "Eyebrow", "default": "FAQ" },
+    { "type": "html", "id": "faq_heading", "label": "Heading", "default": "Quick answers before you apply." },
+
+    { "type": "header", "content": "Final CTA" },
+    { "type": "html", "id": "final_heading", "label": "Heading", "default": "Ready to share Boka with your patients?" },
+    { "type": "textarea", "id": "final_text", "label": "Body text", "default": "Apply to join the Dental Pros Program and get the tools to recommend Boka clearly, confidently, and beautifully." },
+    { "type": "text", "id": "final_button_label", "label": "Button label", "default": "Apply now" },
+    { "type": "text", "id": "final_button_link", "label": "Button link", "default": "#signup" }
+  ],
+  "blocks": [
+    {
+      "type": "hero_pill",
+      "name": "Hero pill",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "For hygienists & dental professionals" }
+      ]
+    },
+    {
+      "type": "strip_card",
+      "name": "Program summary card",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number / label", "default": "01" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Apply to join the Dental Pros Program." },
+        { "type": "checkbox", "id": "highlight_card", "label": "Highlight this card", "default": false }
+      ]
+    },
+    {
+      "type": "what_mini_card",
+      "name": "What Boka mini card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Science-backed wellness" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Clear education around ingredients, benefits, and daily oral care." }
+      ]
+    },
+    {
+      "type": "ingredient_bullet",
+      "name": "Ingredient bullet",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Fluoride-free n-Ha toothpaste options" }
+      ]
+    },
+    {
+      "type": "why_card",
+      "name": "Why hygienists card",
+      "settings": [
+        { "type": "text", "id": "icon", "label": "Icon / number", "default": "1" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Patients want guidance" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "You can point patients toward products that align with their preferences, routine, and oral care goals." }
+      ]
+    },
+    {
+      "type": "how_step",
+      "name": "How it works step",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number", "default": "01" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Apply" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Tell us about your role, practice, and how you plan to share Boka with patients." }
+      ]
+    },
+    {
+      "type": "commission_rate",
+      "name": "Commission rate",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "First-time customer purchase" },
+        { "type": "text", "id": "value", "label": "Value", "default": "15%" }
+      ]
+    },
+    {
+      "type": "process_item",
+      "name": "B2B process item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Fill out the application" },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Dental professionals apply with practice and contact details." }
+      ]
+    },
+    {
+      "type": "quote",
+      "name": "Quote",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "We love that Boka is a healthy and effective dental product to provide our patients." },
+        { "type": "text", "id": "name", "label": "Name", "default": "Dr. Vladana Babcic Tal, DMD" },
+        { "type": "text", "id": "role", "label": "Role / label", "default": "Dental professional quote from current page" }
+      ]
+    },
+    {
+      "type": "form_bullet",
+      "name": "Form bullet",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "Dental professional application review" }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Who is the program for?" },
+        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Licensed dental professionals, hygienists, dentists, orthodontists, and practice teams who want to recommend Boka or order for their practice." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dental Pros Landing",
+      "blocks": [
+        { "type": "hero_pill", "settings": { "text": "For hygienists & dental professionals" } },
+        { "type": "hero_pill", "settings": { "text": "Affiliate commissions" } },
+        { "type": "hero_pill", "settings": { "text": "Practice discounts" } },
+        { "type": "hero_pill", "settings": { "text": "U.S. & Canada only" } },
+
+        { "type": "strip_card", "settings": { "number": "A", "text": "A simple way for dental professionals to recommend Boka with confidence.", "highlight_card": true } },
+        { "type": "strip_card", "settings": { "number": "01", "text": "Apply to join the Dental Pros Program." } },
+        { "type": "strip_card", "settings": { "number": "02", "text": "Get approved and receive your unique referral link or code." } },
+        { "type": "strip_card", "settings": { "number": "03", "text": "Share Boka with patients and earn on qualifying orders." } },
+
+        { "type": "what_mini_card", "settings": { "title": "Science-backed wellness", "text": "Clear education around ingredients, benefits, and daily oral care." } },
+        { "type": "what_mini_card", "settings": { "title": "Elevated experience", "text": "Beautiful formulas, packaging, and flavors patients want to use consistently." } },
+
+        { "type": "ingredient_bullet", "settings": { "text": "Fluoride-free n-Ha toothpaste options" } },
+        { "type": "ingredient_bullet", "settings": { "text": "SLS-free and paraben-free formulas" } },
+        { "type": "ingredient_bullet", "settings": { "text": "No artificial flavors or endocrine disruptors" } },
+        { "type": "ingredient_bullet", "settings": { "text": "Low-foaming, feel-good brushing experience" } },
+        { "type": "ingredient_bullet", "settings": { "text": "Designed to support enamel health and daily consistency" } },
+
+        { "type": "why_card", "settings": { "icon": "1", "title": "Patients want guidance", "text": "You can point patients toward products that align with their preferences, routine, and oral care goals." } },
+        { "type": "why_card", "settings": { "icon": "2", "title": "Recommendations should feel simple", "text": "Your link or code gives patients an easy next step after an appointment, follow-up email, or social post." } },
+        { "type": "why_card", "settings": { "icon": "3", "title": "Education creates consistency", "text": "Boka gives you clear ingredient talking points so chair-side education feels confident, modern, and approachable." } },
+
+        { "type": "how_step", "settings": { "number": "01", "title": "Apply", "text": "Tell us about your role, practice, and how you plan to share Boka with patients." } },
+        { "type": "how_step", "settings": { "number": "02", "title": "Get your link", "text": "If approved, we send your referral link, promo code, and dashboard details." } },
+        { "type": "how_step", "settings": { "number": "03", "title": "Share with patients", "text": "Use it chair-side, in follow-up emails, on your practice website, or on social." } },
+        { "type": "how_step", "settings": { "number": "04", "title": "Earn commission", "text": "Qualifying purchases are tracked in your dashboard and paid according to program terms." } },
+
+        { "type": "commission_rate", "settings": { "label": "First-time customer purchase", "value": "15%" } },
+        { "type": "commission_rate", "settings": { "label": "Subscription / recurring purchase", "value": "10%" } },
+        { "type": "commission_rate", "settings": { "label": "Performance bonus tier", "value": "Up to 20%" } },
+
+        { "type": "process_item", "settings": { "title": "Fill out the application", "text": "Dental professionals apply with practice and contact details." } },
+        { "type": "process_item", "settings": { "title": "Get account info if approved", "text": "Approved members receive account information and next steps by email." } },
+        { "type": "process_item", "settings": { "title": "Place discounted practice orders", "text": "Use your Boka Pro account for eligible discounted ordering for your practice." } },
+        { "type": "process_item", "settings": { "title": "Support happier patients and healthier mouths", "text": "Recommend simple daily oral care routines patients can continue at home." } },
+
+        { "type": "quote", "settings": { "quote": "We love that Boka is a healthy and effective dental product to provide our patients.", "name": "Dr. Vladana Babcic Tal, DMD", "role": "Dental professional quote from current page" } },
+        { "type": "quote", "settings": { "quote": "I’m proud to recommend Boka to my patients. It’s a great way to bring high-quality and innovative oral health products directly to their door.", "name": "Dr. Amy Hatruong, DDS", "role": "Dental professional quote from current page" } },
+
+        { "type": "form_bullet", "settings": { "text": "Dental professional application review" } },
+        { "type": "form_bullet", "settings": { "text": "Unique referral link or code after approval" } },
+        { "type": "form_bullet", "settings": { "text": "Practice discount access where eligible" } },
+        { "type": "form_bullet", "settings": { "text": "Educational resources for patient conversations" } },
+
+        { "type": "faq", "settings": { "question": "Who is the program for?", "answer": "Licensed dental professionals, hygienists, dentists, orthodontists, and practice teams who want to recommend Boka or order for their practice." } },
+        { "type": "faq", "settings": { "question": "How do commissions work?", "answer": "Approved members receive a unique link or code. Qualifying patient purchases are tracked to that link or code and paid according to program terms." } },
+        { "type": "faq", "settings": { "question": "Can I order products for my practice?", "answer": "Yes, the page should continue to explain Boka Pro practice discounts and account access for approved members." } },
+        { "type": "faq", "settings": { "question": "Can I resell products online?", "answer": "No. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
