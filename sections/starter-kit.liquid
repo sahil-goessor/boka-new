@@ -479,6 +479,58 @@
                   product_form_id: product_form_id,
                   stickyAtc: stickyAtc
               %}
+              <div class="starter-kit__included-box">
+  <h2 class="starter-kit__section-title">What’s included</h2>
+
+  <div class="starter-kit__included-grid">
+    <div class="starter-kit__included-card">
+      {% if product.selected_or_first_available_variant.featured_media %}
+        {{
+          product.selected_or_first_available_variant.featured_media
+          | image_url: width: 360
+          | image_tag:
+            loading: 'lazy',
+            alt: product.selected_or_first_available_variant.featured_media.alt | default: product.selected_or_first_available_variant.title
+        }}
+      {% elsif product.featured_media %}
+        {{
+          product.featured_media
+          | image_url: width: 360
+          | image_tag:
+            loading: 'lazy',
+            alt: product.title
+        }}
+      {% endif %}
+
+                    <div class="starter-kit__included-title">
+                        {{ product.selected_or_first_available_variant.title }}
+                    </div>
+                    <div class="starter-kit__included-subtitle">4 oz</div>
+                    </div>
+
+                <div class="starter-kit__included-card">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/2656/6094/files/Classic_Brush_Mint_8d759cd4-0976-45c7-a7a3-cd0cd2f14527.jpg?v=1738586774"
+                    alt="Classic Brush Mint"
+                    loading="lazy"
+                    width="360"
+                    height="360"
+                >
+                <div class="starter-kit__included-title">1 Classic Brush</div>
+                </div>
+
+                <div class="starter-kit__included-card">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/2656/6094/files/Main_1_1.webp?v=1763467756"
+                    alt="Tongue Cleaner"
+                    loading="lazy"
+                    width="360"
+                    height="360"
+                >
+                <div class="starter-kit__included-title">1 Tongue Cleaner</div>
+                </div>
+            </div>
+            </div>
             {%- when 'custom_button' -%}
               {% if block.settings.custom_button_url %}
                   {% render 'product-custom-button', block: block %}
@@ -1941,7 +1993,111 @@ div#sticky-atc__button{
     white-space: nowrap;
     margin: 0;
   }
+/* Price + free shipping pill */
+.starter-kit-template .starter-kit__price-helper-row {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
+.starter-kit-template .starter-kit__price-inline-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.starter-kit-template .starter-kit__shipping-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  margin-left: auto;
+  padding: 8px 12px;
+  background: var(--starter-sage-light);
+  color: var(--starter-ink);
+  font-weight: 700;
+  border-radius: var(--starter-radius);
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.starter-kit-template .starter-kit__shipping-pill-icon {
+  color: var(--starter-forest);
+}
+
+/* What’s included */
+.starter-kit-template .starter-kit__included-box {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--starter-border);
+}
+
+.starter-kit-template .starter-kit__section-title {
+  margin: 0;
+  color: var(--starter-ink-mid);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.starter-kit-template .starter-kit__included-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.starter-kit-template .starter-kit__included-card {
+  padding: 12px 8px;
+  border: 1px solid var(--starter-border);
+  border-radius: 8px;
+  background: var(--starter-white);
+  text-align: center;
+}
+
+.starter-kit-template .starter-kit__included-card img {
+  width: 100%;
+  height: 58px;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+
+.starter-kit-template .starter-kit__included-title {
+  color: var(--starter-ink);
+  font-size: 11px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.starter-kit-template .starter-kit__included-subtitle {
+  margin-top: 2px;
+  color: var(--starter-ink-mid);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 749px) {
+  .starter-kit-template .starter-kit__price-inline-row {
+    align-items: flex-start;
+  }
+
+  .starter-kit-template .starter-kit__shipping-pill {
+    margin-left: 0;
+    white-space: normal;
+  }
+
+  .starter-kit-template .starter-kit__included-card {
+    padding: 10px 6px;
+  }
+
+  .starter-kit-template .starter-kit__included-card img {
+    height: 48px;
+  }
+}
   /* 6) full-width button */
   div#sticky-atc__button {
     grid-area: button;
