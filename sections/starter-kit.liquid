@@ -1,6 +1,6 @@
 <section
   id="MainProduct-{{ section.id }}"
-  class="page-width section-{{ section.id }}-padding starter-kit-template"
+  class="section-{{ section.id }}-padding starter-kit-template starter-kit-template--full-media"
   data-section="{{ section.id }}"
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -63,6 +63,7 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
+  <div class="starter-kit-template__inner">
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} desktop-sticky-atc">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'custom-badge', product: product %}
@@ -732,7 +733,6 @@
         </a>
       </product-info>
     </div>
-        {% render 'sticky-add-to-cart' %}  
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
       <div class="grid__item product__media-wrapper small-hide">
@@ -741,6 +741,9 @@
       </div>
     {%- endif -%}
   </div>
+  </div>
+
+  {% render 'sticky-add-to-cart' %}
 
   {% render 'product-media-modal' variant_images: variant_images %}
 
@@ -1723,6 +1726,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </section>
+
 
 <style>
 
