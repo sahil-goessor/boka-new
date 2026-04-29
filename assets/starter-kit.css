@@ -26,7 +26,7 @@
 }
 
 .starter-kit-template {
-  background: var(--starter-cream);
+  background: var(--starter-white);
   color: var(--starter-ink);
   font-family: var(--starter-font);
   -webkit-font-smoothing: antialiased;
