@@ -354,17 +354,17 @@
     line-height: 1.55;
   }
 
-  /* INTRO STRIP */
-.dp-strip {
+ .dp-strip {
   position: relative;
   z-index: 2;
-  margin-top: -54px;
-  padding-bottom: 42px;
+  margin-top: -62px;
+  padding-bottom: clamp(22px, 3vw, 36px);
   background: transparent;
   color: var(--dp-ink);
 }
+
 .dp-strip + .dp-b2b {
-  padding-top: clamp(32px, 4vw, 64px);
+  padding-top: clamp(24px, 3vw, 44px);
 }
 
 .dp-b2b + #what-is-boka {
@@ -763,21 +763,24 @@
   }
 
   .dp-b2b {
-  background:
-    radial-gradient(circle at 85% 10%, rgba(191, 214, 165, 0.38), transparent 30%),
-    var(--dp-cream);
+  position: relative;
+  background: transparent;
 }
 
-  .dp-b2b-box {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: clamp(26px, 5vw, 70px);
-    align-items: start;
-    border-radius: 34px;
-    padding: clamp(28px, 5vw, 60px);
-    background: rgba(250,250,245,0.78);
-    border: 1px solid rgba(115,124,91,0.20);
-  }
+.dp-b2b-box {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(26px, 5vw, 70px);
+  align-items: start;
+  border-radius: 34px;
+  padding: clamp(28px, 5vw, 58px);
+  background:
+    radial-gradient(circle at 92% 0%, rgba(211, 231, 192, 0.60), transparent 34%),
+    rgba(250, 250, 245, 0.78);
+  border: 1px solid rgba(115, 124, 91, 0.18);
+  box-shadow: 0 28px 90px rgba(34, 39, 33, 0.08);
+  backdrop-filter: blur(14px);
+}
 
   .dp-process {
     display: grid;
@@ -1087,8 +1090,8 @@
     }
 
     .dp-section {
-      padding: 64px 0;
-    }
+  padding: clamp(58px, 6.5vw, 104px) 0;
+}
   }
 </style>
 
