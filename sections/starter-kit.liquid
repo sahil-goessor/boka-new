@@ -482,55 +482,32 @@
               <div class="starter-kit__included-box">
   <h2 class="starter-kit__section-title">What’s included</h2>
 
-  <div class="starter-kit__included-grid">
-    <div class="starter-kit__included-card">
-      {% if product.selected_or_first_available_variant.featured_media %}
-        {{
-          product.selected_or_first_available_variant.featured_media
-          | image_url: width: 360
-          | image_tag:
-            loading: 'lazy',
-            alt: product.selected_or_first_available_variant.featured_media.alt | default: product.selected_or_first_available_variant.title
-        }}
-      {% elsif product.featured_media %}
-        {{
-          product.featured_media
-          | image_url: width: 360
-          | image_tag:
-            loading: 'lazy',
-            alt: product.title
-        }}
-      {% endif %}
+  <ul class="starter-kit__included-list">
+    <li>
+      <span class="starter-kit__included-check">✓</span>
+      <span>
+        <strong>{{ product.selected_or_first_available_variant.title }}</strong>
+        <small>4 oz goal toothpaste</small>
+      </span>
+    </li>
 
-                    <div class="starter-kit__included-title">
-                        {{ product.selected_or_first_available_variant.title }}
-                    </div>
-                    <div class="starter-kit__included-subtitle">4 oz</div>
-                    </div>
+    <li>
+      <span class="starter-kit__included-check">✓</span>
+      <span>
+        <strong>1 Classic Brush</strong>
+        <small>Starter routine essential</small>
+      </span>
+    </li>
 
-                <div class="starter-kit__included-card">
-                <img
-                    src="https://cdn.shopify.com/s/files/1/2656/6094/files/Classic_Brush_Mint_8d759cd4-0976-45c7-a7a3-cd0cd2f14527.jpg?v=1738586774"
-                    alt="Classic Brush Mint"
-                    loading="lazy"
-                    width="360"
-                    height="360"
-                >
-                <div class="starter-kit__included-title">1 Classic Brush</div>
-                </div>
-
-                <div class="starter-kit__included-card">
-                <img
-                    src="https://cdn.shopify.com/s/files/1/2656/6094/files/Main_1_1.webp?v=1763467756"
-                    alt="Tongue Cleaner"
-                    loading="lazy"
-                    width="360"
-                    height="360"
-                >
-                <div class="starter-kit__included-title">1 Tongue Cleaner</div>
-                </div>
-            </div>
-            </div>
+    <li>
+      <span class="starter-kit__included-check">✓</span>
+      <span>
+        <strong>1 Tongue Cleaner</strong>
+        <small>For a fresher daily routine</small>
+      </span>
+    </li>
+  </ul>
+</div>
             {%- when 'custom_button' -%}
               {% if block.settings.custom_button_url %}
                   {% render 'product-custom-button', block: block %}
