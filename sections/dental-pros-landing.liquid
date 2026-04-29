@@ -211,6 +211,37 @@
     box-shadow: var(--dp-shadow);
   }
 
+.dp-card,
+.dp-info-card,
+.dp-mini,
+.dp-step,
+.dp-quote,
+.dp-process__item,
+.dp-form {
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(34, 39, 33, 0.09);
+  box-shadow: 0 18px 54px rgba(34, 39, 33, 0.055);
+  backdrop-filter: blur(10px);
+}
+
+.dp-info-card,
+.dp-mini,
+.dp-step,
+.dp-quote,
+.dp-process__item {
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.dp-info-card:hover,
+.dp-mini:hover,
+.dp-step:hover,
+.dp-quote:hover,
+.dp-process__item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(115, 124, 91, 0.18);
+  box-shadow: 0 24px 68px rgba(34, 39, 33, 0.075);
+}
+
   /* HERO */
   .dp-hero {
     position: relative;
