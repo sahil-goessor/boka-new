@@ -1,906 +1,1252 @@
-{{ 'https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap' | stylesheet_tag }}
+{{ 'https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap' | stylesheet_tag }}
 
 <style>
   :root {
-    --boka-dark:      #222721;
-    --boka-forest:    #737c5b;
-    --boka-sage:      #a5bc8b;
-    --boka-mint:      #bfd6a5;
-    --boka-pale:      #d3e7c0;
-    --boka-frost:     #e6f4d4;
-    --boka-cream:     #fafaf5;
-    --boka-terracotta:#aa7a6b;
-    --boka-blush:     #d1aa9d;
-    --boka-rose:      #efd5ca;
-    --boka-petal:     #f9e5db;
-    --boka-warm-gray: #8c8773;
-    --boka-stone:     #c1beb0;
-    --boka-linen:     #e2e2d9;
-    --font-sans:      'Archivo', 'Neue Haas Unica W1G', Helvetica, sans-serif;
-    --font-serif:     'Times New Roman', Georgia, serif;
+    --dp-ink: #222721;
+    --dp-forest: #737c5b;
+    --dp-sage: #a5bc8b;
+    --dp-mint: #bfd6a5;
+    --dp-pale: #d3e7c0;
+    --dp-frost: #e6f4d4;
+    --dp-cream: #fafaf5;
+    --dp-porcelain: #f7f7f0;
+    --dp-white: #ffffff;
+    --dp-petal: #f9e5db;
+    --dp-rose: #efd5ca;
+    --dp-terracotta: #aa7a6b;
+    --dp-stone: #c1beb0;
+    --dp-warm-gray: #8c8773;
+    --dp-line: rgba(34, 39, 33, 0.12);
+    --dp-shadow: 0 22px 70px rgba(34, 39, 33, 0.08);
+    --dp-radius: 22px;
+    --dp-radius-sm: 14px;
+    --dp-max: 1180px;
+    --dp-font-sans: 'Archivo', 'Neue Haas Unica W1G', Helvetica, Arial, sans-serif;
+    --dp-font-serif: Georgia, 'Times New Roman', serif;
   }
 
-  .dp-page * { box-sizing: border-box; margin: 0; padding: 0; }
-  .dp-page { font-family: var(--font-sans); color: var(--boka-dark); background: var(--boka-cream); }
+  .dp-page,
+  .dp-page * {
+    box-sizing: border-box;
+  }
 
-  .dp-container { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
-  .dp-container--narrow { max-width: 800px; margin: 0 auto; padding: 0 32px; }
-  .dp-italic { font-family: var(--font-serif); font-style: italic; }
-  .dp-eyebrow {
-    display: inline-block;
-    font-family: var(--font-sans);
+  .dp-page {
+    margin: 0;
+    overflow: hidden;
+    background: var(--dp-cream);
+    color: var(--dp-ink);
+    font-family: var(--dp-font-sans);
+    letter-spacing: -0.01em;
+  }
+
+  .dp-page a {
+    color: inherit;
+  }
+
+  .dp-wrap {
+    width: min(var(--dp-max), calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  .dp-section {
+    padding: clamp(70px, 8vw, 128px) 0;
+  }
+
+  .dp-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--boka-forest);
-    margin-bottom: 16px;
-  }
-  .dp-rule {
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--boka-sage);
-    margin: 16px 0 24px;
-  }
-  .dp-btn {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 14px 32px;
-    border: 1.5px solid var(--boka-dark);
-    color: var(--boka-dark);
-    background: transparent;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-  }
-  .dp-btn:hover { background: var(--boka-dark); color: var(--boka-cream); }
-  .dp-btn--filled {
-    background: var(--boka-dark);
-    color: var(--boka-cream);
-    border-color: var(--boka-dark);
-  }
-  .dp-btn--filled:hover { background: var(--boka-forest); border-color: var(--boka-forest); color: #fff; }
-  .dp-btn--green {
-    background: var(--boka-forest);
-    color: #fff;
-    border-color: var(--boka-forest);
-  }
-  .dp-btn--green:hover { background: var(--boka-dark); border-color: var(--boka-dark); }
-
-  .dp-hero {
-    background: var(--boka-dark);
-    color: var(--boka-cream);
-    min-height: 88vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .dp-hero__bg-accent {
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 520px; height: 520px;
-    border-radius: 50%;
-    background: var(--boka-forest);
-    opacity: 0.18;
-    pointer-events: none;
-  }
-  .dp-hero__bg-accent-2 {
-    position: absolute;
-    bottom: -120px; left: 40%;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: var(--boka-terracotta);
-    opacity: 0.10;
-    pointer-events: none;
-  }
-  .dp-hero__content { padding: 96px 64px 96px 48px; position: relative; z-index: 1; }
-  .dp-hero__eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--boka-sage);
-    margin-bottom: 20px;
-    display: block;
-  }
-  .dp-hero__headline {
-    font-size: clamp(38px, 4.5vw, 60px);
-    font-weight: 300;
-    line-height: 1.12;
-    color: var(--boka-cream);
-    margin-bottom: 24px;
-  }
-  .dp-hero__headline em {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 300;
-    color: var(--boka-pale);
-  }
-  .dp-hero__body {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--boka-stone);
-    max-width: 480px;
-    margin-bottom: 40px;
-  }
-  .dp-hero__ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-  .dp-hero__cta-secondary {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--boka-stone);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .dp-hero__visual {
-    position: relative;
-    height: 100%;
-    min-height: 480px;
-    background: var(--boka-forest);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .dp-hero__visual-inner {
-    padding: 48px;
-    text-align: center;
-  }
-  .dp-hero__stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: rgba(255,255,255,0.1);
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-  }
-  .dp-hero__stat {
-    background: rgba(34,39,33,0.7);
-    padding: 24px 28px;
-    text-align: center;
-  }
-  .dp-hero__stat-num {
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--boka-pale);
-    display: block;
     line-height: 1;
-    margin-bottom: 6px;
-  }
-  .dp-hero__stat-label {
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.17em;
+    color: var(--dp-forest);
     text-transform: uppercase;
-    color: var(--boka-stone);
-  }
-  .dp-hero__product-placeholder {
-    width: 200px;
-    height: 260px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 24px;
-    position: relative;
-  }
-  .dp-hero__product-logo {
-    font-family: var(--font-sans);
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 0.5em;
-    color: var(--boka-cream);
-  }
-  .dp-hero__product-sub {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--boka-sage);
-    text-align: center;
   }
 
-  .dp-what {
-    padding: 120px 0;
-    background: var(--boka-cream);
+  .dp-kicker::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.55;
   }
-  .dp-what__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+
+  .dp-h1,
+  .dp-h2,
+  .dp-h3,
+  .dp-page p {
+    margin-block-start: 0;
+  }
+
+  .dp-h1,
+  .dp-h2,
+  .dp-h3 {
+    letter-spacing: -0.045em;
+    font-weight: 300;
+  }
+
+  .dp-h1 {
+    max-width: 780px;
+    margin-bottom: 24px;
+    font-size: clamp(46px, 7vw, 92px);
+    line-height: 0.94;
+  }
+
+  .dp-h2 {
+    margin-bottom: 18px;
+    font-size: clamp(34px, 4.2vw, 62px);
+    line-height: 1;
+  }
+
+  .dp-h3 {
+    margin-bottom: 12px;
+    font-size: clamp(22px, 2.2vw, 34px);
+    line-height: 1.08;
+  }
+
+  .dp-em {
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+  }
+
+  .dp-copy {
+    max-width: 650px;
+    margin-bottom: 24px;
+    color: rgba(34, 39, 33, 0.72);
+    font-size: clamp(16px, 1.3vw, 18px);
+    font-weight: 300;
+    line-height: 1.72;
+  }
+
+  .dp-copy--sm {
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .dp-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     align-items: center;
   }
-  .dp-what__headline {
-    font-size: clamp(30px, 3vw, 44px);
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 24px;
-  }
-  .dp-what__headline em { font-family: var(--font-serif); font-style: italic; color: var(--boka-forest); }
-  .dp-what__body { font-size: 16px; line-height: 1.8; color: #3a3d38; margin-bottom: 20px; }
-  .dp-what__pillars {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 40px;
-  }
-  .dp-what__pillar {
-    padding: 24px;
-    background: var(--boka-frost);
-    border-left: 3px solid var(--boka-sage);
-  }
-  .dp-what__pillar-title {
+
+  .dp-btn {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--dp-ink);
+    border-radius: 999px;
+    padding: 14px 24px;
+    background: transparent;
+    color: var(--dp-ink);
+    font-family: var(--dp-font-sans);
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.11em;
+    line-height: 1;
     text-transform: uppercase;
-    color: var(--boka-forest);
-    margin-bottom: 8px;
+    text-decoration: none;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
   }
-  .dp-what__pillar-body { font-size: 14px; line-height: 1.6; color: #4a4e45; }
-  .dp-what__visual {
-    background: var(--boka-pale);
-    padding: 56px 48px;
-    position: relative;
-  }
-  .dp-what__ingredient-list { list-style: none; }
-  .dp-what__ingredient {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--boka-mint);
-  }
-  .dp-what__ingredient:last-child { border-bottom: none; }
-  .dp-what__ing-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--boka-sage);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .dp-what__ing-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--boka-dark);
-    margin-bottom: 4px;
-  }
-  .dp-what__ing-desc { font-size: 13px; line-height: 1.5; color: var(--boka-forest); }
 
-  /* ── 3. Why Hygienists ── */
-  .dp-why {
-    padding: 120px 0;
-    background: var(--boka-dark);
-    color: var(--boka-cream);
+  .dp-btn:hover {
+    transform: translateY(-1px);
+    background: var(--dp-ink);
+    color: var(--dp-cream);
   }
-  .dp-why__header { text-align: center; margin-bottom: 72px; }
-  .dp-why__headline {
-    font-size: clamp(28px, 3vw, 42px);
-    font-weight: 300;
-    color: var(--boka-cream);
-    margin-bottom: 16px;
-  }
-  .dp-why__headline em { font-family: var(--font-serif); font-style: italic; color: var(--boka-pale); }
-  .dp-why__subhead { font-size: 16px; color: var(--boka-stone); max-width: 600px; margin: 0 auto; line-height: 1.7; }
-  .dp-why__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(255,255,255,0.06);
-  }
-  .dp-why__card {
-    background: rgba(34,39,33,0.8);
-    padding: 48px 40px;
-    position: relative;
-  }
-  .dp-why__card::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 2px;
-    background: var(--boka-sage);
-    margin-bottom: 28px;
-  }
-  .dp-why__card-num {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--boka-forest);
-    margin-bottom: 12px;
-    display: block;
-  }
-  .dp-why__card-title {
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--boka-cream);
-    line-height: 1.3;
-    margin-bottom: 16px;
-  }
-  .dp-why__card-title em { font-family: var(--font-serif); font-style: italic; color: var(--boka-pale); }
-  .dp-why__card-body { font-size: 14px; line-height: 1.7; color: var(--boka-stone); }
 
-  /* ── 4. Advisory Video ── */
-  .dp-video {
-    padding: 120px 0;
-    background: var(--boka-petal);
+  .dp-btn--primary {
+    border-color: var(--dp-forest);
+    background: var(--dp-forest);
+    color: var(--dp-white);
   }
-  .dp-video__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
+
+  .dp-btn--primary:hover {
+    border-color: var(--dp-ink);
+    background: var(--dp-ink);
+    color: var(--dp-white);
+  }
+
+  .dp-btn--light {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: var(--dp-white);
+  }
+
+  .dp-btn--light:hover {
+    border-color: var(--dp-white);
+    background: var(--dp-white);
+    color: var(--dp-ink);
+  }
+
+  .dp-pill {
+    display: inline-flex;
     align-items: center;
+    min-height: 34px;
+    border: 1px solid var(--dp-line);
+    border-radius: 999px;
+    padding: 8px 13px;
+    background: rgba(255,255,255,0.58);
+    color: rgba(34, 39, 33, 0.72);
+    font-size: 12px;
+    line-height: 1;
   }
-  .dp-video__label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--boka-terracotta);
-    margin-bottom: 16px;
-    display: block;
+
+  .dp-card {
+    border: 1px solid var(--dp-line);
+    border-radius: var(--dp-radius);
+    background: rgba(255,255,255,0.66);
+    box-shadow: var(--dp-shadow);
   }
-  .dp-video__headline {
-    font-size: clamp(26px, 2.8vw, 38px);
-    font-weight: 300;
-    line-height: 1.25;
-    color: var(--boka-dark);
-    margin-bottom: 20px;
-  }
-  .dp-video__headline em { font-family: var(--font-serif); font-style: italic; color: var(--boka-terracotta); }
-  .dp-video__body { font-size: 16px; line-height: 1.8; color: #4a4440; margin-bottom: 28px; }
-  .dp-video__expert {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 20px;
-    background: #fff;
-    border-left: 3px solid var(--boka-terracotta);
-  }
-  .dp-video__avatar {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--boka-blush);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 300;
-    color: var(--boka-dark);
-    flex-shrink: 0;
-    font-family: var(--font-serif);
-    font-style: italic;
-  }
-  .dp-video__expert-name { font-size: 15px; font-weight: 600; color: var(--boka-dark); margin-bottom: 3px; }
-  .dp-video__expert-title { font-size: 12px; color: var(--boka-terracotta); letter-spacing: 0.04em; }
-  /* Video embed placeholder */
-  .dp-video__player {
+
+  /* HERO */
+  .dp-hero {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    background: var(--boka-dark);
-    overflow: hidden;
+    min-height: 760px;
+    padding: clamp(52px, 7vw, 96px) 0;
+    background:
+      radial-gradient(circle at 78% 14%, rgba(191, 214, 165, 0.70), transparent 34%),
+      linear-gradient(135deg, var(--dp-cream) 0%, var(--dp-frost) 55%, var(--dp-petal) 100%);
   }
-  .dp-video__player iframe,
-  .dp-video__player video {
+
+  .dp-hero::before,
+  .dp-hero::after {
+    content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
+    z-index: 0;
+    border: 1px solid rgba(115, 124, 91, 0.22);
+    border-radius: 999px 999px 999px 24px;
+    pointer-events: none;
   }
-  .dp-video__player-placeholder {
+
+  .dp-hero::before {
+    width: 470px;
+    height: 470px;
+    top: 8%;
+    right: -150px;
+    transform: rotate(18deg);
+  }
+
+  .dp-hero::after {
+    width: 280px;
+    height: 280px;
+    left: -115px;
+    bottom: 12%;
+    transform: rotate(-16deg);
+  }
+
+  .dp-hero__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.78fr);
+    gap: clamp(34px, 5vw, 72px);
+    align-items: center;
+  }
+
+  .dp-hero__content {
+    padding-top: 34px;
+  }
+
+  .dp-hero__sub {
+    max-width: 680px;
+    margin-bottom: 28px;
+    color: rgba(34, 39, 33, 0.76);
+    font-size: clamp(17px, 1.55vw, 21px);
+    font-weight: 300;
+    line-height: 1.58;
+  }
+
+  .dp-hero__trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0 0;
+  }
+
+  .dp-hero__visual {
+    position: relative;
+  }
+
+  .dp-hero__media-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+    border-radius: 34px;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.04)),
+      var(--dp-sage);
+    box-shadow: 0 38px 90px rgba(34, 39, 33, 0.16);
+  }
+
+  .dp-hero__image {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .dp-hero__placeholder {
     position: absolute;
     inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #1a1f19;
-  }
-  .dp-video__play-btn {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--boka-terracotta);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    margin-bottom: 20px;
-  }
-  .dp-video__play-btn:hover { background: #8e5f52; transform: scale(1.06); }
-  .dp-video__play-btn svg { width: 24px; height: 24px; fill: #fff; margin-left: 4px; }
-  .dp-video__placeholder-text {
-    font-size: 13px;
-    color: var(--boka-stone);
+    display: grid;
+    place-items: center;
+    padding: 38px;
     text-align: center;
-    letter-spacing: 0.06em;
-  }
-  .dp-video__placeholder-name {
-    font-size: 15px;
-    color: var(--boka-cream);
-    font-weight: 300;
-    margin-top: 6px;
   }
 
-  /* ── 5. How It Works ── */
-  .dp-how {
-    padding: 120px 0;
-    background: var(--boka-cream);
-  }
-  .dp-how__header { text-align: center; margin-bottom: 72px; }
-  .dp-how__headline {
-    font-size: clamp(28px, 3vw, 42px);
-    font-weight: 300;
-    margin-bottom: 16px;
-  }
-  .dp-how__headline em { font-family: var(--font-serif); font-style: italic; color: var(--boka-forest); }
-  .dp-how__sub { font-size: 16px; color: var(--boka-warm-gray); max-width: 520px; margin: 0 auto; line-height: 1.7; }
-  .dp-how__steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    position: relative;
-    margin-bottom: 80px;
-  }
-  .dp-how__steps::before {
-    content: '';
-    position: absolute;
-    top: 36px;
-    left: 12.5%;
-    right: 12.5%;
-    height: 1px;
-    background: var(--boka-mint);
-    z-index: 0;
-  }
-  .dp-how__step { padding: 0 24px; text-align: center; position: relative; z-index: 1; }
-  .dp-how__step-dot {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    border: 1px solid var(--boka-mint);
-    background: var(--boka-cream);
-    display: flex;
+  .dp-logo-mark {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 24px;
-  }
-  .dp-how__step-dot--active {
-    background: var(--boka-forest);
-    border-color: var(--boka-forest);
-  }
-  .dp-how__step-num {
-    font-size: 18px;
+    width: min(75%, 310px);
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(255,255,255,0.48);
+    border-radius: 42% 58% 48% 52% / 56% 44% 56% 44%;
+    background: rgba(250, 250, 245, 0.18);
+    color: var(--dp-white);
+    font-size: clamp(34px, 4vw, 54px);
     font-weight: 300;
-    color: var(--boka-forest);
+    letter-spacing: 0.36em;
+    text-indent: 0.36em;
   }
-  .dp-how__step-dot--active .dp-how__step-num { color: #fff; }
-  .dp-how__step-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--boka-dark);
-    margin-bottom: 10px;
-  }
-  .dp-how__step-body { font-size: 14px; line-height: 1.6; color: var(--boka-warm-gray); }
 
-  /* Commission box */
-  .dp-commission {
-    background: var(--boka-forest);
-    color: #fff;
-    padding: 56px 64px;
+  .dp-hero__note {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    width: min(310px, calc(100% - 44px));
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 22px;
+    padding: 20px;
+    background: rgba(250,250,245,0.80);
+    backdrop-filter: blur(14px);
+  }
+
+  .dp-hero__note-title {
+    margin: 0 0 7px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--dp-forest);
+    text-transform: uppercase;
+  }
+
+  .dp-hero__note-copy {
+    margin: 0;
+    color: rgba(34, 39, 33, 0.72);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* INTRO STRIP */
+  .dp-strip {
+    background: var(--dp-ink);
+    color: var(--dp-cream);
+  }
+
+  .dp-strip__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: 1.1fr repeat(3, 0.9fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  .dp-strip__cell {
+    min-height: 170px;
+    padding: 30px;
+    background: var(--dp-ink);
+  }
+
+  .dp-strip__cell--lead {
+    background: var(--dp-forest);
+  }
+
+  .dp-strip__num {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--dp-pale);
+    font-family: var(--dp-font-serif);
+    font-size: 42px;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  .dp-strip__label {
+    margin: 0;
+    color: rgba(250,250,245,0.78);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* CONTENT GRIDS */
+  .dp-split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: clamp(36px, 6vw, 92px);
     align-items: center;
   }
-  .dp-commission__headline {
-    font-size: clamp(22px, 2.5vw, 32px);
-    font-weight: 300;
-    line-height: 1.3;
-    color: #fff;
-    grid-column: 1 / 2;
+
+  .dp-split--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   }
-  .dp-commission__headline em { font-family: var(--font-serif); font-style: italic; color: var(--boka-pale); }
-  .dp-commission__tiers { display: flex; flex-direction: column; gap: 16px; }
-  .dp-commission__tier {
+
+  .dp-ingredient-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(28px, 4vw, 54px);
+    background: var(--dp-pale);
+  }
+
+  .dp-ingredient-card::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: -70px;
+    bottom: -70px;
+    border: 1px solid rgba(115,124,91,0.25);
+    border-radius: 44% 56% 42% 58%;
+    transform: rotate(20deg);
+  }
+
+  .dp-check-list {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .dp-check-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: rgba(34, 39, 33, 0.76);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .dp-check-list li::before {
+    content: "";
+    flex: 0 0 9px;
+    width: 9px;
+    height: 9px;
+    margin-top: 7px;
+    border-radius: 999px;
+    background: var(--dp-forest);
+  }
+
+  .dp-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .dp-mini {
+    border: 1px solid var(--dp-line);
+    border-radius: 18px;
+    padding: 22px;
+    background: rgba(255,255,255,0.62);
+  }
+
+  .dp-mini__title {
+    margin: 0 0 8px;
+    color: var(--dp-ink);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .dp-mini__copy {
+    margin: 0;
+    color: rgba(34, 39, 33, 0.70);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* WHY HYGIENISTS */
+  .dp-why {
+    background:
+      radial-gradient(circle at top left, rgba(191,214,165,0.56), transparent 28%),
+      var(--dp-porcelain);
+  }
+
+  .dp-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 44px;
+  }
+
+  .dp-info-card {
+    padding: clamp(24px, 3vw, 34px);
+    border-radius: var(--dp-radius);
+    background: rgba(255,255,255,0.68);
+    border: 1px solid var(--dp-line);
+  }
+
+  .dp-info-card__icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    background: var(--dp-frost);
+    color: var(--dp-forest);
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+    font-size: 22px;
+  }
+
+  .dp-info-card__title {
+    margin: 0 0 11px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .dp-info-card__copy {
+    margin: 0;
+    color: rgba(34, 39, 33, 0.68);
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  /* VIDEO */
+  .dp-video {
+    background: var(--dp-petal);
+  }
+
+  .dp-video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
+    background: var(--dp-ink);
+    box-shadow: var(--dp-shadow);
+  }
+
+  .dp-video-card::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+  }
+
+  .dp-video-card iframe,
+  .dp-video-card video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .dp-video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+    background:
+      linear-gradient(180deg, rgba(34,39,33,0.15), rgba(34,39,33,0.72)),
+      var(--dp-sage);
+    text-align: center;
+  }
+
+  .dp-play {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+    border-radius: 999px;
+    background: rgba(250,250,245,0.88);
+    color: var(--dp-forest);
+  }
+
+  .dp-play svg {
+    width: 28px;
+    height: 28px;
+    margin-left: 4px;
+    fill: currentColor;
+  }
+
+  .dp-video-placeholder p {
+    max-width: 360px;
+    margin: 0 auto;
+    color: var(--dp-cream);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .dp-advisor {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 26px;
+    border: 1px solid rgba(170,122,107,0.20);
+    border-radius: 20px;
+    padding: 16px;
+    background: rgba(255,255,255,0.56);
+  }
+
+  .dp-advisor__avatar {
+    display: grid;
+    place-items: center;
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: var(--dp-rose);
+    color: var(--dp-terracotta);
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+  }
+
+  .dp-advisor__name {
+    margin: 0 0 3px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .dp-advisor__role {
+    margin: 0;
+    color: rgba(34,39,33,0.62);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* HOW IT WORKS */
+  .dp-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 44px;
+  }
+
+  .dp-step {
+    position: relative;
+    min-height: 250px;
+    border: 1px solid var(--dp-line);
+    border-radius: var(--dp-radius);
+    padding: 24px;
+    background: rgba(255,255,255,0.66);
+  }
+
+  .dp-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 28px;
+    border-radius: 999px;
+    background: var(--dp-frost);
+    color: var(--dp-forest);
+    font-family: var(--dp-font-serif);
+    font-size: 19px;
+    font-style: italic;
+  }
+
+  .dp-step__title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.18;
+  }
+
+  .dp-step__copy {
+    margin: 0;
+    color: rgba(34,39,33,0.68);
+    font-size: 13px;
+    line-height: 1.58;
+  }
+
+  .dp-commission {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 24px;
+    margin-top: 24px;
+    border-radius: 34px;
+    padding: clamp(28px, 4vw, 52px);
+    background: var(--dp-forest);
+    color: var(--dp-white);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .dp-commission::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    bottom: -140px;
+    width: 340px;
+    height: 340px;
+    border-radius: 48% 52% 44% 56%;
+    border: 1px solid rgba(255,255,255,0.22);
+    transform: rotate(18deg);
+  }
+
+  .dp-commission__copy {
+    color: rgba(255,255,255,0.78);
+  }
+
+  .dp-rates {
+    display: grid;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .dp-rate {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 20px;
-    background: rgba(255,255,255,0.1);
-  }
-  .dp-commission__tier-label { font-size: 13px; color: rgba(255,255,255,0.7); }
-  .dp-commission__tier-pct { font-size: 24px; font-weight: 300; color: var(--boka-pale); }
-  .dp-commission__perks { list-style: none; }
-  .dp-commission__perk {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 14px;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.4;
-  }
-  .dp-commission__perk:last-child { border-bottom: none; }
-  .dp-commission__perk::before {
-    content: '→';
-    color: var(--boka-pale);
-    font-size: 12px;
-    margin-top: 2px;
-    flex-shrink: 0;
+    gap: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 18px;
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.09);
   }
 
-  /* ── 6. Testimonials ── */
-  .dp-testimonials {
-    padding: 100px 0;
-    background: var(--boka-linen);
+  .dp-rate span:first-child {
+    color: rgba(255,255,255,0.72);
+    font-size: 13px;
   }
-  .dp-testimonials__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--boka-stone);
-    margin-top: 48px;
-  }
-  .dp-testimonial {
-    background: var(--boka-cream);
-    padding: 40px 36px;
-  }
-  .dp-testimonial__quote {
-    font-size: 15px;
+
+  .dp-rate span:last-child {
+    color: var(--dp-pale);
+    font-family: var(--dp-font-serif);
+    font-size: 32px;
     font-style: italic;
-    font-family: var(--font-serif);
-    color: var(--boka-dark);
-    line-height: 1.7;
-    margin-bottom: 28px;
+    line-height: 1;
+    white-space: nowrap;
   }
-  .dp-testimonial__author { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--boka-forest); }
-  .dp-testimonial__role { font-size: 12px; color: var(--boka-warm-gray); margin-top: 3px; }
 
-  /* ── 7. Sign-Up CTA ── */
-  .dp-signup {
-    padding: 120px 0;
-    background: var(--boka-cream);
-    text-align: center;
+  /* CURRENT B2B INFO */
+  .dp-b2b {
+    background: var(--dp-frost);
   }
-  .dp-signup__inner { max-width: 680px; margin: 0 auto; padding: 0 32px; }
-  .dp-signup__headline {
-    font-size: clamp(30px, 3.5vw, 50px);
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
-  .dp-signup__headline em { font-family: var(--font-serif); font-style: italic; color: var(--boka-forest); }
-  .dp-signup__body { font-size: 17px; color: var(--boka-warm-gray); line-height: 1.7; margin-bottom: 48px; }
-  .dp-signup__form { text-align: left; }
-  .dp-signup__fields {
+
+  .dp-b2b-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(26px, 5vw, 70px);
+    align-items: start;
+    border-radius: 34px;
+    padding: clamp(28px, 5vw, 60px);
+    background: rgba(250,250,245,0.78);
+    border: 1px solid rgba(115,124,91,0.20);
   }
-  .dp-signup__field-full { grid-column: 1 / -1; }
-  .dp-signup__label {
+
+  .dp-process {
+    display: grid;
+    gap: 12px;
+    counter-reset: prostep;
+  }
+
+  .dp-process__item {
+    position: relative;
+    min-height: 70px;
+    border: 1px solid var(--dp-line);
+    border-radius: 18px;
+    padding: 20px 20px 20px 72px;
+    background: rgba(255,255,255,0.62);
+    counter-increment: prostep;
+  }
+
+  .dp-process__item::before {
+    content: counter(prostep, decimal-leading-zero);
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: var(--dp-pale);
+    color: var(--dp-forest);
+    font-family: var(--dp-font-serif);
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  .dp-process__title {
+    margin: 0 0 5px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .dp-process__copy {
+    margin: 0;
+    color: rgba(34,39,33,0.66);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .dp-note {
+    margin-top: 18px;
+    border-left: 1px solid var(--dp-terracotta);
+    padding-left: 18px;
+    color: rgba(34,39,33,0.64);
+    font-size: 12px;
+    line-height: 1.58;
+  }
+
+  /* TESTIMONIALS */
+  .dp-testimonials {
+    background: var(--dp-porcelain);
+  }
+
+  .dp-quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .dp-quote {
+    padding: clamp(24px, 3vw, 38px);
+    border: 1px solid var(--dp-line);
+    border-radius: var(--dp-radius);
+    background: rgba(255,255,255,0.70);
+  }
+
+  .dp-quote__text {
+    margin: 0 0 24px;
+    color: rgba(34,39,33,0.82);
+    font-family: var(--dp-font-serif);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+  }
+
+  .dp-quote__name {
+    margin: 0 0 4px;
+    color: var(--dp-forest);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .dp-quote__role {
+    margin: 0;
+    color: rgba(34,39,33,0.56);
+    font-size: 12px;
+  }
+
+  /* FORM */
+  .dp-signup {
+    background:
+      radial-gradient(circle at 90% 0%, rgba(191,214,165,0.50), transparent 28%),
+      var(--dp-cream);
+  }
+
+  .dp-form-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(30px, 5vw, 72px);
+    align-items: start;
+  }
+
+  .dp-form {
+    border: 1px solid var(--dp-line);
+    border-radius: 34px;
+    padding: clamp(24px, 4vw, 46px);
+    background: rgba(255,255,255,0.72);
+    box-shadow: var(--dp-shadow);
+  }
+
+  .dp-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .dp-field--full {
+    grid-column: 1 / -1;
+  }
+
+  .dp-label {
     display: block;
+    margin-bottom: 8px;
+    color: var(--dp-forest);
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.11em;
     text-transform: uppercase;
-    color: var(--boka-forest);
-    margin-bottom: 8px;
   }
-  .dp-signup__input {
+
+  .dp-input,
+  .dp-select,
+  .dp-textarea {
     width: 100%;
-    font-family: var(--font-sans);
+    border: 1px solid rgba(34,39,33,0.18);
+    border-radius: 14px;
+    padding: 14px 15px;
+    background: var(--dp-white);
+    color: var(--dp-ink);
+    font-family: var(--dp-font-sans);
     font-size: 15px;
-    padding: 13px 16px;
-    border: 1px solid var(--boka-stone);
-    background: #fff;
-    color: var(--boka-dark);
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
     -webkit-appearance: none;
   }
-  .dp-signup__input:focus { border-color: var(--boka-forest); }
-  .dp-signup__select {
-    width: 100%;
-    font-family: var(--font-sans);
-    font-size: 15px;
-    padding: 13px 16px;
-    border: 1px solid var(--boka-stone);
-    background: #fff;
-    color: var(--boka-dark);
-    outline: none;
-    -webkit-appearance: none;
-    cursor: pointer;
+
+  .dp-textarea {
+    min-height: 108px;
+    resize: vertical;
   }
-  .dp-signup__checkbox-row {
+
+  .dp-input:focus,
+  .dp-select:focus,
+  .dp-textarea:focus {
+    border-color: var(--dp-forest);
+    box-shadow: 0 0 0 4px rgba(115,124,91,0.12);
+  }
+
+  .dp-checkbox {
     display: flex;
-    align-items: flex-start;
     gap: 12px;
-    margin: 20px 0 32px;
+    align-items: flex-start;
+    margin: 22px 0 28px;
+    color: rgba(34,39,33,0.66);
+    font-size: 13px;
+    line-height: 1.55;
   }
-  .dp-signup__checkbox-row input[type="checkbox"] {
-    margin-top: 3px;
-    accent-color: var(--boka-forest);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-  .dp-signup__checkbox-label { font-size: 13px; line-height: 1.5; color: var(--boka-warm-gray); }
-  .dp-signup__checkbox-label a { color: var(--boka-forest); text-decoration: underline; }
-  .dp-signup__submit-row { text-align: center; }
-  .dp-signup__disclaimer { font-size: 12px; color: var(--boka-stone); margin-top: 16px; line-height: 1.5; }
 
-  /* ── FAQ ── */
-  .dp-faq {
-    padding: 80px 0;
-    background: var(--boka-frost);
+  .dp-checkbox input {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--dp-forest);
   }
-  .dp-faq__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 72px;
-    margin-top: 48px;
-  }
-  .dp-faq__item { border-top: 1px solid var(--boka-mint); padding-top: 24px; }
-  .dp-faq__q { font-size: 16px; font-weight: 600; color: var(--boka-dark); margin-bottom: 12px; }
-  .dp-faq__a { font-size: 14px; line-height: 1.7; color: #4a5245; }
 
-  /* ── Footer strip ── */
-  .dp-footer-strip {
-    background: var(--boka-dark);
-    color: var(--boka-stone);
-    padding: 40px 0;
+  .dp-form .dp-btn {
+    width: 100%;
+  }
+
+  .dp-form__fine {
+    margin: 14px 0 0;
+    color: rgba(34,39,33,0.48);
+    font-size: 12px;
+    line-height: 1.5;
     text-align: center;
   }
-  .dp-footer-strip p { font-size: 13px; line-height: 1.7; }
-  .dp-footer-strip a { color: var(--boka-sage); text-decoration: none; }
-  .dp-footer-strip a:hover { text-decoration: underline; }
 
-  /* ── Responsive ── */
-  @media (max-width: 900px) {
-    .dp-hero { grid-template-columns: 1fr; min-height: auto; }
-    .dp-hero__visual { min-height: 320px; }
-    .dp-hero__content { padding: 64px 32px; }
-    .dp-what__grid, .dp-video__inner { grid-template-columns: 1fr; gap: 48px; }
-    .dp-why__cards { grid-template-columns: 1fr; }
-    .dp-how__steps { grid-template-columns: 1fr 1fr; }
-    .dp-how__steps::before { display: none; }
-    .dp-commission { grid-template-columns: 1fr; padding: 48px 32px; }
-    .dp-testimonials__grid { grid-template-columns: 1fr; }
-    .dp-signup__fields { grid-template-columns: 1fr; }
-    .dp-faq__grid { grid-template-columns: 1fr; }
+  /* FAQ */
+  .dp-faq {
+    background: var(--dp-pale);
   }
-  @media (max-width: 600px) {
-    .dp-container, .dp-container--narrow { padding: 0 20px; }
-    .dp-hero__content { padding: 48px 20px; }
-    .dp-what__pillars { grid-template-columns: 1fr; }
-    .dp-how__steps { grid-template-columns: 1fr; }
+
+  .dp-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+    margin-top: 38px;
+  }
+
+  .dp-faq-item {
+    border-top: 1px solid rgba(34,39,33,0.14);
+    padding-top: 20px;
+  }
+
+  .dp-faq-item h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  .dp-faq-item p {
+    margin: 0;
+    color: rgba(34,39,33,0.66);
+    font-size: 14px;
+    line-height: 1.62;
+  }
+
+  .dp-final {
+    padding: 74px 0;
+    background: var(--dp-ink);
+    color: var(--dp-cream);
+    text-align: center;
+  }
+
+  .dp-final .dp-copy {
+    margin-inline: auto;
+    color: rgba(250,250,245,0.70);
+  }
+
+  @media (max-width: 990px) {
+    .dp-hero {
+      min-height: auto;
+    }
+
+    .dp-hero__grid,
+    .dp-split,
+    .dp-split--reverse,
+    .dp-b2b-box,
+    .dp-form-shell,
+    .dp-commission {
+      grid-template-columns: 1fr;
+    }
+
+    .dp-hero__media-card,
+    .dp-hero__image {
+      min-height: 430px;
+      height: 430px;
+    }
+
+    .dp-strip__grid,
+    .dp-card-grid,
+    .dp-steps {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .dp-wrap {
+      width: min(100% - 28px, var(--dp-max));
+    }
+
+    .dp-h1 {
+      font-size: clamp(42px, 15vw, 64px);
+    }
+
+    .dp-btn-row,
+    .dp-btn {
+      width: 100%;
+    }
+
+    .dp-strip__grid,
+    .dp-card-grid,
+    .dp-mini-grid,
+    .dp-steps,
+    .dp-quote-grid,
+    .dp-fields,
+    .dp-faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dp-strip__cell {
+      min-height: auto;
+      padding: 24px;
+    }
+
+    .dp-hero__media-card,
+    .dp-hero__image {
+      min-height: 360px;
+      height: 360px;
+      border-radius: 26px;
+    }
+
+    .dp-logo-mark {
+      font-size: 34px;
+    }
+
+    .dp-hero__note {
+      position: static;
+      width: auto;
+      margin: 14px;
+    }
+
+    .dp-section {
+      padding: 64px 0;
+    }
   }
 </style>
 
 <main class="dp-page" id="dental-pros-page">
+  <section class="dp-hero" aria-label="Boka Dental Pros Program">
+    <div class="dp-wrap">
+      <div class="dp-hero__grid">
+        <div class="dp-hero__content">
+          <span class="dp-kicker">Boka Dental Pros</span>
+          <h1 class="dp-h1">
+            Recommend oral care that feels <span class="dp-em">easy</span> to love.
+          </h1>
+          <p class="dp-hero__sub">
+            Boka blends science and nature to create effective, feel-good oral care. The Dental Pros Program gives hygienists and dental professionals a simple way to share Boka with patients, access practice benefits, and earn commission on qualifying referrals.
+          </p>
 
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 1 — HERO
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-hero" aria-label="Hero">
-    <div class="dp-hero__bg-accent" aria-hidden="true"></div>
-    <div class="dp-hero__bg-accent-2" aria-hidden="true"></div>
+          <div class="dp-btn-row">
+            <a class="dp-btn dp-btn--primary" href="#signup">Apply now</a>
+            <a class="dp-btn" href="#how-it-works">See how it works</a>
+          </div>
 
-    <div class="dp-hero__content">
-      <span class="dp-hero__eyebrow">Boka Dental Professionals Program</span>
-      <h1 class="dp-hero__headline">
-        Partner with the brand<br>
-        <em>your patients already trust.</em>
-      </h1>
-      <p class="dp-hero__body">
-        Boka blends science and nature to make oral care that actually works — and now you can earn commissions recommending products you believe in. Join dental hygienists and professionals across the country in our affiliate program.
-      </p>
-      <div class="dp-hero__ctas">
-        <a href="#signup" class="dp-btn dp-btn--green">Apply to the Program</a>
-        <a href="#how-it-works" class="dp-hero__cta-secondary">See how it works →</a>
-      </div>
-    </div>
-
-    <div class="dp-hero__visual" role="img" aria-label="Boka product imagery">
-      <div class="dp-hero__visual-inner">
-        {%- comment -%}
-          Replace with your actual product image:
-          <img src="{{ 'dental-pros-hero.jpg' | asset_url }}" alt="Boka Products" style="max-width: 280px; display: block; margin: 0 auto 24px;" />
-        {%- endcomment -%}
-        <div class="dp-hero__product-placeholder">
-          <span class="dp-hero__product-logo">BOKA</span>
+          <div class="dp-hero__trust" aria-label="Program highlights">
+            <span class="dp-pill">For hygienists & dental professionals</span>
+            <span class="dp-pill">Affiliate commissions</span>
+            <span class="dp-pill">Practice discounts</span>
+            <span class="dp-pill">U.S. & Canada only</span>
+          </div>
         </div>
-        <p class="dp-hero__product-sub">Nano-Hydroxyapatite Formula</p>
-      </div>
-      <div class="dp-hero__stats">
-        <div class="dp-hero__stat">
-          <span class="dp-hero__stat-num">15%</span>
-          <span class="dp-hero__stat-label">Commission on Sales</span>
-        </div>
-        <div class="dp-hero__stat">
-          <span class="dp-hero__stat-num">2M+</span>
-          <span class="dp-hero__stat-label">Happy Customers</span>
+
+        <div class="dp-hero__visual">
+          <div class="dp-hero__media-card">
+            <img
+                class="dp-hero__image"
+                src="https://cdn.shopify.com/s/files/1/2656/6094/files/strawberry-mango-6.jpg?v=1741373408"
+                alt="Boka oral care product lifestyle image"
+                loading="eager"
+                fetchpriority="high"
+                width="900"
+                height="1100"
+              >
+            <div class="dp-hero__note">
+              <p class="dp-hero__note-title">For chair-side confidence</p>
+              <p class="dp-hero__note-copy">Give patients a clear, approachable option for daily oral care powered by nano-hydroxyapatite (n-Ha).</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 2 — WHAT IS BOKA
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-what" aria-label="What is Boka">
-    <div class="dp-container">
-      <div class="dp-what__grid">
+  <section class="dp-strip" aria-label="Program summary">
+    <div class="dp-wrap">
+      <div class="dp-strip__grid">
+        <div class="dp-strip__cell dp-strip__cell--lead">
+          <span class="dp-strip__num">A</span>
+          <p class="dp-strip__label">A lighter, clearer Dental Pros page built for education, trust, and conversion.</p>
+        </div>
+        <div class="dp-strip__cell">
+          <span class="dp-strip__num">01</span>
+          <p class="dp-strip__label">Apply to join the Dental Pros Program.</p>
+        </div>
+        <div class="dp-strip__cell">
+          <span class="dp-strip__num">02</span>
+          <p class="dp-strip__label">Receive your unique referral link and program details after approval.</p>
+        </div>
+        <div class="dp-strip__cell">
+          <span class="dp-strip__num">03</span>
+          <p class="dp-strip__label">Share Boka with patients and earn commission on qualifying purchases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
+    <div class="dp-wrap">
+      <div class="dp-split">
         <div>
-          <span class="dp-eyebrow">What is Boka</span>
-          <span class="dp-rule" aria-hidden="true"></span>
-          <h2 class="dp-what__headline">
-            Where <em>science</em> and<br>nature meet
-          </h2>
-          <p class="dp-what__body">
-            Boka creates effective, feel-good oral care formulas that support your patients' smiles and whole-body well-being. We believe true health starts in the mouth — and that the best products are built on evidence, not trends.
+          <span class="dp-kicker">What Boka is</span>
+          <h2 class="dp-h2">Science-backed care, made for the <span class="dp-em">everyday</span>.</h2>
+          <p class="dp-copy">
+            Boka creates oral care that supports the mouth as part of whole-body wellness. Our formulas are designed to be effective, elevated, and easy to recommend without making oral care feel clinical or complicated.
           </p>
-          <p class="dp-what__body">
-            Our flagship ingredient, nano-hydroxyapatite (n-Ha), is the same mineral that makes up 97% of tooth enamel. It's been clinically studied for over 40 years, used by NASA astronauts, and is recognized by dental professionals worldwide as an effective, fluoride-free alternative for remineralization.
+          <p class="dp-copy">
+            Our n-Ha toothpastes are powered by nano-hydroxyapatite, a form of calcium that makes up the primary foundation of teeth and bones. It helps support tooth enamel health while giving patients a thoughtful alternative in their daily routine.
           </p>
-          <div class="dp-what__pillars">
-            <div class="dp-what__pillar">
-              <div class="dp-what__pillar-title">Wellness-First</div>
-              <div class="dp-what__pillar-body">Every formula is fluoride-free, SLS-free, and built to support your patients' whole-body health.</div>
+          <div class="dp-mini-grid">
+            <div class="dp-mini">
+              <p class="dp-mini__title">Science-backed wellness</p>
+              <p class="dp-mini__copy">Clear education around ingredients, benefits, and daily oral care.</p>
             </div>
-            <div class="dp-what__pillar">
-              <div class="dp-what__pillar-title">Science-Backed</div>
-              <div class="dp-what__pillar-body">n-Ha is supported by 40+ years of clinical research. We never make unverified claims.</div>
-            </div>
-            <div class="dp-what__pillar">
-              <div class="dp-what__pillar-title">Transparent</div>
-              <div class="dp-what__pillar-body">Full ingredient disclosure. No photoshop. No exaggerations. You'll feel confident recommending us.</div>
-            </div>
-            <div class="dp-what__pillar">
-              <div class="dp-what__pillar-title">Dentist-Recommended</div>
-              <div class="dp-what__pillar-body">Trusted by a growing network of dental professionals and featured on major wellness platforms.</div>
+            <div class="dp-mini">
+              <p class="dp-mini__title">Elevated experience</p>
+              <p class="dp-mini__copy">Beautiful formulas, packaging, and flavors patients want to use consistently.</p>
             </div>
           </div>
         </div>
 
-        <div class="dp-what__visual">
-          <span class="dp-eyebrow">Key Ingredients</span>
-          <ul class="dp-what__ingredient-list">
-            <li class="dp-what__ingredient">
-              <div class="dp-what__ing-icon" aria-hidden="true">◆</div>
-              <div>
-                <div class="dp-what__ing-name">Nano-Hydroxyapatite (n-Ha)</div>
-                <div class="dp-what__ing-desc">Remineralizes and strengthens enamel at the microscopic level. Biocompatible and proven safe for all ages.</div>
-              </div>
-            </li>
-            <li class="dp-what__ingredient">
-              <div class="dp-what__ing-icon" aria-hidden="true">◆</div>
-              <div>
-                <div class="dp-what__ing-name">Antioxidant Blend</div>
-                <div class="dp-what__ing-desc">Helps neutralize free radicals in the oral cavity, supporting gum health and tissue resilience.</div>
-              </div>
-            </li>
-            <li class="dp-what__ingredient">
-              <div class="dp-what__ing-icon" aria-hidden="true">◆</div>
-              <div>
-                <div class="dp-what__ing-name">Xylitol</div>
-                <div class="dp-what__ing-desc">Naturally inhibits cavity-causing bacteria without disrupting the oral microbiome.</div>
-              </div>
-            </li>
-            <li class="dp-what__ingredient">
-              <div class="dp-what__ing-icon" aria-hidden="true">◆</div>
-              <div>
-                <div class="dp-what__ing-name">Clean Actives</div>
-                <div class="dp-what__ing-desc">No SLS, no artificial sweeteners, no parabens. Safe for sensitive patients and kids.</div>
-              </div>
-            </li>
+        <div class="dp-card dp-ingredient-card">
+          <span class="dp-kicker">Why patients ask about it</span>
+          <h3 class="dp-h3">More mindful oral care, without the scare tactics.</h3>
+          <ul class="dp-check-list">
+            <li>Fluoride-free n-Ha toothpaste options</li>
+            <li>SLS-free and paraben-free formulas</li>
+            <li>No artificial flavors or endocrine disruptors</li>
+            <li>Low-foaming, feel-good brushing experience</li>
+            <li>Designed to support enamel health and daily consistency</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 3 — WHY HYGIENISTS
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-why" aria-label="Why this program is for dental hygienists">
-    <div class="dp-container">
-      <div class="dp-why__header">
-        <span class="dp-eyebrow" style="color: var(--boka-sage);">Built for You</span>
-        <h2 class="dp-why__headline">
-          Why <em>dental hygienists</em><br>are our ideal partners
-        </h2>
-        <p class="dp-why__subhead">
-          No one has more daily touchpoints with patients' oral health than you. Your recommendation carries clinical weight — and now it can carry real financial reward too.
-        </p>
-      </div>
-      <div class="dp-why__cards">
-        <div class="dp-why__card">
-          <span class="dp-why__card-num">01</span>
-          <h3 class="dp-why__card-title">You're already <em>the trusted voice</em></h3>
-          <p class="dp-why__card-body">Studies show patients are 3× more likely to purchase a product recommended by their hygienist than one they discover on their own. Your endorsement is your most powerful asset.</p>
-        </div>
-        <div class="dp-why__card">
-          <span class="dp-why__card-num">02</span>
-          <h3 class="dp-why__card-title">Products that <em>align with your values</em></h3>
-          <p class="dp-why__card-body">Boka's formulations are designed for conversations you're already having — about enamel remineralization, fluoride alternatives, sensitivity, and whole-body wellness. You'll know exactly why every ingredient is there.</p>
-        </div>
-        <div class="dp-why__card">
-          <span class="dp-why__card-num">03</span>
-          <h3 class="dp-why__card-title">Earn <em>passively</em>, recommend confidently</h3>
-          <p class="dp-why__card-body">There's no inventory to hold, no upfront cost, and no hard sell required. Share your unique link, give patients a discount, and earn every time they order — including on subscriptions.</p>
-        </div>
+  <section class="dp-section dp-why" id="why-hygienists" aria-label="Why this program is for hygienists">
+    <div class="dp-wrap">
+      <span class="dp-kicker">Why hygienists</span>
+      <h2 class="dp-h2">You are already the trusted voice in the <span class="dp-em">chair</span>.</h2>
+      <p class="dp-copy">
+        Hygienists translate oral care into everyday habits. This program is built for the moments when patients ask what to use at home, want a fluoride-free option, or need a routine they will actually stick with.
+      </p>
+
+      <div class="dp-card-grid">
+        <article class="dp-info-card">
+          <div class="dp-info-card__icon">1</div>
+          <h3 class="dp-info-card__title">Patients want guidance</h3>
+          <p class="dp-info-card__copy">You can point patients toward products that align with their preferences, routine, and oral care goals.</p>
+        </article>
+
+        <article class="dp-info-card">
+          <div class="dp-info-card__icon">2</div>
+          <h3 class="dp-info-card__title">Recommendations should feel simple</h3>
+          <p class="dp-info-card__copy">Your link or code gives patients an easy next step after an appointment, follow-up email, or social post.</p>
+        </article>
+
+        <article class="dp-info-card">
+          <div class="dp-info-card__icon">3</div>
+          <h3 class="dp-info-card__title">Education creates consistency</h3>
+          <p class="dp-info-card__copy">Boka gives you clear ingredient talking points so chair-side education feels confident, modern, and approachable.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 4 — ADVISORY VIDEO
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-video" aria-label="Dental Advisory Committee video">
-    <div class="dp-container">
-      <div class="dp-video__inner">
+  <section class="dp-section dp-video" id="advisory-video" aria-label="Dental Advisory Committee video">
+    <div class="dp-wrap">
+      <div class="dp-split dp-split--reverse">
         <div>
-          <span class="dp-video__label">From Our Advisory Committee</span>
-          <h2 class="dp-video__headline">
-            Why one of our own<br><em>recommends Boka</em><br>to every patient
-          </h2>
-          <p class="dp-video__body">
-            Our Dental Advisory Committee is made up of practicing dental hygienists and dentists who helped shape our formulations. In this short video, one of our committee members shares why she started recommending Boka — and what her patients have noticed.
-          </p>
-          <div class="dp-video__expert">
-            <div class="dp-video__avatar" aria-hidden="true">RDH</div>
-            <div>
-              {%- comment -%}Update with actual committee member name/title{%- endcomment -%}
-              <div class="dp-video__expert-name">Sarah Mitchell, RDH</div>
-              <div class="dp-video__expert-title">Boka Dental Advisory Committee · 8 years in practice</div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="dp-video__player">
+          <div class="dp-video-card">
             {%- comment -%}
-              Replace the placeholder below with your actual video embed.
-              Options:
-              A) YouTube embed:
-                 <iframe src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="Boka Advisory Committee Video"></iframe>
-              B) Vimeo embed:
-                 <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID?color=737c5b&title=0&byline=0" allowfullscreen loading="lazy" title="Boka Advisory Committee Video"></iframe>
-              C) Native video:
-                 <video controls preload="none" poster="{{ 'video-poster.jpg' | asset_url }}">
-                   <source src="{{ 'advisory-video.mp4' | asset_url }}" type="video/mp4">
-                 </video>
+              Replace VIDEO_ID with the approved Dental Advisory Committee video.
+              YouTube:
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Why Boka is recommended by our Dental Advisory Committee" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+
+              Shopify-hosted MP4:
+              <video controls playsinline poster="{{ 'dental-advisory-video-poster.jpg' | asset_url }}">
+                <source src="{{ 'dental-advisory-video.mp4' | file_url }}" type="video/mp4">
+              </video>
             {%- endcomment -%}
-            <div class="dp-video__player-placeholder" aria-label="Video placeholder">
-              <div class="dp-video__play-btn" role="button" aria-label="Play video">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+            <div class="dp-video-placeholder">
+              <div>
+                <span class="dp-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                <p>Short video from a Boka Dental Advisory Committee member explaining why they recommend Boka.</p>
               </div>
-              <p class="dp-video__placeholder-text">Advisory Committee Video</p>
-              <p class="dp-video__placeholder-name">Replace with your video embed</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="dp-kicker">Advisory committee perspective</span>
+          <h2 class="dp-h2">A quick expert note before patients buy.</h2>
+          <p class="dp-copy">
+            Use this space for a short, human video that gives hygienists and patients confidence. The best version should be under 60 seconds, clearly explain why the advisor recommends Boka, and end with a simple invitation to try the routine.
+          </p>
+
+          <div class="dp-advisor">
+            <div class="dp-advisor__avatar">Dr.</div>
+            <div>
+              <p class="dp-advisor__name">Dental Advisory Committee Member</p>
+              <p class="dp-advisor__role">Replace with name, credentials, and specialty once the final video is approved.</p>
             </div>
           </div>
         </div>
@@ -908,275 +1254,264 @@
     </div>
   </section>
 
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 5 — HOW IT WORKS + COMMISSION
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-how" id="how-it-works" aria-label="How the affiliate program works">
-    <div class="dp-container">
-      <div class="dp-how__header">
-        <span class="dp-eyebrow">How It Works</span>
-        <h2 class="dp-how__headline">
-          Four steps to <em>your first commission</em>
-        </h2>
-        <p class="dp-how__sub">
-          The entire process takes less than 10 minutes. No training required. No upfront commitment.
-        </p>
+  <section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
+    <div class="dp-wrap">
+      <span class="dp-kicker">How commissions work</span>
+      <h2 class="dp-h2">A simple affiliate flow built around <span class="dp-em">authentic</span> recommendations.</h2>
+      <p class="dp-copy">
+        Once approved, you receive a unique referral link and/or promo code. When a patient shops through your link, the order is tracked to you and commission is paid on qualifying purchases.
+      </p>
+
+      <div class="dp-steps">
+        <article class="dp-step">
+          <span class="dp-step__num">01</span>
+          <h3 class="dp-step__title">Apply</h3>
+          <p class="dp-step__copy">Tell us about your role, practice, and how you plan to share Boka with patients.</p>
+        </article>
+
+        <article class="dp-step">
+          <span class="dp-step__num">02</span>
+          <h3 class="dp-step__title">Get your link</h3>
+          <p class="dp-step__copy">If approved, we send your referral link, promo code, and dashboard details.</p>
+        </article>
+
+        <article class="dp-step">
+          <span class="dp-step__num">03</span>
+          <h3 class="dp-step__title">Share with patients</h3>
+          <p class="dp-step__copy">Use it chair-side, in follow-up emails, on your practice website, or on social.</p>
+        </article>
+
+        <article class="dp-step">
+          <span class="dp-step__num">04</span>
+          <h3 class="dp-step__title">Earn commission</h3>
+          <p class="dp-step__copy">Qualifying purchases are tracked in your dashboard and paid according to program terms.</p>
+        </article>
       </div>
 
-      <div class="dp-how__steps">
-        <div class="dp-how__step">
-          <div class="dp-how__step-dot dp-how__step-dot--active">
-            <span class="dp-how__step-num">01</span>
-          </div>
-          <h3 class="dp-how__step-title">Apply</h3>
-          <p class="dp-how__step-body">Fill out the short form below. We review dental professionals only — approval typically takes 24–48 hours.</p>
-        </div>
-        <div class="dp-how__step">
-          <div class="dp-how__step-dot">
-            <span class="dp-how__step-num">02</span>
-          </div>
-          <h3 class="dp-how__step-title">Get Your Link</h3>
-          <p class="dp-how__step-body">Receive a unique referral link and promo code. Your patients get a discount; you earn a commission on every purchase.</p>
-        </div>
-        <div class="dp-how__step">
-          <div class="dp-how__step-dot">
-            <span class="dp-how__step-num">03</span>
-          </div>
-          <h3 class="dp-how__step-title">Share & Recommend</h3>
-          <p class="dp-how__step-body">Share via text, email, your practice website, or social media. No pressure — just authentic recommendations.</p>
-        </div>
-        <div class="dp-how__step">
-          <div class="dp-how__step-dot">
-            <span class="dp-how__step-num">04</span>
-          </div>
-          <h3 class="dp-how__step-title">Earn Monthly</h3>
-          <p class="dp-how__step-body">Commissions are tracked in real time. Payments are sent monthly via direct deposit or PayPal.</p>
-        </div>
-      </div>
-
-      {%- comment -%} Commission breakdown box {%- endcomment -%}
       <div class="dp-commission">
         <div>
-          <h3 class="dp-commission__headline">
-            <em>Competitive commissions</em> built for long-term partnership
-          </h3>
-        </div>
-        <div>
-          <div class="dp-commission__tiers">
-            <div class="dp-commission__tier">
-              <span class="dp-commission__tier-label">Base commission</span>
-              <span class="dp-commission__tier-pct">15%</span>
-            </div>
-            <div class="dp-commission__tier">
-              <span class="dp-commission__tier-label">On subscriptions (recurring)</span>
-              <span class="dp-commission__tier-pct">10%</span>
-            </div>
-            <div class="dp-commission__tier">
-              <span class="dp-commission__tier-label">Performance bonus tier</span>
-              <span class="dp-commission__tier-pct">Up to 20%</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <ul class="dp-commission__perks">
-            <li class="dp-commission__perk">Free starter kit with curated Boka products</li>
-            <li class="dp-commission__perk">Real-time dashboard to track clicks and earnings</li>
-            <li class="dp-commission__perk">Custom promo code for your patients (10% off their first order)</li>
-            <li class="dp-commission__perk">Access to educational resources and ingredient deep-dives</li>
-            <li class="dp-commission__perk">Priority support from our dental team</li>
-            <li class="dp-commission__perk">Invitations to advisory events and product launches</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 6 — TESTIMONIALS
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-testimonials" aria-label="Testimonials from dental professionals">
-    <div class="dp-container">
-      <span class="dp-eyebrow">Dental Professionals on Boka</span>
-      <div class="dp-testimonials__grid">
-        <div class="dp-testimonial">
-          <p class="dp-testimonial__quote">"My patients love having an alternative to fluoride. The n-Ha formulation is something I can actually explain chair-side, and they trust the recommendation immediately."</p>
-          <div class="dp-testimonial__author">Jessica T., RDH</div>
-          <div class="dp-testimonial__role">Dental Hygienist · Chicago, IL</div>
-        </div>
-        <div class="dp-testimonial">
-          <p class="dp-testimonial__quote">"I started sharing my link in my patient follow-up emails and earned $400 in my first month without changing anything about my workflow. It's incredibly passive."</p>
-          <div class="dp-testimonial__author">Marcus L., DMD</div>
-          <div class="dp-testimonial__role">General Dentist · Austin, TX</div>
-        </div>
-        <div class="dp-testimonial">
-          <p class="dp-testimonial__quote">"I was skeptical about another affiliate program, but Boka is different. The product is one I already believed in — and the commission structure is genuinely generous."</p>
-          <div class="dp-testimonial__author">Priya K., RDH</div>
-          <div class="dp-testimonial__role">Dental Hygienist · Seattle, WA</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 7 — SIGN-UP FORM
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-signup" id="signup" aria-label="Apply to the Boka Dental Professionals Program">
-    <div class="dp-signup__inner">
-      <span class="dp-eyebrow">Apply Today</span>
-      <h2 class="dp-signup__headline">
-        Ready to <em>start earning</em><br>while doing what you love?
-      </h2>
-      <p class="dp-signup__body">
-        Applications are reviewed within 24–48 hours. Dental hygienists, dentists, and dental students are all welcome.
-      </p>
-
-      {%- comment -%}
-        FORM NOTES:
-        • Connect to your affiliate platform (Impact, ShareASale, Refersion, etc.)
-        • OR use Klaviyo / Shopify Forms for lead capture and manual approval flow
-        • Replace action URL and hidden fields with your form endpoint
-      {%- endcomment -%}
-      <form class="dp-signup__form" action="/pages/dental-pros-confirmation" method="post" id="dental-pros-form">
-        {% form 'customer' %} {%- comment -%}Remove if not using Shopify customer form{%- endcomment -%}
-        <input type="hidden" name="form_type" value="contact">
-        <input type="hidden" name="utf8" value="✓">
-        <input type="hidden" name="contact[tags]" value="dental-pro-applicant">
-
-        <div class="dp-signup__fields">
-          <div>
-            <label class="dp-signup__label" for="dp-first-name">First Name</label>
-            <input class="dp-signup__input" type="text" id="dp-first-name" name="contact[first_name]" placeholder="Sarah" required>
-          </div>
-          <div>
-            <label class="dp-signup__label" for="dp-last-name">Last Name</label>
-            <input class="dp-signup__input" type="text" id="dp-last-name" name="contact[last_name]" placeholder="Mitchell" required>
-          </div>
-          <div>
-            <label class="dp-signup__label" for="dp-email">Email Address</label>
-            <input class="dp-signup__input" type="email" id="dp-email" name="contact[email]" placeholder="sarah@dentaloffice.com" required>
-          </div>
-          <div>
-            <label class="dp-signup__label" for="dp-phone">Phone (Optional)</label>
-            <input class="dp-signup__input" type="tel" id="dp-phone" name="contact[phone]" placeholder="(312) 555-0100">
-          </div>
-          <div>
-            <label class="dp-signup__label" for="dp-credential">Credential / License</label>
-            <select class="dp-signup__select" id="dp-credential" name="contact[credential]" required>
-              <option value="" disabled selected>Select your role</option>
-              <option value="rdh">Registered Dental Hygienist (RDH)</option>
-              <option value="dmd">Dentist (DMD / DDS)</option>
-              <option value="dental-student">Dental Student</option>
-              <option value="dental-assistant">Dental Assistant (DA / EFDA)</option>
-              <option value="other">Other Dental Professional</option>
-            </select>
-          </div>
-          <div>
-            <label class="dp-signup__label" for="dp-state">State of Practice</label>
-            <input class="dp-signup__input" type="text" id="dp-state" name="contact[state]" placeholder="Illinois">
-          </div>
-          <div class="dp-signup__field-full">
-            <label class="dp-signup__label" for="dp-practice">Practice / Employer Name</label>
-            <input class="dp-signup__input" type="text" id="dp-practice" name="contact[practice]" placeholder="Lakeside Family Dental">
-          </div>
-          <div class="dp-signup__field-full">
-            <label class="dp-signup__label" for="dp-how">How do you plan to share Boka?</label>
-            <select class="dp-signup__select" id="dp-how" name="contact[sharing_method]">
-              <option value="" disabled selected>Select your primary method</option>
-              <option value="chair-side">Chair-side recommendation</option>
-              <option value="patient-email">Patient follow-up emails</option>
-              <option value="social">Social media (Instagram, TikTok, etc.)</option>
-              <option value="website">Practice website / blog</option>
-              <option value="multiple">Multiple channels</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="dp-signup__checkbox-row">
-          <input type="checkbox" id="dp-consent" name="contact[consent]" value="yes" required>
-          <label class="dp-signup__checkbox-label" for="dp-consent">
-            I confirm I am a licensed dental professional and agree to Boka's <a href="/pages/affiliate-terms">Affiliate Program Terms</a> and <a href="/pages/privacy-policy">Privacy Policy</a>. I understand commissions are paid on qualifying purchases made through my unique referral link.
-          </label>
-        </div>
-
-        <div class="dp-signup__submit-row">
-          <button type="submit" class="dp-btn dp-btn--green" style="width: 100%; max-width: 360px; padding: 18px 32px; font-size: 14px;">
-            Apply to the Dental Pros Program
-          </button>
-          <p class="dp-signup__disclaimer">
-            Approval typically takes 24–48 hours. You'll receive an email with your unique referral link and a free starter kit upon approval.
+          <span class="dp-kicker" style="color: var(--dp-pale);">Commission example</span>
+          <h3 class="dp-h3">Set the actual rates here before launch.</h3>
+          <p class="dp-copy dp-commission__copy">
+            These values are placeholders based on the current draft. Update them to match your final affiliate platform and legal terms.
           </p>
         </div>
-
-        {% endform %}
-      </form>
-    </div>
-  </section>
-
-  {%- comment -%}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    SECTION 8 — FAQ
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{%- endcomment -%}
-  <section class="dp-faq" aria-label="Frequently asked questions">
-    <div class="dp-container">
-      <span class="dp-eyebrow">FAQs</span>
-      <div class="dp-faq__grid">
-        <div class="dp-faq__item">
-          <h3 class="dp-faq__q">Is this program only for hygienists?</h3>
-          <p class="dp-faq__a">No — dentists, dental assistants, and dental students are all welcome. We primarily designed the program for hygienists because of the daily patient touchpoints, but any licensed dental professional can apply.</p>
-        </div>
-        <div class="dp-faq__item">
-          <h3 class="dp-faq__q">Is there any cost to join?</h3>
-          <p class="dp-faq__a">Absolutely not. Joining is free. There's no inventory to buy, no minimum sales requirement, and no ongoing fees. You receive a free product kit upon approval to experience the products yourself.</p>
-        </div>
-        <div class="dp-faq__item">
-          <h3 class="dp-faq__q">How does the commission work with subscriptions?</h3>
-          <p class="dp-faq__a">You earn 15% on a patient's first purchase and 10% on every subsequent subscription order. This means a single recommendation can generate recurring monthly income for as long as that patient subscribes.</p>
-        </div>
-        <div class="dp-faq__item">
-          <h3 class="dp-faq__q">When and how do I get paid?</h3>
-          <p class="dp-faq__a">Commissions are tracked in real time via your dashboard and paid out monthly — via direct deposit or PayPal — with a minimum payout threshold of $25.</p>
-        </div>
-        <div class="dp-faq__item">
-          <h3 class="dp-faq__q">Can I give my patients a discount?</h3>
-          <p class="dp-faq__a">Yes. Every partner receives a unique promo code that gives your patients 10% off their first order. This makes the recommendation feel like a genuine gift — not a sales pitch.</p>
-        </div>
-        <div class="dp-faq__item">
-          <h3 class="dp-faq__q">What is nano-hydroxyapatite and is it safe?</h3>
-          <p class="dp-faq__a">Nano-hydroxyapatite (n-Ha) is the naturally occurring mineral that comprises ~97% of tooth enamel. It has been clinically studied since the 1970s, is recognized by the Japanese Ministry of Health as an approved anti-cavity agent, and is considered safe for all ages including pregnant patients.</p>
+        <div class="dp-rates">
+          <div class="dp-rate">
+            <span>First-time customer purchase</span>
+            <span>15%</span>
+          </div>
+          <div class="dp-rate">
+            <span>Subscription / recurring purchase</span>
+            <span>10%</span>
+          </div>
+          <div class="dp-rate">
+            <span>Performance bonus tier</span>
+            <span>Up to 20%</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  {%- comment -%} Footer strip {%- endcomment -%}
-  <div class="dp-footer-strip">
-    <div class="dp-container">
-      <p>Questions? Email us at <a href="mailto:dental@boka.com">dental@boka.com</a> · <a href="/pages/affiliate-terms">Affiliate Terms</a> · <a href="/pages/privacy-policy">Privacy Policy</a></p>
+  <section class="dp-section dp-b2b" id="practice-benefits" aria-label="Boka Pro benefits and current B2B information">
+    <div class="dp-wrap">
+      <div class="dp-b2b-box">
+        <div>
+          <span class="dp-kicker">Practice benefits</span>
+          <h2 class="dp-h2">The B2B details from the current Dental Pros page.</h2>
+          <p class="dp-copy">
+            Keep the practical Boka Pro information on the page so dental professionals understand both sides of the program: affiliate referrals for patients and discounted ordering for their practice.
+          </p>
+          <div class="dp-btn-row">
+            <a class="dp-btn dp-btn--primary" href="#signup">Apply now</a>
+            <a class="dp-btn" href="https://account.boka.com">Already approved? Log in</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="dp-process">
+            <div class="dp-process__item">
+              <p class="dp-process__title">Fill out the application</p>
+              <p class="dp-process__copy">Dental professionals apply with practice and contact details.</p>
+            </div>
+            <div class="dp-process__item">
+              <p class="dp-process__title">Get account info if approved</p>
+              <p class="dp-process__copy">Approved members receive account information and next steps by email.</p>
+            </div>
+            <div class="dp-process__item">
+              <p class="dp-process__title">Place discounted practice orders</p>
+              <p class="dp-process__copy">Use your Boka Pro account for eligible discounted ordering for your practice.</p>
+            </div>
+            <div class="dp-process__item">
+              <p class="dp-process__title">Support happier patients and healthier mouths</p>
+              <p class="dp-process__copy">Recommend simple daily oral care routines patients can continue at home.</p>
+            </div>
+          </div>
+
+          <p class="dp-note">
+            Please note: customers outside of the U.S. and Canada are not being accepted at this time. All Boka Pros purchases are final sale. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
+  <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist approved">
+    <div class="dp-wrap">
+      <span class="dp-kicker">Dentist & hygienist approved</span>
+      <h2 class="dp-h2">Recommended by professionals who care about the daily routine.</h2>
+
+      <div class="dp-quote-grid">
+        <article class="dp-quote">
+          <p class="dp-quote__text">“We love that Boka is a healthy and effective dental product to provide our patients.”</p>
+          <p class="dp-quote__name">Dr. Vladana Babcic Tal, DMD</p>
+          <p class="dp-quote__role">Dental professional quote from current page</p>
+        </article>
+
+        <article class="dp-quote">
+          <p class="dp-quote__text">“I’m proud to recommend Boka to my patients. It’s a great way to bring high-quality and innovative oral health products directly to their door.”</p>
+          <p class="dp-quote__name">Dr. Amy Hatruong, DDS</p>
+          <p class="dp-quote__role">Dental professional quote from current page</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
+    <div class="dp-wrap">
+      <div class="dp-form-shell">
+        <div>
+          <span class="dp-kicker">Apply now</span>
+          <h2 class="dp-h2">Join the Boka Dental Pros Program.</h2>
+          <p class="dp-copy">
+            Use this form for the Shopify page draft, or replace it with your final affiliate platform form embed once the program is ready.
+          </p>
+          <ul class="dp-check-list">
+            <li>Dental professional application review</li>
+            <li>Unique referral link or code after approval</li>
+            <li>Practice discount access where eligible</li>
+            <li>Educational resources for patient conversations</li>
+          </ul>
+        </div>
+
+        <div class="dp-form">
+          {% form 'contact' %}
+            {% if form.posted_successfully? %}
+              <p class="dp-copy">Thank you for applying. We’ll review your information and follow up by email.</p>
+            {% endif %}
+
+            {% if form.errors %}
+              <div class="dp-note" style="margin: 0 0 18px;">Please check the required fields and try again.</div>
+            {% endif %}
+
+            <input type="hidden" name="contact[form_name]" value="Dental Pros Program Application">
+
+            <div class="dp-fields">
+              <div>
+                <label class="dp-label" for="dp-first-name">First name</label>
+                <input class="dp-input" id="dp-first-name" name="contact[first_name]" type="text" autocomplete="given-name" required>
+              </div>
+
+              <div>
+                <label class="dp-label" for="dp-last-name">Last name</label>
+                <input class="dp-input" id="dp-last-name" name="contact[last_name]" type="text" autocomplete="family-name" required>
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-email">Email</label>
+                <input class="dp-input" id="dp-email" name="contact[email]" type="email" autocomplete="email" required>
+              </div>
+
+              <div>
+                <label class="dp-label" for="dp-role">Professional role</label>
+                <select class="dp-select" id="dp-role" name="contact[role]" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option value="Dental Hygienist">Dental hygienist</option>
+                  <option value="Dentist">Dentist</option>
+                  <option value="Orthodontist">Orthodontist</option>
+                  <option value="Practice Owner">Practice owner</option>
+                  <option value="Other Dental Professional">Other dental professional</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="dp-label" for="dp-state">State / Province</label>
+                <input class="dp-input" id="dp-state" name="contact[state]" type="text" placeholder="Illinois" required>
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-practice">Practice / employer name</label>
+                <input class="dp-input" id="dp-practice" name="contact[practice]" type="text" placeholder="Lakeside Family Dental">
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-share">How do you plan to share Boka?</label>
+                <select class="dp-select" id="dp-share" name="contact[sharing_method]" required>
+                  <option value="" disabled selected>Select primary method</option>
+                  <option value="Chair-side recommendation">Chair-side recommendation</option>
+                  <option value="Patient follow-up emails">Patient follow-up emails</option>
+                  <option value="Social media">Social media</option>
+                  <option value="Practice website / blog">Practice website / blog</option>
+                  <option value="Multiple channels">Multiple channels</option>
+                </select>
+              </div>
+
+              <div class="dp-field--full">
+                <label class="dp-label" for="dp-message">Anything else we should know?</label>
+                <textarea class="dp-textarea" id="dp-message" name="contact[body]" placeholder="Tell us about your patient base, practice, or interest in Boka."></textarea>
+              </div>
+            </div>
+
+            <label class="dp-checkbox" for="dp-consent">
+              <input type="checkbox" id="dp-consent" name="contact[consent]" value="yes" required>
+              <span>I confirm I am a dental professional and agree to Boka’s program terms and privacy policy. I understand commissions apply only to qualifying purchases made through my unique referral link or code.</span>
+            </label>
+
+            <button class="dp-btn dp-btn--primary" type="submit">Apply to the program</button>
+            <p class="dp-form__fine">Approval timing, commission eligibility, and payment terms should match your final affiliate program rules.</p>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-faq" aria-label="Dental Pros Program FAQ">
+    <div class="dp-wrap">
+      <span class="dp-kicker">FAQ</span>
+      <h2 class="dp-h2">Quick answers before you apply.</h2>
+
+      <div class="dp-faq-grid">
+        <div class="dp-faq-item">
+          <h3>Who is the program for?</h3>
+          <p>Licensed dental professionals, hygienists, dentists, orthodontists, and practice teams who want to recommend Boka or order for their practice.</p>
+        </div>
+
+        <div class="dp-faq-item">
+          <h3>How do commissions work?</h3>
+          <p>Approved members receive a unique link or code. Qualifying patient purchases are tracked to that link or code and paid according to program terms.</p>
+        </div>
+
+        <div class="dp-faq-item">
+          <h3>Can I order products for my practice?</h3>
+          <p>Yes, the page should continue to explain Boka Pro practice discounts and account access for approved members.</p>
+        </div>
+
+        <div class="dp-faq-item">
+          <h3>Can I resell products online?</h3>
+          <p>No. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-final" aria-label="Final call to action">
+    <div class="dp-wrap">
+      <h2 class="dp-h2">Ready to share Boka with your patients?</h2>
+      <p class="dp-copy">Apply to join the Dental Pros Program and get the tools to recommend Boka clearly, confidently, and beautifully.</p>
+      <div class="dp-btn-row" style="justify-content: center;">
+        <a class="dp-btn dp-btn--light" href="#signup">Apply now</a>
+      </div>
+    </div>
+  </section>
 </main>
-
-<script>
-  (function () {
-    var form = document.getElementById('dental-pros-form');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      var btn = form.querySelector('[type="submit"]');
-      if (btn) {
-        btn.textContent = 'Submitting…';
-        btn.disabled = true;
-      }
-    });
-    var anchors = document.querySelectorAll('a[href^="#"]');
-    anchors.forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var id = a.getAttribute('href').slice(1);
-        var target = document.getElementById(id);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  })();
-</script>
