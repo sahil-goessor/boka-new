@@ -1,0 +1,167 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__description {max-width: 100%;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_learn_more": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "enable_merchandising_card": false,
+        "card_bg_color": "",
+        "card_text_color": "",
+        "card_columns": "two",
+        "card_column_position": 1,
+        "card_row_position": 2,
+        "image_as_bg": false,
+        "bg_image_position": "center",
+        "bg_image_link": "",
+        "card_image_url": "",
+        "card_text_alignment_desktop": "left",
+        "card_text_alignment_mobile": "center",
+        "card_text_position_desktop": "center",
+        "card_text_position_mobile": "flex-start",
+        "card_title": "",
+        "card_text": "",
+        "button_text": "",
+        "button_url": "",
+        "padding_top": 20,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "collapsible_content_GaTyNb": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_GGcFRf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are there fluoride-free options among cruelty-free toothpastes?",
+            "icon": "none",
+            "row_content": "<p>Browse our FAQs to learn how our cruelty-free vegan toothpaste fits into your fluoride-free oral care routine and supports ethical choices. Explore why Boka is an option among cruelty-free toothpaste brands for those seeking natural, fluoride-free alternatives to traditional toothpaste.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aJYYmM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why should I choose cruelty-free toothpaste?",
+            "icon": "none",
+            "row_content": "<p>Choosing cruelty-free toothpaste means selecting products that are not tested on animals and are made with ethical sourcing in mind. Boka’s vegan toothpaste combines ingredients like peppermint, plant extracts, and xylitol to create a fresh and enjoyable brushing experience. These formulas are also SLS-free, free from unnecessary additives like artificial dyes or harsh foaming agents, making them a thoughtful choice for your daily dental care and overall oral care routine.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cKabND": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are all cruelty-free toothpastes vegan?",
+            "icon": "none",
+            "row_content": "<p>Not all cruelty-free toothpaste is automatically vegan, but Boka’s formulas are both cruelty-free and vegan-friendly. This means they do not contain animal-derived ingredients, and they are not involved in animal testing at any stage. This makes Boka a suitable choice for those seeking a fully ethical oral care solution that fits into a mindful, plant-based lifestyle.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EycrT9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can this toothpaste be as effective as traditional toothpaste?",
+            "icon": "none",
+            "row_content": "<p>Boka’s cruelty-free toothpaste is designed to provide a gentle, effective clean while supporting your daily oral care routine. Formulated with nano-hydroxyapatite, these products help maintain a clean mouth feel. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_94KUp6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do cruelty-free toothpastes cost more?",
+            "icon": "none",
+            "row_content": "<p>You don’t have to spend more to make ethical choices for animals and the environment. Plus, our products are designed with sustainability in mind, offering recyclable packaging and natural formulas free from unnecessary chemicals, including bundles and travel-size tubes for convenience and value..</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xHgjtG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Boka cruelty-free toothpaste different from other brands?",
+            "icon": "none",
+            "row_content": "<p>Instead of relying on traditional fluoride toothpaste formulas, Boka uses nano-hydroxyapatite as a fluoride-free alternative, offering a clean, mineral-based approach. While other brands may use different active ingredients, Boka focuses on toothpaste formulations that are vegan, SLS-free, and designed to fit seamlessly into a consistent oral care routine. The result is a product that supports a healthier smile, fresh breath, and a more mindful brushing experience.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dzegdk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can cruelty-free toothpaste support a complete oral care routine?",
+            "icon": "none",
+            "row_content": "<p>Yes, a cruelty-free toothpaste can be part of a complete oral care routine when paired with daily habits like brushing with a toothbrush, using floss, and maintaining regular dental visits with a dentist. Boka’s formulas are designed to help maintain a clean mouth feel. With options ranging from <a href=\"https://www.boka.com/collections/kids\"><span style=\"text-decoration:underline\">kids' toothpaste</span></a> to <a href=\"https://www.boka.com/collections/toothpastes-for-sensitive-teeth\"><span style=\"text-decoration:underline\">sensitive teeth toothpaste</span></a>, Boka offers a flexible collection that supports everyday use and helps maintain a fresh, comfortable, and balanced oral routine.<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_GGcFRf",
+        "collapsible_row_aJYYmM",
+        "collapsible_row_cKabND",
+        "collapsible_row_EycrT9",
+        "collapsible_row_94KUp6",
+        "collapsible_row_xHgjtG",
+        "collapsible_row_dzegdk"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Questions About Boka Cruelty-Free Toothpaste",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "heading_alignment": "center",
+        "description": "Yes, Boka offers a wide range of fluoride-free toothpaste options within its cruelty-free toothpaste collection. These include hydroxyapatite toothpaste formulas as a modern alternative to fluoride. Unlike traditional fluoride toothpaste from other brands, Boka’s formulas are without fluoride and without SLS, making them a popular option for those seeking toothpaste with clean, simple ingredients.",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "collapsible_content_GaTyNb"
+  ]
+}
