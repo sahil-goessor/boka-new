@@ -39,6 +39,13 @@
     letter-spacing: -0.01em;
   }
 
+  .dp-page {
+  background:
+    radial-gradient(circle at 85% 8%, rgba(191, 214, 165, 0.34), transparent 28%),
+    radial-gradient(circle at 12% 36%, rgba(249, 229, 219, 0.34), transparent 30%),
+    linear-gradient(180deg, var(--dp-cream) 0%, var(--dp-porcelain) 48%, var(--dp-cream) 100%);
+}
+
   .dp-page a {
     color: inherit;
   }
@@ -504,12 +511,6 @@
     line-height: 1.55;
   }
 
-  /* WHY HYGIENISTS */
-  .dp-why {
-    background:
-      radial-gradient(circle at top left, rgba(191,214,165,0.56), transparent 28%),
-      var(--dp-porcelain);
-  }
 
   .dp-card-grid {
     display: grid;
@@ -554,10 +555,6 @@
     line-height: 1.62;
   }
 
-  /* VIDEO */
-  .dp-video {
-    background: var(--dp-petal);
-  }
 
   .dp-video-card {
     position: relative;
@@ -837,10 +834,6 @@
     line-height: 1.58;
   }
 
-  /* TESTIMONIALS */
-  .dp-testimonials {
-    background: var(--dp-porcelain);
-  }
 
   .dp-quote-grid {
     display: grid;
@@ -879,13 +872,6 @@
     margin: 0;
     color: rgba(34,39,33,0.56);
     font-size: 12px;
-  }
-
-  /* FORM */
-  .dp-signup {
-    background:
-      radial-gradient(circle at 90% 0%, rgba(191,214,165,0.50), transparent 28%),
-      var(--dp-cream);
   }
 
   .dp-form-shell {
@@ -981,10 +967,13 @@
     text-align: center;
   }
 
-  /* FAQ */
-  .dp-faq {
-    background: var(--dp-pale);
-  }
+  .dp-why,
+.dp-video,
+.dp-testimonials,
+.dp-signup,
+.dp-faq {
+  background: transparent;
+}
 
   .dp-faq-grid {
     display: grid;
