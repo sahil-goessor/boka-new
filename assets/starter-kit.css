@@ -79,7 +79,8 @@
 .starter-kit-template .product__media,
 .starter-kit-template .product-media-container,
 .starter-kit-template .product-media-container .media {
-  background: linear-gradient(145deg, #f7f6f0, #efede5);
+  background: #ffffff !important;
+  background-image: none !important;
 }
 
 .starter-kit-template .product__media img {
