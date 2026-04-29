@@ -12,27 +12,350 @@
     "main": {
       "type": "dental-pros-landing",
       "blocks": {
-        "forms_inline_fqYQQD": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "103662",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_fqYQQD"
-      ],
+  "hero_pill_1": {
+    "type": "hero_pill",
+    "settings": {
+      "text": "For hygienists & dental professionals"
+    }
+  },
+  "hero_pill_2": {
+    "type": "hero_pill",
+    "settings": {
+      "text": "Affiliate commissions"
+    }
+  },
+  "hero_pill_3": {
+    "type": "hero_pill",
+    "settings": {
+      "text": "Practice discounts"
+    }
+  },
+  "hero_pill_4": {
+    "type": "hero_pill",
+    "settings": {
+      "text": "U.S. & Canada only"
+    }
+  },
+
+  "strip_card_1": {
+    "type": "strip_card",
+    "settings": {
+      "number": "A",
+      "text": "A simple way for dental professionals to recommend Boka with confidence.",
+      "highlight_card": true
+    }
+  },
+  "strip_card_2": {
+    "type": "strip_card",
+    "settings": {
+      "number": "01",
+      "text": "Apply to join the Dental Pros Program.",
+      "highlight_card": false
+    }
+  },
+  "strip_card_3": {
+    "type": "strip_card",
+    "settings": {
+      "number": "02",
+      "text": "Get approved and receive your unique referral link or code.",
+      "highlight_card": false
+    }
+  },
+  "strip_card_4": {
+    "type": "strip_card",
+    "settings": {
+      "number": "03",
+      "text": "Share Boka with patients and earn on qualifying orders.",
+      "highlight_card": false
+    }
+  },
+
+  "what_mini_1": {
+    "type": "what_mini_card",
+    "settings": {
+      "title": "Science-backed wellness",
+      "text": "Clear education around ingredients, benefits, and daily oral care."
+    }
+  },
+  "what_mini_2": {
+    "type": "what_mini_card",
+    "settings": {
+      "title": "Elevated experience",
+      "text": "Beautiful formulas, packaging, and flavors patients want to use consistently."
+    }
+  },
+
+  "ingredient_bullet_1": {
+    "type": "ingredient_bullet",
+    "settings": {
+      "text": "Fluoride-free n-Ha toothpaste options"
+    }
+  },
+  "ingredient_bullet_2": {
+    "type": "ingredient_bullet",
+    "settings": {
+      "text": "SLS-free and paraben-free formulas"
+    }
+  },
+  "ingredient_bullet_3": {
+    "type": "ingredient_bullet",
+    "settings": {
+      "text": "No artificial flavors or endocrine disruptors"
+    }
+  },
+  "ingredient_bullet_4": {
+    "type": "ingredient_bullet",
+    "settings": {
+      "text": "Low-foaming, feel-good brushing experience"
+    }
+  },
+  "ingredient_bullet_5": {
+    "type": "ingredient_bullet",
+    "settings": {
+      "text": "Designed to support enamel health and daily consistency"
+    }
+  },
+
+  "why_card_1": {
+    "type": "why_card",
+    "settings": {
+      "icon": "1",
+      "title": "Patients want guidance",
+      "text": "You can point patients toward products that align with their preferences, routine, and oral care goals."
+    }
+  },
+  "why_card_2": {
+    "type": "why_card",
+    "settings": {
+      "icon": "2",
+      "title": "Recommendations should feel simple",
+      "text": "Your link or code gives patients an easy next step after an appointment, follow-up email, or social post."
+    }
+  },
+  "why_card_3": {
+    "type": "why_card",
+    "settings": {
+      "icon": "3",
+      "title": "Education creates consistency",
+      "text": "Boka gives you clear ingredient talking points so chair-side education feels confident, modern, and approachable."
+    }
+  },
+
+  "how_step_1": {
+    "type": "how_step",
+    "settings": {
+      "number": "01",
+      "title": "Apply",
+      "text": "Tell us about your role, practice, and how you plan to share Boka with patients."
+    }
+  },
+  "how_step_2": {
+    "type": "how_step",
+    "settings": {
+      "number": "02",
+      "title": "Get your link",
+      "text": "If approved, we send your referral link, promo code, and dashboard details."
+    }
+  },
+  "how_step_3": {
+    "type": "how_step",
+    "settings": {
+      "number": "03",
+      "title": "Share with patients",
+      "text": "Use it chair-side, in follow-up emails, on your practice website, or on social."
+    }
+  },
+  "how_step_4": {
+    "type": "how_step",
+    "settings": {
+      "number": "04",
+      "title": "Earn commission",
+      "text": "Qualifying purchases are tracked in your dashboard and paid according to program terms."
+    }
+  },
+
+  "commission_rate_1": {
+    "type": "commission_rate",
+    "settings": {
+      "label": "First-time customer purchase",
+      "value": "15%"
+    }
+  },
+  "commission_rate_2": {
+    "type": "commission_rate",
+    "settings": {
+      "label": "Subscription / recurring purchase",
+      "value": "10%"
+    }
+  },
+  "commission_rate_3": {
+    "type": "commission_rate",
+    "settings": {
+      "label": "Performance bonus tier",
+      "value": "Up to 20%"
+    }
+  },
+
+  "process_item_1": {
+    "type": "process_item",
+    "settings": {
+      "title": "Fill out the application",
+      "text": "Dental professionals apply with practice and contact details."
+    }
+  },
+  "process_item_2": {
+    "type": "process_item",
+    "settings": {
+      "title": "Get account info if approved",
+      "text": "Approved members receive account information and next steps by email."
+    }
+  },
+  "process_item_3": {
+    "type": "process_item",
+    "settings": {
+      "title": "Place discounted practice orders",
+      "text": "Use your Boka Pro account for eligible discounted ordering for your practice."
+    }
+  },
+  "process_item_4": {
+    "type": "process_item",
+    "settings": {
+      "title": "Support happier patients and healthier mouths",
+      "text": "Recommend simple daily oral care routines patients can continue at home."
+    }
+  },
+
+  "quote_1": {
+    "type": "quote",
+    "settings": {
+      "quote": "We love that Boka is a healthy and effective dental product to provide our patients.",
+      "name": "Dr. Vladana Babcic Tal, DMD",
+      "role": "Dental professional quote from current page"
+    }
+  },
+  "quote_2": {
+    "type": "quote",
+    "settings": {
+      "quote": "I’m proud to recommend Boka to my patients. It’s a great way to bring high-quality and innovative oral health products directly to their door.",
+      "name": "Dr. Amy Hatruong, DDS",
+      "role": "Dental professional quote from current page"
+    }
+  },
+
+  "form_bullet_1": {
+    "type": "form_bullet",
+    "settings": {
+      "text": "Dental professional application review"
+    }
+  },
+  "form_bullet_2": {
+    "type": "form_bullet",
+    "settings": {
+      "text": "Unique referral link or code after approval"
+    }
+  },
+  "form_bullet_3": {
+    "type": "form_bullet",
+    "settings": {
+      "text": "Practice discount access where eligible"
+    }
+  },
+  "form_bullet_4": {
+    "type": "form_bullet",
+    "settings": {
+      "text": "Educational resources for patient conversations"
+    }
+  },
+
+  "forms_inline_fqYQQD": {
+    "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+    "settings": {
+      "form_id": "103662",
+      "text_color": "#202020",
+      "button_background_color": "#202020",
+      "button_label_color": "#FFFFFF",
+      "links_color": "#1878B9",
+      "errors_color": "#E02229",
+      "text_alignment": "center",
+      "form_alignment": "center",
+      "padding_top": 0,
+      "padding_bottom": 24,
+      "padding_right": 0,
+      "padding_left": 0
+    }
+  },
+
+  "faq_1": {
+    "type": "faq",
+    "settings": {
+      "question": "Who is the program for?",
+      "answer": "Licensed dental professionals, hygienists, dentists, orthodontists, and practice teams who want to recommend Boka or order for their practice."
+    }
+  },
+  "faq_2": {
+    "type": "faq",
+    "settings": {
+      "question": "How do commissions work?",
+      "answer": "Approved members receive a unique link or code. Qualifying patient purchases are tracked to that link or code and paid according to program terms."
+    }
+  },
+  "faq_3": {
+    "type": "faq",
+    "settings": {
+      "question": "Can I order products for my practice?",
+      "answer": "Yes, the page should continue to explain Boka Pro practice discounts and account access for approved members."
+    }
+  },
+  "faq_4": {
+    "type": "faq",
+    "settings": {
+      "question": "Can I resell products online?",
+      "answer": "No. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts."
+    }
+  }
+},
+"block_order": [
+  "hero_pill_1",
+  "hero_pill_2",
+  "hero_pill_3",
+  "hero_pill_4",
+  "strip_card_1",
+  "strip_card_2",
+  "strip_card_3",
+  "strip_card_4",
+  "what_mini_1",
+  "what_mini_2",
+  "ingredient_bullet_1",
+  "ingredient_bullet_2",
+  "ingredient_bullet_3",
+  "ingredient_bullet_4",
+  "ingredient_bullet_5",
+  "why_card_1",
+  "why_card_2",
+  "why_card_3",
+  "how_step_1",
+  "how_step_2",
+  "how_step_3",
+  "how_step_4",
+  "commission_rate_1",
+  "commission_rate_2",
+  "commission_rate_3",
+  "process_item_1",
+  "process_item_2",
+  "process_item_3",
+  "process_item_4",
+  "quote_1",
+  "quote_2",
+  "form_bullet_1",
+  "form_bullet_2",
+  "form_bullet_3",
+  "form_bullet_4",
+  "forms_inline_fqYQQD",
+  "faq_1",
+  "faq_2",
+  "faq_3",
+  "faq_4"
+],
       "settings": {
         "hero_kicker": "Boka Dental Pros",
         "hero_heading": "Recommend oral care that feels <span class=\"dp-em\">easy</span> to love.",
