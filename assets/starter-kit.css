@@ -80,6 +80,10 @@
   padding: 0 !important;
   box-shadow: none !important;
 }
+.starter-kit-template .product__media-list .product__media-item {
+  border: 1px solid var(--starter-border);
+  background: var(--starter-white);
+}
 
 .starter-kit-template .product__media-list .product__media-item,
 .starter-kit-template .product__media-list .product__media,
