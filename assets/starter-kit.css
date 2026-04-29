@@ -72,17 +72,13 @@
   max-width: none !important;
 }
 
-/* ============================================================
-   Media/gallery card
-   ============================================================ */
-
 .starter-kit-template .product__media-wrapper {
-  overflow: hidden;
-  border: 1px solid var(--starter-border);
-  border-radius: var(--starter-radius-lg);
-  background: var(--starter-white);
-  box-shadow: none;
-  padding: 0;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
 .starter-kit-template .product__media-list,
