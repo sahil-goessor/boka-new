@@ -744,3 +744,70 @@
     transition: none;
   }
 }
+
+/* What's included bullet list */
+.starter-kit-template .starter-kit__included-box {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--starter-border);
+}
+
+.starter-kit-template .starter-kit__section-title {
+  margin: 0 0 12px;
+  color: var(--starter-ink-mid);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.starter-kit-template .starter-kit__included-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.starter-kit-template .starter-kit__included-list li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 10px 12px;
+  border: 1px solid var(--starter-border);
+  border-radius: 8px;
+  background: #fcfcf8;
+}
+
+.starter-kit-template .starter-kit__included-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 999px;
+  background: var(--starter-sage-light);
+  color: var(--starter-ink);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.starter-kit-template .starter-kit__included-list strong {
+  display: block;
+  color: var(--starter-ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.starter-kit-template .starter-kit__included-list small {
+  display: block;
+  margin-top: 2px;
+  color: var(--starter-ink-mid);
+  font-size: 12px;
+  line-height: 1.35;
+}
