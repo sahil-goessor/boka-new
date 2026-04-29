@@ -81,6 +81,15 @@
   box-shadow: none !important;
 }
 
+.starter-kit-template .product__media-list .product__media-item,
+.starter-kit-template .product__media-list .product__media,
+.starter-kit-template .product__media-list .product-media-container,
+.starter-kit-template .product__media-list .product-media-container .media {
+  overflow: hidden !important;
+  border-radius: var(--starter-radius-lg);
+  background: linear-gradient(145deg, #f7f6f0, #efede5);
+}
+
 .starter-kit-template .product__media-list,
 .starter-kit-template .product__media,
 .starter-kit-template .product-media-container,
