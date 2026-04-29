@@ -1504,85 +1504,18 @@
         </div>
 
         <div class="dp-form">
-          {% form 'contact' %}
-            {% if form.posted_successfully? %}
-              <p class="dp-copy">{{ section.settings.form_success_message }}</p>
+            {% assign app_blocks = section.blocks | where: 'type', '@app' %}
+
+            {% if app_blocks.size > 0 %}
+                {% for block in app_blocks %}
+                {% render block %}
+                {% endfor %}
+            {% else %}
+                <p class="dp-copy">
+                Add your form app block here in Theme Editor and use Form ID 103662.
+                </p>
             {% endif %}
-
-            {% if form.errors %}
-              <div class="dp-note" style="margin: 0 0 18px;">{{ section.settings.form_error_message }}</div>
-            {% endif %}
-
-            <input type="hidden" name="contact[form_name]" value="{{ section.settings.form_name }}">
-
-            <div class="dp-fields">
-              <div>
-                <label class="dp-label" for="dp-first-name-{{ section.id }}">{{ section.settings.form_first_name_label }}</label>
-                <input class="dp-input" id="dp-first-name-{{ section.id }}" name="contact[first_name]" type="text" autocomplete="given-name" required>
-              </div>
-
-              <div>
-                <label class="dp-label" for="dp-last-name-{{ section.id }}">{{ section.settings.form_last_name_label }}</label>
-                <input class="dp-input" id="dp-last-name-{{ section.id }}" name="contact[last_name]" type="text" autocomplete="family-name" required>
-              </div>
-
-              <div class="dp-field--full">
-                <label class="dp-label" for="dp-email-{{ section.id }}">{{ section.settings.form_email_label }}</label>
-                <input class="dp-input" id="dp-email-{{ section.id }}" name="contact[email]" type="email" autocomplete="email" required>
-              </div>
-
-              <div>
-                <label class="dp-label" for="dp-role-{{ section.id }}">{{ section.settings.form_role_label }}</label>
-                <select class="dp-select" id="dp-role-{{ section.id }}" name="contact[role]" required>
-                  <option value="" disabled selected>{{ section.settings.form_role_placeholder }}</option>
-                  <option value="Dental Hygienist">Dental hygienist</option>
-                  <option value="Dentist">Dentist</option>
-                  <option value="Orthodontist">Orthodontist</option>
-                  <option value="Practice Owner">Practice owner</option>
-                  <option value="Other Dental Professional">Other dental professional</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="dp-label" for="dp-state-{{ section.id }}">{{ section.settings.form_state_label }}</label>
-                <input class="dp-input" id="dp-state-{{ section.id }}" name="contact[state]" type="text" placeholder="{{ section.settings.form_state_placeholder }}" required>
-              </div>
-
-              <div class="dp-field--full">
-                <label class="dp-label" for="dp-practice-{{ section.id }}">{{ section.settings.form_practice_label }}</label>
-                <input class="dp-input" id="dp-practice-{{ section.id }}" name="contact[practice]" type="text" placeholder="{{ section.settings.form_practice_placeholder }}">
-              </div>
-
-              <div class="dp-field--full">
-                <label class="dp-label" for="dp-share-{{ section.id }}">{{ section.settings.form_share_label }}</label>
-                <select class="dp-select" id="dp-share-{{ section.id }}" name="contact[sharing_method]" required>
-                  <option value="" disabled selected>{{ section.settings.form_share_placeholder }}</option>
-                  <option value="Chair-side recommendation">Chair-side recommendation</option>
-                  <option value="Patient follow-up emails">Patient follow-up emails</option>
-                  <option value="Social media">Social media</option>
-                  <option value="Practice website / blog">Practice website / blog</option>
-                  <option value="Multiple channels">Multiple channels</option>
-                </select>
-              </div>
-
-              <div class="dp-field--full">
-                <label class="dp-label" for="dp-message-{{ section.id }}">{{ section.settings.form_message_label }}</label>
-                <textarea class="dp-textarea" id="dp-message-{{ section.id }}" name="contact[body]" placeholder="{{ section.settings.form_message_placeholder }}"></textarea>
-              </div>
             </div>
-
-            <label class="dp-checkbox" for="dp-consent-{{ section.id }}">
-              <input type="checkbox" id="dp-consent-{{ section.id }}" name="contact[consent]" value="yes" required>
-              <span>{{ section.settings.form_consent_text }}</span>
-            </label>
-
-            <button class="dp-btn dp-btn--primary" type="submit">{{ section.settings.form_submit_label }}</button>
-
-            {% if section.settings.form_fine_print != blank %}
-              <p class="dp-form__fine">{{ section.settings.form_fine_print }}</p>
-            {% endif %}
-          {% endform %}
-        </div>
       </div>
     </div>
   </section>
