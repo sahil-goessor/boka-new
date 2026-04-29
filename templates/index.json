@@ -140,9 +140,9 @@
         "image_RJU7Ux"
       ],
       "custom_css": [
-        ".slideshow__text {background: linear-gradient( 180deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.14) ) !important; padding: 24px 28px !important; border-radius: 18px !important; max-width: 620px;}",
+        ".slideshow__text {background: linear-gradient( 180deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.14) ) !important; padding: 24px 28px !important; border-radius: 0px !important; max-width: 620px;}",
         ".slideshow__text .banner__heading,.slideshow__text .banner__text,.slideshow__text .banner__text p,.slideshow__text .inline-richtext {color: #ffffff !important;}",
-        "@media screen and (max-width: 749px) {.slideshow__text {padding: 18px 20px !important; border-radius: 16px !important; max-width: calc(100vw - 32px); margin-left: auto; margin-right: auto; }}"
+        "@media screen and (max-width: 749px) {.slideshow__text {padding: 18px 20px !important; border-radius: 0px !important; max-width: calc(100vw - 32px); margin-left: auto; margin-right: auto; }}"
       ],
       "settings": {
         "layout": "full_bleed",
