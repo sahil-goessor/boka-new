@@ -479,35 +479,35 @@
                   product_form_id: product_form_id,
                   stickyAtc: stickyAtc
               %}
-              <div class="starter-kit__included-box">
-  <h2 class="starter-kit__section-title">What’s included</h2>
+              {% assign included_blocks = section.blocks | where: 'type', 'included_bullet' %}
 
-  <ul class="starter-kit__included-list">
-    <li>
-      <span class="starter-kit__included-check">✓</span>
-      <span>
-        <strong>{{ product.selected_or_first_available_variant.title }}</strong>
-        <small>4 oz goal toothpaste</small>
-      </span>
-    </li>
+{% if included_blocks.size > 0 %}
+  <div class="starter-kit__included-box" {{ block.shopify_attributes }}>
+    <h2 class="starter-kit__section-title">
+      {{ section.settings.included_heading | default: "What’s included" }}
+    </h2>
 
-    <li>
-      <span class="starter-kit__included-check">✓</span>
-      <span>
-        <strong>1 Classic Brush</strong>
-        <small>Starter routine essential</small>
-      </span>
-    </li>
+    <ul class="starter-kit__included-list">
+      {% for included_block in included_blocks %}
+        <li {{ included_block.shopify_attributes }}>
+          <span class="starter-kit__included-check">
+            {{ included_block.settings.icon | default: '✓' }}
+          </span>
 
-    <li>
-      <span class="starter-kit__included-check">✓</span>
-      <span>
-        <strong>1 Tongue Cleaner</strong>
-        <small>For a fresher daily routine</small>
-      </span>
-    </li>
-  </ul>
-</div>
+          <span>
+            {% if included_block.settings.title != blank %}
+              <strong>{{ included_block.settings.title }}</strong>
+            {% endif %}
+
+            {% if included_block.settings.description != blank %}
+              <small>{{ included_block.settings.description }}</small>
+            {% endif %}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
             {%- when 'custom_button' -%}
               {% if block.settings.custom_button_url %}
                   {% render 'product-custom-button', block: block %}
