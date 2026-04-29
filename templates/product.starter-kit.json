@@ -12,6 +12,38 @@
     "main": {
       "type": "starter-kit",
       "blocks": {
+        "included_bullet_93wD9e": {
+          "type": "included_bullet",
+          "settings": {
+            "icon": "✓",
+            "title": "Goal toothpaste",
+            "description": "4 oz toothpaste selected by goal"
+          }
+        },
+        "included_bullet_xdNM9b": {
+          "type": "included_bullet",
+          "settings": {
+            "icon": "✓",
+            "title": "1 Classic Brush",
+            "description": "Starter routine essential"
+          }
+        },
+        "included_bullet_ftVXkp": {
+          "type": "included_bullet",
+          "settings": {
+            "icon": "✓",
+            "title": "1 Tongue Cleaner",
+            "description": "For a fresher daily routine"
+          }
+        },
+        "included_bullet_TLjkWG": {
+          "type": "included_bullet",
+          "settings": {
+            "icon": "✓",
+            "title": "1 Boka Floss",
+            "description": "Complete your daily clean"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -144,6 +176,10 @@
         }
       },
       "block_order": [
+        "included_bullet_93wD9e",
+        "included_bullet_xdNM9b",
+        "included_bullet_ftVXkp",
+        "included_bullet_TLjkWG",
         "title",
         "yotpo_product_reviews_star_rating_Jpxdwz",
         "price",
@@ -167,6 +203,8 @@
       "settings": {
         "enable_sticky_info": true,
         "enable_sticky_atc": true,
+        "included_heading": "What’s included",
+        "free_shipping_label": "Free shipping at $25+",
         "media_size": "medium",
         "lazyload": true,
         "constrain_to_viewport": true,
