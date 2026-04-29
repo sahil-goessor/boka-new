@@ -85,20 +85,6 @@
   background: var(--starter-white);
 }
 
-.starter-kit-template .product__media-list .product__media,
-.starter-kit-template .product__media-list .product-media-container .media {
-  min-height: clamp(520px, 56vw, 720px);
-}
-
-.starter-kit-template .product__media-list .product__media img,
-.starter-kit-template .product__media-list .product-media-container img {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: clamp(520px, 56vw, 720px);
-  object-fit: cover !important;
-  object-position: center center !important;
-}
-
 .starter-kit-template .product__media-list .product__media-item,
 .starter-kit-template .product__media-list .product__media,
 .starter-kit-template .product__media-list .product-media-container,
