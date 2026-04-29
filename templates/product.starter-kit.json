@@ -170,7 +170,7 @@
             "product_list_limit": 10,
             "products_per_page": 3,
             "pagination_style": "counter",
-            "image_ratio": "square",
+            "image_ratio": "portrait",
             "enable_quick_add": true
           }
         }
@@ -197,9 +197,7 @@
         "af067451-b82f-4114-8006-9a547e9c2157",
         "8f4ac970-3a15-4b7d-823a-82ce6560b8df"
       ],
-      "custom_css": [
-        "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "enable_sticky_atc": true,
@@ -209,7 +207,7 @@
         "lazyload": true,
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
+        "gallery_layout": "thumbnail",
         "thumbnail_position": "left",
         "media_position": "left",
         "image_zoom": "none",
