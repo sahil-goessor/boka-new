@@ -74,8 +74,8 @@
 
 .starter-kit-template .product__media-wrapper {
   overflow: visible !important;
-  border: 1 !important;
-  border-radius: 1 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   background: transparent !important;
   padding: 0 !important;
   box-shadow: none !important;
