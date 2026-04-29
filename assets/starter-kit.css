@@ -10,19 +10,19 @@
   --boka-line: rgba(34, 39, 33, 0.11);
   --boka-shadow: 0 22px 70px rgba(34, 39, 33, 0.075);
 }
-.product-boka-light {
+.starter-kit-template {
   background:
     radial-gradient(circle at 86% 6%, rgba(191, 214, 165, 0.32), transparent 28%),
     radial-gradient(circle at 10% 44%, rgba(249, 229, 219, 0.28), transparent 30%),
     linear-gradient(180deg, #fafaf5 0%, #f7f7f0 52%, #fafaf5 100%);
 }
 
-.product-boka-light .product {
+.starter-kit-template .product {
   align-items: flex-start;
   gap: clamp(28px, 4vw, 58px);
 }
 
-.product-boka-light .product__media-wrapper {
+.starter-kit-template .product__media-wrapper {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(34, 39, 33, 0.08);
@@ -34,7 +34,7 @@
   box-shadow: 0 24px 72px rgba(34, 39, 33, 0.075);
 }
 
-.product-boka-light .product__info-wrapper {
+.starter-kit-template .product__info-wrapper {
   border: 1px solid rgba(34, 39, 33, 0.09);
   border-radius: 34px;
   padding: clamp(24px, 3vw, 42px);
@@ -43,36 +43,36 @@
   backdrop-filter: blur(12px);
 }
 
-.product-boka-light .product__info-container {
+.starter-kit-template .product__info-container {
   max-width: 100%;
 }
 
-.product-boka-light .product__title h1,
-.product-boka-light .product__title h2 {
+.starter-kit-template .product__title h1,
+.starter-kit-template .product__title h2 {
   color: #222721;
   font-weight: 300;
   letter-spacing: -0.045em;
   line-height: 1.02;
 }
 
-.product-boka-light .price,
-.product-boka-light .price-item {
+.starter-kit-template .price,
+.starter-kit-template .price-item {
   color: #222721;
 }
 
-.product-boka-light .product__text,
-.product-boka-light .product__description,
-.product-boka-light .accordion__content {
+.starter-kit-template .product__text,
+.starter-kit-template .product__description,
+.starter-kit-template .accordion__content {
   color: rgba(34, 39, 33, 0.72);
   line-height: 1.65;
 }
 
-.product-boka-light .product-form__input {
+.starter-kit-template .product-form__input {
   margin-bottom: 18px;
 }
 
-.product-boka-light .product-form__input .form__label,
-.product-boka-light .quantity__label {
+.starter-kit-template .product-form__input .form__label,
+.starter-kit-template .quantity__label {
   color: #737c5b;
   font-size: 11px;
   font-weight: 600;
@@ -80,7 +80,7 @@
   text-transform: uppercase;
 }
 
-.product-boka-light .product-form__input input[type='radio'] + label {
+.starter-kit-template .product-form__input input[type='radio'] + label {
   border: 1px solid rgba(34, 39, 33, 0.14);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.62);
@@ -88,35 +88,35 @@
   transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
-.product-boka-light .product-form__input input[type='radio'] + label:hover {
+.starter-kit-template .product-form__input input[type='radio'] + label:hover {
   transform: translateY(-1px);
   border-color: rgba(115, 124, 91, 0.32);
 }
 
-.product-boka-light .product-form__input input[type='radio']:checked + label {
+.starter-kit-template .product-form__input input[type='radio']:checked + label {
   border-color: #737c5b;
   background: #737c5b;
   color: #ffffff;
 }
 
-.product-boka-light .quantity {
+.starter-kit-template .quantity {
   border: 1px solid rgba(34, 39, 33, 0.14);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
 }
 
-.product-boka-light .quantity__button,
-.product-boka-light .quantity__input {
+.starter-kit-template .quantity__button,
+.starter-kit-template .quantity__input {
   color: #222721;
 }
 
-.product-boka-light .product-form__submit,
-.product-boka-light .shopify-payment-button__button,
-.product-boka-light .button {
+.starter-kit-template .product-form__submit,
+.starter-kit-template .shopify-payment-button__button,
+.starter-kit-template .button {
   border-radius: 999px;
 }
 
-.product-boka-light .product-form__submit {
+.starter-kit-template .product-form__submit {
   border: 1px solid #a5bc8b;
   background: #a5bc8b;
   color: #222721;
@@ -126,45 +126,45 @@
   transition: transform 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
-.product-boka-light .product-form__submit:hover {
+.starter-kit-template .product-form__submit:hover {
   transform: translateY(-1px);
   border-color: #222721;
   background: #222721;
   color: #ffffff;
 }
 
-.product-boka-light .product__accordion {
+.starter-kit-template .product__accordion {
   border-color: rgba(34, 39, 33, 0.10);
 }
 
-.product-boka-light .product__accordion summary {
+.starter-kit-template .product__accordion summary {
   padding: 18px 0;
 }
 
-.product-boka-light .accordion__title {
+.starter-kit-template .accordion__title {
   color: #222721;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 
-.product-boka-light .complementary-products__container,
-.product-boka-light .product__description {
+.starter-kit-template .complementary-products__container,
+.starter-kit-template .product__description {
   border-radius: 22px;
 }
 
-.product-boka-light .sticky-atc {
+.starter-kit-template .sticky-atc {
   background: transparent;
   box-shadow: 0 -18px 60px rgba(34, 39, 33, 0.10);
 }
 
-.product-boka-light .sticky-atc__inner {
+.starter-kit-template .sticky-atc__inner {
   background: rgba(250, 250, 245, 0.92);
   border-top: 1px solid rgba(34, 39, 33, 0.10);
   backdrop-filter: blur(14px);
 }
 
-.product-boka-light #sticky-atc-button,
-.product-boka-light .sticky-atc__button .button {
+.starter-kit-template #sticky-atc-button,
+.starter-kit-template .sticky-atc__button .button {
   border-radius: 999px;
   background: #a5bc8b;
   color: #222721;
@@ -173,49 +173,49 @@
   text-transform: uppercase;
 }
 
-.product-boka-light #sticky-atc-button:hover,
-.product-boka-light .sticky-atc__button .button:hover {
+.starter-kit-template #sticky-atc-button:hover,
+.starter-kit-template .sticky-atc__button .button:hover {
   background: #222721;
   color: #ffffff;
   border-color: #222721;
 }
 
 @media screen and (max-width: 989px) {
-  .product-boka-light .product__media-wrapper,
-  .product-boka-light .product__info-wrapper {
+ .starter-kit-template .product__media-wrapper,
+.starter-kit-template .product__info-wrapper {
     border-radius: 28px;
   }
 }
 
 @media screen and (max-width: 749px) {
-  .product-boka-light .product {
+  .starter-kit-template .product {
     gap: 18px;
   }
 
-  .product-boka-light .product__media-wrapper {
+  .starter-kit-template .product__media-wrapper {
     border-radius: 24px;
     padding: 12px;
   }
 
-  .product-boka-light .product__info-wrapper {
+  .starter-kit-template .product__info-wrapper {
     border-radius: 24px;
     padding: 20px;
   }
 
-  .product-boka-light .product__title h1,
-  .product-boka-light .product__title h2 {
+  .starter-kit-template .product__title h1,
+  .starter-kit-template .product__title h2 {
     line-height: 1.05;
   }
 
-  .product-boka-light .sticky-atc__left {
+  .starter-kit-template .sticky-atc__left {
     padding-left: 0;
   }
 
-  .product-boka-light .sticky-atc__texts {
+  .starter-kit-template .sticky-atc__texts {
     margin-left: 1rem;
   }
 
-  .product-boka-light .sticky-atc__right {
+  .starter-kit-template .sticky-atc__right {
     padding-right: 0;
   }
 }
