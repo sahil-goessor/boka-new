@@ -22,7 +22,7 @@
         "yotpo_product_reviews_star_rating_Jpxdwz": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
-            "product": "{{product}}"
+            "product": "boka-oral-care-starter-kit"
           }
         },
         "price": {
@@ -43,20 +43,12 @@
             "color_hex": ""
           }
         },
-        "recharge_subscriptions_subscription_widget_v2_YmxgLa": {
-          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+        "description": {
+          "type": "description",
           "settings": {}
         },
-        "richtext_QNXnBD": {
-          "type": "richtext",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom.text_above_buy_buttons.value }}</p>",
-            "text_style": "body",
-            "quick_add_hide": false
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "recharge_subscriptions_subscription_widget_v2_YmxgLa": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
           "settings": {}
         },
         "buy_buttons": {
@@ -71,10 +63,6 @@
           "settings": {
             "publishId": "dp9z6mvai6cz4"
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         },
         "collapsible_tab_9Ri3zn": {
           "type": "collapsible_tab",
@@ -149,12 +137,10 @@
         "price",
         "google_youtube_automated_discounts_price_L3KbmA",
         "variant_picker",
+        "description",
         "recharge_subscriptions_subscription_widget_v2_YmxgLa",
-        "richtext_QNXnBD",
-        "quantity_selector",
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_HeVqad",
-        "description",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_NnPN3E",
         "icon_with_text_V6zWW9",
