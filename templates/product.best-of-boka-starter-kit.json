@@ -31,10 +31,6 @@
             "hide_on_subscription_products": false
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "google_youtube_automated_discounts_price_L3KbmA": {
           "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
           "settings": {}
@@ -46,6 +42,10 @@
             "color_names": "",
             "color_hex": ""
           }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "recharge_subscriptions_subscription_widget_v2_YmxgLa": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
@@ -135,9 +135,9 @@
         "title",
         "yotpo_product_reviews_star_rating_Jpxdwz",
         "price",
-        "description",
         "google_youtube_automated_discounts_price_L3KbmA",
         "variant_picker",
+        "description",
         "recharge_subscriptions_subscription_widget_v2_YmxgLa",
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_HeVqad",
