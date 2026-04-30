@@ -31,6 +31,10 @@
             "hide_on_subscription_products": false
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "google_youtube_automated_discounts_price_L3KbmA": {
           "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
           "settings": {}
@@ -42,10 +46,6 @@
             "color_names": "",
             "color_hex": ""
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         },
         "recharge_subscriptions_subscription_widget_v2_YmxgLa": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
@@ -135,9 +135,9 @@
         "title",
         "yotpo_product_reviews_star_rating_Jpxdwz",
         "price",
+        "description",
         "google_youtube_automated_discounts_price_L3KbmA",
         "variant_picker",
-        "description",
         "recharge_subscriptions_subscription_widget_v2_YmxgLa",
         "buy_buttons",
         "tolstoy_shoppable_video_quiz_stories_block_HeVqad",
@@ -153,15 +153,15 @@
       "settings": {
         "enable_sticky_info": true,
         "enable_sticky_atc": true,
-        "media_size": "medium",
-        "lazyload": false,
+        "media_size": "large",
+        "lazyload": true,
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
-        "thumbnail_position": "left",
+        "thumbnail_position": "bottom",
         "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "show",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
