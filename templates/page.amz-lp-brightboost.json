@@ -713,7 +713,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "disabled": true,
           "settings": {
             "publishId": "5bxk8y1xuye8t"
@@ -728,7 +728,7 @@
           "settings": {
             "heading": "How To Use",
             "icon": "none",
-            "content": "<p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>",
+            "content": "<p>Lightly wet your toothbrush and dip it into the powder to coat. Brush as usual for a refreshing clean. For added whitening, apply toothpaste first, then dip into the powder.<br/><br/>Use at least once a week, increasing as desired.</p>",
             "page": ""
           }
         },
@@ -737,7 +737,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
+            "content": "<p>Calcium Carbonate, Hydrated Silica, Kaolin, Yeast, Cyclodextrin, Sodium Coco-Sulfate, Perlite, Acacia Senegal Gum, Mentha Arvensis Leaf Oil, Phthalimidoperoxycaproic Acid, Aroma, Hydroxyapatite (nano), Menthol, Stevioside, Mentha Piperita (Peppermint) Oil, Aloe Vera Leaf Extract, Ascorbic Acid (Vitamin C), Retinol (Vitamin A), Tocopheryl Succinate (Vitamin E), Silica, Lactobacillus Ferment, Geraniol, Limonene, Citral, Linalool</p>",
             "page": ""
           }
         },
@@ -850,7 +850,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "9xt9akry8myme"
           }
