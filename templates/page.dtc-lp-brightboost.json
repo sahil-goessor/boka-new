@@ -370,6 +370,10 @@
             "reviews_cta_text_color": "#ffffff",
             "reviews_cta_hover_bg_color": "#333333",
             "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
             "padding_top": 50,
             "padding_bottom": 50,
             "heading_spacing": 20,
@@ -476,6 +480,10 @@
             "reviews_cta_text_color": "#ffffff",
             "reviews_cta_hover_bg_color": "#333333",
             "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
             "padding_top": 50,
             "padding_bottom": 50,
             "heading_spacing": 20,
@@ -582,6 +590,10 @@
             "reviews_cta_text_color": "#ffffff",
             "reviews_cta_hover_bg_color": "#333333",
             "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
             "padding_top": 50,
             "padding_bottom": 50,
             "heading_spacing": 20,
@@ -693,7 +705,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "5bxk8y1xuye8t"
           }
@@ -707,7 +719,7 @@
           "settings": {
             "heading": "How To Use",
             "icon": "none",
-            "content": "<p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>",
+            "content": "<p>Lightly wet your toothbrush and dip it into the powder to coat. Brush as usual for a refreshing clean. For added whitening, apply toothpaste first, then dip into the powder.</p>",
             "page": ""
           }
         },
@@ -828,7 +840,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "9xt9akry8myme"
           }
