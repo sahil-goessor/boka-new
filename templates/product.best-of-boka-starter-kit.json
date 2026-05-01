@@ -151,8 +151,8 @@
         "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "enable_sticky_atc": true,
+        "enable_sticky_info": false,
+        "enable_sticky_atc": false,
         "media_size": "large",
         "lazyload": true,
         "constrain_to_viewport": true,
@@ -228,7 +228,6 @@
         "caption_XDQHTg",
         "text_NtbKgX"
       ],
-      "disabled": true,
       "name": "A+ Content 1",
       "settings": {
         "image": "{{ product.metafields.custom.a_image.value }}",
@@ -300,7 +299,6 @@
         "93b178e4-2598-45c7-b4a1-fd50f417768b",
         "6f829075-8538-46cf-852c-3bb0c8fb002d"
       ],
-      "disabled": true,
       "name": "A clean you feel good about",
       "settings": {
         "image": "{{ product.metafields.custom.a_clean_you_can_feel_good_about_image.value }}",
