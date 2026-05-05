@@ -1,18 +1,3 @@
-{% comment %}
-  Section: Boka Starter Landing Page
-  File: sections/boka-starter-landing-page.liquid
-
-  Purpose:
-  - Use on a Shopify /page template.
-  - Pulls a real Shopify product, variants, prices, images, and selling plans.
-  - Adds one-time or subscription items to cart via Shopify Ajax using variant ID and selling_plan.
-
-  Setup:
-  - Create this section file.
-  - Add it to a page JSON template.
-  - In Theme Editor, select your Starter Kit product.
-  - Product must have ReCharge / Shopify selling plans for subscription purchase.
-{% endcomment %}
 
 {% liquid
   assign lp_product = section.settings.product
