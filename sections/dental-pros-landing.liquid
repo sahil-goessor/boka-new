@@ -1122,88 +1122,86 @@
 <main class="dp-page" id="dental-pros-page">
   <section class="dp-hero" aria-label="Boka Dental Pros Program">
     <div class="dp-wrap">
-      <div class="dp-hero__grid dp-hero__grid--image-text">
-  <div class="dp-hero__visual">
-    <div class="dp-hero__media-card">
-
-      {% if section.settings.hero_image != blank %}
-        {{
-          section.settings.hero_image
-          | image_url: width: 1800
-          | image_tag:
-            class: 'dp-hero__image',
-            loading: 'eager',
-            fetchpriority: 'high',
-            alt: section.settings.hero_image_alt
-        }}
-      {% elsif section.settings.hero_image_url != blank %}
-        <img
-          class="dp-hero__image"
-          src="{{ section.settings.hero_image_url }}"
-          alt="{{ section.settings.hero_image_alt | escape }}"
-          loading="eager"
-          fetchpriority="high"
-          width="1600"
-          height="1000"
-        >
-      {% else %}
-        <div class="dp-hero__placeholder" aria-hidden="true">
-          <div class="dp-logo-mark">BOKA</div>
-        </div>
-      {% endif %}
-
-      <div class="dp-hero__content dp-hero__content--overlay">
-        {% if section.settings.hero_kicker != blank %}
-          <span class="dp-kicker">{{ section.settings.hero_kicker }}</span>
-        {% endif %}
-
-        {% if section.settings.hero_heading != blank %}
-          <h1 class="dp-h1">{{ section.settings.hero_heading }}</h1>
-        {% endif %}
-
-        {% if section.settings.hero_text != blank %}
-          <p class="dp-hero__sub">{{ section.settings.hero_text }}</p>
-        {% endif %}
-
-        <div class="dp-btn-row">
-          {% if section.settings.hero_primary_label != blank %}
-            <a class="dp-btn dp-btn--primary" href="{{ section.settings.hero_primary_link }}">
-              {{ section.settings.hero_primary_label }}
-            </a>
+      <div class="dp-hero__grid">
+        <div class="dp-hero__content">
+          {% if section.settings.hero_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.hero_kicker }}</span>
           {% endif %}
 
-          {% if section.settings.hero_secondary_label != blank %}
-            <a class="dp-btn" href="{{ section.settings.hero_secondary_link }}">
-              {{ section.settings.hero_secondary_label }}
-            </a>
+          {% if section.settings.hero_heading != blank %}
+            <h1 class="dp-h1">{{ section.settings.hero_heading }}</h1>
           {% endif %}
-        </div>
 
-        <div class="dp-hero__trust" aria-label="Program highlights">
-          {% for block in section.blocks %}
-            {% if block.type == 'hero_pill' %}
-              <span class="dp-pill" {{ block.shopify_attributes }}>
-                {{ block.settings.text }}
-              </span>
+          {% if section.settings.hero_text != blank %}
+            <p class="dp-hero__sub">{{ section.settings.hero_text }}</p>
+          {% endif %}
+
+          <div class="dp-btn-row">
+            {% if section.settings.hero_primary_label != blank %}
+              <a class="dp-btn dp-btn--primary" href="{{ section.settings.hero_primary_link }}">
+                {{ section.settings.hero_primary_label }}
+              </a>
             {% endif %}
-          {% endfor %}
+
+            {% if section.settings.hero_secondary_label != blank %}
+              <a class="dp-btn" href="{{ section.settings.hero_secondary_link }}">
+                {{ section.settings.hero_secondary_label }}
+              </a>
+            {% endif %}
+          </div>
+
+          <div class="dp-hero__trust" aria-label="Program highlights">
+            {% for block in section.blocks %}
+              {% if block.type == 'hero_pill' %}
+                <span class="dp-pill" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </span>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="dp-hero__visual">
+          <div class="dp-hero__media-card">
+            {% if section.settings.hero_image != blank %}
+              {{
+                section.settings.hero_image
+                | image_url: width: 1400
+                | image_tag:
+                  class: 'dp-hero__image',
+                  loading: 'eager',
+                  fetchpriority: 'high',
+                  alt: section.settings.hero_image_alt
+              }}
+            {% elsif section.settings.hero_image_url != blank %}
+              <img
+                class="dp-hero__image"
+                src="{{ section.settings.hero_image_url }}"
+                alt="{{ section.settings.hero_image_alt | escape }}"
+                loading="eager"
+                fetchpriority="high"
+                width="900"
+                height="1100"
+              >
+            {% else %}
+              <div class="dp-hero__placeholder" aria-hidden="true">
+                <div class="dp-logo-mark">BOKA</div>
+              </div>
+            {% endif %}
+
+            {% if section.settings.hero_note_title != blank or section.settings.hero_note_text != blank %}
+              <div class="dp-hero__note">
+                {% if section.settings.hero_note_title != blank %}
+                  <p class="dp-hero__note-title">{{ section.settings.hero_note_title }}</p>
+                {% endif %}
+                {% if section.settings.hero_note_text != blank %}
+                  <p class="dp-hero__note-copy">{{ section.settings.hero_note_text }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
-
-      {% if section.settings.hero_note_title != blank or section.settings.hero_note_text != blank %}
-        <div class="dp-hero__note">
-          {% if section.settings.hero_note_title != blank %}
-            <p class="dp-hero__note-title">{{ section.settings.hero_note_title }}</p>
-          {% endif %}
-          {% if section.settings.hero_note_text != blank %}
-            <p class="dp-hero__note-copy">{{ section.settings.hero_note_text }}</p>
-          {% endif %}
-        </div>
-      {% endif %}
-
-    </div>
-  </div>
-</div>
     </div>
   </section>
 
