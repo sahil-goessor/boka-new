@@ -964,6 +964,18 @@
           {% endunless %}
         </div>
 
+
+        <form action="/cart/add" method="post" id="boka-lp-form">
+  <input type="hidden" name="id" 
+         value="{{ lp_product.selected_or_first_available_variant.id }}" 
+         id="variant-id">
+
+  <div class="rc-custom-injection-point"></div>
+
+  <button type="submit" class="cta-btn">Add to Cart</button>
+</form>
+
+
         <div class="boka-lp__frequency-wrap" data-boka-frequency-wrap>
           <label class="boka-lp__label" for="boka-selling-plan-{{ section.id }}">Refill frequency</label>
           <select class="boka-lp__select" id="boka-selling-plan-{{ section.id }}" data-boka-selling-plan-select></select>
