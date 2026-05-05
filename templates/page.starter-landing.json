@@ -12,6 +12,7 @@
     "main": {
       "type": "boka-starter-landing-page",
       "settings": {
+        "hide_theme_header": false,
         "product": "best-of-boka-starter-kit",
         "subscription_only": false,
         "show_quantity_selector": false,
@@ -27,7 +28,6 @@
         "show_nav": true,
         "nav_cta": "Start My Routine",
         "mobile_sticky_text": "Start My Routine",
-        "render_theme_cart_drawer": true,
         "contain_image": false,
         "image_badge": "Complete routine",
         "proof_1_title": "First order",
