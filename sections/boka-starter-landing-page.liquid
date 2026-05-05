@@ -1105,8 +1105,14 @@
                   {% endfor %}
                 {% else %}
                   <div class="boka-lp__recharge-empty">
-                    Add the Recharge Subscription Widget app block inside this section in the Theme Editor. If it does not appear on this /page, turn off “Use Recharge app block” and use the custom selling-plan selector below.
-                  </div>
+                <form action="/cart/add" method="post" id="boka-product-form">
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+                  <!-- Recharge injects the subscribe widget here -->
+                  <div class="rc-custom-injection-point" style="display: initial;"></div>
+
+                  <button type="submit">Add to Cart</button>
+                </form>                  </div>
                 {% endif %}
               </div>
 
