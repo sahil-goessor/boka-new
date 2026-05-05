@@ -1279,14 +1279,8 @@
     <a href="#boka-buybox-{{ section.id }}">{{ section.settings.mobile_sticky_text }}</a>
   </div>
 
-  {% comment %}
-    Optional: render the theme's native cart drawer snippet on this landing page.
-    Use this if you hide the normal header or use a landing layout where the drawer markup is not present.
-    If the normal theme header still renders the cart drawer, leave this setting off to avoid duplicate CartDrawer IDs.
-  {% endcomment %}
-  {% if section.settings.render_theme_cart_drawer %}
+  
     {% render 'cart-drawer' %}
-  {% endif %}
 
   <script>
     (() => {
