@@ -165,7 +165,7 @@
           "settings": {
             "heading": "Best Sellers",
             "heading_size": "h1",
-            "heading_tag": "default"
+            "heading_tag": "h2"
           }
         }
       },
@@ -367,7 +367,7 @@
           "settings": {
             "heading": "Powered by Nature.<br>\nBacked by Science.",
             "heading_size": "h1",
-            "heading_tag": "default"
+            "heading_tag": "h2"
           }
         },
         "text_VQwtMg": {
@@ -523,10 +523,10 @@
       ],
       "name": "Collection list - toothpastes",
       "settings": {
-        "title": "<p>Say hello<em> </em>to n-Ha toothpaste.</p>",
+        "title": "<p><strong>Say hello</strong><em><strong> </strong></em><strong>to n-Ha toothpaste.</strong></p>",
         "heading_alignment": "center",
         "heading_size": "h1",
-        "heading_tag": "default",
+        "heading_tag": "h2",
         "description": "<p>Hydroxyapatite is the primary foundation of teeth and bones. Known for its long-standing use in oral care, it's been studied for decades in relation to enamel. Our n-Ha toothpaste features this ingredient and comes in a variety of flavors everyone can enjoy.</p>",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -632,7 +632,7 @@
         "caption": "",
         "heading": "Frequently Asked Questions",
         "heading_size": "h2",
-        "heading_tag": "default",
+        "heading_tag": "h2",
         "heading_alignment": "center",
         "description": "",
         "layout": "none",
