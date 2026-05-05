@@ -10,23 +10,6 @@
 
 <section id="boka-starter-lp-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
   <style>
-
-    {% if section.settings.hide_theme_header %}
-  header,
-  .shopify-section-header,
-  #shopify-section-header,
-  sticky-header,
-  .header-wrapper,
-  .announcement-bar,
-  .utility-bar {
-    display: none !important;
-  }
-
-  body {
-    padding-top: 0 !important;
-  }
-  {% endif %}
-
     #boka-starter-lp-{{ section.id }} {
       --boka-green-light: {{ section.settings.green_light | default: '#e6f4d4' }};
       --boka-green: {{ section.settings.green | default: '#d3e7c0' }};
@@ -121,6 +104,12 @@
 
     #boka-starter-lp-{{ section.id }} .boka-lp__nav-links a { text-decoration: none; }
 
+    #boka-starter-lp-{{ section.id }} .boka-lp__nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     #boka-starter-lp-{{ section.id }} .boka-lp__nav-cta {
       display: inline-flex;
       align-items: center;
@@ -134,6 +123,45 @@
       font-size: 13px;
       font-weight: 800;
       white-space: nowrap;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__cart-button {
+      min-width: 38px;
+      min-height: 38px;
+      border: 1px solid var(--boka-stone);
+      border-radius: 999px;
+      background: var(--boka-white);
+      color: var(--boka-charcoal);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 0 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__cart-icon {
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__cart-count {
+      min-width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      font-size: 11px;
+      font-weight: 900;
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__hero {
@@ -926,7 +954,16 @@
           <a href="#boka-reviews-{{ section.id }}">Reviews</a>
           <a href="#boka-faq-{{ section.id }}">FAQ</a>
         </div>
-        <a class="boka-lp__nav-cta" href="#boka-buybox-{{ section.id }}">{{ section.settings.nav_cta }}</a>
+        <div class="boka-lp__nav-actions">
+          <button type="button" class="boka-lp__cart-button" data-boka-open-cart aria-label="Open cart">
+            <svg class="boka-lp__cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6.5 8.5h13l-1.4 8.1a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6.5 8.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 8.5a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span class="boka-lp__cart-count" data-boka-cart-count>{{ cart.item_count }}</span>
+          </button>
+          <a class="boka-lp__nav-cta" href="#boka-buybox-{{ section.id }}">{{ section.settings.nav_cta }}</a>
+        </div>
       </div>
     </div>
   {% endif %}
@@ -1242,6 +1279,15 @@
     <a href="#boka-buybox-{{ section.id }}">{{ section.settings.mobile_sticky_text }}</a>
   </div>
 
+  {% comment %}
+    Optional: render the theme's native cart drawer snippet on this landing page.
+    Use this if you hide the normal header or use a landing layout where the drawer markup is not present.
+    If the normal theme header still renders the cart drawer, leave this setting off to avoid duplicate CartDrawer IDs.
+  {% endcomment %}
+  {% if section.settings.render_theme_cart_drawer %}
+    {% render 'cart-drawer' %}
+  {% endif %}
+
   <script>
     (() => {
       const root = document.getElementById('boka-starter-lp-{{ section.id }}');
@@ -1270,6 +1316,8 @@
       const subCompare = root.querySelector('[data-boka-sub-compare]');
       const onetimePrice = root.querySelector('[data-boka-onetime-price]');
       const thumbs = [...root.querySelectorAll('.boka-lp__thumb')];
+      const cartButtons = [...root.querySelectorAll('[data-boka-open-cart]')];
+      const cartCountEls = [...root.querySelectorAll('[data-boka-cart-count]')];
 
       let selectedVariantId = Number(variantInput?.value);
       let selectedPlanType = 'subscribe';
@@ -1407,17 +1455,94 @@
         });
       });
 
+      const updateCartCount = async () => {
+        try {
+          const res = await fetch(window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart.js' : '/cart.js');
+          const cart = await res.json();
+          cartCountEls.forEach(el => { el.textContent = cart.item_count || 0; });
+        } catch (error) {
+          // Cart count is helpful but not required.
+        }
+      };
+
+      const getCartDrawer = () => document.querySelector('cart-drawer');
+
       const openCartDrawer = () => {
         document.dispatchEvent(new CustomEvent('cart:refresh'));
         document.dispatchEvent(new CustomEvent('cart:open'));
         window.dispatchEvent(new CustomEvent('cart:refresh'));
+        window.dispatchEvent(new CustomEvent('cart:open'));
 
-        const cartDrawer = document.querySelector('cart-drawer');
-        if (cartDrawer && typeof cartDrawer.open === 'function') cartDrawer.open();
+        const cartDrawer = getCartDrawer();
+        if (cartDrawer && typeof cartDrawer.open === 'function') {
+          cartDrawer.open();
+          return;
+        }
 
         const cartNotification = document.querySelector('cart-notification');
-        if (cartNotification && typeof cartNotification.open === 'function') cartNotification.open();
+        if (cartNotification && typeof cartNotification.open === 'function') {
+          cartNotification.open();
+          return;
+        }
+
+        const headerCartIcon = document.querySelector('#cart-icon-bubble, a[href="/cart"], a[href$="/cart"]');
+        if (headerCartIcon && typeof headerCartIcon.click === 'function') {
+          headerCartIcon.click();
+          return;
+        }
+
+        window.location.href = window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart' : '/cart';
       };
+
+      const addCartSectionsToFormData = (formData) => {
+        const cartDrawer = getCartDrawer();
+
+        if (cartDrawer && typeof cartDrawer.getSectionsToRender === 'function') {
+          const sectionIds = cartDrawer.getSectionsToRender().map(section => section.id);
+          formData.set('sections', sectionIds.join(','));
+          formData.set('sections_url', window.location.pathname);
+          return;
+        }
+
+        formData.set('sections', 'cart-icon-bubble,cart-drawer');
+        formData.set('sections_url', window.location.pathname);
+      };
+
+      const refreshRenderedCartDrawerFallback = async () => {
+        const currentDrawer = getCartDrawer();
+        if (!currentDrawer) return false;
+
+        try {
+          const res = await fetch(`${window.location.pathname}?section_id={{ section.id }}`);
+          const htmlText = await res.text();
+          const html = new DOMParser().parseFromString(htmlText, 'text/html');
+          const freshDrawer = html.querySelector('cart-drawer');
+
+          if (!freshDrawer) return false;
+
+          currentDrawer.innerHTML = freshDrawer.innerHTML;
+          currentDrawer.className = freshDrawer.className;
+          return true;
+        } catch (error) {
+          return false;
+        }
+      };
+
+      const renderCartAfterAdd = async (parsedState) => {
+        const cartDrawer = getCartDrawer();
+
+        if (cartDrawer && parsedState?.sections && typeof cartDrawer.renderContents === 'function') {
+          cartDrawer.renderContents(parsedState);
+          return;
+        }
+
+        await refreshRenderedCartDrawerFallback();
+        openCartDrawer();
+      };
+
+      cartButtons.forEach(button => {
+        button.addEventListener('click', openCartDrawer);
+      });
 
       form?.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -1442,6 +1567,8 @@
           formData.set('selling_plan', selectedPlanId);
         }
 
+        addCartSectionsToFormData(formData);
+
         atc.disabled = true;
         const originalText = atc.textContent;
         atc.textContent = 'Adding...';
@@ -1460,7 +1587,8 @@
             message.style.color = '#737c5b';
             message.textContent = 'Added to cart';
           }
-          openCartDrawer();
+          await updateCartCount();
+          await renderCartAfterAdd(data);
         } catch (error) {
           if (message) {
             message.style.color = '#aa7a6b';
@@ -1474,6 +1602,7 @@
       });
 
       renderVariant();
+      updateCartCount();
     })();
   </script>
 </section>
@@ -1482,7 +1611,6 @@
 {
   "name": "Boka starter landing page",
   "settings": [
-    { "type": "checkbox", "id": "hide_theme_header", "label": "Hide normal site header", "default": true },
     { "type": "product", "id": "product", "label": "Starter product" },
     { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase", "default": true },
     { "type": "checkbox", "id": "show_quantity_selector", "label": "Show quantity selector", "default": false },
@@ -1502,6 +1630,7 @@
     { "type": "checkbox", "id": "show_nav", "label": "Show landing page nav", "default": true },
     { "type": "text", "id": "nav_cta", "label": "Nav CTA", "default": "Start My Routine — $19.99" },
     { "type": "text", "id": "mobile_sticky_text", "label": "Mobile sticky CTA", "default": "Start My Routine — $19.99" },
+    { "type": "checkbox", "id": "render_theme_cart_drawer", "label": "Render theme cart drawer on this page", "default": false, "info": "Turn this on only if hiding the normal header removes the cart drawer markup. Leave off if the header still renders cart-drawer." },
 
     { "type": "header", "content": "Hero media" },
     { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
