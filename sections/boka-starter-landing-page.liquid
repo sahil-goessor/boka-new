@@ -1279,8 +1279,12 @@
     <a href="#boka-buybox-{{ section.id }}">{{ section.settings.mobile_sticky_text }}</a>
   </div>
 
-  
-    {% render 'cart-drawer' %}
+  {% comment %}
+    Render the theme's native cart drawer snippet on this landing page.
+    This is needed when the normal header is hidden or when the landing template does not naturally output the drawer markup.
+    If you later decide to keep the full theme header visible, remove this render to avoid duplicate cart drawer IDs.
+  {% endcomment %}
+  {% render 'cart-drawer' %}
 
   <script>
     (() => {
@@ -1624,7 +1628,6 @@
     { "type": "checkbox", "id": "show_nav", "label": "Show landing page nav", "default": true },
     { "type": "text", "id": "nav_cta", "label": "Nav CTA", "default": "Start My Routine — $19.99" },
     { "type": "text", "id": "mobile_sticky_text", "label": "Mobile sticky CTA", "default": "Start My Routine — $19.99" },
-    { "type": "checkbox", "id": "render_theme_cart_drawer", "label": "Render theme cart drawer on this page", "default": false, "info": "Turn this on only if hiding the normal header removes the cart drawer markup. Leave off if the header still renders cart-drawer." },
 
     { "type": "header", "content": "Hero media" },
     { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
