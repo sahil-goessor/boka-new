@@ -1,23 +1,14 @@
 {% liquid
   assign lp_product = section.settings.product
   assign first_variant = lp_product.selected_or_first_available_variant
-  assign default_selling_plan_id = blank
   assign has_selling_plans = false
 
   if lp_product != blank and lp_product.selling_plan_groups.size > 0
     assign has_selling_plans = true
-    assign first_group = lp_product.selling_plan_groups | first
-    assign first_plan = first_group.selling_plans | first
-    assign default_selling_plan_id = first_plan.id
   endif
 %}
 
-<section
-  id="boka-starter-lp-{{ section.id }}"
-  class="boka-lp"
-  data-section-id="{{ section.id }}"
-  data-use-app-widget="{{ section.settings.use_recharge_app_block }}"
->
+<section id="boka-starter-lp-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
   <style>
     #boka-starter-lp-{{ section.id }} {
       --boka-green-light: {{ section.settings.green_light | default: '#e6f4d4' }};
@@ -412,30 +403,39 @@
       gap: 10px;
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card {
-      position: relative;
-      min-height: 74px;
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card,
+    #boka-starter-lp-{{ section.id }} .boka-lp__qty-card,
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
       border: 1.5px solid var(--boka-stone);
       background: var(--boka-cream);
       color: var(--boka-charcoal);
-      border-radius: 18px;
-      padding: 14px 15px;
-      text-align: left;
       cursor: pointer;
       transition: background .2s, border-color .2s, transform .2s;
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card:hover:not([disabled]) {
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card {
+      position: relative;
+      min-height: 74px;
+      border-radius: 18px;
+      padding: 14px 15px;
+      text-align: left;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card:hover:not([disabled]),
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card:hover:not([disabled]) {
       transform: translateY(-1px);
       border-color: var(--boka-green-deep);
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active {
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active,
+    #boka-starter-lp-{{ section.id }} .boka-lp__qty-card.is-active,
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.is-active {
       background: var(--boka-green-light);
       border-color: var(--boka-green-deep);
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card[disabled] {
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card[disabled],
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card[disabled] {
       opacity: .45;
       cursor: not-allowed;
     }
@@ -464,20 +464,11 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__qty-card {
-      border: 1.5px solid var(--boka-stone);
-      background: var(--boka-cream);
       border-radius: 16px;
       min-height: 56px;
       padding: 10px;
-      cursor: pointer;
       font-size: 13px;
       font-weight: 900;
-      color: var(--boka-charcoal);
-    }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__qty-card.is-active {
-      border-color: var(--boka-green-deep);
-      background: var(--boka-green-light);
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-fallback {
@@ -488,27 +479,10 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
       position: relative;
       width: 100%;
-      border: 1.5px solid var(--boka-stone);
-      background: var(--boka-cream);
-      color: var(--boka-charcoal);
       border-radius: 18px;
       padding: 17px;
       text-align: left;
-      cursor: pointer;
-      transition: background .2s, border-color .2s, transform .2s;
     }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card:hover:not([disabled]) {
-      transform: translateY(-1px);
-      border-color: var(--boka-green-deep);
-    }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.is-active {
-      background: var(--boka-green-light);
-      border-color: var(--boka-green-deep);
-    }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card[disabled] { opacity: .55; cursor: not-allowed; }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-badge {
       position: absolute;
@@ -593,25 +567,6 @@
       padding: 12px 16px;
       font-size: 14px;
       font-weight: 700;
-    }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__recharge-slot {
-      display: none;
-      border: 1.5px solid var(--boka-stone);
-      border-radius: 18px;
-      background: var(--boka-cream);
-      padding: 12px;
-    }
-
-    #boka-starter-lp-{{ section.id }}[data-use-app-widget="true"] .boka-lp__recharge-slot { display: block; }
-    #boka-starter-lp-{{ section.id }}[data-use-app-widget="true"] .boka-lp__plan-fallback,
-    #boka-starter-lp-{{ section.id }}[data-use-app-widget="true"] .boka-lp__frequency-wrap { display: none !important; }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__recharge-empty {
-      color: var(--boka-gray);
-      font-size: 13px;
-      line-height: 1.45;
-      font-weight: 650;
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__atc {
@@ -916,7 +871,6 @@
         padding-left: 16px;
         padding-right: 16px;
       }
-
       #boka-starter-lp-{{ section.id }} .boka-lp__gallery-wrap { position: static; }
       #boka-starter-lp-{{ section.id }} .boka-lp__main-media,
       #boka-starter-lp-{{ section.id }} .boka-lp__main-media img,
@@ -966,7 +920,7 @@
         <div class="boka-lp__main-media {% if section.settings.contain_image %}boka-lp__main-media--contain{% endif %}" data-boka-main-media>
           <div class="boka-lp__media-badge">{{ section.settings.image_badge }}</div>
           {% if section.settings.hero_image != blank %}
-            {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: section.settings.hero_image.alt | default: section.settings.heading }}
+            {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: section.settings.image_badge }}
           {% elsif first_variant.featured_image != blank %}
             {{ first_variant.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: first_variant.title }}
           {% else %}
@@ -977,19 +931,21 @@
         <div class="boka-lp__thumbs" data-boka-thumbs>
           {% if section.settings.hero_image != blank %}
             <button type="button" class="boka-lp__thumb is-active" data-thumb-src="{{ section.settings.hero_image | image_url: width: 1600 }}">
-              {{ section.settings.hero_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: section.settings.hero_image.alt | default: section.settings.heading }}
+              {{ section.settings.hero_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: section.settings.image_badge }}
             </button>
           {% endif %}
 
-          {% for variant in lp_product.variants limit: 4 %}
-            <button type="button" class="boka-lp__thumb {% if section.settings.hero_image == blank and forloop.first %}is-active{% endif %}" data-thumb-src="{% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 }}{% endif %}" data-thumb-variant="{{ variant.id }}">
-              {% if variant.featured_image != blank %}
-                {{ variant.featured_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: variant.title }}
-              {% else %}
-                <span class="boka-lp__thumb-placeholder">{{ variant.title | truncate: 18 }}</span>
-              {% endif %}
-            </button>
-          {% endfor %}
+          {% if lp_product != blank %}
+            {% for variant in lp_product.variants limit: 4 %}
+              <button type="button" class="boka-lp__thumb {% if section.settings.hero_image == blank and forloop.first %}is-active{% endif %}" data-thumb-src="{% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 }}{% endif %}" data-thumb-variant="{{ variant.id }}">
+                {% if variant.featured_image != blank %}
+                  {{ variant.featured_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: variant.title }}
+                {% else %}
+                  <span class="boka-lp__thumb-placeholder">{{ variant.title | truncate: 18 }}</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
         </div>
       </div>
 
@@ -1059,12 +1015,7 @@
 
               <div class="boka-lp__goal-grid" data-boka-goal-grid>
                 {% for variant in lp_product.variants %}
-                  <button
-                    type="button"
-                    class="boka-lp__goal-card {% if variant.id == first_variant.id %}is-active{% endif %}"
-                    data-variant-id="{{ variant.id }}"
-                    {% unless variant.available %}disabled{% endunless %}
-                  >
+                  <button type="button" class="boka-lp__goal-card {% if variant.id == first_variant.id %}is-active{% endif %}" data-variant-id="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
                     <span class="boka-lp__goal-title">{{ variant.title }}</span>
                     <span class="boka-lp__goal-sub">
                       {% if variant.available %}
@@ -1096,24 +1047,6 @@
               <div class="boka-lp__step-head">
                 <h2 class="boka-lp__step-title"><span class="boka-lp__step-number">{% if section.settings.show_quantity_selector %}3{% else %}2{% endif %}</span>{{ section.settings.plan_label }}</h2>
                 <span class="boka-lp__step-note">{{ section.settings.plan_note }}</span>
-              </div>
-
-              <div class="boka-lp__recharge-slot">
-                {% if section.blocks.size > 0 %}
-                  {% for block in section.blocks %}
-                    {% render block %}
-                  {% endfor %}
-                {% else %}
-                  <div class="boka-lp__recharge-empty">
-                <form action="/cart/add" method="post" id="boka-product-form">
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-
-                  <!-- Recharge injects the subscribe widget here -->
-                  <div class="rc-custom-injection-point" style="display: initial;"></div>
-
-                  <button type="submit">Add to Cart</button>
-                </form>                  </div>
-                {% endif %}
               </div>
 
               <div class="boka-lp__plan-fallback" data-boka-plan-fallback>
@@ -1299,7 +1232,6 @@
       root.dataset.initialized = 'true';
 
       const moneyFormat = {{ shop.money_format | json }};
-      const useAppWidget = root.dataset.useAppWidget === 'true';
       const productJsonEl = root.querySelector('[data-boka-product-json]');
       if (!productJsonEl) return;
 
@@ -1340,16 +1272,11 @@
         if (img) img.src = src;
       };
 
-      const refreshRechargeWidget = () => {
-        document.dispatchEvent(new CustomEvent('boka:variant-change', { detail: { variantId: selectedVariantId } }));
-        document.dispatchEvent(new CustomEvent('product:variant-change', { detail: { variant: getVariant() } }));
-        window.dispatchEvent(new CustomEvent('variant:change', { detail: { variant: getVariant() } }));
-      };
-
       const renderVariant = () => {
         const variant = getVariant();
         if (!variant) return;
 
+        if (productData.requires_selling_plan) selectedPlanType = 'subscribe';
         if (variantInput) variantInput.value = variant.id;
         if (quantityInput) quantityInput.value = selectedQuantity;
 
@@ -1366,7 +1293,7 @@
         if (onetimePrice) onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
 
         const allocations = variant.selling_plan_allocations || [];
-        if (sellingPlanSelect && !useAppWidget) {
+        if (sellingPlanSelect) {
           sellingPlanSelect.innerHTML = '';
           allocations.forEach((allocation) => {
             const option = document.createElement('option');
@@ -1385,23 +1312,29 @@
 
         const hasSubscription = allocations.length > 0;
         const subscribeButton = root.querySelector('[data-plan-type="subscribe"]');
+        const onetimeButton = root.querySelector('[data-plan-type="onetime"]');
+
         if (subscribeButton) {
           subscribeButton.disabled = !hasSubscription;
           subscribeButton.style.opacity = hasSubscription ? '' : '.55';
         }
 
-        if (!hasSubscription && selectedPlanType === 'subscribe' && !useAppWidget) selectedPlanType = 'onetime';
+        if (onetimeButton && productData.requires_selling_plan) {
+          onetimeButton.disabled = true;
+          onetimeButton.style.opacity = '.55';
+        }
+
+        if (!hasSubscription && selectedPlanType === 'subscribe') selectedPlanType = 'onetime';
+        if (productData.requires_selling_plan) selectedPlanType = 'subscribe';
 
         planButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.planType === selectedPlanType));
 
-        if (frequencyWrap) frequencyWrap.style.display = (!useAppWidget && selectedPlanType === 'subscribe' && hasSubscription) ? '' : 'none';
+        if (frequencyWrap) frequencyWrap.style.display = (selectedPlanType === 'subscribe' && hasSubscription) ? '' : 'none';
 
         if (atc) {
-          atc.disabled = !variant.available || (!useAppWidget && selectedPlanType === 'subscribe' && !hasSubscription);
+          atc.disabled = !variant.available || (selectedPlanType === 'subscribe' && !hasSubscription);
           atc.textContent = variant.available ? {{ section.settings.atc_text | json }} : 'Sold out';
         }
-
-        refreshRechargeWidget();
       };
 
       goalButtons.forEach(btn => {
@@ -1455,8 +1388,10 @@
         document.dispatchEvent(new CustomEvent('cart:refresh'));
         document.dispatchEvent(new CustomEvent('cart:open'));
         window.dispatchEvent(new CustomEvent('cart:refresh'));
+
         const cartDrawer = document.querySelector('cart-drawer');
         if (cartDrawer && typeof cartDrawer.open === 'function') cartDrawer.open();
+
         const cartNotification = document.querySelector('cart-notification');
         if (cartNotification && typeof cartNotification.open === 'function') cartNotification.open();
       };
@@ -1467,22 +1402,21 @@
         const variant = getVariant();
         if (!variant || !variant.available) return;
 
-        if (variantInput) variantInput.value = variant.id;
-        if (quantityInput) quantityInput.value = selectedQuantity;
-
         const formData = new FormData(form);
+        formData.set('id', variant.id);
+        formData.set('quantity', String(selectedQuantity));
+        formData.delete('selling_plan');
 
-        if (!useAppWidget) {
-          formData.delete('selling_plan');
-          if (selectedPlanType === 'subscribe') {
-            const selectedPlanId = sellingPlanSelect?.value;
-            if (!selectedPlanId) {
+        if (selectedPlanType === 'subscribe') {
+          const selectedPlanId = sellingPlanSelect?.value;
+          if (!selectedPlanId) {
+            if (message) {
               message.style.color = '#aa7a6b';
               message.textContent = 'Please choose a subscription option.';
-              return;
             }
-            formData.set('selling_plan', selectedPlanId);
+            return;
           }
+          formData.set('selling_plan', selectedPlanId);
         }
 
         atc.disabled = true;
@@ -1499,12 +1433,16 @@
           const data = await res.json();
           if (!res.ok) throw new Error(data.description || data.message || 'Unable to add to cart');
 
-          message.style.color = '#737c5b';
-          message.textContent = 'Added to cart';
+          if (message) {
+            message.style.color = '#737c5b';
+            message.textContent = 'Added to cart';
+          }
           openCartDrawer();
         } catch (error) {
-          message.style.color = '#aa7a6b';
-          message.textContent = error.message || 'Something went wrong. Please try again.';
+          if (message) {
+            message.style.color = '#aa7a6b';
+            message.textContent = error.message || 'Something went wrong. Please try again.';
+          }
         } finally {
           atc.disabled = false;
           atc.textContent = originalText;
@@ -1522,9 +1460,10 @@
   "name": "Boka starter landing page",
   "settings": [
     { "type": "product", "id": "product", "label": "Starter product" },
-    { "type": "checkbox", "id": "use_recharge_app_block", "label": "Use Recharge app block slot instead of custom plan selector", "default": false },
-    { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase in custom selector", "default": false },
+    { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase", "default": false },
     { "type": "checkbox", "id": "show_quantity_selector", "label": "Show quantity selector", "default": false },
+    { "type": "range", "id": "padding_top", "label": "Hero padding top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 32 },
+    { "type": "range", "id": "padding_bottom", "label": "Hero padding bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 64 },
 
     { "type": "header", "content": "Brand colors" },
     { "type": "color", "id": "green_light", "label": "Light green", "default": "#e6f4d4" },
@@ -1580,9 +1519,6 @@
     { "type": "text", "id": "guarantee_2", "label": "Guarantee 2", "default": "Flexible refills" },
     { "type": "text", "id": "guarantee_3", "label": "Guarantee 3", "default": "Clean ingredients" },
     { "type": "text", "id": "guarantee_4", "label": "Guarantee 4", "default": "Made for daily use" }
-  ],
-  "blocks": [
-    { "type": "@app" }
   ],
   "presets": [
     { "name": "Boka starter landing page" }
