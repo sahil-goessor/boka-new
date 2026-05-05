@@ -304,10 +304,10 @@
   }
 
   .dp-hero__media-card {
-  position: relative;
-  overflow: visible;
-  min-height: 560px;
-  border-radius: 34px;
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+    border-radius: 34px;
     background:
       radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12) 52%, rgba(255, 255, 255, 0) 78%),
       var(--dp-sage);
@@ -352,15 +352,13 @@
   .dp-hero__note {
     position: absolute;
     right: 22px;
-    top: 22px;
-    transform: translateY(-34%);
+    bottom: 22px;
     width: min(310px, calc(100% - 44px));
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 22px;
-    padding: 18px 20px;
+    padding: 20px;
     background: rgba(250, 250, 245, 0.80);
     backdrop-filter: blur(14px);
-    z-index: 4; 
   }
 
   .dp-hero__note-title {
