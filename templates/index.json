@@ -450,7 +450,7 @@
         "title": "",
         "heading_alignment": "center",
         "heading_size": "h1",
-        "heading_tag": "default",
+        "heading_tag": "h3",
         "description": "",
         "image_ratio": "square",
         "columns_desktop": 5,
