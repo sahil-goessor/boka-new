@@ -1019,7 +1019,7 @@
                     <span class="boka-lp__goal-title">{{ variant.title }}</span>
                     <span class="boka-lp__goal-sub">
                       {% if variant.available %}
-                        {{ variant.price | money }} today{% if variant.compare_at_price > variant.price %} · {{ variant.compare_at_price | money }} value{% endif %}
+                        {{ section.settings.offer_price }} today · {{ section.settings.offer_value }} value
                       {% else %}
                         Sold out
                       {% endif %}
@@ -1055,8 +1055,8 @@
                   <span class="boka-lp__plan-head">
                     <span class="boka-lp__plan-title">{{ section.settings.subscription_title }}</span>
                     <span>
-                      <span class="boka-lp__compare-price" data-boka-sub-compare>{% if first_variant.compare_at_price > first_variant.price %}{{ first_variant.compare_at_price | money }}{% endif %}</span>
-                      <span class="boka-lp__price" data-boka-sub-price>{{ first_variant.price | money }}</span>
+                      <span class="boka-lp__compare-price" data-boka-sub-compare>{{ section.settings.offer_value }}</span>
+                      <span class="boka-lp__price" data-boka-sub-price>{{ section.settings.offer_price }}</span>
                     </span>
                   </span>
                   <span class="boka-lp__plan-note">{{ section.settings.subscription_note }}</span>
@@ -1232,6 +1232,8 @@
       root.dataset.initialized = 'true';
 
       const moneyFormat = {{ shop.money_format | json }};
+      const offerPrice = {{ section.settings.offer_price | json }};
+      const offerValue = {{ section.settings.offer_value | json }};
       const productJsonEl = root.querySelector('[data-boka-product-json]');
       if (!productJsonEl) return;
 
@@ -1303,15 +1305,15 @@
           });
         }
 
-        // Display the first-order acquisition offer, not the recurring selling-plan discount.
-        // Recharge may workflow this subscription to a separate refill product/price after checkout,
-        // so the selling_plan_allocation price should not be used as the visible starter offer price.
+        // Display the first-order acquisition offer, not the Shopify product price or recurring selling-plan discount.
+        // Recommended setup: Shopify product price = $34.99, compare-at blank, automatic first-order discount = $15.
+        // Recharge may workflow this subscription to a separate refill product/price after checkout.
         const firstAllocation = getFirstAllocation(variant);
-        if (subPrice) subPrice.textContent = formatMoney(variant.price * selectedQuantity);
+        if (subPrice) {
+          subPrice.textContent = selectedQuantity > 1 ? `${offerPrice} × ${selectedQuantity}` : offerPrice;
+        }
         if (subCompare) {
-          subCompare.textContent = variant.compare_at_price && variant.compare_at_price > variant.price
-            ? formatMoney(variant.compare_at_price * selectedQuantity)
-            : '';
+          subCompare.textContent = selectedQuantity > 1 ? `${offerValue} × ${selectedQuantity}` : offerValue;
         }
 
         const hasSubscription = allocations.length > 0;
@@ -1503,6 +1505,11 @@
     { "type": "text", "id": "benefit_2", "label": "Benefit pill 2", "default": "$19.99 today" },
     { "type": "text", "id": "benefit_3", "label": "Benefit pill 3", "default": "Free first-order shipping" },
     { "type": "text", "id": "benefit_4", "label": "Benefit pill 4", "default": "Flexible 3-month refills" },
+
+    { "type": "header", "content": "Offer pricing" },
+    { "type": "text", "id": "offer_value", "label": "Starter kit value price", "default": "$34.99" },
+    { "type": "text", "id": "offer_price", "label": "First-order offer price", "default": "$19.99" },
+    { "type": "text", "id": "offer_discount", "label": "First-order discount label", "default": "Save $15" },
 
     { "type": "header", "content": "Buy box" },
     { "type": "text", "id": "variant_label", "label": "Variant step label", "default": "Choose your smile goal" },
