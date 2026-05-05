@@ -1055,8 +1055,8 @@
                   <span class="boka-lp__plan-head">
                     <span class="boka-lp__plan-title">{{ section.settings.subscription_title }}</span>
                     <span>
+                      <span class="boka-lp__compare-price" data-boka-sub-compare>{% if first_variant.compare_at_price > first_variant.price %}{{ first_variant.compare_at_price | money }}{% endif %}</span>
                       <span class="boka-lp__price" data-boka-sub-price>{{ first_variant.price | money }}</span>
-                      <span class="boka-lp__compare-price" data-boka-sub-compare></span>
                     </span>
                   </span>
                   <span class="boka-lp__plan-note">{{ section.settings.subscription_note }}</span>
@@ -1303,11 +1303,15 @@
           });
         }
 
+        // Display the first-order acquisition offer, not the recurring selling-plan discount.
+        // Recharge may workflow this subscription to a separate refill product/price after checkout,
+        // so the selling_plan_allocation price should not be used as the visible starter offer price.
         const firstAllocation = getFirstAllocation(variant);
-        if (subPrice) subPrice.textContent = firstAllocation ? formatMoney(firstAllocation.price * selectedQuantity) : formatMoney(variant.price * selectedQuantity);
+        if (subPrice) subPrice.textContent = formatMoney(variant.price * selectedQuantity);
         if (subCompare) {
-          const compare = firstAllocation?.compare_at_price || variant.compare_at_price || variant.price;
-          subCompare.textContent = firstAllocation && compare > firstAllocation.price ? formatMoney(compare * selectedQuantity) : '';
+          subCompare.textContent = variant.compare_at_price && variant.compare_at_price > variant.price
+            ? formatMoney(variant.compare_at_price * selectedQuantity)
+            : '';
         }
 
         const hasSubscription = allocations.length > 0;
