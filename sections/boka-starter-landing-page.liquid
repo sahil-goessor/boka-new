@@ -1019,7 +1019,7 @@
                     <span class="boka-lp__goal-title">{{ variant.title }}</span>
                     <span class="boka-lp__goal-sub">
                       {% if variant.available %}
-                        {{ variant.price | money }}{% if variant.selling_plan_allocations.size > 0 %} · refill eligible{% endif %}
+                        {{ variant.price | money }} today{% if variant.compare_at_price > variant.price %} · {{ variant.compare_at_price | money }} value{% endif %}
                       {% else %}
                         Sold out
                       {% endif %}
@@ -1051,7 +1051,7 @@
 
               <div class="boka-lp__plan-fallback" data-boka-plan-fallback>
                 <button type="button" class="boka-lp__plan-card has-badge is-active" data-plan-type="subscribe">
-                  <span class="boka-lp__plan-badge">Most popular</span>
+                  <span class="boka-lp__plan-badge">New customer offer</span>
                   <span class="boka-lp__plan-head">
                     <span class="boka-lp__plan-title">{{ section.settings.subscription_title }}</span>
                     <span>
@@ -1129,12 +1129,12 @@
 
   <div class="boka-lp__section boka-lp__section--white">
     <div class="boka-lp__wrap">
-      <p class="boka-lp__eyebrow">Starter now. Refills later.</p>
+      <p class="boka-lp__eyebrow">$19.99 first order. Refills later.</p>
       <h2 class="boka-lp__section-title">Start with the full routine. Refill only what you need.</h2>
       <div class="boka-lp__routine-grid">
         <div class="boka-lp__routine-panel is-green">
-          <h3>First order</h3>
-          <p>Your starter kit is built to reset the routine with the essentials in one box.</p>
+          <h3>First order · $19.99</h3>
+          <p>Your first box is a complete Starter Kit: a $34.99 value for $19.99 today, with free shipping on the first order.</p>
           <ul>
             <li>n-Ha Toothpaste</li>
             <li>Brush</li>
@@ -1143,12 +1143,12 @@
           </ul>
         </div>
         <div class="boka-lp__routine-panel">
-          <h3>Every 3 months</h3>
-          <p>Your refill keeps the routine going with the consumables you actually need to replace.</p>
+          <h3>Every 3 months · Refill essentials</h3>
+          <p>Your recurring refill keeps the routine going with the consumables you actually need to replace. Configure the exact refill contents and price in Recharge.</p>
           <ul>
             <li>Toothpaste refill</li>
             <li>Floss or selected add-ons</li>
-            <li>Subscriber savings</li>
+            <li>Subscriber savings on recurring refills</li>
             <li>Pause, skip, or cancel anytime</li>
           </ul>
         </div>
@@ -1460,7 +1460,7 @@
   "name": "Boka starter landing page",
   "settings": [
     { "type": "product", "id": "product", "label": "Starter product" },
-    { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase", "default": false },
+    { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase", "default": true },
     { "type": "checkbox", "id": "show_quantity_selector", "label": "Show quantity selector", "default": false },
     { "type": "range", "id": "padding_top", "label": "Hero padding top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 32 },
     { "type": "range", "id": "padding_bottom", "label": "Hero padding bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 64 },
@@ -1473,32 +1473,32 @@
 
     { "type": "header", "content": "Top bar and nav" },
     { "type": "checkbox", "id": "show_announcement", "label": "Show announcement bar", "default": true },
-    { "type": "text", "id": "announcement_text", "label": "Announcement text", "default": "New customer offer: Start your Boka routine with a complete Starter Kit." },
+    { "type": "text", "id": "announcement_text", "label": "Announcement text", "default": "New customer offer: Get a $34.99 Boka Starter Kit for $19.99 today." },
     { "type": "text", "id": "announcement_link_text", "label": "Announcement link text", "default": "Start now" },
     { "type": "checkbox", "id": "show_nav", "label": "Show landing page nav", "default": true },
-    { "type": "text", "id": "nav_cta", "label": "Nav CTA", "default": "Start My Routine" },
-    { "type": "text", "id": "mobile_sticky_text", "label": "Mobile sticky CTA", "default": "Start My Routine" },
+    { "type": "text", "id": "nav_cta", "label": "Nav CTA", "default": "Start My Routine — $19.99" },
+    { "type": "text", "id": "mobile_sticky_text", "label": "Mobile sticky CTA", "default": "Start My Routine — $19.99" },
 
     { "type": "header", "content": "Hero media" },
     { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
     { "type": "checkbox", "id": "contain_image", "label": "Contain hero image instead of cover", "default": false },
-    { "type": "text", "id": "image_badge", "label": "Image badge", "default": "Complete routine" },
-    { "type": "text", "id": "proof_1_title", "label": "Proof 1 title", "default": "First order" },
-    { "type": "text", "id": "proof_1_text", "label": "Proof 1 text", "default": "A complete starter routine in one box." },
-    { "type": "text", "id": "proof_2_title", "label": "Proof 2 title", "default": "Refills" },
-    { "type": "text", "id": "proof_2_text", "label": "Proof 2 text", "default": "Essentials delivered every 3 months." },
-    { "type": "text", "id": "proof_3_title", "label": "Proof 3 title", "default": "Flexible" },
+    { "type": "text", "id": "image_badge", "label": "Image badge", "default": "$34.99 value" },
+    { "type": "text", "id": "proof_1_title", "label": "Proof 1 title", "default": "$19.99 today" },
+    { "type": "text", "id": "proof_1_text", "label": "Proof 1 text", "default": "$34.99 complete starter kit value." },
+    { "type": "text", "id": "proof_2_title", "label": "Proof 2 title", "default": "Free shipping" },
+    { "type": "text", "id": "proof_2_text", "label": "Proof 2 text", "default": "On your first Starter Kit order." },
+    { "type": "text", "id": "proof_3_title", "label": "Proof 3 title", "default": "3-month refills" },
     { "type": "text", "id": "proof_3_text", "label": "Proof 3 text", "default": "Pause, skip, or cancel anytime." },
 
     { "type": "header", "content": "Hero copy" },
     { "type": "text", "id": "rating_text", "label": "Rating text", "default": "Loved by Boka customers" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Daily oral care, naturally elevated" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "$34.99 value for $19.99 today" },
     { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Build your <em>Boka</em> Starter Kit.</p>" },
-    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Choose your smile goal and get a complete oral care routine powered by n-Ha — with easy refills every 3 months." },
-    { "type": "text", "id": "benefit_1", "label": "Benefit pill 1", "default": "Fluoride-free n-Ha" },
-    { "type": "text", "id": "benefit_2", "label": "Benefit pill 2", "default": "Clean ingredients" },
-    { "type": "text", "id": "benefit_3", "label": "Benefit pill 3", "default": "Complete routine" },
-    { "type": "text", "id": "benefit_4", "label": "Benefit pill 4", "default": "Flexible refills" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Choose your smile goal and get a complete oral care routine for $19.99 today — then keep it going with easy 3-month refills." },
+    { "type": "text", "id": "benefit_1", "label": "Benefit pill 1", "default": "$34.99 value" },
+    { "type": "text", "id": "benefit_2", "label": "Benefit pill 2", "default": "$19.99 today" },
+    { "type": "text", "id": "benefit_3", "label": "Benefit pill 3", "default": "Free first-order shipping" },
+    { "type": "text", "id": "benefit_4", "label": "Benefit pill 4", "default": "Flexible 3-month refills" },
 
     { "type": "header", "content": "Buy box" },
     { "type": "text", "id": "variant_label", "label": "Variant step label", "default": "Choose your smile goal" },
@@ -1508,17 +1508,17 @@
     { "type": "text", "id": "plan_label", "label": "Plan step label", "default": "Choose your plan" },
     { "type": "text", "id": "plan_note", "label": "Plan step note", "default": "Subscribe or buy once" },
     { "type": "text", "id": "subscription_title", "label": "Subscription title", "default": "Starter Kit + 3-Month Refills" },
-    { "type": "text", "id": "subscription_note", "label": "Subscription note", "default": "A complete routine now, essentials when you need them." },
-    { "type": "text", "id": "subscription_feature_1", "label": "Subscription feature 1", "default": "Subscriber savings on recurring refills" },
-    { "type": "text", "id": "subscription_feature_2", "label": "Subscription feature 2", "default": "Pause, skip, or cancel anytime" },
-    { "type": "text", "id": "subscription_feature_3", "label": "Subscription feature 3", "default": "Never run out of the essentials" },
+    { "type": "text", "id": "subscription_note", "label": "Subscription note", "default": "$19.99 today for your complete Starter Kit. Refills ship every 3 months." },
+    { "type": "text", "id": "subscription_feature_1", "label": "Subscription feature 1", "default": "$34.99 value for $19.99 today" },
+    { "type": "text", "id": "subscription_feature_2", "label": "Subscription feature 2", "default": "Free shipping on your first order" },
+    { "type": "text", "id": "subscription_feature_3", "label": "Subscription feature 3", "default": "Pause, skip, or cancel anytime" },
     { "type": "text", "id": "onetime_title", "label": "One-time title", "default": "One-Time Starter Kit" },
-    { "type": "text", "id": "onetime_note", "label": "One-time note", "default": "Try the full routine once." },
-    { "type": "text", "id": "atc_text", "label": "Add to cart text", "default": "Start My Routine" },
-    { "type": "text", "id": "guarantee_1", "label": "Guarantee 1", "default": "30-day guarantee" },
-    { "type": "text", "id": "guarantee_2", "label": "Guarantee 2", "default": "Flexible refills" },
-    { "type": "text", "id": "guarantee_3", "label": "Guarantee 3", "default": "Clean ingredients" },
-    { "type": "text", "id": "guarantee_4", "label": "Guarantee 4", "default": "Made for daily use" }
+    { "type": "text", "id": "onetime_note", "label": "One-time note", "default": "Try the full routine once. For best economics, consider pricing one-time higher than subscription." },
+    { "type": "text", "id": "atc_text", "label": "Add to cart text", "default": "Start My Routine — $19.99" },
+    { "type": "text", "id": "guarantee_1", "label": "Guarantee 1", "default": "$19.99 today" },
+    { "type": "text", "id": "guarantee_2", "label": "Guarantee 2", "default": "Free first-order shipping" },
+    { "type": "text", "id": "guarantee_3", "label": "Guarantee 3", "default": "3-month refills" },
+    { "type": "text", "id": "guarantee_4", "label": "Guarantee 4", "default": "Pause, skip, or cancel" }
   ],
   "presets": [
     { "name": "Boka starter landing page" }
