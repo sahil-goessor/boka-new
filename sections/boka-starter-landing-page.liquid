@@ -1168,11 +1168,10 @@
         </div>
       </div>
 
-      <div class="boka-lp__guarantees">
-        <div>{{ section.settings.guarantee_1 }}</div>
-        <div>{{ section.settings.guarantee_2 }}</div>
-        <div>{{ section.settings.guarantee_3 }}</div>
-        <div>{{ section.settings.guarantee_4 }}</div>
+      <div class="boka-lp__hero-proof">
+        <div class="boka-lp__proof-card"><strong>{{ section.settings.proof_1_title }}</strong>{{ section.settings.proof_1_text }}</div>
+        <div class="boka-lp__proof-card"><strong>{{ section.settings.proof_2_title }}</strong>{{ section.settings.proof_2_text }}</div>
+        <div class="boka-lp__proof-card"><strong>{{ section.settings.proof_3_title }}</strong>{{ section.settings.proof_3_text }}</div>
       </div>
     </div>
 
@@ -1308,6 +1307,13 @@
         {% else %}
           <p><strong>Select your Starter Kit product in this section’s Theme Editor settings.</strong></p>
         {% endif %}
+      </div>
+
+      <div class="boka-lp__guarantees">
+        <div>{{ section.settings.guarantee_1 }}</div>
+        <div>{{ section.settings.guarantee_2 }}</div>
+        <div>{{ section.settings.guarantee_3 }}</div>
+        <div>{{ section.settings.guarantee_4 }}</div>
       </div>
     </div>
   </div>
