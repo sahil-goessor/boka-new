@@ -514,10 +514,14 @@
 
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card {
       position: relative;
-      min-height: 74px;
-      border-radius: 18px;
-      padding: 14px 15px;
+      min-height: 88px;
+      border: 2px solid var(--boka-charcoal);
+      border-radius: 22px;
+      background: rgba(250, 250, 245, .88);
+      padding: 18px 56px 18px 20px;
       text-align: left;
+      cursor: pointer;
+      transition: background .2s, transform .2s, box-shadow .2s, border-color .2s;
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card:hover:not([disabled]),
