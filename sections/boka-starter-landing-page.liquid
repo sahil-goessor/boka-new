@@ -1378,19 +1378,27 @@
 
       const setMainImage = (src, altText = '') => {
         if (!src || !mainMedia) return;
+
         let img = mainMedia.querySelector('img');
 
         if (!img) {
           const placeholder = mainMedia.querySelector('.boka-lp__placeholder');
           if (placeholder) placeholder.remove();
+
           img = document.createElement('img');
           img.loading = 'eager';
           img.decoding = 'async';
           mainMedia.appendChild(img);
         }
 
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+
         img.src = src;
-        if (altText) img.alt = altText;
+
+        if (altText) {
+          img.alt = altText;
+        }
       };
 
       const renderVariant = () => {
