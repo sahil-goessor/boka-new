@@ -8,6 +8,8 @@
   endif
 %}
 
+{% if section.settings.hide_theme_header %} header, .shopify-section-header, #shopify-section-header, sticky-header, .header-wrapper, .announcement-bar, .utility-bar { display: none !important; } body { padding-top: 0 !important; } {% endif %}
+
 <section id="boka-starter-lp-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
   <style>
     #boka-starter-lp-{{ section.id }} {
@@ -1640,6 +1642,7 @@
 {
   "name": "Boka starter landing page",
   "settings": [
+    { "type": "checkbox", "id": "hide_theme_header", "label": "Hide normal site header", "default": true },
     { "type": "product", "id": "product", "label": "Starter product" },
     { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase", "default": true },
     { "type": "checkbox", "id": "show_quantity_selector", "label": "Show quantity selector", "default": false },
