@@ -1103,11 +1103,12 @@
         font-size: clamp(32px, 10vw, 44px);
       }
       
-      #boka-starter-lp-{{ section.id }} .boka-lp__gallery-wrap { 
-        position: static; 
+      #boka-starter-lp-{{ section.id }} .boka-lp__gallery-wrap {
+        display: contents;
       }
 
       #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
+        order: 1;
         grid-template-columns: 1fr;
       }
 
@@ -1146,13 +1147,16 @@
       }
 
       #boka-starter-lp-{{ section.id }} .boka-lp__hero-proof { grid-template-columns: 1fr; }
-      #boka-starter-lp-{{ section.id }} .boka-lp__buybox { gap: 14px; }
+      #boka-starter-lp-{{ section.id }} .boka-lp__buybox {  order: 2;
+      gap: 14px; }
       #boka-starter-lp-{{ section.id }} .boka-lp__intro-card,
       #boka-starter-lp-{{ section.id }} .boka-lp__buybox-inner {
         padding: 22px;
         box-shadow: 5px 5px 0 var(--boka-green-mid);
       }
       #boka-starter-lp-{{ section.id }} .boka-lp__guarantees {
+        order: 3;
+        margin-top: 0;
         box-shadow: none;
       }
       #boka-starter-lp-{{ section.id }} .boka-lp__title {
