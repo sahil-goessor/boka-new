@@ -171,22 +171,22 @@
         "commission_rate_1": {
           "type": "commission_rate",
           "settings": {
-            "label": "First-time customer purchase",
-            "value": "15%"
+            "label": "Tier 1",
+            "value": "Up to 44% Off"
           }
         },
         "commission_rate_2": {
           "type": "commission_rate",
           "settings": {
-            "label": "Subscription / recurring purchase",
-            "value": "10%"
+            "label": "Tier 2",
+            "value": "Up to 50% Off"
           }
         },
         "commission_rate_3": {
           "type": "commission_rate",
           "settings": {
-            "label": "Performance bonus tier",
-            "value": "Up to 20%"
+            "label": "Tier 3",
+            "value": "Up to 55% Off"
           }
         },
         "process_item_1": {
