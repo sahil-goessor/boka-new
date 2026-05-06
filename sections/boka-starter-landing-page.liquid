@@ -986,29 +986,6 @@
     </div>
   {% endif %}
 
-  {% if section.settings.show_nav %}
-    <div class="boka-lp__nav">
-      <div class="boka-lp__nav-inner">
-        <a class="boka-lp__logo" href="{{ routes.root_url }}" aria-label="Boka home">BOKA</a>
-        <div class="boka-lp__nav-links">
-          <a href="#boka-included-{{ section.id }}">What’s inside</a>
-          <a href="#boka-science-{{ section.id }}">Science</a>
-          <a href="#boka-reviews-{{ section.id }}">Reviews</a>
-          <a href="#boka-faq-{{ section.id }}">FAQ</a>
-        </div>
-        <div class="boka-lp__nav-actions">
-          <button type="button" class="boka-lp__cart-button" data-boka-open-cart aria-label="Open cart">
-            <svg class="boka-lp__cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M6.5 8.5h13l-1.4 8.1a2 2 0 0 1-2 1.7H9.2a2 2 0 0 1-2-1.7L6.5 8.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M9 8.5a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            <span class="boka-lp__cart-count" data-boka-cart-count>{{ cart.item_count }}</span>
-          </button>
-          <a class="boka-lp__nav-cta" href="#boka-buybox-{{ section.id }}">{{ section.settings.nav_cta }}</a>
-        </div>
-      </div>
-    </div>
-  {% endif %}
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
     <div class="boka-lp__gallery-wrap">
