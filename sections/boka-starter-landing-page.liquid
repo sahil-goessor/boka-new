@@ -1083,36 +1083,6 @@
       font-weight: 900;
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__mobile-sticky {
-      display: none;
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 30;
-      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-      background: rgba(250,250,245,.94);
-      border-top: 1px solid var(--boka-stone);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__mobile-sticky a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      border-radius: 0;
-      background: var(--boka-charcoal);
-      color: var(--boka-cream);
-      text-decoration: none;
-      font-family: "Ivar Display", "Times New Roman", serif;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      font-weight: 900;
-    }
-
     @media (max-width: 980px) {
       #boka-starter-lp-{{ section.id }} .boka-lp__nav { 
         top: {% if section.settings.show_announcement %}38px{% else %}0{% endif %}; 
@@ -1316,7 +1286,6 @@
       #boka-starter-lp-{{ section.id }} .boka-lp__compare th,
       #boka-starter-lp-{{ section.id }} .boka-lp__compare td { padding: 12px 10px; }
 
-      #boka-starter-lp-{{ section.id }} .boka-lp__mobile-sticky { display: block; }
     }
   </style>
 
@@ -1622,10 +1591,6 @@
       <p class="boka-lp__section-copy">Choose your smile goal and get a complete Boka routine delivered to your door.</p>
       <a class="boka-lp__bottom-button" href="#boka-buybox-{{ section.id }}">Start My Routine</a>
     </div>
-  </div>
-
-  <div class="boka-lp__mobile-sticky">
-    <a href="#boka-buybox-{{ section.id }}">{{ section.settings.mobile_sticky_text }}</a>
   </div>
 
   <script>
