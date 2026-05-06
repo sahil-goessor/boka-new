@@ -12,8 +12,7 @@
     "main": {
       "type": "boka-starter-landing-page",
       "settings": {
-        "hide_theme_header": true,
-        "product": "best-of-boka-starter-kit",
+        "product": "bestsellers-sample-pack",
         "subscription_only": false,
         "show_quantity_selector": false,
         "padding_top": 32,
