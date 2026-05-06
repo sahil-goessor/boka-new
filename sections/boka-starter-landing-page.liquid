@@ -538,6 +538,24 @@
       box-shadow: 6px 6px 0 var(--boka-green-mid);
     }
 
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active::after {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card[disabled],
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-card[disabled] {
       opacity: .45;
