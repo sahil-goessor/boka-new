@@ -12,6 +12,7 @@
     "main": {
       "type": "boka-starter-landing-page",
       "settings": {
+        "hide_theme_header": true,
         "product": "best-of-boka-starter-kit",
         "subscription_only": false,
         "show_quantity_selector": false,
@@ -27,7 +28,6 @@
         "show_nav": true,
         "nav_cta": "Start My Routine",
         "mobile_sticky_text": "Start My Routine",
-        "render_theme_cart_drawer": true,
         "contain_image": false,
         "image_badge": "Complete routine",
         "proof_1_title": "First order",
@@ -39,7 +39,7 @@
         "rating_text": "Loved by Boka customers",
         "eyebrow": "Daily oral care, naturally elevated",
         "heading": "<p>Build your <em>Boka</em> Starter Kit.</p>",
-        "subheading": "Choose your smile goal and get a complete oral care routine powered by n-Ha — with easy refills every 3 months.",
+        "subheading": "Choose your smile goal and get a complete oral care routine powered by n-Ha - with easy refills every 3 months.",
         "benefit_1": "Fluoride-free n-Ha",
         "benefit_2": "Clean ingredients",
         "benefit_3": "Complete routine",
