@@ -433,6 +433,30 @@
       margin-bottom: 22px;
     }
 
+    #boka-starter-lp-{{ section.id }} .boka-lp__pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 34px;
+      border: 2px solid var(--boka-charcoal);
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      border-radius: 10px;
+      padding: 7px 11px;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--boka-olive);
+      display: inline-block;
+    }
+
     #boka-starter-lp-{{ section.id }} .boka-lp__step {
       padding: 22px 0;
       border-top: 1px solid var(--boka-stone);
@@ -1382,7 +1406,7 @@
                     <span class="boka-lp__goal-title">{{ variant.title }}</span>
                     <span class="boka-lp__goal-sub">
                       {% if variant.available %}
-                        {{ section.settings.offer_price }} today · {{ section.settings.offer_value }} value
+                        Select this routine
                       {% else %}
                         Sold out
                       {% endif %}
