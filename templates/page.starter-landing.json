@@ -14,12 +14,11 @@
       "settings": {
         "logo_width": 120,
         "logo_text_size": 22,
-        "menu": "main-menu",
+        "menu": "new-desktop-header",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "show_search": false,
         "show_account": false,
-        "cta_text": "Start My Routine",
         "cta_url": "",
         "show_mobile_cta": false,
         "page_width": 1320,
@@ -34,7 +33,6 @@
         "text_color": "#222721",
         "hover_background": "#e6f4d4",
         "cta_background": "#222721",
-        "cta_text_color": "#fafaf5",
         "cart_bubble_background": "#e6f4d4",
         "cart_bubble_text_color": "#222721"
       }
