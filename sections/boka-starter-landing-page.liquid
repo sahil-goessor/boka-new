@@ -713,14 +713,16 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__guarantees {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      background: rgba(250, 250, 245, 0.85);
+      margin-top: 14px;
+      background: rgba(250, 250, 245, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: var(--boka-border-strong);
-      border-radius: var(--boka-radius-lg);
-      box-shadow: 8px 8px 0 var(--boka-green-mid);
+      border: 1px solid var(--boka-stone);
+      border-radius: 16px;
+      box-shadow: none;
       overflow: hidden;
     }
+
 
     #boka-starter-lp-{{ section.id }} .boka-lp__checklist {
   list-style: none;
