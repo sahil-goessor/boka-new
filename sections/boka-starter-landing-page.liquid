@@ -640,13 +640,6 @@
       text-decoration: line-through;
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__plan-note {
-      display: block;
-      color: var(--boka-gray);
-      font-size: 13px;
-      line-height: 1.4;
-      font-weight: 650;
-    }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-features {
       list-style: none;
@@ -1350,7 +1343,6 @@
               <div class="boka-lp__step">
                 <div class="boka-lp__step-head">
                   <h2 class="boka-lp__step-title"><span class="boka-lp__step-number">2</span>{{ section.settings.quantity_label }}</h2>
-                  <span class="boka-lp__step-note">{{ section.settings.quantity_note }}</span>
                 </div>
                 <div class="boka-lp__quantity-row" data-boka-quantity-row>
                   <button type="button" class="boka-lp__qty-card is-active" data-quantity="1">1 kit</button>
@@ -1363,7 +1355,6 @@
             <div class="boka-lp__step">
               <div class="boka-lp__step-head">
                 <h2 class="boka-lp__step-title"><span class="boka-lp__step-number">{% if section.settings.show_quantity_selector %}3{% else %}2{% endif %}</span>{{ section.settings.plan_label }}</h2>
-                <span class="boka-lp__step-note">{{ section.settings.plan_note }}</span>
               </div>
 
               <div class="boka-lp__plan-fallback" data-boka-plan-fallback>
@@ -1390,7 +1381,6 @@
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
                       <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
                     </span>
-                    <span class="boka-lp__plan-note">{{ section.settings.onetime_note }}</span>
                   </button>
                 {% endunless %}
               </div>
