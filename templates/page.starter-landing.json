@@ -56,7 +56,7 @@
         "show_nav": false,
         "nav_cta": "Start My Routine",
         "mobile_sticky_text": "Start My Routine",
-        "contain_image": false,
+        "contain_image": true,
         "image_badge": "Complete routine",
         "proof_1_title": "First order",
         "proof_1_text": "A complete starter routine in one box.",
