@@ -142,7 +142,7 @@
         "show_stars": true,
         "star_color": "#f5a623",
         "review_text": "3815+ Reviews",
-        "reviews_anchor": "shopify-section-template--17574539231275__yotpo_reviews_widget_hbzYf6",
+        "reviews_anchor": "shopify-section-template--26093881851947__yotpo_reviews_widget_hbzYf6",
         "heading": "Meet Nano-Hydroxyapatite, The Enamel-Mimicking Ingredient You Need",
         "heading_size": 40,
         "description": "A fluoride-free toothpaste made with thoughtfully selected ingredients for a cleaner, everyday brushing routine.",
@@ -793,7 +793,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
@@ -1331,7 +1331,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
