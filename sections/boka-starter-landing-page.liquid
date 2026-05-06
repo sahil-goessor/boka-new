@@ -723,22 +723,39 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__checklist {
-      list-style: none;
-      padding: 0;
-      margin: 18px 0 0;
-      display: grid;
-      gap: 10px;
-    }
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+}
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__checklist li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--boka-charcoal);
-      font-size: 14px;
-      line-height: 1.35;
-      font-weight: 800;
-    }
+#boka-starter-lp-{{ section.id }} .boka-lp__checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--boka-charcoal);
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 850;
+}
+
+#boka-starter-lp-{{ section.id }} .boka-lp__checklist li::before {
+  content: "✓";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--boka-green-light);
+  color: var(--boka-charcoal);
+  border: 1.5px solid var(--boka-green-mid);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 25px;
+  font-size: 14px;
+  font-weight: 900;
+  margin-top: -2px;
+}
 
     #boka-starter-lp-{{ section.id }} .boka-lp__promo-heading {
   grid-column: 1 / -1;
@@ -771,22 +788,6 @@
   font-size: 14px;
   font-weight: 800;
 }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__checklist li::before {
-      content: "✓";
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: var(--boka-green-light);
-      color: var(--boka-charcoal);
-      border: 1.5px solid var(--boka-green-mid);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 22px;
-      font-size: 13px;
-      font-weight: 900;
-    }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__guarantees div {
       padding: 13px 8px;
