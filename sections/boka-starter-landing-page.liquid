@@ -955,6 +955,37 @@
         padding-left: 16px;
         padding-right: 16px;
       }
+
+       #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
+    grid-template-columns: 1fr;
+  }
+
+  #boka-starter-lp-{{ section.id }} .boka-lp__main-media {
+    order: 1;
+  }
+
+  #boka-starter-lp-{{ section.id }} .boka-lp__thumbs {
+    order: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    border-right: 0;
+    border-top: 1px solid var(--boka-stone);
+    padding: 10px;
+  }
+
+  #boka-starter-lp-{{ section.id }} .boka-lp__thumb {
+    flex: 0 0 62px;
+    width: 62px;
+    min-height: 62px;
+  }
+
+  #boka-starter-lp-{{ section.id }} .boka-lp__thumb img,
+  #boka-starter-lp-{{ section.id }} .boka-lp__thumb-placeholder {
+    height: 62px;
+  }
+  
       #boka-starter-lp-{{ section.id }} .boka-lp__gallery-wrap { position: static; }
       #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
         grid-template-columns: 78px minmax(0, 1fr);
