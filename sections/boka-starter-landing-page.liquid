@@ -8,10 +8,22 @@
   endif
 %}
 
-{% if section.settings.hide_theme_header %} header, .shopify-section-header, #shopify-section-header, sticky-header, .header-wrapper, .announcement-bar, .utility-bar { display: none !important; } body { padding-top: 0 !important; } {% endif %}
 
 <section id="boka-starter-lp-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
   <style>
+    {% if section.settings.hide_theme_header %}
+  body:has(#boka-starter-lp-{{ section.id }}) .shopify-section-group-header-group,
+  body:has(#boka-starter-lp-{{ section.id }}) #shopify-section-header,
+  body:has(#boka-starter-lp-{{ section.id }}) .header-wrapper:not(.landing-header-wrapper),
+  body:has(#boka-starter-lp-{{ section.id }}) .announcement-bar,
+  body:has(#boka-starter-lp-{{ section.id }}) .utility-bar {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+{% endif %}
     #boka-starter-lp-{{ section.id }} {
       --boka-green-light: {{ section.settings.green_light | default: '#e6f4d4' }};
       --boka-green: {{ section.settings.green | default: '#d3e7c0' }};
