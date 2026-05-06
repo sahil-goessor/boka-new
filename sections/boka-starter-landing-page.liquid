@@ -709,6 +709,40 @@
       overflow: hidden;
     }
 
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+#boka-starter-lp-{{ section.id }} .boka-lp__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--boka-charcoal);
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+#boka-starter-lp-{{ section.id }} .boka-lp__checklist li::before {
+  content: "✓";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--boka-green-light);
+  color: var(--boka-charcoal);
+  border: 1.5px solid var(--boka-green-mid);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 22px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
     #boka-starter-lp-{{ section.id }} .boka-lp__guarantees div {
       padding: 13px 8px;
       border-right: 1px solid var(--boka-stone);
