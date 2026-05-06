@@ -1082,20 +1082,22 @@
 
     <div class="boka-lp__buybox">
       <div class="boka-lp__buybox-inner">
-        <div class="boka-lp__rating-row">
-          <span class="boka-lp__stars">★★★★★</span>
-          <span>{{ section.settings.rating_text }}</span>
-        </div>
+        <div class="boka-lp__intro-card">
+          <div class="boka-lp__rating-row">
+            <span class="boka-lp__stars">★★★★★</span>
+            <span>{{ section.settings.rating_text }}</span>
+          </div>
 
-        <p class="boka-lp__eyebrow">{{ section.settings.eyebrow }}</p>
-        <h1 class="boka-lp__title">{{ section.settings.heading }}</h1>
-        <p class="boka-lp__subtitle">{{ section.settings.subheading }}</p>
+          <p class="boka-lp__eyebrow">{{ section.settings.eyebrow }}</p>
+          <h1 class="boka-lp__title">{{ section.settings.heading }}</h1>
+          <p class="boka-lp__subtitle">{{ section.settings.subheading }}</p>
 
-        <div class="boka-lp__benefit-pills">
-          <span class="boka-lp__pill">{{ section.settings.benefit_1 }}</span>
-          <span class="boka-lp__pill">{{ section.settings.benefit_2 }}</span>
-          <span class="boka-lp__pill">{{ section.settings.benefit_3 }}</span>
-          <span class="boka-lp__pill">{{ section.settings.benefit_4 }}</span>
+          <div class="boka-lp__benefit-pills">
+            <span class="boka-lp__pill">{{ section.settings.benefit_1 }}</span>
+            <span class="boka-lp__pill">{{ section.settings.benefit_2 }}</span>
+            <span class="boka-lp__pill">{{ section.settings.benefit_3 }}</span>
+            <span class="boka-lp__pill">{{ section.settings.benefit_4 }}</span>
+          </div>
         </div>
 
         {% if lp_product != blank %}
