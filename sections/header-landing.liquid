@@ -151,20 +151,6 @@
     gap: 12px;
   }
 
-  #shopify-section-{{ section.id }} .landing-header__cta {
-    min-height: 40px;
-    padding: 0 18px;
-    border-radius: 999px;
-    background: {{ section.settings.cta_background }};
-    color: {{ section.settings.cta_text_color }};
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 800;
-    white-space: nowrap;
-  }
 
   #shopify-section-{{ section.id }} .landing-header__icon {
     width: 40px;
@@ -409,10 +395,6 @@
         </a>
       {% endif %}
 
-      {% if section.settings.cta_text != blank %}
-        <a class="landing-header__cta" href="{% if section.settings.cta_url != blank %}{{ section.settings.cta_url }}{% else %}#boka-buybox-{{ section.id }}{% endif %}">{{ section.settings.cta_text }}</a>
-      {% endif %}
-
       <a href="{{ routes.cart_url }}" class="landing-header__icon landing-header__cart" id="cart-icon-bubble" aria-label="Cart">
         {% render 'custom-icons', name: 'cart' %}
         {% if cart != empty %}
@@ -463,10 +445,6 @@
           {% endfor %}
         </ul>
       </nav>
-    {% endif %}
-
-    {% if section.settings.cta_text != blank %}
-      <a class="landing-header__cta" href="{% if section.settings.cta_url != blank %}{{ section.settings.cta_url }}{% else %}#boka-buybox-{{ section.id }}{% endif %}">{{ section.settings.cta_text }}</a>
     {% endif %}
   </div>
 </div>
@@ -633,12 +611,6 @@
       "default": false
     },
     {
-      "type": "text",
-      "id": "cta_text",
-      "label": "CTA text",
-      "default": "Start My Routine"
-    },
-    {
       "type": "url",
       "id": "cta_url",
       "label": "CTA link"
@@ -765,12 +737,6 @@
       "id": "cta_background",
       "label": "CTA background",
       "default": "#222721"
-    },
-    {
-      "type": "color",
-      "id": "cta_text_color",
-      "label": "CTA text",
-      "default": "#FAFAF5"
     },
     {
       "type": "color",
