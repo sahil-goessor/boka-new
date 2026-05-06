@@ -8,7 +8,6 @@
   endif
 %}
 
-
 <section id="boka-starter-lp-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
   <style>
     {% if section.settings.hide_theme_header %}
@@ -28,14 +27,14 @@
       --boka-green-light: {{ section.settings.green_light | default: '#e6f4d4' }};
       --boka-green: {{ section.settings.green | default: '#d3e7c0' }};
       --boka-green-mid: #bfd6a5;
-      --boka-green-deep: #a5bc8b;
+      --boka-green-deep: #a5be8b;
       --boka-olive: #737c5b;
       --boka-blush-light: {{ section.settings.blush_light | default: '#f9e5db' }};
       --boka-blush: #efd5ca;
       --boka-clay: #aa7a6b;
       --boka-cream: {{ section.settings.cream | default: '#fafaf5' }};
       --boka-stone: #e2e2d9;
-      --boka-taupe: #c1beb0;
+      --boka-taupe: #d1bebc;
       --boka-gray: #8c8773;
       --boka-charcoal: #222721;
       --boka-white: #ffffff;
@@ -45,7 +44,7 @@
       --boka-border-strong: 2px solid var(--boka-charcoal);
       background: linear-gradient(180deg, var(--boka-cream) 0%, #fff 46%, var(--boka-cream) 100%);
       color: var(--boka-charcoal);
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
       line-height: 1.5;
       overflow: clip;
     }
@@ -59,7 +58,7 @@
     #boka-starter-lp-{{ section.id }} select { font: inherit; }
 
     #boka-starter-lp-{{ section.id }} a { color: inherit; }
-    #boka-starter-lp-{{ section.id }} em { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; letter-spacing: -.02em; }
+    #boka-starter-lp-{{ section.id }} em { font-family: "Ivar Display Italic", "Times New Roman", serif; font-style: italic; font-weight: 400; letter-spacing: -.02em; }
     #boka-starter-lp-{{ section.id }} p { margin: 0; }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__topbar {
@@ -85,6 +84,7 @@
       background: rgba(250,250,245,.96);
       border-bottom: 2px solid var(--boka-charcoal);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       position: sticky;
       top: {% if section.settings.show_announcement %}39px{% else %}0{% endif %};
       z-index: 19;
@@ -106,6 +106,7 @@
       letter-spacing: .22em;
       font-weight: 400;
       line-height: 1;
+      text-transform: uppercase;
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__nav-links {
@@ -129,16 +130,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 10px;
+      border-radius: 0;
       background: var(--boka-charcoal);
       color: var(--boka-cream);
       min-height: 40px;
       padding: 0 18px;
       text-decoration: none;
-      font-size: 12px;
+      font-family: "Ivar Display", "Times New Roman", serif;
+      font-size: 14px;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: .04em;
+      letter-spacing: 0;
       white-space: nowrap;
       border: 2px solid var(--boka-charcoal);
     }
@@ -147,7 +149,7 @@
       min-width: 40px;
       min-height: 40px;
       border: 2px solid var(--boka-charcoal);
-      border-radius: 10px;
+      border-radius: 0;
       background: var(--boka-cream);
       color: var(--boka-charcoal);
       display: inline-flex;
@@ -198,7 +200,9 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
-      background: var(--boka-white);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--boka-stone);
       border-radius: var(--boka-radius-lg);
       overflow: hidden;
@@ -266,7 +270,7 @@
       flex-direction: column;
       gap: 10px;
       padding: 12px;
-      background: var(--boka-white);
+      background: transparent;
       border-right: 1px solid var(--boka-stone);
       border-top: 0;
       max-height: 560px;
@@ -326,7 +330,9 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__proof-card {
-      background: var(--boka-white);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 2px solid var(--boka-charcoal);
       border-radius: 14px;
       padding: 14px;
@@ -355,7 +361,9 @@
 
     #boka-starter-lp-{{ section.id }} .boka-lp__intro-card,
     #boka-starter-lp-{{ section.id }} .boka-lp__buybox-inner {
-      background: var(--boka-white);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: var(--boka-border-strong);
       border-radius: var(--boka-radius-lg);
       box-shadow: 8px 8px 0 var(--boka-green-mid);
@@ -669,15 +677,16 @@
       width: 100%;
       min-height: 58px;
       border: 2px solid var(--boka-charcoal);
-      border-radius: 10px;
+      border-radius: 0;
       background: var(--boka-charcoal);
       color: var(--boka-cream);
       padding: 17px 24px;
       cursor: pointer;
-      font-size: 14px;
+      font-family: "Ivar Display", "Times New Roman", serif;
+      font-size: 16px;
       line-height: 1;
       font-weight: 900;
-      letter-spacing: .05em;
+      letter-spacing: 0;
       text-transform: uppercase;
       transition: background .2s, transform .15s, box-shadow .2s;
     }
@@ -702,7 +711,9 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__guarantees {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      background: var(--boka-cream);
+      background: rgba(250, 250, 245, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: var(--boka-border-strong);
       border-radius: var(--boka-radius-lg);
       box-shadow: 8px 8px 0 var(--boka-green-mid);
@@ -710,38 +721,38 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__checklist {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
-  display: grid;
-  gap: 10px;
-}
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 10px;
+    }
 
-#boka-starter-lp-{{ section.id }} .boka-lp__checklist li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--boka-charcoal);
-  font-size: 14px;
-  line-height: 1.35;
-  font-weight: 800;
-}
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--boka-charcoal);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
 
-#boka-starter-lp-{{ section.id }} .boka-lp__checklist li::before {
-  content: "✓";
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--boka-green-light);
-  color: var(--boka-charcoal);
-  border: 1.5px solid var(--boka-green-mid);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 22px;
-  font-size: 13px;
-  font-weight: 900;
-}
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist li::before {
+      content: "✓";
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      border: 1.5px solid var(--boka-green-mid);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 22px;
+      font-size: 13px;
+      font-weight: 900;
+    }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__guarantees div {
       padding: 13px 8px;
@@ -797,7 +808,9 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__info-card {
-      background: var(--boka-white);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 2px solid var(--boka-charcoal);
       border-radius: 18px;
       padding: 22px;
@@ -861,7 +874,9 @@
       border-radius: 18px;
       padding: 28px;
       border: 2px solid var(--boka-charcoal);
-      background: var(--boka-white);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       box-shadow: 4px 4px 0 rgba(191,214,165,.9);
     }
 
@@ -966,11 +981,14 @@
       justify-content: center;
       min-width: 230px;
       min-height: 50px;
-      border-radius: 999px;
+      border-radius: 0;
       background: var(--boka-cream);
       color: var(--boka-charcoal);
       padding: 0 26px;
       text-decoration: none;
+      font-family: "Ivar Display", "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: 0;
       font-weight: 900;
     }
 
@@ -985,6 +1003,7 @@
       background: rgba(250,250,245,.94);
       border-top: 1px solid var(--boka-stone);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__mobile-sticky a {
@@ -992,11 +1011,14 @@
       align-items: center;
       justify-content: center;
       min-height: 48px;
-      border-radius: 999px;
+      border-radius: 0;
       background: var(--boka-charcoal);
       color: var(--boka-cream);
       text-decoration: none;
+      font-family: "Ivar Display", "Times New Roman", serif;
       font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0;
       font-weight: 900;
     }
 
@@ -1110,7 +1132,6 @@
       {{ section.settings.announcement_text }} <a href="#boka-buybox-{{ section.id }}">{{ section.settings.announcement_link_text }}</a>
     </div>
   {% endif %}
-
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
     <div class="boka-lp__gallery-wrap">
@@ -1517,9 +1538,6 @@
   sellingPlanSelect.value = firstPlan ? firstPlan.selling_plan_id : '';
 }
 
-        // Display the first-order acquisition offer, not the Shopify product price or recurring selling-plan discount.
-        // Recommended setup: Shopify product price = $34.99, compare-at blank, automatic first-order discount = $15.
-        // Recharge may workflow this subscription to a separate refill product/price after checkout.
         const firstAllocation = getFirstAllocation(variant);
         if (subPrice) {
           subPrice.textContent = selectedQuantity > 1 ? `${offerPrice} × ${selectedQuantity}` : offerPrice;
@@ -1608,7 +1626,6 @@
           const cart = await res.json();
           cartCountEls.forEach(el => { el.textContent = cart.item_count || 0; });
         } catch (error) {
-          // Cart count is helpful but not required.
         }
       };
 
