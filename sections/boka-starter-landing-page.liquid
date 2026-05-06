@@ -794,23 +794,6 @@
       line-height: 1.55;
     }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__intro-card {
-  background: var(--boka-cream);
-  border: 2px solid var(--boka-charcoal);
-  border-radius: 18px;
-  padding: 22px;
-  margin-bottom: 18px;
-  box-shadow: 4px 4px 0 var(--boka-green-mid);
-}
-
-#boka-starter-lp-{{ section.id }} .boka-lp__intro-card .boka-lp__benefit-pills {
-  margin-bottom: 0;
-}
-
-#boka-starter-lp-{{ section.id }} .boka-lp__intro-card .boka-lp__rating-row {
-  margin-bottom: 12px;
-}
-
     #boka-starter-lp-{{ section.id }} .boka-lp__section--charcoal .boka-lp__info-card p { color: rgba(250,250,245,.68); }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__routine-grid {
@@ -1097,26 +1080,24 @@
       </div>
     </div>
 
-    <div class="boka-lp__buybox">
-      <div class="boka-lp__buybox-inner">
-        <div class="boka-lp__intro-card">
-          <div class="boka-lp__rating-row">
-            <span class="boka-lp__stars">★★★★★</span>
-            <span>{{ section.settings.rating_text }}</span>
-          </div>
-
-          <p class="boka-lp__eyebrow">{{ section.settings.eyebrow }}</p>
-          <h1 class="boka-lp__title">{{ section.settings.heading }}</h1>
-          <p class="boka-lp__subtitle">{{ section.settings.subheading }}</p>
-
-          <div class="boka-lp__benefit-pills">
-            <span class="boka-lp__pill">{{ section.settings.benefit_1 }}</span>
-            <span class="boka-lp__pill">{{ section.settings.benefit_2 }}</span>
-            <span class="boka-lp__pill">{{ section.settings.benefit_3 }}</span>
-            <span class="boka-lp__pill">{{ section.settings.benefit_4 }}</span>
-          </div>
+      <div class="boka-lp__rating-row">
+          <span class="boka-lp__stars">★★★★★</span>
+          <span>{{ section.settings.rating_text }}</span>
         </div>
 
+        <p class="boka-lp__eyebrow">{{ section.settings.eyebrow }}</p>
+        <h1 class="boka-lp__title">{{ section.settings.heading }}</h1>
+        <p class="boka-lp__subtitle">{{ section.settings.subheading }}</p>
+
+        <div class="boka-lp__benefit-pills">
+          <span class="boka-lp__pill">{{ section.settings.benefit_1 }}</span>
+          <span class="boka-lp__pill">{{ section.settings.benefit_2 }}</span>
+          <span class="boka-lp__pill">{{ section.settings.benefit_3 }}</span>
+          <span class="boka-lp__pill">{{ section.settings.benefit_4 }}</span>
+        </div>
+
+    <div class="boka-lp__buybox">
+      <div class="boka-lp__buybox-inner">
         {% if lp_product != blank %}
           <script type="application/json" data-boka-product-json>
             {
