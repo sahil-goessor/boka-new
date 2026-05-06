@@ -50,7 +50,7 @@
         "green": "#d3e7c0",
         "blush_light": "#f9e5db",
         "cream": "#ffffff",
-        "show_announcement": true,
+        "show_announcement": false,
         "announcement_text": "New Customer Offer:",
         "announcement_link_text": "Start Your Curated Fluoride Free Routine For Just $19.99 & Free Shipping!",
         "show_nav": false,
