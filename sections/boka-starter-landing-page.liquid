@@ -1018,10 +1018,10 @@
       <div class="boka-lp__gallery-card">
         <div class="boka-lp__main-media {% if section.settings.contain_image %}boka-lp__main-media--contain{% endif %}" data-boka-main-media>
           <div class="boka-lp__media-badge">{{ section.settings.image_badge }}</div>
-          {% if section.settings.hero_image != blank %}
-            {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: section.settings.image_badge }}
-          {% elsif first_variant.featured_image != blank %}
+          {% if first_variant.featured_image != blank %}
             {{ first_variant.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: first_variant.title }}
+          {% elsif section.settings.hero_image != blank %}
+            {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: section.settings.image_badge }}
           {% else %}
             <div class="boka-lp__placeholder">BOKA</div>
           {% endif %}
