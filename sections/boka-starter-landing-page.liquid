@@ -1400,14 +1400,9 @@
 
         const allocations = variant.selling_plan_allocations || [];
         if (sellingPlanSelect) {
-          sellingPlanSelect.innerHTML = '';
-          allocations.forEach((allocation) => {
-            const option = document.createElement('option');
-            option.value = allocation.selling_plan_id;
-            option.textContent = allocation.selling_plan_name;
-            sellingPlanSelect.appendChild(option);
-          });
-        }
+  const firstPlan = allocations[0];
+  sellingPlanSelect.value = firstPlan ? firstPlan.selling_plan_id : '';
+}
 
         // Display the first-order acquisition offer, not the Shopify product price or recurring selling-plan discount.
         // Recommended setup: Shopify product price = $34.99, compare-at blank, automatic first-order discount = $15.
