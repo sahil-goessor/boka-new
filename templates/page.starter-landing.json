@@ -12,16 +12,37 @@
     "landing_header": {
       "type": "header-landing",
       "settings": {
+        "logo_width": 120,
+        "logo_text_size": 22,
         "menu": "main-menu",
-        "cta_text": "Start My Routine",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
         "show_search": false,
         "show_account": false,
-        "sticky_header_type": "always"
+        "cta_text": "Start My Routine",
+        "cta_url": "",
+        "show_mobile_cta": false,
+        "page_width": 1320,
+        "header_height": 72,
+        "mobile_header_height": 64,
+        "side_padding": 48,
+        "menu_gap": 28,
+        "nav_font_size": 14,
+        "nav_font_weight": "700",
+        "mobile_nav_font_size": 17,
+        "background_color": "#fafaf5",
+        "text_color": "#222721",
+        "hover_background": "#e6f4d4",
+        "cta_background": "#222721",
+        "cta_text_color": "#fafaf5",
+        "cart_bubble_background": "#e6f4d4",
+        "cart_bubble_text_color": "#222721"
       }
     },
     "main": {
       "type": "boka-starter-landing-page",
       "settings": {
+        "hide_theme_header": true,
         "product": "best-of-boka-starter-kit",
         "subscription_only": false,
         "show_quantity_selector": false,
