@@ -2240,19 +2240,6 @@
   {% endif %}
 
  <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
-  <div
-      class="boka-lp__promo-heading boka-lp__promo-banner"
-      {% if section.settings.promo_banner_image != blank %}
-        style="--promo-banner-image: url('{{ section.settings.promo_banner_image | image_url: width: 2400 }}');"
-      {% endif %}
-    >
-      <div class="boka-lp__promo-banner-content">
-        <p class="boka-lp__promo-eyebrow">NEW CUSTOMER OFFER - 50% Off</p>
-        <h2>Complete Oral Routine for $24.99 + Free Shipping</h2>
-        <p>Fluoride-Free n-Ha | Complete Routine | Easy Refills</p>
-      </div>
-    </div>
-
   <div class="boka-lp__hero-full-bleed">
     <div class="boka-lp__proof-bar-section" id="boka-proof-{{ section.id }}">
       <div class="boka-lp__proof-bar" aria-label="Boka starter kit proof points">
