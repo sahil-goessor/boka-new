@@ -96,32 +96,10 @@
             "link_label": "Read more",
             "link": "https://www.harpersbazaar.com/beauty/health/g28565198/best-natural-toothpaste/#"
           }
-        },
-        "column_GqXYCt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/oprahdaily.png",
-            "title": "",
-            "text": "<p>\"Fluoride is swapped with nano-hydroxyapatite to remineralize and fortify teeth.\"</p>",
-            "link_label": "Read more",
-            "link": "https://www.oprahdaily.com/beauty/g44641213/best-whitening-toothpaste/"
-          }
-        },
-        "column_nY4NAg": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/the-everygirl-logo-sm.png",
-            "title": "",
-            "text": "<p>\"Brushing with hydroxyapatite toothpaste strengthens, remineralizes, and protects tooth enamel without the use of fluoride.\"</p>",
-            "link_label": "Read more",
-            "link": "https://theeverygirl.com/oral-care-for-gut-health/"
-          }
         }
       },
       "block_order": [
-        "column_JUdfNa",
-        "column_GqXYCt",
-        "column_nY4NAg"
+        "column_JUdfNa"
       ],
       "settings": {
         "title": "",
@@ -416,26 +394,15 @@
           "settings": {
             "image": "shopify://shop_images/oprahdaily.png",
             "title": "",
-            "text": "<p>\"Fluoride is swapped with nano-hydroxyapatite to remineralize and fortify teeth.\"</p>",
+            "text": "<p>\"Fluoride is swapped with nano-hydroxyapatite\"</p>",
             "link_label": "Read more",
             "link": "https://www.oprahdaily.com/beauty/g44641213/best-whitening-toothpaste/"
-          }
-        },
-        "column_HcT9MB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/the-everygirl-logo-sm.png",
-            "title": "",
-            "text": "<p>\"Brushing with hydroxyapatite toothpaste strengthens, remineralizes, and protects tooth enamel without the use of fluoride.\"</p>",
-            "link_label": "Read more",
-            "link": "https://theeverygirl.com/oral-care-for-gut-health/"
           }
         }
       },
       "block_order": [
         "column_dLLfQ8",
-        "column_tcyVmN",
-        "column_HcT9MB"
+        "column_tcyVmN"
       ],
       "disabled": true,
       "settings": {
