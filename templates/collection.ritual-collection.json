@@ -30,7 +30,6 @@
             "image_mobile": "shopify://shop_images/Collection_Banner_Desktop.webp",
             "heading": "Advanced Essentials Collection",
             "image_link": "",
-            "heading_size": "h1",
             "heading_tag": "h1",
             "subheading": "Get 25% off—no cap. Ends July 15! <b> USE DISCOUNT CODE:  25OFFJULY </b>",
             "button_label": "",
@@ -276,7 +275,7 @@
           "settings": {
             "image": "shopify://shop_images/Icon_4_Enhances_Immunity_caf4597e-fd5a-40b1-9079-3e4c8b765b96.png",
             "title": "<strong>Supports Healthy Teeth & Gums</strong>",
-            "text": "<p>Helps maintain strong teeth and healthy gums, supporting overall oral cavity health for a cleaner, fresher mouth.</p>",
+            "text": "<p>Helps maintain strong teeth and healthy gums, supporting overall oral health for a cleaner, fresher mouth.</p>",
             "link_label": "",
             "link": ""
           }
