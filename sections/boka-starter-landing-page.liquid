@@ -2120,25 +2120,22 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__included-image {
-      width: 148px;
-      height: 148px;
-      border-radius: 18px;
-      background: transparent !important;
-      border: 0px !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__included-image img {
-      width: 132px;
-      height: 132px;
-      max-width: 132px;
-      max-height: 132px;
-      object-fit: contain;
-      display: block;
-    }
+#boka-starter-lp-{{ section.id }} .boka-lp__included-image img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
 
     #boka-starter-lp-{{ section.id }} .boka-lp__included-image-placeholder {
       width: 132px;
