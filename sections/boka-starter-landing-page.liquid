@@ -1670,9 +1670,6 @@
                   {
                     "id": {{ variant.id | json }},
                     "title": {{ variant.title | json }},
-                    "available": {{ variant.available | json }},
-                    "price": {{ variant.price | json }},
-                    "compare_at_price": {{ variant.compare_at_price | json }},
                     "image": {% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 | json }}{% else %}null{% endif %},
                     "selling_plan_allocations": [
                       {% for allocation in variant.selling_plan_allocations %}
