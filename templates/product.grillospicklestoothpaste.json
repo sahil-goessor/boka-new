@@ -90,7 +90,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nzEbfQ": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "publishId"
           }
@@ -371,23 +371,13 @@
             "row_content": "<p>Children should use a pea-sized amount of toothpaste on their toothbrush.</p>",
             "page": ""
           }
-        },
-        "cd20ed8e-791e-49a7-9155-ba99781b83fb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is nano-hydroxyapatite (n-Ha) and how does it benefit my teeth?",
-            "icon": "none",
-            "row_content": "<p>Nano-hydroxyapatite is a mineral that helps to remineralize tooth enamel and make it stronger. It also helps in reducing tooth sensitivity and promoting overall oral health.</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "template--15177180872747__019b08d2-dd76-471e-a326-c20affb21ea7-collapsible_row-1",
         "template--15177180872747__019b08d2-dd76-471e-a326-c20affb21ea7-collapsible_row-2",
         "template--15177180872747__019b08d2-dd76-471e-a326-c20affb21ea7-collapsible_row-3",
-        "template--15177180872747__019b08d2-dd76-471e-a326-c20affb21ea7-collapsible_row-4",
-        "cd20ed8e-791e-49a7-9155-ba99781b83fb"
+        "template--15177180872747__019b08d2-dd76-471e-a326-c20affb21ea7-collapsible_row-4"
       ],
       "disabled": true,
       "settings": {
