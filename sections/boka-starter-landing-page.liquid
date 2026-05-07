@@ -1088,6 +1088,75 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__faq-item.is-open .boka-lp__faq-content { display: block; }
     #boka-starter-lp-{{ section.id }} .boka-lp__faq-item.is-open .boka-lp__faq-btn span { transform: rotate(45deg); }
 
+
+
+    /* Boka proof bar — refined social proof/value metrics */
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-bar-section {
+      background: var(--boka-white);
+      padding: 42px 5% 54px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-bar {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: rgba(250, 250, 245, 0.92);
+      border: 2px solid var(--boka-charcoal);
+      border-radius: 22px;
+      box-shadow: 6px 6px 0 var(--boka-green-mid);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      overflow: hidden;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-stat {
+      padding: 24px 18px;
+      text-align: center;
+      border-right: 1px solid var(--boka-stone);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-stat:last-child {
+      border-right: 0;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-number {
+      display: block;
+      color: var(--boka-charcoal);
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-label {
+      color: var(--boka-gray);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__atc-subtext {
+      margin-top: 10px;
+      text-align: center;
+      color: var(--boka-gray);
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__atc-subtext strong {
+      color: var(--boka-charcoal);
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile {
+      display: none;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop {
+      display: block;
+    }
+
     #boka-starter-lp-{{ section.id }} .boka-lp__bottom-cta { text-align: center; }
     #boka-starter-lp-{{ section.id }} .boka-lp__bottom-cta .boka-lp__section-title { margin-left: auto; margin-right: auto; color: var(--boka-cream); }
     #boka-starter-lp-{{ section.id }} .boka-lp__bottom-cta .boka-lp__section-copy { margin-left: auto; margin-right: auto; color: rgba(250,250,245,.76); }
@@ -1408,16 +1477,6 @@
     }
 
 
-
-    /* Desktop/mobile placement for the What's Inside section */
-    #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile {
-      display: none;
-    }
-
-    #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop {
-      display: block;
-    }
-
     @media (max-width: 980px) {
       #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop {
         display: none;
@@ -1435,8 +1494,7 @@
       }
 
       #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile .boka-lp__section-title {
-        font-size: clamp(26px, 8vw, 34px);
-        line-height: 1.05;
+        font-size: clamp(26px, 8vw, 36px);
         margin-bottom: 12px;
       }
 
@@ -1446,25 +1504,48 @@
         line-height: 1.55;
       }
 
-      #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile .boka-lp__cards-4 {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
       #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile .boka-lp__info-card {
         padding: 18px;
-        border-radius: 18px;
-        box-shadow: 4px 4px 0 var(--boka-green-mid);
-      }
-
-      #boka-starter-lp-{{ section.id }} .boka-lp__intro-card {
-        order: 1;
+        box-shadow: 3px 3px 0 rgba(191,214,165,.9);
       }
 
       #boka-starter-lp-{{ section.id }} .boka-lp__buybox-inner {
         order: 3;
       }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-bar-section {
+        padding: 22px 16px 46px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-radius: 18px;
+        box-shadow: 4px 4px 0 var(--boka-green-mid);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-stat {
+        padding: 18px 12px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-stat:nth-child(1),
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-stat:nth-child(2) {
+        border-bottom: 1px solid var(--boka-stone);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-number {
+        font-size: 28px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__proof-label {
+        font-size: 12px;
+      }
     }
+
+
   </style>
 
   {% if section.settings.show_announcement %}
@@ -1552,19 +1633,20 @@
         </ul>
       </div>
 
-      <div class="boka-lp__section boka-lp__section--white boka-lp__included-mobile" id="boka-included-mobile-{{ section.id }}">
-          <div class="boka-lp__wrap">
-            <p class="boka-lp__eyebrow">What’s inside</p>
-            <h2 class="boka-lp__section-title">Everything you need to make your daily routine feel easy.</h2>
-            <p class="boka-lp__section-copy">Your first box brings the essentials together in one simple system. Adjust these cards to match the exact kit contents.</p>
-            <div class="boka-lp__cards-4">
-              <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>n-Ha Toothpaste</strong><p>Fluoride-free toothpaste designed to support everyday enamel care and a fresh, balanced mouthfeel.</p></div>
-              <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>Classic Brush</strong><p>A soft, simple brush that makes your two minutes feel more considered.</p></div>
-              <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>Boka Floss</strong><p>Smooth floss made to help the full routine feel less like a chore.</p></div>
-              <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>Tongue Cleaner</strong><p>A small finishing step for a cleaner, fresher feeling after brushing.</p></div>
-            </div>
-          </div>
-        </div>
+      
+<div class="boka-lp__section boka-lp__section--white boka-lp__included-mobile" id="boka-included-mobile-{{ section.id }}">
+    <div class="boka-lp__wrap">
+      <p class="boka-lp__eyebrow">What’s inside</p>
+      <h2 class="boka-lp__section-title">Everything you need to make your daily routine feel easy.</h2>
+      <p class="boka-lp__section-copy">Your first box brings the essentials together in one simple system. Adjust these cards to match the exact kit contents.</p>
+      <div class="boka-lp__cards-4">
+        <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>n-Ha Toothpaste</strong><p>Fluoride-free toothpaste designed to support everyday enamel care and a fresh, balanced mouthfeel.</p></div>
+        <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>Classic Brush</strong><p>A soft, simple brush that makes your two minutes feel more considered.</p></div>
+        <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>Boka Floss</strong><p>Smooth floss made to help the full routine feel less like a chore.</p></div>
+        <div class="boka-lp__info-card"><div class="boka-lp__info-icon"></div><strong>Tongue Cleaner</strong><p>A small finishing step for a cleaner, fresher feeling after brushing.</p></div>
+      </div>
+    </div>
+  </div>
 
       <div class="boka-lp__buybox-inner">
         {% if lp_product != blank %}
@@ -1669,6 +1751,7 @@
             </div>
 
             <button type="submit" class="boka-lp__atc" data-boka-atc>{{ section.settings.atc_text }}</button>
+            <p class="boka-lp__atc-subtext"><strong>Free first-order shipping</strong> · 30-day guarantee · Pause anytime</p>
             <p class="boka-lp__message" data-boka-message></p>
           </form>
         {% else %}
@@ -1678,6 +1761,28 @@
 
     </div>
   </div>
+
+  <div class="boka-lp__proof-bar-section" id="boka-proof-{{ section.id }}">
+    <div class="boka-lp__proof-bar" aria-label="Boka starter kit proof points">
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">1M+</span>
+        <span class="boka-lp__proof-label">Happy mouths</span>
+      </div>
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">4.8★</span>
+        <span class="boka-lp__proof-label">Average rating</span>
+      </div>
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">{{ section.settings.offer_discount }}</span>
+        <span class="boka-lp__proof-label">First-order savings</span>
+      </div>
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">3 mo</span>
+        <span class="boka-lp__proof-label">Flexible refills</span>
+      </div>
+    </div>
+  </div>
+
  <div class="boka-lp__section boka-lp__section--white boka-lp__included-desktop" id="boka-included-{{ section.id }}">
     <div class="boka-lp__wrap">
       <p class="boka-lp__eyebrow">What’s inside</p>
