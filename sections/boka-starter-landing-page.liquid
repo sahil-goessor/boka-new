@@ -710,24 +710,27 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-card:not(.has-badge) .boka-lp__plan-head { padding-right: 0; }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-title {
-      font-size: 20px;
-      line-height: 1.25;
-      font-weight: 900;
-    }
+        font-size: 21px;
+        line-height: 1.15;
+        font-weight: 900;
+        letter-spacing: -.025em;
+      }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__price {
-      font-size: 18px;
-      line-height: 1.1;
-      font-weight: 900;
-      white-space: nowrap;
-    }
+      #boka-starter-lp-{{ section.id }} .boka-lp__price {
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 900;
+        white-space: nowrap;
+      }
 
-    #boka-starter-lp-{{ section.id }} .boka-lp__compare-price {
-      margin-left: 6px;
-      color: var(--boka-gray);
-      font-size: 13px;
-      text-decoration: line-through;
-    }
+      #boka-starter-lp-{{ section.id }} .boka-lp__compare-price {
+        margin-right: 6px;
+        margin-left: 0;
+        color: var(--boka-gray);
+        font-size: 13px;
+        text-decoration: line-through;
+        font-weight: 800;
+      }
 
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-features {
@@ -1348,10 +1351,11 @@
       }
 
       #boka-starter-lp-{{ section.id }} .boka-lp__plan-title {
-        font-size: 21px;
-        line-height: 1.15;
-        font-weight: 900;
-        letter-spacing: -.025em;
+        display: block;
+        width: 100%;
+        max-width: none;
+        font-size: 28px;
+        line-height: 1.08;
       }
 
       #boka-starter-lp-{{ section.id }} .boka-lp__plan-head > span:last-child {
