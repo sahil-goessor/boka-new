@@ -1757,20 +1757,7 @@
 
  <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
   <div class="boka-lp__promo-heading boka-lp__promo-banner">
-    {% if section.settings.promo_banner_image != blank %}
-      <div class="boka-lp__promo-banner-image-wrap">
-        {{
-          section.settings.promo_banner_image
-          | image_url: width: 2400
-          | image_tag:
-            loading: 'eager',
-            fetchpriority: 'high',
-            class: 'boka-lp__promo-banner-image',
-            alt: section.settings.promo_banner_heading
-        }}
-      </div>
-    {% endif %}
-
+  <div class="boka-lp__promo-banner-main">
     <div class="boka-lp__promo-banner-content">
       {% if section.settings.promo_banner_eyebrow != blank %}
         <p class="boka-lp__promo-eyebrow">{{ section.settings.promo_banner_eyebrow }}</p>
@@ -1793,7 +1780,43 @@
         </a>
       {% endif %}
     </div>
+
+    {% if section.settings.promo_banner_image != blank %}
+      <div class="boka-lp__promo-banner-image-wrap">
+        {{
+          section.settings.promo_banner_image
+          | image_url: width: 2400
+          | image_tag:
+            loading: 'eager',
+            fetchpriority: 'high',
+            class: 'boka-lp__promo-banner-image',
+            alt: section.settings.promo_banner_heading
+        }}
+      </div>
+    {% endif %}
   </div>
+
+  <div class="boka-lp__proof-bar-section boka-lp__proof-bar-section--banner" id="boka-proof-{{ section.id }}">
+    <div class="boka-lp__proof-bar" aria-label="Boka starter kit proof points">
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">1M+</span>
+        <span class="boka-lp__proof-label">Happy mouths</span>
+      </div>
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">4.8★</span>
+        <span class="boka-lp__proof-label">Average rating</span>
+      </div>
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">{{ section.settings.offer_discount }}</span>
+        <span class="boka-lp__proof-label">First-order savings</span>
+      </div>
+      <div class="boka-lp__proof-stat">
+        <span class="boka-lp__proof-number">3 mo</span>
+        <span class="boka-lp__proof-label">Flexible refills</span>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div class="boka-lp__hero-full-bleed">
     <div class="boka-lp__proof-bar-section" id="boka-proof-{{ section.id }}">
