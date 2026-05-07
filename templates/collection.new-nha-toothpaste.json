@@ -151,7 +151,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_EyJDh8": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "n0c9qqietla5c"
           }
@@ -726,7 +726,7 @@
         "heading_size": "h1",
         "heading_tag": "h2",
         "heading_alignment": "left",
-        "description": "This particle is an established ingredient in oral care due to its benefits for oral health. Boka fluoride-alternative toothpaste is a unique and effective way to care for your teeth. In this FAQ section, we will answer some of the most common questions about n-Ha toothpaste, providing the latest clinical insights on how hydroxyapatite toothpaste can help prevent cavities while keeping plaque in check.",
+        "description": "This particle is an established ingredient in oral care due to its benefits for oral health. Boka fluoride-alternative toothpaste is a unique and effective way to care for your teeth. In this FAQ section, we will answer some of the most common questions about n-Ha toothpaste.",
         "layout": "none",
         "color_scheme": "background-1",
         "container_color_scheme": "background-2",
