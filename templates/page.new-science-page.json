@@ -611,16 +611,6 @@
     "multicolumn_VAUgL6": {
       "type": "multicolumn",
       "blocks": {
-        "column_eWeWiz": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "★★★★★",
-            "text": "<p>“Nano-hydroxyapatite is a revolutionary material with a wide use in dentistry. With regard to restorative and preventive ﬁelds, nano-hydroxyapatite has remarkable remineralizing effects on initial lesions of enamel, certainly higher than traditional ﬂuorides used until now for this purpose.\"<br/><br/><em>-Erlind Pepla, MD, et al</em></p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_mQBzw8": {
           "type": "column",
           "settings": {
@@ -643,7 +633,6 @@
         }
       },
       "block_order": [
-        "column_eWeWiz",
         "column_mQBzw8",
         "column_iaLMwM"
       ],

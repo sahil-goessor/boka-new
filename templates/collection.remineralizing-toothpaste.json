@@ -134,21 +134,11 @@
             "row_content": "<p>Brush twice a day with a pea-sized amount, focusing on thorough, two-minute sessions. Pair with regular flossing and healthy nutrition to maximize enamel protection and maintain a bright smile.</p>",
             "page": ""
           }
-        },
-        "613af9d2-de07-48e6-9e79-31740c728cae": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is this toothpaste safe for daily use?",
-            "icon": "none",
-            "row_content": "<p>The formula is free of harsh additives yet rich in remineralizing agents, making it gentle enough for the whole family—even children learning to care for their teeth.</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-3",
-        "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-4",
-        "613af9d2-de07-48e6-9e79-31740c728cae"
+        "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-4"
       ],
       "settings": {
         "caption": "",
