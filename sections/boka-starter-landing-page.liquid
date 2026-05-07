@@ -2214,6 +2214,13 @@
       }
     }
 
+    html {
+  scroll-behavior: smooth;
+}
+
+#boka-subscription-{{ section.id }} {
+  scroll-margin-top: 120px;
+}
 </style>
 
   {% if section.settings.show_announcement %}
@@ -2240,11 +2247,11 @@
 
       {% if section.settings.promo_banner_button_text != blank %}
         <a
-          class="boka-lp__promo-banner-button"
-          href="{% if section.settings.promo_banner_button_link != blank %}{{ section.settings.promo_banner_button_link }}{% else %}#boka-buybox-{{ section.id }}{% endif %}"
-        >
-          {{ section.settings.promo_banner_button_text }}
-        </a>
+  class="boka-lp__promo-banner-button"
+  href="#boka-subscription-{{ section.id }}"
+>
+  {{ section.settings.promo_banner_button_text }}
+</a>
       {% endif %}
     </div>
 
