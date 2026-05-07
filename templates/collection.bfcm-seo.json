@@ -400,15 +400,6 @@
             "page": ""
           }
         },
-        "collapsible_row_aJYYmM": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What Are Your Key Product Features?",
-            "icon": "none",
-            "row_content": "<p>Fluoride-free, paraben-free, SLS-free, artificial flavor-free, and free of endocrine disruptors. Oh, and safe to swallow. Because what you put in your mouth matters.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_cKabND": {
           "type": "collapsible_row",
           "settings": {
@@ -466,7 +457,6 @@
       },
       "block_order": [
         "collapsible_row_GGcFRf",
-        "collapsible_row_aJYYmM",
         "collapsible_row_cKabND",
         "collapsible_row_EycrT9",
         "collapsible_row_94KUp6",
