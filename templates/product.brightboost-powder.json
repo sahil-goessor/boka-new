@@ -285,18 +285,6 @@
             "link": ""
           }
         },
-        "column_Wch8RT": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Nano-Hydroxyapatite_n-Ha.jpg",
-            "image_link": "",
-            "title": "<strong>Nano-Hydroxyapatite</strong>",
-            "text": "<p>Helps remineralize teeth and supports enamel health.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_68Mc7p": {
           "type": "column",
           "settings": {
@@ -322,7 +310,6 @@
       },
       "block_order": [
         "column_aLh4Wp",
-        "column_Wch8RT",
         "column_68Mc7p",
         "column_GefQYG"
       ],
