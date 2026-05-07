@@ -126,15 +126,6 @@
             "page": ""
           }
         },
-        "63654bb1-5b66-4184-b74e-96afc7dd589d": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does Boka remineralizing toothpaste work?",
-            "icon": "none",
-            "row_content": "<p>Our toothpaste works by harnessing the power of nano-hydroxyapatite (n-Ha) to actively support the remineralization and fortification of tooth enamel. Nano-hydroxyapatite is a biomimetic mineral that closely resembles the natural composition of tooth enamel. We sweeten with xylitol to discourage cavity-causing bacteria and keep your mouth feeling fresh.</p>",
-            "page": ""
-          }
-        },
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -192,7 +183,6 @@
       },
       "block_order": [
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-1",
-        "63654bb1-5b66-4184-b74e-96afc7dd589d",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-2",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-3",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-4",
