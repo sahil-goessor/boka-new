@@ -660,12 +660,17 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
-  position: relative;
-  width: 100%;
-  border-radius: 18px;
-  padding: 17px;
-  text-align: left;
-}
+      position: relative;
+      width: 100%;
+      border: 1.5px solid var(--boka-charcoal);
+      border-radius: 22px;
+      text-align: left;
+      background: var(--boka-cream);
+      color: var(--boka-charcoal);
+      cursor: pointer;
+      transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
+      overflow: hidden;
+    }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-badge {
       position: absolute;
