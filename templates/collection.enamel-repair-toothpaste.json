@@ -64,33 +64,6 @@
     "collapsible_content_GaTyNb": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_GGcFRf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is enamel building toothpaste?",
-            "icon": "none",
-            "row_content": "<p>Enamel building or repairing toothpaste is a specially formulated toothpaste designed to strengthen and remineralize tooth enamel, the protective outer layer of the teeth. These products often contain mineral-rich ingredients that actively rebuild and protect enamel from further damage caused by acid and daily wear.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_aJYYmM": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does nano-hydroxyapatite (n-Ha) contribute to enamel building?",
-            "icon": "none",
-            "row_content": "<p>n-Ha aids intensive enamel repair by closely mimicking natural calcium-based enamel composition, promoting deep remineralization, and filling microscopic defects. It offers a gentle, non-toxic solution to protect teeth, relieve sensitivity, and improve enamel strength without the risks associated with fluoride. This is why many dentists now recommend it as a trusted alternative for daily enamel protection and oral health.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_EycrT9": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does nano-hydroxyapatite (n-Ha) differ from fluoride in toothpaste?",
-            "icon": "none",
-            "row_content": "<p>Both n-Ha and fluoride contribute to the remineralization of teeth. However, n-Ha is unique in that it mimics the natural composition of teeth. Unlike fluoride, which may only harden the surface, n-Ha helps reverse early signs of tooth decay, offering internal protection and relief for sensitive teeth. Additionally, n-Ha toothpaste is fluoride-free, making it safe to swallow and free from toxins associated with fluoride formulations. This makes it an ideal toothpaste for strengthening enamel.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_94KUp6": {
           "type": "collapsible_row",
           "settings": {
@@ -111,9 +84,6 @@
         }
       },
       "block_order": [
-        "collapsible_row_GGcFRf",
-        "collapsible_row_aJYYmM",
-        "collapsible_row_EycrT9",
         "collapsible_row_94KUp6",
         "collapsible_row_6bQrba"
       ],
