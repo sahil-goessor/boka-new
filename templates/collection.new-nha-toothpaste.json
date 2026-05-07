@@ -636,15 +636,6 @@
     "a63323b9-7c26-46d5-9a1d-5b2882ad974c": {
       "type": "collapsible-content",
       "blocks": {
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does this product really work?",
-            "icon": "none",
-            "row_content": "<p>Yes. Multiple clinical studies have found that nano hydroxyapatite binds to the tooth surface, filling imperfections and creating a smooth shield that resists plaque acids. </p>",
-            "page": ""
-          }
-        },
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -710,7 +701,6 @@
         }
       },
       "block_order": [
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-1",
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-2",
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-4",
         "d5bd3503-d078-48f2-b735-2c8c183c85ed",
