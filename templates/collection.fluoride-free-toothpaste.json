@@ -205,16 +205,6 @@
             "page": ""
           }
         },
-        "collapsible_row_zjiWUG": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "Does fluoride-free toothpaste really help prevent cavities?",
-            "icon": "none",
-            "row_content": "<p>When enriched with n-Ha and xylitol, a fluoride-free paste can effectively remineralize early lesions and curb acid-producing bacteria, helping to prevent cavities in everyday situations—especially when paired with regular dental check-ups and flossing.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_QGFF7Q": {
           "type": "collapsible_row",
           "disabled": true,
@@ -236,7 +226,6 @@
         "c3d408f4-d548-4a4a-b92a-37014203b542",
         "4fb36c95-3c2d-4a32-9dc9-2d6ddb220cb2",
         "9f047394-d837-4465-a41d-5df6d69563cb",
-        "collapsible_row_zjiWUG",
         "collapsible_row_QGFF7Q"
       ],
       "settings": {
