@@ -156,15 +156,6 @@
             "page": ""
           }
         },
-        "collapsible_row_hi9Hph": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do flavored toothpastes still offer whitening and cavity protection?",
-            "icon": "none",
-            "row_content": "<p>Yes. Although flavor is front and center, Boka’s formulas feature n-Ha to support teeth whitening by lifting surface stains, plus xylitol to help fight plaque and protect against cavities. In short, you get great taste without sacrificing dental health.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_V87bdC": {
           "type": "collapsible_row",
           "settings": {
@@ -180,7 +171,6 @@
         "63654bb1-5b66-4184-b74e-96afc7dd589d",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-3",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-4",
-        "collapsible_row_hi9Hph",
         "collapsible_row_V87bdC"
       ],
       "settings": {
