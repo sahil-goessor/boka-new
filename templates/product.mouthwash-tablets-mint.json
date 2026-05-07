@@ -171,18 +171,10 @@
             "heading_size": "h1",
             "heading_tag": "h2"
           }
-        },
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nano-hydroxyapatite (n-Ha) is a form of calcium that makes up 97% of your tooth enamel and 70% of your dentin. Because it comprises the primary foundation of teeth and bones, it's restorative for your smile.</p><p>First used by NASA astronauts in space, non-toxic n-Ha helps remineralize weak enamel and is safe to swallow in amounts used when brushing. (If it’s good enough for space missions, it’s good enough for us.)</p>",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-0",
-        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-1"
+        "template--15144309456939__85272ee1-d7ec-498c-985b-6761fcc6f38f-1684401872db8a5321-0"
       ],
       "disabled": true,
       "settings": {
