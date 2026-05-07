@@ -793,7 +793,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
@@ -1331,7 +1331,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
@@ -1439,7 +1439,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How often should I use Boka Ela Mint Toothpaste?",
-            "row_content": "<p>For best results, we recommend brushing for two minutes, twice daily. Safe for daily use, this routine supports enamel care and overall oral care.</p>",
+            "row_content": "<p>For best results, we recommend brushing for two minutes, twice daily. Safe for daily use, this routine supports overall oral care.</p>",
             "page": ""
           }
         },
