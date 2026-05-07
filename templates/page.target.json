@@ -59,7 +59,6 @@
             "image_mobile": "shopify://shop_images/Boka_x_Target_Mobile_1000x800_0a5d0b9c-70a9-4d25-b466-c555a268c455.png",
             "heading": "Boka Hits Target Shelves - A First of Its Kind!",
             "image_link": "https://www.target.com/b/boka/-/N-1cpvx",
-            "heading_size": "h1",
             "heading_tag": "default",
             "subheading": "Our best-selling fluoride-free toothpaste is making history as the first-ever n-Ha toothpaste available at Target.",
             "button_label": "FIND YOUR BOKA HERE",
@@ -153,7 +152,7 @@
         "text_yAPidt": {
           "type": "text",
           "settings": {
-            "text": "<p>Now available in a retail-exclusive, travel-friendly 3.4oz tube, Ela Mint Nano-Hydroxyapatite Toothpaste is our fluoride-free favorite that helps remineralize teeth while keeping your breath fresh and minty.</p>",
+            "text": "<p>Now available in a retail-exclusive, travel-friendly 3.4oz tube, Ela Mint Nano-Hydroxyapatite Toothpaste is our fluoride-free favorite that keeps your breath fresh and minty.</p>",
             "text_style": "body"
           }
         },
