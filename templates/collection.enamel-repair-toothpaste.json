@@ -82,15 +82,6 @@
             "page": ""
           }
         },
-        "collapsible_row_cKabND": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How often should I use this toothpaste for optimal results?",
-            "icon": "none",
-            "row_content": "<p>For optimal results, it is recommended to use this enamel rebuild toothpaste powered by n-Ha twice a day, brushing thoroughly in the morning and before bedtime. Consistent use helps prevent cavities, protect against acid erosion, and maintain extra fresh breath. Leaving the toothpaste on your teeth after brushing (not rinsing) is a pro tip for enhanced effectiveness.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_EycrT9": {
           "type": "collapsible_row",
           "settings": {
@@ -122,7 +113,6 @@
       "block_order": [
         "collapsible_row_GGcFRf",
         "collapsible_row_aJYYmM",
-        "collapsible_row_cKabND",
         "collapsible_row_EycrT9",
         "collapsible_row_94KUp6",
         "collapsible_row_6bQrba"
