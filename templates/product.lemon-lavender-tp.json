@@ -1470,16 +1470,6 @@
     "6bdcc206-7323-4af2-8b01-54a41f8ecd31": {
       "type": "collapsible-content",
       "blocks": {
-        "template--15159058858027__6bdcc206-7323-4af2-8b01-54a41f8ecd31-collapsible_row-1": {
-          "type": "collapsible_row",
-          "disabled": true,
-          "settings": {
-            "heading": "How does Lemon Lavender n-Ha Toothpaste help with tooth sensitivity?",
-            "icon": "none",
-            "row_content": "<p>Our toothpaste contains nano-hydroxyapatite (n-Ha), which aids in closing enamel holes that can cause sensitivity. Regular use helps fortify teeth, reducing sensitivity and promoting overall oral health.</p>",
-            "page": ""
-          }
-        },
         "template--15159058858027__6bdcc206-7323-4af2-8b01-54a41f8ecd31-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -1509,7 +1499,6 @@
         }
       },
       "block_order": [
-        "template--15159058858027__6bdcc206-7323-4af2-8b01-54a41f8ecd31-collapsible_row-1",
         "template--15159058858027__6bdcc206-7323-4af2-8b01-54a41f8ecd31-collapsible_row-2",
         "template--15159058858027__6bdcc206-7323-4af2-8b01-54a41f8ecd31-collapsible_row-3",
         "template--15159058858027__6bdcc206-7323-4af2-8b01-54a41f8ecd31-collapsible_row-4"
