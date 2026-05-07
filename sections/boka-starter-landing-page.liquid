@@ -1361,7 +1361,11 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__wrap {
-  background: transparent;
+      max-width: 1180px;
+      background: linear-gradient( 180deg, var(--boka-green-light) 0%,rgba(230, 244, 212, 0.62) 100%);
+      border: 1px solid var(--boka-green-mid);
+      border-radius: 34px;
+      padding: 42px;
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__info-card {
