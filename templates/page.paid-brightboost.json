@@ -657,7 +657,7 @@
             "heading_1": "<strong>Stain-targeting PAP</strong>",
             "icon_2": "return",
             "image_2": "shopify://shop_images/No_Artificial_Colors.png",
-            "heading_2": "<strong>Enamel-supporting nano-hydroxyapatite</strong>",
+            "heading_2": "<strong>nano-hydroxyapatite</strong>",
             "padding_top": 0,
             "padding_bottom": 0
           }
@@ -855,7 +855,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "er9t0j291u0hn"
           }
