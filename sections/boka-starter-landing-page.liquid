@@ -2295,6 +2295,11 @@
                     <span class="boka-lp__plan-head">
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
                       <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
+                      <ul class="boka-lp__plan-features">
+                    <li>{{ section.settings.subscription_feature_1 }}</li>
+                    <li>{{ section.settings.subscription_feature_2 }}</li>
+                    <li>{{ section.settings.subscription_feature_3 }}</li>
+                  </ul>
                     </span>
                   </button>
                 {% endunless %}
