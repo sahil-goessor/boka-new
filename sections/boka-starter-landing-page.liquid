@@ -2002,7 +2002,88 @@
       }
     }
 
-  </style>
+  
+
+    /* ==========================================================
+       Final override: show desktop What's Inside section on mobile
+       directly after the hero banner, and hide the old mobile duplicate.
+       ========================================================== */
+
+    @media (max-width: 980px) {
+      #boka-starter-lp-{{ section.id }} .boka-lp__promo-banner {
+        order: 1;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__hero-full-bleed {
+        order: 2;
+        grid-column: 1 / -1;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop,
+      #boka-starter-lp-{{ section.id }} .boka-lp__hero-full-bleed .boka-lp__included-desktop {
+        display: block !important;
+        width: 100%;
+        padding: 32px 16px !important;
+        background: var(--boka-white);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__wrap,
+      #boka-starter-lp-{{ section.id }} .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__wrap {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        padding: 22px 18px;
+        border-radius: 26px;
+        background: linear-gradient(
+          180deg,
+          var(--boka-green-light) 0%,
+          rgba(230, 244, 212, .62) 100%
+        );
+        border: 1px solid var(--boka-green-mid);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__section-title {
+        font-size: clamp(26px, 8vw, 36px);
+        margin-bottom: 12px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__section-copy {
+        margin-bottom: 18px;
+        font-size: 14.5px;
+        line-height: 1.55;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__cards-4 {
+        grid-template-columns: 1fr;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-desktop .boka-lp__info-card {
+        padding: 18px;
+        background: rgba(255, 255, 255, .84);
+        border: 1px solid rgba(34, 39, 33, .08);
+        box-shadow: none;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile {
+        display: none !important;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
+        order: 3;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guarantees {
+        order: 4;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__buybox {
+        order: 5;
+      }
+    }
+</style>
 
   {% if section.settings.show_announcement %}
     <div class="boka-lp__topbar">
