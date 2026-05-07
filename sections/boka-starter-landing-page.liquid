@@ -440,13 +440,13 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__product-summary-card {
-      background: rgba(255,255,255,.92);
-      border: 1px solid var(--boka-stone);
-      border-radius: 26px;
-      padding: 28px;
-      margin-top: 14px;
-      box-shadow: 0 1px 0 rgba(34,39,33,.04);
-    }
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--boka-stone);
+  border-radius: 26px;
+  padding: 28px;
+  margin-top: 14px;
+  box-shadow: 0 1px 0 rgba(34,39,33,.04);
+}
 
     #boka-starter-lp-{{ section.id }} .boka-lp__product-title {
       margin: 0;
@@ -1632,6 +1632,477 @@
 
       #boka-starter-lp-{{ section.id }} .boka-lp__proof-label {
         font-size: 12px;
+      }
+    }
+
+
+  
+
+    /* ============================================================
+       Boka brand-refined overrides
+       Cleaner, softer, more premium landing page styling.
+       These rules intentionally live at the end so they override
+       earlier duplicate styles in this CSS file.
+    ============================================================ */
+
+    #boka-starter-lp-{{ section.id }} {
+      --boka-border-soft: 1px solid var(--boka-stone);
+      --boka-border-medium: 1.5px solid var(--boka-charcoal);
+      --boka-soft-surface: rgba(255, 255, 255, .92);
+      --boka-elevated-shadow: 0 1px 0 rgba(34,39,33,.04);
+      --boka-card-shadow: 5px 5px 0 var(--boka-green-mid);
+      background: linear-gradient(180deg, var(--boka-cream) 0%, #fff 48%, var(--boka-cream) 100%);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__topbar {
+      border-bottom: 1px solid var(--boka-green-mid);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__nav {
+      background: rgba(250,250,245,.95);
+      border-bottom: 1px solid var(--boka-stone);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__nav-cta,
+    #boka-starter-lp-{{ section.id }} .boka-lp__bottom-button {
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
+      border-radius: 999px;
+      letter-spacing: .04em;
+      font-size: 12px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__cart-button {
+      border: 1px solid var(--boka-stone);
+      border-radius: 999px;
+      background: var(--boka-white);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
+      background: var(--boka-soft-surface);
+      border: var(--boka-border-medium);
+      border-radius: 30px;
+      padding: 18px;
+      box-shadow: var(--boka-elevated-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__main-media {
+      background: var(--boka-white);
+      border-radius: 24px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__media-badge {
+      top: 14px;
+      left: 14px;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__thumb {
+      border: 1px solid var(--boka-stone);
+      border-radius: 16px;
+      background: var(--boka-white);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__intro-card {
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      padding: 0;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-summary-card {
+      background: var(--boka-soft-surface);
+      border: var(--boka-border-soft);
+      border-radius: 26px;
+      padding: 28px;
+      margin-top: 14px;
+      box-shadow: var(--boka-elevated-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-title {
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 900;
+      max-width: 12ch;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-title p { margin: 0; }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-description {
+      margin: 18px 0 0;
+      max-width: 560px;
+      color: var(--boka-charcoal);
+      font-size: 16px;
+      line-height: 1.58;
+      font-weight: 650;
+      letter-spacing: -.01em;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist--product {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--boka-stone);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist li {
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist li::before {
+      background: var(--boka-green-light);
+      border: 1px solid var(--boka-green-mid);
+      color: var(--boka-charcoal);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__buybox-inner {
+      background: var(--boka-soft-surface);
+      border: var(--boka-border-soft);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--boka-elevated-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__step { padding: 24px 0; }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__step-title {
+      font-size: 21px;
+      letter-spacing: -.03em;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-grid { gap: 10px; }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card {
+      position: relative;
+      min-height: 74px;
+      border: var(--boka-border-medium);
+      border-radius: 22px;
+      background: rgba(255,255,255,.88);
+      padding: 20px 62px 20px 22px;
+      text-align: left;
+      cursor: pointer;
+      transition: background .2s, transform .2s, box-shadow .2s, border-color .2s;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card:hover:not([disabled]) {
+      transform: translateY(-1px);
+      background: var(--boka-white);
+      box-shadow: 4px 4px 0 var(--boka-green-mid);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active {
+      background: var(--boka-green-light);
+      border-color: var(--boka-charcoal);
+      box-shadow: var(--boka-card-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-title {
+      display: block;
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: 21px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-sub,
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-sub::before,
+    #boka-starter-lp-{{ section.id }} .boka-lp__goal-sub::after {
+      display: none;
+      content: none;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
+      position: relative;
+      width: 100%;
+      border: var(--boka-border-medium);
+      border-radius: 24px;
+      padding: 24px;
+      text-align: left;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: var(--boka-charcoal);
+      cursor: pointer;
+      transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
+      overflow: hidden;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card:hover:not([disabled]) {
+      transform: translateY(-2px);
+      box-shadow: var(--boka-card-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.is-active {
+      background: var(--boka-green-light);
+      border-color: var(--boka-charcoal);
+      box-shadow: 6px 6px 0 var(--boka-green-mid);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.has-badge { padding-top: 44px; }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      width: auto;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      border-radius: 0 20px 0 16px;
+      padding: 10px 14px;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: start;
+      padding-right: 0;
+      margin-bottom: 16px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-head > span:last-child {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-end;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-title {
+      font-size: 24px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      max-width: 10ch;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__price {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      white-space: nowrap;
+      letter-spacing: -.03em;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__compare-price {
+      margin-right: 7px;
+      margin-left: 0;
+      color: var(--boka-gray);
+      font-size: 14px;
+      line-height: 1;
+      text-decoration: line-through;
+      font-weight: 800;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-note {
+      display: block;
+      margin: 0 0 16px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 650;
+      max-width: 34ch;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-features {
+      list-style: none;
+      padding: 16px 0 0;
+      margin: 0;
+      display: grid;
+      gap: 9px;
+      border-top: 1px solid rgba(34,39,33,.12);
+      color: var(--boka-gray);
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__plan-features li::before {
+      content: '✓';
+      color: var(--boka-olive);
+      font-weight: 900;
+      margin-right: 7px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__atc {
+      width: 100%;
+      min-height: 60px;
+      border: var(--boka-border-medium);
+      border-radius: 18px;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      padding: 18px 24px;
+      cursor: pointer;
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__atc:hover:not([disabled]) {
+      background: #111;
+      transform: translateY(-1px);
+      box-shadow: var(--boka-card-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__info-card,
+    #boka-starter-lp-{{ section.id }} .boka-lp__routine-panel {
+      background: var(--boka-soft-surface);
+      border: 1px solid var(--boka-stone);
+      border-radius: 22px;
+      box-shadow: var(--boka-elevated-shadow);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__compare,
+    #boka-starter-lp-{{ section.id }} .boka-lp__faq,
+    #boka-starter-lp-{{ section.id }} .boka-lp__proof-bar {
+      border: 1.5px solid var(--boka-charcoal);
+      box-shadow: var(--boka-card-shadow);
+    }
+
+    @media (max-width: 980px) {
+      #boka-starter-lp-{{ section.id }} .boka-lp__hero { gap: 18px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__gallery-card {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+        padding: 14px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__main-media { border-radius: 20px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__intro-card { padding: 0; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__product-summary-card {
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 12px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__product-title {
+        font-size: clamp(28px, 8vw, 38px);
+        line-height: 1;
+        max-width: 12ch;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__product-description {
+        font-size: 15px;
+        line-height: 1.52;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__checklist--product {
+        margin-top: 18px;
+        padding-top: 16px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__checklist li { font-size: 14.5px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__buybox-inner {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__goal-card {
+        min-height: 68px;
+        padding: 18px 58px 18px 18px;
+        border-radius: 20px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__goal-title { font-size: 20px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active::after {
+        width: 31px;
+        height: 31px;
+        right: 16px;
+        font-size: 16px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.has-badge { padding-top: 46px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-badge {
+        left: auto;
+        right: 0;
+        width: auto;
+        border-radius: 0 18px 0 14px;
+        padding: 9px 12px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-head {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-right: 0;
+        margin-bottom: 14px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-head > span:last-child { justify-content: flex-start; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-title {
+        font-size: 25px;
+        max-width: none;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__price { font-size: 30px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-note {
+        max-width: none;
+        font-size: 14.5px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__plan-features { font-size: 12.5px; }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__atc {
+        border-radius: 16px;
+        min-height: 58px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__included-mobile .boka-lp__info-card {
+        box-shadow: var(--boka-elevated-shadow);
       }
     }
 
