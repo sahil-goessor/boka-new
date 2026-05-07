@@ -431,6 +431,51 @@
 
     #boka-starter-lp-{{ section.id }} .boka-lp__title p { margin: 0; }
 
+    /* Product summary card: title + description only, no price/promo pills near title */
+    #boka-starter-lp-{{ section.id }} .boka-lp__intro-card {
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      padding: 0;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-summary-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--boka-stone);
+      border-radius: 24px;
+      padding: 24px;
+      margin-top: 14px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-title {
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.02;
+      letter-spacing: -0.052em;
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-title p {
+      margin: 0;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__product-description {
+      margin: 16px 0 0;
+      max-width: 620px;
+      color: var(--boka-charcoal);
+      font-size: 16px;
+      line-height: 1.55;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__checklist--product {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--boka-stone);
+    }
+
     #boka-starter-lp-{{ section.id }} .boka-lp__subtitle {
       margin: 0 0 22px;
       color: var(--boka-charcoal);
@@ -1335,6 +1380,31 @@
       #boka-starter-lp-{{ section.id }} .boka-lp__buybox-inner {
         padding: 22px;
       }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__intro-card {
+        padding: 0;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__product-summary-card {
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 12px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__product-title {
+        font-size: clamp(30px, 9vw, 42px);
+        line-height: 1.02;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__product-description {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__checklist--product {
+        margin-top: 18px;
+        padding-top: 16px;
+      }
       #boka-starter-lp-{{ section.id }} .boka-lp__guarantees {
         order: 3;
         margin-top: 0;
@@ -1620,20 +1690,18 @@
 
         <p class="boka-lp__eyebrow">{{ section.settings.eyebrow }}</p>
 
-        <div class="boka-lp__hero-offer-card">
-          <h1 class="boka-lp__title">
-          <span class="boka-lp__title-highlight">{{ section.settings.heading }}</span>
-        </h1>
+        <div class="boka-lp__product-summary-card">
+          <h1 class="boka-lp__product-title">{{ section.settings.heading }}</h1>
+
+          <p class="boka-lp__product-description">{{ section.settings.subheading }}</p>
+
+          <ul class="boka-lp__checklist boka-lp__checklist--product">
+            <li>{{ section.settings.benefit_1 }}</li>
+            <li>{{ section.settings.benefit_2 }}</li>
+            <li>{{ section.settings.benefit_3 }}</li>
+            <li>{{ section.settings.benefit_4 }}</li>
+          </ul>
         </div>
-
-          <p class="boka-lp__subtitle">{{ section.settings.subheading }}</p>
-
-        <ul class="boka-lp__checklist">
-          <li>{{ section.settings.benefit_1 }}</li>
-          <li>{{ section.settings.benefit_2 }}</li>
-          <li>{{ section.settings.benefit_3 }}</li>
-          <li>{{ section.settings.benefit_4 }}</li>
-        </ul>
       </div>
 
       
