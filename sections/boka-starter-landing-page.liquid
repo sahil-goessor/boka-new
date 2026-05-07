@@ -237,27 +237,30 @@
       min-height: 0;
       display: grid;
       grid-template-columns: 1fr;
-      background: #d5e0c6;
+      background: var(--boka-hero-green);
       overflow: hidden;
       text-align: center;
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__promo-banner-image-wrap {
-      width: 100%;
-      height: 560px;
-      background: #d5e0c6;
-      overflow: hidden;
-    }
+       width: 100%;
+        height: 560px;
+        background: #dfeccf;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
 
     #boka-starter-lp-{{ section.id }} .boka-lp__promo-banner-image {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       display: block;
       opacity: .82;
     }
-
     #boka-starter-lp-{{ section.id }} .boka-lp__promo-banner-content {
       width: 100%;
       max-width: 980px;
