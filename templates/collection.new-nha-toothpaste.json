@@ -19,20 +19,10 @@
             "heading_size": "h1",
             "heading_tag": "default"
           }
-        },
-        "template--15161031983147__e9540f45-142d-4b00-acd5-49caf5c23d70-1686941015a949c762-1": {
-          "type": "text",
-          "settings": {
-            "text": "Remineralizes & fortifies teeth without the toxins.",
-            "text_use_html": false,
-            "text_html": "",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
-        "template--15161031983147__e9540f45-142d-4b00-acd5-49caf5c23d70-1686941015a949c762-0",
-        "template--15161031983147__e9540f45-142d-4b00-acd5-49caf5c23d70-1686941015a949c762-1"
+        "template--15161031983147__e9540f45-142d-4b00-acd5-49caf5c23d70-1686941015a949c762-0"
       ],
       "disabled": true,
       "settings": {
