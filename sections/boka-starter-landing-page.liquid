@@ -136,8 +136,8 @@
       min-height: 40px;
       padding: 0 18px;
       text-decoration: none;
-      font-family: "Ivar Display", "Times New Roman", serif;
-      font-size: 14px;
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
+      font-size: 13px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0;
@@ -810,6 +810,132 @@
   font-weight: 800;
 }
 
+
+    /* Guided routine header — inspired by Variation 3, softened for Boka brand guidelines */
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-header {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr);
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 4px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-focus,
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-routine {
+      border-radius: 28px;
+      padding: clamp(28px, 4vw, 46px);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-focus {
+      background: var(--boka-green);
+      display: grid;
+      gap: 16px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-routine {
+      background: rgba(255, 255, 255, .78);
+      border: 1px solid var(--boka-stone);
+      display: grid;
+      gap: 16px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-focus h2,
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-routine h2 {
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: .95;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-routine h2 {
+      max-width: 760px;
+      font-size: clamp(30px, 3.8vw, 46px);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-copy {
+      max-width: 620px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-options {
+      display: grid;
+      gap: 12px;
+      margin-top: 2px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-option {
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 18px;
+      background: rgba(250, 250, 245, .78);
+      padding: 18px 20px;
+      text-align: left;
+      color: var(--boka-charcoal);
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-option:hover {
+      background: rgba(255, 255, 255, .9);
+      transform: translateY(-1px);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-option.is-active {
+      background: var(--boka-white);
+      border-color: var(--boka-charcoal);
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-option strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-option span {
+      display: block;
+      color: var(--boka-gray);
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-list li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      color: var(--boka-charcoal);
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__guided-list li::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      margin-top: 2px;
+      border: 1.5px solid var(--boka-charcoal);
+      border-radius: 50%;
+      background: linear-gradient(45deg, transparent 43%, var(--boka-charcoal) 43% 57%, transparent 57%);
+    }
+
     #boka-starter-lp-{{ section.id }} .boka-lp__guarantees div {
       min-height: 54px;
       padding: 12px 10px;
@@ -1232,6 +1358,35 @@
       #boka-starter-lp-{{ section.id }} .boka-lp__promo-heading h2 {
         font-size: clamp(32px, 10vw, 44px);
       }
+
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        order: 0;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-focus,
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-routine {
+        padding: 24px;
+        border-radius: 22px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-focus h2 {
+        font-size: clamp(34px, 11vw, 48px);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-routine h2 {
+        font-size: clamp(28px, 8vw, 38px);
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-copy {
+        font-size: 14px;
+      }
+
+      #boka-starter-lp-{{ section.id }} .boka-lp__guided-option {
+        padding: 16px 18px;
+      }
       
       #boka-starter-lp-{{ section.id }} .boka-lp__gallery-wrap {
         display: contents;
@@ -1550,10 +1705,49 @@
   {% endif %}
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
-    <div class="boka-lp__promo-heading">
-      <p class="boka-lp__promo-eyebrow">NEW CUSTOMER OFFER - 50% Off</p>
-      <h2>Complete Oral Routine for $24.99 + Free Shipping</h2>
-      <p>Fluoride-Free n-Ha | Complete Routine | Easy Refills</p>
+    <div class="boka-lp__guided-header" data-boka-guided-header>
+      <div class="boka-lp__guided-focus">
+        <p class="boka-lp__promo-eyebrow">Choose your focus</p>
+
+        <h2>Let’s make oral care feel less like a chore.</h2>
+
+        <p class="boka-lp__guided-copy">
+          Pick your daily goal, then start with the Boka essentials that support your smile and your whole-body routine.
+        </p>
+
+        <div class="boka-lp__guided-options" data-boka-guided-options>
+          <button type="button" class="boka-lp__guided-option is-active">
+            <strong>Fresh, balanced, everyday care</strong>
+            <span>For a simple morning-and-night routine with n-Ha toothpaste and daily essentials.</span>
+          </button>
+
+          <button type="button" class="boka-lp__guided-option">
+            <strong>A brighter smile, the gentle way</strong>
+            <span>For shoppers who want a clean, polished feeling without harsh agents.</span>
+          </button>
+
+          <button type="button" class="boka-lp__guided-option">
+            <strong>Easy care for the whole household</strong>
+            <span>For routines that need to feel safe, reliable, and simple to repeat.</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="boka-lp__guided-routine">
+        <p class="boka-lp__promo-eyebrow">Your starter routine</p>
+
+        <h2>n-Ha care, clean tools, and a fresh start.</h2>
+
+        <p class="boka-lp__guided-copy">
+          We designed this kit to make daily oral care feel more mindful, more elevated, and easier to keep up with.
+        </p>
+
+        <ul class="boka-lp__guided-list">
+          <li>Brush with n-Ha toothpaste morning and night.</li>
+          <li>Use floss and the tongue cleaner to round out your routine.</li>
+          <li>Subscribe for easy refills, or keep it one-time.</li>
+        </ul>
+      </div>
     </div>
     <div class="boka-lp__gallery-wrap">
       <div class="boka-lp__gallery-card">
@@ -1902,6 +2096,15 @@
       const root = document.getElementById('boka-starter-lp-{{ section.id }}');
       if (!root || root.dataset.initialized === 'true') return;
       root.dataset.initialized = 'true';
+
+
+      const guidedOptions = root.querySelectorAll('.boka-lp__guided-option');
+      guidedOptions.forEach((option) => {
+        option.addEventListener('click', () => {
+          guidedOptions.forEach((item) => item.classList.remove('is-active'));
+          option.classList.add('is-active');
+        });
+      });
 
       const moneyFormat = {{ shop.money_format | json }};
       const offerPrice = {{ section.settings.offer_price | json }};
