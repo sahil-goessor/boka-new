@@ -641,7 +641,7 @@
           "settings": {
             "heading": "Does this product really work?",
             "icon": "none",
-            "row_content": "<p>Yes. Multiple clinical studies have found that nano hydroxyapatite binds to the tooth surface, filling imperfections and creating a smooth shield that resists plaque acids. This barrier helps reduce early caries lesions and supports enamel protection comparable to, and in some trials better than, traditional fluoride toothpaste.</p>",
+            "row_content": "<p>Yes. Multiple clinical studies have found that nano hydroxyapatite binds to the tooth surface, filling imperfections and creating a smooth shield that resists plaque acids. </p>",
             "page": ""
           }
         },
