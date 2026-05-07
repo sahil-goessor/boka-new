@@ -117,24 +117,6 @@
     "87fe4551-6f72-4fad-a167-9333db3df7ec": {
       "type": "collapsible-content",
       "blocks": {
-        "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does remineralizing toothpaste work?",
-            "icon": "none",
-            "row_content": "<p>Yes. A high-quality toothpaste that remineralizes teeth delivers bioavailable calcium and phosphate ions that bond to weakened areas, helping repair early lesions, reduce plaque-forming bacteria, and prevent caries. Clinical research confirms that consistent use of a toothpaste for remineralizing teeth is an effective way to reinforce enamel and slow tooth decay. </p>",
-            "page": ""
-          }
-        },
-        "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How long does it take for teeth to fully remineralize?",
-            "icon": "none",
-            "row_content": "<p>The time it takes for teeth to fully remineralize varies among individuals and depends on factors such as oral care habits (brushing and flossing), diet (watch out for sugary foods and acidic drinks), and the extent of enamel damage. Generally, with consistent use of remineralizing toothpaste and a comprehensive oral care routine, some improvement may be noticed within a few weeks to a couple of months. For personalized insights, consult with your dentist.</p>",
-            "page": ""
-          }
-        },
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
@@ -182,8 +164,6 @@
         }
       },
       "block_order": [
-        "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-1",
-        "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-2",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-3",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-4",
         "613af9d2-de07-48e6-9e79-31740c728cae",
