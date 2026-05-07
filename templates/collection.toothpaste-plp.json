@@ -107,15 +107,6 @@
     "a63323b9-7c26-46d5-9a1d-5b2882ad974c": {
       "type": "collapsible-content",
       "blocks": {
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Does nano-hydroxyapatite toothpaste really work?",
-            "icon": "none",
-            "row_content": "<p>Yes, nano-hydroxyapatite (n-Ha) toothpaste has been shown to be effective in helping remineralize teeth. Check out our <a href=\"https://www.boka.com/pages/our-science\"><span style=\"text-decoration:underline\">scientific studies</span></a>.</p>",
-            "page": ""
-          }
-        },
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
@@ -125,48 +116,12 @@
             "page": ""
           }
         },
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How long does it take for nano-hydroxyapatite to help remineralize teeth?",
-            "icon": "none",
-            "row_content": "<p>The timing to remineralize varies. It is a gradual process, and noticeable results may take weeks or months to become apparent. It is recommended to consistently use n-Ha dental products for optimal results.</p>",
-            "page": ""
-          }
-        },
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is n-Ha toothpaste safe for people with sensitive teeth?",
-            "icon": "none",
-            "row_content": "<p>Yes, n-Ha toothpaste is generally safe for people with sensitive teeth. It can help remineralize teeth.</p>",
-            "page": ""
-          }
-        },
-        "d5bd3503-d078-48f2-b735-2c8c183c85ed": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How does n-Ha toothpaste compare to traditional toothpaste?",
-            "icon": "none",
-            "row_content": "<p>Nano-hydroxyapatite (n-Ha) toothpaste is similar to traditional toothpaste but contains microscopic particles that can help remineralize teeth. It can be an effective alternative for maintaining oral health, but individual results may vary.</p>",
-            "page": ""
-          }
-        },
         "2d97e441-6520-4b04-b1a1-9b86cf754be7": {
           "type": "collapsible_row",
           "settings": {
             "heading": "What is the highest percentage of nano-hydroxyapatite in a toothpaste?",
             "icon": "none",
             "row_content": "<p>The amount of nano-hydroxyapatite (n-Ha) in toothpaste varies by brand. Boka toothpaste contains approximately 2% n-Ha, which is a safe amount for daily use.</p>",
-            "page": ""
-          }
-        },
-        "fb8955e1-fe28-4212-858c-e60b6677a0cf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What do dentists think about nano-hydroxyapatite?",
-            "icon": "none",
-            "row_content": "<p>Dentists generally have a positive view of nano-hydroxyapatite (n-Ha) due to its potential for helping remineralize teeth. It is often recommended as a safe and effective ingredient in dental products to help strengthen teeth.</p>",
             "page": ""
           }
         },
@@ -190,13 +145,8 @@
         }
       },
       "block_order": [
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-1",
         "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-2",
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-3",
-        "template--15161032081451__a63323b9-7c26-46d5-9a1d-5b2882ad974c-collapsible_row-4",
-        "d5bd3503-d078-48f2-b735-2c8c183c85ed",
         "2d97e441-6520-4b04-b1a1-9b86cf754be7",
-        "fb8955e1-fe28-4212-858c-e60b6677a0cf",
         "2b9ec7b5-c607-445c-b58d-f6acda643326",
         "c0138dbe-6fcf-4244-b884-8bec29a6048d"
       ],
