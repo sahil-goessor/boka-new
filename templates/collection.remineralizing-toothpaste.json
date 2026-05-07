@@ -143,32 +143,12 @@
             "row_content": "<p>The formula is free of harsh additives yet rich in remineralizing agents, making it gentle enough for the whole family—even children learning to care for their teeth.</p>",
             "page": ""
           }
-        },
-        "c3d408f4-d548-4a4a-b92a-37014203b542": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Which toothpaste is the best for remineralizing teeth?",
-            "icon": "none",
-            "row_content": "<p>Boka sets itself apart by using dentist-favored n-Ha, balanced mint flavor, and a clean label that excludes SLS, parabens, and artificial dyes. It’s a well-rounded choice for those seeking to strengthen enamel, keep gums healthy, and enjoy subtle whitening benefits—all in one tube of toothpaste to remineralize teeth.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Kr8JMQ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Why do dentists recommend nano-hydroxyapatite toothpaste for remineralizing teeth and preventing cavities?",
-            "icon": "none",
-            "row_content": "<p>Dentists often recommend nano-hydroxyapatite toothpaste as one of the best options for restoring enamel and supporting long-term oral health. Unlike traditional fluoride pastes, Boka’s formula is free of harsh additives and instead uses ingredients like nano-hydroxyapatite, xylitol, and soothing botanicals. This powerful blend works to remineralize and strengthen weak enamel, repair early signs of tooth decay, and reduce sensitivity.</p><p>By replenishing essential minerals in each remineralizing tooth, this treatment helps prevent future cavities caused by acid attacks from sugary foods and harmful bacteria. Our toothpaste containing n-Ha is formulated to be gentle yet effective, offering daily oral care that whitens teeth, protects your mouth, and enhances your overall dental wellness. The added benefits include safe whitening, smoother tooth surfaces, and a healthy balance in your oral microbiome—making it ideal for anyone who needs a smarter approach to modern toothpaste.</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-3",
         "template--15161032212523__87fe4551-6f72-4fad-a167-9333db3df7ec-collapsible_row-4",
-        "613af9d2-de07-48e6-9e79-31740c728cae",
-        "c3d408f4-d548-4a4a-b92a-37014203b542",
-        "collapsible_row_Kr8JMQ"
+        "613af9d2-de07-48e6-9e79-31740c728cae"
       ],
       "settings": {
         "caption": "",
