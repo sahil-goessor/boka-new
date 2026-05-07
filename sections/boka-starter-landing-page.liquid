@@ -405,11 +405,27 @@
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__title {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: var(--boka-charcoal);
       font-size: clamp(38px, 4.8vw, 66px);
       line-height: .9;
       letter-spacing: -.065em;
+      font-weight: 900;
+    }
+
+    #boka-starter-lp-{{ section.id }} .boka-lp__title-highlight {
+      display: inline-flex;
+      width: fit-content;
+      max-width: 100%;
+      white-space: nowrap;
+      background: var(--boka-green-light);
+      border: 1px solid var(--boka-green-mid);
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: var(--boka-charcoal);
+      font-size: clamp(24px, 2.8vw, 36px);
+      line-height: 1;
+      letter-spacing: -0.04em;
       font-weight: 900;
     }
 
