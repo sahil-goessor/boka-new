@@ -1,0 +1,55 @@
+<section class="boka-lp">
+  <div class="boka-lp__section boka-lp__section--white" id="boka-faq-{{ section.id }}">
+    <div class="boka-lp__wrap boka-lp__wrap--narrow">
+      <h2 class="boka-lp__section-title">Questions before you start?</h2>
+      <div class="boka-lp__faq" data-boka-faq>
+        <div class="boka-lp__faq-item is-open">
+          <button type="button" class="boka-lp__faq-btn">How do refills work?<span>+</span></button>
+          <div class="boka-lp__faq-content">Your first order starts the routine. Your refill keeps the essentials coming every 3 months, and you can pause, skip, or cancel anytime.</div>
+        </div>
+        <div class="boka-lp__faq-item">
+          <button type="button" class="boka-lp__faq-btn">Can I change my routine later?<span>+</span></button>
+          <div class="boka-lp__faq-content">Yes. Subscribers can manage their routine from their account portal.</div>
+        </div>
+        <div class="boka-lp__faq-item">
+          <button type="button" class="boka-lp__faq-btn">What comes in the starter kit?<span>+</span></button>
+          <div class="boka-lp__faq-content">The starter kit is designed as a complete routine: n-Ha Toothpaste, brush, floss, tongue cleaner, and Boka toiletry bag. Adjust this copy if your product setup differs.</div>
+        </div>
+        <div class="boka-lp__faq-item">
+          <button type="button" class="boka-lp__faq-btn">Can I buy once instead?<span>+</span></button>
+          <div class="boka-lp__faq-content">Yes, if one-time purchase is enabled for this page. For acquisition pages, subscription is usually the recommended default.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  (() => {
+    const root = document.getElementById('boka-faq-{{ section.id }}');
+    if (!root || root.dataset.initialized === 'true') return;
+    root.dataset.initialized = 'true';
+    root.querySelectorAll('.boka-lp__faq-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.boka-lp__faq-item');
+        const faq = btn.closest('.boka-lp__faq');
+        faq.querySelectorAll('.boka-lp__faq-item').forEach((other) => {
+          if (other !== item) other.classList.remove('is-open');
+        });
+        item.classList.toggle('is-open');
+      });
+    });
+  })();
+</script>
+
+</section>
+{% schema %}
+{
+  "name": "Boka LP FAQ",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Boka LP FAQ"
+    }
+  ]
+}
+{% endschema %}
