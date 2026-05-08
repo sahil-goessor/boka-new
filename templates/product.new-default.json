@@ -99,6 +99,7 @@
         "icon_with_text_V6zWW9": {
           "type": "icon-with-text",
           "name": "Claims 3 & 4",
+          "disabled": true,
           "settings": {
             "orientation": "inlined",
             "layout": "horizontal",
@@ -115,6 +116,7 @@
         "af067451-b82f-4114-8006-9a547e9c2157": {
           "type": "icon-with-text",
           "name": "Claims 1 & 2",
+          "disabled": true,
           "settings": {
             "orientation": "inlined",
             "layout": "horizontal",
