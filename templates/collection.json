@@ -77,6 +77,7 @@
       "block_order": [
         "collapsible_row_rAkqBn"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
