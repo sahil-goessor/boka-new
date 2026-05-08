@@ -69,6 +69,10 @@
         "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
       }
     },
+    "lp_refills": {
+      "type": "boka-lp-refill-plan",
+      "settings": {}
+    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -109,8 +113,8 @@
         "guarantee_4": "Made for daily use"
       }
     },
-    "lp_refills": {
-      "type": "boka-lp-refill-plan",
+    "lp_reviews": {
+      "type": "boka-lp-reviews",
       "settings": {}
     },
     "lp_science": {
@@ -119,10 +123,6 @@
     },
     "lp_compare": {
       "type": "boka-lp-compare",
-      "settings": {}
-    },
-    "lp_reviews": {
-      "type": "boka-lp-reviews",
       "settings": {}
     },
     "lp_faq": {
@@ -134,6 +134,11 @@
       "settings": {
         "promo_banner_button_text": "Start My Routine"
       }
+    },
+    "blocks_4GdTJU": {
+      "type": "_blocks",
+      "name": "Marquee text ticker",
+      "settings": {}
     }
   },
   "order": [
@@ -142,11 +147,12 @@
     "lp_hero",
     "lp_included",
     "lp_refills",
+    "lp_science",
     "lp_builder",
     "lp_reviews",
-    "lp_science",
     "lp_compare",
     "lp_faq",
-    "lp_bottom_cta"
+    "lp_bottom_cta",
+    "blocks_4GdTJU"
   ]
 }
