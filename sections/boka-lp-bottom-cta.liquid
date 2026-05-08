@@ -1,0 +1,28 @@
+<section class="boka-lp">
+  <div class="boka-lp__section boka-lp__section--charcoal boka-lp__bottom-cta">
+    <div class="boka-lp__wrap boka-lp__wrap--narrow">
+      <h2 class="boka-lp__section-title">Ready to build a routine you’ll actually stick with?</h2>
+      <p class="boka-lp__section-copy">Choose your smile goal and get a complete Boka routine delivered to your door.</p>
+      <a class="boka-lp__promo-banner-button" href="#boka-subscription"> {{ section.settings.promo_banner_button_text }}
+</a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Boka LP bottom CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "promo_banner_button_text",
+      "label": "Button text",
+      "default": "Start My Routine"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boka LP bottom CTA"
+    }
+  ]
+}
+{% endschema %}
