@@ -1,0 +1,739 @@
+{% liquid
+  assign lp_product = section.settings.product
+  assign first_variant = lp_product.selected_or_first_available_variant
+  assign has_selling_plans = false
+  if lp_product != blank and lp_product.selling_plan_groups.size > 0
+    assign has_selling_plans = true
+  endif
+%}
+<section id="boka-product-builder-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
+  <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
+  <div class="boka-lp__gallery-wrap">
+      <div class="boka-lp__gallery-card">
+        <div class="boka-lp__main-media {% if section.settings.contain_image %}boka-lp__main-media--contain{% endif %}" data-boka-main-media>
+          <div class="boka-lp__media-badge">{{ section.settings.image_badge }}</div>
+          {% if first_variant.featured_image != blank %}
+            {{ first_variant.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: first_variant.title }}
+          {% elsif section.settings.hero_image != blank %}
+            {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: section.settings.image_badge }}
+          {% else %}
+            <div class="boka-lp__placeholder">BOKA</div>
+          {% endif %}
+        </div>
+
+        <div class="boka-lp__thumbs" data-boka-thumbs>
+          {% if section.settings.hero_image != blank %}
+            <button type="button" class="boka-lp__thumb {% unless first_variant.featured_image %}is-active{% endunless %}" data-thumb-src="{{ section.settings.hero_image | image_url: width: 1600 }}" aria-label="Show hero image">
+              {{ section.settings.hero_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: section.settings.image_badge }}
+            </button>
+          {% endif %}
+
+          {% if lp_product != blank %}
+            {% for variant in lp_product.variants %}
+              <button type="button" class="boka-lp__thumb {% if variant.id == first_variant.id %}is-active{% endif %}" data-thumb-src="{% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 }}{% endif %}" data-thumb-variant="{{ variant.id }}" aria-label="Show {{ variant.title | escape }} image">
+                {% if variant.featured_image != blank %}
+                  {{ variant.featured_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: variant.title }}
+                {% else %}
+                  <span class="boka-lp__thumb-placeholder">{{ variant.title | truncate: 18 }}</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="boka-lp__guarantees">
+        <div>{{ section.settings.guarantee_1 }}</div>
+        <div>{{ section.settings.guarantee_2 }}</div>
+        <div>{{ section.settings.guarantee_3 }}</div>
+        <div>{{ section.settings.guarantee_4 }}</div>
+      </div>
+    </div>
+
+    <div class="boka-lp__buybox">
+      <div class="boka-lp__intro-card">
+        <div class="boka-lp__rating-row">
+          <span class="boka-lp__stars">★★★★★</span>
+          <span>{{ section.settings.rating_text }}</span>
+        </div>
+
+        <p class="boka-lp__eyebrow">{{ section.settings.eyebrow }}</p>
+
+        <div class="boka-lp__product-summary-card">
+          <h1 class="boka-lp__product-title">{{ section.settings.heading }}</h1>
+
+          <p class="boka-lp__product-description">{{ section.settings.subheading }}</p>
+
+          <ul class="boka-lp__checklist boka-lp__checklist--product">
+            <li>{{ section.settings.benefit_1 }}</li>
+            <li>{{ section.settings.benefit_2 }}</li>
+            <li>{{ section.settings.benefit_3 }}</li>
+            <li>{{ section.settings.benefit_4 }}</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="boka-lp__buybox-inner" id="boka-subscription">
+        {% if lp_product != blank %}
+          <script type="application/json" data-boka-product-json>
+            {
+              "requires_selling_plan": {{ lp_product.requires_selling_plan | json }},
+              "variants": [
+                {% for variant in lp_product.variants %}
+                  {
+                    "id": {{ variant.id | json }},
+                    "title": {{ variant.title | json }},
+                    "available": {{ variant.available | json }},
+                    "price": {{ variant.price | json }},
+                    "compare_at_price": {{ variant.compare_at_price | json }},
+                    "image": {% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 | json }}{% else %}null{% endif %},
+                    "selling_plan_allocations": [
+                      {% for allocation in variant.selling_plan_allocations %}
+                        {
+                          "selling_plan_id": {{ allocation.selling_plan.id | json }},
+                          "selling_plan_name": {{ allocation.selling_plan.name | json }},
+                          "price": {{ allocation.price | json }},
+                          "compare_at_price": {{ allocation.compare_at_price | json }}
+                        }{% unless forloop.last %},{% endunless %}
+                      {% endfor %}
+                    ]
+                  }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+              ]
+            }
+          </script>
+
+          <form method="post" action="{{ routes.cart_add_url }}" class="boka-lp__form" data-boka-product-form>
+            <input type="hidden" name="id" value="{{ first_variant.id }}" data-boka-variant-input>
+            <input type="hidden" name="quantity" value="1" data-boka-quantity-input>
+
+            <div class="boka-lp__step">
+              <div class="boka-lp__step-head">
+                <h2 class="boka-lp__step-title"><span class="boka-lp__step-number">1</span>{{ section.settings.variant_label }}</h2>
+              </div>
+
+              <div class="boka-lp__goal-grid" data-boka-goal-grid>
+                {% for variant in lp_product.variants %}
+                  <button type="button" class="boka-lp__goal-card {% if variant.id == first_variant.id %}is-active{% endif %}" data-variant-id="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
+                    <span class="boka-lp__goal-title">{{ variant.title }}</span>
+                    <span class="boka-lp__goal-sub">
+                      {% if variant.available %}
+                      {% else %}
+                        Sold out
+                      {% endif %}
+                    </span>
+                  </button>
+                {% endfor %}
+              </div>
+            </div>
+
+            {% if section.settings.show_quantity_selector %}
+              <div class="boka-lp__step">
+                <div class="boka-lp__step-head">
+                  <h2 class="boka-lp__step-title"><span class="boka-lp__step-number">2</span>{{ section.settings.quantity_label }}</h2>
+                </div>
+                <div class="boka-lp__quantity-row" data-boka-quantity-row>
+                  <button type="button" class="boka-lp__qty-card is-active" data-quantity="1">1 kit</button>
+                  <button type="button" class="boka-lp__qty-card" data-quantity="2">2 kits</button>
+                  <button type="button" class="boka-lp__qty-card" data-quantity="3">3 kits</button>
+                </div>
+              </div>
+            {% endif %}
+
+            <div class="boka-lp__step">
+              <div class="boka-lp__step-head">
+                <h2 class="boka-lp__step-title"><span class="boka-lp__step-number">{% if section.settings.show_quantity_selector %}3{% else %}2{% endif %}</span>{{ section.settings.plan_label }}</h2>
+              </div>
+
+              <div class="boka-lp__plan-fallback" data-boka-plan-fallback>
+                <button type="button" class="boka-lp__plan-card has-badge is-active" data-plan-type="subscribe">
+                  <span class="boka-lp__plan-badge">New Customer Offer</span>
+                  <span class="boka-lp__plan-head">
+                    <span class="boka-lp__plan-title">{{ section.settings.subscription_title }}</span>
+                    <span>
+                      <span class="boka-lp__compare-price" data-boka-sub-compare>{{ section.settings.offer_value }}</span>
+                      <span class="boka-lp__price" data-boka-sub-price>{{ section.settings.offer_price }}</span>
+                    </span>
+                  </span>
+                  <span class="boka-lp__plan-note">{{ section.settings.subscription_note }}</span>
+                  <ul class="boka-lp__plan-features">
+                    <li>{{ section.settings.subscription_feature_1 }}</li>
+                    <li>{{ section.settings.subscription_feature_2 }}</li>
+                    <li>{{ section.settings.subscription_feature_3 }}</li>
+                  </ul>
+                </button>
+
+                {% unless section.settings.subscription_only %}
+                  <button type="button" class="boka-lp__plan-card" data-plan-type="onetime">
+                    <span class="boka-lp__plan-head">
+                      <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
+                      <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
+                      <ul class="boka-lp__plan-features_otp">
+                    <li>{{ section.settings.onetime_note_1 }}</li>
+                    <li>{{ section.settings.onetime_note_2 }}</li>
+                  </ul>
+                    </span>
+                  </button>
+                {% endunless %}
+              </div>
+<input type="hidden" name="selling_plan" data-boka-selling-plan-select value="">
+            </div>
+
+            <button type="submit" class="boka-lp__atc" data-boka-atc>{{ section.settings.atc_text }}</button>
+            <p class="boka-lp__atc-subtext"> Free first-order shipping · 30-day guarantee · Pause anytime</p>
+            <p class="boka-lp__message" data-boka-message></p>
+          </form>
+        {% else %}
+          <p><strong>Select your Starter Kit product in this section’s Theme Editor settings.</strong></p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+  
+
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById('boka-product-builder-{{ section.id }}');
+      if (!root || root.dataset.initialized === 'true') return;
+      root.dataset.initialized = 'true';
+
+      const moneyFormat = {{ shop.money_format | json }};
+      const offerPrice = {{ section.settings.offer_price | json }};
+      const offerValue = {{ section.settings.offer_value | json }};
+      const productJsonEl = root.querySelector('[data-boka-product-json]');
+      if (!productJsonEl) return;
+
+      const productData = JSON.parse(productJsonEl.textContent);
+      const form = root.querySelector('[data-boka-product-form]');
+      const variantInput = root.querySelector('[data-boka-variant-input]');
+      const quantityInput = root.querySelector('[data-boka-quantity-input]');
+      const goalButtons = [...root.querySelectorAll('[data-variant-id]')];
+      const qtyButtons = [...root.querySelectorAll('[data-quantity]')];
+      const planButtons = [...root.querySelectorAll('[data-plan-type]')];
+      const sellingPlanSelect = root.querySelector('[data-boka-selling-plan-select]');
+      const frequencyWrap = root.querySelector('[data-boka-frequency-wrap]');
+      const atc = root.querySelector('[data-boka-atc]');
+      const message = root.querySelector('[data-boka-message]');
+      const mainMedia = root.querySelector('[data-boka-main-media]');
+      const subPrice = root.querySelector('[data-boka-sub-price]');
+      const subCompare = root.querySelector('[data-boka-sub-compare]');
+      const onetimePrice = root.querySelector('[data-boka-onetime-price]');
+      const thumbs = [...root.querySelectorAll('.boka-lp__thumb')];
+      const cartButtons = [...root.querySelectorAll('[data-boka-open-cart]')];
+      const cartCountEls = [...root.querySelectorAll('[data-boka-cart-count]')];
+
+      let selectedVariantId = Number(variantInput?.value);
+      let selectedPlanType = 'subscribe';
+      let selectedQuantity = 1;
+
+      const formatMoney = (cents) => {
+        if (window.Shopify && typeof window.Shopify.formatMoney === 'function') {
+          return window.Shopify.formatMoney(cents, moneyFormat);
+        }
+        return '$' + (Number(cents || 0) / 100).toFixed(2);
+      };
+
+      const getVariant = () => productData.variants.find(v => Number(v.id) === Number(selectedVariantId));
+      const getFirstAllocation = (variant) => variant?.selling_plan_allocations?.[0];
+
+      const setMainImage = (src, altText = '') => {
+        if (!src || !mainMedia) return;
+
+        let img = mainMedia.querySelector('img');
+
+        if (!img) {
+          const placeholder = mainMedia.querySelector('.boka-lp__placeholder');
+          if (placeholder) placeholder.remove();
+
+          img = document.createElement('img');
+          img.loading = 'eager';
+          img.decoding = 'async';
+          mainMedia.appendChild(img);
+        }
+
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+
+        img.src = src;
+
+        if (altText) {
+          img.alt = altText;
+        }
+      };
+
+      const renderVariant = () => {
+        const variant = getVariant();
+        if (!variant) return;
+
+        if (productData.requires_selling_plan) selectedPlanType = 'subscribe';
+        if (variantInput) variantInput.value = variant.id;
+        if (quantityInput) quantityInput.value = selectedQuantity;
+
+        goalButtons.forEach(btn => btn.classList.toggle('is-active', Number(btn.dataset.variantId) === Number(variant.id)));
+        qtyButtons.forEach(btn => btn.classList.toggle('is-active', Number(btn.dataset.quantity) === Number(selectedQuantity)));
+
+        if (variant.image) setMainImage(variant.image, variant.title);
+
+        thumbs.forEach(btn => {
+          const thumbVariant = btn.dataset.thumbVariant;
+          btn.classList.toggle('is-active', thumbVariant && Number(thumbVariant) === Number(variant.id));
+        });
+
+        if (onetimePrice) onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
+
+        const allocations = variant.selling_plan_allocations || [];
+        if (sellingPlanSelect) {
+  const firstPlan = allocations[0];
+  sellingPlanSelect.value = firstPlan ? firstPlan.selling_plan_id : '';
+}
+
+        const firstAllocation = getFirstAllocation(variant);
+        if (subPrice) {
+          subPrice.textContent = selectedQuantity > 1 ? `${offerPrice} × ${selectedQuantity}` : offerPrice;
+        }
+        if (subCompare) {
+          subCompare.textContent = selectedQuantity > 1 ? `${offerValue} × ${selectedQuantity}` : offerValue;
+        }
+
+        const hasSubscription = allocations.length > 0;
+        const subscribeButton = root.querySelector('[data-plan-type="subscribe"]');
+        const onetimeButton = root.querySelector('[data-plan-type="onetime"]');
+
+        if (subscribeButton) {
+          subscribeButton.disabled = !hasSubscription;
+          subscribeButton.style.opacity = hasSubscription ? '' : '.55';
+        }
+
+        if (onetimeButton && productData.requires_selling_plan) {
+          onetimeButton.disabled = true;
+          onetimeButton.style.opacity = '.55';
+        }
+
+        if (!hasSubscription && selectedPlanType === 'subscribe') selectedPlanType = 'onetime';
+        if (productData.requires_selling_plan) selectedPlanType = 'subscribe';
+
+        planButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.planType === selectedPlanType));
+
+        if (frequencyWrap) frequencyWrap.style.display = (selectedPlanType === 'subscribe' && hasSubscription) ? '' : 'none';
+
+        if (atc) {
+          atc.disabled = !variant.available || (selectedPlanType === 'subscribe' && !hasSubscription);
+          atc.textContent = variant.available ? {{ section.settings.atc_text | json }} : 'Sold out';
+        }
+      };
+
+      goalButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedVariantId = Number(btn.dataset.variantId);
+          if (message) message.textContent = '';
+          renderVariant();
+        });
+      });
+
+      qtyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedQuantity = Number(btn.dataset.quantity) || 1;
+          if (message) message.textContent = '';
+          renderVariant();
+        });
+      });
+
+      planButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (btn.disabled) return;
+          selectedPlanType = btn.dataset.planType;
+          if (message) message.textContent = '';
+          renderVariant();
+        });
+      });
+
+      thumbs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const variantId = btn.dataset.thumbVariant;
+          if (variantId) selectedVariantId = Number(variantId);
+          if (btn.dataset.thumbSrc) setMainImage(btn.dataset.thumbSrc, btn.getAttribute('aria-label') || 'Product image');
+          thumbs.forEach(t => t.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          renderVariant();
+        });
+      });
+
+      const updateCartCount = async () => {
+        try {
+          const res = await fetch(window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart.js' : '/cart.js');
+          const cart = await res.json();
+          cartCountEls.forEach(el => { el.textContent = cart.item_count || 0; });
+        } catch (error) {
+        }
+      };
+
+      const getCartDrawer = () => document.querySelector('cart-drawer');
+
+      const openCartDrawer = () => {
+        document.dispatchEvent(new CustomEvent('cart:refresh'));
+        document.dispatchEvent(new CustomEvent('cart:open'));
+        window.dispatchEvent(new CustomEvent('cart:refresh'));
+        window.dispatchEvent(new CustomEvent('cart:open'));
+
+        const cartDrawer = getCartDrawer();
+        if (cartDrawer && typeof cartDrawer.open === 'function') {
+          cartDrawer.open();
+          return;
+        }
+
+        const cartNotification = document.querySelector('cart-notification');
+        if (cartNotification && typeof cartNotification.open === 'function') {
+          cartNotification.open();
+          return;
+        }
+
+        const headerCartIcon = document.querySelector('#cart-icon-bubble, a[href="/cart"], a[href$="/cart"]');
+        if (headerCartIcon && typeof headerCartIcon.click === 'function') {
+          headerCartIcon.click();
+          return;
+        }
+
+        window.location.href = window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart' : '/cart';
+      };
+
+      const addCartSectionsToFormData = (formData) => {
+        const cartDrawer = getCartDrawer();
+
+        if (cartDrawer && typeof cartDrawer.getSectionsToRender === 'function') {
+          const sectionIds = cartDrawer.getSectionsToRender().map(section => section.id);
+          formData.set('sections', sectionIds.join(','));
+          formData.set('sections_url', window.location.pathname);
+          return;
+        }
+
+        formData.set('sections', 'cart-icon-bubble,cart-drawer');
+        formData.set('sections_url', window.location.pathname);
+      };
+
+      const refreshRenderedCartDrawerFallback = async () => {
+        const currentDrawer = getCartDrawer();
+        if (!currentDrawer) return false;
+
+        try {
+          const res = await fetch(`${window.location.pathname}?section_id={{ section.id }}`);
+          const htmlText = await res.text();
+          const html = new DOMParser().parseFromString(htmlText, 'text/html');
+          const freshDrawer = html.querySelector('cart-drawer');
+
+          if (!freshDrawer) return false;
+
+          currentDrawer.innerHTML = freshDrawer.innerHTML;
+          currentDrawer.className = freshDrawer.className;
+          return true;
+        } catch (error) {
+          return false;
+        }
+      };
+
+      const renderCartAfterAdd = async (parsedState) => {
+        const cartDrawer = getCartDrawer();
+
+        if (cartDrawer && parsedState?.sections && typeof cartDrawer.renderContents === 'function') {
+          cartDrawer.renderContents(parsedState);
+          return;
+        }
+
+        await refreshRenderedCartDrawerFallback();
+        openCartDrawer();
+      };
+
+      cartButtons.forEach(button => {
+        button.addEventListener('click', openCartDrawer);
+      });
+
+      form?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const variant = getVariant();
+        if (!variant || !variant.available) return;
+
+        const formData = new FormData(form);
+        formData.set('id', variant.id);
+        formData.set('quantity', String(selectedQuantity));
+        formData.delete('selling_plan');
+
+        if (selectedPlanType === 'subscribe') {
+          const selectedPlanId = sellingPlanSelect?.value;
+          if (!selectedPlanId) {
+            if (message) {
+              message.style.color = '#aa7a6b';
+              message.textContent = 'Please choose a subscription option.';
+            }
+            return;
+          }
+          formData.set('selling_plan', selectedPlanId);
+        }
+
+        addCartSectionsToFormData(formData);
+
+        atc.disabled = true;
+        const originalText = atc.textContent;
+        atc.textContent = 'Adding...';
+        if (message) message.textContent = '';
+
+        try {
+          const res = await fetch(window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart/add.js' : '/cart/add.js', {
+            method: 'POST',
+            body: formData
+          });
+
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.description || data.message || 'Unable to add to cart');
+
+          if (message) {
+            message.style.color = '#737c5b';
+            message.textContent = 'Added to cart';
+          }
+          await updateCartCount();
+          await renderCartAfterAdd(data);
+        } catch (error) {
+          if (message) {
+            message.style.color = '#aa7a6b';
+            message.textContent = error.message || 'Something went wrong. Please try again.';
+          }
+        } finally {
+          atc.disabled = false;
+          atc.textContent = originalText;
+          renderVariant();
+        }
+      });
+
+      renderVariant();
+      updateCartCount();
+    })();
+  
+  </script>
+</section>
+{% schema %}
+{
+  "name": "Boka LP product builder",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Starter product"
+    },
+    {
+      "type": "checkbox",
+      "id": "subscription_only",
+      "label": "Hide one-time purchase",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": "Show quantity selector",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Fallback hero image"
+    },
+    {
+      "type": "checkbox",
+      "id": "contain_image",
+      "label": "Contain hero image instead of cover",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "image_badge",
+      "label": "Image badge",
+      "default": "Complete routine"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating text",
+      "default": "4.6 stars from 950,000+ customers"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Daily oral care, naturally elevated"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Best Of Boka <em><strong>Starter Kit</strong></em></p>"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Get a complete oral care system powered by nano-hydroxyapatite - no matter your routine goal."
+    },
+    {
+      "type": "text",
+      "id": "benefit_1",
+      "label": "Benefit 1",
+      "default": "Fluoride-free with nano-hydroxyapatite"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2",
+      "label": "Benefit 2",
+      "default": "Effective daily essentials less than $10 / month"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3",
+      "label": "Benefit 3",
+      "default": "Free shipping on first order and routine refills"
+    },
+    {
+      "type": "text",
+      "id": "benefit_4",
+      "label": "Benefit 4",
+      "default": "Easy 3-month refills, no guesswork"
+    },
+    {
+      "type": "text",
+      "id": "offer_value",
+      "label": "Starter kit value price",
+      "default": "$49.99"
+    },
+    {
+      "type": "text",
+      "id": "offer_price",
+      "label": "First-order offer price",
+      "default": "$24.99"
+    },
+    {
+      "type": "text",
+      "id": "offer_discount",
+      "label": "First-order discount label",
+      "default": "Save $15"
+    },
+    {
+      "type": "text",
+      "id": "variant_label",
+      "label": "Variant step label",
+      "default": "What is your routine goal?"
+    },
+    {
+      "type": "text",
+      "id": "variant_note",
+      "label": "Variant step note",
+      "default": "Goal-based variants"
+    },
+    {
+      "type": "text",
+      "id": "quantity_label",
+      "label": "Quantity step label",
+      "default": "Choose quantity"
+    },
+    {
+      "type": "text",
+      "id": "quantity_note",
+      "label": "Quantity step note",
+      "default": "Stock your routine"
+    },
+    {
+      "type": "text",
+      "id": "plan_label",
+      "label": "Plan step label",
+      "default": "Choose your plan"
+    },
+    {
+      "type": "text",
+      "id": "plan_note",
+      "label": "Plan step note",
+      "default": "Subscribe or buy once"
+    },
+    {
+      "type": "text",
+      "id": "subscription_title",
+      "label": "Subscription title",
+      "default": "Subscribe & Save"
+    },
+    {
+      "type": "text",
+      "id": "subscription_note",
+      "label": "Subscription note",
+      "default": "We'll handle the routine refills every 3 months"
+    },
+    {
+      "type": "text",
+      "id": "subscription_feature_1",
+      "label": "Subscription feature 1",
+      "default": "Free shipping on first order and refills"
+    },
+    {
+      "type": "text",
+      "id": "subscription_feature_2",
+      "label": "Subscription feature 2",
+      "default": "Complete routine for less than $10 / month"
+    },
+    {
+      "type": "text",
+      "id": "subscription_feature_3",
+      "label": "Subscription feature 3",
+      "default": "Pause, skip, or cancel anytime"
+    },
+    {
+      "type": "text",
+      "id": "onetime_title",
+      "label": "One-time title",
+      "default": "One-Time Purchase"
+    },
+    {
+      "type": "text",
+      "id": "onetime_note_1",
+      "label": "One-time note 1",
+      "default": "Only save 10%"
+    },
+    {
+      "type": "text",
+      "id": "onetime_note_2",
+      "label": "One-time note 2",
+      "default": "No routine refills"
+    },
+    {
+      "type": "text",
+      "id": "atc_text",
+      "label": "Add to cart text",
+      "default": "Start My Routine"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_1",
+      "label": "Guarantee 1",
+      "default": "30-day guarantee"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_2",
+      "label": "Guarantee 2",
+      "default": "Flexible refills"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_3",
+      "label": "Guarantee 3",
+      "default": "Clean ingredients"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_4",
+      "label": "Guarantee 4",
+      "default": "Made for daily use"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boka LP product builder"
+    }
+  ]
+}
+{% endschema %}

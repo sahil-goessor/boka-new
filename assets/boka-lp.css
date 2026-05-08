@@ -1,0 +1,2248 @@
+/* Boka landing page CSS. Load this only on the Boka landing page template. */
+
+.boka-lp {
+      --boka-green-light: #e6f4d4;
+      --boka-green: #d3e7c0;
+      --boka-green-mid: #bfd6a5;
+      --boka-green-deep: #a5be8b;
+      --boka-olive: #737c5b;
+      --boka-blush-light: #f9e5db;
+      --boka-blush: #efd5ca;
+      --boka-clay: #aa7a6b;
+      --boka-cream: #ffffff;
+      --boka-stone: #e2e2d9;
+      --boka-taupe: #d1bebc;
+      --boka-gray: #8c8773;
+      --boka-charcoal: #222721;
+      --boka-white: #ffffff;
+      --boka-hero-green: #dfeccf;
+
+      --boka-border-soft: 1px solid var(--boka-stone);
+      --boka-border-medium: 1.5px solid var(--boka-charcoal);
+      --boka-surface: rgba(255, 255, 255, .92);
+      --boka-surface-cream: rgba(250, 250, 245, .92);
+      --boka-shadow-soft: 0 1px 0 rgba(34, 39, 33, .04);
+      --boka-shadow-card: 5px 5px 0 var(--boka-green-mid);
+
+      color: var(--boka-charcoal);
+      background: linear-gradient(180deg, var(--boka-cream) 0%, var(--boka-white) 48%, var(--boka-cream) 100%);
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      overflow: clip;
+    }
+
+    .boka-lp *,
+    .boka-lp *::before,
+    .boka-lp *::after {
+      box-sizing: border-box;
+    }
+
+    .boka-lp button,
+    .boka-lp input,
+    .boka-lp select {
+      font: inherit;
+    }
+
+    .boka-lp p,
+    .boka-lp h1,
+    .boka-lp h2,
+    .boka-lp h3 {
+      margin: 0;
+    }
+
+    .boka-lp a {
+      color: inherit;
+    }
+
+    .boka-lp em {
+      font-family: "Ivar Display Italic", "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+
+    .boka-lp .boka-lp__topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      border-bottom: 1px solid var(--boka-green-mid);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 850;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .boka-lp .boka-lp__topbar a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .boka-lp .boka-lp__nav {
+      position: sticky;
+      top: 39px;
+      z-index: 19;
+      background: rgba(250, 250, 245, .95);
+      border-bottom: 1px solid var(--boka-stone);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .boka-lp .boka-lp__nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 12px 4%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .boka-lp .boka-lp__logo {
+      text-decoration: none;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: .22em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .boka-lp .boka-lp__nav-links,
+    .boka-lp .boka-lp__nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .boka-lp .boka-lp__nav-links {
+      color: var(--boka-gray);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .boka-lp .boka-lp__nav-links a {
+      text-decoration: none;
+    }
+
+    .boka-lp .boka-lp__nav-cta,
+    .boka-lp .boka-lp__bottom-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: var(--boka-border-medium);
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .boka-lp .boka-lp__cart-button {
+      min-width: 40px;
+      min-height: 40px;
+      border: 1px solid var(--boka-stone);
+      border-radius: 999px;
+      background: var(--boka-white);
+      color: var(--boka-charcoal);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 0 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .boka-lp .boka-lp__cart-icon {
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+    }
+
+    .boka-lp .boka-lp__cart-count {
+      min-width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    /* Main hero grid */
+    .boka-lp .boka-lp__hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 34px 4% 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(420px, .94fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* Two-column promo banner */
+    .boka-lp .boka-lp__promo-heading,
+    .boka-lp .boka-lp__promo-banner {
+      grid-column: 1 / -1;
+      width: 100vw;
+      max-width: none;
+      margin: 0 calc(50% - 50vw);
+      padding: clamp(54px, 7vw, 96px) 6%;
+      min-height: clamp(600px, 52vw, 760px);
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: clamp(28px, 5vw, 86px);
+      background:
+        radial-gradient(circle at 78% 46%, rgba(255, 255, 255, .32) 0%, rgba(255, 255, 255, 0) 38%),
+        linear-gradient(90deg, #dfeccf 0%, #dfeccf 48%, #dbe8ca 100%);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .boka-lp .boka-lp__promo-banner-content {
+      order: 1;
+      width: 100%;
+      max-width: 620px;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      background: transparent;
+      position: relative;
+      z-index: 2;
+    }
+
+    .boka-lp .boka-lp__promo-banner-image-wrap {
+      order: 2;
+      width: 100%;
+      height: clamp(520px, 48vw, 760px);
+      background: transparent;
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .boka-lp .boka-lp__promo-banner-image {
+      width: auto;
+      height: 100%;
+      max-width: none;
+      object-fit: contain;
+      object-position: center right;
+      display: block;
+      opacity: .86;
+      mix-blend-mode: multiply;
+      filter: saturate(.94) contrast(.98);
+    }
+
+    .boka-lp .boka-lp__promo-eyebrow {
+      margin: 0 0 14px;
+      color: var(--boka-olive);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .boka-lp .boka-lp__promo-banner h2,
+    .boka-lp .boka-lp__promo-heading h2 {
+      color: var(--boka-charcoal);
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: .88;
+      letter-spacing: -.07em;
+      font-weight: 900;
+      max-width: 10ch;
+    }
+
+    .boka-lp .boka-lp__promo-banner-content > p:last-of-type {
+      margin: 20px 0 0;
+      max-width: 520px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .boka-lp .boka-lp__promo-banner-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 54px;
+      margin-top: 28px;
+      padding: 0 30px;
+      border-radius: 999px;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      border: var(--boka-border-medium);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .boka-lp .boka-lp__promo-banner-button:hover {
+      background: #111;
+      transform: translateY(-1px);
+      box-shadow: var(--boka-shadow-card);
+    }
+
+    /* Full bleed proof/included area */
+    .boka-lp .boka-lp__hero-full-bleed {
+      grid-column: 1 / -1;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      display: grid;
+      gap: 0;
+    }
+
+    .boka-lp .boka-lp__hero-full-bleed .boka-lp__proof-bar-section {
+      width: 100%;
+      padding: 34px 4% 28px;
+      background: var(--boka-white);
+    }
+
+    .boka-lp .boka-lp__hero-full-bleed .boka-lp__proof-bar,
+    .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop,
+    .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__wrap {
+      width: 100%;
+      max-width: none;
+    }
+
+    .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
+      padding: 54px 4%;
+    }
+
+    /* Gallery */
+    .boka-lp .boka-lp__gallery-wrap {
+      position: sticky;
+      top: 24px;
+    }
+
+    .boka-lp .boka-lp__gallery-card {
+      background: var(--boka-surface);
+      border: var(--boka-border-soft);
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 0;
+      box-shadow: var(--boka-shadow-soft);
+    }
+
+    .boka-lp .boka-lp__main-media {
+      position: relative;
+      min-height: 590px;
+      background: var(--boka-white);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      order: 2;
+    }
+
+    .boka-lp .boka-lp__main-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .boka-lp .boka-lp__main-media--contain img {
+      object-fit: contain;
+      padding: 8%;
+    }
+
+    .boka-lp .boka-lp__placeholder {
+      width: 100%;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--boka-charcoal);
+      letter-spacing: .22em;
+      font-size: 44px;
+      opacity: .25;
+    }
+
+    .boka-lp .boka-lp__media-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: var(--boka-cream);
+      border: 1px solid var(--boka-green-mid);
+      color: var(--boka-charcoal);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .boka-lp .boka-lp__thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px;
+      background: transparent;
+      border-right: 1px solid var(--boka-stone);
+      max-height: 560px;
+      overflow-y: auto;
+      order: 1;
+    }
+
+    .boka-lp .boka-lp__thumb {
+      width: 80px;
+      min-height: 80px;
+      border: 1px solid var(--boka-stone);
+      border-radius: 16px;
+      background: var(--boka-white);
+      padding: 0;
+      cursor: pointer;
+      overflow: hidden;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+
+    .boka-lp .boka-lp__thumb:hover,
+    .boka-lp .boka-lp__thumb.is-active {
+      border-color: var(--boka-green-deep);
+      transform: translateX(1px);
+      box-shadow: 0 0 0 2px var(--boka-green-light);
+    }
+
+    .boka-lp .boka-lp__thumb img,
+    .boka-lp .boka-lp__thumb-placeholder {
+      width: 100%;
+      height: 80px;
+    }
+
+    .boka-lp .boka-lp__thumb img {
+      object-fit: cover;
+      display: block;
+    }
+
+    .boka-lp .boka-lp__thumb-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--boka-gray);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 6px;
+    }
+
+    .boka-lp .boka-lp__guarantees {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 14px;
+      background: var(--boka-surface-cream);
+      border: var(--boka-border-soft);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .boka-lp .boka-lp__guarantees div {
+      min-height: 54px;
+      padding: 12px 10px;
+      border-right: 1px solid var(--boka-stone);
+      text-align: center;
+      color: var(--boka-charcoal);
+      font-size: 11px;
+      line-height: 1.25;
+      font-weight: 850;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .boka-lp .boka-lp__guarantees div:last-child {
+      border-right: 0;
+    }
+
+    /* Buy box / intro */
+    .boka-lp .boka-lp__buybox {
+      display: grid;
+      gap: 18px;
+      background: transparent;
+      border: 0;
+      overflow: visible;
+    }
+
+    .boka-lp .boka-lp__intro-card {
+      background: transparent;
+      padding: 0;
+    }
+
+    .boka-lp .boka-lp__rating-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-wrap: wrap;
+      color: var(--boka-charcoal);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 13px;
+    }
+
+    .boka-lp .boka-lp__stars {
+      color: var(--boka-green-deep);
+      letter-spacing: .06em;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .boka-lp .boka-lp__eyebrow {
+      margin: 0 0 10px;
+      color: var(--boka-olive);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .boka-lp .boka-lp__product-summary-card,
+    .boka-lp .boka-lp__buybox-inner {
+      background: var(--boka-surface);
+      border: var(--boka-border-soft);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--boka-shadow-soft);
+    }
+
+    .boka-lp .boka-lp__product-summary-card {
+      margin-top: 14px;
+    }
+
+    .boka-lp .boka-lp__product-title {
+      color: var(--boka-charcoal);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 900;
+      max-width: 12ch;
+    }
+
+    .boka-lp .boka-lp__product-title p {
+      margin: 0;
+    }
+
+    .boka-lp .boka-lp__product-description,
+    .boka-lp .boka-lp__subtitle {
+      margin-top: 18px;
+      max-width: 560px;
+      color: var(--boka-charcoal);
+      font-size: 16px;
+      line-height: 1.58;
+      font-weight: 650;
+      letter-spacing: -.01em;
+    }
+
+    .boka-lp .boka-lp__checklist,
+    .boka-lp .boka-lp__plan-features,
+    .boka-lp .boka-lp__plan-features_otp,
+    .boka-lp .boka-lp__plan-features_opt {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .boka-lp .boka-lp__checklist {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .boka-lp .boka-lp__checklist--product {
+      padding-top: 20px;
+      border-top: 1px solid var(--boka-stone);
+    }
+
+    .boka-lp .boka-lp__checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    .boka-lp .boka-lp__checklist li::before {
+      content: "✓";
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      border: 1px solid var(--boka-green-mid);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 25px;
+      font-size: 14px;
+      font-weight: 900;
+      margin-top: -2px;
+    }
+
+    /* Form steps */
+    .boka-lp .boka-lp__step {
+      padding: 24px 0;
+      border-top: 1px solid var(--boka-stone);
+    }
+
+    .boka-lp .boka-lp__step:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .boka-lp .boka-lp__step-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .boka-lp .boka-lp__step-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--boka-charcoal);
+      font-size: 21px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    .boka-lp .boka-lp__step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 26px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .boka-lp .boka-lp__goal-grid,
+    .boka-lp .boka-lp__plan-fallback {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .boka-lp .boka-lp__goal-card,
+    .boka-lp .boka-lp__qty-card,
+    .boka-lp .boka-lp__plan-card {
+      border: 1px solid var(--boka-stone) !important;
+      background: #ffffff !important;
+      color: var(--boka-charcoal);
+  
+    }
+
+    .boka-lp .boka-lp__goal-card {
+      position: relative;
+      min-height: 74px;
+      border-radius: 22px;
+      padding: 20px 62px 20px 22px;
+      text-align: left;
+    }
+
+    .boka-lp .boka-lp__goal-card:hover:not([disabled]),
+    .boka-lp .boka-lp__plan-card:hover:not([disabled]) {
+      background: var(--boka-white);
+    }
+
+    .boka-lp .boka-lp__goal-card.is-active,
+    .boka-lp .boka-lp__qty-card.is-active,
+    .boka-lp .boka-lp__plan-card.is-active {
+      background: var(--boka-green-light) !important;
+      border: 1px solid var(--boka-green-mid) !important;
+      color: var(--boka-charcoal) !important;
+
+        }
+
+    .boka-lp .boka-lp__goal-card.is-active::after {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .boka-lp .boka-lp__goal-card[disabled],
+    .boka-lp .boka-lp__plan-card[disabled] {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    .boka-lp .boka-lp__goal-title {
+      display: block;
+      color: var(--boka-charcoal);
+      font-size: 21px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    .boka-lp .boka-lp__goal-sub,
+    .boka-lp .boka-lp__goal-sub::before,
+    .boka-lp .boka-lp__goal-sub::after {
+      display: none;
+      content: none;
+    }
+
+    .boka-lp .boka-lp__quantity-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .boka-lp .boka-lp__qty-card {
+      min-height: 56px;
+      border-radius: 16px;
+      padding: 10px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__plan-card {
+      position: relative;
+      width: 100%;
+      border-radius: 24px;
+      padding: 24px;
+      text-align: left;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+
+    .boka-lp .boka-lp__plan-card.has-badge {
+      padding-top: 44px;
+    }
+
+    .boka-lp .boka-lp__plan-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      border-radius: 0 20px 0 16px;
+      padding: 10px 14px;
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__plan-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .boka-lp .boka-lp__plan-head > span:last-child {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-end;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .boka-lp .boka-lp__plan-title {
+      font-size: 24px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -.04em;
+      max-width: 10ch;
+    }
+
+    .boka-lp .boka-lp__price {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      white-space: nowrap;
+      letter-spacing: -.03em;
+    }
+
+    .boka-lp .boka-lp__compare-price {
+      margin-right: 7px;
+      color: var(--boka-gray);
+      font-size: 14px;
+      line-height: 1;
+      text-decoration: line-through;
+      font-weight: 800;
+    }
+
+    .boka-lp .boka-lp__plan-note {
+      display: block;
+      margin: 0 0 16px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 650;
+      max-width: 34ch;
+    }
+
+    .boka-lp .boka-lp__plan-features,
+    .boka-lp .boka-lp__plan-features_otp,
+    .boka-lp .boka-lp__plan-features_opt {
+      display: grid;
+      gap: 9px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(34, 39, 33, .12);
+      color: var(--boka-gray);
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    .boka-lp .boka-lp__plan-features li::before,
+    .boka-lp .boka-lp__plan-features_otp li::before {
+      margin-right: 7px;
+      color: var(--boka-olive);
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__plan-features li::before {
+      content: "✓";
+    }
+
+    .boka-lp .boka-lp__plan-features_otp li::before {
+      content: "×";
+    }
+
+    .boka-lp .boka-lp__frequency-wrap {
+      margin-top: 10px;
+    }
+
+    .boka-lp .boka-lp__select {
+      width: 100%;
+      min-height: 48px;
+      border: 1.5px solid var(--boka-stone);
+      background: var(--boka-white);
+      color: var(--boka-charcoal);
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .boka-lp .boka-lp__atc {
+      width: 100%;
+      min-height: 60px;
+      border: var(--boka-border-medium);
+      border-radius: 18px;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+      padding: 18px 24px;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+
+    .boka-lp .boka-lp__atc:hover:not([disabled]) {
+      background: #111;
+      transform: translateY(-1px);
+      box-shadow: var(--boka-shadow-card);
+    }
+
+    .boka-lp .boka-lp__atc[disabled] {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+
+    .boka-lp .boka-lp__atc-subtext,
+    .boka-lp .boka-lp__message {
+      margin-top: 10px;
+      min-height: 20px;
+      text-align: center;
+      color: var(--boka-charcoal);
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 750;
+    }
+
+    .boka-lp .boka-lp__message {
+      color: var(--boka-olive);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* Reusable sections */
+    .boka-lp .boka-lp__section {
+      padding: 78px 5%;
+    }
+
+    .boka-lp .boka-lp__section--white {
+      background: var(--boka-white);
+    }
+
+    .boka-lp .boka-lp__section--green {
+      background: var(--boka-green-light);
+    }
+
+    .boka-lp .boka-lp__section--blush {
+      background: var(--boka-blush-light);
+    }
+
+    .boka-lp .boka-lp__section--charcoal {
+      background: var(--boka-charcoal);
+      color: var(--boka-cream);
+    }
+
+    .boka-lp .boka-lp__wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .boka-lp .boka-lp__wrap--narrow {
+      max-width: 900px;
+    }
+
+    .boka-lp .boka-lp__section-title {
+      margin: 0 0 18px;
+      color: var(--boka-charcoal);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+      font-weight: 800;
+      max-width: 780px;
+    }
+
+    .boka-lp .boka-lp__section-copy {
+      margin: 0 0 30px;
+      max-width: 720px;
+      color: var(--boka-gray);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .boka-lp .boka-lp__section--charcoal .boka-lp__section-title,
+    .boka-lp .boka-lp__section--charcoal .boka-lp__eyebrow {
+      color: var(--boka-cream);
+    }
+
+    .boka-lp .boka-lp__section--charcoal .boka-lp__section-copy {
+      color: rgba(250, 250, 245, .76);
+    }
+
+    .boka-lp .boka-lp__cards-4,
+    .boka-lp .boka-lp__cards-3 {
+      display: grid;
+      gap: 14px;
+    }
+
+    .boka-lp .boka-lp__cards-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .boka-lp .boka-lp__cards-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .boka-lp .boka-lp__info-card,
+    .boka-lp .boka-lp__routine-panel {
+      background: var(--boka-surface);
+      border: var(--boka-border-soft);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--boka-shadow-soft);
+    }
+
+    .boka-lp .boka-lp__section--charcoal .boka-lp__info-card {
+      background: rgba(250, 250, 245, .07);
+      border-color: rgba(250, 250, 245, .16);
+    }
+
+    .boka-lp .boka-lp__info-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--boka-green-light);
+      border: 1px solid var(--boka-green-mid);
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .boka-lp .boka-lp__info-icon::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-top: 1.7px solid var(--boka-olive);
+      border-right: 1.7px solid var(--boka-olive);
+      transform: rotate(45deg);
+      top: 10px;
+      left: 9px;
+    }
+
+    .boka-lp .boka-lp__info-card strong,
+    .boka-lp .boka-lp__routine-panel h3 {
+      display: block;
+      margin: 0 0 8px;
+      color: var(--boka-charcoal);
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .boka-lp .boka-lp__section--charcoal .boka-lp__info-card strong {
+      color: var(--boka-cream);
+    }
+
+    .boka-lp .boka-lp__info-card p,
+    .boka-lp .boka-lp__routine-panel p,
+    .boka-lp .boka-lp__routine-panel li {
+      color: var(--boka-gray);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .boka-lp .boka-lp__section--charcoal .boka-lp__info-card p {
+      color: rgba(250, 250, 245, .68);
+    }
+
+    .boka-lp .boka-lp__routine-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .boka-lp .boka-lp__routine-panel.is-green {
+      background: var(--boka-green-light);
+      border-color: var(--boka-green-mid);
+    }
+
+    .boka-lp .boka-lp__routine-panel ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+    }
+
+    /* Proof bar */
+    .boka-lp .boka-lp__proof-bar-section {
+      background: var(--boka-white);
+      padding: 42px 5% 54px;
+    }
+
+    .boka-lp .boka-lp__proof-bar {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--boka-surface-cream);
+      border: var(--boka-border-medium);
+      border-radius: 22px;
+      box-shadow: var(--boka-shadow-card);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      overflow: hidden;
+    }
+
+    .boka-lp .boka-lp__proof-stat {
+      padding: 24px 18px;
+      text-align: center;
+      border-right: 1px solid var(--boka-stone);
+    }
+
+    .boka-lp .boka-lp__proof-stat:last-child {
+      border-right: 0;
+    }
+
+    .boka-lp .boka-lp__proof-number {
+      display: block;
+      color: var(--boka-charcoal);
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .boka-lp .boka-lp__proof-label {
+      color: var(--boka-gray);
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    /* Compare and FAQ */
+    .boka-lp .boka-lp__compare {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: var(--boka-border-medium);
+      border-radius: 18px;
+      background: var(--boka-white);
+      font-size: 14px;
+      box-shadow: var(--boka-shadow-card);
+    }
+
+    .boka-lp .boka-lp__compare th,
+    .boka-lp .boka-lp__compare td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--boka-stone);
+      color: var(--boka-gray);
+    }
+
+    .boka-lp .boka-lp__compare tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .boka-lp .boka-lp__compare th {
+      color: var(--boka-charcoal);
+      text-align: center;
+      font-weight: 900;
+      background: var(--boka-cream);
+    }
+
+    .boka-lp .boka-lp__compare th:first-child,
+    .boka-lp .boka-lp__compare td:first-child {
+      text-align: left;
+      color: var(--boka-charcoal);
+      font-weight: 800;
+    }
+
+    .boka-lp .boka-lp__compare .is-boka {
+      background: var(--boka-green-light);
+      color: var(--boka-charcoal);
+      text-align: center;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__compare td:not(:first-child) {
+      text-align: center;
+    }
+
+    .boka-lp .boka-lp__faq {
+      border: var(--boka-border-medium);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--boka-white);
+      box-shadow: var(--boka-shadow-card);
+    }
+
+    .boka-lp .boka-lp__faq-item + .boka-lp__faq-item {
+      border-top: 1px solid var(--boka-stone);
+    }
+
+    .boka-lp .boka-lp__faq-btn {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 21px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      cursor: pointer;
+      text-align: left;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__faq-btn span {
+      color: var(--boka-olive);
+      font-size: 20px;
+      line-height: 1;
+      transition: transform .2s;
+    }
+
+    .boka-lp .boka-lp__faq-content {
+      display: none;
+      padding: 0 24px 22px;
+      color: var(--boka-gray);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .boka-lp .boka-lp__faq-item.is-open .boka-lp__faq-content {
+      display: block;
+    }
+
+    .boka-lp .boka-lp__faq-item.is-open .boka-lp__faq-btn span {
+      transform: rotate(45deg);
+    }
+
+    /* Legacy classes kept for safety */
+    .boka-lp .boka-lp__title {
+      color: var(--boka-charcoal);
+      font-size: clamp(38px, 4.8vw, 66px);
+      line-height: .9;
+      letter-spacing: -.065em;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__title-highlight {
+      display: inline-flex;
+      width: fit-content;
+      max-width: 100%;
+      white-space: nowrap;
+      background: var(--boka-green-light);
+      border: 1px solid var(--boka-green-mid);
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: var(--boka-charcoal);
+      font-size: clamp(24px, 2.8vw, 36px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .boka-lp .boka-lp__proof-card {
+      background: var(--boka-surface);
+      border: var(--boka-border-medium);
+      border-radius: 14px;
+      padding: 14px;
+      color: var(--boka-gray);
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .boka-lp .boka-lp__hero-offer,
+    .boka-lp .boka-lp__benefit-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .boka-lp .boka-lp__pill,
+    .boka-lp .boka-lp__hero-offer-pills span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 30px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--boka-green-light);
+      border: 1px solid var(--boka-green-mid);
+      color: var(--boka-olive);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .boka-lp .boka-lp__hero-offer-price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .boka-lp .boka-lp__hero-price {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .boka-lp .boka-lp__hero-compare {
+      color: var(--boka-gray);
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 800;
+      text-decoration: line-through;
+    }
+
+    .boka-lp .boka-lp__included-mobile {
+      display: none;
+    }
+
+    .boka-lp .boka-lp__included-desktop {
+      display: block;
+      background: var(--boka-white);
+      padding: 54px 4%
+    }
+
+    .boka-lp .boka-lp__included-desktop .boka-lp__wrap {
+      max-width: 1180px;
+      background: linear-gradient( 180deg, var(--boka-green-light) 0%,rgba(230, 244, 212, 0.62) 100%);
+      border: 1px solid var(--boka-green-mid);
+      border-radius: 34px;
+      padding: 42px;
+    }
+
+    .boka-lp .boka-lp__included-desktop .boka-lp__info-card {
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(34, 39, 33, 0.08);
+      box-shadow: none;
+    }
+
+    .boka-lp .boka-lp__bottom-cta {
+      text-align: center;
+    }
+
+    .boka-lp .boka-lp__bottom-cta .boka-lp__section-title,
+    .boka-lp .boka-lp__bottom-cta .boka-lp__section-copy {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .boka-lp .boka-lp__bottom-cta .boka-lp__section-title {
+      color: var(--boka-cream);
+    }
+
+    .boka-lp .boka-lp__bottom-button {
+      min-width: 230px;
+      min-height: 50px;
+      background: var(--boka-cream);
+      color: var(--boka-charcoal);
+    }
+
+    @media (max-width: 980px) {
+  .boka-lp .boka-lp__nav {
+    top: 38px;
+  }
+
+  .boka-lp .boka-lp__nav-links {
+    display: none;
+  }
+
+  .boka-lp .boka-lp__hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Mobile promo banner */
+  .boka-lp .boka-lp__promo-heading,
+  .boka-lp .boka-lp__promo-banner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 28px;
+    padding: 38px 18px 46px;
+    background: var(--boka-hero-green);
+    text-align: center;
+  }
+
+  .boka-lp .boka-lp__promo-banner-content {
+    order: 2;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .boka-lp .boka-lp__promo-banner-image-wrap {
+    order: 1;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    justify-content: center;
+  }
+
+  .boka-lp .boka-lp__promo-banner-image {
+    width: min(100%, 460px);
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+    opacity: .88;
+    mix-blend-mode: multiply;
+  }
+
+  .boka-lp .boka-lp__promo-banner h2,
+  .boka-lp .boka-lp__promo-heading h2 {
+    max-width: 11ch;
+    margin: 0 auto;
+    font-size: clamp(38px, 12vw, 54px);
+    line-height: .9;
+  }
+
+  .boka-lp .boka-lp__promo-banner-content > p:last-of-type {
+    margin: 16px auto 0;
+    max-width: 420px;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .boka-lp .boka-lp__promo-banner-button {
+    min-height: 48px;
+    margin-top: 22px;
+    padding: 0 24px;
+    font-size: 12px;
+  }
+
+  /* Mobile hero order */
+  .boka-lp .boka-lp__gallery-wrap {
+    display: contents;
+  }
+
+  .boka-lp .boka-lp__gallery-card {
+    order: 1;
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+    padding: 14px;
+  }
+
+  .boka-lp .boka-lp__buybox {
+    order: 2;
+    display: grid;
+    gap: 14px;
+  }
+
+  .boka-lp .boka-lp__intro-card {
+    order: 1;
+  }
+
+  .boka-lp .boka-lp__included-mobile {
+    display: block !important;
+    order: 2;
+    padding: 20px;
+    background: var(--boka-green-light);
+    border: 1px solid var(--boka-green-mid);
+    border-radius: 24px;
+  }
+
+  .boka-lp .boka-lp__buybox-inner {
+    order: 3;
+  }
+
+  .boka-lp .boka-lp__included-desktop {
+    display: none !important;
+  }
+
+  /* Product gallery */
+  .boka-lp .boka-lp__main-media {
+    order: 1;
+    min-height: 390px;
+    border-radius: 20px;
+  }
+
+  .boka-lp .boka-lp__main-media img,
+  .boka-lp .boka-lp__placeholder {
+    min-height: 390px;
+  }
+
+  .boka-lp .boka-lp__thumbs {
+    order: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    border-right: 0;
+    border-top: 1px solid var(--boka-stone);
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .boka-lp .boka-lp__thumb {
+    flex: 0 0 62px;
+    width: 62px;
+    min-height: 62px;
+    border-radius: 12px;
+  }
+
+  .boka-lp .boka-lp__thumb img,
+  .boka-lp .boka-lp__thumb-placeholder {
+    height: 62px;
+  }
+
+  /* Product summary */
+  .boka-lp .boka-lp__product-summary-card,
+  .boka-lp .boka-lp__buybox-inner {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .boka-lp .boka-lp__product-title {
+    font-size: clamp(28px, 8vw, 38px);
+    line-height: 1;
+  }
+
+  .boka-lp .boka-lp__product-description {
+    font-size: 15px;
+    line-height: 1.52;
+  }
+
+  .boka-lp .boka-lp__checklist--product {
+    padding-top: 16px;
+  }
+
+  .boka-lp .boka-lp__checklist li {
+    font-size: 14.5px;
+  }
+
+  .boka-lp .boka-lp__checklist li::before {
+    width: 23px;
+    height: 23px;
+    flex-basis: 23px;
+    font-size: 13px;
+  }
+
+  /* What's inside mobile */
+  .boka-lp .boka-lp__included-mobile .boka-lp__wrap {
+    max-width: none;
+  }
+
+  .boka-lp .boka-lp__included-mobile .boka-lp__section-title {
+    font-size: clamp(26px, 8vw, 36px);
+    margin-bottom: 12px;
+  }
+
+  .boka-lp .boka-lp__included-mobile .boka-lp__section-copy {
+    margin-bottom: 18px;
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .boka-lp .boka-lp__included-mobile .boka-lp__info-card {
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(34, 39, 33, 0.08);
+    box-shadow: none;
+  }
+
+  /* Form cards */
+  .boka-lp .boka-lp__goal-card {
+    min-height: 68px;
+    padding: 18px 58px 18px 18px;
+    border-radius: 20px;
+  }
+
+  .boka-lp .boka-lp__goal-title {
+    font-size: 20px;
+  }
+
+  .boka-lp .boka-lp__goal-card.is-active::after {
+    width: 31px;
+    height: 31px;
+    right: 16px;
+    font-size: 16px;
+  }
+
+  
+
+  .boka-lp .boka-lp__plan-card.has-badge {
+    padding-top: 46px;
+  }
+
+  .boka-lp .boka-lp__plan-badge {
+    right: 0;
+    width: auto;
+    border-radius: 0 18px 0 14px;
+    padding: 9px 12px;
+  }
+
+  .boka-lp .boka-lp__plan-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .boka-lp .boka-lp__plan-head > span:last-child {
+    justify-content: flex-start;
+  }
+
+  .boka-lp .boka-lp__plan-title {
+    font-size: 25px;
+    max-width: none;
+  }
+
+  .boka-lp .boka-lp__price {
+    font-size: 30px;
+  }
+
+  .boka-lp .boka-lp__plan-note {
+    max-width: none;
+    font-size: 14.5px;
+  }
+
+  .boka-lp .boka-lp__plan-features,
+  .boka-lp .boka-lp__plan-features_otp,
+  .boka-lp .boka-lp__plan-features_opt {
+    font-size: 12.5px;
+  }
+
+  .boka-lp .boka-lp__atc {
+    min-height: 58px;
+    border-radius: 16px;
+  }
+
+  /* Guarantees */
+  .boka-lp .boka-lp__guarantees {
+    order: 3;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 12px;
+    border-radius: 14px;
+  }
+
+  .boka-lp .boka-lp__guarantees div {
+    min-height: 48px;
+    padding: 11px 8px;
+    font-size: 10.5px;
+  }
+
+  .boka-lp .boka-lp__guarantees div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .boka-lp .boka-lp__guarantees div:nth-child(1),
+  .boka-lp .boka-lp__guarantees div:nth-child(2) {
+    border-bottom: 1px solid var(--boka-stone);
+  }
+
+  /* General mobile section grids */
+  .boka-lp .boka-lp__hero-proof,
+  .boka-lp .boka-lp__routine-grid,
+  .boka-lp .boka-lp__cards-4,
+  .boka-lp .boka-lp__cards-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .boka-lp .boka-lp__section {
+    padding: 56px 16px;
+  }
+
+  /* Compare table */
+  .boka-lp .boka-lp__compare {
+    font-size: 12px;
+  }
+
+  .boka-lp .boka-lp__compare th,
+  .boka-lp .boka-lp__compare td {
+    padding: 12px 10px;
+  }
+
+  /* Proof bar */
+  .boka-lp .boka-lp__proof-bar-section {
+    padding: 22px 16px 46px;
+  }
+
+  .boka-lp .boka-lp__proof-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 18px;
+    box-shadow: 4px 4px 0 var(--boka-green-mid);
+  }
+
+  .boka-lp .boka-lp__proof-stat {
+    padding: 18px 12px;
+  }
+
+  .boka-lp .boka-lp__proof-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .boka-lp .boka-lp__proof-stat:nth-child(1),
+  .boka-lp .boka-lp__proof-stat:nth-child(2) {
+    border-bottom: 1px solid var(--boka-stone);
+  }
+
+  .boka-lp .boka-lp__proof-number {
+    font-size: 28px;
+  }
+
+  .boka-lp .boka-lp__proof-label {
+    font-size: 12px;
+  }
+}
+
+
+    /* ==========================================================
+       Final hero banner proof-bar placement overrides
+       Keeps proof stats inside the green hero banner below image/text/button.
+       ========================================================== */
+
+    .boka-lp .boka-lp__promo-banner {
+      grid-column: 1 / -1;
+      width: 100vw;
+      max-width: none;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-bottom: 0;
+      padding: 0;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      align-items: stretch;
+      background:
+        radial-gradient(circle at 76% 42%, rgba(255,255,255,.34) 0%, rgba(255,255,255,0) 38%),
+        linear-gradient(90deg, #dfeccf 0%, #dfeccf 52%, #dbe8ca 100%);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .boka-lp .boka-lp__promo-banner-main {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      align-items: center;
+      gap: clamp(24px, 5vw, 78px);
+      min-height: clamp(560px, 48vw, 720px);
+      padding: clamp(56px, 7vw, 96px) 6% 36px;
+      background: transparent;
+    }
+
+    .boka-lp .boka-lp__promo-banner-content {
+      order: 1;
+      width: 100%;
+      max-width: 620px;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      background: transparent;
+      position: relative;
+      z-index: 2;
+    }
+
+    .boka-lp .boka-lp__promo-banner-image-wrap {
+      order: 2;
+      width: 100%;
+      height: clamp(500px, 46vw, 720px);
+      background: transparent;
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 1;
+    }
+
+    .boka-lp .boka-lp__promo-banner-image {
+      width: auto;
+      height: 100%;
+      max-width: none;
+      object-fit: contain;
+      object-position: center right;
+      display: block;
+      opacity: .88;
+      mix-blend-mode: multiply;
+      filter: saturate(.94) contrast(.98);
+    }
+
+    .boka-lp .boka-lp__promo-banner .boka-lp__promo-eyebrow {
+      margin: 0 0 14px;
+      color: var(--boka-olive);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .boka-lp .boka-lp__promo-banner h2 {
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: .88;
+      letter-spacing: -.07em;
+      font-weight: 900;
+      max-width: 10ch;
+    }
+
+    .boka-lp .boka-lp__promo-banner-content > p:last-of-type {
+      margin: 20px 0 0;
+      max-width: 520px;
+      color: var(--boka-charcoal);
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .boka-lp .boka-lp__promo-banner-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 54px;
+      margin-top: 28px;
+      padding: 0 30px;
+      border-radius: 999px;
+      background: var(--boka-charcoal);
+      color: var(--boka-cream) !important;
+      border: var(--boka-border-medium);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .boka-lp .boka-lp__promo-banner-button:hover {
+      background: #111;
+      transform: translateY(-1px);
+      box-shadow: var(--boka-shadow-card);
+    }
+
+    .boka-lp .boka-lp__proof-bar-section--banner {
+      width: 100%;
+      padding: 0 6% clamp(34px, 5vw, 58px);
+      background: transparent;
+    }
+
+    .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-bar {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      overflow: hidden;
+      background: rgba(250, 250, 245, .72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(34, 39, 33, .14);
+      border-radius: 999px;
+      box-shadow: none;
+    }
+
+    .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat {
+      padding: 20px 18px;
+      border-right: 1px solid rgba(34, 39, 33, .10);
+    }
+
+    .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat:last-child {
+      border-right: 0;
+    }
+
+    @media (max-width: 980px) {
+      .boka-lp .boka-lp__promo-banner {
+        padding: 0;
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 0;
+        background: var(--boka-hero-green);
+        text-align: center;
+      }
+
+      .boka-lp .boka-lp__promo-banner-main {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        gap: 28px;
+        padding: 38px 18px 28px;
+      }
+
+      .boka-lp .boka-lp__promo-banner-content {
+        order: 2;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+      }
+
+      .boka-lp .boka-lp__promo-banner-image-wrap {
+        order: 1;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        justify-content: center;
+      }
+
+      .boka-lp .boka-lp__promo-banner-image {
+        width: min(100%, 460px);
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        object-position: center;
+        opacity: .88;
+        mix-blend-mode: multiply;
+      }
+
+      .boka-lp .boka-lp__promo-banner h2 {
+        max-width: 11ch;
+        margin: 0 auto;
+        font-size: clamp(38px, 12vw, 54px);
+        line-height: .9;
+      }
+
+
+       .boka-lp .boka-lp__proof-bar-section {
+    display: none !important;
+  }
+
+      .boka-lp .boka-lp__promo-banner-content > p:last-of-type {
+        margin: 16px auto 0;
+        max-width: 420px;
+        font-size: 13.5px;
+        line-height: 1.45;
+      }
+
+      .boka-lp .boka-lp__promo-banner-button {
+        min-height: 48px;
+        margin-top: 22px;
+        padding: 0 24px;
+        font-size: 12px;
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner {
+        padding: 0 16px 34px;
+        background: transparent;
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-radius: 22px;
+        background: rgba(250, 250, 245, .76);
+        box-shadow: none;
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat {
+        padding: 18px 12px;
+        border-right: 1px solid var(--boka-stone);
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat:nth-child(1),
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat:nth-child(2) {
+        border-bottom: 1px solid var(--boka-stone);
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat:nth-child(3) {
+        border-right: 1px solid var(--boka-stone);
+      }
+
+      .boka-lp .boka-lp__proof-bar-section--banner .boka-lp__proof-stat:nth-child(4) {
+        border-right: 0;
+      }
+    }
+
+  
+
+    /* ==========================================================
+       Final override: show desktop What's Inside section on mobile
+       directly after the hero banner, and hide the old mobile duplicate.
+       ========================================================== */
+
+    @media (max-width: 980px) {
+      .boka-lp .boka-lp__promo-banner {
+        order: 1;
+      }
+
+      .boka-lp .boka-lp__hero-full-bleed {
+        order: 2;
+        grid-column: 1 / -1;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+      }
+
+      .boka-lp .boka-lp__included-desktop,
+      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
+        display: block !important;
+        width: 100%;
+        padding: 32px 16px !important;
+        background: var(--boka-white);
+      }
+
+      .boka-lp .boka-lp__included-desktop .boka-lp__wrap,
+      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__wrap {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        padding: 22px 18px;
+        border-radius: 26px;
+        background: linear-gradient(
+          180deg,
+          var(--boka-green-light) 0%,
+          rgba(230, 244, 212, .62) 100%
+        );
+        border: 1px solid var(--boka-green-mid);
+      }
+
+      .boka-lp .boka-lp__included-desktop .boka-lp__section-title {
+        font-size: clamp(26px, 8vw, 36px);
+        margin-bottom: 12px;
+      }
+
+      .boka-lp .boka-lp__included-desktop .boka-lp__section-copy {
+        margin-bottom: 18px;
+        font-size: 14.5px;
+        line-height: 1.55;
+      }
+
+      .boka-lp .boka-lp__included-desktop .boka-lp__cards-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .boka-lp .boka-lp__included-desktop .boka-lp__info-card {
+        padding: 18px;
+        background: rgba(255, 255, 255, .84);
+        border: 1px solid rgba(34, 39, 33, .08);
+        box-shadow: none;
+      }
+
+      .boka-lp .boka-lp__included-mobile {
+        display: none !important;
+      }
+
+      .boka-lp .boka-lp__gallery-card {
+        order: 3;
+      }
+
+      .boka-lp .boka-lp__guarantees {
+        display: none;
+      }
+
+      .boka-lp .boka-lp__buybox {
+        order: 5;
+      }
+    }
+    .boka-lp .boka-lp__included-desktop .boka-lp__info-card strong,
+.boka-lp .boka-lp__included-mobile .boka-lp__info-card strong {
+  font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+
+    /* ==========================================================
+       Final override: included-item thumbnail cards
+       Adds fixed width/height thumbnails and removes descriptions.
+       ========================================================== */
+
+    .boka-lp .boka-lp__included-cards {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .boka-lp .boka-lp__included-card {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      align-items: start;
+      justify-items: center;
+      gap: 14px;
+      min-height: 232px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .boka-lp .boka-lp__included-card .boka-lp__info-icon,
+    .boka-lp .boka-lp__included-card p {
+      display: none !important;
+    }
+
+    .boka-lp .boka-lp__included-image {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.boka-lp .boka-lp__included-image img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+    .boka-lp .boka-lp__included-image-placeholder {
+      width: 132px;
+      height: 132px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--boka-charcoal);
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .18em;
+      opacity: .25;
+    }
+
+    .boka-lp .boka-lp__included-card strong {
+      margin: 0;
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
+      color: var(--boka-charcoal);
+      font-size: 17px;
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      text-align: center;
+    }
+
+    @media (min-width: 981px) and (max-width: 1180px) {
+      .boka-lp .boka-lp__included-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      .boka-lp .boka-lp__included-cards,
+      .boka-lp .boka-lp__included-desktop .boka-lp__cards-4,
+      .boka-lp .boka-lp__included-mobile .boka-lp__cards-4 {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .boka-lp .boka-lp__included-card {
+        grid-template-columns: 78px minmax(0, 1fr);
+        grid-template-rows: auto;
+        justify-items: start;
+        align-items: center;
+        min-height: 102px;
+        padding: 12px;
+        gap: 14px;
+        text-align: left;
+      }
+
+      .boka-lp .boka-lp__included-image {
+        width: 78px;
+        height: 78px;
+        border-radius: 14px;
+        flex: 0 0 78px;
+      }
+
+      .boka-lp .boka-lp__included-image img {
+        width: 68px;
+        height: 68px;
+        max-width: 68px;
+        max-height: 68px;
+      }
+
+      .boka-lp .boka-lp__included-image-placeholder {
+        width: 68px;
+        height: 68px;
+        font-size: 11px;
+      }
+
+      .boka-lp .boka-lp__included-card strong {
+        font-size: 16.5px;
+        line-height: 1.16;
+        text-align: left;
+      }
+    }
+
+    .boka-lp {
+  scroll-behavior: smooth;
+}
+
+.boka-lp__buybox-inner {
+  scroll-margin-top: 120px;
+}
+
+
+    /* ==========================================================
+       Final orientation overrides
+       Page flow: Hero/buybox → What's inside → Refills → Science → Compare → Reviews → FAQ → CTA.
+       Keeps the desktop What's inside section visible on both desktop and mobile,
+       and removes the old duplicate mobile version from the layout.
+       ========================================================== */
+    .boka-lp .boka-lp__included-mobile {
+      display: none !important;
+    }
+
+    .boka-lp .boka-lp__hero-full-bleed {
+      grid-column: auto;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
+      display: block !important;
+    }
+
+    @media (max-width: 980px) {
+      .boka-lp .boka-lp__included-mobile {
+        display: none !important;
+      }
+
+      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
+        display: block !important;
+        padding: 36px 16px !important;
+      }
+
+      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__wrap {
+        max-width: none;
+        border-radius: 26px;
+        padding: 24px 18px;
+      }
+
+      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__section-title {
+        font-size: clamp(26px, 8vw, 36px);
+        margin-bottom: 12px;
+      }
+
+      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__section-copy {
+        margin-bottom: 18px;
+        font-size: 14.5px;
+        line-height: 1.55;
+      }
+    }
+
+/* Safety fixes after splitting the original monolithic section. */
+.boka-lp { width: 100%; }
+.boka-lp__section-title p { margin: 0; }
+.boka-lp__hero { padding-top: 34px; padding-bottom: 64px; }
+.boka-lp__section--charcoal .boka-lp__promo-banner-button { background: var(--boka-cream); color: var(--boka-charcoal); }
+.boka-lp__section--charcoal .boka-lp__promo-banner-button:hover { background: #fff; }
+@media (max-width: 980px) { .boka-lp__hero { padding-left: 16px; padding-right: 16px; } }

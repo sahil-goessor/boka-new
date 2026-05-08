@@ -38,44 +38,35 @@
         "cart_bubble_text_color": "#222721"
       }
     },
-    "main": {
-      "type": "boka-starter-landing-page",
+    "lp_assets": {
+      "type": "boka-lp-assets",
       "settings": {
-        "hide_theme_header": true,
-        "product": "best-of-boka-starter-kit",
-        "subscription_only": false,
-        "show_quantity_selector": false,
-        "padding_top": 0,
-        "padding_bottom": 64,
+        "hide_theme_header": true
+      }
+    },
+    "lp_hero": {
+      "type": "boka-lp-hero",
+      "settings": {
+        "show_announcement": false,
+        "announcement_text": "New Customer Offer:",
+        "announcement_link_text": "Start Your Curated Fluoride Free Routine For Just $24.99 & Free Shipping!",
         "promo_banner_image": "shopify://shop_images/OralCareKit_MainImage_f61c12cc-ad7e-4ed6-8d5e-a502ac21b050.webp",
         "promo_banner_eyebrow": "NEW CUSTOMER OFFER - 50% Off",
         "promo_banner_heading": "Complete Oral Routine for $24.99 + Free Shipping",
         "promo_banner_subtext": "Fluoride-Free n-Ha | Complete Routine | Easy Refills",
         "promo_banner_button_text": "Start My Routine",
         "promo_banner_button_link": "",
-        "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
-        "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
-        "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
-        "included_tongue_cleaner_image": "shopify://shop_images/Main_1_1.webp",
-        "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp",
-        "green_light": "#e6f4d4",
-        "green": "#d3e7c0",
-        "blush_light": "#f9e5db",
-        "cream": "#ffffff",
-        "show_announcement": false,
-        "announcement_text": "New Customer Offer:",
-        "announcement_link_text": "Start Your Curated Fluoride Free Routine For Just $24.99 & Free Shipping!",
-        "show_nav": false,
-        "nav_cta": "Start My Routine",
-        "mobile_sticky_text": "Start My Routine",
+        "offer_discount": "Save $15"
+      }
+    },
+    "lp_builder": {
+      "type": "boka-lp-product-builder",
+      "settings": {
+        "product": "best-of-boka-starter-kit",
+        "subscription_only": false,
+        "show_quantity_selector": false,
         "contain_image": true,
         "image_badge": "Complete routine",
-        "proof_1_title": "First order",
-        "proof_1_text": "A complete starter routine in one box.",
-        "proof_2_title": "Refills",
-        "proof_2_text": "Essentials delivered every 3 months.",
-        "proof_3_title": "Flexible",
-        "proof_3_text": "Pause, skip, or cancel anytime.",
         "rating_text": "4.6 stars from 950,000+ customers",
         "eyebrow": "Daily oral care, naturally elevated",
         "heading": "<p>Best Of Boka <em><strong>Starter Kit</strong></em></p>",
@@ -107,10 +98,55 @@
         "guarantee_3": "Clean ingredients",
         "guarantee_4": "Made for daily use"
       }
+    },
+    "lp_included": {
+      "type": "boka-lp-whats-included",
+      "settings": {
+        "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
+        "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
+        "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
+        "included_tongue_cleaner_image": "shopify://shop_images/Main_1_1.webp",
+        "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
+      }
+    },
+    "lp_refills": {
+      "type": "boka-lp-refill-plan",
+      "settings": {}
+    },
+    "lp_science": {
+      "type": "boka-lp-science",
+      "settings": {}
+    },
+    "lp_compare": {
+      "type": "boka-lp-compare",
+      "settings": {}
+    },
+    "lp_reviews": {
+      "type": "boka-lp-reviews",
+      "settings": {}
+    },
+    "lp_faq": {
+      "type": "boka-lp-faq",
+      "settings": {}
+    },
+    "lp_bottom_cta": {
+      "type": "boka-lp-bottom-cta",
+      "settings": {
+        "promo_banner_button_text": "Start My Routine"
+      }
     }
   },
   "order": [
     "landing_header",
-    "main"
+    "lp_assets",
+    "lp_hero",
+    "lp_builder",
+    "lp_included",
+    "lp_refills",
+    "lp_science",
+    "lp_compare",
+    "lp_reviews",
+    "lp_faq",
+    "lp_bottom_cta"
   ]
 }

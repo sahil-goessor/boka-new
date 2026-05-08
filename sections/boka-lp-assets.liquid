@@ -1,0 +1,33 @@
+{{ 'boka-lp.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.hide_theme_header %}
+  <style>
+    body:has(.boka-lp) .shopify-section-group-header-group,
+    body:has(.boka-lp) #shopify-section-header,
+    body:has(.boka-lp) .header-wrapper:not(.landing-header-wrapper),
+    body:has(.boka-lp) .announcement-bar,
+    body:has(.boka-lp) .utility-bar {
+      display: none !important;
+    }
+    body:has(.boka-lp) { padding-top: 0 !important; }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Boka LP assets",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_theme_header",
+      "label": "Hide normal site header",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boka LP assets"
+    }
+  ]
+}
+{% endschema %}
