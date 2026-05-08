@@ -698,11 +698,10 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card,
     #boka-starter-lp-{{ section.id }} .boka-lp__qty-card,
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
-      border: var(--boka-border-medium);
-      background: rgba(255, 255, 255, .88);
+      border: 1px solid var(--boka-stone) !important;
+      background: #ffffff !important;
       color: var(--boka-charcoal);
-      cursor: pointer;
-      transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
+  
     }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card {
@@ -721,8 +720,9 @@
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active,
     #boka-starter-lp-{{ section.id }} .boka-lp__qty-card.is-active,
     #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.is-active {
-      background: var(--boka-green-light);
-      border-color: var(--boka-charcoal);
+      background: var(--boka-green-light) !important;
+      border: 1px solid var(--boka-green-mid) !important;
+
         }
 
     #boka-starter-lp-{{ section.id }} .boka-lp__goal-card.is-active::after {
@@ -1604,10 +1604,7 @@
     font-size: 16px;
   }
 
-  #boka-starter-lp-{{ section.id }} .boka-lp__plan-card {
-    padding: 20px;
-    border-radius: 20px;
-  }
+  
 
   #boka-starter-lp-{{ section.id }} .boka-lp__plan-card.has-badge {
     padding-top: 46px;
