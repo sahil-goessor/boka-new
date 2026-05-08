@@ -59,6 +59,16 @@
         "offer_discount": "Save $15"
       }
     },
+    "lp_included": {
+      "type": "boka-lp-whats-included",
+      "settings": {
+        "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
+        "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
+        "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
+        "included_tongue_cleaner_image": "shopify://shop_images/Main_1_1.webp",
+        "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
+      }
+    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -99,16 +109,6 @@
         "guarantee_4": "Made for daily use"
       }
     },
-    "lp_included": {
-      "type": "boka-lp-whats-included",
-      "settings": {
-        "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
-        "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
-        "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
-        "included_tongue_cleaner_image": "shopify://shop_images/Main_1_1.webp",
-        "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
-      }
-    },
     "lp_refills": {
       "type": "boka-lp-refill-plan",
       "settings": {}
@@ -140,12 +140,12 @@
     "landing_header",
     "lp_assets",
     "lp_hero",
-    "lp_builder",
     "lp_included",
     "lp_refills",
+    "lp_builder",
+    "lp_reviews",
     "lp_science",
     "lp_compare",
-    "lp_reviews",
     "lp_faq",
     "lp_bottom_cta"
   ]
