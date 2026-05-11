@@ -2699,14 +2699,6 @@
   }
 }
 
-/* ==========================================================
-   CONSOLIDATED FAQ SECTION
-   Clean icon accordion list style
-   Use with:
-   <section class="boka-lp boka-lp-faq">
-   <div class="boka-lp__section boka-lp__section--faq">
-   ========================================================== */
-
 .boka-lp.boka-lp-faq,
 .boka-lp .boka-lp__section--faq {
   background: var(--boka-white);
@@ -3104,14 +3096,6 @@
   }
 }
 
-/* ==========================================================
-   CONSOLIDATED CLEANUP OVERRIDES
-   - Normalizes fonts and colors across the Boka landing page
-   - Flattens the science collage section
-   - Keeps science cards floating on mobile in a controlled layout
-   ========================================================== */
-
-/* Global type normalization */
 .boka-lp,
 .boka-lp button,
 .boka-lp input,
@@ -3416,13 +3400,6 @@
   }
 }
 
-/* ==========================================================
-   FINAL SCIENCE SECTION COLOR OVERRIDE
-   White science section background + light green cards
-   ========================================================== */
-
-/* Make the full science section white */
-.boka-lp.boka-lp-science,
 .boka-lp .boka-lp__section--science-collage,
 .boka-lp .boka-lp__section--green#boka-science,
 .boka-lp #boka-science {
@@ -3487,4 +3464,31 @@
     background: var(--boka-green-light) !important;
     border-color: var(--boka-green-mid) !important;
   }
+}
+.boka-lp .boka-lp__science-card,
+.boka-lp .boka-lp__section--science-collage .boka-lp__info-card,
+.boka-lp #boka-science .boka-lp__info-card,
+.boka-lp #boka-science .boka-lp__cards-3 .boka-lp__info-card {
+  background: rgba(230, 244, 212, 0.58) !important;
+  border: 1px solid rgba(191, 214, 165, 0.55) !important;
+  box-shadow: none !important;
+}
+
+/* Optional: softer hover/visual depth without looking glossy */
+.boka-lp .boka-lp__science-card,
+.boka-lp #boka-science .boka-lp__info-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Make the icon circles less stark */
+.boka-lp #boka-science .boka-lp__info-icon {
+  background: rgba(255, 255, 255, 0.52) !important;
+  border-color: rgba(34, 39, 33, 0.08) !important;
+}
+
+/* Slightly softer text color so the cards feel less heavy */
+.boka-lp .boka-lp__science-card p,
+.boka-lp #boka-science .boka-lp__info-card p {
+  color: rgba(140, 135, 115, 0.92) !important;
 }
