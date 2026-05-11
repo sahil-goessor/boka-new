@@ -51,6 +51,7 @@
         "announcement_text": "New Customer Offer:",
         "announcement_link_text": "Start Your Curated Fluoride Free Routine For Just $24.99 & Free Shipping!",
         "promo_banner_image": "shopify://shop_images/OralCareKit_MainImage_f61c12cc-ad7e-4ed6-8d5e-a502ac21b050.webp",
+        "promo_banner_image_alt": "Boka starter kit products on a clean background",
         "promo_banner_eyebrow": "NEW CUSTOMER OFFER - 50% Off",
         "promo_banner_heading": "Complete Oral Routine for $24.99 + Free Shipping",
         "promo_banner_subtext": "Fluoride-Free n-Ha | Complete Routine | Easy Refills",
@@ -58,6 +59,10 @@
         "promo_banner_button_link": "",
         "offer_discount": "Save $15"
       }
+    },
+    "lp_compare": {
+      "type": "boka-lp-compare",
+      "settings": {}
     },
     "lp_included": {
       "type": "boka-lp-whats-included",
@@ -125,10 +130,6 @@
       "type": "boka-lp-reviews",
       "settings": {}
     },
-    "lp_compare": {
-      "type": "boka-lp-compare",
-      "settings": {}
-    },
     "lp_faq": {
       "type": "boka-lp-faq",
       "settings": {}
@@ -144,12 +145,12 @@
     "landing_header",
     "lp_assets",
     "lp_hero",
-    "lp_included",
+    "lp_compare",
     "lp_science",
     "lp_builder",
+    "lp_included",
     "lp_refills",
     "lp_reviews",
-    "lp_compare",
     "lp_faq",
     "lp_bottom_cta"
   ]
