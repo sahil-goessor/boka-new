@@ -1,31 +1,68 @@
-<section class="boka-lp">
-  <div class="boka-lp__section boka-lp__section--blush">
-    <div class="boka-lp__wrap boka-lp__wrap--narrow">
-      <p class="boka-lp__eyebrow">A more thoughtful routine</p>
-      <h2 class="boka-lp__section-title">Not just toothpaste. A routine designed to feel better from start to finish.</h2>
-      <table class="boka-lp__compare">
-        <thead>
-          <tr><th></th><th class="is-boka">Boka Starter Kit</th><th>Typical toothpaste purchase</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Complete routine</td><td class="is-boka">Yes</td><td>Usually no</td></tr>
-          <tr><td>Fluoride-free n-Ha option</td><td class="is-boka">Yes</td><td>Varies</td></tr>
-          <tr><td>Designed for consistency</td><td class="is-boka">Yes</td><td>No refill system</td></tr>
-          <tr><td>Elevated bathroom aesthetic</td><td class="is-boka">Yes</td><td>Not always</td></tr>
-          <tr><td>Easy to adjust</td><td class="is-boka">Pause, skip, or cancel</td><td>Reorder manually</td></tr>
-        </tbody>
-      </table>
+<div class="boka-lp__section boka-lp__section--compare" id="boka-compare-{{ section.id }}">
+  <div class="boka-lp__wrap boka-lp__compare-layout">
+
+    <div class="boka-lp__compare-table-card">
+      <div class="boka-lp__compare-grid boka-lp__compare-grid--head">
+        <div class="boka-lp__compare-blank"></div>
+        <div class="boka-lp__compare-brand">
+          <span>Boka</span>
+        </div>
+        <div>Typical toothpaste</div>
+        <div>Typical routine</div>
+      </div>
+
+      <div class="boka-lp__compare-grid">
+        <div class="boka-lp__compare-label">Complete routine</div>
+        <div class="boka-lp__compare-good">✓</div>
+        <div class="boka-lp__compare-bad">×</div>
+        <div class="boka-lp__compare-bad">×</div>
+      </div>
+
+      <div class="boka-lp__compare-grid">
+        <div class="boka-lp__compare-label">Powered by n-Ha</div>
+        <div class="boka-lp__compare-good">✓</div>
+        <div class="boka-lp__compare-bad">×</div>
+        <div class="boka-lp__compare-bad">×</div>
+      </div>
+
+      <div class="boka-lp__compare-grid">
+        <div class="boka-lp__compare-label">Fluoride-free</div>
+        <div class="boka-lp__compare-good">✓</div>
+        <div class="boka-lp__compare-maybe">Varies</div>
+        <div class="boka-lp__compare-maybe">Varies</div>
+      </div>
+
+      <div class="boka-lp__compare-grid">
+        <div class="boka-lp__compare-label">No artificial flavors</div>
+        <div class="boka-lp__compare-good">✓</div>
+        <div class="boka-lp__compare-bad">×</div>
+        <div class="boka-lp__compare-maybe">Varies</div>
+      </div>
+
+      <div class="boka-lp__compare-grid">
+        <div class="boka-lp__compare-label">Easy refills</div>
+        <div class="boka-lp__compare-good">✓</div>
+        <div class="boka-lp__compare-bad">×</div>
+        <div class="boka-lp__compare-bad">×</div>
+      </div>
     </div>
+
+    <div class="boka-lp__compare-copy">
+      <p class="boka-lp__eyebrow">Why make the switch?</p>
+      <h2 class="boka-lp__compare-heading">How does Boka compare?</h2>
+      <p class="boka-lp__compare-text">
+        Keep the brushing habit you already have — then upgrade what’s behind it with a complete fluoride-free routine powered by n-Ha.
+      </p>
+
+      <div class="boka-lp__compare-rating">
+        <span class="boka-lp__compare-stars">★★★★★</span>
+        <span>{{ section.settings.rating_text }}</span>
+      </div>
+
+      <a class="boka-lp__compare-button" href="#boka-buybox-{{ section.id }}">
+        Choose your starter kit
+      </a>
+    </div>
+
   </div>
-</section>
-{% schema %}
-{
-  "name": "Boka LP compare",
-  "settings": [],
-  "presets": [
-    {
-      "name": "Boka LP compare"
-    }
-  ]
-}
-{% endschema %}
+</div>
