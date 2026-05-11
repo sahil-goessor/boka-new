@@ -286,6 +286,7 @@
   min-height: 54px;
   margin-top: 28px;
   padding: 0 30px;
+  border-radius: 2px;
   background: var(--boka-charcoal);
   color: var(--boka-cream);
   border: var(--boka-border-medium);
@@ -1602,7 +1603,7 @@
   min-height: 54px;
   margin-top: 28px;
   padding: 0 30px;
-  border-radius: 999px;
+  border-radius: 2px;
   background: var(--boka-charcoal);
   color: var(--boka-cream) !important;
   border: var(--boka-border-medium);
