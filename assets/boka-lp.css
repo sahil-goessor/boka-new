@@ -2914,7 +2914,7 @@
 
 .boka-lp.boka-lp-science,
 .boka-lp .boka-lp__section--science-collage {
-  background: #ffffff;
+  background: var(--boka-green-light);
 }
 
 .boka-lp .boka-lp__section--science-collage {
