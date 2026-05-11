@@ -3622,20 +3622,64 @@
   border: 1px solid var(--boka-green-mid) !important;
 }
 
+/* Set consistent bento card/image heights so images do not get too large */
 .boka-lp .boka-lp__included-bento-card {
-  align-items: stretch !important;
+  height: 360px !important;
+  min-height: 360px !important;
+}
+
+.boka-lp .boka-lp__included-bento-card:nth-child(1),
+.boka-lp .boka-lp__included-bento-card:nth-child(2) {
+  height: 420px !important;
+  min-height: 420px !important;
 }
 
 .boka-lp .boka-lp__included-bento-image {
-  height: 100% !important;
-  min-height: 190px !important;
+  height: 170px !important;
+  min-height: 170px !important;
+  max-height: 170px !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
+.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image,
+.boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image {
+  height: 240px !important;
+  min-height: 240px !important;
+  max-height: 240px !important;
+}
+
 .boka-lp .boka-lp__included-bento-image img {
-  width: 100% !important;
+  width: auto !important;
   height: 100% !important;
-  max-height: none !important;
+  max-height: 100% !important;
+  max-width: 100% !important;
   object-fit: contain !important;
+}
+
+@media (max-width: 760px) {
+  .boka-lp .boka-lp__included-bento-card,
+  .boka-lp .boka-lp__included-bento-card:nth-child(1),
+  .boka-lp .boka-lp__included-bento-card:nth-child(2),
+  .boka-lp .boka-lp__included-bento-card:nth-child(3),
+  .boka-lp .boka-lp__included-bento-card:nth-child(4),
+  .boka-lp .boka-lp__included-bento-card:nth-child(5) {
+    height: auto !important;
+    min-height: 178px !important;
+  }
+
+  .boka-lp .boka-lp__included-bento-image,
+  .boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image,
+  .boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image {
+    height: 112px !important;
+    min-height: 112px !important;
+    max-height: 112px !important;
+  }
+
+  .boka-lp .boka-lp__included-bento-image img {
+    height: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
 }
