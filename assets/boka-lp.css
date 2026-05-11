@@ -2097,14 +2097,6 @@
   }
 }
 
-/* ==========================================================
-   CONSOLIDATED COMPARE SECTION
-   Spotlight style: Category / Boka / Typical Toothpaste
-   Use with:
-   <section class="boka-lp boka-lp-compare">
-   <div class="boka-lp__compare-table-card boka-lp__compare-table-card--three-col boka-lp__compare-table-card--spotlight">
-   ========================================================== */
-
 .boka-lp.boka-lp-compare,
 .boka-lp .boka-lp__section--compare {
   background: #ffffff;
