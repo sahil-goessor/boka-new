@@ -3402,16 +3402,6 @@
   font-size: clamp(24px, 2.1vw, 32px);
 }
 
-.boka-lp .boka-lp__included-bento-copy h3::after {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: 210px;
-  height: 5px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .68);
-}
 
 .boka-lp .boka-lp__included-bento-copy p {
   margin: 0;
@@ -3564,11 +3554,6 @@
     max-width: 15ch;
     font-size: 24px;
     line-height: .98;
-  }
-
-  .boka-lp .boka-lp__included-bento-copy h3::after {
-    max-width: 120px;
-    height: 4px;
   }
 
   .boka-lp .boka-lp__included-bento-copy p {
