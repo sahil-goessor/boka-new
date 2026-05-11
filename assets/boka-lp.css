@@ -939,6 +939,8 @@
       background: var(--boka-green-light);
     }
 
+    /* Science collage styles are consolidated in the final override block at the bottom. */
+
     .boka-lp .boka-lp__section--blush {
       background: var(--boka-blush-light);
     }
@@ -2907,5 +2909,215 @@
     padding: 0 34px 22px 56px;
     font-size: 14px;
     line-height: 1.58;
+  }
+}
+
+/* ==========================================================
+   CONSOLIDATED SCIENCE COLLAGE SECTION
+   Product image + floating benefit cards
+   Use with:
+   <section class="boka-lp boka-lp-science">
+   <div class="boka-lp__section boka-lp__section--science-collage">
+   ========================================================== */
+
+.boka-lp.boka-lp-science,
+.boka-lp .boka-lp__section--science-collage {
+  background: var(--boka-green-light);
+}
+
+.boka-lp .boka-lp__section--science-collage {
+  padding: clamp(68px, 8vw, 110px) 5%;
+  overflow: hidden;
+}
+
+.boka-lp .boka-lp__science-collage-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.boka-lp .boka-lp__science-collage-copy {
+  max-width: 860px;
+  margin: 0 0 34px;
+}
+
+.boka-lp .boka-lp__science-collage-copy .boka-lp__eyebrow {
+  margin: 0 0 12px;
+  color: var(--boka-olive);
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
+  margin: 0;
+  max-width: 880px;
+  color: var(--boka-charcoal);
+  font-size: clamp(42px, 5.4vw, 76px);
+  line-height: .92;
+  letter-spacing: -.065em;
+  font-weight: 900;
+}
+
+/* Stage */
+.boka-lp .boka-lp__science-collage-stage {
+  position: relative;
+  min-height: 620px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, .62) 0%, rgba(255, 255, 255, 0) 46%),
+    linear-gradient(180deg, rgba(230, 244, 212, .58) 0%, rgba(211, 231, 192, .42) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 48px);
+  overflow: hidden;
+}
+
+.boka-lp .boka-lp__science-collage-stage::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 28px;
+  border: 1px solid rgba(34, 39, 33, .06);
+  pointer-events: none;
+}
+
+/* Product image */
+.boka-lp .boka-lp__science-collage-image {
+  position: relative;
+  z-index: 1;
+  width: min(58vw, 620px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 40px rgba(34, 39, 33, .12));
+}
+
+.boka-lp .boka-lp__science-collage-placeholder {
+  position: relative;
+  z-index: 1;
+  width: min(58vw, 620px);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--boka-charcoal);
+  font-size: clamp(44px, 8vw, 96px);
+  line-height: 1;
+  letter-spacing: .18em;
+  font-weight: 400;
+  opacity: .18;
+}
+
+/* Floating cards */
+.boka-lp .boka-lp__science-card {
+  position: absolute;
+  z-index: 2;
+  width: min(370px, 32vw);
+  background: rgba(255, 255, 255, .9);
+  border: 1px solid rgba(34, 39, 33, .08);
+  border-radius: 28px;
+  padding: 24px 26px;
+  box-shadow: 0 18px 50px rgba(34, 39, 33, .06);
+}
+
+.boka-lp .boka-lp__science-card strong {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--boka-charcoal);
+  font-family: "Ivar Display", "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -.03em;
+}
+
+.boka-lp .boka-lp__science-card p {
+  margin: 0;
+  color: var(--boka-gray);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.boka-lp .boka-lp__science-card--one {
+  top: 54px;
+  left: 5%;
+  background: rgba(255, 255, 255, .88);
+}
+
+.boka-lp .boka-lp__science-card--two {
+  right: 5%;
+  top: 34%;
+  background: rgba(250, 250, 245, .92);
+}
+
+.boka-lp .boka-lp__science-card--three {
+  left: 8%;
+  bottom: 54px;
+  background: rgba(255, 255, 255, .92);
+}
+
+/* Mobile */
+@media (max-width: 860px) {
+  .boka-lp .boka-lp__section--science-collage {
+    padding: 56px 16px;
+  }
+
+  .boka-lp .boka-lp__science-collage-copy {
+    margin-bottom: 24px;
+  }
+
+  .boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
+    font-size: clamp(34px, 11vw, 48px);
+    line-height: .95;
+  }
+
+  .boka-lp .boka-lp__science-collage-stage {
+    min-height: 0;
+    display: grid;
+    gap: 14px;
+    padding: 20px;
+    border-radius: 28px;
+  }
+
+  .boka-lp .boka-lp__science-collage-stage::before {
+    inset: 10px;
+    border-radius: 22px;
+  }
+
+  .boka-lp .boka-lp__science-collage-image,
+  .boka-lp .boka-lp__science-collage-placeholder {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .boka-lp .boka-lp__science-collage-placeholder {
+    min-height: 260px;
+  }
+
+  .boka-lp .boka-lp__science-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: none;
+  }
+
+  .boka-lp .boka-lp__science-card strong {
+    font-size: 20px;
+  }
+
+  .boka-lp .boka-lp__science-card p {
+    font-size: 14px;
+    line-height: 1.55;
   }
 }
