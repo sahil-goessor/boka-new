@@ -2964,7 +2964,7 @@
 .boka-lp .boka-lp__science-collage-stage {
   position: relative;
   min-height: 620px;
-  border-radius: 34px;
+  border-radius: 0px;
   background: transparent;
   display: flex;
   align-items: center;
