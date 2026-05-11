@@ -1031,5 +1031,18 @@
 })();
 </script>
 
+<script>
+  window.addEventListener('load', function () {
+    if (document.getElementById('ze-snippet')) return;
+
+    var zendeskScript = document.createElement('script');
+    zendeskScript.id = 'ze-snippet';
+    zendeskScript.src = 'https://static.zdassets.com/ekr/snippet.js?key=b1617ed3-c9b2-4288-a7cc-4d2d8462f44e';
+    zendeskScript.defer = true;
+
+    document.body.appendChild(zendeskScript);
+  });
+</script>
+
 </body>
 </html>
