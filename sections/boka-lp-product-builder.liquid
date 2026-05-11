@@ -153,10 +153,6 @@
                   <span class="boka-lp__step-number">1</span>
                   {{ section.settings.variant_label }}
                 </h2>
-
-                {% if section.settings.variant_note != blank %}
-                  <p class="boka-lp__step-note">{{ section.settings.variant_note }}</p>
-                {% endif %}
               </div>
 
               <div class="boka-lp__goal-grid" data-boka-goal-grid>
@@ -185,10 +181,6 @@
                     <span class="boka-lp__step-number">2</span>
                     {{ section.settings.quantity_label }}
                   </h2>
-
-                  {% if section.settings.quantity_note != blank %}
-                    <p class="boka-lp__step-note">{{ section.settings.quantity_note }}</p>
-                  {% endif %}
                 </div>
 
                 <div class="boka-lp__quantity-row" data-boka-quantity-row>
@@ -207,10 +199,6 @@
                   </span>
                   {{ section.settings.plan_label }}
                 </h2>
-
-                {% if section.settings.plan_note != blank %}
-                  <p class="boka-lp__step-note">{{ section.settings.plan_note }}</p>
-                {% endif %}
               </div>
 
               <div class="boka-lp__plan-fallback" data-boka-plan-fallback>
@@ -225,7 +213,6 @@
                     </span>
                   </span>
 
-                  <span class="boka-lp__plan-note">{{ section.settings.subscription_note }}</span>
 
                   <ul class="boka-lp__plan-features">
                     <li>{{ section.settings.subscription_feature_1 }}</li>
