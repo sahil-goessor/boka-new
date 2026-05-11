@@ -1121,59 +1121,8 @@
       line-height: 1.35;
       font-weight: 800;
     }
-    /* FAQ */
+/* FAQ styles are consolidated in the final override block at the bottom. */
 
-
-    .boka-lp .boka-lp__faq {
-      border: var(--boka-border-medium);
-      border-radius: 18px;
-      overflow: hidden;
-      background: var(--boka-white);
-      box-shadow: var(--boka-shadow-card);
-    }
-
-    .boka-lp .boka-lp__faq-item + .boka-lp__faq-item {
-      border-top: 1px solid var(--boka-stone);
-    }
-
-    .boka-lp .boka-lp__faq-btn {
-      width: 100%;
-      border: 0;
-      background: transparent;
-      padding: 21px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      cursor: pointer;
-      text-align: left;
-      color: var(--boka-charcoal);
-      font-size: 15px;
-      font-weight: 900;
-    }
-
-    .boka-lp .boka-lp__faq-btn span {
-      color: var(--boka-olive);
-      font-size: 20px;
-      line-height: 1;
-      transition: transform .2s;
-    }
-
-    .boka-lp .boka-lp__faq-content {
-      display: none;
-      padding: 0 24px 22px;
-      color: var(--boka-gray);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .boka-lp .boka-lp__faq-item.is-open .boka-lp__faq-content {
-      display: block;
-    }
-
-    .boka-lp .boka-lp__faq-item.is-open .boka-lp__faq-btn span {
-      transform: rotate(45deg);
-    }
 
     /* Legacy classes kept for safety */
     .boka-lp .boka-lp__title {
@@ -2746,5 +2695,217 @@
 
   .boka-lp .boka-lp__compare-table-card--spotlight .boka-lp__compare-bad {
     font-size: 22px;
+  }
+}
+
+/* ==========================================================
+   CONSOLIDATED FAQ SECTION
+   Clean icon accordion list style
+   Use with:
+   <section class="boka-lp boka-lp-faq">
+   <div class="boka-lp__section boka-lp__section--faq">
+   ========================================================== */
+
+.boka-lp.boka-lp-faq,
+.boka-lp .boka-lp__section--faq {
+  background: var(--boka-white);
+}
+
+.boka-lp .boka-lp__section--faq {
+  padding: clamp(64px, 7vw, 96px) 5%;
+}
+
+.boka-lp .boka-lp__wrap--faq {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.boka-lp .boka-lp__faq-heading {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.boka-lp .boka-lp__faq-heading .boka-lp__eyebrow {
+  margin: 0 0 10px;
+}
+
+.boka-lp .boka-lp__faq-heading .boka-lp__section-title {
+  margin: 0 auto;
+  max-width: 760px;
+  color: var(--boka-charcoal);
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: .96;
+  letter-spacing: -.06em;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Reset old boxed FAQ styles */
+.boka-lp .boka-lp__section--faq .boka-lp__faq,
+.boka-lp.boka-lp-faq .boka-lp__faq {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* Rows */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-item,
+.boka-lp.boka-lp-faq .boka-lp__faq-item {
+  border-top: 1px solid rgba(34, 39, 33, .11);
+}
+
+.boka-lp .boka-lp__section--faq .boka-lp__faq-item:last-child,
+.boka-lp.boka-lp-faq .boka-lp__faq-item:last-child {
+  border-bottom: 1px solid rgba(34, 39, 33, .11);
+}
+
+.boka-lp .boka-lp__section--faq .boka-lp__faq-item + .boka-lp__faq-item,
+.boka-lp.boka-lp-faq .boka-lp__faq-item + .boka-lp__faq-item {
+  border-top: 1px solid rgba(34, 39, 33, .11);
+}
+
+/* Button layout */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-btn,
+.boka-lp.boka-lp-faq .boka-lp__faq-btn {
+  width: 100%;
+  min-height: 92px;
+  border: 0;
+  background: transparent;
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 22px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--boka-charcoal);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Left icon */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-icon,
+.boka-lp.boka-lp-faq .boka-lp__faq-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--boka-olive);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boka-lp .boka-lp__section--faq .boka-lp__faq-icon svg,
+.boka-lp.boka-lp-faq .boka-lp__faq-icon svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+/* Question text */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-question,
+.boka-lp.boka-lp-faq .boka-lp__faq-question {
+  color: var(--boka-charcoal);
+  font-size: clamp(20px, 2.3vw, 30px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+/* Chevron */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-chevron,
+.boka-lp.boka-lp-faq .boka-lp__faq-chevron {
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid var(--boka-charcoal);
+  border-bottom: 2px solid var(--boka-charcoal);
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+  justify-self: end;
+}
+
+.boka-lp .boka-lp__section--faq .boka-lp__faq-item.is-open .boka-lp__faq-chevron,
+.boka-lp.boka-lp-faq .boka-lp__faq-item.is-open .boka-lp__faq-chevron {
+  transform: rotate(-135deg);
+}
+
+/* Keep old plus-sign span from rotating if old markup remains */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-btn > span:not(.boka-lp__faq-icon):not(.boka-lp__faq-question):not(.boka-lp__faq-chevron),
+.boka-lp.boka-lp-faq .boka-lp__faq-btn > span:not(.boka-lp__faq-icon):not(.boka-lp__faq-question):not(.boka-lp__faq-chevron) {
+  color: var(--boka-charcoal);
+  font-size: 22px;
+  line-height: 1;
+  transform: none;
+}
+
+/* Content */
+.boka-lp .boka-lp__section--faq .boka-lp__faq-content,
+.boka-lp.boka-lp-faq .boka-lp__faq-content {
+  display: none;
+  max-width: 860px;
+  padding: 0 56px 28px 80px;
+  color: var(--boka-gray);
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+.boka-lp .boka-lp__section--faq .boka-lp__faq-item.is-open .boka-lp__faq-content,
+.boka-lp.boka-lp-faq .boka-lp__faq-item.is-open .boka-lp__faq-content {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .boka-lp .boka-lp__section--faq {
+    padding: 56px 16px;
+  }
+
+  .boka-lp .boka-lp__faq-heading {
+    max-width: none;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .boka-lp .boka-lp__faq-heading .boka-lp__section-title {
+    margin: 0;
+    max-width: none;
+    text-align: left;
+    font-size: clamp(32px, 10vw, 44px);
+  }
+
+  .boka-lp .boka-lp__section--faq .boka-lp__faq-btn,
+  .boka-lp.boka-lp-faq .boka-lp__faq-btn {
+    min-height: 76px;
+    grid-template-columns: 42px minmax(0, 1fr) 22px;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .boka-lp .boka-lp__section--faq .boka-lp__faq-icon,
+  .boka-lp.boka-lp-faq .boka-lp__faq-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .boka-lp .boka-lp__section--faq .boka-lp__faq-icon svg,
+  .boka-lp.boka-lp-faq .boka-lp__faq-icon svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .boka-lp .boka-lp__section--faq .boka-lp__faq-question,
+  .boka-lp.boka-lp-faq .boka-lp__faq-question {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .boka-lp .boka-lp__section--faq .boka-lp__faq-content,
+  .boka-lp.boka-lp-faq .boka-lp__faq-content {
+    padding: 0 34px 22px 56px;
+    font-size: 14px;
+    line-height: 1.58;
   }
 }
