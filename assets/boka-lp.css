@@ -2966,11 +2966,12 @@
   min-height: 620px;
   border-radius: 0px;
   background: transparent;
+  box-shadow: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(28px, 4vw, 48px);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .boka-lp .boka-lp__science-collage-stage::before {
