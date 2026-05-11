@@ -3622,18 +3622,18 @@
   border: 1px solid var(--boka-green-mid) !important;
 }
 
-.boka-lp .boka-lp__included-bento-card:nth-child(1) {
+.boka-lp .boka-lp__included-bento-card {
   align-items: stretch !important;
 }
 
-.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image {
-  min-height: 100% !important;
+.boka-lp .boka-lp__included-bento-image {
   height: 100% !important;
+  min-height: 190px !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img {
+.boka-lp .boka-lp__included-bento-image img {
   width: 100% !important;
   height: 100% !important;
   max-height: none !important;
