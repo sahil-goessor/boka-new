@@ -663,7 +663,7 @@
     .boka-lp .boka-lp__goal-card {
   position: relative;
   min-height: 74px;
-  border-radius: 22px;
+  border-radius: 2px;
   padding: 20px 62px 20px 22px;
   text-align: left;
 }
