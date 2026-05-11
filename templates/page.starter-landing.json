@@ -69,6 +69,13 @@
         "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
       }
     },
+    "lp_science": {
+      "type": "boka-lp-science",
+      "settings": {
+        "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
+        "science_image_alt": "Boka oral care products"
+      }
+    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -114,13 +121,6 @@
       "disabled": true,
       "settings": {}
     },
-    "lp_science": {
-      "type": "boka-lp-science",
-      "settings": {
-        "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
-        "science_image_alt": "Boka oral care products"
-      }
-    },
     "lp_reviews": {
       "type": "boka-lp-reviews",
       "settings": {}
@@ -138,27 +138,6 @@
       "settings": {
         "promo_banner_button_text": "Start My Routine"
       }
-    },
-    "yotpo_reviews_widget_jyrNdX": {
-      "type": "yotpo-reviews-widget",
-      "name": "Yotpo Reviews Widget",
-      "settings": {
-        "product": "best-of-boka-starter-kit",
-        "product_handle": "",
-        "yotpo_instance_id": "1002005",
-        "show_heading": true,
-        "heading_text": "Customer Reviews",
-        "heading_size": 32,
-        "heading_color": "#000000",
-        "heading_alignment": "center",
-        "heading_spacing": 32,
-        "container_width": 1200,
-        "background_color": "#ffffff",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40
-      }
     }
   },
   "order": [
@@ -172,7 +151,6 @@
     "lp_reviews",
     "lp_compare",
     "lp_faq",
-    "lp_bottom_cta",
-    "yotpo_reviews_widget_jyrNdX"
+    "lp_bottom_cta"
   ]
 }
