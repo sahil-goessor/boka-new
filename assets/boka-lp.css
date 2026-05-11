@@ -3621,3 +3621,21 @@
   background: var(--boka-white) !important;
   border: 1px solid var(--boka-green-mid) !important;
 }
+
+.boka-lp .boka-lp__included-bento-card:nth-child(1) {
+  align-items: stretch !important;
+}
+
+.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image {
+  min-height: 100% !important;
+  height: 100% !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
