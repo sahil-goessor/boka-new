@@ -865,7 +865,7 @@
   width: 100%;
   min-height: 60px;
   border: var(--boka-border-medium);
-  border-radius: 18px;
+  border-radius: 2px;
   background: var(--boka-charcoal);
   color: var(--boka-cream);
   padding: 18px 24px;
@@ -1431,7 +1431,7 @@
 
   .boka-lp .boka-lp__atc {
   min-height: 58px;
-  border-radius: 16px;
+  border-radius: 2px;
 }
 
   .boka-lp .boka-lp__guarantees {
