@@ -1416,28 +1416,7 @@
     font-size: 13px;
   }
 
-  /* What's inside mobile */
-  .boka-lp .boka-lp__included-mobile .boka-lp__wrap {
-    max-width: none;
-  }
-
-  .boka-lp .boka-lp__included-mobile .boka-lp__section-title {
-    font-size: clamp(26px, 8vw, 36px);
-    margin-bottom: 12px;
-  }
-
-  .boka-lp .boka-lp__included-mobile .boka-lp__section-copy {
-    margin-bottom: 18px;
-    font-size: 14.5px;
-    line-height: 1.55;
-  }
-
-  .boka-lp .boka-lp__included-mobile .boka-lp__info-card {
-    padding: 18px;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(34, 39, 33, 0.08);
-    box-shadow: none;
-  }
+  /* Form cards */
 
   /* Form cards */
   .boka-lp .boka-lp__goal-card {
@@ -1837,223 +1816,10 @@
 
   
 
-    /* ==========================================================
-       Final override: show desktop What's Inside section on mobile
-       directly after the hero banner, and hide the old mobile duplicate.
-       ========================================================== */
-
-    @media (max-width: 980px) {
-      .boka-lp .boka-lp__promo-banner {
-        order: 1;
-      }
-
-      .boka-lp .boka-lp__hero-full-bleed {
-        order: 2;
-        grid-column: 1 / -1;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-      }
-
-      .boka-lp .boka-lp__included-desktop,
-      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
-        display: block !important;
-        width: 100%;
-        padding: 32px 16px !important;
-        background: var(--boka-white);
-      }
-
-      .boka-lp .boka-lp__included-desktop .boka-lp__wrap,
-      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop .boka-lp__wrap {
-        width: 100%;
-        max-width: none;
-        margin: 0 auto;
-        padding: 22px 18px;
-        border-radius: 26px;
-        background: linear-gradient(
-          180deg,
-          var(--boka-green-light) 0%,
-          rgba(230, 244, 212, .62) 100%
-        );
-        border: 1px solid var(--boka-green-mid);
-      }
-
-      .boka-lp .boka-lp__included-desktop .boka-lp__section-title {
-        font-size: clamp(26px, 8vw, 36px);
-        margin-bottom: 12px;
-      }
-
-      .boka-lp .boka-lp__included-desktop .boka-lp__section-copy {
-        margin-bottom: 18px;
-        font-size: 14.5px;
-        line-height: 1.55;
-      }
-
-      .boka-lp .boka-lp__included-desktop .boka-lp__cards-4 {
-        grid-template-columns: 1fr;
-      }
-
-      .boka-lp .boka-lp__included-desktop .boka-lp__info-card {
-        padding: 18px;
-        background: rgba(255, 255, 255, .84);
-        border: 1px solid rgba(34, 39, 33, .08);
-        box-shadow: none;
-      }
-
-      .boka-lp .boka-lp__included-mobile {
-        display: none !important;
-      }
-
-      .boka-lp .boka-lp__gallery-card {
-        order: 3;
-      }
-
-      .boka-lp .boka-lp__guarantees {
-        display: none;
-      }
-
-      .boka-lp .boka-lp__buybox {
-        order: 5;
-      }
-    }
-    .boka-lp .boka-lp__included-desktop .boka-lp__info-card strong,
-.boka-lp .boka-lp__included-mobile .boka-lp__info-card strong {
-  font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
-  font-size: 18px;
-  line-height: 1.15;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-}
+    
 
 
-    /* ==========================================================
-       Final override: included-item thumbnail cards
-       Adds fixed width/height thumbnails and removes descriptions.
-       ========================================================== */
-
-    .boka-lp .boka-lp__included-cards {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .boka-lp .boka-lp__included-card {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      align-items: start;
-      justify-items: center;
-      gap: 14px;
-      min-height: 232px;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .boka-lp .boka-lp__included-card .boka-lp__info-icon,
-    .boka-lp .boka-lp__included-card p {
-      display: none !important;
-    }
-
-    .boka-lp .boka-lp__included-image {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  overflow: visible !important;
-}
-
-.boka-lp .boka-lp__included-image img {
-  display: block;
-  width: 150px;
-  height: 150px;
-  max-width: 100%;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-    .boka-lp .boka-lp__included-image-placeholder {
-      width: 132px;
-      height: 132px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--boka-charcoal);
-      font-size: 18px;
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: .18em;
-      opacity: .25;
-    }
-
-    .boka-lp .boka-lp__included-card strong {
-      margin: 0;
-      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
-      color: var(--boka-charcoal);
-      font-size: 17px;
-      line-height: 1.15;
-      font-weight: 900;
-      letter-spacing: -.02em;
-      text-align: center;
-    }
-
-    @media (min-width: 981px) and (max-width: 1180px) {
-      .boka-lp .boka-lp__included-cards {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 980px) {
-      .boka-lp .boka-lp__included-cards,
-      .boka-lp .boka-lp__included-desktop .boka-lp__cards-4,
-      .boka-lp .boka-lp__included-mobile .boka-lp__cards-4 {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .boka-lp .boka-lp__included-card {
-        grid-template-columns: 78px minmax(0, 1fr);
-        grid-template-rows: auto;
-        justify-items: start;
-        align-items: center;
-        min-height: 102px;
-        padding: 12px;
-        gap: 14px;
-        text-align: left;
-      }
-
-      .boka-lp .boka-lp__included-image {
-        width: 78px;
-        height: 78px;
-        border-radius: 14px;
-        flex: 0 0 78px;
-      }
-
-      .boka-lp .boka-lp__included-image img {
-        width: 68px;
-        height: 68px;
-        max-width: 68px;
-        max-height: 68px;
-      }
-
-      .boka-lp .boka-lp__included-image-placeholder {
-        width: 68px;
-        height: 68px;
-        font-size: 11px;
-      }
-
-      .boka-lp .boka-lp__included-card strong {
-        font-size: 16.5px;
-        line-height: 1.16;
-        text-align: left;
-      }
-    }
-
-    .boka-lp {
-  scroll-behavior: smooth;
-}
-
-.boka-lp__buybox-inner {
-  scroll-margin-top: 120px;
-}
+    
 
 
     /* ==========================================================
@@ -2062,11 +1828,7 @@
        Keeps the desktop What's inside section visible on both desktop and mobile,
        and removes the old duplicate mobile version from the layout.
        ========================================================== */
-    .boka-lp .boka-lp__included-mobile {
-      display: none !important;
-    }
-
-    .boka-lp .boka-lp__hero-full-bleed {
+.boka-lp .boka-lp__hero-full-bleed {
       grid-column: auto;
       width: 100vw;
       margin-left: calc(50% - 50vw);
@@ -2078,11 +1840,7 @@
     }
 
     @media (max-width: 980px) {
-      .boka-lp .boka-lp__included-mobile {
-        display: none !important;
-      }
-
-      .boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
+.boka-lp .boka-lp__hero-full-bleed .boka-lp__included-desktop {
         display: block !important;
         padding: 36px 16px !important;
       }
@@ -3469,10 +3227,8 @@
 }
 
 /* ==========================================================
-   FINAL WHAT'S INCLUDED BENTO GRID
-   Clean 5-item Boka bento layout.
-   Replaces old included-card / kit-flow styling.
-   Use with:
+   WHAT'S INCLUDED / INCLUDED BENTO — REFINED
+   Final layout for:
    <section class="boka-lp boka-lp-included-bento-section">
    <div class="boka-lp__section boka-lp__section--included-bento">
    ========================================================== */
@@ -3483,7 +3239,7 @@
 }
 
 .boka-lp .boka-lp__section--included-bento {
-  padding: clamp(64px, 8vw, 104px) 5% !important;
+  padding: clamp(60px, 7vw, 96px) 5% clamp(28px, 4vw, 52px) !important;
 }
 
 .boka-lp .boka-lp__included-bento-wrap {
@@ -3512,12 +3268,12 @@
 
 .boka-lp .boka-lp__included-bento-head .boka-lp__section-title {
   margin: 0 0 14px;
-  max-width: 820px;
+  max-width: 9.5ch;
   color: var(--boka-charcoal);
   font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
-  font-size: clamp(38px, 5vw, 68px);
-  line-height: .94;
-  letter-spacing: -.065em;
+  font-size: clamp(44px, 5.8vw, 78px);
+  line-height: .9;
+  letter-spacing: -.07em;
   font-weight: 900;
 }
 
@@ -3534,67 +3290,90 @@
 .boka-lp .boka-lp__included-bento {
   display: grid !important;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-auto-rows: minmax(260px, auto);
-  gap: 16px;
+  gap: 18px;
+  align-items: stretch;
   margin-top: 34px;
 }
 
-/* Reset all bento cards */
+/* Card base */
 .boka-lp .boka-lp__included-bento-card {
   position: relative;
   overflow: hidden;
-  min-height: 260px;
+  min-height: 300px;
   padding: 26px;
   border-radius: 28px;
-  background: rgba(230, 244, 212, .34);
-  border: 1px solid rgba(191, 214, 165, .48);
-  box-shadow: none !important;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  border: 1px solid rgba(191, 214, 165, .58);
+  background: linear-gradient(
+    180deg,
+    rgba(236, 244, 226, .9) 0%,
+    rgba(230, 244, 212, .62) 100%
+  );
+  box-shadow: 0 10px 24px rgba(34, 39, 33, .035) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 18px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-/* Balanced 5-card layout */
+.boka-lp .boka-lp__included-bento-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(165, 190, 139, .88);
+  box-shadow: 0 16px 34px rgba(34, 39, 33, .06) !important;
+}
+
+/* Balanced desktop bento */
 .boka-lp .boka-lp__included-bento-card:nth-child(1) {
   grid-column: span 7;
-  min-height: 420px;
-  grid-template-columns: minmax(0, .82fr) minmax(240px, 1fr);
-  grid-template-rows: auto;
-  align-items: center;
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(190px, .92fr);
+  align-items: end;
 }
 
 .boka-lp .boka-lp__included-bento-card:nth-child(2) {
   grid-column: span 5;
-  min-height: 420px;
+  min-height: 350px;
 }
 
 .boka-lp .boka-lp__included-bento-card:nth-child(3),
 .boka-lp .boka-lp__included-bento-card:nth-child(4),
 .boka-lp .boka-lp__included-bento-card:nth-child(5) {
   grid-column: span 4;
+  min-height: 300px;
 }
 
-/* Soft Boka color variation */
+/* Soft variation so the grid has movement without looking busy */
 .boka-lp .boka-lp__included-bento-card:nth-child(2),
 .boka-lp .boka-lp__included-bento-card:nth-child(4) {
-  background: rgba(250, 250, 245, .92);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 250, 245, .96) 0%,
+    rgba(246, 246, 240, .92) 100%
+  );
   border-color: rgba(34, 39, 33, .08);
 }
 
-.boka-lp .boka-lp__included-bento-card:nth-child(3),
 .boka-lp .boka-lp__included-bento-card:nth-child(5) {
-  background: rgba(230, 244, 212, .44);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 244, 218, .92) 0%,
+    rgba(223, 236, 207, .78) 100%
+  );
 }
 
 /* Copy */
 .boka-lp .boka-lp__included-bento-copy {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .boka-lp .boka-lp__included-bento-number {
   display: inline-flex;
-  margin-bottom: 10px;
+  margin: 0 0 2px;
   color: var(--boka-olive);
   font-size: 11px;
   line-height: 1;
@@ -3607,90 +3386,102 @@
   position: relative;
   width: fit-content;
   max-width: 13ch;
-  margin: 0 0 12px;
+  margin: 0;
   color: var(--boka-charcoal);
   font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
-  font-size: clamp(24px, 2.4vw, 34px);
-  line-height: .98;
-  letter-spacing: -.055em;
+  font-size: clamp(26px, 2.5vw, 38px);
+  line-height: .92;
+  letter-spacing: -.06em;
   font-weight: 900;
+}
+
+.boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-copy h3,
+.boka-lp .boka-lp__included-bento-card:nth-child(3) .boka-lp__included-bento-copy h3,
+.boka-lp .boka-lp__included-bento-card:nth-child(4) .boka-lp__included-bento-copy h3,
+.boka-lp .boka-lp__included-bento-card:nth-child(5) .boka-lp__included-bento-copy h3 {
+  font-size: clamp(24px, 2.1vw, 32px);
 }
 
 .boka-lp .boka-lp__included-bento-copy h3::after {
   content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
+  display: block;
   width: 100%;
-  height: 7px;
+  max-width: 210px;
+  height: 5px;
+  margin-top: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, .86);
-  z-index: -1;
+  background: rgba(255, 255, 255, .68);
 }
 
 .boka-lp .boka-lp__included-bento-copy p {
-  max-width: 30ch;
   margin: 0;
+  max-width: 30ch;
   color: var(--boka-gray);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.45;
   font-weight: 650;
 }
 
-/* Image area */
+/* Images */
 .boka-lp .boka-lp__included-bento-image {
   position: relative;
-  z-index: 1;
-  min-height: 170px;
+  z-index: 2;
+  min-height: 160px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
 .boka-lp .boka-lp__included-bento-image img {
   display: block;
-  width: min(100%, 230px);
-  height: 200px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  filter: drop-shadow(0 12px 18px rgba(34, 39, 33, .07));
 }
 
 .boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img {
-  width: min(100%, 330px);
-  height: 300px;
+  max-height: 230px;
 }
 
 .boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image img {
-  width: min(100%, 260px);
-  height: 240px;
+  max-height: 210px;
 }
 
-/* Soft decorative wash */
-.boka-lp .boka-lp__included-bento-card::before {
-  content: "";
-  position: absolute;
-  right: -90px;
-  bottom: -100px;
-  width: 230px;
-  height: 230px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .38);
-  pointer-events: none;
+.boka-lp .boka-lp__included-bento-card:nth-child(3) .boka-lp__included-bento-image img,
+.boka-lp .boka-lp__included-bento-card:nth-child(4) .boka-lp__included-bento-image img,
+.boka-lp .boka-lp__included-bento-card:nth-child(5) .boka-lp__included-bento-image img {
+  max-height: 145px;
 }
 
 /* Placeholder */
 .boka-lp .boka-lp__included-bento-image .boka-lp__included-image-placeholder {
-  width: 150px;
-  height: 150px;
-  display: flex;
+  width: 140px;
+  height: 140px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--boka-charcoal);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 900;
   letter-spacing: .18em;
-  opacity: .22;
+  opacity: .24;
+}
+
+/* Soft decorative wash */
+.boka-lp .boka-lp__included-bento-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -34px;
+  width: 145px;
+  height: 145px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .28);
+  pointer-events: none;
 }
 
 /* Tablet */
@@ -3703,7 +3494,6 @@
     grid-column: span 6;
     min-height: 320px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
   }
 
   .boka-lp .boka-lp__included-bento-card:nth-child(5) {
@@ -3714,7 +3504,7 @@
 /* Mobile */
 @media (max-width: 760px) {
   .boka-lp .boka-lp__section--included-bento {
-    padding: 56px 16px !important;
+    padding: 52px 16px 28px !important;
   }
 
   .boka-lp .boka-lp__included-bento-head {
@@ -3722,18 +3512,19 @@
   }
 
   .boka-lp .boka-lp__included-bento-head .boka-lp__section-title {
-    font-size: clamp(32px, 10vw, 46px);
-    line-height: .98;
+    max-width: 10ch;
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: .96;
   }
 
   .boka-lp .boka-lp__included-bento-head .boka-lp__section-copy {
+    max-width: 100%;
     font-size: 14.5px;
     line-height: 1.5;
   }
 
   .boka-lp .boka-lp__included-bento {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     gap: 12px;
     margin-top: 24px;
   }
@@ -3746,26 +3537,97 @@
   .boka-lp .boka-lp__included-bento-card:nth-child(5) {
     grid-column: auto;
     min-height: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 112px;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 18px;
     border-radius: 22px;
   }
 
-  .boka-lp .boka-lp__included-bento-copy h3 {
-    max-width: 16ch;
-    font-size: 26px;
-    line-height: 1;
+  .boka-lp .boka-lp__included-bento-card:nth-child(even) {
+    grid-template-columns: 112px minmax(0, 1fr);
+  }
+
+  .boka-lp .boka-lp__included-bento-card:nth-child(even) .boka-lp__included-bento-copy {
+    order: 2;
+  }
+
+  .boka-lp .boka-lp__included-bento-card:nth-child(even) .boka-lp__included-bento-image {
+    order: 1;
+  }
+
+  .boka-lp .boka-lp__included-bento-copy h3,
+  .boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-copy h3,
+  .boka-lp .boka-lp__included-bento-card:nth-child(3) .boka-lp__included-bento-copy h3,
+  .boka-lp .boka-lp__included-bento-card:nth-child(4) .boka-lp__included-bento-copy h3,
+  .boka-lp .boka-lp__included-bento-card:nth-child(5) .boka-lp__included-bento-copy h3 {
+    max-width: 15ch;
+    font-size: 24px;
+    line-height: .98;
+  }
+
+  .boka-lp .boka-lp__included-bento-copy h3::after {
+    max-width: 120px;
+    height: 4px;
+  }
+
+  .boka-lp .boka-lp__included-bento-copy p {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.42;
   }
 
   .boka-lp .boka-lp__included-bento-image {
-    min-height: 140px;
+    min-height: 96px;
+    align-items: center;
   }
 
   .boka-lp .boka-lp__included-bento-image img,
   .boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img,
-  .boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image img {
-    width: min(100%, 190px);
-    height: 160px;
+  .boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(3) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(4) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(5) .boka-lp__included-bento-image img {
+    max-height: 96px;
+  }
+
+  .boka-lp .boka-lp__included-bento-card::after {
+    width: 86px;
+    height: 86px;
+    right: -18px;
+    bottom: -18px;
+  }
+}
+
+/* Small phones: stack image below copy if the two-column mobile cards feel tight */
+@media (max-width: 420px) {
+  .boka-lp .boka-lp__included-bento-card,
+  .boka-lp .boka-lp__included-bento-card:nth-child(1),
+  .boka-lp .boka-lp__included-bento-card:nth-child(2),
+  .boka-lp .boka-lp__included-bento-card:nth-child(3),
+  .boka-lp .boka-lp__included-bento-card:nth-child(4),
+  .boka-lp .boka-lp__included-bento-card:nth-child(5),
+  .boka-lp .boka-lp__included-bento-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .boka-lp .boka-lp__included-bento-card:nth-child(even) .boka-lp__included-bento-copy,
+  .boka-lp .boka-lp__included-bento-card:nth-child(even) .boka-lp__included-bento-image {
+    order: initial;
+  }
+
+  .boka-lp .boka-lp__included-bento-image {
+    justify-content: flex-start;
+  }
+
+  .boka-lp .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(3) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(4) .boka-lp__included-bento-image img,
+  .boka-lp .boka-lp__included-bento-card:nth-child(5) .boka-lp__included-bento-image img {
+    max-height: 110px;
   }
 }
