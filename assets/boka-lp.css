@@ -1087,7 +1087,7 @@
     .boka-lp .boka-lp__proof-number {
   display: block;
   color: var(--boka-charcoal);
-  font-size: clamp(20px, 3vw, 38px);
+  font-size: clamp(20px, 3vw, 24px);
   line-height: 1;
   letter-spacing: -.04em;
   font-weight: 900;
