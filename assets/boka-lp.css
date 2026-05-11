@@ -2332,7 +2332,7 @@
 }
 
 .boka-lp .boka-lp__compare-stars {
-  color: var(--boka-green-deep);
+  color: var(--boka-charcoal);
   letter-spacing: .08em;
   font-size: 13px;
   white-space: nowrap;
