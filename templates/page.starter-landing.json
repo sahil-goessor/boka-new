@@ -61,6 +61,7 @@
     },
     "lp_included": {
       "type": "boka-lp-whats-included",
+      "disabled": true,
       "settings": {
         "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
         "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
