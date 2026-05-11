@@ -2965,9 +2965,7 @@
   position: relative;
   min-height: 620px;
   border-radius: 34px;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, .62) 0%, rgba(255, 255, 255, 0) 46%),
-    linear-gradient(180deg, rgba(230, 244, 212, .58) 0%, rgba(211, 231, 192, .42) 100%);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
