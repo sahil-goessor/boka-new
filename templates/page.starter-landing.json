@@ -75,7 +75,10 @@
     },
     "lp_science": {
       "type": "boka-lp-science",
-      "settings": {}
+      "settings": {
+        "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
+        "science_image_alt": "Boka oral care products"
+      }
     },
     "lp_builder": {
       "type": "boka-lp-product-builder",
