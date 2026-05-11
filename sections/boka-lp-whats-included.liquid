@@ -1,8 +1,8 @@
-<section class="boka-lp boka-lp-kit-flow-section">
-  <div class="boka-lp__section boka-lp__section--kit-flow" id="boka-included-{{ section.id }}">
-    <div class="boka-lp__wrap boka-lp__kit-flow-wrap">
+<section class="boka-lp boka-lp-included-bento-section">
+  <div class="boka-lp__section boka-lp__section--included-bento" id="boka-included-{{ section.id }}">
+    <div class="boka-lp__wrap boka-lp__included-bento-wrap">
 
-      <div class="boka-lp__kit-flow-head">
+      <div class="boka-lp__included-bento-head">
         <p class="boka-lp__eyebrow">What’s inside</p>
         <h2 class="boka-lp__section-title">
           Everything you need to make your daily routine feel easy.
@@ -12,19 +12,20 @@
         </p>
       </div>
 
-      <div class="boka-lp__kit-flow">
-        <div class="boka-lp__kit-flow-item">
-          <div class="boka-lp__kit-flow-copy">
-            <span class="boka-lp__kit-flow-number">01</span>
+      <div class="boka-lp__included-bento">
+        <div class="boka-lp__included-bento-card boka-lp__included-bento-card--large">
+          <div class="boka-lp__included-bento-copy">
+            <span class="boka-lp__included-bento-number">01</span>
             <h3>Goal Based n-Ha Toothpaste</h3>
+            <p>Your daily n-Ha toothpaste, matched to your routine goal.</p>
           </div>
 
-          <div class="boka-lp__kit-flow-image">
+          <div class="boka-lp__included-bento-image">
             {% if section.settings.included_toothpaste_image != blank %}
               <img
-                src="{{ section.settings.included_toothpaste_image | image_url: width: 620 }}"
-                width="310"
-                height="310"
+                src="{{ section.settings.included_toothpaste_image | image_url: width: 720 }}"
+                width="360"
+                height="360"
                 loading="lazy"
                 alt="Goal Based n-Ha Toothpaste"
               >
@@ -34,18 +35,19 @@
           </div>
         </div>
 
-        <div class="boka-lp__kit-flow-item is-reverse">
-          <div class="boka-lp__kit-flow-copy">
-            <span class="boka-lp__kit-flow-number">02</span>
+        <div class="boka-lp__included-bento-card">
+          <div class="boka-lp__included-bento-copy">
+            <span class="boka-lp__included-bento-number">02</span>
             <h3>Charcoal Classic Brush</h3>
+            <p>Soft, simple, and made for everyday brushing.</p>
           </div>
 
-          <div class="boka-lp__kit-flow-image">
+          <div class="boka-lp__included-bento-image">
             {% if section.settings.included_brush_image != blank %}
               <img
-                src="{{ section.settings.included_brush_image | image_url: width: 620 }}"
-                width="310"
-                height="310"
+                src="{{ section.settings.included_brush_image | image_url: width: 520 }}"
+                width="260"
+                height="260"
                 loading="lazy"
                 alt="Charcoal Classic Brush"
               >
@@ -55,18 +57,19 @@
           </div>
         </div>
 
-        <div class="boka-lp__kit-flow-item">
-          <div class="boka-lp__kit-flow-copy">
-            <span class="boka-lp__kit-flow-number">03</span>
+        <div class="boka-lp__included-bento-card">
+          <div class="boka-lp__included-bento-copy">
+            <span class="boka-lp__included-bento-number">03</span>
             <h3>Teflon/Petroleum-free Floss</h3>
+            <p>A cleaner floss step for the full routine.</p>
           </div>
 
-          <div class="boka-lp__kit-flow-image">
+          <div class="boka-lp__included-bento-image">
             {% if section.settings.included_floss_image != blank %}
               <img
-                src="{{ section.settings.included_floss_image | image_url: width: 620 }}"
-                width="310"
-                height="310"
+                src="{{ section.settings.included_floss_image | image_url: width: 520 }}"
+                width="260"
+                height="260"
                 loading="lazy"
                 alt="Teflon- and petroleum-free Floss"
               >
@@ -76,18 +79,19 @@
           </div>
         </div>
 
-        <div class="boka-lp__kit-flow-item is-reverse">
-          <div class="boka-lp__kit-flow-copy">
-            <span class="boka-lp__kit-flow-number">04</span>
+        <div class="boka-lp__included-bento-card">
+          <div class="boka-lp__included-bento-copy">
+            <span class="boka-lp__included-bento-number">04</span>
             <h3>Rasana Tongue Cleaner</h3>
+            <p>A small finishing step for a fresher-feeling routine.</p>
           </div>
 
-          <div class="boka-lp__kit-flow-image">
+          <div class="boka-lp__included-bento-image">
             {% if section.settings.included_tongue_cleaner_image != blank %}
               <img
-                src="{{ section.settings.included_tongue_cleaner_image | image_url: width: 620 }}"
-                width="310"
-                height="310"
+                src="{{ section.settings.included_tongue_cleaner_image | image_url: width: 520 }}"
+                width="260"
+                height="260"
                 loading="lazy"
                 alt="Rasana Tongue Cleaner"
               >
@@ -97,18 +101,19 @@
           </div>
         </div>
 
-        <div class="boka-lp__kit-flow-item">
-          <div class="boka-lp__kit-flow-copy">
-            <span class="boka-lp__kit-flow-number">05</span>
+        <div class="boka-lp__included-bento-card boka-lp__included-bento-card--wide">
+          <div class="boka-lp__included-bento-copy">
+            <span class="boka-lp__included-bento-number">05</span>
             <h3>Boka Toiletry Bag</h3>
+            <p>Keep the full routine together at home or on the go.</p>
           </div>
 
-          <div class="boka-lp__kit-flow-image">
+          <div class="boka-lp__included-bento-image">
             {% if section.settings.included_bag_image != blank %}
               <img
-                src="{{ section.settings.included_bag_image | image_url: width: 620 }}"
-                width="310"
-                height="310"
+                src="{{ section.settings.included_bag_image | image_url: width: 720 }}"
+                width="360"
+                height="360"
                 loading="lazy"
                 alt="Boka Toiletry Bag"
               >
