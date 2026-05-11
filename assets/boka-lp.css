@@ -2961,3 +2961,151 @@
     font-size: 13.5px;
   }
 }
+
+/* ==========================================================
+   FINAL OVERRIDE: Two-column compare table
+   Use with: .boka-lp__compare-table-card--two-col
+   Structure: Boka column left, Typical toothpaste column right.
+   ========================================================== */
+
+.boka-lp .boka-lp__compare-table-card--two-col {
+  overflow: hidden;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col::before {
+  content: none;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch;
+  min-width: 0 !important;
+  min-height: 72px;
+  border-bottom: 1px dashed rgba(34, 39, 33, .22);
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid:last-child {
+  border-bottom: 0;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid > div {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px;
+  color: var(--boka-charcoal);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 750;
+  text-align: left;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid > div:first-child {
+  background: rgba(230, 244, 212, .48);
+  border-right: 1px solid rgba(34, 39, 33, .12);
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid--head {
+  min-height: 58px;
+  border-bottom: 1px solid rgba(34, 39, 33, .18);
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid--head > div {
+  justify-content: center;
+  text-align: center;
+  color: var(--boka-charcoal);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-brand span {
+  color: var(--boka-olive);
+  font-family: "Ivar Display Italic", "Times New Roman", serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-good,
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-bad,
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-maybe {
+  flex: 0 0 auto;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-good {
+  font-size: 0;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-good::before {
+  content: "✓";
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--boka-green);
+  color: var(--boka-charcoal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-bad {
+  color: var(--boka-clay);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-maybe {
+  color: var(--boka-gray);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .boka-lp .boka-lp__compare-table-card--two-col {
+    overflow: hidden;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid {
+    grid-template-columns: 1fr 1fr !important;
+    min-width: 0 !important;
+    min-height: auto;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid > div {
+    padding: 14px 12px;
+    font-size: 12.5px;
+    line-height: 1.35;
+    align-items: flex-start;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-grid--head > div {
+    align-items: center;
+    font-size: 11px;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-good::before {
+    width: 21px;
+    height: 21px;
+    font-size: 12px;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--two-col .boka-lp__compare-bad {
+    font-size: 20px;
+  }
+}
+
