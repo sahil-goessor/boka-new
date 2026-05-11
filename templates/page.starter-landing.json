@@ -73,6 +73,10 @@
       "type": "boka-lp-refill-plan",
       "settings": {}
     },
+    "lp_science": {
+      "type": "boka-lp-science",
+      "settings": {}
+    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -117,10 +121,6 @@
       "type": "boka-lp-reviews",
       "settings": {}
     },
-    "lp_science": {
-      "type": "boka-lp-science",
-      "settings": {}
-    },
     "lp_compare": {
       "type": "boka-lp-compare",
       "settings": {}
@@ -135,10 +135,26 @@
         "promo_banner_button_text": "Start My Routine"
       }
     },
-    "blocks_4GdTJU": {
-      "type": "_blocks",
-      "name": "Marquee text ticker",
-      "settings": {}
+    "yotpo_reviews_widget_jyrNdX": {
+      "type": "yotpo-reviews-widget",
+      "name": "Yotpo Reviews Widget",
+      "settings": {
+        "product": "best-of-boka-starter-kit",
+        "product_handle": "",
+        "yotpo_instance_id": "1002005",
+        "show_heading": true,
+        "heading_text": "Customer Reviews",
+        "heading_size": 32,
+        "heading_color": "#000000",
+        "heading_alignment": "center",
+        "heading_spacing": 32,
+        "container_width": 1200,
+        "background_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
     }
   },
   "order": [
@@ -153,6 +169,6 @@
     "lp_compare",
     "lp_faq",
     "lp_bottom_cta",
-    "blocks_4GdTJU"
+    "yotpo_reviews_widget_jyrNdX"
   ]
 }
