@@ -3438,7 +3438,7 @@
   max-width: 100%;
   height: auto;
   max-height: 180px;
-  object-fit: cover;
+  object-fit: 100%;
 }
 
 .boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img {
