@@ -1221,7 +1221,7 @@
     .boka-lp .boka-lp__included-desktop {
       display: block;
       background: var(--boka-white);
-      padding: 54px 4%
+      padding: 54px 4%;
     }
 
     .boka-lp .boka-lp__included-desktop .boka-lp__wrap {
@@ -3106,13 +3106,13 @@
 }
 
 /* ==========================================================
-   FINAL FONT + COLOR CONSISTENCY OVERRIDES
-   Keeps Boka landing page typography and colors consistent.
-   Also cleans up the science collage section by removing the
-   glossy stage background, inner box, and heavy card styling.
+   CONSOLIDATED CLEANUP OVERRIDES
+   - Normalizes fonts and colors across the Boka landing page
+   - Flattens the science collage section
+   - Keeps science cards floating on mobile in a controlled layout
    ========================================================== */
 
-/* Global typography normalization inside Boka landing page */
+/* Global type normalization */
 .boka-lp,
 .boka-lp button,
 .boka-lp input,
@@ -3132,7 +3132,7 @@
   font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
 }
 
-/* Keep italic accent styling only for intentional <em> text */
+/* Keep the italic brand accent only when intentionally using <em> */
 .boka-lp em {
   font-family: "Ivar Display Italic", "Times New Roman", serif;
   font-style: italic;
@@ -3140,7 +3140,7 @@
   letter-spacing: -.02em;
 }
 
-/* Standard heading color/weight rhythm */
+/* Consistent heading treatment */
 .boka-lp h1,
 .boka-lp h2,
 .boka-lp h3,
@@ -3149,38 +3149,40 @@
 .boka-lp .boka-lp__goal-title,
 .boka-lp .boka-lp__plan-title,
 .boka-lp .boka-lp__compare-heading,
-.boka-lp .boka-lp__faq-question {
+.boka-lp .boka-lp__faq-question,
+.boka-lp .boka-lp__science-card strong {
   color: var(--boka-charcoal);
   font-weight: 900;
 }
 
-/* Standard body copy color rhythm */
-.boka-lp p,
-.boka-lp li,
+/* Consistent body copy color */
 .boka-lp .boka-lp__section-copy,
 .boka-lp .boka-lp__compare-text,
 .boka-lp .boka-lp__faq-content,
 .boka-lp .boka-lp__info-card p,
 .boka-lp .boka-lp__routine-panel p,
 .boka-lp .boka-lp__routine-panel li,
-.boka-lp .boka-lp__science-card p {
+.boka-lp .boka-lp__science-card p,
+.boka-lp .boka-lp__proof-label,
+.boka-lp .boka-lp__nav-links {
   color: var(--boka-gray);
 }
 
-/* Eyebrows and small emphasis labels */
+/* Consistent eyebrow/label treatment */
 .boka-lp .boka-lp__eyebrow,
 .boka-lp .boka-lp__promo-eyebrow,
 .boka-lp .boka-lp__science-collage-copy .boka-lp__eyebrow,
-.boka-lp .boka-lp__compare-copy .boka-lp__eyebrow {
+.boka-lp .boka-lp__compare-copy .boka-lp__eyebrow,
+.boka-lp .boka-lp__pill,
+.boka-lp .boka-lp__hero-offer-pills span {
   color: var(--boka-olive);
   font-weight: 900;
   letter-spacing: .13em;
   text-transform: uppercase;
 }
 
-/* Buttons should always keep the same Boka CTA treatment */
+/* Consistent primary CTA treatment */
 .boka-lp .boka-lp__nav-cta,
-.boka-lp .boka-lp__bottom-button,
 .boka-lp .boka-lp__promo-banner-button,
 .boka-lp .boka-lp__compare-button,
 .boka-lp .boka-lp__atc {
@@ -3189,40 +3191,112 @@
   border-color: var(--boka-charcoal);
 }
 
-/* Cards/surfaces should use Boka tokens instead of one-off colors */
+/* Consistent card surfaces */
 .boka-lp .boka-lp__info-card,
 .boka-lp .boka-lp__routine-panel,
 .boka-lp .boka-lp__product-summary-card,
 .boka-lp .boka-lp__buybox-inner,
-.boka-lp .boka-lp__gallery-card,
-.boka-lp .boka-lp__proof-bar {
+.boka-lp .boka-lp__gallery-card {
+  background: var(--boka-surface);
+  border-color: var(--boka-stone);
   color: var(--boka-charcoal);
 }
+
+/* ==========================================================
+   Science collage section cleanup
+   ========================================================== */
 
 .boka-lp.boka-lp-science,
 .boka-lp .boka-lp__section--science-collage {
   background: var(--boka-green-light) !important;
 }
 
+.boka-lp .boka-lp__section--science-collage {
+  padding: clamp(68px, 8vw, 110px) 5%;
+  overflow: hidden;
+}
+
+.boka-lp .boka-lp__science-collage-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.boka-lp .boka-lp__science-collage-copy {
+  max-width: 860px;
+  margin: 0 0 34px;
+}
+
+.boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
+  margin: 0;
+  max-width: 880px;
+  color: var(--boka-charcoal);
+  font-size: clamp(42px, 5.4vw, 76px);
+  line-height: .92;
+  letter-spacing: -.065em;
+  font-weight: 900;
+}
+
+/* Remove glossy/radial stage and inner box */
 .boka-lp .boka-lp__science-collage-stage {
+  position: relative;
+  min-height: 620px;
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
   overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 48px);
 }
 
 .boka-lp .boka-lp__science-collage-stage::before {
   display: none !important;
 }
 
-.boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
-  font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
+/* Product image */
+.boka-lp .boka-lp__science-collage-image {
+  position: relative;
+  z-index: 1;
+  width: min(58vw, 620px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 28px rgba(34, 39, 33, .08)) !important;
+}
+
+.boka-lp .boka-lp__science-collage-placeholder {
+  position: relative;
+  z-index: 1;
+  width: min(58vw, 620px);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--boka-charcoal);
-  font-weight: 900;
-  letter-spacing: -.065em;
+  font-size: clamp(44px, 8vw, 96px);
+  line-height: 1;
+  letter-spacing: .18em;
+  font-weight: 400;
+  opacity: .18;
+}
+
+/* Desktop floating cards */
+.boka-lp .boka-lp__science-card {
+  position: absolute;
+  z-index: 2;
+  width: min(370px, 32vw);
+  background: rgba(255, 255, 255, .86) !important;
+  border: 1px solid rgba(34, 39, 33, .08) !important;
+  border-radius: 28px;
+  padding: 24px 26px;
+  box-shadow: none !important;
 }
 
 .boka-lp .boka-lp__science-card strong {
+  display: block;
+  margin: 0 0 10px;
   font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
   color: var(--boka-charcoal);
   font-size: 22px;
@@ -3232,6 +3306,7 @@
 }
 
 .boka-lp .boka-lp__science-card p {
+  margin: 0;
   font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif !important;
   color: var(--boka-gray);
   font-size: 15px;
@@ -3239,28 +3314,114 @@
   font-weight: 650;
 }
 
-.boka-lp .boka-lp__science-card {
-  background: rgba(255, 255, 255, .86) !important;
-  border: 1px solid rgba(34, 39, 33, .08) !important;
-  box-shadow: none !important;
+.boka-lp .boka-lp__science-card--one {
+  top: 54px;
+  left: 5%;
 }
 
-.boka-lp .boka-lp__science-collage-image {
-  filter: drop-shadow(0 18px 28px rgba(34, 39, 33, .08)) !important;
+.boka-lp .boka-lp__science-card--two {
+  right: 5%;
+  top: 34%;
 }
 
+.boka-lp .boka-lp__science-card--three {
+  left: 8%;
+  bottom: 54px;
+}
+
+/* Mobile: keep floating-card concept, but space it safely */
 @media (max-width: 860px) {
+  .boka-lp .boka-lp__section--science-collage {
+    padding: 56px 16px;
+  }
+
+  .boka-lp .boka-lp__science-collage-copy {
+    margin-bottom: 24px;
+  }
+
+  .boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
+    font-size: clamp(34px, 11vw, 48px);
+    line-height: .95;
+  }
+
   .boka-lp .boka-lp__science-collage-stage {
-    background: transparent !important;
-    padding: 0 !important;
+    position: relative;
+    display: block !important;
+    min-height: 680px;
+    padding: 20px !important;
+    overflow: visible;
+  }
+
+  .boka-lp .boka-lp__science-collage-image,
+  .boka-lp .boka-lp__science-collage-placeholder {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: min(82vw, 360px);
+    max-width: 360px;
+    height: auto;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .boka-lp .boka-lp__science-collage-placeholder {
+    min-height: 260px;
   }
 
   .boka-lp .boka-lp__science-card {
-    border-radius: 20px;
-    background: rgba(255, 255, 255, .82) !important;
+    position: absolute !important;
+    z-index: 2;
+    width: min(78vw, 300px);
+    padding: 18px 20px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .88) !important;
+    border: 1px solid rgba(34, 39, 33, .08) !important;
+    box-shadow: none !important;
   }
 
   .boka-lp .boka-lp__science-card strong {
-    font-size: 20px;
+    font-size: 19px;
+    line-height: 1.1;
+  }
+
+  .boka-lp .boka-lp__science-card p {
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+
+  .boka-lp .boka-lp__science-card--one {
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+  }
+
+  .boka-lp .boka-lp__science-card--two {
+    top: 270px;
+    right: 0;
+    left: auto;
+    bottom: auto;
+  }
+
+  .boka-lp .boka-lp__science-card--three {
+    bottom: 0;
+    left: 8px;
+    right: auto;
+    top: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .boka-lp .boka-lp__science-collage-stage {
+    min-height: 740px;
+  }
+
+  .boka-lp .boka-lp__science-card {
+    width: min(86vw, 300px);
+  }
+
+  .boka-lp .boka-lp__science-card--two {
+    top: 300px;
   }
 }
