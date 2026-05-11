@@ -3109,3 +3109,149 @@
   }
 }
 
+/* ==========================================================
+   FINAL OVERRIDE: Three-column compare table
+   Category / Boka / Typical Toothpaste
+   Use with: .boka-lp__compare-table-card--three-col
+   ========================================================== */
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid {
+  display: grid !important;
+  grid-template-columns: minmax(180px, 1.25fr) minmax(90px, .55fr) minmax(120px, .75fr) !important;
+  align-items: center;
+  min-height: 72px;
+  border-bottom: 1px dashed rgba(34, 39, 33, .22);
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid:last-child {
+  border-bottom: 0;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid > div {
+  padding: 18px 20px;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid > div:nth-child(2) {
+  background: rgba(230, 244, 212, .48);
+  border-left: 1px solid rgba(34, 39, 33, .10);
+  border-right: 1px solid rgba(34, 39, 33, .10);
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid--head {
+  min-height: 58px;
+  border-bottom: 1px solid rgba(34, 39, 33, .18);
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid--head > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--boka-charcoal);
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid--head > div:first-child {
+  justify-content: flex-start;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-brand span {
+  color: var(--boka-olive);
+  font-family: "Ivar Display Italic", "Times New Roman", serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-label {
+  color: var(--boka-charcoal);
+  font-size: 14.5px;
+  line-height: 1.35;
+  font-weight: 850;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-good,
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-bad,
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-maybe {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-good {
+  font-size: 0;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-good::before {
+  content: "✓";
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--boka-green);
+  color: var(--boka-charcoal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-bad {
+  color: var(--boka-clay);
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-maybe {
+  color: var(--boka-gray);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Mobile: keep category + check columns, but make it fit */
+@media (max-width: 760px) {
+  .boka-lp .boka-lp__compare-table-card--three-col {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid {
+    grid-template-columns: 155px 78px 98px !important;
+    min-width: 331px;
+    min-height: 62px;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid > div {
+    padding: 14px 10px;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-label {
+    font-size: 12.5px;
+    line-height: 1.3;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-grid--head > div {
+    font-size: 10px;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-good::before {
+    width: 21px;
+    height: 21px;
+    font-size: 12px;
+  }
+
+  .boka-lp .boka-lp__compare-table-card--three-col .boka-lp__compare-bad {
+    font-size: 21px;
+  }
+}
