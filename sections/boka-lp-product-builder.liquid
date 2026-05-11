@@ -127,105 +127,6 @@
               </div>
             </div>
 
-            <div class="boka-lp__builder-included" id="boka-builder-included-{{ section.id }}">
-              <div class="boka-lp__builder-included-head">
-                <p class="boka-lp__eyebrow">What’s inside</p>
-                <h3 class="boka-lp__builder-included-title">
-                  Everything you need to make your daily routine feel easy.
-                </h3>
-                <p class="boka-lp__builder-included-copy">
-                  Your first box brings the essentials together in one simple system.
-                </p>
-              </div>
-
-              <div class="boka-lp__builder-included-grid">
-                <div class="boka-lp__builder-included-card">
-                  <div class="boka-lp__builder-included-image" aria-hidden="true">
-                    {% if section.settings.included_toothpaste_image != blank %}
-                      <img
-                        src="{{ section.settings.included_toothpaste_image | image_url: width: 280 }}"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        alt="Goal Based n-Ha Toothpaste"
-                      >
-                    {% else %}
-                      <span class="boka-lp__included-image-placeholder">BOKA</span>
-                    {% endif %}
-                  </div>
-                  <strong>Goal Based n-Ha Toothpaste</strong>
-                </div>
-
-                <div class="boka-lp__builder-included-card">
-                  <div class="boka-lp__builder-included-image" aria-hidden="true">
-                    {% if section.settings.included_brush_image != blank %}
-                      <img
-                        src="{{ section.settings.included_brush_image | image_url: width: 280 }}"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        alt="Charcoal Classic Brush"
-                      >
-                    {% else %}
-                      <span class="boka-lp__included-image-placeholder">BOKA</span>
-                    {% endif %}
-                  </div>
-                  <strong>Charcoal Classic Brush</strong>
-                </div>
-
-                <div class="boka-lp__builder-included-card">
-                  <div class="boka-lp__builder-included-image" aria-hidden="true">
-                    {% if section.settings.included_floss_image != blank %}
-                      <img
-                        src="{{ section.settings.included_floss_image | image_url: width: 280 }}"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        alt="Teflon- and petroleum-free Floss"
-                      >
-                    {% else %}
-                      <span class="boka-lp__included-image-placeholder">BOKA</span>
-                    {% endif %}
-                  </div>
-                  <strong>Teflon/Petroleum-free Floss</strong>
-                </div>
-
-                <div class="boka-lp__builder-included-card">
-                  <div class="boka-lp__builder-included-image" aria-hidden="true">
-                    {% if section.settings.included_tongue_cleaner_image != blank %}
-                      <img
-                        src="{{ section.settings.included_tongue_cleaner_image | image_url: width: 280 }}"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        alt="Rasana Tongue Cleaner"
-                      >
-                    {% else %}
-                      <span class="boka-lp__included-image-placeholder">BOKA</span>
-                    {% endif %}
-                  </div>
-                  <strong>Rasana Tongue Cleaner</strong>
-                </div>
-
-                <div class="boka-lp__builder-included-card">
-                  <div class="boka-lp__builder-included-image" aria-hidden="true">
-                    {% if section.settings.included_bag_image != blank %}
-                      <img
-                        src="{{ section.settings.included_bag_image | image_url: width: 280 }}"
-                        width="140"
-                        height="140"
-                        loading="lazy"
-                        alt="Boka Toiletry Bag"
-                      >
-                    {% else %}
-                      <span class="boka-lp__included-image-placeholder">BOKA</span>
-                    {% endif %}
-                  </div>
-                  <strong>Boka Toiletry Bag</strong>
-                </div>
-              </div>
-            </div>
-
             {% if section.settings.show_quantity_selector %}
               <div class="boka-lp__step">
                 <div class="boka-lp__step-head">
@@ -290,6 +191,8 @@
     </div>
   </div>
   
+
+  </div>
   <script>
     (() => {
       const root = document.getElementById('boka-product-builder-{{ section.id }}');
@@ -723,31 +626,6 @@
       "id": "variant_note",
       "label": "Variant step note",
       "default": "Goal-based variants"
-    },
-    {
-      "type": "image_picker",
-      "id": "included_toothpaste_image",
-      "label": "Included thumbnail - Toothpaste"
-    },
-    {
-      "type": "image_picker",
-      "id": "included_brush_image",
-      "label": "Included thumbnail - Brush"
-    },
-    {
-      "type": "image_picker",
-      "id": "included_floss_image",
-      "label": "Included thumbnail - Floss"
-    },
-    {
-      "type": "image_picker",
-      "id": "included_tongue_cleaner_image",
-      "label": "Included thumbnail - Tongue cleaner"
-    },
-    {
-      "type": "image_picker",
-      "id": "included_bag_image",
-      "label": "Included thumbnail - Toiletry bag"
     },
     {
       "type": "text",
