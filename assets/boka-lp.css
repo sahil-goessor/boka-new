@@ -1871,14 +1871,9 @@
 .boka-lp__section--charcoal .boka-lp__promo-banner-button:hover { background: #fff; }
 @media (max-width: 980px) { .boka-lp__hero { padding-left: 16px; padding-right: 16px; } }
 
-/* ==========================================================
-   Editorial comparison section — reference-inspired Boka style
-   Use with the new compare markup:
-   .boka-lp__section--compare > .boka-lp__compare-layout
-   ========================================================== */
 
 .boka-lp .boka-lp__section--compare {
-  background: var(--boka-cream);
+  background: #ffffff;
   padding: 86px 5%;
 }
 
