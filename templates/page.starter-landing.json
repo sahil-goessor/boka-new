@@ -60,23 +60,6 @@
         "offer_discount": "Save $15"
       }
     },
-    "lp_science": {
-      "type": "boka-lp-science",
-      "settings": {
-        "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
-        "science_image_alt": "Boka oral care products"
-      }
-    },
-    "lp_included": {
-      "type": "boka-lp-whats-included",
-      "settings": {
-        "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
-        "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
-        "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
-        "included_tongue_cleaner_image": "shopify://shop_images/Main_1_1.webp",
-        "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
-      }
-    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -111,23 +94,40 @@
         "onetime_note_1": "Only save 10%",
         "onetime_note_2": "No routine refills",
         "atc_text": "Start My Routine",
-        "guarantee_1": "30-day guarantee",
+        "guarantee_1": "Nano-hydroxyapatite",
         "guarantee_2": "Flexible refills",
         "guarantee_3": "Clean ingredients",
         "guarantee_4": "Made for daily use"
       }
     },
-    "lp_refills": {
-      "type": "boka-lp-refill-plan",
-      "disabled": true,
+    "lp_included": {
+      "type": "boka-lp-whats-included",
+      "settings": {
+        "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
+        "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
+        "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
+        "included_tongue_cleaner_image": "shopify://shop_images/Main_1_1.webp",
+        "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
+      }
+    },
+    "lp_science": {
+      "type": "boka-lp-science",
+      "settings": {
+        "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
+        "science_image_alt": "Boka oral care products"
+      }
+    },
+    "lp_compare": {
+      "type": "boka-lp-compare",
       "settings": {}
     },
     "lp_reviews": {
       "type": "boka-lp-reviews",
       "settings": {}
     },
-    "lp_compare": {
-      "type": "boka-lp-compare",
+    "lp_refills": {
+      "type": "boka-lp-refill-plan",
+      "disabled": true,
       "settings": {}
     },
     "lp_faq": {
