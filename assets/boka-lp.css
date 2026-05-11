@@ -3029,19 +3029,19 @@
 .boka-lp .boka-lp__science-card--one {
   top: 54px;
   left: 5%;
-  background: rgba(255, 255, 255, .88);
+  background: var(--boka-green-light);
 }
 
 .boka-lp .boka-lp__science-card--two {
   right: 5%;
   top: 34%;
-  background: rgba(250, 250, 245, .92);
+  background: var(--boka-green-light);
 }
 
 .boka-lp .boka-lp__science-card--three {
   left: 8%;
   bottom: 54px;
-  background: rgba(255, 255, 255, .92);
+  background: var(--boka-green-light);
 }
 
 /* Mobile */
