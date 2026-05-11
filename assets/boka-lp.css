@@ -3670,3 +3670,53 @@
     max-width: 100% !important;
   }
 }
+
+/* ==========================================================
+   Top two bento cards: copy left, full-height image right
+   ========================================================== */
+
+/* Cards 1 and 2 become horizontal hero cards */
+.boka-lp .boka-lp__included-bento-card:nth-child(1),
+.boka-lp .boka-lp__included-bento-card:nth-child(2) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.9fr) minmax(220px, 0.8fr) !important;
+  grid-template-rows: 1fr !important;
+  align-items: stretch !important;
+  gap: 24px !important;
+  height: 420px !important;
+  min-height: 420px !important;
+}
+
+/* Keep text vertically centered/low left */
+.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-copy,
+.boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-copy {
+  align-self: end !important;
+  max-width: 420px;
+  padding-bottom: 8px;
+}
+
+/* Image column fills the card height */
+.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image,
+.boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image {
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  align-self: stretch !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.boka-lp .boka-lp__included-bento-card:nth-child(1) .boka-lp__included-bento-image img,
+.boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image img {
+  width: auto !important;
+  height: 100% !important;
+  max-height: 360px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Brush is naturally skinny, so let it be taller */
+.boka-lp .boka-lp__included-bento-card:nth-child(2) .boka-lp__included-bento-image img {
+  max-height: 380px !important;
+}
