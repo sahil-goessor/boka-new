@@ -1,73 +1,79 @@
 <section class="boka-lp boka-lp--hero-section">
   {% if section.settings.show_announcement %}
     <div class="boka-lp__topbar">
-      {{ section.settings.announcement_text }} <a href="#boka-buybox-{{ section.id }}">{{ section.settings.announcement_link_text }}</a>
+      {{ section.settings.announcement_text }}
+      <a href="#boka-buybox">{{ section.settings.announcement_link_text }}</a>
     </div>
   {% endif %}
 
- <div class="boka-lp__hero" id="boka-buybox">
-  <div class="boka-lp__promo-heading boka-lp__promo-banner">
-  <div class="boka-lp__promo-banner-main">
-    <div class="boka-lp__promo-banner-content">
-      {% if section.settings.promo_banner_eyebrow != blank %}
-        <p class="boka-lp__promo-eyebrow">{{ section.settings.promo_banner_eyebrow }}</p>
-      {% endif %}
+  <div class="boka-lp__hero" id="boka-buybox">
+    <div class="boka-lp__promo-heading boka-lp__promo-banner">
+      <div class="boka-lp__promo-banner-main">
+        <div class="boka-lp__promo-banner-content">
+          {% if section.settings.promo_banner_eyebrow != blank %}
+            <p class="boka-lp__promo-eyebrow">{{ section.settings.promo_banner_eyebrow }}</p>
+          {% endif %}
 
-      {% if section.settings.promo_banner_heading != blank %}
-        <h2>{{ section.settings.promo_banner_heading }}</h2>
-      {% endif %}
+          {% if section.settings.promo_banner_heading != blank %}
+            <h2>{{ section.settings.promo_banner_heading }}</h2>
+          {% endif %}
 
-      {% if section.settings.promo_banner_subtext != blank %}
-        <p>{{ section.settings.promo_banner_subtext }}</p>
-      {% endif %}
+          {% if section.settings.promo_banner_subtext != blank %}
+            <p>{{ section.settings.promo_banner_subtext }}</p>
+          {% endif %}
 
-      {% if section.settings.promo_banner_button_text != blank %}
-        <a
-  class="boka-lp__promo-banner-button"
-  href="{% if section.settings.promo_banner_button_link != blank %}{{ section.settings.promo_banner_button_link }}{% else %}#boka-subscription{% endif %}"
->
-  {{ section.settings.promo_banner_button_text }}
-</a>
-      {% endif %}
+          {% if section.settings.promo_banner_button_text != blank %}
+            <a
+              class="boka-lp__promo-banner-button"
+              href="{% if section.settings.promo_banner_button_link != blank %}{{ section.settings.promo_banner_button_link }}{% else %}#boka-subscription{% endif %}"
+            >
+              {{ section.settings.promo_banner_button_text }}
+            </a>
+          {% endif %}
+        </div>
+
+        {% if section.settings.promo_banner_image != blank %}
+          <div class="boka-lp__promo-banner-image-wrap">
+            {{
+              section.settings.promo_banner_image
+              | image_url: width: 2400
+              | image_tag:
+                loading: 'eager',
+                fetchpriority: 'high',
+                class: 'boka-lp__promo-banner-image',
+                alt: section.settings.promo_banner_image_alt
+            }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="boka-lp__proof-bar-section boka-lp__proof-bar-section--banner" id="boka-proof">
+        <div class="boka-lp__proof-bar" aria-label="Boka starter kit highlights">
+          <div class="boka-lp__proof-stat">
+            <span class="boka-lp__proof-number">n-Ha</span>
+            <span class="boka-lp__proof-label">Features n-Ha</span>
+          </div>
+
+          <div class="boka-lp__proof-stat">
+            <span class="boka-lp__proof-number">4.6★</span>
+            <span class="boka-lp__proof-label">950,000+ customers</span>
+          </div>
+
+          <div class="boka-lp__proof-stat">
+            <span class="boka-lp__proof-number">{{ section.settings.offer_discount }}</span>
+            <span class="boka-lp__proof-label">First-order savings</span>
+          </div>
+
+          <div class="boka-lp__proof-stat">
+            <span class="boka-lp__proof-number">3 mo</span>
+            <span class="boka-lp__proof-label">Refill cadence</span>
+          </div>
+        </div>
+      </div>
     </div>
-
-    {% if section.settings.promo_banner_image != blank %}
-      <div class="boka-lp__promo-banner-image-wrap">
-        {{
-          section.settings.promo_banner_image
-          | image_url: width: 2400
-          | image_tag:
-            loading: 'eager',
-            fetchpriority: 'high',
-            class: 'boka-lp__promo-banner-image',
-            alt: section.settings.promo_banner_heading
-        }}
-      </div>
-    {% endif %}
   </div>
-
-  <div class="boka-lp__proof-bar-section boka-lp__proof-bar-section--banner" id="boka-proof">
-    <div class="boka-lp__proof-bar" aria-label="Boka starter kit proof points">
-      <div class="boka-lp__proof-stat">
-        <span class="boka-lp__proof-number">n-Ha</span>
-        <span class="boka-lp__proof-label">Powered</span>
-      </div>
-      <div class="boka-lp__proof-stat">
-        <span class="boka-lp__proof-number">4.6★</span>
-        <span class="boka-lp__proof-label">950,000+ customers</span>
-      </div>
-      <div class="boka-lp__proof-stat">
-        <span class="boka-lp__proof-number">{{ section.settings.offer_discount }}</span>
-        <span class="boka-lp__proof-label">First-order savings</span>
-      </div>
-      <div class="boka-lp__proof-stat">
-        <span class="boka-lp__proof-number">3 mo</span>
-        <span class="boka-lp__proof-label">Flexible refills</span>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
+
 {% schema %}
 {
   "name": "Boka LP hero",
@@ -88,7 +94,7 @@
       "type": "text",
       "id": "announcement_link_text",
       "label": "Announcement link text",
-      "default": "Start Your Curated Fluoride Free Routine For Just $24.99 & Free Shipping!"
+      "default": "Start your fluoride-free n-Ha routine for $24.99 + free shipping"
     },
     {
       "type": "image_picker",
@@ -97,21 +103,27 @@
     },
     {
       "type": "text",
+      "id": "promo_banner_image_alt",
+      "label": "Promo banner image alt text",
+      "default": "Boka starter kit products on a clean background"
+    },
+    {
+      "type": "text",
       "id": "promo_banner_eyebrow",
       "label": "Promo banner eyebrow",
-      "default": "NEW CUSTOMER OFFER - 50% Off"
+      "default": "New Customer Offer"
     },
     {
       "type": "text",
       "id": "promo_banner_heading",
       "label": "Promo banner heading",
-      "default": "Complete Oral Routine for $24.99 + Free Shipping"
+      "default": "Start your fluoride-free n-Ha routine for $24.99"
     },
     {
       "type": "text",
       "id": "promo_banner_subtext",
       "label": "Promo banner subtext",
-      "default": "Fluoride-Free n-Ha | Complete Routine | Easy Refills"
+      "default": "Try Boka with toothpaste, brush, floss, tongue cleaner, and a toiletry bag — plus free shipping on your first order."
     },
     {
       "type": "text",
