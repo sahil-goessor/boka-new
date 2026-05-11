@@ -253,12 +253,10 @@
           "mobile_bottom_margin": 46
         }
       },
-      "10605408327587305396": {
-        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
+      "11945366711752539959": {
+        "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
         "disabled": false,
-        "settings": {
-          "version": "v3"
-        }
+        "settings": {}
       }
     }
   },
