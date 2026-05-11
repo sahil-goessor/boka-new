@@ -2613,7 +2613,6 @@
   text-transform: uppercase;
 }
 
-/* Fallback: same styling if only --three-col is present */
 .boka-lp .boka-lp__compare-table-card--three-col:not(.boka-lp__compare-table-card--spotlight) .boka-lp__compare-grid {
   display: grid !important;
   grid-template-columns: minmax(180px, 1.25fr) minmax(90px, .55fr) minmax(120px, .75fr) !important;
@@ -3414,5 +3413,78 @@
 
   .boka-lp .boka-lp__science-card--two {
     top: 300px;
+  }
+}
+
+/* ==========================================================
+   FINAL SCIENCE SECTION COLOR OVERRIDE
+   White science section background + light green cards
+   ========================================================== */
+
+/* Make the full science section white */
+.boka-lp.boka-lp-science,
+.boka-lp .boka-lp__section--science-collage,
+.boka-lp .boka-lp__section--green#boka-science,
+.boka-lp #boka-science {
+  background: var(--boka-white) !important;
+}
+
+/* Keep the science stage clean/white, no green wash or glossy box */
+.boka-lp .boka-lp__science-collage-stage {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.boka-lp .boka-lp__science-collage-stage::before {
+  display: none !important;
+}
+
+/* Make the three science cards light green */
+.boka-lp .boka-lp__science-card,
+.boka-lp .boka-lp__section--science-collage .boka-lp__info-card,
+.boka-lp #boka-science .boka-lp__info-card {
+  background: var(--boka-green-light) !important;
+  border: 1px solid var(--boka-green-mid) !important;
+  box-shadow: none !important;
+}
+
+/* If your original science section is still using .boka-lp__cards-3 */
+.boka-lp #boka-science .boka-lp__cards-3 .boka-lp__info-card {
+  background: var(--boka-green-light) !important;
+  border-color: var(--boka-green-mid) !important;
+}
+
+/* Keep card text consistent and readable on green */
+.boka-lp .boka-lp__science-card strong,
+.boka-lp #boka-science .boka-lp__info-card strong {
+  color: var(--boka-charcoal) !important;
+}
+
+.boka-lp .boka-lp__science-card p,
+.boka-lp #boka-science .boka-lp__info-card p {
+  color: var(--boka-gray) !important;
+}
+
+/* Optional: make the icon circles blend better on green cards */
+.boka-lp #boka-science .boka-lp__info-icon {
+  background: rgba(255, 255, 255, .72) !important;
+  border-color: rgba(34, 39, 33, .10) !important;
+}
+
+/* Mobile: keep the same white section + green cards */
+@media (max-width: 980px) {
+  .boka-lp.boka-lp-science,
+  .boka-lp .boka-lp__section--science-collage,
+  .boka-lp .boka-lp__section--green#boka-science,
+  .boka-lp #boka-science {
+    background: var(--boka-white) !important;
+  }
+
+  .boka-lp .boka-lp__science-card,
+  .boka-lp .boka-lp__section--science-collage .boka-lp__info-card,
+  .boka-lp #boka-science .boka-lp__info-card {
+    background: var(--boka-green-light) !important;
+    border-color: var(--boka-green-mid) !important;
   }
 }
