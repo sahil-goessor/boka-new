@@ -3120,8 +3120,10 @@
 }
 
 .boka-lp .boka-lp__included-bento-head {
-  max-width: 760px;
-  margin: 0 0 34px;
+  max-width: 1040px !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
 }
 
 .boka-lp .boka-lp__included-bento-head .boka-lp__eyebrow {
@@ -3136,22 +3138,25 @@
 
 .boka-lp .boka-lp__included-bento-head .boka-lp__section-title {
   margin: 0 0 14px;
-  max-width: 9.5ch;
   color: var(--boka-charcoal);
   font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
   font-size: clamp(44px, 5.8vw, 78px);
   line-height: .9;
   letter-spacing: -.07em;
   font-weight: 900;
+  max-width: 15ch !important;
+
 }
 
 .boka-lp .boka-lp__included-bento-head .boka-lp__section-copy {
   margin: 0;
-  max-width: 620px;
   color: var(--boka-gray);
   font-size: 16px;
   line-height: 1.55;
   font-weight: 650;
+  max-width: 720px !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 .boka-lp .boka-lp__included-bento {
