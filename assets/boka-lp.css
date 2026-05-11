@@ -3566,11 +3566,6 @@
     line-height: .98;
   }
 
-  .boka-lp .boka-lp__included-bento-copy h3::after {
-    max-width: 120px;
-    height: 4px;
-  }
-
   .boka-lp .boka-lp__included-bento-copy p {
     max-width: 100%;
     font-size: 13px;
