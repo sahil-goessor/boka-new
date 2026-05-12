@@ -299,6 +299,33 @@
       font-weight: 400;
       margin: -12px 0 20px 0;
     }
+
+    #shopify-section-{{ section.id }} .boka-walmart {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: {{ section.settings.walmart_bg_color }};
+      border: 1px solid {{ section.settings.walmart_border_color }};
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+      text-decoration: none;
+    }
+    #shopify-section-{{ section.id }} .boka-walmart p {
+      color: {{ section.settings.walmart_text_color }};
+      font-size: {{ section.settings.body_font_size }}px;
+      font-weight: 600;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .boka-walmart {
+        align-self: stretch;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+      }
+    }
   </style>
 
   <div class="boka-outer boka-hero__container">
@@ -348,6 +375,24 @@
               </svg>
             </span>
           </button>
+        {%- endif -%}
+        {%- if section.settings.show_walmart_banner -%}
+          <a class="boka-walmart"
+            {% if section.settings.walmart_url != blank %}href="{{ section.settings.walmart_url }}" target="_blank" rel="noopener"{% endif %}
+            >
+            <!-- Walmart spark icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.4a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0V3.5A1.1 1.1 0 0 1 12 2.4Z" fill="#FFC220"/>
+              <path d="M12 16.1a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0v-3.3a1.1 1.1 0 0 1 1.1-1.1Z" fill="#FFC220"/>
+              <path d="M21.6 12a1.1 1.1 0 0 1-1.1 1.1h-3.3a1.1 1.1 0 0 1 0-2.2h3.3A1.1 1.1 0 0 1 21.6 12Z" fill="#FFC220"/>
+              <path d="M7.9 12a1.1 1.1 0 0 1-1.1 1.1H3.5a1.1 1.1 0 0 1 0-2.2h3.3A1.1 1.1 0 0 1 7.9 12Z" fill="#FFC220"/>
+              <path d="M18.98 5.02a1.1 1.1 0 0 1 0 1.556l-2.334 2.334a1.1 1.1 0 1 1-1.556-1.556L17.424 5.02a1.1 1.1 0 0 1 1.556 0Z" fill="#FFC220"/>
+              <path d="M8.91 15.09a1.1 1.1 0 0 1 0 1.556L6.576 18.98a1.1 1.1 0 1 1-1.556-1.556L7.354 15.09a1.1 1.1 0 0 1 1.556 0Z" fill="#FFC220"/>
+              <path d="M5.02 5.02a1.1 1.1 0 0 1 1.556 0L8.91 7.354a1.1 1.1 0 1 1-1.556 1.556L5.02 6.576a1.1 1.1 0 0 1 0-1.556Z" fill="#FFC220"/>
+              <path d="M15.09 15.09a1.1 1.1 0 0 1 1.556 0l2.334 2.334a1.1 1.1 0 1 1-1.556 1.556L15.09 16.646a1.1 1.1 0 0 1 0-1.556Z" fill="#FFC220"/>
+            </svg>
+            <p>{{ section.settings.walmart_text }}</p>
+          </a>
         {%- endif -%}
         {% if section.settings.amazon_url != blank %}
           <a href="{{ section.settings.amazon_url }}" target="_blank" rel="noopener" class="boka-hero__amazon-btn">
@@ -793,6 +838,46 @@
       "unit": "px",
       "label": "Button Border Radius",
       "default": 4
+    },
+    {
+      "type": "header",
+      "content": "🛍 Walmart Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_walmart_banner",
+      "label": "Show Walmart Banner",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "walmart_text",
+      "label": "Banner Text",
+      "default": "Find it at your nearest Walmart"
+    },
+    {
+      "type": "url",
+      "id": "walmart_url",
+      "label": "Walmart Product URL",
+      "info": "Optional — if filled, the banner becomes a clickable link"
+    },
+    {
+      "type": "color",
+      "id": "walmart_bg_color",
+      "label": "Banner Background",
+      "default": "#FFF8E7"
+    },
+    {
+      "type": "color",
+      "id": "walmart_border_color",
+      "label": "Banner Border Color",
+      "default": "#FFC220"
+    },
+    {
+      "type": "color",
+      "id": "walmart_text_color",
+      "label": "Banner Text Color",
+      "default": "#1A1A1A"
     },
     {
       "type": "header",
