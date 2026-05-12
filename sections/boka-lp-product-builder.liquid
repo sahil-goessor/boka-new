@@ -202,27 +202,73 @@
               </div>
 
               <div class="boka-lp__plan-fallback" data-boka-plan-fallback>
-                <button type="button" class="boka-lp__plan-card has-badge is-active" data-plan-type="subscribe">
-                  <span class="boka-lp__plan-badge">New Customer Offer</span>
-
-                  <span class="boka-lp__plan-head">
+                <button type="button" class="boka-lp__plan-card boka-lp__plan-card--how-it-works has-badge is-active" data-plan-type="subscribe">
+                  <span class="boka-lp__plan-top">
+                    <span class="boka-lp__radio-dot" aria-hidden="true"></span>
                     <span class="boka-lp__plan-title">{{ section.settings.subscription_title }}</span>
-                    <span>
-                      <span class="boka-lp__compare-price" data-boka-sub-compare>{{ section.settings.offer_value }}</span>
-                      <span class="boka-lp__price" data-boka-sub-price>{{ section.settings.offer_price }}</span>
+                    <span class="boka-lp__plan-badge">{{ section.settings.offer_discount }}</span>
+                  </span>
+
+                  <span class="boka-lp__how-card">
+                    <span class="boka-lp__how-heading">{{ section.settings.how_it_works_heading }}</span>
+
+                    <span class="boka-lp__timeline-card">
+                      <span class="boka-lp__timeline-left">
+                        <span class="boka-lp__timeline-title">
+                          <span class="boka-lp__timeline-number">1</span>
+                          {{ section.settings.initial_order_title }}
+                        </span>
+
+                        <span class="boka-lp__timeline-copy">
+                          {{ section.settings.initial_order_copy }}
+                        </span>
+
+                        <span class="boka-lp__timeline-pill">{{ section.settings.initial_order_pill }}</span>
+                      </span>
+
+                      <span class="boka-lp__timeline-price">
+                        <span class="boka-lp__price" data-boka-sub-price>{{ section.settings.offer_price }}</span>
+                        <span class="boka-lp__compare-price" data-boka-sub-compare>{{ section.settings.offer_value }}</span>
+                        <span class="boka-lp__save-text">{{ section.settings.offer_discount }}</span>
+                      </span>
+                    </span>
+
+                    <span class="boka-lp__then-row">
+                      <span></span>
+                      <em>{{ section.settings.then_label }}</em>
+                      <span></span>
+                    </span>
+
+                    <span class="boka-lp__timeline-card">
+                      <span class="boka-lp__timeline-left">
+                        <span class="boka-lp__timeline-title">
+                          <span class="boka-lp__timeline-number">2</span>
+                          {{ section.settings.refill_order_title }}
+                        </span>
+
+                        <span class="boka-lp__timeline-copy">
+                          {{ section.settings.refill_order_copy }}
+                        </span>
+
+                        <span class="boka-lp__timeline-pill">{{ section.settings.refill_order_pill }}</span>
+                      </span>
+
+                      <span class="boka-lp__timeline-price">
+                        <span class="boka-lp__refill-price" data-boka-refill-price>{{ section.settings.refill_price }}</span>
+                      </span>
                     </span>
                   </span>
 
-
-                  <ul class="boka-lp__plan-features">
-                    <li>{{ section.settings.subscription_feature_1 }}</li>
-                    <li>{{ section.settings.subscription_feature_2 }}</li>
-                    <li>{{ section.settings.subscription_feature_3 }}</li>
-                  </ul>
+                  <span class="boka-lp__benefit-grid">
+                    <span>✓ <strong>{{ section.settings.subscription_feature_1 }}</strong></span>
+                    <span>✓ {{ section.settings.subscription_feature_2 }}</span>
+                    <span>✓ {{ section.settings.subscription_feature_3 }}</span>
+                    <span>✓ {{ section.settings.subscription_feature_4 }}</span>
+                  </span>
                 </button>
 
                 {% unless section.settings.subscription_only %}
-                  <button type="button" class="boka-lp__plan-card" data-plan-type="onetime">
+                  <button type="button" class="boka-lp__plan-card boka-lp__plan-card--onetime" data-plan-type="onetime">
                     <span class="boka-lp__plan-head">
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
                       <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
@@ -242,7 +288,7 @@
             <button type="submit" class="boka-lp__atc" data-boka-atc>{{ section.settings.atc_text }}</button>
 
             <p class="boka-lp__atc-subtext">
-              Free first-order shipping · 30-day guarantee · Pause, skip, or cancel anytime
+              {{ section.settings.atc_subtext }}
             </p>
 
             <p class="boka-lp__message" data-boka-message></p>
@@ -254,6 +300,255 @@
     </div>
   </div>
 
+  <style>
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--how-it-works {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 1.5px solid #007c83;
+      border-radius: 18px;
+      background: #fff;
+      overflow: hidden;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--how-it-works.is-active {
+      box-shadow: 0 0 0 1px #007c83;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--how-it-works[disabled] {
+      cursor: not-allowed;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      border-bottom: 1px solid #007c83;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__radio-dot {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #007c83;
+      border-radius: 999px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card.is-active .boka-lp__radio-dot::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: 999px;
+      background: #007c83;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-title {
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #007c83;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-badge {
+      margin-left: auto;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: #ee2b2f;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__how-card {
+      display: block;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 18px;
+      background: #f6f7f7;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__how-heading {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #007c83;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-card {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-left {
+      display: block;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #007c83;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #007c83;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0;
+      flex: 0 0 auto;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-copy {
+      display: block;
+      margin-left: 38px;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #103f49;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-pill {
+      display: inline-flex;
+      margin-top: 12px;
+      margin-left: 38px;
+      padding: 7px 12px;
+      border-radius: 5px;
+      background: #e2f0ed;
+      color: #007c83;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 90px;
+      color: #007c83;
+      text-align: right;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-price .boka-lp__price,
+    #boka-product-builder-{{ section.id }} .boka-lp__refill-price {
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-price .boka-lp__compare-price {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__save-text {
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ee2b2f;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__then-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 12px;
+      margin: 16px 0;
+      color: #7a8388;
+      font-size: 14px;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__then-row span {
+      height: 1px;
+      background: #d9dddd;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__then-row em {
+      font-style: normal;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__benefit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 28px;
+      margin: 0 20px 20px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      background: #f6f7f7;
+      color: #103f49;
+      font-size: 15px;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__benefit-grid span {
+      display: block;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime {
+      margin-top: 14px;
+    }
+
+    @media screen and (max-width: 749px) {
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-top {
+        padding: 16px;
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-title {
+        font-size: 18px;
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-badge {
+        padding: 7px 11px;
+        font-size: 12px;
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__how-card {
+        margin: 14px;
+        padding: 14px;
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__timeline-card {
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px;
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__timeline-price {
+        align-items: flex-start;
+        margin-left: 38px;
+        text-align: left;
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__benefit-grid {
+        grid-template-columns: 1fr;
+        margin: 0 14px 14px;
+        padding: 16px;
+      }
+    }
+  </style>
+
   <script>
     (() => {
       const root = document.getElementById('boka-product-builder-{{ section.id }}');
@@ -263,6 +558,7 @@
       const moneyFormat = {{ shop.money_format | json }};
       const offerPrice = {{ section.settings.offer_price | json }};
       const offerValue = {{ section.settings.offer_value | json }};
+      const fallbackRefillPrice = {{ section.settings.refill_price | json }};
       const productJsonEl = root.querySelector('[data-boka-product-json]');
       if (!productJsonEl) return;
 
@@ -274,12 +570,12 @@
       const qtyButtons = [...root.querySelectorAll('[data-quantity]')];
       const planButtons = [...root.querySelectorAll('[data-plan-type]')];
       const sellingPlanSelect = root.querySelector('[data-boka-selling-plan-select]');
-      const frequencyWrap = root.querySelector('[data-boka-frequency-wrap]');
       const atc = root.querySelector('[data-boka-atc]');
       const message = root.querySelector('[data-boka-message]');
       const mainMedia = root.querySelector('[data-boka-main-media]');
       const subPrice = root.querySelector('[data-boka-sub-price]');
       const subCompare = root.querySelector('[data-boka-sub-compare]');
+      const refillPrice = root.querySelector('[data-boka-refill-price]');
       const onetimePrice = root.querySelector('[data-boka-onetime-price]');
       const thumbs = [...root.querySelectorAll('.boka-lp__thumb')];
       const cartButtons = [...root.querySelectorAll('[data-boka-open-cart]')];
@@ -298,6 +594,17 @@
       };
 
       const getVariant = () => productData.variants.find(v => Number(v.id) === Number(selectedVariantId));
+
+      const getThreeMonthPlan = (allocations) => {
+        if (!allocations || !allocations.length) return null;
+
+        const threeMonthPlan = allocations.find(allocation => {
+          const name = String(allocation.selling_plan_name || '').toLowerCase();
+          return name.includes('3 month') || name.includes('3-month') || name.includes('3 months') || name.includes('every 3');
+        });
+
+        return threeMonthPlan || allocations[0];
+      };
 
       const setMainImage = (src, altText = '') => {
         if (!src || !mainMedia) return;
@@ -353,10 +660,10 @@
         }
 
         const allocations = variant.selling_plan_allocations || [];
+        const selectedPlan = getThreeMonthPlan(allocations);
 
         if (sellingPlanSelect) {
-          const firstPlan = allocations[0];
-          sellingPlanSelect.value = firstPlan ? firstPlan.selling_plan_id : '';
+          sellingPlanSelect.value = selectedPlan ? selectedPlan.selling_plan_id : '';
         }
 
         if (subPrice) {
@@ -365,6 +672,10 @@
 
         if (subCompare) {
           subCompare.textContent = selectedQuantity > 1 ? `${offerValue} × ${selectedQuantity}` : offerValue;
+        }
+
+        if (refillPrice) {
+          refillPrice.textContent = selectedPlan ? formatMoney(selectedPlan.price * selectedQuantity) : fallbackRefillPrice;
         }
 
         const hasSubscription = allocations.length > 0;
@@ -387,10 +698,6 @@
         planButtons.forEach(btn => {
           btn.classList.toggle('is-active', btn.dataset.planType === selectedPlanType);
         });
-
-        if (frequencyWrap) {
-          frequencyWrap.style.display = selectedPlanType === 'subscribe' && hasSubscription ? '' : 'none';
-        }
 
         if (atc) {
           atc.disabled = !variant.available || (selectedPlanType === 'subscribe' && !hasSubscription);
@@ -700,7 +1007,7 @@
       "type": "text",
       "id": "offer_discount",
       "label": "First-order discount label",
-      "default": "Save $15"
+      "default": "Save up to 64%"
     },
     {
       "type": "text",
@@ -742,7 +1049,7 @@
       "type": "text",
       "id": "subscription_title",
       "label": "Subscription title",
-      "default": "Starter Kit + Refills"
+      "default": "Subscribe & Save"
     },
     {
       "type": "text",
@@ -752,21 +1059,81 @@
     },
     {
       "type": "text",
+      "id": "how_it_works_heading",
+      "label": "How it works heading",
+      "default": "How It Works:"
+    },
+    {
+      "type": "text",
+      "id": "initial_order_title",
+      "label": "Initial order title",
+      "default": "Initial Order Today"
+    },
+    {
+      "type": "textarea",
+      "id": "initial_order_copy",
+      "label": "Initial order copy",
+      "default": "Your first box ships today with your complete starter routine."
+    },
+    {
+      "type": "text",
+      "id": "initial_order_pill",
+      "label": "Initial order pill",
+      "default": "One-time starter order"
+    },
+    {
+      "type": "text",
+      "id": "then_label",
+      "label": "Then label",
+      "default": "then"
+    },
+    {
+      "type": "text",
+      "id": "refill_order_title",
+      "label": "Refill order title",
+      "default": "Automatic Refills Every 3 Months"
+    },
+    {
+      "type": "textarea",
+      "id": "refill_order_copy",
+      "label": "Refill order copy",
+      "default": "Refill-only products are delivered automatically every 3 months."
+    },
+    {
+      "type": "text",
+      "id": "refill_order_pill",
+      "label": "Refill order pill",
+      "default": "Recurring subscription"
+    },
+    {
+      "type": "text",
+      "id": "refill_price",
+      "label": "Fallback displayed refill price",
+      "default": "$25.49"
+    },
+    {
+      "type": "text",
       "id": "subscription_feature_1",
       "label": "Subscription feature 1",
-      "default": "Free shipping on first order and refills"
+      "default": "64% off starter"
     },
     {
       "type": "text",
       "id": "subscription_feature_2",
       "label": "Subscription feature 2",
-      "default": "First box includes toothpaste, brush, floss, tongue cleaner, and bag"
+      "default": "15% off refills"
     },
     {
       "type": "text",
       "id": "subscription_feature_3",
       "label": "Subscription feature 3",
-      "default": "Pause, skip, or cancel anytime"
+      "default": "Free shipping"
+    },
+    {
+      "type": "text",
+      "id": "subscription_feature_4",
+      "label": "Subscription feature 4",
+      "default": "Cancel anytime"
     },
     {
       "type": "text",
@@ -791,6 +1158,12 @@
       "id": "atc_text",
       "label": "Add to cart text",
       "default": "Start My Routine"
+    },
+    {
+      "type": "text",
+      "id": "atc_subtext",
+      "label": "Add to cart subtext",
+      "default": "Free first-order shipping · 30-day guarantee · Pause, skip, or cancel anytime"
     },
     {
       "type": "text",
