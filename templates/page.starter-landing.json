@@ -60,6 +60,10 @@
         "offer_discount": "Save $15"
       }
     },
+    "lp_compare": {
+      "type": "boka-lp-compare",
+      "settings": {}
+    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -87,13 +91,24 @@
         "plan_note": "Subscribe or buy once",
         "subscription_title": "Subscribe & Save",
         "subscription_note": "We'll handle the routine refills every 3 months",
+        "how_it_works_heading": "How It Works:",
+        "initial_order_title": "Initial Order Today",
+        "initial_order_copy": "Your first box ships today with your complete starter routine.",
+        "initial_order_pill": "One-time starter order",
+        "then_label": "then",
+        "refill_order_title": "Routine Refills Every 3 Months",
+        "refill_order_copy": "Goal toothpaste, toothbrush, and floss",
+        "refill_order_pill": "Free Shipping",
+        "refill_price": "$25.49",
         "subscription_feature_1": "Free shipping on first order and refills",
         "subscription_feature_2": "Complete routine for less than $10 / month",
         "subscription_feature_3": "Pause, skip, or cancel anytime",
+        "subscription_feature_4": "Cancel anytime",
         "onetime_title": "One-Time Purchase",
         "onetime_note_1": "Only save 10%",
         "onetime_note_2": "No routine refills",
         "atc_text": "Start My Routine",
+        "atc_subtext": "Free first-order shipping · 30-day guarantee · Pause, skip, or cancel anytime",
         "guarantee_1": "Nano-hydroxyapatite",
         "guarantee_2": "Flexible refills",
         "guarantee_3": "Clean ingredients",
@@ -116,10 +131,6 @@
         "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
         "science_image_alt": "Boka oral care products"
       }
-    },
-    "lp_compare": {
-      "type": "boka-lp-compare",
-      "settings": {}
     },
     "lp_reviews": {
       "type": "boka-lp-reviews",
@@ -145,10 +156,10 @@
     "landing_header",
     "lp_assets",
     "lp_hero",
+    "lp_compare",
     "lp_builder",
     "lp_included",
     "lp_science",
-    "lp_compare",
     "lp_reviews",
     "lp_refills",
     "lp_faq",
