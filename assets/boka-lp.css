@@ -927,10 +927,10 @@
     .boka-lp .boka-lp__how-card {
   display: block;
   margin: 16px;
-  padding: 18px;
-  border-radius: 2px;
-  background: var(--boka-surface-cream);
-  border: 1px solid rgba(34, 39, 33, .08);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
 }
 
     .boka-lp .boka-lp__how-heading {
