@@ -301,29 +301,53 @@
     }
 
     #shopify-section-{{ section.id }} .boka-walmart {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 10px;
       background-color: {{ section.settings.walmart_bg_color }};
-      border: 1px solid {{ section.settings.walmart_border_color }};
-      padding: 10px 16px;
-      border-radius: 6px;
+      border: 1.5px solid {{ section.settings.walmart_border_color }};
+      padding: 11px 18px;
+      border-radius: 10px;
       margin-bottom: 12px;
-      align-self: flex-start;
       text-decoration: none;
+      width: fit-content;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      transition: box-shadow 0.2s, background-color 0.2s;
     }
-    #shopify-section-{{ section.id }} .boka-walmart p {
+    #shopify-section-{{ section.id }} .boka-walmart:hover {
+      background-color: #fff3c4;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    }
+    #shopify-section-{{ section.id }} .boka-walmart-text-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    #shopify-section-{{ section.id }} .boka-walmart-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9a7d00;
+      margin: 0;
+      line-height: 1;
+    }
+    #shopify-section-{{ section.id }} .boka-walmart-label {
       color: {{ section.settings.walmart_text_color }};
       font-size: {{ section.settings.body_font_size }}px;
-      font-weight: 600;
+      font-weight: 700;
       margin: 0;
+      line-height: 1.3;
+    }
+    #shopify-section-{{ section.id }} .boka-walmart-arrow {
+      margin-left: auto;
+      color: #9a7d00;
+      flex-shrink: 0;
     }
     @media (max-width: 768px) {
       #shopify-section-{{ section.id }} .boka-walmart {
-        align-self: stretch;
         width: 100%;
         box-sizing: border-box;
-        justify-content: center;
       }
     }
   </style>
@@ -377,11 +401,10 @@
           </button>
         {%- endif -%}
         {%- if section.settings.show_walmart_banner -%}
-          <a class="boka-walmart"
-            {% if section.settings.walmart_url != blank %}href="{{ section.settings.walmart_url }}" target="_blank" rel="noopener"{% endif %}
-            >
-            <!-- Walmart spark icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+          <a class="boka-walmart" {% if section.settings.walmart_url != blank %}href="{{ section.settings.walmart_url }}" target="_blank" rel="noopener"{% endif %} >
+            <!-- Walmart spark -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
               <path d="M12 2.4a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0V3.5A1.1 1.1 0 0 1 12 2.4Z" fill="#FFC220"/>
               <path d="M12 16.1a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0v-3.3a1.1 1.1 0 0 1 1.1-1.1Z" fill="#FFC220"/>
               <path d="M21.6 12a1.1 1.1 0 0 1-1.1 1.1h-3.3a1.1 1.1 0 0 1 0-2.2h3.3A1.1 1.1 0 0 1 21.6 12Z" fill="#FFC220"/>
@@ -391,7 +414,15 @@
               <path d="M5.02 5.02a1.1 1.1 0 0 1 1.556 0L8.91 7.354a1.1 1.1 0 1 1-1.556 1.556L5.02 6.576a1.1 1.1 0 0 1 0-1.556Z" fill="#FFC220"/>
               <path d="M15.09 15.09a1.1 1.1 0 0 1 1.556 0l2.334 2.334a1.1 1.1 0 1 1-1.556 1.556L15.09 16.646a1.1 1.1 0 0 1 0-1.556Z" fill="#FFC220"/>
             </svg>
-            <p>{{ section.settings.walmart_text }}</p>
+            <div class="boka-walmart-text-wrap">
+              <p class="boka-walmart-eyebrow">Also available in-store</p>
+              <p class="boka-walmart-label">{{ section.settings.walmart_text }}</p>
+            </div>
+            {%- if section.settings.walmart_url != blank -%}
+              <svg class="boka-walmart-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- endif -%}
           </a>
         {%- endif -%}
         {% if section.settings.amazon_url != blank %}
