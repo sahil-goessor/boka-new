@@ -1,5 +1,27 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+{% liquid
+  assign cleaned_title = article.metafields.custom.cleaned_title.value
+  assign cleaned_body = article.metafields.custom.cleaned_body.value
+  assign cleaned_summary = article.metafields.custom.cleaned_summary.value
+
+  assign display_title = article.title
+  assign display_body = article.content
+  assign display_summary = article.excerpt
+
+  if cleaned_title != blank
+    assign display_title = cleaned_title
+  endif
+
+  if cleaned_body != blank
+    assign display_body = cleaned_body
+  endif
+
+  if cleaned_summary != blank
+    assign display_summary = cleaned_summary
+  endif
+%}
+
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -7,6 +29,7 @@
         <div class="page-width page-width--narrow">
           {% render block %}
         </div>
+
       {%- when 'featured_image' -%}
         {%- if article.image -%}
           <div class="article-template__hero-container" {{ block.shopify_attributes }}>
@@ -41,12 +64,20 @@
 
       {%- when 'title' -%}
         <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-          <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+          <h1 class="article-template__title" itemprop="headline">{{ display_title | escape }}</h1>
+
+          {%- if cleaned_summary != blank -%}
+            <div class="article-template__summary rte">
+              {{ cleaned_summary }}
+            </div>
+          {%- endif -%}
+
           {%- if block.settings.blog_show_date -%}
             <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
+
           {%- if block.settings.blog_show_author -%}
             <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
               <span itemprop="name">{{ article.author }}</span>
@@ -60,7 +91,7 @@
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
-          {{ article.content }}
+          {{ display_body }}
         </div>
 
       {%- when 'share' -%}
@@ -77,6 +108,7 @@
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
     </a>
   </div>
+
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
@@ -86,6 +118,7 @@
           <h2 id="Comments-{{ article.id }}" tabindex="-1">
             {{ 'blogs.article.comments' | t: count: article.comments_count }}
           </h2>
+
           {% paginate article.comments by 5 %}
             <div class="article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
@@ -108,10 +141,12 @@
                   </footer>
                 </article>
               {%- endfor -%}
+
               {% render 'pagination', paginate: paginate, anchor: anchorId %}
             </div>
           {% endpaginate %}
         {%- endif -%}
+
         {% form 'new_comment', article %}
           {%- liquid
             assign post_message = 'blogs.article.success'
@@ -119,7 +154,9 @@
               assign post_message = 'blogs.article.success_moderated'
             endif
           -%}
+
           <h2>{{ 'blogs.article.comment_form_title' | t }}</h2>
+
           {%- if form.errors -%}
             <div class="form__message" role="alert">
               <h3 class="form-status caption-large text-body" tabindex="-1" autofocus>
@@ -127,6 +164,7 @@
                 {{ 'templates.contact.form.error_heading' | t }}
               </h3>
             </div>
+
             <ul class="form-status-list caption-large">
               {%- for field in form.errors -%}
                 <li>
@@ -174,20 +212,23 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.name' | t }}"
                 >
+
                 <label class="field__label" for="CommentForm-author">
                   {{- 'blogs.article.name' | t }}
-                  <span aria-hidden="true">*</span></label
-                >
+                  <span aria-hidden="true">*</span>
+                </label>
+
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
                     <span class="form__message">
                       {%- render 'icon-error' -%}
                       {{- 'blogs.article.name' | t }}
-                      {{ form.errors.messages.author }}.</span
-                    >
+                      {{ form.errors.messages.author }}.
+                    </span>
                   </small>
                 {%- endif -%}
               </div>
+
               <div class="field field--with-error">
                 <input
                   type="email"
@@ -206,21 +247,24 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.email' | t }}"
                 >
+
                 <label class="field__label" for="CommentForm-email">
                   {{- 'blogs.article.email' | t }}
-                  <span aria-hidden="true">*</span></label
-                >
+                  <span aria-hidden="true">*</span>
+                </label>
+
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
                     <span class="form__message">
                       {%- render 'icon-error' -%}
                       {{- 'blogs.article.email' | t }}
-                      {{ form.errors.messages.email }}.</span
-                    >
+                      {{ form.errors.messages.email }}.
+                    </span>
                   </small>
                 {%- endif -%}
               </div>
             </div>
+
             <div class="field field--with-error">
               <textarea
                 rows="5"
@@ -235,24 +279,28 @@
                 {% endif %}
                 placeholder="{{ 'blogs.article.message' | t }}"
               >{{ form.body }}</textarea>
+
               <label class="form__label field__label" for="CommentForm-body">
                 {{- 'blogs.article.message' | t }}
-                <span aria-hidden="true">*</span></label
-              >
+                <span aria-hidden="true">*</span>
+              </label>
             </div>
+
             {%- if form.errors contains 'body' -%}
               <small id="CommentForm-body-error">
                 <span class="form__message">
                   {%- render 'icon-error' -%}
                   {{- 'blogs.article.message' | t }}
-                  {{ form.errors.messages.body }}.</span
-                >
+                  {{ form.errors.messages.body }}.
+                </span>
               </small>
             {%- endif -%}
           </div>
+
           {%- if blog.moderated? -%}
             <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
           {%- endif -%}
+
           <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
         {% endform %}
       </div>
@@ -264,14 +312,14 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "articleBody": {{ article.content | strip_html | json }},
+    "articleBody": {{ display_body | strip_html | json }},
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": {{ request.origin | append: page.url | json }}
+      "@id": {{ request.origin | append: article.url | json }}
     },
-    "headline": {{ article.title | json }},
-    {% if article.excerpt != blank %}
-      "description": {{ article.excerpt | strip_html | json }},
+    "headline": {{ display_title | json }},
+    {% if display_summary != blank %}
+      "description": {{ display_summary | strip_html | json }},
     {% endif %}
     {% if article.image %}
       "image": [
