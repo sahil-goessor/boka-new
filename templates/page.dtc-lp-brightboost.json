@@ -1129,16 +1129,16 @@
             "page": ""
           }
         },
-        "collapsible_row_FNKwU7": {
+        "collapsible_row_kc8Ajw": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Returns and Refunds",
+            "heading": "Processing and Shipping Times",
             "icon": "none",
-            "row_content": "<p><strong>Returns</strong><br/></p><p>If you decide that you'd like to return your Boka product, please contact us to initiate a return within 30 days of purchase. We offer a full product cost refund (less any incurred shipping costs) within 30 days of your purchase.<br/><br/>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.<br/><br/><strong>Refunds</strong><br/></p><p>Once your return is received and inspected, we will send you an email to confirm status of your return and refund.<br/><br/>If approved, your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>",
+            "row_content": "<p>For orders placed with standard shipping, please allow 1-2 business days for processing and up to 5 business days for delivery. Exact timing can vary depending on size of the order and delivery destination. Orders placed after 1 p.m. EST on Fridays, over the weekend, or on major U.S. holidays will likely not be processed until the following business day. </p><p>Expedited orders placed after 10 a.m. EST may be shipped the following business day.</p>",
             "page": ""
           }
         },
-        "collapsible_row_kc8Ajw": {
+        "collapsible_row_FNKwU7": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Returns and Refunds",
@@ -1159,8 +1159,8 @@
         "collapsible_row_VpVBX9",
         "collapsible_row_PknFhE",
         "collapsible_row_gfEDyx",
-        "collapsible_row_FNKwU7",
-        "collapsible_row_kc8Ajw"
+        "collapsible_row_kc8Ajw",
+        "collapsible_row_FNKwU7"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
