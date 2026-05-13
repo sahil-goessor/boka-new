@@ -1146,6 +1146,15 @@
             "row_content": "<p><strong>Returns</strong><br/></p><p>If you decide that you'd like to return your Boka product, please contact us to initiate a return within 30 days of purchase. We offer a full product cost refund (less any incurred shipping costs) within 30 days of your purchase.<br/><br/>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.<br/><br/><strong>Refunds</strong><br/></p><p>Once your return is received and inspected, we will send you an email to confirm status of your return and refund.<br/><br/>If approved, your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_AVjmT7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you have more questions about Boka?",
+            "icon": "none",
+            "row_content": "<p>Please <a href=\"mailto:hello@boka.com\" target=\"_blank\" title=\"mailto:hello@boka.com\">contact us </a>and we’ll get back to you as soon as possible.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -1160,7 +1169,8 @@
         "collapsible_row_PknFhE",
         "collapsible_row_gfEDyx",
         "collapsible_row_kc8Ajw",
-        "collapsible_row_FNKwU7"
+        "collapsible_row_FNKwU7",
+        "collapsible_row_AVjmT7"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
