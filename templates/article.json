@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-article-metafield",
+      "type": "main-article",
       "blocks": {
         "featured_image": {
           "type": "featured_image",
