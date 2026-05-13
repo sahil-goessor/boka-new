@@ -47,6 +47,12 @@
         "button_text_color": "#ffffff",
         "button_font_size": 14,
         "button_border_radius": 4,
+        "show_walmart_banner": true,
+        "walmart_text": "Find it at your nearest Walmart",
+        "walmart_url": "",
+        "walmart_bg_color": "#fff8e7",
+        "walmart_border_color": "#ffc220",
+        "walmart_text_color": "#1a1a1a",
         "show_timer": false,
         "timer_label_text": "",
         "timer_end_date": "",
@@ -1114,12 +1120,21 @@
             "page": ""
           }
         },
-        "collapsible_row_FNKwU7": {
+        "collapsible_row_gfEDyx": {
           "type": "collapsible_row",
           "settings": {
             "heading": "Is Boka BrightBoost Whitening Powder vegan and cruelty-free?",
             "icon": "none",
             "row_content": "<p>Integrity is our priority. BrightBoost Whitening Powder is PETA cruelty-free certified, vegan, and dye-free. It’s also packed with Vitamins A, C, and E to support your oral wellness while keeping your breath fresh with lemongrass mint.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FNKwU7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Returns and Refunds",
+            "icon": "none",
+            "row_content": "<p><strong>Returns</strong><br/></p><p>If you decide that you'd like to return your Boka product, please contact us to initiate a return within 30 days of purchase. We offer a full product cost refund (less any incurred shipping costs) within 30 days of your purchase.<br/><br/>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.<br/><br/><strong>Refunds</strong><br/></p><p>Once your return is received and inspected, we will send you an email to confirm status of your return and refund.<br/><br/>If approved, your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>",
             "page": ""
           }
         }
@@ -1134,6 +1149,7 @@
         "collapsible_row_DJy4D8",
         "collapsible_row_VpVBX9",
         "collapsible_row_PknFhE",
+        "collapsible_row_gfEDyx",
         "collapsible_row_FNKwU7"
       ],
       "name": "t:sections.collapsible_content.presets.name",
