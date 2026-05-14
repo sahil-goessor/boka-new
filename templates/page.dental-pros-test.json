@@ -18,12 +18,6 @@
             "text": "For hygienists & dental professionals"
           }
         },
-        "hero_pill_2": {
-          "type": "hero_pill",
-          "settings": {
-            "text": "Affiliate commissions"
-          }
-        },
         "hero_pill_3": {
           "type": "hero_pill",
           "settings": {
@@ -305,7 +299,6 @@
       },
       "block_order": [
         "hero_pill_1",
-        "hero_pill_2",
         "hero_pill_3",
         "hero_pill_4",
         "strip_card_1",
@@ -353,7 +346,7 @@
       "settings": {
         "hero_kicker": "Boka Dental Pros",
         "hero_heading": "<span class=\"dp-headline-main\">\n  Boka Dental Pros</span>",
-        "hero_text": "The Dental Pros Program gives hygienists and dental professionals a simple way to share Boka with patients, access practice benefits, and earn commission on qualifying referrals. <strong>Ask for your samples now!</strong>",
+        "hero_text": "The Dental Pros Program gives hygienists and dental professionals a simple way to share Boka with patients, get exclusive discounts for your practice, and gain access to a community of like-minded professionals.<strong>Ask for your samples now!</strong>",
         "hero_image": "shopify://shop_images/81BTsIMEbTL._AC_SL1500.jpg",
         "hero_image_url": "https://cdn.shopify.com/s/files/1/2656/6094/files/strawberry-mango-6.jpg?v=1741373408",
         "hero_image_alt": "Boka oral care product lifestyle image",
