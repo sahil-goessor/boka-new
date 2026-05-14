@@ -234,13 +234,7 @@
         "form_bullet_2": {
           "type": "form_bullet",
           "settings": {
-            "text": "Unique referral link or code after approval"
-          }
-        },
-        "form_bullet_3": {
-          "type": "form_bullet",
-          "settings": {
-            "text": "Practice discount access where eligible"
+            "text": "Preferred professional pricing after approval"
           }
         },
         "form_bullet_4": {
@@ -327,7 +321,6 @@
         "quote_2",
         "form_bullet_1",
         "form_bullet_2",
-        "form_bullet_3",
         "form_bullet_4",
         "forms_inline_fqYQQD",
         "faq_1",
@@ -370,12 +363,12 @@
         "advisor_avatar": "Dr.",
         "advisor_name": "Dental Advisory Committee Member",
         "advisor_role": "Replace with name, credentials, and specialty once the final video is approved.",
-        "how_kicker": "How Dental Pro Discounts Work",
-        "how_heading": "A simple professional purchasing program built for dental offices, providers, and teams.",
+        "how_kicker": "Professional Pricing, Made Simple",
+        "how_heading": "Boka Dental Pro accounts get access to exclusive B2B pricing on qualifying products.",
         "how_text": "<p>Once approved, you’ll receive access to exclusive Dental Pro pricing for qualifying Boka products. Your discount tier is based on your approved account type, order volume, or program eligibility.</p>\n\n<p>Use your Dental Pro discount to stock your office, support patient recommendations, or provide Boka products to your team and customers at preferred professional rates.</p>",
-        "commission_kicker": "Commission example",
-        "commission_heading": "Set the actual rates here before launch.",
-        "commission_text": "These values are placeholders based on the current draft. Update them to match your final affiliate platform and legal terms.",
+        "commission_kicker": "",
+        "commission_heading": "Dental Pro Discount Tiers",
+        "commission_text": "Approved Dental Pro accounts may qualify for exclusive savings based on program eligibility.",
         "b2b_kicker": "Practice benefits",
         "b2b_heading": "Getting discounts for your practice is easy with Boka Dental Pros.",
         "b2b_text": "Apply to become a Boka Dental Pro to get exclusive discounts and save up to 55% on oral care products.",
@@ -384,11 +377,11 @@
         "b2b_secondary_label": "Already approved? Log in",
         "b2b_secondary_link": "https://account.boka.com",
         "b2b_note": "Please note: customers outside of the U.S. and Canada are not being accepted at this time. All Boka Pros purchases are final sale. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts.",
-        "testimonials_kicker": "Dentist & hygienist approved",
+        "testimonials_kicker": "Dentist & hygienist recommended",
         "testimonials_heading": "Recommended by professionals who care about the daily routine.",
         "form_kicker": "Apply now",
         "form_heading": "Join the Boka Dental Pros Program.",
-        "form_text": "Use this form for the Shopify page draft, or replace it with your final affiliate platform form embed once the program is ready.",
+        "form_text": "Use this form to request a Dental Pro account. Once submitted, your application will be reviewed for eligibility, and approved accounts may receive access to preferred B2B discounts on qualifying Boka products.",
         "form_name": "Dental Pros Program Application",
         "form_success_message": "Thank you for applying. We’ll review your information and follow up by email.",
         "form_error_message": "Please check the required fields and try again.",
