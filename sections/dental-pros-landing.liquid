@@ -1340,7 +1340,7 @@
       </div>
     </div>
   </section>
-
+{% comment %}
   <section class="dp-section dp-video" id="advisory-video" aria-label="Dental Advisory Committee video">
     <div class="dp-wrap">
       <div class="dp-split dp-split--reverse">
@@ -1389,8 +1389,8 @@
       </div>
     </div>
   </section>
-
-        {% comment %}<section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
+ 
+       <section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
           <div class="dp-wrap">
             {% if section.settings.how_kicker != blank %}
               <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
@@ -1419,8 +1419,6 @@
               {% endif %}
             {% endfor %}
           </div>
-      {%endcomment %}
-
       <div class="dp-commission">
         <div>
           {% if section.settings.commission_kicker != blank %}
@@ -1446,7 +1444,7 @@
       </div>
     </div>
   </section>
-
+ {% endcomment %}
   <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist approved">
     <div class="dp-wrap">
       {% if section.settings.testimonials_kicker != blank %}
