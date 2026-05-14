@@ -1390,35 +1390,36 @@
     </div>
   </section>
 
-  {% comment %}<section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
-    <div class="dp-wrap">
-      {% if section.settings.how_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
-      {% endif %}
-      {% if section.settings.how_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
-      {% endif %}
-      {% if section.settings.how_text != blank %}
-        <p class="dp-copy">{{ section.settings.how_text }}</p>
-      {% endif %}
+        {% comment %}<section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
+          <div class="dp-wrap">
+            {% if section.settings.how_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+            {% endif %}
+            {% if section.settings.how_heading != blank %}
+              <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
+            {% endif %}
+            {% if section.settings.how_text != blank %}
+              <p class="dp-copy">{{ section.settings.how_text }}</p>
+            {% endif %}
 
-      <div class="dp-steps">
-        {% for block in section.blocks %}
-          {% if block.type == 'how_step' %}
-            <article class="dp-step" {{ block.shopify_attributes }}>
-              {% if block.settings.number != blank %}
-                <span class="dp-step__num">{{ block.settings.number }}</span>
+            <div class="dp-steps">
+              {% for block in section.blocks %}
+                {% if block.type == 'how_step' %}
+                  <article class="dp-step" {{ block.shopify_attributes }}>
+                    {% if block.settings.number != blank %}
+                      <span class="dp-step__num">{{ block.settings.number }}</span>
+                    {% endif %}
+                    {% if block.settings.title != blank %}
+                      <h3 class="dp-step__title">{{ block.settings.title }}</h3>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                      <p class="dp-step__copy">{{ block.settings.text }}</p>
+                    {% endif %}
+                  </article>
               {% endif %}
-              {% if block.settings.title != blank %}
-                <h3 class="dp-step__title">{{ block.settings.title }}</h3>
-              {% endif %}
-              {% if block.settings.text != blank %}
-                <p class="dp-step__copy">{{ block.settings.text }}</p>
-              {% endif %}
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>{%endcomment %}
+            {% endfor %}
+          </div>
+      {%endcomment %}
 
       <div class="dp-commission">
         <div>
