@@ -151,7 +151,7 @@
           "settings": {
             "heading": "How often should I use this toothpaste for best results?",
             "icon": "none",
-            "row_content": "<p>For optimal results, use this toothpaste at least twice daily, brushing for two minutes each time. Consistent use helps prevent new lesions and maintains a naturally bright whitening effect.</p>",
+            "row_content": "<p>For optimal results, use this toothpaste at least twice daily, brushing for two minutes each time.</p>",
             "page": ""
           }
         },
