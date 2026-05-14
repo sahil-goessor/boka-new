@@ -126,6 +126,7 @@
         },
         "how_step_1": {
           "type": "how_step",
+          "disabled": true,
           "settings": {
             "number": "01",
             "title": "Apply",
@@ -134,6 +135,7 @@
         },
         "how_step_2": {
           "type": "how_step",
+          "disabled": true,
           "settings": {
             "number": "02",
             "title": "Get your link",
@@ -142,6 +144,7 @@
         },
         "how_step_3": {
           "type": "how_step",
+          "disabled": true,
           "settings": {
             "number": "03",
             "title": "Share with patients",
@@ -150,6 +153,7 @@
         },
         "how_step_4": {
           "type": "how_step",
+          "disabled": true,
           "settings": {
             "number": "04",
             "title": "Earn commission",
