@@ -278,7 +278,7 @@
           "type": "faq",
           "settings": {
             "question": "Can I order products for my practice?",
-            "answer": "Yes, the page should continue to explain Boka Pro practice discounts and account access for approved members."
+            "answer": "Yes. Approved Dental Pro accounts can use preferred professional pricing to order qualifying Boka products for their practice, team, or patient-facing use."
           }
         },
         "faq_4": {
@@ -286,6 +286,20 @@
           "settings": {
             "question": "Can I resell products online?",
             "answer": "No. Online resale of Boka products without express permission is prohibited and may result in cancellation of Boka Pro accounts."
+          }
+        },
+        "faq_CxHKiw": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I share discounts with patients?",
+            "answer": "Dental Pro pricing is intended for approved professional accounts and qualifying practice orders. Patient-facing offers, codes, or referral programs may be available separately if approved by Boka."
+          }
+        },
+        "faq_ypMLy9": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I apply?",
+            "answer": "Submit the Dental Pro application form for review. Once approved, you may receive access to professional pricing, account resources, and eligible B2B discount tiers."
           }
         }
       },
@@ -326,7 +340,9 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_CxHKiw",
+        "faq_ypMLy9"
       ],
       "custom_css": [
         ".dp-headline-main {display: block; font-size: 72px;}",
