@@ -365,7 +365,7 @@
         "heading_g8Hktf": {
           "type": "heading",
           "settings": {
-            "heading": "Powered by Nature.<br>\nBacked by Science.",
+            "heading": "Brush, Rinse, Refresh, Repeat. <br> Boka Works With Every Routine.",
             "heading_size": "h1",
             "heading_tag": "h2"
           }
@@ -373,7 +373,7 @@
         "text_VQwtMg": {
           "type": "text",
           "settings": {
-            "text": "<p>Our high performing, non-toxic* n-Ha formulas are designed to do more than just clean — they help care for your mouth as a whole. (Your dentist just did a backflip.)</p>"
+            "text": "<p>Our high performing, non-toxic* n-Ha formulas are designed to do more than just clean - they help care for your oral routine no matter your goal.</p>"
           }
         }
       },
@@ -381,6 +381,7 @@
         "heading_g8Hktf",
         "text_VQwtMg"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -447,7 +448,7 @@
         "73c0b949-e66d-4387-afc1-9a703b3d17ea"
       ],
       "settings": {
-        "title": "",
+        "title": "<p>Shop All</p>",
         "heading_alignment": "center",
         "heading_size": "h1",
         "heading_tag": "h3",
