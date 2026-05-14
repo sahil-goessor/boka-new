@@ -264,14 +264,14 @@
           "type": "faq",
           "settings": {
             "question": "Who is the program for?",
-            "answer": "Licensed dental professionals, hygienists, dentists, orthodontists, and practice teams who want to recommend Boka or order for their practice."
+            "answer": "The Boka Dental Pros Program is for licensed dental professionals, hygienists, dentists, orthodontists, and practice teams interested in ordering Boka products for their office, team, or patient-facing needs."
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "How do commissions work?",
-            "answer": "Approved members receive a unique link or code. Qualifying patient purchases are tracked to that link or code and paid according to program terms."
+            "question": "How do Dental Pro discounts work?",
+            "answer": "Approved Dental Pro accounts may receive access to exclusive professional pricing on qualifying Boka products. Discount eligibility and tier placement may vary based on account type, order volume, and program requirements."
           }
         },
         "faq_3": {
