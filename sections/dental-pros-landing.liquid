@@ -1390,7 +1390,7 @@
     </div>
   </section>
 
-  <section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
+  {% comment %}<section class="dp-section" id="how-it-works" aria-label="How the affiliate program works">
     <div class="dp-wrap">
       {% if section.settings.how_kicker != blank %}
         <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
@@ -1418,7 +1418,7 @@
             </article>
           {% endif %}
         {% endfor %}
-      </div>
+      </div>{%endcomment %}
 
       <div class="dp-commission">
         <div>
