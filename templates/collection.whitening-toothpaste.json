@@ -61,15 +61,6 @@
     "collapsible_content_GaTyNb": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_GGcFRf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What exactly is n-Ha and how does it work?",
-            "icon": "none",
-            "row_content": "<p>Nano-hydroxyapatite (n-Ha) is a biocompatible form of calcium that makes up the majority of your tooth enamel. </p><p>Unlike fluoride, which can work by temporarily hardening the outer layer of teeth, n-Ha actually integrates with your existing enamel, rebuilding and strengthening it at the microscopic level. </p><p>As you brush, the particles bond to weak spots, remove stains, and deliver effective whitening without harsh abrasives—making it a smart toothpaste for whitening teeth that also helps guard against future cavities.</p>",
-            "page": ""
-          }
-        },
         "collapsible_row_aJYYmM": {
           "type": "collapsible_row",
           "settings": {
@@ -135,7 +126,6 @@
         }
       },
       "block_order": [
-        "collapsible_row_GGcFRf",
         "collapsible_row_aJYYmM",
         "collapsible_row_cKabND",
         "collapsible_row_EycrT9",
