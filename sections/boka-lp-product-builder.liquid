@@ -576,7 +576,22 @@
 
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
 
-                      <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
+                      <span class="boka-lp__onetime-price-wrap">
+                        <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
+
+                        {% if first_variant.compare_at_price > first_variant.price %}
+                          <span class="boka-lp__compare-price" data-boka-onetime-compare>
+                            {{ first_variant.compare_at_price | money }}
+                          </span>
+
+                          <span class="boka-lp__save-text" data-boka-onetime-discount>
+                            Save {{ first_variant.compare_at_price | minus: first_variant.price | money }}
+                          </span>
+                        {% else %}
+                          <span class="boka-lp__compare-price" data-boka-onetime-compare hidden></span>
+                          <span class="boka-lp__save-text" data-boka-onetime-discount hidden></span>
+                        {% endif %}
+                      </span>
                     </span>
 
                     <span class="boka-lp__onetime-details">
