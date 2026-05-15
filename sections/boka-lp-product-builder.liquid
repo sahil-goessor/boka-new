@@ -275,6 +275,16 @@
         justify-items: start;
         text-align: left;
       }
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-top {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__price {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 4px;
+    font-size: 18px;
+  }
     }
   </style>
 
