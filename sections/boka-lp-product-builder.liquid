@@ -693,6 +693,8 @@
       const subCompare = root.querySelector('[data-boka-sub-compare]');
       const refillPrice = root.querySelector('[data-boka-refill-price]');
       const onetimePrice = root.querySelector('[data-boka-onetime-price]');
+      const onetimeCompare = root.querySelector('[data-boka-onetime-compare]');
+      const onetimeDiscount = root.querySelector('[data-boka-onetime-discount]');
       const thumbs = [...root.querySelectorAll('.boka-lp__thumb')];
       const cartButtons = [...root.querySelectorAll('[data-boka-open-cart]')];
       const cartCountEls = [...root.querySelectorAll('[data-boka-cart-count]')];
@@ -773,6 +775,27 @@
 
         if (onetimePrice) {
           onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
+        }
+
+        if (onetimeCompare) {
+          if (variant.compare_at_price && variant.compare_at_price > variant.price) {
+            onetimeCompare.textContent = formatMoney(variant.compare_at_price * selectedQuantity);
+            onetimeCompare.hidden = false;
+          } else {
+            onetimeCompare.textContent = '';
+            onetimeCompare.hidden = true;
+          }
+        }
+
+        if (onetimeDiscount) {
+          if (variant.compare_at_price && variant.compare_at_price > variant.price) {
+            const savings = (variant.compare_at_price - variant.price) * selectedQuantity;
+            onetimeDiscount.textContent = `Save ${formatMoney(savings)}`;
+            onetimeDiscount.hidden = false;
+          } else {
+            onetimeDiscount.textContent = '';
+            onetimeDiscount.hidden = true;
+          }
         }
 
         const allocations = variant.selling_plan_allocations || [];
