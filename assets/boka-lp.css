@@ -2243,11 +2243,6 @@
   transform: translateY(-1px);
 }
 
-@media (max-width: 860px) {
-  .boka-lp .boka-lp__section--compare {
-  padding: 30px 16px;
-}
-
   .boka-lp .boka-lp__compare-layout {
   grid-template-columns: 1fr;
   gap: 34px;
