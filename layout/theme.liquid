@@ -1043,5 +1043,29 @@
   });
 </script>
 
+<script>
+  (() => {
+    if (!document.querySelector('.boka-lp')) return;
+
+    const disableRechargeCartTrigger = () => {
+      document
+        .querySelectorAll('[data-recharge-cart-trigger-observer]')
+        .forEach((trigger) => {
+          trigger.removeAttribute('data-recharge-cart-trigger-observer');
+        });
+    };
+
+    disableRechargeCartTrigger();
+
+    const observer = new MutationObserver(disableRechargeCartTrigger);
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['data-recharge-cart-trigger-observer']
+    });
+  })();
+</script>
+
 </body>
 </html>
