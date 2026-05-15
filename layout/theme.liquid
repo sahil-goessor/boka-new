@@ -1043,6 +1043,79 @@
   });
 </script>
 
+<script>
+  (() => {
+    const rechargeDrawerHostSelector = '#recharge-storefront-experiences__cart-drawer';
+    const starterProductTitle = 'best of boka starter kit';
+
+    const hideStarterKitRechargeUpsell = () => {
+      const host = document.querySelector(rechargeDrawerHostSelector);
+      const root = host && host.shadowRoot;
+
+      if (!root) return;
+
+      root.querySelectorAll('[role="listitem"]').forEach((lineItem) => {
+        const lineItemText = lineItem.textContent.trim().toLowerCase();
+        const isStarterKit = lineItemText.includes(starterProductTitle);
+
+        if (!isStarterKit) return;
+
+        lineItem.querySelectorAll('button').forEach((button) => {
+          const buttonText = button.textContent.trim().toLowerCase();
+
+          if (
+            buttonText.includes('subscribe') &&
+            (buttonText.includes('save') || buttonText.includes('upgrade'))
+          ) {
+            const wrapper =
+              button.closest('.flex.gap-2.flex-col.items-start.w-full') ||
+              button.parentElement;
+
+            if (wrapper) {
+              wrapper.style.setProperty('display', 'none', 'important');
+            }
+
+            button.style.setProperty('display', 'none', 'important');
+          }
+        });
+      });
+    };
+
+    const run = () => {
+      hideStarterKitRechargeUpsell();
+      setTimeout(hideStarterKitRechargeUpsell, 250);
+      setTimeout(hideStarterKitRechargeUpsell, 750);
+      setTimeout(hideStarterKitRechargeUpsell, 1500);
+    };
+
+    document.addEventListener('DOMContentLoaded', run);
+    document.addEventListener('click', run);
+    document.addEventListener('cart:open', run);
+    document.addEventListener('cart:refresh', run);
+    window.addEventListener('cart:open', run);
+    window.addEventListener('cart:refresh', run);
+
+    const observeRechargeDrawer = () => {
+      const host = document.querySelector(rechargeDrawerHostSelector);
+      const root = host && host.shadowRoot;
+
+      if (!root) {
+        setTimeout(observeRechargeDrawer, 300);
+        return;
+      }
+
+      const observer = new MutationObserver(run);
+      observer.observe(root, {
+        childList: true,
+        subtree: true
+      });
+
+      run();
+    };
+
+    observeRechargeDrawer();
+  })();
+</script>
 
 </body>
 </html>
