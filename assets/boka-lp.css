@@ -658,7 +658,7 @@
     .boka-lp .boka-lp__goal-card,
     .boka-lp .boka-lp__qty-card,
     .boka-lp .boka-lp__plan-card {
-  border: 1px solid var(--boka-charcoal) !important;
+  border: 2px solid var(--boka-charcoal) !important;
   background: var(--boka-white) !important;
   color: var(--boka-charcoal);
 }
