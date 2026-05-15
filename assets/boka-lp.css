@@ -2305,7 +2305,7 @@
 }
 
 .boka-lp .boka-lp__section--compare {
-  padding: clamp(72px, 8vw, 110px) 5%;
+  padding: clamp(72px, 8vw, 110px) 5% 0;
   overflow: hidden;
 }
 
