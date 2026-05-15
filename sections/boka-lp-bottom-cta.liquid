@@ -1,22 +1,77 @@
-<section class="boka-lp">
+<section class="boka-lp boka-lp--bottom-cta-section">
+  <style>
+    .boka-lp--bottom-cta-section {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp--bottom-cta-section h1,
+    .boka-lp--bottom-cta-section h2,
+    .boka-lp--bottom-cta-section h3,
+    .boka-lp--bottom-cta-section .boka-lp__section-title {
+      font-family: var(--font-heading-family);
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp--bottom-cta-section p,
+    .boka-lp--bottom-cta-section a,
+    .boka-lp--bottom-cta-section span,
+    .boka-lp--bottom-cta-section button {
+      font-family: inherit;
+    }
+
+    .boka-lp--bottom-cta-section em {
+      font-family: var(--font-heading-family);
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+    }
+  </style>
+
   <div class="boka-lp__section boka-lp__section--charcoal boka-lp__bottom-cta">
     <div class="boka-lp__wrap boka-lp__wrap--narrow">
-      <h2 class="boka-lp__section-title">Ready to build a routine you’ll actually stick with?</h2>
-      <p class="boka-lp__section-copy">Choose your smile goal and get a complete Boka routine delivered to your door.</p>
-      <a class="boka-lp__promo-banner-button" href="#boka-subscription"> {{ section.settings.promo_banner_button_text }}
-</a>
+      <h2 class="boka-lp__section-title">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="boka-lp__section-copy">
+        {{ section.settings.copy }}
+      </p>
+
+      <a class="boka-lp__promo-banner-button" href="{{ section.settings.button_link | default: '#boka-subscription' }}">
+        {{ section.settings.promo_banner_button_text }}
+      </a>
     </div>
   </div>
 </section>
+
 {% schema %}
 {
   "name": "Boka LP bottom CTA",
   "settings": [
     {
       "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to build a routine you’ll actually stick with?"
+    },
+    {
+      "type": "textarea",
+      "id": "copy",
+      "label": "Copy",
+      "default": "Choose your smile goal and get a complete Boka routine delivered to your door."
+    },
+    {
+      "type": "text",
       "id": "promo_banner_button_text",
       "label": "Button text",
       "default": "Start My Routine"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     }
   ],
   "presets": [
