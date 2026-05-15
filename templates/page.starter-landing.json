@@ -41,10 +41,6 @@
         "included_bag_image": "shopify://shop_images/BOK-TravelBagDTCMainImage.webp"
       }
     },
-    "lp_compare": {
-      "type": "boka-lp-compare",
-      "settings": {}
-    },
     "lp_builder": {
       "type": "boka-lp-product-builder",
       "settings": {
@@ -106,6 +102,10 @@
         "science_image_alt": "Boka oral care products"
       }
     },
+    "lp_compare": {
+      "type": "boka-lp-compare",
+      "settings": {}
+    },
     "lp_reviews": {
       "type": "boka-lp-reviews",
       "settings": {}
@@ -130,9 +130,9 @@
     "lp_assets",
     "lp_hero",
     "lp_included",
-    "lp_compare",
     "lp_builder",
     "lp_science",
+    "lp_compare",
     "lp_reviews",
     "lp_refills",
     "lp_faq",
