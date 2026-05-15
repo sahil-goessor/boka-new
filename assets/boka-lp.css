@@ -3844,11 +3844,6 @@
   background: var(--boka-white) !important;
 }
 
-.boka-lp .boka-lp__section--science-collage {
-  padding: clamp(68px, 8vw, 110px) 5%;
-  overflow: hidden;
-}
-
 .boka-lp .boka-lp__science-collage-wrap {
   max-width: 1280px;
   margin: 0 auto;
