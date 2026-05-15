@@ -576,7 +576,10 @@
 
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
 
-                      <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
+                      <span class="boka-lp__onetime-price-wrap">
+                        <span class="boka-lp__price" data-boka-onetime-price>$35.49</span>
+                        <span class="boka-lp__compare-price" data-boka-onetime-compare>{{ first_variant.price | money }}</span>
+                      </span>
                     </span>
 
                     <span class="boka-lp__onetime-details">
