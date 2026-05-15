@@ -2813,7 +2813,7 @@
 }
 
 .boka-lp .boka-lp__section--science-collage {
-  padding: clamp(68px, 8vw, 110px) 5% 40px;
+  padding: clamp(68px, 8vw, 110px) 5%;
   overflow: hidden;
 }
 
