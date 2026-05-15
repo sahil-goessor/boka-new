@@ -723,7 +723,14 @@
         });
 
         if (onetimePrice) {
-          onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
+          const discountedOtpPrice = 3549 * selectedQuantity;
+          onetimePrice.textContent = formatMoney(discountedOtpPrice);
+        }
+
+        const onetimeCompare = root.querySelector('[data-boka-onetime-compare]');
+
+        if (onetimeCompare) {
+          onetimeCompare.textContent = formatMoney(variant.price * selectedQuantity);
         }
 
         const allocations = variant.selling_plan_allocations || [];
