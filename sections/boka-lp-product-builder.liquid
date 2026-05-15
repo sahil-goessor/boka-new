@@ -338,7 +338,6 @@
     text-align: left;
   }
 }
-
   </style>
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
@@ -995,12 +994,6 @@
           }
 
           await updateCartCount();
-
-          if (selectedPlanType === 'onetime') {
-            window.location.href = '/discount/STARTEROTP1450?redirect=/cart';
-            return;
-          }
-
           await renderCartAfterAdd(data);
         } catch (error) {
           if (message) {
