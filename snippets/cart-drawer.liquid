@@ -221,7 +221,7 @@
                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                           {%- endif -%}
 
-                          {% unless customer.b2b? or item.selling_plan_allocation or item.product.handle == 'best-of-boka-starter-kit' %}
+                          {% unless customer.b2b? or item.selling_plan_allocation %}
                               {% for selling_plan_allocation in item.variant.selling_plan_allocations %}
                                   {% if selling_plan_allocation.selling_plan.name contains '3 month' %}
                                   <subs-upgrade class="product-upgrade" data-line="{{ item_line_number }}" data-selling-plan="{{ selling_plan_allocation.selling_plan.id }}">
