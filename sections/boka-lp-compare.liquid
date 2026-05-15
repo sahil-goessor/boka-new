@@ -1,23 +1,65 @@
-<section class="boka-lp boka-lp-compare" id="boka-compare-{{ section.id }}">
+<section class="boka-lp boka-lp-compare boka-lp--compare-section" id="boka-compare-{{ section.id }}">
+  <style>
+    #boka-compare-{{ section.id }} {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    #boka-compare-{{ section.id }} h1,
+    #boka-compare-{{ section.id }} h2,
+    #boka-compare-{{ section.id }} h3,
+    #boka-compare-{{ section.id }} .boka-lp__compare-heading,
+    #boka-compare-{{ section.id }} .boka-lp__compare-brand,
+    #boka-compare-{{ section.id }} .boka-lp__compare-label {
+      font-family: var(--font-heading-family);
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    #boka-compare-{{ section.id }} p,
+    #boka-compare-{{ section.id }} a,
+    #boka-compare-{{ section.id }} span,
+    #boka-compare-{{ section.id }} div,
+    #boka-compare-{{ section.id }} button {
+      font-family: inherit;
+    }
+
+    #boka-compare-{{ section.id }} em {
+      font-family: var(--font-heading-family);
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+    }
+  </style>
+
   <div class="boka-lp__section boka-lp__section--compare">
     <div class="boka-lp__wrap boka-lp__compare-layout">
 
       <div class="boka-lp__compare-copy">
-        <p class="boka-lp__eyebrow">The easy switch</p>
+        <p class="boka-lp__eyebrow">
+          {{ section.settings.eyebrow }}
+        </p>
 
-        <h2 class="boka-lp__compare-heading">What makes Boka toothpaste different?</h2>
+        <h2 class="boka-lp__compare-heading">
+          {{ section.settings.heading }}
+        </h2>
 
         <p class="boka-lp__compare-text">
-          Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, a breakthrough material inspired by nature and backed by science.
+          {{ section.settings.copy }}
         </p>
 
         <div class="boka-lp__compare-rating">
-          <span class="boka-lp__compare-stars">★★★★★ 4.6 stars from 950,000+ customers</span>
-          <span>{{ section.settings.rating_text }}</span>
+          <span class="boka-lp__compare-stars">
+            {{ section.settings.stars_text }}
+          </span>
+
+          {% if section.settings.rating_text != blank %}
+            <span>{{ section.settings.rating_text }}</span>
+          {% endif %}
         </div>
 
-        <a class="boka-lp__compare-button" href="#boka-buybox">
-          Choose your starter kit
+        <a class="boka-lp__compare-button" href="{{ section.settings.button_link | default: '#boka-buybox' }}">
+          {{ section.settings.button_text }}
         </a>
       </div>
 
@@ -26,10 +68,10 @@
           <div class="boka-lp__compare-blank"></div>
 
           <div class="boka-lp__compare-brand">
-            <span>Boka Toothpaste</span>
+            <span>{{ section.settings.boka_column_title }}</span>
           </div>
 
-          <div>Other Toothpaste</div>
+          <div>{{ section.settings.other_column_title }}</div>
         </div>
 
         <div class="boka-lp__compare-grid">
@@ -78,3 +120,68 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Boka LP compare",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The easy switch"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What makes Boka toothpaste different?"
+    },
+    {
+      "type": "textarea",
+      "id": "copy",
+      "label": "Copy",
+      "default": "Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, a breakthrough material inspired by nature and backed by science."
+    },
+    {
+      "type": "text",
+      "id": "stars_text",
+      "label": "Stars text",
+      "default": "★★★★★ 4.6 stars from 950,000+ customers"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Additional rating text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Choose your starter kit"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "boka_column_title",
+      "label": "Boka column title",
+      "default": "Boka Toothpaste"
+    },
+    {
+      "type": "text",
+      "id": "other_column_title",
+      "label": "Other column title",
+      "default": "Other Toothpaste"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boka LP compare"
+    }
+  ]
+}
+{% endschema %}
