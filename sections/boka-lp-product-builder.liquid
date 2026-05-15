@@ -235,6 +235,27 @@
       opacity: .76;
     }
 
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-top {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-title {
+      min-width: 0;
+      max-width: none;
+      font-size: 20px;
+      line-height: 1.1;
+      white-space: normal;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__price {
+      justify-self: end;
+      white-space: nowrap;
+      font-size: 20px;
+      line-height: 1;
+    }
+
     @media screen and (max-width: 749px) {
 
       #boka-product-builder-{{ section.id }} .boka-lp__plan-top {
