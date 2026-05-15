@@ -306,43 +306,6 @@
   display: none !important;
   content: none !important;
 }
-
-#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  gap: 6px;
-  flex-wrap: wrap;
-  min-width: max-content;
-  text-align: right;
-}
-
-#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap .boka-lp__price {
-  font-size: 20px;
-}
-
-#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap .boka-lp__compare-price {
-  margin: 0;
-  font-size: 13px;
-}
-
-#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap .boka-lp__save-text {
-  flex-basis: 100%;
-  font-size: 10px;
-  text-align: right;
-}
-
-@media screen and (max-width: 749px) {
-  #boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap {
-    grid-column: 2;
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  #boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap .boka-lp__save-text {
-    text-align: left;
-  }
-}
   </style>
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
@@ -613,22 +576,7 @@
 
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
 
-                      <span class="boka-lp__onetime-price-wrap">
-                        <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
-
-                        {% if first_variant.compare_at_price > first_variant.price %}
-                          <span class="boka-lp__compare-price" data-boka-onetime-compare>
-                            {{ first_variant.compare_at_price | money }}
-                          </span>
-
-                          <span class="boka-lp__save-text" data-boka-onetime-discount>
-                            Save {{ first_variant.compare_at_price | minus: first_variant.price | money }}
-                          </span>
-                        {% else %}
-                          <span class="boka-lp__compare-price" data-boka-onetime-compare hidden></span>
-                          <span class="boka-lp__save-text" data-boka-onetime-discount hidden></span>
-                        {% endif %}
-                      </span>
+                      <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
                     </span>
 
                     <span class="boka-lp__onetime-details">
@@ -693,8 +641,6 @@
       const subCompare = root.querySelector('[data-boka-sub-compare]');
       const refillPrice = root.querySelector('[data-boka-refill-price]');
       const onetimePrice = root.querySelector('[data-boka-onetime-price]');
-      const onetimeCompare = root.querySelector('[data-boka-onetime-compare]');
-      const onetimeDiscount = root.querySelector('[data-boka-onetime-discount]');
       const thumbs = [...root.querySelectorAll('.boka-lp__thumb')];
       const cartButtons = [...root.querySelectorAll('[data-boka-open-cart]')];
       const cartCountEls = [...root.querySelectorAll('[data-boka-cart-count]')];
@@ -775,27 +721,6 @@
 
         if (onetimePrice) {
           onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
-        }
-
-        if (onetimeCompare) {
-          if (variant.compare_at_price && variant.compare_at_price > variant.price) {
-            onetimeCompare.textContent = formatMoney(variant.compare_at_price * selectedQuantity);
-            onetimeCompare.hidden = false;
-          } else {
-            onetimeCompare.textContent = '';
-            onetimeCompare.hidden = true;
-          }
-        }
-
-        if (onetimeDiscount) {
-          if (variant.compare_at_price && variant.compare_at_price > variant.price) {
-            const savings = (variant.compare_at_price - variant.price) * selectedQuantity;
-            onetimeDiscount.textContent = `Save ${formatMoney(savings)}`;
-            onetimeDiscount.hidden = false;
-          } else {
-            onetimeDiscount.textContent = '';
-            onetimeDiscount.hidden = true;
-          }
         }
 
         const allocations = variant.selling_plan_allocations || [];
