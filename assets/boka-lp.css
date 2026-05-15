@@ -4155,3 +4155,13 @@
 body:has(.boka-lp) .announcement-bar-section {
   display: none !important;
 }
+
+.boka-lp .boka-lp__section--reviews {
+  padding: 64px 5% 0;
+}
+
+@media screen and (max-width: 749px) {
+  .boka-lp .boka-lp__section--reviews {
+    padding: 40px 16px 0;
+  }
+}
