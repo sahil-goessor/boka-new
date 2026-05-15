@@ -4171,3 +4171,6 @@
   }
 }
 
+body:has(.boka-lp) .announcement-bar-section {
+  display: none !important;
+}
