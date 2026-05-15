@@ -190,7 +190,6 @@
     .boka-lp .boka-lp__hero {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 34px 4% 64px;
   display: grid;
   grid-template-columns: minmax(0, 1.06fr) minmax(420px, .94fr);
   gap: 28px;
