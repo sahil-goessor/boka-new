@@ -306,6 +306,39 @@
   display: none !important;
   content: none !important;
 }
+
+#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 7px;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  text-align: right;
+}
+
+#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap .boka-lp__price {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+#boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap .boka-lp__compare-price {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1;
+  opacity: .58;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 749px) {
+  #boka-product-builder-{{ section.id }} .boka-lp__onetime-price-wrap {
+    grid-column: 2;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
   </style>
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
