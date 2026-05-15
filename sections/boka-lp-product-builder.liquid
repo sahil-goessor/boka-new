@@ -10,6 +10,62 @@
 
 <section id="boka-product-builder-{{ section.id }}" class="boka-lp boka-lp--starter-offer" data-section-id="{{ section.id }}">
   <style>
+    #boka-product-builder-{{ section.id }} {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    #boka-product-builder-{{ section.id }} *,
+    #boka-product-builder-{{ section.id }} *::before,
+    #boka-product-builder-{{ section.id }} *::after {
+      box-sizing: border-box;
+    }
+
+    #boka-product-builder-{{ section.id }} button,
+    #boka-product-builder-{{ section.id }} input,
+    #boka-product-builder-{{ section.id }} select,
+    #boka-product-builder-{{ section.id }} textarea {
+      font-family: inherit;
+      font-style: inherit;
+    }
+
+    #boka-product-builder-{{ section.id }} h1,
+    #boka-product-builder-{{ section.id }} h2,
+    #boka-product-builder-{{ section.id }} h3,
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__step-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__goal-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__ship-title {
+      font-family: var(--font-heading-family);
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    #boka-product-builder-{{ section.id }} p,
+    #boka-product-builder-{{ section.id }} li,
+    #boka-product-builder-{{ section.id }} a,
+    #boka-product-builder-{{ section.id }} span,
+    #boka-product-builder-{{ section.id }} button,
+    #boka-product-builder-{{ section.id }} input,
+    #boka-product-builder-{{ section.id }} select,
+    #boka-product-builder-{{ section.id }} textarea,
+    #boka-product-builder-{{ section.id }} .boka-lp__product-description,
+    #boka-product-builder-{{ section.id }} .boka-lp__ship-copy,
+    #boka-product-builder-{{ section.id }} .boka-lp__atc-subtext,
+    #boka-product-builder-{{ section.id }} .boka-lp__message {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+    }
+
+    #boka-product-builder-{{ section.id }} em {
+      font-family: var(--font-heading-family);
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+      letter-spacing: -0.02em;
+    }
+
     #boka-product-builder-{{ section.id }} .boka-lp__product-summary-card {
       gap: 14px;
     }
