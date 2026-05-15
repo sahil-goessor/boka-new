@@ -4162,3 +4162,9 @@
     margin-left: 36px;
   }
 }
+
+@media screen and (max-width: 749px) {
+  #boka-product-builder-{{ section.id }} .boka-lp__guarantees {
+    display: none !important;
+  }
+}
