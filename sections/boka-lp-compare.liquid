@@ -1,36 +1,81 @@
 <section class="boka-lp boka-lp-compare boka-lp--compare-section" id="boka-compare-{{ section.id }}">
   <style>
-    #boka-compare-{{ section.id }} {
-      font-family: var(--font-body-family);
-      font-style: var(--font-body-style);
-      font-weight: var(--font-body-weight);
+  #boka-compare-{{ section.id }} {
+    --boka-lp-body-font: var(--font-body-family);
+    --boka-lp-body-style: var(--font-body-style);
+    --boka-lp-body-weight: var(--font-body-weight);
+    --boka-lp-heading-font: var(--font-heading-family);
+    --boka-lp-heading-style: var(--font-heading-style);
+    --boka-lp-heading-weight: var(--font-heading-weight);
+
+    font-family: var(--boka-lp-body-font) !important;
+    font-style: var(--boka-lp-body-style);
+    font-weight: var(--boka-lp-body-weight);
+  }
+
+  #boka-compare-{{ section.id }} *,
+  #boka-compare-{{ section.id }} *::before,
+  #boka-compare-{{ section.id }} *::after {
+    font-family: inherit;
+  }
+
+  #boka-compare-{{ section.id }} .boka-lp__eyebrow,
+  #boka-compare-{{ section.id }} .boka-lp__compare-text,
+  #boka-compare-{{ section.id }} .boka-lp__compare-rating,
+  #boka-compare-{{ section.id }} .boka-lp__compare-stars,
+  #boka-compare-{{ section.id }} .boka-lp__compare-button,
+  #boka-compare-{{ section.id }} .boka-lp__compare-good,
+  #boka-compare-{{ section.id }} .boka-lp__compare-maybe,
+  #boka-compare-{{ section.id }} .boka-lp__compare-grid > div {
+    font-family: var(--boka-lp-body-font) !important;
+    font-style: var(--boka-lp-body-style);
+  }
+
+  #boka-compare-{{ section.id }} h1,
+  #boka-compare-{{ section.id }} h2,
+  #boka-compare-{{ section.id }} h3,
+  #boka-compare-{{ section.id }} .boka-lp__compare-heading,
+  #boka-compare-{{ section.id }} .boka-lp__compare-brand,
+  #boka-compare-{{ section.id }} .boka-lp__compare-brand span,
+  #boka-compare-{{ section.id }} .boka-lp__compare-label,
+  #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
+    font-family: var(--boka-lp-heading-font) !important;
+    font-style: var(--boka-lp-heading-style);
+    font-weight: var(--boka-lp-heading-weight);
+  }
+
+  #boka-compare-{{ section.id }} em {
+    font-family: var(--boka-lp-heading-font) !important;
+    font-style: italic;
+    font-weight: var(--boka-lp-heading-weight);
+  }
+
+  @media screen and (max-width: 749px) {
+    #boka-compare-{{ section.id }},
+    #boka-compare-{{ section.id }} *,
+    #boka-compare-{{ section.id }} *::before,
+    #boka-compare-{{ section.id }} *::after {
+      font-family: var(--boka-lp-body-font) !important;
     }
 
-    #boka-compare-{{ section.id }} h1,
-    #boka-compare-{{ section.id }} h2,
-    #boka-compare-{{ section.id }} h3,
     #boka-compare-{{ section.id }} .boka-lp__compare-heading,
     #boka-compare-{{ section.id }} .boka-lp__compare-brand,
-    #boka-compare-{{ section.id }} .boka-lp__compare-label {
-      font-family: var(--font-heading-family);
-      font-style: var(--font-heading-style);
-      font-weight: var(--font-heading-weight);
+    #boka-compare-{{ section.id }} .boka-lp__compare-brand span,
+    #boka-compare-{{ section.id }} .boka-lp__compare-label,
+    #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
+      font-family: var(--boka-lp-heading-font) !important;
     }
 
-    #boka-compare-{{ section.id }} p,
-    #boka-compare-{{ section.id }} a,
-    #boka-compare-{{ section.id }} span,
-    #boka-compare-{{ section.id }} div,
-    #boka-compare-{{ section.id }} button {
-      font-family: inherit;
+    #boka-compare-{{ section.id }} .boka-lp__compare-good,
+    #boka-compare-{{ section.id }} .boka-lp__compare-maybe,
+    #boka-compare-{{ section.id }} .boka-lp__compare-text,
+    #boka-compare-{{ section.id }} .boka-lp__compare-rating,
+    #boka-compare-{{ section.id }} .boka-lp__compare-stars,
+    #boka-compare-{{ section.id }} .boka-lp__compare-button {
+      font-family: var(--boka-lp-body-font) !important;
     }
-
-    #boka-compare-{{ section.id }} em {
-      font-family: var(--font-heading-family);
-      font-style: italic;
-      font-weight: var(--font-heading-weight);
-    }
-  </style>
+  }
+</style>
 
   <div class="boka-lp__section boka-lp__section--compare">
     <div class="boka-lp__wrap boka-lp__compare-layout">
