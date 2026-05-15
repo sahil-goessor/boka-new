@@ -286,6 +286,22 @@
     font-size: 18px;
   }
     }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__goal-sub {
+  display: block !important;
+  margin-top: 6px;
+  color: rgba(34, 39, 33, 0.72);
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+#boka-product-builder-{{ section.id }} .boka-lp__goal-sub::before,
+#boka-product-builder-{{ section.id }} .boka-lp__goal-sub::after {
+  display: none !important;
+  content: none !important;
+}
   </style>
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
@@ -444,9 +460,25 @@
                     {% unless variant.available %}disabled{% endunless %}
                   >
                     <span class="boka-lp__goal-title">{{ variant.title }}</span>
+
                     <span class="boka-lp__goal-sub">
+                      {% case variant.title %}
+                        {% when 'Daily Care' %}
+                          Includes Ela Mint n-Ha Toothpaste
+                        {% when 'Whiten' %}
+                          Includes Refresh Mint Whitening n-Ha Toothpaste
+                        {% when 'Sensitive' %}
+                          Includes Sensitive n-Ha Toothpaste
+                        {% when 'Kids' %}
+                          Includes Kids n-Ha Toothpaste
+                        {% when 'Try Flavors' %}
+                          Includes flavor discovery toothpaste
+                        {% else %}
+                          Includes {{ variant.title }} toothpaste
+                      {% endcase %}
+
                       {% unless variant.available %}
-                        Sold out
+                        · Sold out
                       {% endunless %}
                     </span>
                   </button>
