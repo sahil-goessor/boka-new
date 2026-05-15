@@ -80,9 +80,11 @@
       border-bottom: 1px solid rgb(34 39 33 / 0.10);
     }
 
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-title {
+      max-width: none;
+    }
+
     #boka-product-builder-{{ section.id }} .boka-lp__onetime-details {
-      display: grid;
-      gap: 12px;
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -91,39 +93,13 @@
     }
 
     #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime.is-active .boka-lp__onetime-details {
-      max-height: 220px;
+      max-height: 180px;
       opacity: 1;
       padding: 14px 16px 16px;
     }
 
-    #boka-product-builder-{{ section.id }} .boka-lp__onetime-price-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px 14px;
-      border: 1px solid rgb(34 39 33 / 0.12);
-      border-radius: 16px;
-      background: rgb(255 255 255 / 0.78);
-    }
-
-    #boka-product-builder-{{ section.id }} .boka-lp__onetime-price-label {
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.2;
-      opacity: .76;
-    }
-
-    #boka-product-builder-{{ section.id }} .boka-lp__plan-features_otp {
-      display: grid;
-      gap: 8px;
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-features_otp {
       margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 13px;
-      line-height: 1.35;
-      font-weight: 750;
-      opacity: .8;
     }
 
     #boka-product-builder-{{ section.id }} .boka-lp__ship-flow {
@@ -512,20 +488,12 @@
                     <span class="boka-lp__plan-top">
                       <span class="boka-lp__radio-dot" aria-hidden="true"></span>
 
-                      <span class="boka-lp__plan-title-wrap">
-                        <span class="boka-lp__plan-kicker">{{ section.settings.onetime_kicker }}</span>
-                        <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
-                      </span>
+                      <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
 
                       <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
                     </span>
 
                     <span class="boka-lp__onetime-details">
-                      <span class="boka-lp__onetime-price-row">
-                        <span class="boka-lp__onetime-price-label">{{ section.settings.onetime_price_label }}</span>
-                        <span class="boka-lp__price" data-boka-onetime-price-detail>{{ first_variant.price | money }}</span>
-                      </span>
-
                       <ul class="boka-lp__plan-features_otp">
                         {% if section.settings.onetime_note_1 != blank %}
                           <li>{{ section.settings.onetime_note_1 }}</li>
@@ -587,7 +555,6 @@
       const subCompare = root.querySelector('[data-boka-sub-compare]');
       const refillPrice = root.querySelector('[data-boka-refill-price]');
       const onetimePrice = root.querySelector('[data-boka-onetime-price]');
-      const onetimePriceDetail = root.querySelector('[data-boka-onetime-price-detail]');
       const thumbs = [...root.querySelectorAll('.boka-lp__thumb')];
       const cartButtons = [...root.querySelectorAll('[data-boka-open-cart]')];
       const cartCountEls = [...root.querySelectorAll('[data-boka-cart-count]')];
@@ -668,10 +635,6 @@
 
         if (onetimePrice) {
           onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
-        }
-
-        if (onetimePriceDetail) {
-          onetimePriceDetail.textContent = formatMoney(variant.price * selectedQuantity);
         }
 
         const allocations = variant.selling_plan_allocations || [];
@@ -1169,18 +1132,6 @@
       "id": "subscription_feature_4",
       "label": "Unused / fallback subscription feature",
       "default": "Easy refills"
-    },
-    {
-      "type": "text",
-      "id": "onetime_kicker",
-      "label": "One-time kicker",
-      "default": "No subscription"
-    },
-    {
-      "type": "text",
-      "id": "onetime_price_label",
-      "label": "One-time price label",
-      "default": "Ships once"
     },
     {
       "type": "text",
