@@ -1,14 +1,56 @@
 {% liquid
   assign lp_product = section.settings.product
   assign first_variant = lp_product.selected_or_first_available_variant
-  assign has_selling_plans = false
-
-  if lp_product != blank and lp_product.selling_plan_groups.size > 0
-    assign has_selling_plans = true
-  endif
 %}
 
 <section id="boka-product-builder-{{ section.id }}" class="boka-lp" data-section-id="{{ section.id }}">
+
+  {%- comment -%}
+    Supplementary styles for the simplified timeline visual.
+    Relies on the rest of the `.boka-lp__` system being defined elsewhere
+    (matches the existing landing-page section's stylesheet).
+  {%- endcomment -%}
+  <style>
+    #boka-product-builder-{{ section.id }} .boka-lp__included-row {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    #boka-product-builder-{{ section.id }} .boka-lp__included-row li {
+      font-family: "Neue Haas Unica W1G", Helvetica, Arial, sans-serif;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: .01em;
+      line-height: 1;
+      padding: 6px 10px;
+      background: rgba(34, 39, 33, .055);
+      border-radius: 4px;
+      color: #222721;
+      white-space: nowrap;
+    }
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #737c5b;
+      margin-bottom: 4px;
+    }
+    #boka-product-builder-{{ section.id }} .boka-lp__timeline-meta {
+      display: block;
+      margin-top: 10px;
+      font-family: "Ivar Display Italic", "Times New Roman", serif;
+      font-style: italic;
+      font-size: 12.5px;
+      letter-spacing: -.005em;
+      color: #737c5b;
+    }
+  </style>
+
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
     <div class="boka-lp__gallery-wrap">
       <div class="boka-lp__gallery-card">
@@ -16,23 +58,9 @@
           <div class="boka-lp__media-badge">{{ section.settings.image_badge }}</div>
 
           {% if first_variant.featured_image != blank %}
-            {{
-              first_variant.featured_image
-              | image_url: width: 1600
-              | image_tag:
-                loading: 'eager',
-                fetchpriority: 'high',
-                alt: first_variant.title
-            }}
+            {{ first_variant.featured_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: first_variant.title }}
           {% elsif section.settings.hero_image != blank %}
-            {{
-              section.settings.hero_image
-              | image_url: width: 1600
-              | image_tag:
-                loading: 'eager',
-                fetchpriority: 'high',
-                alt: section.settings.image_badge
-            }}
+            {{ section.settings.hero_image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', alt: section.settings.image_badge }}
           {% else %}
             <div class="boka-lp__placeholder">BOKA</div>
           {% endif %}
@@ -40,39 +68,16 @@
 
         <div class="boka-lp__thumbs" data-boka-thumbs>
           {% if section.settings.hero_image != blank %}
-            <button
-              type="button"
-              class="boka-lp__thumb {% unless first_variant.featured_image %}is-active{% endunless %}"
-              data-thumb-src="{{ section.settings.hero_image | image_url: width: 1600 }}"
-              aria-label="Show starter kit image"
-            >
-              {{
-                section.settings.hero_image
-                | image_url: width: 220
-                | image_tag:
-                  loading: 'lazy',
-                  alt: section.settings.image_badge
-              }}
+            <button type="button" class="boka-lp__thumb {% unless first_variant.featured_image %}is-active{% endunless %}" data-thumb-src="{{ section.settings.hero_image | image_url: width: 1600 }}" aria-label="Show starter kit image">
+              {{ section.settings.hero_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: section.settings.image_badge }}
             </button>
           {% endif %}
 
           {% if lp_product != blank %}
             {% for variant in lp_product.variants %}
-              <button
-                type="button"
-                class="boka-lp__thumb {% if variant.id == first_variant.id %}is-active{% endif %}"
-                data-thumb-src="{% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 }}{% endif %}"
-                data-thumb-variant="{{ variant.id }}"
-                aria-label="Show {{ variant.title | escape }} image"
-              >
+              <button type="button" class="boka-lp__thumb {% if variant.id == first_variant.id %}is-active{% endif %}" data-thumb-src="{% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 }}{% endif %}" data-thumb-variant="{{ variant.id }}" aria-label="Show {{ variant.title | escape }} image">
                 {% if variant.featured_image != blank %}
-                  {{
-                    variant.featured_image
-                    | image_url: width: 220
-                    | image_tag:
-                      loading: 'lazy',
-                      alt: variant.title
-                  }}
+                  {{ variant.featured_image | image_url: width: 220 | image_tag: loading: 'lazy', alt: variant.title }}
                 {% else %}
                   <span class="boka-lp__thumb-placeholder">{{ variant.title | truncate: 18 }}</span>
                 {% endif %}
@@ -101,15 +106,7 @@
 
         <div class="boka-lp__product-summary-card">
           <h1 class="boka-lp__product-title">{{ section.settings.heading }}</h1>
-
           <p class="boka-lp__product-description">{{ section.settings.subheading }}</p>
-
-          <ul class="boka-lp__checklist boka-lp__checklist--product">
-            <li>{{ section.settings.benefit_1 }}</li>
-            <li>{{ section.settings.benefit_2 }}</li>
-            <li>{{ section.settings.benefit_3 }}</li>
-            <li>{{ section.settings.benefit_4 }}</li>
-          </ul>
         </div>
       </div>
 
@@ -147,6 +144,7 @@
             <input type="hidden" name="id" value="{{ first_variant.id }}" data-boka-variant-input>
             <input type="hidden" name="quantity" value="1" data-boka-quantity-input>
 
+            {%- comment -%} STEP 1 — variant {%- endcomment -%}
             <div class="boka-lp__step">
               <div class="boka-lp__step-head">
                 <h2 class="boka-lp__step-title">
@@ -157,23 +155,17 @@
 
               <div class="boka-lp__goal-grid" data-boka-goal-grid>
                 {% for variant in lp_product.variants %}
-                  <button
-                    type="button"
-                    class="boka-lp__goal-card {% if variant.id == first_variant.id %}is-active{% endif %}"
-                    data-variant-id="{{ variant.id }}"
-                    {% unless variant.available %}disabled{% endunless %}
-                  >
+                  <button type="button" class="boka-lp__goal-card {% if variant.id == first_variant.id %}is-active{% endif %}" data-variant-id="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %}>
                     <span class="boka-lp__goal-title">{{ variant.title }}</span>
-                    <span class="boka-lp__goal-sub">
-                      {% unless variant.available %}
-                        Sold out
-                      {% endunless %}
-                    </span>
+                    {% unless variant.available %}
+                      <span class="boka-lp__goal-sub">Sold out</span>
+                    {% endunless %}
                   </button>
                 {% endfor %}
               </div>
             </div>
 
+            {%- comment -%} STEP 2 (optional) — quantity {%- endcomment -%}
             {% if section.settings.show_quantity_selector %}
               <div class="boka-lp__step">
                 <div class="boka-lp__step-head">
@@ -182,7 +174,6 @@
                     {{ section.settings.quantity_label }}
                   </h2>
                 </div>
-
                 <div class="boka-lp__quantity-row" data-boka-quantity-row>
                   <button type="button" class="boka-lp__qty-card is-active" data-quantity="1">1 kit</button>
                   <button type="button" class="boka-lp__qty-card" data-quantity="2">2 kits</button>
@@ -191,12 +182,11 @@
               </div>
             {% endif %}
 
+            {%- comment -%} STEP 2/3 — plan with side-by-side what's-included pills {%- endcomment -%}
             <div class="boka-lp__step">
               <div class="boka-lp__step-head">
                 <h2 class="boka-lp__step-title">
-                  <span class="boka-lp__step-number">
-                    {% if section.settings.show_quantity_selector %}3{% else %}2{% endif %}
-                  </span>
+                  <span class="boka-lp__step-number">{% if section.settings.show_quantity_selector %}3{% else %}2{% endif %}</span>
                   {{ section.settings.plan_label }}
                 </h2>
               </div>
@@ -209,61 +199,48 @@
                     <span class="boka-lp__plan-badge">{{ section.settings.offer_discount }}</span>
                   </span>
 
-                  <span class="boka-lp__how-card">
-                    <span class="boka-lp__how-heading">{{ section.settings.how_it_works_heading }}</span>
-
-                    <span class="boka-lp__timeline-card">
-                      <span class="boka-lp__timeline-left">
-                        <span class="boka-lp__timeline-title">
-                          <span class="boka-lp__timeline-number">1</span>
-                          {{ section.settings.initial_order_title }}
-                        </span>
-
-                        <span class="boka-lp__timeline-copy">
-                          {{ section.settings.initial_order_copy }}
-                        </span>
-
-                        <span class="boka-lp__timeline-pill">{{ section.settings.initial_order_pill }}</span>
+                  {%- comment -%} TIMELINE — Today's full starter routine {%- endcomment -%}
+                  <span class="boka-lp__timeline-card">
+                    <span class="boka-lp__timeline-left">
+                      <span class="boka-lp__timeline-label">Today's box</span>
+                      <span class="boka-lp__timeline-title">
+                        <span class="boka-lp__timeline-number">1</span>
+                        Full starter routine
                       </span>
-
-                      <span class="boka-lp__timeline-price">
-                        <span class="boka-lp__price" data-boka-sub-price>{{ section.settings.offer_price }}</span>
-                        <span class="boka-lp__compare-price" data-boka-sub-compare>{{ section.settings.offer_value }}</span>
-                        <span class="boka-lp__save-text">{{ section.settings.offer_discount }}</span>
-                      </span>
+                      <ul class="boka-lp__included-row" aria-label="What's in your first box">
+                        {%- assign starter_items = section.settings.starter_includes | newline_to_br | split: '<br />' -%}
+                        {%- for item in starter_items -%}
+                          {%- assign t = item | strip -%}
+                          {%- if t != blank -%}<li>{{ t }}</li>{%- endif -%}
+                        {%- endfor -%}
+                      </ul>
                     </span>
-
-                    <span class="boka-lp__then-row">
-                      <span></span>
-                      <em>{{ section.settings.then_label }}</em>
-                      <span></span>
-                    </span>
-
-                    <span class="boka-lp__timeline-card">
-                      <span class="boka-lp__timeline-left">
-                        <span class="boka-lp__timeline-title">
-                          <span class="boka-lp__timeline-number">2</span>
-                          {{ section.settings.refill_order_title }}
-                        </span>
-
-                        <span class="boka-lp__timeline-copy">
-                          {{ section.settings.refill_order_copy }}
-                        </span>
-
-                        <span class="boka-lp__timeline-pill">{{ section.settings.refill_order_pill }}</span>
-                      </span>
-
-                      <span class="boka-lp__timeline-price">
-                        <span class="boka-lp__refill-price" data-boka-refill-price>{{ section.settings.refill_price }}</span>
-                      </span>
+                    <span class="boka-lp__timeline-price">
+                      <span class="boka-lp__price" data-boka-sub-price>{{ section.settings.offer_price }}</span>
+                      <span class="boka-lp__compare-price" data-boka-sub-compare>{{ section.settings.offer_value }}</span>
                     </span>
                   </span>
 
-                  <span class="boka-lp__benefit-grid">
-                    <span>✓ <strong>{{ section.settings.subscription_feature_1 }}</strong></span>
-                    <span>✓ {{ section.settings.subscription_feature_2 }}</span>
-                    <span>✓ {{ section.settings.subscription_feature_3 }}</span>
-                    <span>✓ {{ section.settings.subscription_feature_4 }}</span>
+                  {%- comment -%} TIMELINE — Refill essentials ONLY {%- endcomment -%}
+                  <span class="boka-lp__timeline-card">
+                    <span class="boka-lp__timeline-left">
+                      <span class="boka-lp__timeline-label">{{ section.settings.refill_label }}</span>
+                      <span class="boka-lp__timeline-title">
+                        <span class="boka-lp__timeline-number">2</span>
+                        Refill essentials only
+                      </span>
+                      <ul class="boka-lp__included-row" aria-label="What's in each refill">
+                        {%- assign refill_items = section.settings.refill_includes | newline_to_br | split: '<br />' -%}
+                        {%- for item in refill_items -%}
+                          {%- assign t = item | strip -%}
+                          {%- if t != blank -%}<li>{{ t }}</li>{%- endif -%}
+                        {%- endfor -%}
+                      </ul>
+                      <em class="boka-lp__timeline-meta">{{ section.settings.refill_meta }}</em>
+                    </span>
+                    <span class="boka-lp__timeline-price">
+                      <span class="boka-lp__refill-price" data-boka-refill-price>{{ section.settings.refill_price }}</span>
+                    </span>
                   </span>
                 </button>
 
@@ -273,11 +250,7 @@
                       <span class="boka-lp__plan-title">{{ section.settings.onetime_title }}</span>
                       <span class="boka-lp__price" data-boka-onetime-price>{{ first_variant.price | money }}</span>
                     </span>
-
-                    <ul class="boka-lp__plan-features_otp">
-                      <li>{{ section.settings.onetime_note_1 }}</li>
-                      <li>{{ section.settings.onetime_note_2 }}</li>
-                    </ul>
+                    <p class="boka-lp__onetime-note">{{ section.settings.onetime_note }}</p>
                   </button>
                 {% endunless %}
               </div>
@@ -286,20 +259,15 @@
             </div>
 
             <button type="submit" class="boka-lp__atc" data-boka-atc>{{ section.settings.atc_text }}</button>
-
-            <p class="boka-lp__atc-subtext">
-              {{ section.settings.atc_subtext }}
-            </p>
-
+            <p class="boka-lp__atc-subtext">{{ section.settings.atc_subtext }}</p>
             <p class="boka-lp__message" data-boka-message></p>
           </form>
         {% else %}
-          <p><strong>Select your Starter Kit product in this section’s Theme Editor settings.</strong></p>
+          <p><strong>Select your Starter Kit product in this section's Theme Editor settings.</strong></p>
         {% endif %}
       </div>
     </div>
   </div>
-
 
   <script>
     (() => {
@@ -341,7 +309,6 @@
         if (window.Shopify && typeof window.Shopify.formatMoney === 'function') {
           return window.Shopify.formatMoney(cents, moneyFormat);
         }
-
         return '$' + (Number(cents || 0) / 100).toFixed(2);
       };
 
@@ -349,38 +316,28 @@
 
       const getThreeMonthPlan = (allocations) => {
         if (!allocations || !allocations.length) return null;
-
         const threeMonthPlan = allocations.find(allocation => {
           const name = String(allocation.selling_plan_name || '').toLowerCase();
           return name.includes('3 month') || name.includes('3-month') || name.includes('3 months') || name.includes('every 3');
         });
-
         return threeMonthPlan || allocations[0];
       };
 
       const setMainImage = (src, altText = '') => {
         if (!src || !mainMedia) return;
-
         let img = mainMedia.querySelector('img');
-
         if (!img) {
           const placeholder = mainMedia.querySelector('.boka-lp__placeholder');
           if (placeholder) placeholder.remove();
-
           img = document.createElement('img');
           img.loading = 'eager';
           img.decoding = 'async';
           mainMedia.appendChild(img);
         }
-
         img.removeAttribute('srcset');
         img.removeAttribute('sizes');
-
         img.src = src;
-
-        if (altText) {
-          img.alt = altText;
-        }
+        if (altText) img.alt = altText;
       };
 
       const renderVariant = () => {
@@ -388,17 +345,11 @@
         if (!variant) return;
 
         if (productData.requires_selling_plan) selectedPlanType = 'subscribe';
-
         if (variantInput) variantInput.value = variant.id;
         if (quantityInput) quantityInput.value = selectedQuantity;
 
-        goalButtons.forEach(btn => {
-          btn.classList.toggle('is-active', Number(btn.dataset.variantId) === Number(variant.id));
-        });
-
-        qtyButtons.forEach(btn => {
-          btn.classList.toggle('is-active', Number(btn.dataset.quantity) === Number(selectedQuantity));
-        });
+        goalButtons.forEach(btn => btn.classList.toggle('is-active', Number(btn.dataset.variantId) === Number(variant.id)));
+        qtyButtons.forEach(btn => btn.classList.toggle('is-active', Number(btn.dataset.quantity) === Number(selectedQuantity)));
 
         if (variant.image) setMainImage(variant.image, variant.title);
 
@@ -407,9 +358,7 @@
           btn.classList.toggle('is-active', thumbVariant && Number(thumbVariant) === Number(variant.id));
         });
 
-        if (onetimePrice) {
-          onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
-        }
+        if (onetimePrice) onetimePrice.textContent = formatMoney(variant.price * selectedQuantity);
 
         const allocations = variant.selling_plan_allocations || [];
         const selectedPlan = getThreeMonthPlan(allocations);
@@ -418,17 +367,9 @@
           sellingPlanSelect.value = selectedPlan ? selectedPlan.selling_plan_id : '';
         }
 
-        if (subPrice) {
-          subPrice.textContent = selectedQuantity > 1 ? `${offerPrice} × ${selectedQuantity}` : offerPrice;
-        }
-
-        if (subCompare) {
-          subCompare.textContent = selectedQuantity > 1 ? `${offerValue} × ${selectedQuantity}` : offerValue;
-        }
-
-        if (refillPrice) {
-          refillPrice.textContent = selectedPlan ? formatMoney(selectedPlan.price * selectedQuantity) : fallbackRefillPrice;
-        }
+        if (subPrice) subPrice.textContent = selectedQuantity > 1 ? `${offerPrice} × ${selectedQuantity}` : offerPrice;
+        if (subCompare) subCompare.textContent = selectedQuantity > 1 ? `${offerValue} × ${selectedQuantity}` : offerValue;
+        if (refillPrice) refillPrice.textContent = selectedPlan ? formatMoney(selectedPlan.price * selectedQuantity) : fallbackRefillPrice;
 
         const hasSubscription = allocations.length > 0;
         const subscribeButton = root.querySelector('[data-plan-type="subscribe"]');
@@ -438,7 +379,6 @@
           subscribeButton.disabled = !hasSubscription;
           subscribeButton.style.opacity = hasSubscription ? '' : '.55';
         }
-
         if (onetimeButton && productData.requires_selling_plan) {
           onetimeButton.disabled = true;
           onetimeButton.style.opacity = '.55';
@@ -447,9 +387,7 @@
         if (!hasSubscription && selectedPlanType === 'subscribe') selectedPlanType = 'onetime';
         if (productData.requires_selling_plan) selectedPlanType = 'subscribe';
 
-        planButtons.forEach(btn => {
-          btn.classList.toggle('is-active', btn.dataset.planType === selectedPlanType);
-        });
+        planButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.planType === selectedPlanType));
 
         if (atc) {
           atc.disabled = !variant.available || (selectedPlanType === 'subscribe' && !hasSubscription);
@@ -457,53 +395,39 @@
         }
       };
 
-      goalButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          selectedVariantId = Number(btn.dataset.variantId);
-          if (message) message.textContent = '';
-          renderVariant();
-        });
-      });
+      goalButtons.forEach(btn => btn.addEventListener('click', () => {
+        selectedVariantId = Number(btn.dataset.variantId);
+        if (message) message.textContent = '';
+        renderVariant();
+      }));
 
-      qtyButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          selectedQuantity = Number(btn.dataset.quantity) || 1;
-          if (message) message.textContent = '';
-          renderVariant();
-        });
-      });
+      qtyButtons.forEach(btn => btn.addEventListener('click', () => {
+        selectedQuantity = Number(btn.dataset.quantity) || 1;
+        if (message) message.textContent = '';
+        renderVariant();
+      }));
 
-      planButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          if (btn.disabled) return;
-          selectedPlanType = btn.dataset.planType;
-          if (message) message.textContent = '';
-          renderVariant();
-        });
-      });
+      planButtons.forEach(btn => btn.addEventListener('click', () => {
+        if (btn.disabled) return;
+        selectedPlanType = btn.dataset.planType;
+        if (message) message.textContent = '';
+        renderVariant();
+      }));
 
-      thumbs.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const variantId = btn.dataset.thumbVariant;
-
-          if (variantId) selectedVariantId = Number(variantId);
-          if (btn.dataset.thumbSrc) setMainImage(btn.dataset.thumbSrc, btn.getAttribute('aria-label') || 'Product image');
-
-          thumbs.forEach(t => t.classList.remove('is-active'));
-          btn.classList.add('is-active');
-
-          renderVariant();
-        });
-      });
+      thumbs.forEach(btn => btn.addEventListener('click', () => {
+        const variantId = btn.dataset.thumbVariant;
+        if (variantId) selectedVariantId = Number(variantId);
+        if (btn.dataset.thumbSrc) setMainImage(btn.dataset.thumbSrc, btn.getAttribute('aria-label') || 'Product image');
+        thumbs.forEach(t => t.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        renderVariant();
+      }));
 
       const updateCartCount = async () => {
         try {
           const res = await fetch(window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart.js' : '/cart.js');
           const cart = await res.json();
-
-          cartCountEls.forEach(el => {
-            el.textContent = cart.item_count || 0;
-          });
+          cartCountEls.forEach(el => { el.textContent = cart.item_count || 0; });
         } catch (error) {}
       };
 
@@ -516,39 +440,25 @@
         window.dispatchEvent(new CustomEvent('cart:open'));
 
         const cartDrawer = getCartDrawer();
-
-        if (cartDrawer && typeof cartDrawer.open === 'function') {
-          cartDrawer.open();
-          return;
-        }
+        if (cartDrawer && typeof cartDrawer.open === 'function') { cartDrawer.open(); return; }
 
         const cartNotification = document.querySelector('cart-notification');
-
-        if (cartNotification && typeof cartNotification.open === 'function') {
-          cartNotification.open();
-          return;
-        }
+        if (cartNotification && typeof cartNotification.open === 'function') { cartNotification.open(); return; }
 
         const headerCartIcon = document.querySelector('#cart-icon-bubble, a[href="/cart"], a[href$="/cart"]');
-
-        if (headerCartIcon && typeof headerCartIcon.click === 'function') {
-          headerCartIcon.click();
-          return;
-        }
+        if (headerCartIcon && typeof headerCartIcon.click === 'function') { headerCartIcon.click(); return; }
 
         window.location.href = window.Shopify?.routes?.root ? window.Shopify.routes.root + 'cart' : '/cart';
       };
 
       const addCartSectionsToFormData = (formData) => {
         const cartDrawer = getCartDrawer();
-
         if (cartDrawer && typeof cartDrawer.getSectionsToRender === 'function') {
           const sectionIds = cartDrawer.getSectionsToRender().map(section => section.id);
           formData.set('sections', sectionIds.join(','));
           formData.set('sections_url', window.location.pathname);
           return;
         }
-
         formData.set('sections', 'cart-icon-bubble,cart-drawer');
         formData.set('sections_url', window.location.pathname);
       };
@@ -556,42 +466,32 @@
       const refreshRenderedCartDrawerFallback = async () => {
         const currentDrawer = getCartDrawer();
         if (!currentDrawer) return false;
-
         try {
           const res = await fetch(`${window.location.pathname}?section_id={{ section.id }}`);
           const htmlText = await res.text();
           const html = new DOMParser().parseFromString(htmlText, 'text/html');
           const freshDrawer = html.querySelector('cart-drawer');
-
           if (!freshDrawer) return false;
-
           currentDrawer.innerHTML = freshDrawer.innerHTML;
           currentDrawer.className = freshDrawer.className;
           return true;
-        } catch (error) {
-          return false;
-        }
+        } catch (error) { return false; }
       };
 
       const renderCartAfterAdd = async (parsedState) => {
         const cartDrawer = getCartDrawer();
-
         if (cartDrawer && parsedState?.sections && typeof cartDrawer.renderContents === 'function') {
           cartDrawer.renderContents(parsedState);
           return;
         }
-
         await refreshRenderedCartDrawerFallback();
         openCartDrawer();
       };
 
-      cartButtons.forEach(button => {
-        button.addEventListener('click', openCartDrawer);
-      });
+      cartButtons.forEach(button => button.addEventListener('click', openCartDrawer));
 
       form?.addEventListener('submit', async (event) => {
         event.preventDefault();
-
         const variant = getVariant();
         if (!variant || !variant.available) return;
 
@@ -602,7 +502,6 @@
 
         if (selectedPlanType === 'subscribe') {
           const selectedPlanId = sellingPlanSelect?.value;
-
           if (!selectedPlanId) {
             if (message) {
               message.style.color = '#aa7a6b';
@@ -610,7 +509,6 @@
             }
             return;
           }
-
           formData.set('selling_plan', selectedPlanId);
         }
 
@@ -619,7 +517,6 @@
         atc.disabled = true;
         const originalText = atc.textContent;
         atc.textContent = 'Adding...';
-
         if (message) message.textContent = '';
 
         try {
@@ -627,16 +524,12 @@
             method: 'POST',
             body: formData
           });
-
           const data = await res.json();
-
           if (!res.ok) throw new Error(data.description || data.message || 'Unable to add to cart');
-
           if (message) {
             message.style.color = '#737c5b';
             message.textContent = 'Added to cart';
           }
-
           await updateCartCount();
           await renderCartAfterAdd(data);
         } catch (error) {
@@ -661,291 +554,55 @@
 {
   "name": "Boka LP product builder",
   "settings": [
-    {
-      "type": "product",
-      "id": "product",
-      "label": "Starter product"
-    },
-    {
-      "type": "checkbox",
-      "id": "subscription_only",
-      "label": "Hide one-time purchase",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "show_quantity_selector",
-      "label": "Show quantity selector",
-      "default": false
-    },
-    {
-      "type": "image_picker",
-      "id": "hero_image",
-      "label": "Fallback hero image"
-    },
-    {
-      "type": "checkbox",
-      "id": "contain_image",
-      "label": "Contain hero image instead of cover",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "image_badge",
-      "label": "Image badge",
-      "default": "Starter routine"
-    },
-    {
-      "type": "text",
-      "id": "rating_text",
-      "label": "Rating text",
-      "default": "4.6 stars from 950,000+ customers"
-    },
-    {
-      "type": "text",
-      "id": "eyebrow",
-      "label": "Eyebrow",
-      "default": "New customer starter kit"
-    },
-    {
-      "type": "richtext",
-      "id": "heading",
-      "label": "Heading",
-      "default": "<p>Start your <em><strong>Boka routine</strong></em></p>"
-    },
-    {
-      "type": "textarea",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Try Boka with a fluoride-free n-Ha toothpaste, brush, floss, tongue cleaner, and toiletry bag — all in one first box."
-    },
-    {
-      "type": "text",
-      "id": "benefit_1",
-      "label": "Benefit 1",
-      "default": "Fluoride-free toothpaste with n-Ha"
-    },
-    {
-      "type": "text",
-      "id": "benefit_2",
-      "label": "Benefit 2",
-      "default": "Starter routine for less than $10 / month"
-    },
-    {
-      "type": "text",
-      "id": "benefit_3",
-      "label": "Benefit 3",
-      "default": "Free shipping on your first order and refills"
-    },
-    {
-      "type": "text",
-      "id": "benefit_4",
-      "label": "Benefit 4",
-      "default": "Easy 3-month refill rhythm"
-    },
-    {
-      "type": "text",
-      "id": "offer_value",
-      "label": "Starter kit value price",
-      "default": "$49.99"
-    },
-    {
-      "type": "text",
-      "id": "offer_price",
-      "label": "First-order offer price",
-      "default": "$24.99"
-    },
-    {
-      "type": "text",
-      "id": "offer_discount",
-      "label": "First-order discount label",
-      "default": "Save up to 64%"
-    },
-    {
-      "type": "text",
-      "id": "variant_label",
-      "label": "Variant step label",
-      "default": "Choose your routine goal"
-    },
-    {
-      "type": "text",
-      "id": "variant_note",
-      "label": "Variant step note",
-      "default": "Pick the toothpaste flavor or routine focus you want in your first box."
-    },
-    {
-      "type": "text",
-      "id": "quantity_label",
-      "label": "Quantity step label",
-      "default": "Choose quantity"
-    },
-    {
-      "type": "text",
-      "id": "quantity_note",
-      "label": "Quantity step note",
-      "default": "Stock your routine or share a kit."
-    },
-    {
-      "type": "text",
-      "id": "plan_label",
-      "label": "Plan step label",
-      "default": "Choose your offer"
-    },
-    {
-      "type": "text",
-      "id": "plan_note",
-      "label": "Plan step note",
-      "default": "Start with the kit, then refill on your schedule."
-    },
-    {
-      "type": "text",
-      "id": "subscription_title",
-      "label": "Subscription title",
-      "default": "Subscribe & Save"
-    },
-    {
-      "type": "text",
-      "id": "subscription_note",
-      "label": "Subscription note",
-      "default": "Your first box ships now. Routine refills arrive every 3 months."
-    },
-    {
-      "type": "text",
-      "id": "how_it_works_heading",
-      "label": "How it works heading",
-      "default": "How It Works:"
-    },
-    {
-      "type": "text",
-      "id": "initial_order_title",
-      "label": "Initial order title",
-      "default": "Initial Order Today"
-    },
-    {
-      "type": "textarea",
-      "id": "initial_order_copy",
-      "label": "Initial order copy",
-      "default": "Your first box ships today with your complete starter routine."
-    },
-    {
-      "type": "text",
-      "id": "initial_order_pill",
-      "label": "Initial order pill",
-      "default": "One-time starter order"
-    },
-    {
-      "type": "text",
-      "id": "then_label",
-      "label": "Then label",
-      "default": "then"
-    },
-    {
-      "type": "text",
-      "id": "refill_order_title",
-      "label": "Refill order title",
-      "default": "Routine Refills Every 3 Months"
-    },
-    {
-      "type": "textarea",
-      "id": "refill_order_copy",
-      "label": "Refill order copy",
-      "default": "Goal toothpaste, toothbrush, and floss"
-    },
-    {
-      "type": "text",
-      "id": "refill_order_pill",
-      "label": "Refill order pill",
-      "default": "Free Shipping"
-    },
-    {
-      "type": "text",
-      "id": "refill_price",
-      "label": "Fallback displayed refill price",
-      "default": "$25.49"
-    },
-    {
-      "type": "text",
-      "id": "subscription_feature_1",
-      "label": "Subscription feature 1",
-      "default": "64% off starter"
-    },
-    {
-      "type": "text",
-      "id": "subscription_feature_2",
-      "label": "Subscription feature 2",
-      "default": "15% off refills"
-    },
-    {
-      "type": "text",
-      "id": "subscription_feature_3",
-      "label": "Subscription feature 3",
-      "default": "Free shipping"
-    },
-    {
-      "type": "text",
-      "id": "subscription_feature_4",
-      "label": "Subscription feature 4",
-      "default": "Cancel anytime"
-    },
-    {
-      "type": "text",
-      "id": "onetime_title",
-      "label": "One-time title",
-      "default": "One-Time Purchase"
-    },
-    {
-      "type": "text",
-      "id": "onetime_note_1",
-      "label": "One-time note 1",
-      "default": "First-order savings included"
-    },
-    {
-      "type": "text",
-      "id": "onetime_note_2",
-      "label": "One-time note 2",
-      "default": "No automatic refills"
-    },
-    {
-      "type": "text",
-      "id": "atc_text",
-      "label": "Add to cart text",
-      "default": "Start My Routine"
-    },
-    {
-      "type": "text",
-      "id": "atc_subtext",
-      "label": "Add to cart subtext",
-      "default": "Free first-order shipping · 30-day guarantee · Pause, skip, or cancel anytime"
-    },
-    {
-      "type": "text",
-      "id": "guarantee_1",
-      "label": "Guarantee 1",
-      "default": "Features n-Ha"
-    },
-    {
-      "type": "text",
-      "id": "guarantee_2",
-      "label": "Guarantee 2",
-      "default": "Fluoride free"
-    },
-    {
-      "type": "text",
-      "id": "guarantee_3",
-      "label": "Guarantee 3",
-      "default": "Refills every 3 months"
-    },
-    {
-      "type": "text",
-      "id": "guarantee_4",
-      "label": "Guarantee 4",
-      "default": "Pause anytime"
-    }
+    { "type": "product", "id": "product", "label": "Starter product" },
+    { "type": "checkbox", "id": "subscription_only", "label": "Hide one-time purchase", "default": false },
+    { "type": "checkbox", "id": "show_quantity_selector", "label": "Show quantity selector", "default": false },
+
+    { "type": "header", "content": "Media" },
+    { "type": "image_picker", "id": "hero_image", "label": "Fallback hero image" },
+    { "type": "checkbox", "id": "contain_image", "label": "Contain hero image instead of cover", "default": true },
+    { "type": "text", "id": "image_badge", "label": "Image badge", "default": "Starter routine" },
+
+    { "type": "header", "content": "Headline" },
+    { "type": "text", "id": "rating_text", "label": "Rating text", "default": "4.6 stars from 950,000+ customers" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "New customer starter kit" },
+    { "type": "richtext", "id": "heading", "label": "Heading", "default": "<p>Start your <em><strong>Boka routine</strong></em></p>" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "A complete oral care routine — toothpaste, brush, floss, tongue cleaner, and toiletry bag — in one first box." },
+
+    { "type": "header", "content": "Pricing" },
+    { "type": "text", "id": "offer_value", "label": "Starter kit value price", "default": "$49.99" },
+    { "type": "text", "id": "offer_price", "label": "First-order offer price", "default": "$24.99" },
+    { "type": "text", "id": "offer_discount", "label": "Discount label", "default": "Save 50%" },
+    { "type": "text", "id": "refill_price", "label": "Fallback refill price", "default": "$24.99" },
+
+    { "type": "header", "content": "Step labels" },
+    { "type": "text", "id": "variant_label", "label": "Variant step label", "default": "Choose your routine goal" },
+    { "type": "text", "id": "quantity_label", "label": "Quantity step label", "default": "Choose quantity" },
+    { "type": "text", "id": "plan_label", "label": "Plan step label", "default": "Choose your offer" },
+
+    { "type": "header", "content": "Plan card — what's in each box" },
+    { "type": "text", "id": "subscription_title", "label": "Subscription title", "default": "Subscribe & Save" },
+    { "type": "textarea", "id": "starter_includes", "label": "Today's box includes (one item per line)", "default": "Toothpaste\nToothbrush\nFloss\nTongue cleaner\nToiletry bag" },
+    { "type": "text", "id": "refill_label", "label": "Refill cadence label", "default": "Every 3 months" },
+    { "type": "textarea", "id": "refill_includes", "label": "Each refill includes (one item per line)", "default": "Toothpaste\nToothbrush\nFloss" },
+    { "type": "text", "id": "refill_meta", "label": "Refill fine print", "default": "Free shipping · Pause, skip, or cancel anytime" },
+
+    { "type": "header", "content": "One-time option" },
+    { "type": "text", "id": "onetime_title", "label": "One-time title", "default": "One-Time Purchase" },
+    { "type": "text", "id": "onetime_note", "label": "One-time note", "default": "Try the routine once. No automatic refills." },
+
+    { "type": "header", "content": "Add to cart" },
+    { "type": "text", "id": "atc_text", "label": "Add to cart text", "default": "Start My Routine" },
+    { "type": "text", "id": "atc_subtext", "label": "Add to cart subtext", "default": "Free shipping · 30-day guarantee · Cancel anytime" },
+
+    { "type": "header", "content": "Gallery highlights" },
+    { "type": "text", "id": "guarantee_1", "label": "Highlight 1", "default": "Features n-Ha" },
+    { "type": "text", "id": "guarantee_2", "label": "Highlight 2", "default": "Fluoride free" },
+    { "type": "text", "id": "guarantee_3", "label": "Highlight 3", "default": "Refills every 3 months" },
+    { "type": "text", "id": "guarantee_4", "label": "Highlight 4", "default": "Pause anytime" }
   ],
   "presets": [
-    {
-      "name": "Boka LP product builder"
-    }
+    { "name": "Boka LP product builder" }
   ]
 }
 {% endschema %}
