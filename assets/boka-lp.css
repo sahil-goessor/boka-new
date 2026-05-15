@@ -2059,10 +2059,7 @@
 .boka-lp__section-title p {
   margin: 0;
 }
-.boka-lp__hero {
-  padding-top: 34px;
-  padding-bottom: 64px;
-}
+
 .boka-lp__section--charcoal .boka-lp__promo-banner-button {
   background: var(--boka-cream);
   color: var(--boka-charcoal);
