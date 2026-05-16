@@ -395,6 +395,96 @@
   }
 }
 
+
+    /* FINAL SAFE THEME FONT OVERRIDE - keep this as the last CSS before the closing style tag. */
+    #boka-product-builder-{{ section.id }} {
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
+
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+      font-weight: var(--boka-lp-body-weight);
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title *,
+    #boka-product-builder-{{ section.id }} .boka-lp__step-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__step-title *,
+    #boka-product-builder-{{ section.id }} .boka-lp__goal-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__ship-title {
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: var(--boka-lp-heading-style);
+      font-weight: var(--boka-lp-heading-weight);
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title {
+      margin: 0;
+      color: var(--boka-charcoal);
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title em,
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title i {
+      font-style: italic;
+      letter-spacing: -0.02em;
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__product-description,
+    #boka-product-builder-{{ section.id }} .boka-lp__rating-row,
+    #boka-product-builder-{{ section.id }} .boka-lp__stars,
+    #boka-product-builder-{{ section.id }} .boka-lp__eyebrow,
+    #boka-product-builder-{{ section.id }} .boka-lp__goal-sub,
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-kicker,
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-badge,
+    #boka-product-builder-{{ section.id }} .boka-lp__ship-label,
+    #boka-product-builder-{{ section.id }} .boka-lp__ship-copy,
+    #boka-product-builder-{{ section.id }} .boka-lp__price,
+    #boka-product-builder-{{ section.id }} .boka-lp__refill-price,
+    #boka-product-builder-{{ section.id }} .boka-lp__compare-price,
+    #boka-product-builder-{{ section.id }} .boka-lp__save-text,
+    #boka-product-builder-{{ section.id }} .boka-lp__then-row,
+    #boka-product-builder-{{ section.id }} .boka-lp__atc,
+    #boka-product-builder-{{ section.id }} .boka-lp__atc-subtext,
+    #boka-product-builder-{{ section.id }} .boka-lp__message,
+    #boka-product-builder-{{ section.id }} .boka-lp__media-badge,
+    #boka-product-builder-{{ section.id }} .boka-lp__thumb-placeholder,
+    #boka-product-builder-{{ section.id }} .boka-lp__guarantees div {
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+    }
+
+    @media screen and (max-width: 749px) {
+      #boka-product-builder-{{ section.id }} .boka-lp__product-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__product-title *,
+      #boka-product-builder-{{ section.id }} .boka-lp__step-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__step-title *,
+      #boka-product-builder-{{ section.id }} .boka-lp__goal-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__ship-title {
+        font-family: var(--boka-lp-heading-font) !important;
+        font-style: var(--boka-lp-heading-style);
+        font-weight: var(--boka-lp-heading-weight);
+      }
+
+      #boka-product-builder-{{ section.id }} .boka-lp__product-description,
+      #boka-product-builder-{{ section.id }} .boka-lp__rating-row,
+      #boka-product-builder-{{ section.id }} .boka-lp__eyebrow,
+      #boka-product-builder-{{ section.id }} .boka-lp__goal-sub,
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-kicker,
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-badge,
+      #boka-product-builder-{{ section.id }} .boka-lp__ship-label,
+      #boka-product-builder-{{ section.id }} .boka-lp__ship-copy,
+      #boka-product-builder-{{ section.id }} .boka-lp__atc,
+      #boka-product-builder-{{ section.id }} .boka-lp__atc-subtext,
+      #boka-product-builder-{{ section.id }} .boka-lp__message {
+        font-family: var(--boka-lp-body-font) !important;
+      }
+    }
+
   </style>
 
   <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
@@ -494,7 +584,7 @@
         {% endif %}
 
         <div class="boka-lp__product-summary-card">
-          <h1 class="boka-lp__product-title">{{ section.settings.heading }}</h1>
+          <h1 class="boka-lp__product-title">{{ section.settings.heading | remove: '<p>' | remove: '</p>' }}</h1>
 
           {% if section.settings.subheading != blank %}
             <p class="boka-lp__product-description">{{ section.settings.subheading }}</p>
