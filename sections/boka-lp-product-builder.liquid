@@ -11,60 +11,121 @@
 <section id="boka-product-builder-{{ section.id }}" class="boka-lp boka-lp--starter-offer" data-section-id="{{ section.id }}">
   <style>
     #boka-product-builder-{{ section.id }} {
-      font-family: var(--font-body-family);
-      font-style: var(--font-body-style);
-      font-weight: var(--font-body-weight);
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
+
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+      font-weight: var(--boka-lp-body-weight);
     }
 
     #boka-product-builder-{{ section.id }} *,
     #boka-product-builder-{{ section.id }} *::before,
     #boka-product-builder-{{ section.id }} *::after {
       box-sizing: border-box;
+      font-family: inherit;
     }
 
     #boka-product-builder-{{ section.id }} button,
     #boka-product-builder-{{ section.id }} input,
     #boka-product-builder-{{ section.id }} select,
     #boka-product-builder-{{ section.id }} textarea {
-      font-family: inherit;
-      font-style: inherit;
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
     }
 
     #boka-product-builder-{{ section.id }} h1,
     #boka-product-builder-{{ section.id }} h2,
     #boka-product-builder-{{ section.id }} h3,
     #boka-product-builder-{{ section.id }} .boka-lp__product-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title *,
     #boka-product-builder-{{ section.id }} .boka-lp__step-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__step-title *,
     #boka-product-builder-{{ section.id }} .boka-lp__goal-title,
     #boka-product-builder-{{ section.id }} .boka-lp__plan-title,
     #boka-product-builder-{{ section.id }} .boka-lp__ship-title {
-      font-family: var(--font-heading-family);
-      font-style: var(--font-heading-style);
-      font-weight: var(--font-heading-weight);
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: var(--boka-lp-heading-style);
+      font-weight: var(--boka-lp-heading-weight);
     }
 
-    #boka-product-builder-{{ section.id }} p,
+    #boka-product-builder-{{ section.id }} p:not(.boka-lp__product-title p),
     #boka-product-builder-{{ section.id }} li,
     #boka-product-builder-{{ section.id }} a,
-    #boka-product-builder-{{ section.id }} span,
-    #boka-product-builder-{{ section.id }} button,
-    #boka-product-builder-{{ section.id }} input,
-    #boka-product-builder-{{ section.id }} select,
-    #boka-product-builder-{{ section.id }} textarea,
+    #boka-product-builder-{{ section.id }} span:not(.boka-lp__product-title *):not(.boka-lp__step-title *):not(.boka-lp__goal-title):not(.boka-lp__plan-title):not(.boka-lp__ship-title),
+    #boka-product-builder-{{ section.id }} .boka-lp__rating-row,
+    #boka-product-builder-{{ section.id }} .boka-lp__stars,
+    #boka-product-builder-{{ section.id }} .boka-lp__eyebrow,
     #boka-product-builder-{{ section.id }} .boka-lp__product-description,
+    #boka-product-builder-{{ section.id }} .boka-lp__goal-sub,
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-kicker,
+    #boka-product-builder-{{ section.id }} .boka-lp__plan-badge,
+    #boka-product-builder-{{ section.id }} .boka-lp__ship-label,
     #boka-product-builder-{{ section.id }} .boka-lp__ship-copy,
+    #boka-product-builder-{{ section.id }} .boka-lp__price,
+    #boka-product-builder-{{ section.id }} .boka-lp__refill-price,
+    #boka-product-builder-{{ section.id }} .boka-lp__compare-price,
+    #boka-product-builder-{{ section.id }} .boka-lp__save-text,
+    #boka-product-builder-{{ section.id }} .boka-lp__then-row,
+    #boka-product-builder-{{ section.id }} .boka-lp__atc,
     #boka-product-builder-{{ section.id }} .boka-lp__atc-subtext,
-    #boka-product-builder-{{ section.id }} .boka-lp__message {
-      font-family: var(--font-body-family);
-      font-style: var(--font-body-style);
+    #boka-product-builder-{{ section.id }} .boka-lp__message,
+    #boka-product-builder-{{ section.id }} .boka-lp__media-badge,
+    #boka-product-builder-{{ section.id }} .boka-lp__thumb-placeholder,
+    #boka-product-builder-{{ section.id }} .boka-lp__guarantees div {
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
     }
 
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title,
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title p {
+      margin: 0;
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: var(--boka-lp-heading-style);
+      font-weight: var(--boka-lp-heading-weight);
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title strong {
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: inherit;
+      font-weight: var(--boka-lp-heading-weight);
+    }
+
+    #boka-product-builder-{{ section.id }} .boka-lp__product-title em,
     #boka-product-builder-{{ section.id }} em {
-      font-family: var(--font-heading-family);
+      font-family: var(--boka-lp-heading-font) !important;
       font-style: italic;
-      font-weight: var(--font-heading-weight);
+      font-weight: var(--boka-lp-heading-weight);
       letter-spacing: -0.02em;
     }
+
+    @media screen and (max-width: 749px) {
+      #boka-product-builder-{{ section.id }},
+      #boka-product-builder-{{ section.id }} *,
+      #boka-product-builder-{{ section.id }} *::before,
+      #boka-product-builder-{{ section.id }} *::after {
+        font-family: var(--boka-lp-body-font) !important;
+      }
+
+      #boka-product-builder-{{ section.id }} h1,
+      #boka-product-builder-{{ section.id }} h2,
+      #boka-product-builder-{{ section.id }} h3,
+      #boka-product-builder-{{ section.id }} .boka-lp__product-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__product-title *,
+      #boka-product-builder-{{ section.id }} .boka-lp__step-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__step-title *,
+      #boka-product-builder-{{ section.id }} .boka-lp__goal-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-title,
+      #boka-product-builder-{{ section.id }} .boka-lp__ship-title {
+        font-family: var(--boka-lp-heading-font) !important;
+      }
+    }
+
+
 
     #boka-product-builder-{{ section.id }} .boka-lp__product-summary-card {
       gap: 14px;
@@ -292,9 +353,9 @@
     }
 
     #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-top {
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 12px;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
     }
 
     #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-title {
@@ -332,15 +393,15 @@
         text-align: left;
       }
       #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__plan-top {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
+        grid-template-columns: auto minmax(0, 1fr);
+      }
 
-  #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__price {
-    grid-column: 2;
-    justify-self: start;
-    margin-top: 4px;
-    font-size: 18px;
-  }
+      #boka-product-builder-{{ section.id }} .boka-lp__plan-card--onetime .boka-lp__price {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 4px;
+        font-size: 18px;
+      }
     }
 
     #boka-product-builder-{{ section.id }} .boka-lp__goal-sub {
