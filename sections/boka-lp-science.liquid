@@ -1,10 +1,75 @@
-<section class="boka-lp boka-lp-science">
+<section class="boka-lp boka-lp-science" id="boka-science-section-{{ section.id }}">
+  <style>
+    #boka-science-section-{{ section.id }} {
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
+
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+      font-weight: var(--boka-lp-body-weight);
+    }
+
+    #boka-science-section-{{ section.id }} *,
+    #boka-science-section-{{ section.id }} *::before,
+    #boka-science-section-{{ section.id }} *::after {
+      font-family: inherit;
+    }
+
+    #boka-science-section-{{ section.id }} .boka-lp__section-title,
+    #boka-science-section-{{ section.id }} .boka-lp__science-card strong {
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: var(--boka-lp-heading-style);
+      font-weight: var(--boka-lp-heading-weight);
+    }
+
+    #boka-science-section-{{ section.id }} .boka-lp__eyebrow,
+    #boka-science-section-{{ section.id }} .boka-lp__science-card p,
+    #boka-science-section-{{ section.id }} .boka-lp__science-collage-placeholder {
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+      font-weight: var(--boka-lp-body-weight);
+    }
+
+    #boka-science-section-{{ section.id }} em {
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: italic;
+      font-weight: var(--boka-lp-heading-weight);
+    }
+
+    @media screen and (max-width: 749px) {
+      #boka-science-section-{{ section.id }},
+      #boka-science-section-{{ section.id }} *,
+      #boka-science-section-{{ section.id }} *::before,
+      #boka-science-section-{{ section.id }} *::after {
+        font-family: var(--boka-lp-body-font) !important;
+      }
+
+      #boka-science-section-{{ section.id }} .boka-lp__section-title,
+      #boka-science-section-{{ section.id }} .boka-lp__science-card strong {
+        font-family: var(--boka-lp-heading-font) !important;
+      }
+    }
+  </style>
+
   <div class="boka-lp__section boka-lp__section--science-collage" id="boka-science">
     <div class="boka-lp__wrap boka-lp__science-collage-wrap">
 
       <div class="boka-lp__science-collage-copy">
-        <p class="boka-lp__eyebrow">Inspired by nature. Backed by science.</p>
-        <h2 class="boka-lp__section-title">Thoughtfully formulated oral care for your daily routine.</h2>
+        {% if section.settings.eyebrow != blank %}
+          <p class="boka-lp__eyebrow">
+            {{ section.settings.eyebrow }}
+          </p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="boka-lp__section-title">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
       </div>
 
       <div class="boka-lp__science-collage-stage">
@@ -22,18 +87,18 @@
         {% endif %}
 
         <div class="boka-lp__science-card boka-lp__science-card--one">
-          <strong>n-Ha, made simple</strong>
-          <p>n-Ha is a breakthrough material inspired by nature and backed by science, designed to fit into your everyday brushing routine.</p>
+          <strong>{{ section.settings.card_1_heading }}</strong>
+          <p>{{ section.settings.card_1_copy }}</p>
         </div>
 
         <div class="boka-lp__science-card boka-lp__science-card--two">
-          <strong>Fluoride free</strong>
-          <p>Boka toothpaste is fluoride free and thoughtfully formulated for daily use.</p>
+          <strong>{{ section.settings.card_2_heading }}</strong>
+          <p>{{ section.settings.card_2_copy }}</p>
         </div>
 
         <div class="boka-lp__science-card boka-lp__science-card--three">
-          <strong>Daily formulas you’ll love</strong>
-          <p>Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy.</p>
+          <strong>{{ section.settings.card_3_heading }}</strong>
+          <p>{{ section.settings.card_3_copy }}</p>
         </div>
       </div>
 
@@ -46,6 +111,18 @@
   "name": "Boka LP science",
   "settings": [
     {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Inspired by nature. Backed by science."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Thoughtfully formulated oral care for your daily routine."
+    },
+    {
       "type": "image_picker",
       "id": "science_image",
       "label": "Science section image"
@@ -55,6 +132,42 @@
       "id": "science_image_alt",
       "label": "Science image alt text",
       "default": "Boka oral care products arranged on a clean background"
+    },
+    {
+      "type": "text",
+      "id": "card_1_heading",
+      "label": "Card 1 heading",
+      "default": "n-Ha, made simple"
+    },
+    {
+      "type": "textarea",
+      "id": "card_1_copy",
+      "label": "Card 1 copy",
+      "default": "n-Ha is a breakthrough material inspired by nature and backed by science, designed to fit into your everyday brushing routine."
+    },
+    {
+      "type": "text",
+      "id": "card_2_heading",
+      "label": "Card 2 heading",
+      "default": "Fluoride free"
+    },
+    {
+      "type": "textarea",
+      "id": "card_2_copy",
+      "label": "Card 2 copy",
+      "default": "Boka toothpaste is fluoride free and thoughtfully formulated for daily use."
+    },
+    {
+      "type": "text",
+      "id": "card_3_heading",
+      "label": "Card 3 heading",
+      "default": "Daily formulas you’ll love"
+    },
+    {
+      "type": "textarea",
+      "id": "card_3_copy",
+      "label": "Card 3 copy",
+      "default": "Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy."
     }
   ],
   "presets": [
