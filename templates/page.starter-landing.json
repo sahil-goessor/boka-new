@@ -51,7 +51,7 @@
         "image_badge": "Complete routine",
         "rating_text": "4.6 stars from 950,000+ customers",
         "eyebrow": "Daily oral care, naturally elevated",
-        "heading": "<p>Best Of Boka <em><strong>Starter Kit</strong></em></p>",
+        "heading": "<h1>Best Of Boka Starter Kit</h1>",
         "subheading": "Get a complete oral care system powered by nano-hydroxyapatite - no matter your routine goal.",
         "benefit_1": "Fluoride-free with nano-hydroxyapatite",
         "benefit_2": "Effective daily essentials less than $10 / month",
@@ -98,13 +98,31 @@
     "lp_science": {
       "type": "boka-lp-science",
       "settings": {
+        "eyebrow": "Inspired by nature. Backed by science.",
+        "heading": "Thoughtfully formulated oral care for your daily routine.",
         "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
-        "science_image_alt": "Boka oral care products"
+        "science_image_alt": "Boka oral care products",
+        "card_1_heading": "n-Ha, made simple",
+        "card_1_copy": "n-Ha is a breakthrough material inspired by nature and backed by science, designed to fit into your everyday brushing routine.",
+        "card_2_heading": "Fluoride free",
+        "card_2_copy": "Boka toothpaste is fluoride free and thoughtfully formulated for daily use.",
+        "card_3_heading": "Daily formulas you’ll love",
+        "card_3_copy": "Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy."
       }
     },
     "lp_compare": {
       "type": "boka-lp-compare",
-      "settings": {}
+      "settings": {
+        "eyebrow": "The easy switch",
+        "heading": "What makes Boka toothpaste different?",
+        "copy": "Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, a breakthrough material inspired by nature and backed by science.",
+        "stars_text": "★★★★★ 4.6 stars from 950,000+ customers",
+        "rating_text": "",
+        "button_text": "Choose your starter kit",
+        "button_link": "",
+        "boka_column_title": "Boka Toothpaste",
+        "other_column_title": "Other Toothpaste"
+      }
     },
     "lp_reviews": {
       "type": "boka-lp-reviews",
@@ -122,7 +140,10 @@
     "lp_bottom_cta": {
       "type": "boka-lp-bottom-cta",
       "settings": {
-        "promo_banner_button_text": "Start My Routine"
+        "heading": "Ready to build a routine you’ll actually stick with?",
+        "copy": "Choose your smile goal and get a complete Boka routine delivered to your door.",
+        "promo_banner_button_text": "Start My Routine",
+        "button_link": ""
       }
     }
   },
