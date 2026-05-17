@@ -1,21 +1,126 @@
-<section class="boka-lp boka-lp-reviews">
+<section class="boka-lp boka-lp-reviews" id="boka-reviews-section-{{ section.id }}">
+  <style>
+    #boka-reviews-section-{{ section.id }} {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    #boka-reviews-section-{{ section.id }} *,
+    #boka-reviews-section-{{ section.id }} *::before,
+    #boka-reviews-section-{{ section.id }} *::after {
+      font-family: inherit;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__eyebrow,
+    #boka-reviews-section-{{ section.id }} .boka-lp__section-copy,
+    #boka-reviews-section-{{ section.id }} .boka-lp__info-card p,
+    #boka-reviews-section-{{ section.id }} .boka-lp__stars {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+    }
+
+    @media screen and (max-width: 749px) {
+      #boka-reviews-section-{{ section.id }},
+      #boka-reviews-section-{{ section.id }} *,
+      #boka-reviews-section-{{ section.id }} *::before,
+      #boka-reviews-section-{{ section.id }} *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
+        font-family: var(--font-heading-family) !important;
+      }
+    }
+  </style>
+
   <div class="boka-lp__section boka-lp__section--reviews" id="boka-reviews">
     <div class="boka-lp__wrap">
-      <p class="boka-lp__eyebrow">Real routines, real reviews</p>
-      <h2 class="boka-lp__section-title">Oral care people actually look forward to using.</h2>
-      <p class="boka-lp__section-copy">See why customers make Boka part of their daily routine.</p>
+      {% if section.settings.eyebrow != blank %}
+        <p class="boka-lp__eyebrow">
+          {{ section.settings.eyebrow }}
+        </p>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="boka-lp__section-title">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.copy != blank %}
+        <p class="boka-lp__section-copy">
+          {{ section.settings.copy }}
+        </p>
+      {% endif %}
+
       <div class="boka-lp__cards-3">
-        <div class="boka-lp__info-card"><div class="boka-lp__stars">★★★★★</div><p>“My mouth feels clean without the harsh burn.”</p></div>
-        <div class="boka-lp__info-card"><div class="boka-lp__stars">★★★★★</div><p>“The subscription makes it one less thing to think about.”</p></div>
-        <div class="boka-lp__info-card"><div class="boka-lp__stars">★★★★★</div><p>“The first toothpaste I actually look forward to using.”</p></div>
+        <div class="boka-lp__info-card">
+          <div class="boka-lp__stars">★★★★★</div>
+          <p>{{ section.settings.review_1 }}</p>
+        </div>
+
+        <div class="boka-lp__info-card">
+          <div class="boka-lp__stars">★★★★★</div>
+          <p>{{ section.settings.review_2 }}</p>
+        </div>
+
+        <div class="boka-lp__info-card">
+          <div class="boka-lp__stars">★★★★★</div>
+          <p>{{ section.settings.review_3 }}</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 {% schema %}
 {
   "name": "Boka LP reviews",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Real routines, real reviews"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Oral care people actually look forward to using."
+    },
+    {
+      "type": "textarea",
+      "id": "copy",
+      "label": "Copy",
+      "default": "See why customers make Boka part of their daily routine."
+    },
+    {
+      "type": "textarea",
+      "id": "review_1",
+      "label": "Review 1",
+      "default": "“My mouth feels clean without the harsh burn.”"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2",
+      "label": "Review 2",
+      "default": "“The subscription makes it one less thing to think about.”"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3",
+      "label": "Review 3",
+      "default": "“The first toothpaste I actually look forward to using.”"
+    }
+  ],
   "presets": [
     {
       "name": "Boka LP reviews"
