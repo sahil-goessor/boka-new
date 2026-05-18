@@ -1,81 +1,187 @@
 <section class="boka-lp boka-lp-compare boka-lp--compare-section" id="boka-compare-{{ section.id }}">
   <style>
-  #boka-compare-{{ section.id }} {
-    --boka-lp-body-font: var(--font-body-family);
-    --boka-lp-body-style: var(--font-body-style);
-    --boka-lp-body-weight: var(--font-body-weight);
-    --boka-lp-heading-font: var(--font-heading-family);
-    --boka-lp-heading-style: var(--font-heading-style);
-    --boka-lp-heading-weight: var(--font-heading-weight);
+    #boka-compare-{{ section.id }} {
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
 
-    font-family: var(--boka-lp-body-font) !important;
-    font-style: var(--boka-lp-body-style);
-    font-weight: var(--boka-lp-body-weight);
-  }
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+      font-weight: var(--boka-lp-body-weight);
+    }
 
-  #boka-compare-{{ section.id }} *,
-  #boka-compare-{{ section.id }} *::before,
-  #boka-compare-{{ section.id }} *::after {
-    font-family: inherit;
-  }
-
-  #boka-compare-{{ section.id }} .boka-lp__eyebrow,
-  #boka-compare-{{ section.id }} .boka-lp__compare-text,
-  #boka-compare-{{ section.id }} .boka-lp__compare-rating,
-  #boka-compare-{{ section.id }} .boka-lp__compare-stars,
-  #boka-compare-{{ section.id }} .boka-lp__compare-button,
-  #boka-compare-{{ section.id }} .boka-lp__compare-good,
-  #boka-compare-{{ section.id }} .boka-lp__compare-maybe,
-  #boka-compare-{{ section.id }} .boka-lp__compare-grid > div {
-    font-family: var(--boka-lp-body-font) !important;
-    font-style: var(--boka-lp-body-style);
-  }
-
-  #boka-compare-{{ section.id }} h1,
-  #boka-compare-{{ section.id }} h2,
-  #boka-compare-{{ section.id }} h3,
-  #boka-compare-{{ section.id }} .boka-lp__compare-heading,
-  #boka-compare-{{ section.id }} .boka-lp__compare-brand,
-  #boka-compare-{{ section.id }} .boka-lp__compare-brand span,
-  #boka-compare-{{ section.id }} .boka-lp__compare-label,
-  #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
-    font-family: var(--boka-lp-heading-font) !important;
-    font-style: var(--boka-lp-heading-style);
-    font-weight: var(--boka-lp-heading-weight);
-  }
-
-  #boka-compare-{{ section.id }} em {
-    font-family: var(--boka-lp-heading-font) !important;
-    font-style: italic;
-    font-weight: var(--boka-lp-heading-weight);
-  }
-
-  @media screen and (max-width: 749px) {
-    #boka-compare-{{ section.id }},
     #boka-compare-{{ section.id }} *,
     #boka-compare-{{ section.id }} *::before,
     #boka-compare-{{ section.id }} *::after {
-      font-family: var(--boka-lp-body-font) !important;
+      box-sizing: border-box;
+      font-family: inherit;
     }
 
+    #boka-compare-{{ section.id }} .boka-lp__eyebrow,
+    #boka-compare-{{ section.id }} .boka-lp__compare-text,
+    #boka-compare-{{ section.id }} .boka-lp__compare-rating,
+    #boka-compare-{{ section.id }} .boka-lp__compare-stars,
+    #boka-compare-{{ section.id }} .boka-lp__compare-button,
+    #boka-compare-{{ section.id }} .boka-lp__compare-good,
+    #boka-compare-{{ section.id }} .boka-lp__compare-maybe,
+    #boka-compare-{{ section.id }} .boka-lp__compare-grid > div {
+      font-family: var(--boka-lp-body-font) !important;
+      font-style: var(--boka-lp-body-style);
+    }
+
+    #boka-compare-{{ section.id }} h1,
+    #boka-compare-{{ section.id }} h2,
+    #boka-compare-{{ section.id }} h3,
     #boka-compare-{{ section.id }} .boka-lp__compare-heading,
     #boka-compare-{{ section.id }} .boka-lp__compare-brand,
     #boka-compare-{{ section.id }} .boka-lp__compare-brand span,
     #boka-compare-{{ section.id }} .boka-lp__compare-label,
     #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
       font-family: var(--boka-lp-heading-font) !important;
+      font-style: var(--boka-lp-heading-style);
+      font-weight: var(--boka-lp-heading-weight);
     }
 
-    #boka-compare-{{ section.id }} .boka-lp__compare-good,
-    #boka-compare-{{ section.id }} .boka-lp__compare-maybe,
-    #boka-compare-{{ section.id }} .boka-lp__compare-text,
-    #boka-compare-{{ section.id }} .boka-lp__compare-rating,
-    #boka-compare-{{ section.id }} .boka-lp__compare-stars,
-    #boka-compare-{{ section.id }} .boka-lp__compare-button {
-      font-family: var(--boka-lp-body-font) !important;
+    #boka-compare-{{ section.id }} em {
+      font-family: var(--boka-lp-heading-font) !important;
+      font-style: italic;
+      font-weight: var(--boka-lp-heading-weight);
     }
-  }
-</style>
+
+    #boka-compare-{{ section.id }} .boka-lp__compare-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      text-align: center;
+    }
+
+    #boka-compare-{{ section.id }} .boka-lp__compare-brand-inner {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 0;
+    }
+
+    #boka-compare-{{ section.id }} .boka-lp__compare-logo {
+      display: block;
+      width: auto;
+      max-width: min(120px, 100%);
+      max-height: 34px;
+      object-fit: contain;
+    }
+
+    #boka-compare-{{ section.id }} .boka-lp__compare-brand-text {
+      display: block;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 749px) {
+      #boka-compare-{{ section.id }},
+      #boka-compare-{{ section.id }} *,
+      #boka-compare-{{ section.id }} *::before,
+      #boka-compare-{{ section.id }} *::after {
+        font-family: var(--boka-lp-body-font) !important;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-heading,
+      #boka-compare-{{ section.id }} .boka-lp__compare-brand,
+      #boka-compare-{{ section.id }} .boka-lp__compare-brand span,
+      #boka-compare-{{ section.id }} .boka-lp__compare-label,
+      #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
+        font-family: var(--boka-lp-heading-font) !important;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-good,
+      #boka-compare-{{ section.id }} .boka-lp__compare-maybe,
+      #boka-compare-{{ section.id }} .boka-lp__compare-text,
+      #boka-compare-{{ section.id }} .boka-lp__compare-rating,
+      #boka-compare-{{ section.id }} .boka-lp__compare-stars,
+      #boka-compare-{{ section.id }} .boka-lp__compare-button {
+        font-family: var(--boka-lp-body-font) !important;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-layout {
+        gap: 28px;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-table-card {
+        width: 100%;
+        overflow: visible;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-grid {
+        display: grid;
+        grid-template-columns: minmax(92px, 1fr) minmax(92px, 1fr) minmax(92px, 1fr);
+        align-items: stretch;
+        min-height: auto;
+        height: auto;
+        border-bottom: 1px solid rgba(34, 39, 33, 0.12);
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-grid > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        min-height: 100%;
+        height: auto;
+        padding: 14px 8px;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        hyphens: auto;
+        line-height: 1.25;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        line-height: 1.15;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-label {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        font-size: 12px;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-good,
+      #boka-compare-{{ section.id }} .boka-lp__compare-maybe {
+        font-size: 12px;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-good {
+        background: var(--boka-green-light);
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-maybe {
+        background: rgba(250, 250, 245, 0.74);
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-brand {
+        background: var(--boka-green-light);
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-logo {
+        max-width: 82px;
+        max-height: 28px;
+      }
+
+      #boka-compare-{{ section.id }} .boka-lp__compare-brand-text {
+        font-size: 12px;
+        line-height: 1.1;
+      }
+    }
+  </style>
 
   <div class="boka-lp__section boka-lp__section--compare">
     <div class="boka-lp__wrap boka-lp__compare-layout">
@@ -113,7 +219,22 @@
           <div class="boka-lp__compare-blank"></div>
 
           <div class="boka-lp__compare-brand">
-            <span>{{ section.settings.boka_column_title }}</span>
+            <span class="boka-lp__compare-brand-inner">
+              {% if section.settings.boka_column_logo != blank %}
+                {{
+                  section.settings.boka_column_logo
+                  | image_url: width: 240
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'boka-lp__compare-logo',
+                    alt: section.settings.boka_column_logo_alt
+                }}
+              {% else %}
+                <span class="boka-lp__compare-brand-text">
+                  {{ section.settings.boka_column_title }}
+                </span>
+              {% endif %}
+            </span>
           </div>
 
           <div>{{ section.settings.other_column_title }}</div>
@@ -156,8 +277,8 @@
         </div>
 
         <div class="boka-lp__compare-grid">
-          <div class="boka-lp__compare-label">Safe for daily use</div>
-          <div class="boka-lp__compare-good">Made for daily brushing</div>
+          <div class="boka-lp__compare-label">Made for daily use</div>
+          <div class="boka-lp__compare-good">Daily brushing</div>
           <div class="boka-lp__compare-maybe">Check product directions</div>
         </div>
       </div>
@@ -186,7 +307,7 @@
       "type": "textarea",
       "id": "copy",
       "label": "Copy",
-      "default": "Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, a breakthrough material inspired by nature and backed by science."
+      "default": "Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, an ingredient inspired by the mineral that makes up teeth."
     },
     {
       "type": "text",
@@ -211,9 +332,20 @@
       "label": "Button link"
     },
     {
+      "type": "image_picker",
+      "id": "boka_column_logo",
+      "label": "Boka column logo"
+    },
+    {
+      "type": "text",
+      "id": "boka_column_logo_alt",
+      "label": "Boka column logo alt text",
+      "default": "Boka"
+    },
+    {
       "type": "text",
       "id": "boka_column_title",
-      "label": "Boka column title",
+      "label": "Boka column title fallback",
       "default": "Boka Toothpaste"
     },
     {
