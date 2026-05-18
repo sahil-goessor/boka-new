@@ -46,6 +46,12 @@
         "button_text_color": "#ffffff",
         "button_font_size": 16,
         "button_border_radius": 4,
+        "show_walmart_banner": true,
+        "walmart_text": "Find it at your nearest Walmart",
+        "walmart_url": "",
+        "walmart_bg_color": "#fff8e7",
+        "walmart_border_color": "#ffc220",
+        "walmart_text_color": "#1a1a1a",
         "show_timer": true,
         "timer_label_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
         "timer_end_date": "Dec 31, 2025 23:59:59",
@@ -793,7 +799,7 @@
           }
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
@@ -1390,7 +1396,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
@@ -1419,8 +1425,8 @@
         "h1 {text-align: center; font-size: 40px;}",
         "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}",
         ".learn-more.small-hide.medium-hide {display: none !important;}",
-        ".product-grid .card__media a, .product-grid .card__media a * {pointer-events: none !important; cursor: default !important; text-decoration: none !important; }",
-        " .product-grid .card__heading a, .product-grid .card__information .card__heading a {pointer-events: none !important; cursor: default !important; text-decoration: none !important; color: inherit !important; }"
+        ".product-grid .card__media a,.product-grid .card__media a * {pointer-events: none !important; cursor: default !important; text-decoration: none !important;}",
+        ".product-grid .card__heading a,.product-grid .card__information .card__heading a {pointer-events: none !important; cursor: default !important; text-decoration: none !important; color: inherit !important;}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
@@ -1597,69 +1603,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "custom_feature_product_section_4f3nQW": {
-      "type": "custom-feature-product-section",
-      "blocks": {
-        "title_ytVQy6": {
-          "type": "title",
-          "settings": {
-            "title_font_size_mobile": 24,
-            "title_font_size_desktop": 40
-          }
-        },
-        "price_wQEKVG": {
-          "type": "price",
-          "settings": {
-            "hide_on_subscription_products": false
-          }
-        },
-        "variant_picker_6tqKaH": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "color_names": "white, blue, mint, pink",
-            "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
-          }
-        },
-        "buy_buttons_9jfMhw": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": false,
-            "show_gift_card_recipient": false
-          }
-        }
-      },
-      "block_order": [
-        "title_ytVQy6",
-        "price_wQEKVG",
-        "variant_picker_6tqKaH",
-        "buy_buttons_9jfMhw"
-      ],
-      "disabled": true,
-      "name": "Product Display-new-2",
-      "settings": {
-        "product_handle": "ela-mint-toothpaste",
-        "enable_sticky_info": true,
-        "enable_sticky_atc": true,
-        "media_size": "large",
-        "lazyload": false,
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "thumbnail_position": "bottom",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_tablet": 36,
-        "padding_bottom_tablet": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
     "footer_copyright_bar_JTwate": {
       "type": "footer-copyright-bar",
       "name": "Copyright Bar",
@@ -1696,7 +1639,6 @@
     "custom_collapsible_content_p9cV6M",
     "yotpo_reviews_widget_hbzYf6",
     "main",
-    "custom_feature_product_section_4f3nQW",
     "footer_copyright_bar_JTwate"
   ]
 }
