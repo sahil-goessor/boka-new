@@ -120,6 +120,7 @@
         "rating_text": "",
         "button_text": "Choose your starter kit",
         "button_link": "https://www.boka.com/pages/best-of-boka-starter-kit#boka-subscription",
+        "boka_column_logo": "shopify://shop_images/boka-logo-2.svg",
         "boka_column_logo_alt": "Boka",
         "boka_column_title": "BOKA",
         "other_column_title": "Other Toothpaste"
