@@ -9,6 +9,7 @@
     #boka-reviews-section-{{ section.id }} *,
     #boka-reviews-section-{{ section.id }} *::before,
     #boka-reviews-section-{{ section.id }} *::after {
+      box-sizing: border-box;
       font-family: inherit;
     }
 
@@ -16,14 +17,143 @@
       font-family: var(--font-heading-family) !important;
       font-style: var(--font-heading-style) !important;
       font-weight: var(--font-heading-weight) !important;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      max-width: 780px;
+      margin: 0 0 18px;
     }
 
     #boka-reviews-section-{{ section.id }} .boka-lp__eyebrow,
     #boka-reviews-section-{{ section.id }} .boka-lp__section-copy,
-    #boka-reviews-section-{{ section.id }} .boka-lp__info-card p,
-    #boka-reviews-section-{{ section.id }} .boka-lp__stars {
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-card p,
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-meta,
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-pill,
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-stat {
       font-family: var(--font-body-family) !important;
       font-style: var(--font-body-style);
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__reviews-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-stat {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--boka-green-light);
+      border: 1px solid var(--boka-green-mid);
+      color: var(--boka-charcoal);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 850;
+      letter-spacing: .03em;
+      white-space: nowrap;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-card {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      background: var(--boka-surface);
+      border: var(--boka-border-soft);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--boka-shadow-soft);
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-image {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: var(--boka-green-light);
+      overflow: hidden;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-placeholder {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      color: var(--boka-olive);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-body {
+      display: grid;
+      align-content: start;
+      gap: 12px;
+      padding: 22px;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__stars {
+      color: var(--boka-green-deep);
+      font-size: 13px;
+      letter-spacing: .05em;
+      line-height: 1;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-card p {
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-meta {
+      color: var(--boka-gray);
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 750;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: var(--boka-cream);
+      border: 1px solid var(--boka-stone);
+      color: var(--boka-olive);
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     @media screen and (max-width: 749px) {
@@ -36,44 +166,152 @@
 
       #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
         font-family: var(--font-heading-family) !important;
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.04;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__reviews-head {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-stat {
+        width: fit-content;
+        white-space: normal;
+        text-align: left;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-card {
+        border-radius: 20px;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-image {
+        aspect-ratio: 16 / 10;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-body {
+        padding: 18px;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-card p {
+        font-size: 15px;
       }
     }
   </style>
 
   <div class="boka-lp__section boka-lp__section--reviews" id="boka-reviews">
     <div class="boka-lp__wrap">
-      {% if section.settings.eyebrow != blank %}
-        <p class="boka-lp__eyebrow">
-          {{ section.settings.eyebrow }}
-        </p>
-      {% endif %}
+      <div class="boka-lp__reviews-head">
+        <div>
+          {% if section.settings.eyebrow != blank %}
+            <p class="boka-lp__eyebrow">
+              {{ section.settings.eyebrow }}
+            </p>
+          {% endif %}
 
-      {% if section.settings.heading != blank %}
-        <h2 class="boka-lp__section-title">
-          {{ section.settings.heading }}
-        </h2>
-      {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 class="boka-lp__section-title">
+              {{ section.settings.heading }}
+            </h2>
+          {% endif %}
 
-      {% if section.settings.copy != blank %}
-        <p class="boka-lp__section-copy">
-          {{ section.settings.copy }}
-        </p>
-      {% endif %}
-
-      <div class="boka-lp__cards-3">
-        <div class="boka-lp__info-card">
-          <div class="boka-lp__stars">★★★★★</div>
-          <p>{{ section.settings.review_1 }}</p>
+          {% if section.settings.copy != blank %}
+            <p class="boka-lp__section-copy">
+              {{ section.settings.copy }}
+            </p>
+          {% endif %}
         </div>
 
-        <div class="boka-lp__info-card">
-          <div class="boka-lp__stars">★★★★★</div>
-          <p>{{ section.settings.review_2 }}</p>
+        {% if section.settings.stat_text != blank %}
+          <div class="boka-lp__review-stat">
+            {{ section.settings.stat_text }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="boka-lp__review-grid">
+        <div class="boka-lp__review-card">
+          <div class="boka-lp__review-image">
+            {% if section.settings.review_1_image != blank %}
+              {{
+                section.settings.review_1_image
+                | image_url: width: 900
+                | image_tag:
+                  loading: 'lazy',
+                  alt: section.settings.review_1_image_alt
+              }}
+            {% else %}
+              <div class="boka-lp__review-placeholder">BOKA</div>
+            {% endif %}
+          </div>
+
+          <div class="boka-lp__review-body">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p>{{ section.settings.review_1 }}</p>
+
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.review_1_name }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
         </div>
 
-        <div class="boka-lp__info-card">
-          <div class="boka-lp__stars">★★★★★</div>
-          <p>{{ section.settings.review_3 }}</p>
+        <div class="boka-lp__review-card">
+          <div class="boka-lp__review-image">
+            {% if section.settings.review_2_image != blank %}
+              {{
+                section.settings.review_2_image
+                | image_url: width: 900
+                | image_tag:
+                  loading: 'lazy',
+                  alt: section.settings.review_2_image_alt
+              }}
+            {% else %}
+              <div class="boka-lp__review-placeholder">BOKA</div>
+            {% endif %}
+          </div>
+
+          <div class="boka-lp__review-body">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p>{{ section.settings.review_2 }}</p>
+
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.review_2_name }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="boka-lp__review-card">
+          <div class="boka-lp__review-image">
+            {% if section.settings.review_3_image != blank %}
+              {{
+                section.settings.review_3_image
+                | image_url: width: 900
+                | image_tag:
+                  loading: 'lazy',
+                  alt: section.settings.review_3_image_alt
+              }}
+            {% else %}
+              <div class="boka-lp__review-placeholder">BOKA</div>
+            {% endif %}
+          </div>
+
+          <div class="boka-lp__review-body">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p>{{ section.settings.review_3 }}</p>
+
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.review_3_name }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -103,10 +341,44 @@
       "default": "See why customers make Boka part of their daily routine."
     },
     {
+      "type": "text",
+      "id": "stat_text",
+      "label": "Review stat",
+      "default": "★★★★★ 4.6 stars from 950,000+ customers"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_1_image",
+      "label": "Review 1 image"
+    },
+    {
+      "type": "text",
+      "id": "review_1_image_alt",
+      "label": "Review 1 image alt text",
+      "default": "Boka product review image"
+    },
+    {
       "type": "textarea",
       "id": "review_1",
       "label": "Review 1",
       "default": "“My mouth feels clean without the harsh burn.”"
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Review 1 name",
+      "default": "Daily Care routine"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_2_image",
+      "label": "Review 2 image"
+    },
+    {
+      "type": "text",
+      "id": "review_2_image_alt",
+      "label": "Review 2 image alt text",
+      "default": "Boka product review image"
     },
     {
       "type": "textarea",
@@ -115,10 +387,33 @@
       "default": "“The subscription makes it one less thing to think about.”"
     },
     {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Review 2 name",
+      "default": "Subscription routine"
+    },
+    {
+      "type": "image_picker",
+      "id": "review_3_image",
+      "label": "Review 3 image"
+    },
+    {
+      "type": "text",
+      "id": "review_3_image_alt",
+      "label": "Review 3 image alt text",
+      "default": "Boka product review image"
+    },
+    {
       "type": "textarea",
       "id": "review_3",
       "label": "Review 3",
       "default": "“The first toothpaste I actually look forward to using.”"
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Review 3 name",
+      "default": "Starter kit routine"
     }
   ],
   "presets": [
