@@ -13,10 +13,15 @@
       font-family: inherit;
     }
 
-    #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
+    #boka-reviews-section-{{ section.id }} .boka-lp__section-title,
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-title,
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-goal-tab {
       font-family: var(--font-heading-family) !important;
       font-style: var(--font-heading-style) !important;
       font-weight: var(--font-heading-weight) !important;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
       font-size: clamp(30px, 4vw, 46px);
       line-height: 1.06;
       letter-spacing: -0.045em;
@@ -26,10 +31,11 @@
 
     #boka-reviews-section-{{ section.id }} .boka-lp__eyebrow,
     #boka-reviews-section-{{ section.id }} .boka-lp__section-copy,
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-card p,
+    #boka-reviews-section-{{ section.id }} .boka-lp__rating-row,
+    #boka-reviews-section-{{ section.id }} .boka-lp__stars,
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-copy,
     #boka-reviews-section-{{ section.id }} .boka-lp__review-meta,
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-pill,
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-stat {
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-pill {
       font-family: var(--font-body-family) !important;
       font-style: var(--font-body-style);
     }
@@ -42,80 +48,94 @@
       margin-bottom: 28px;
     }
 
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-stat {
+    #boka-reviews-section-{{ section.id }} .boka-lp__rating-row {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 10px 16px;
+      gap: 9px;
+      flex-wrap: wrap;
+      color: var(--boka-charcoal);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 14px;
       border-radius: 999px;
       background: var(--boka-green-light);
       border: 1px solid var(--boka-green-mid);
-      color: var(--boka-charcoal);
-      font-size: 12px;
-      line-height: 1.2;
-      font-weight: 850;
-      letter-spacing: .03em;
       white-space: nowrap;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__stars {
+      color: var(--boka-green-deep);
+      letter-spacing: .06em;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 22px;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-goal-tab {
+      appearance: none;
+      border: 1px solid rgba(34, 39, 33, 0.18);
+      background: var(--boka-white);
+      color: var(--boka-charcoal);
+      border-radius: 999px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-goal-tab.is-active {
+      background: var(--boka-green-light);
+      border-color: var(--boka-green-mid);
+      color: var(--boka-charcoal);
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-goal-tab:hover {
+      transform: translateY(-1px);
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-panel {
+      display: none;
+    }
+
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-panel.is-active {
+      display: block;
     }
 
     #boka-reviews-section-{{ section.id }} .boka-lp__review-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
     #boka-reviews-section-{{ section.id }} .boka-lp__review-card {
       display: grid;
-      grid-template-rows: auto 1fr;
+      align-content: start;
+      gap: 13px;
       background: var(--boka-surface);
       border: var(--boka-border-soft);
-      border-radius: 24px;
-      overflow: hidden;
+      border-radius: 22px;
+      padding: 24px;
       box-shadow: var(--boka-shadow-soft);
+      min-height: 100%;
     }
 
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-image {
-      position: relative;
-      aspect-ratio: 4 / 3;
-      background: var(--boka-green-light);
-      overflow: hidden;
-    }
-
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-card .boka-lp__stars {
       display: block;
-    }
-
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-placeholder {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      place-items: center;
-      color: var(--boka-olive);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-body {
-      display: grid;
-      align-content: start;
-      gap: 12px;
-      padding: 22px;
-    }
-
-    #boka-reviews-section-{{ section.id }} .boka-lp__stars {
       color: var(--boka-green-deep);
       font-size: 13px;
-      letter-spacing: .05em;
       line-height: 1;
+      letter-spacing: .06em;
     }
 
-    #boka-reviews-section-{{ section.id }} .boka-lp__review-card p {
+    #boka-reviews-section-{{ section.id }} .boka-lp__review-copy {
       margin: 0;
       color: var(--boka-charcoal);
       font-size: 16px;
@@ -164,8 +184,13 @@
         font-family: var(--font-body-family) !important;
       }
 
-      #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
+      #boka-reviews-section-{{ section.id }} .boka-lp__section-title,
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-title,
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-goal-tab {
         font-family: var(--font-heading-family) !important;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__section-title {
         font-size: clamp(30px, 9vw, 40px);
         line-height: 1.04;
       }
@@ -176,30 +201,32 @@
         margin-bottom: 22px;
       }
 
-      #boka-reviews-section-{{ section.id }} .boka-lp__review-stat {
+      #boka-reviews-section-{{ section.id }} .boka-lp__rating-row {
         width: fit-content;
         white-space: normal;
-        text-align: left;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-goal-tab {
+        flex: 0 0 auto;
       }
 
       #boka-reviews-section-{{ section.id }} .boka-lp__review-grid {
         grid-template-columns: 1fr;
-        gap: 14px;
       }
 
       #boka-reviews-section-{{ section.id }} .boka-lp__review-card {
+        padding: 20px;
         border-radius: 20px;
       }
 
-      #boka-reviews-section-{{ section.id }} .boka-lp__review-image {
-        aspect-ratio: 16 / 10;
-      }
-
-      #boka-reviews-section-{{ section.id }} .boka-lp__review-body {
-        padding: 18px;
-      }
-
-      #boka-reviews-section-{{ section.id }} .boka-lp__review-card p {
+      #boka-reviews-section-{{ section.id }} .boka-lp__review-copy {
         font-size: 15px;
       }
     }
@@ -228,87 +255,181 @@
           {% endif %}
         </div>
 
-        {% if section.settings.stat_text != blank %}
-          <div class="boka-lp__review-stat">
-            {{ section.settings.stat_text }}
+        {% if section.settings.rating_text != blank %}
+          <div class="boka-lp__rating-row">
+            <span class="boka-lp__stars" aria-hidden="true">★★★★★</span>
+            <span>{{ section.settings.rating_text }}</span>
           </div>
         {% endif %}
       </div>
 
-      <div class="boka-lp__review-grid">
-        <div class="boka-lp__review-card">
-          <div class="boka-lp__review-image">
-            {% if section.settings.review_1_image != blank %}
-              {{
-                section.settings.review_1_image
-                | image_url: width: 900
-                | image_tag:
-                  loading: 'lazy',
-                  alt: section.settings.review_1_image_alt
-              }}
-            {% else %}
-              <div class="boka-lp__review-placeholder">BOKA</div>
-            {% endif %}
+      <div class="boka-lp__review-tabs" role="tablist" aria-label="Review categories">
+        <button type="button" class="boka-lp__review-goal-tab is-active" data-review-goal="daily" role="tab" aria-selected="true">
+          Daily Care
+        </button>
+        <button type="button" class="boka-lp__review-goal-tab" data-review-goal="whitening" role="tab" aria-selected="false">
+          Whitening
+        </button>
+        <button type="button" class="boka-lp__review-goal-tab" data-review-goal="sensitivity" role="tab" aria-selected="false">
+          Sensitivity
+        </button>
+        <button type="button" class="boka-lp__review-goal-tab" data-review-goal="kids" role="tab" aria-selected="false">
+          Kids
+        </button>
+        <button type="button" class="boka-lp__review-goal-tab" data-review-goal="probiotic" role="tab" aria-selected="false">
+          Probiotic
+        </button>
+      </div>
+
+      <div class="boka-lp__review-panel is-active" data-review-panel="daily">
+        <div class="boka-lp__review-grid">
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.daily_review_1 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.daily_review_1_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
           </div>
 
-          <div class="boka-lp__review-body">
+          <div class="boka-lp__review-card">
             <div class="boka-lp__stars">★★★★★</div>
-            <p>{{ section.settings.review_1 }}</p>
-
+            <p class="boka-lp__review-copy">{{ section.settings.daily_review_2 }}</p>
             <div class="boka-lp__review-bottom">
-              <span class="boka-lp__review-meta">{{ section.settings.review_1_name }}</span>
+              <span class="boka-lp__review-meta">{{ section.settings.daily_review_2_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.daily_review_3 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.daily_review_3_meta }}</span>
               <span class="boka-lp__review-pill">Verified buyer</span>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="boka-lp__review-card">
-          <div class="boka-lp__review-image">
-            {% if section.settings.review_2_image != blank %}
-              {{
-                section.settings.review_2_image
-                | image_url: width: 900
-                | image_tag:
-                  loading: 'lazy',
-                  alt: section.settings.review_2_image_alt
-              }}
-            {% else %}
-              <div class="boka-lp__review-placeholder">BOKA</div>
-            {% endif %}
+      <div class="boka-lp__review-panel" data-review-panel="whitening">
+        <div class="boka-lp__review-grid">
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.whitening_review_1 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.whitening_review_1_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
           </div>
 
-          <div class="boka-lp__review-body">
+          <div class="boka-lp__review-card">
             <div class="boka-lp__stars">★★★★★</div>
-            <p>{{ section.settings.review_2 }}</p>
-
+            <p class="boka-lp__review-copy">{{ section.settings.whitening_review_2 }}</p>
             <div class="boka-lp__review-bottom">
-              <span class="boka-lp__review-meta">{{ section.settings.review_2_name }}</span>
+              <span class="boka-lp__review-meta">{{ section.settings.whitening_review_2_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.whitening_review_3 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.whitening_review_3_meta }}</span>
               <span class="boka-lp__review-pill">Verified buyer</span>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="boka-lp__review-card">
-          <div class="boka-lp__review-image">
-            {% if section.settings.review_3_image != blank %}
-              {{
-                section.settings.review_3_image
-                | image_url: width: 900
-                | image_tag:
-                  loading: 'lazy',
-                  alt: section.settings.review_3_image_alt
-              }}
-            {% else %}
-              <div class="boka-lp__review-placeholder">BOKA</div>
-            {% endif %}
+      <div class="boka-lp__review-panel" data-review-panel="sensitivity">
+        <div class="boka-lp__review-grid">
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.sensitivity_review_1 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.sensitivity_review_1_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
           </div>
 
-          <div class="boka-lp__review-body">
+          <div class="boka-lp__review-card">
             <div class="boka-lp__stars">★★★★★</div>
-            <p>{{ section.settings.review_3 }}</p>
-
+            <p class="boka-lp__review-copy">{{ section.settings.sensitivity_review_2 }}</p>
             <div class="boka-lp__review-bottom">
-              <span class="boka-lp__review-meta">{{ section.settings.review_3_name }}</span>
+              <span class="boka-lp__review-meta">{{ section.settings.sensitivity_review_2_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.sensitivity_review_3 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.sensitivity_review_3_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="boka-lp__review-panel" data-review-panel="kids">
+        <div class="boka-lp__review-grid">
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.kids_review_1 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.kids_review_1_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.kids_review_2 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.kids_review_2_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.kids_review_3 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.kids_review_3_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="boka-lp__review-panel" data-review-panel="probiotic">
+        <div class="boka-lp__review-grid">
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.probiotic_review_1 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.probiotic_review_1_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.probiotic_review_2 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.probiotic_review_2_meta }}</span>
+              <span class="boka-lp__review-pill">Verified buyer</span>
+            </div>
+          </div>
+
+          <div class="boka-lp__review-card">
+            <div class="boka-lp__stars">★★★★★</div>
+            <p class="boka-lp__review-copy">{{ section.settings.probiotic_review_3 }}</p>
+            <div class="boka-lp__review-bottom">
+              <span class="boka-lp__review-meta">{{ section.settings.probiotic_review_3_meta }}</span>
               <span class="boka-lp__review-pill">Verified buyer</span>
             </div>
           </div>
@@ -316,6 +437,33 @@
       </div>
     </div>
   </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('boka-reviews-section-{{ section.id }}');
+      if (!root || root.dataset.initialized === 'true') return;
+      root.dataset.initialized = 'true';
+
+      const tabs = [...root.querySelectorAll('[data-review-goal]')];
+      const panels = [...root.querySelectorAll('[data-review-panel]')];
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const goal = tab.dataset.reviewGoal;
+
+          tabs.forEach((otherTab) => {
+            const isActive = otherTab === tab;
+            otherTab.classList.toggle('is-active', isActive);
+            otherTab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          panels.forEach((panel) => {
+            panel.classList.toggle('is-active', panel.dataset.reviewPanel === goal);
+          });
+        });
+      });
+    })();
+  </script>
 </section>
 
 {% schema %}
@@ -332,88 +480,224 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Oral care people actually look forward to using."
+      "default": "Find your routine. Read their reviews."
     },
     {
       "type": "textarea",
       "id": "copy",
       "label": "Copy",
-      "default": "See why customers make Boka part of their daily routine."
+      "default": "Choose a goal to see what customers say about making Boka part of their daily routine."
     },
     {
       "type": "text",
-      "id": "stat_text",
-      "label": "Review stat",
-      "default": "★★★★★ 4.6 stars from 950,000+ customers"
+      "id": "rating_text",
+      "label": "Rating text",
+      "default": "4.6 stars from 950,000+ customers"
     },
+
     {
-      "type": "image_picker",
-      "id": "review_1_image",
-      "label": "Review 1 image"
-    },
-    {
-      "type": "text",
-      "id": "review_1_image_alt",
-      "label": "Review 1 image alt text",
-      "default": "Boka product review image"
+      "type": "header",
+      "content": "Daily Care reviews"
     },
     {
       "type": "textarea",
-      "id": "review_1",
-      "label": "Review 1",
+      "id": "daily_review_1",
+      "label": "Daily Care review 1",
       "default": "“My mouth feels clean without the harsh burn.”"
     },
     {
       "type": "text",
-      "id": "review_1_name",
-      "label": "Review 1 name",
+      "id": "daily_review_1_meta",
+      "label": "Daily Care review 1 meta",
       "default": "Daily Care routine"
     },
     {
-      "type": "image_picker",
-      "id": "review_2_image",
-      "label": "Review 2 image"
+      "type": "textarea",
+      "id": "daily_review_2",
+      "label": "Daily Care review 2",
+      "default": "“The flavor is fresh, and the whole routine feels easy to stick with.”"
     },
     {
       "type": "text",
-      "id": "review_2_image_alt",
-      "label": "Review 2 image alt text",
-      "default": "Boka product review image"
+      "id": "daily_review_2_meta",
+      "label": "Daily Care review 2 meta",
+      "default": "Daily Care routine"
     },
     {
       "type": "textarea",
-      "id": "review_2",
-      "label": "Review 2",
-      "default": "“The subscription makes it one less thing to think about.”"
-    },
-    {
-      "type": "text",
-      "id": "review_2_name",
-      "label": "Review 2 name",
-      "default": "Subscription routine"
-    },
-    {
-      "type": "image_picker",
-      "id": "review_3_image",
-      "label": "Review 3 image"
-    },
-    {
-      "type": "text",
-      "id": "review_3_image_alt",
-      "label": "Review 3 image alt text",
-      "default": "Boka product review image"
-    },
-    {
-      "type": "textarea",
-      "id": "review_3",
-      "label": "Review 3",
+      "id": "daily_review_3",
+      "label": "Daily Care review 3",
       "default": "“The first toothpaste I actually look forward to using.”"
     },
     {
       "type": "text",
-      "id": "review_3_name",
-      "label": "Review 3 name",
-      "default": "Starter kit routine"
+      "id": "daily_review_3_meta",
+      "label": "Daily Care review 3 meta",
+      "default": "Daily Care routine"
+    },
+
+    {
+      "type": "header",
+      "content": "Whitening reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "whitening_review_1",
+      "label": "Whitening review 1",
+      "default": "“I love that it fits into my routine without feeling harsh.”"
+    },
+    {
+      "type": "text",
+      "id": "whitening_review_1_meta",
+      "label": "Whitening review 1 meta",
+      "default": "Whitening routine"
+    },
+    {
+      "type": "textarea",
+      "id": "whitening_review_2",
+      "label": "Whitening review 2",
+      "default": "“Fresh, clean, and easy to use every day.”"
+    },
+    {
+      "type": "text",
+      "id": "whitening_review_2_meta",
+      "label": "Whitening review 2 meta",
+      "default": "Whitening routine"
+    },
+    {
+      "type": "textarea",
+      "id": "whitening_review_3",
+      "label": "Whitening review 3",
+      "default": "“The flavor makes brushing feel like less of a chore.”"
+    },
+    {
+      "type": "text",
+      "id": "whitening_review_3_meta",
+      "label": "Whitening review 3 meta",
+      "default": "Whitening routine"
+    },
+
+    {
+      "type": "header",
+      "content": "Sensitivity reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "sensitivity_review_1",
+      "label": "Sensitivity review 1",
+      "default": "“Gentle-feeling and still leaves my mouth feeling clean.”"
+    },
+    {
+      "type": "text",
+      "id": "sensitivity_review_1_meta",
+      "label": "Sensitivity review 1 meta",
+      "default": "Sensitivity routine"
+    },
+    {
+      "type": "textarea",
+      "id": "sensitivity_review_2",
+      "label": "Sensitivity review 2",
+      "default": "“This made it easier to stay consistent with brushing.”"
+    },
+    {
+      "type": "text",
+      "id": "sensitivity_review_2_meta",
+      "label": "Sensitivity review 2 meta",
+      "default": "Sensitivity routine"
+    },
+    {
+      "type": "textarea",
+      "id": "sensitivity_review_3",
+      "label": "Sensitivity review 3",
+      "default": "“A clean-feeling routine that does not feel intense.”"
+    },
+    {
+      "type": "text",
+      "id": "sensitivity_review_3_meta",
+      "label": "Sensitivity review 3 meta",
+      "default": "Sensitivity routine"
+    },
+
+    {
+      "type": "header",
+      "content": "Kids reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "kids_review_1",
+      "label": "Kids review 1",
+      "default": "“The flavor made brushing easier in our house.”"
+    },
+    {
+      "type": "text",
+      "id": "kids_review_1_meta",
+      "label": "Kids review 1 meta",
+      "default": "Kids routine"
+    },
+    {
+      "type": "textarea",
+      "id": "kids_review_2",
+      "label": "Kids review 2",
+      "default": "“A simple routine my kid actually likes.”"
+    },
+    {
+      "type": "text",
+      "id": "kids_review_2_meta",
+      "label": "Kids review 2 meta",
+      "default": "Kids routine"
+    },
+    {
+      "type": "textarea",
+      "id": "kids_review_3",
+      "label": "Kids review 3",
+      "default": "“The starter kit made it easy to get everything in one place.”"
+    },
+    {
+      "type": "text",
+      "id": "kids_review_3_meta",
+      "label": "Kids review 3 meta",
+      "default": "Kids routine"
+    },
+
+    {
+      "type": "header",
+      "content": "Probiotic reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "probiotic_review_1",
+      "label": "Probiotic review 1",
+      "default": "“Such a unique flavor and a fresh-feeling routine.”"
+    },
+    {
+      "type": "text",
+      "id": "probiotic_review_1_meta",
+      "label": "Probiotic review 1 meta",
+      "default": "Probiotic routine"
+    },
+    {
+      "type": "textarea",
+      "id": "probiotic_review_2",
+      "label": "Probiotic review 2",
+      "default": "“I wanted something different from a standard mint toothpaste.”"
+    },
+    {
+      "type": "text",
+      "id": "probiotic_review_2_meta",
+      "label": "Probiotic review 2 meta",
+      "default": "Probiotic routine"
+    },
+    {
+      "type": "textarea",
+      "id": "probiotic_review_3",
+      "label": "Probiotic review 3",
+      "default": "“It feels premium without making my routine complicated.”"
+    },
+    {
+      "type": "text",
+      "id": "probiotic_review_3_meta",
+      "label": "Probiotic review 3 meta",
+      "default": "Probiotic routine"
     }
   ],
   "presets": [
