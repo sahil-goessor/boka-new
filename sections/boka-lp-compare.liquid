@@ -52,10 +52,6 @@
     }
 
     #boka-compare-{{ section.id }} .boka-lp__compare-brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 0;
       text-align: center;
     }
 
@@ -77,10 +73,6 @@
 
     #boka-compare-{{ section.id }} .boka-lp__compare-brand-text {
       display: block;
-      max-width: 100%;
-      white-space: normal;
-      overflow-wrap: anywhere;
-      text-align: center;
     }
 
     @media screen and (max-width: 749px) {
@@ -108,57 +100,28 @@
         font-family: var(--boka-lp-body-font) !important;
       }
 
-      #boka-compare-{{ section.id }} .boka-lp__compare-layout {
-        gap: 28px;
-      }
-
+      /*
+        Mobile background-height fix only.
+        This keeps text behavior from your original CSS while making each
+        cell background stretch when another column wraps taller.
+      */
       #boka-compare-{{ section.id }} .boka-lp__compare-table-card {
         width: 100%;
-        overflow: visible;
+        overflow: hidden;
       }
 
       #boka-compare-{{ section.id }} .boka-lp__compare-grid {
-        display: grid;
-        grid-template-columns: minmax(92px, 1fr) minmax(92px, 1fr) minmax(92px, 1fr);
         align-items: stretch;
-        min-height: auto;
         height: auto;
-        border-bottom: 1px solid rgba(34, 39, 33, 0.12);
+        min-height: auto;
       }
 
       #boka-compare-{{ section.id }} .boka-lp__compare-grid > div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 0;
-        min-height: 100%;
         height: auto;
-        padding: 14px 8px;
-        text-align: center;
-        white-space: normal;
-        overflow-wrap: anywhere;
-        word-break: normal;
-        hyphens: auto;
-        line-height: 1.25;
+        min-height: 100%;
       }
 
-      #boka-compare-{{ section.id }} .boka-lp__compare-grid--head > div {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        line-height: 1.15;
-      }
-
-      #boka-compare-{{ section.id }} .boka-lp__compare-label {
-        justify-content: flex-start !important;
-        text-align: left !important;
-        font-size: 12px;
-      }
-
-      #boka-compare-{{ section.id }} .boka-lp__compare-good,
-      #boka-compare-{{ section.id }} .boka-lp__compare-maybe {
-        font-size: 12px;
-      }
-
+      #boka-compare-{{ section.id }} .boka-lp__compare-brand,
       #boka-compare-{{ section.id }} .boka-lp__compare-good {
         background: var(--boka-green-light);
       }
@@ -167,18 +130,9 @@
         background: rgba(250, 250, 245, 0.74);
       }
 
-      #boka-compare-{{ section.id }} .boka-lp__compare-brand {
-        background: var(--boka-green-light);
-      }
-
       #boka-compare-{{ section.id }} .boka-lp__compare-logo {
         max-width: 82px;
         max-height: 28px;
-      }
-
-      #boka-compare-{{ section.id }} .boka-lp__compare-brand-text {
-        font-size: 12px;
-        line-height: 1.1;
       }
     }
   </style>
