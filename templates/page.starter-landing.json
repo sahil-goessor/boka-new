@@ -27,7 +27,7 @@
         "promo_banner_heading": "Complete Boka Oral Routine for $24.99 + Free Shipping",
         "promo_banner_subtext": "Fluoride-Free n-Ha | Complete Routine | Easy Refills",
         "promo_banner_button_text": "Start My Routine",
-        "promo_banner_button_link": "",
+        "promo_banner_button_link": "https://www.boka.com/pages/best-of-boka-starter-kit#boka-subscription",
         "offer_discount": "Save $15"
       }
     },
@@ -119,14 +119,21 @@
         "stars_text": "★★★★★ 4.6 stars from 950,000+ customers",
         "rating_text": "",
         "button_text": "Choose your starter kit",
-        "button_link": "",
+        "button_link": "https://www.boka.com/pages/best-of-boka-starter-kit#boka-subscription",
         "boka_column_title": "Boka Toothpaste",
         "other_column_title": "Other Toothpaste"
       }
     },
     "lp_reviews": {
       "type": "boka-lp-reviews",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Real routines, real reviews",
+        "heading": "Oral care people actually look forward to using.",
+        "copy": "See why customers make Boka part of their daily routine.",
+        "review_1": "“My mouth feels clean without the harsh burn.”",
+        "review_2": "“The subscription makes it one less thing to think about.”",
+        "review_3": "“The first toothpaste I actually look forward to using.”"
+      }
     },
     "lp_refills": {
       "type": "boka-lp-refill-plan",
@@ -135,7 +142,22 @@
     },
     "lp_faq": {
       "type": "boka-lp-faq",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Need to know",
+        "heading": "Questions before you start?",
+        "faq_1_question": "What is n-Ha?",
+        "faq_1_answer": "n-Ha stands for nano-hydroxyapatite. It is featured in Boka toothpaste and is inspired by the mineral that makes up teeth.",
+        "faq_2_question": "Is Boka toothpaste fluoride free?",
+        "faq_2_answer": "Yes. Boka n-Ha toothpaste is fluoride free and thoughtfully formulated for daily brushing.",
+        "faq_3_question": "What comes in the starter kit?",
+        "faq_3_answer": "Your starter kit includes n-Ha toothpaste, a Classic Brush, floss, a tongue cleaner, and a Boka toiletry bag.",
+        "faq_4_question": "How do I choose the right routine goal?",
+        "faq_4_answer": "Choose the goal that best matches the flavor or routine focus you want to start with. Each option includes a Boka n-Ha toothpaste plus the same starter essentials.",
+        "faq_5_question": "Can I switch flavors later?",
+        "faq_5_answer": "Yes. You can update your product selection through your account portal where available.",
+        "faq_6_question": "Is this made for daily use?",
+        "faq_6_answer": "Yes. Boka toothpaste is made for daily brushing when used as directed."
+      }
     },
     "lp_bottom_cta": {
       "type": "boka-lp-bottom-cta",
@@ -143,7 +165,7 @@
         "heading": "Ready to build a routine you’ll actually stick with?",
         "copy": "Choose your smile goal and get a complete Boka routine delivered to your door.",
         "promo_banner_button_text": "Start My Routine",
-        "button_link": ""
+        "button_link": "https://www.boka.com/pages/best-of-boka-starter-kit#boka-subscription"
       }
     }
   },
