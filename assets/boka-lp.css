@@ -3720,30 +3720,1035 @@ body:has(.boka-lp) .announcement-bar-section {
   }
 }
 
-/* --------------------------------------------------------------------------
-   Boka LP typography bridge
+
+/* ==========================================================================
+   Consolidated section CSS moved from Liquid sections
+   Source files: boka-lp-whats-included.liquid, boka-lp-science.liquid, boka-lp-reviews.liquid, boka-lp-product-builder.liquid, boka-lp-faq.liquid, boka-lp-compare.liquid, boka-lp-bottom-cta.liquid
+   ========================================================================== */
+
+/* ---- boka-lp-whats-included.liquid ---- */
+.boka-lp-included-bento-section {
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
+
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp-included-bento-section *,
+    .boka-lp-included-bento-section *::before,
+    .boka-lp-included-bento-section *::after {
+      font-family: inherit;
+    }
+
+    .boka-lp-included-bento-section .boka-lp__section-title,
+    .boka-lp-included-bento-section .boka-lp__included-bento-card h3,
+    .boka-lp-included-bento-section .boka-lp__included-bento-number {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp-included-bento-section .boka-lp__eyebrow,
+    .boka-lp-included-bento-section .boka-lp__section-copy,
+    .boka-lp-included-bento-section .boka-lp__included-bento-card p,
+    .boka-lp-included-bento-section .boka-lp__included-image-placeholder {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp-included-bento-section em {
+      font-family: var(--font-heading-family) !important;
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+    }
+
+    @media screen and (max-width: 749px) {
+      .boka-lp-included-bento-section,
+      .boka-lp-included-bento-section *,
+      .boka-lp-included-bento-section *::before,
+      .boka-lp-included-bento-section *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      .boka-lp-included-bento-section .boka-lp__section-title,
+      .boka-lp-included-bento-section .boka-lp__included-bento-card h3,
+      .boka-lp-included-bento-section .boka-lp__included-bento-number {
+        font-family: var(--font-heading-family) !important;
+      }
+    }
+
+/* ---- boka-lp-science.liquid ---- */
+.boka-lp-science {
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
+
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp-science *,
+    .boka-lp-science *::before,
+    .boka-lp-science *::after {
+      font-family: inherit;
+    }
+
+    .boka-lp-science .boka-lp__section-title,
+    .boka-lp-science .boka-lp__science-card strong {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp-science .boka-lp__eyebrow,
+    .boka-lp-science .boka-lp__science-card p,
+    .boka-lp-science .boka-lp__science-collage-placeholder {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp-science em {
+      font-family: var(--font-heading-family) !important;
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+    }
+
+    @media screen and (max-width: 749px) {
+      .boka-lp-science,
+      .boka-lp-science *,
+      .boka-lp-science *::before,
+      .boka-lp-science *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      .boka-lp-science .boka-lp__section-title,
+      .boka-lp-science .boka-lp__science-card strong {
+        font-family: var(--font-heading-family) !important;
+      }
+    }
+
+/* ---- boka-lp-reviews.liquid ---- */
+.boka-lp-reviews {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp-reviews *,
+    .boka-lp-reviews *::before,
+    .boka-lp-reviews *::after {
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    .boka-lp-reviews .boka-lp__section-title,
+    .boka-lp-reviews .boka-lp__review-title,
+    .boka-lp-reviews .boka-lp__review-goal-tab {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+    }
+
+    .boka-lp-reviews .boka-lp__section-title {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      max-width: 780px;
+      margin: 0 0 18px;
+    }
+
+    .boka-lp-reviews .boka-lp__eyebrow,
+    .boka-lp-reviews .boka-lp__section-copy,
+    .boka-lp-reviews .boka-lp__rating-row,
+    .boka-lp-reviews .boka-lp__stars,
+    .boka-lp-reviews .boka-lp__review-copy,
+    .boka-lp-reviews .boka-lp__review-meta,
+    .boka-lp-reviews .boka-lp__review-pill {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+    }
+
+    .boka-lp-reviews .boka-lp__reviews-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .boka-lp-reviews .boka-lp__rating-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      flex-wrap: wrap;
+      color: var(--boka-charcoal);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      white-space: nowrap;
+    }
+
+    .boka-lp-reviews .boka-lp__stars {
+      color: var(--boka-green-deep);
+      letter-spacing: .06em;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .boka-lp-reviews .boka-lp__review-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 22px;
+    }
+
+    .boka-lp-reviews .boka-lp__review-goal-tab {
+      appearance: none;
+      border: 1px solid rgba(34, 39, 33, 0.18);
+      background: var(--boka-white);
+      color: var(--boka-charcoal);
+      border-radius: 999px;
+      padding: 11px 16px;
+      cursor: pointer;
+
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+      font-size: 15px;
+
+      line-height: 1;
+      letter-spacing: -0.01em;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .boka-lp-reviews .boka-lp__review-goal-tab.is-active {
+      background: var(--boka-green-light);
+      border-color: var(--boka-green-mid);
+      color: var(--boka-charcoal);
+    }
+
+    .boka-lp-reviews .boka-lp__review-goal-tab:hover {
+      transform: translateY(-1px);
+    }
+
+    .boka-lp-reviews .boka-lp__review-panel {
+      display: none;
+    }
+
+    .boka-lp-reviews .boka-lp__review-panel.is-active {
+      display: block;
+    }
+
+    .boka-lp-reviews .boka-lp__review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .boka-lp-reviews .boka-lp__review-card {
+      display: grid;
+      align-content: start;
+      gap: 13px;
+      background: var(--boka-surface);
+      border: var(--boka-border-soft);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--boka-shadow-soft);
+      min-height: 100%;
+    }
+
+    .boka-lp-reviews .boka-lp__review-card .boka-lp__stars {
+      display: block;
+      color: var(--boka-green-deep);
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: .06em;
+    }
+
+    .boka-lp-reviews .boka-lp__review-copy {
+      margin: 0;
+      color: var(--boka-charcoal);
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+
+    .boka-lp-reviews .boka-lp__review-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .boka-lp-reviews .boka-lp__review-meta {
+      color: var(--boka-gray);
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 750;
+    }
+
+    .boka-lp-reviews .boka-lp__review-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: var(--boka-cream);
+      border: 1px solid var(--boka-stone);
+      color: var(--boka-olive);
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: 749px) {
+      .boka-lp-reviews,
+      .boka-lp-reviews *,
+      .boka-lp-reviews *::before,
+      .boka-lp-reviews *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      .boka-lp-reviews .boka-lp__section-title,
+      .boka-lp-reviews .boka-lp__review-title,
+      .boka-lp-reviews .boka-lp__review-goal-tab {
+        font-family: var(--font-heading-family) !important;
+      }
+
+      .boka-lp-reviews .boka-lp__section-title {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.04;
+      }
+
+      .boka-lp-reviews .boka-lp__reviews-head {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+
+      .boka-lp-reviews .boka-lp__rating-row {
+        width: fit-content;
+        white-space: normal;
+      }
+
+      .boka-lp-reviews .boka-lp__review-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .boka-lp-reviews .boka-lp__review-goal-tab {
+        flex: 0 0 auto;
+      }
+
+      .boka-lp-reviews .boka-lp__review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .boka-lp-reviews .boka-lp__review-card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .boka-lp-reviews .boka-lp__review-copy {
+        font-size: 15px;
+      }
+    }
+
+/* ---- boka-lp-product-builder.liquid ---- */
+.boka-lp--starter-offer {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp--starter-offer *,
+    .boka-lp--starter-offer *::before,
+    .boka-lp--starter-offer *::after {
+      box-sizing: border-box;
+    }
+
+    .boka-lp--starter-offer button,
+    .boka-lp--starter-offer input,
+    .boka-lp--starter-offer select,
+    .boka-lp--starter-offer textarea {
+      font-family: inherit;
+      font-style: inherit;
+    }
+
+    .boka-lp--starter-offer h1,
+    .boka-lp--starter-offer h2,
+    .boka-lp--starter-offer h3,
+    .boka-lp--starter-offer .boka-lp__product-title,
+    .boka-lp--starter-offer .boka-lp__step-title,
+    .boka-lp--starter-offer .boka-lp__goal-title,
+    .boka-lp--starter-offer .boka-lp__plan-title,
+    .boka-lp--starter-offer .boka-lp__ship-title {
+      font-family: var(--font-heading-family);
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp--starter-offer p,
+    .boka-lp--starter-offer li,
+    .boka-lp--starter-offer a,
+    .boka-lp--starter-offer span,
+    .boka-lp--starter-offer button,
+    .boka-lp--starter-offer input,
+    .boka-lp--starter-offer select,
+    .boka-lp--starter-offer textarea,
+    .boka-lp--starter-offer .boka-lp__product-description,
+    .boka-lp--starter-offer .boka-lp__ship-copy,
+    .boka-lp--starter-offer .boka-lp__atc-subtext,
+    .boka-lp--starter-offer .boka-lp__message {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+    }
+
+    .boka-lp--starter-offer em {
+      font-family: var(--font-heading-family);
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+      letter-spacing: -0.02em;
+    }
+
+    .boka-lp--starter-offer .boka-lp__product-summary-card {
+      gap: 14px;
+    }
+
+    .boka-lp--starter-offer .boka-lp__product-description {
+      max-width: 58ch;
+      margin-bottom: 0;
+    }
+
+    .boka-lp--starter-offer .boka-lp__step-head {
+      margin-bottom: 10px;
+    }
+
+    .boka-lp--starter-offer .boka-lp__step-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--starter {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-top {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+      width: 100%;
+      padding: 16px;
+      border-bottom: 1px solid rgb(34 39 33 / 0.10);
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-title-wrap {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.1;
+      opacity: .72;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-title {
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-badge {
+      white-space: nowrap;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__plan-top {
+      border-bottom: 0;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime.is-active .boka-lp__plan-top {
+      border-bottom: 1px solid rgb(34 39 33 / 0.10);
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__plan-title {
+      max-width: none;
+    }
+
+    .boka-lp--starter-offer .boka-lp__onetime-details {
+      display: block;
+      height: 0;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0 16px;
+      margin: 0;
+      border: 0;
+      visibility: hidden;
+      transition: max-height .24s ease, opacity .18s ease, padding .24s ease, visibility .18s ease;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime.is-active .boka-lp__onetime-details {
+      height: auto;
+      max-height: 180px;
+      opacity: 1;
+      padding: 14px 16px 16px;
+      visibility: visible;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime:not(.is-active) .boka-lp__onetime-details,
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime:not(.is-active) .boka-lp__plan-features_otp {
+      height: 0 !important;
+      max-height: 0 !important;
+      min-height: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      border-top: 0 !important;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__plan-features_otp {
+      margin: 0;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-flow {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid rgb(34 39 33 / 0.12);
+      border-radius: 18px;
+      background: rgb(255 255 255 / 0.78);
+      text-align: left;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-card--refill {
+      background: #f9fdf5;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-label {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 7px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgb(34 39 33 / 0.08);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-title {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: 850;
+      line-height: 1.15;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-copy {
+      display: block;
+      font-size: 13px;
+      line-height: 1.35;
+      opacity: .84;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-copy strong {
+      font-weight: 850;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-price {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      min-width: 76px;
+      text-align: right;
+    }
+
+    .boka-lp--starter-offer .boka-lp__ship-price .boka-lp__price,
+    .boka-lp--starter-offer .boka-lp__ship-price .boka-lp__refill-price {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .boka-lp--starter-offer .boka-lp__compare-price {
+      font-size: 12px;
+      line-height: 1;
+      opacity: .58;
+      text-decoration: line-through;
+    }
+
+    .boka-lp--starter-offer .boka-lp__save-text {
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1;
+      opacity: .72;
+    }
+
+    .boka-lp--starter-offer .boka-lp__then-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 10px;
+      align-items: center;
+      color: rgb(34 39 33 / 0.62);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .boka-lp--starter-offer .boka-lp__then-row span {
+      height: 1px;
+      background: rgb(34 39 33 / 0.14);
+    }
+
+    .boka-lp--starter-offer .boka-lp__atc {
+      margin-top: 12px;
+    }
+
+    .boka-lp--starter-offer .boka-lp__atc-subtext {
+      margin-top: 9px;
+      font-size: 12px;
+      line-height: 1.35;
+      text-align: center;
+      opacity: .76;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__plan-top {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__plan-title {
+      min-width: 0;
+      max-width: none;
+      font-size: 20px;
+      line-height: 1.1;
+      white-space: normal;
+    }
+
+    .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__price {
+      justify-self: end;
+      white-space: nowrap;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    @media screen and (max-width: 749px) {
+
+      .boka-lp--starter-offer .boka-lp__plan-top {
+        grid-template-columns: auto 1fr;
+      }
+
+      .boka-lp--starter-offer .boka-lp__plan-badge {
+        grid-column: 1 / -1;
+        justify-self: start;
+      }
+
+      .boka-lp--starter-offer .boka-lp__ship-card {
+        grid-template-columns: 1fr;
+      }
+
+      .boka-lp--starter-offer .boka-lp__ship-price {
+        justify-items: start;
+        text-align: left;
+      }
+      .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__plan-top {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .boka-lp--starter-offer .boka-lp__plan-card--onetime .boka-lp__price {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 4px;
+    font-size: 18px;
+  }
+    }
+
+    .boka-lp--starter-offer .boka-lp__goal-sub {
+  display: none !important;
+}
+
+.boka-lp--starter-offer .boka-lp__goal-card.is-active .boka-lp__goal-sub {
+  display: block !important;
+  margin-top: 6px;
+  color: rgba(34, 39, 33, 0.78);
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.boka-lp--starter-offer .boka-lp__goal-sub::before,
+.boka-lp--starter-offer .boka-lp__goal-sub::after {
+  display: none !important;
+  content: none !important;
+}
+
+.boka-lp--starter-offer .boka-lp__onetime-price-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 7px;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.boka-lp--starter-offer .boka-lp__onetime-price-wrap .boka-lp__price {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.boka-lp--starter-offer .boka-lp__onetime-price-wrap .boka-lp__compare-price {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1;
+  opacity: .58;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 749px) {
+  .boka-lp--starter-offer .boka-lp__onetime-price-wrap {
+    grid-column: 2;
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+/* ---- boka-lp-faq.liquid ---- */
+.boka-lp-faq {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp-faq *,
+    .boka-lp-faq *::before,
+    .boka-lp-faq *::after {
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    .boka-lp-faq .boka-lp__section-title {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      color: var(--boka-charcoal);
+      max-width: 780px;
+      margin: 0 0 18px;
+    }
+
+    .boka-lp-faq .boka-lp__faq-question {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+    }
+
+    .boka-lp-faq .boka-lp__eyebrow,
+    .boka-lp-faq .boka-lp__faq-content,
+    .boka-lp-faq .boka-lp__faq-btn {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+    }
+
+    .boka-lp-faq button {
+      font: inherit;
+    }
+
+    .boka-lp-faq .boka-lp__faq-btn {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    @media screen and (max-width: 749px) {
+      .boka-lp-faq,
+      .boka-lp-faq *,
+      .boka-lp-faq *::before,
+      .boka-lp-faq *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      .boka-lp-faq .boka-lp__section-title,
+      .boka-lp-faq .boka-lp__faq-question {
+        font-family: var(--font-heading-family) !important;
+      }
+
+      .boka-lp-faq .boka-lp__section-title {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.04;
+        letter-spacing: -0.045em;
+      }
+    }
+
+/* ---- boka-lp-compare.liquid ---- */
+.boka-lp--compare-section {
+      --boka-lp-body-font: var(--font-body-family);
+      --boka-lp-body-style: var(--font-body-style);
+      --boka-lp-body-weight: var(--font-body-weight);
+      --boka-lp-heading-font: var(--font-heading-family);
+      --boka-lp-heading-style: var(--font-heading-style);
+      --boka-lp-heading-weight: var(--font-heading-weight);
+
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp--compare-section *,
+    .boka-lp--compare-section *::before,
+    .boka-lp--compare-section *::after {
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    .boka-lp--compare-section .boka-lp__eyebrow,
+    .boka-lp--compare-section .boka-lp__compare-text,
+    .boka-lp--compare-section .boka-lp__compare-rating,
+    .boka-lp--compare-section .boka-lp__compare-stars,
+    .boka-lp--compare-section .boka-lp__compare-button,
+    .boka-lp--compare-section .boka-lp__compare-good,
+    .boka-lp--compare-section .boka-lp__compare-maybe,
+    .boka-lp--compare-section .boka-lp__compare-grid > div {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+    }
+
+    .boka-lp--compare-section h1,
+    .boka-lp--compare-section h2,
+    .boka-lp--compare-section h3,
+    .boka-lp--compare-section .boka-lp__compare-heading,
+    .boka-lp--compare-section .boka-lp__compare-brand,
+    .boka-lp--compare-section .boka-lp__compare-brand span,
+    .boka-lp--compare-section .boka-lp__compare-label,
+    .boka-lp--compare-section .boka-lp__compare-grid--head > div {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp--compare-section em {
+      font-family: var(--font-heading-family) !important;
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp--compare-section .boka-lp__compare-brand {
+      text-align: center;
+    }
+
+    .boka-lp--compare-section .boka-lp__compare-brand-inner {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .boka-lp--compare-section .boka-lp__compare-logo {
+      display: block;
+      width: auto;
+      max-width: min(120px, 100%);
+      max-height: 34px;
+      object-fit: contain;
+    }
+
+    .boka-lp--compare-section .boka-lp__compare-brand-text {
+      display: block;
+    }
+
+    @media screen and (max-width: 749px) {
+      .boka-lp--compare-section,
+      .boka-lp--compare-section *,
+      .boka-lp--compare-section *::before,
+      .boka-lp--compare-section *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-heading,
+      .boka-lp--compare-section .boka-lp__compare-brand,
+      .boka-lp--compare-section .boka-lp__compare-brand span,
+      .boka-lp--compare-section .boka-lp__compare-label,
+      .boka-lp--compare-section .boka-lp__compare-grid--head > div {
+        font-family: var(--font-heading-family) !important;
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-good,
+      .boka-lp--compare-section .boka-lp__compare-maybe,
+      .boka-lp--compare-section .boka-lp__compare-text,
+      .boka-lp--compare-section .boka-lp__compare-rating,
+      .boka-lp--compare-section .boka-lp__compare-stars,
+      .boka-lp--compare-section .boka-lp__compare-button {
+        font-family: var(--font-body-family) !important;
+      }
+
+      /*
+        Mobile background-height fix only.
+        This keeps text behavior from your original CSS while making each
+        cell background stretch when another column wraps taller.
+      */
+      .boka-lp--compare-section .boka-lp__compare-table-card {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-grid {
+        align-items: stretch;
+        height: auto;
+        min-height: auto;
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-grid > div {
+        height: auto;
+        min-height: 100%;
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-brand,
+      .boka-lp--compare-section .boka-lp__compare-good {
+        background: var(--boka-green-light);
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-maybe {
+        background: rgba(250, 250, 245, 0.74);
+      }
+
+      .boka-lp--compare-section .boka-lp__compare-logo {
+        max-width: 82px;
+        max-height: 28px;
+      }
+    }
+
+    .boka-lp--compare-section .boka-lp__compare-label {
+  font-family: var(--font-heading-family) !important;
+  font-style: var(--font-heading-style) !important;
+  font-weight: var(--font-heading-weight) !important;
+}
+
+/* ---- boka-lp-bottom-cta.liquid ---- */
+.boka-lp--bottom-cta-section {
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    .boka-lp--bottom-cta-section h1,
+    .boka-lp--bottom-cta-section h2,
+    .boka-lp--bottom-cta-section h3,
+    .boka-lp--bottom-cta-section .boka-lp__section-title {
+      font-family: var(--font-heading-family);
+      font-style: var(--font-heading-style);
+      font-weight: var(--font-heading-weight);
+    }
+
+    .boka-lp--bottom-cta-section p,
+    .boka-lp--bottom-cta-section a,
+    .boka-lp--bottom-cta-section span,
+    .boka-lp--bottom-cta-section button {
+      font-family: inherit;
+    }
+
+    .boka-lp--bottom-cta-section em {
+      font-family: var(--font-heading-family);
+      font-style: italic;
+      font-weight: var(--font-heading-weight);
+    }
+    .boka-lp--bottom-cta-section .boka-lp__promo-banner-button {
+  background: #ffffff !important;
+  color: #222721 !important;
+  border-color: #ffffff !important;
+}
+
+.boka-lp--bottom-cta-section .boka-lp__promo-banner-button:hover {
+  background: #f7f7f2 !important;
+  color: #222721 !important;
+  border-color: #f7f7f2 !important;
+}
+
+/* ==========================================================================
+   Boka LP global typography system
    --------------------------------------------------------------------------
    Archivo is controlled by Shopify theme settings:
    - Theme settings > Typography > Headings: Archivo
    - Theme settings > Typography > Body text: Archivo
 
-   This block forces this landing page to use the Shopify system Archivo variables,
-   while using Ivar Display Italic for italic/emphasis text only.
--------------------------------------------------------------------------- */
-.boka-lp,
+   Ivar Display Italic is used only for italic/emphasis text.
+   ========================================================================== */
+
+.boka-lp {
+  --boka-lp-font-body: var(--font-body-family);
+  --boka-lp-font-heading: var(--font-heading-family);
+  --boka-lp-weight-heading: 400;
+  --boka-lp-weight-body: 300;
+  --boka-lp-weight-body-strong: 700;
+  --boka-lp-weight-label: 700;
+  --boka-lp-weight-button: 700;
+  font-family: var(--boka-lp-font-body) !important;
+  font-style: normal;
+  font-weight: var(--boka-lp-weight-body);
+}
+
 .boka-lp *,
 .boka-lp *::before,
 .boka-lp *::after {
-  font-family: var(--font-body-family) !important;
+  font-family: inherit;
 }
 
 .boka-lp button,
 .boka-lp input,
 .boka-lp select,
 .boka-lp textarea {
-  font-family: var(--font-body-family) !important;
+  font-family: var(--boka-lp-font-body) !important;
 }
 
+/* Main headings: Archivo Regular */
 .boka-lp h1,
 .boka-lp h2,
 .boka-lp h3,
@@ -3761,18 +4766,97 @@ body:has(.boka-lp) .announcement-bar-section {
 .boka-lp .boka-lp__product-title strong,
 .boka-lp .boka-lp__promo-banner h2,
 .boka-lp .boka-lp__promo-heading h2,
+.boka-lp .boka-lp__compare-heading,
+.boka-lp .boka-lp__included-bento-card h3,
+.boka-lp .boka-lp__science-card strong,
+.boka-lp .boka-lp__review-title,
+.boka-lp .boka-lp__faq-question,
+.boka-lp .boka-lp__routine-panel h3 {
+  font-family: var(--boka-lp-font-heading) !important;
+  font-style: normal !important;
+  font-weight: var(--boka-lp-weight-heading) !important;
+}
+
+/* Conversion/card labels: Archivo, slightly stronger */
+.boka-lp .boka-lp__eyebrow,
+.boka-lp .boka-lp__promo-eyebrow,
+.boka-lp .boka-lp__topbar,
+.boka-lp .boka-lp__media-badge,
+.boka-lp .boka-lp__plan-badge,
+.boka-lp .boka-lp__step-number,
+.boka-lp .boka-lp__timeline-number,
+.boka-lp .boka-lp__timeline-title,
+.boka-lp .boka-lp__timeline-pill,
+.boka-lp .boka-lp__pill,
+.boka-lp .boka-lp__hero-offer-pills span,
+.boka-lp .boka-lp__review-pill,
+.boka-lp .boka-lp__ship-label,
+.boka-lp .boka-lp__compare-grid--head > div,
+.boka-lp .boka-lp__compare-label,
+.boka-lp .boka-lp__proof-label,
+.boka-lp .boka-lp__review-meta {
+  font-family: var(--boka-lp-font-body) !important;
+  font-style: normal !important;
+  font-weight: var(--boka-lp-weight-label) !important;
+}
+
+/* Body copy: Archivo Light */
+.boka-lp p,
+.boka-lp li,
+.boka-lp .boka-lp__section-copy,
+.boka-lp .boka-lp__subtitle,
+.boka-lp .boka-lp__product-description,
+.boka-lp .boka-lp__plan-note,
+.boka-lp .boka-lp__review-copy,
+.boka-lp .boka-lp__faq-content,
+.boka-lp .boka-lp__science-card p,
+.boka-lp .boka-lp__included-bento-card p,
+.boka-lp .boka-lp__routine-panel p,
+.boka-lp .boka-lp__routine-panel li,
+.boka-lp .boka-lp__compare-text,
+.boka-lp .boka-lp__ship-copy,
+.boka-lp .boka-lp__timeline-copy {
+  font-family: var(--boka-lp-font-body) !important;
+  font-style: normal !important;
+  font-weight: var(--boka-lp-weight-body) !important;
+}
+
+/* Strong text and prices */
+.boka-lp strong,
+.boka-lp b,
+.boka-lp .boka-lp__price,
+.boka-lp .boka-lp__refill-price,
+.boka-lp .boka-lp__proof-number,
 .boka-lp .boka-lp__goal-title,
 .boka-lp .boka-lp__step-title,
 .boka-lp .boka-lp__plan-title,
-.boka-lp .boka-lp__compare-heading,
-.boka-lp .boka-lp__faq-question,
-.boka-lp .boka-lp__science-card strong,
-.boka-lp .boka-lp__included-bento-head .boka-lp__section-title,
-.boka-lp .boka-lp__included-bento-copy h3,
-.boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
-  font-family: var(--font-heading-family) !important;
+.boka-lp .boka-lp__ship-title,
+.boka-lp .boka-lp__compare-good,
+.boka-lp .boka-lp__compare-bad,
+.boka-lp .boka-lp__compare-maybe,
+.boka-lp .boka-lp__review-goal-tab {
+  font-family: var(--boka-lp-font-body) !important;
+  font-style: normal !important;
+  font-weight: var(--boka-lp-weight-body-strong) !important;
 }
 
+/* Buttons */
+.boka-lp .button,
+.boka-lp .btn,
+.boka-lp button,
+.boka-lp .boka-lp__promo-banner-button,
+.boka-lp .boka-lp__bottom-button,
+.boka-lp .boka-lp__nav-cta,
+.boka-lp .boka-lp__atc,
+.boka-lp .boka-lp__compare-button,
+.boka-lp .boka-lp__faq-btn,
+.boka-lp .boka-lp__goal-card,
+.boka-lp .boka-lp__qty-card,
+.boka-lp .boka-lp__plan-card {
+  font-family: var(--boka-lp-font-body) !important;
+}
+
+/* Ivar Display Italic for italic emphasis */
 .boka-lp em,
 .boka-lp i,
 .boka-lp .brand-italic,
@@ -3802,3 +4886,15 @@ body:has(.boka-lp) .announcement-bar-section {
   font-weight: 400 !important;
 }
 
+/* Bottom CTA button contrast lives globally now */
+.boka-lp--bottom-cta-section .boka-lp__promo-banner-button {
+  background: #ffffff !important;
+  color: #222721 !important;
+  border-color: #ffffff !important;
+}
+
+.boka-lp--bottom-cta-section .boka-lp__promo-banner-button:hover {
+  background: #f7f7f2 !important;
+  color: #222721 !important;
+  border-color: #f7f7f2 !important;
+}
