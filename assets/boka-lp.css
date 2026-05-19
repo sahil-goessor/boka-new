@@ -4973,3 +4973,28 @@ body:has(.boka-lp) .announcement-bar-section {
     border-radius: var(--boka-hero-proof-radius, 22px) !important;
   }
 }
+
+/* Compare section editor controls */
+.boka-lp--compare-section .boka-lp__compare-text p {
+  margin: 0;
+}
+
+.boka-lp--compare-section .boka-lp__compare-button {
+  border-radius: var(--boka-compare-button-radius, 2px) !important;
+}
+
+.boka-lp--compare-section .boka-lp__compare-maybe,
+.boka-lp--compare-section .boka-lp__compare-other-heading {
+  color: var(--boka-compare-other-color, #737c5b) !important;
+}
+
+.boka-lp--compare-section .boka-lp__compare-heading em,
+.boka-lp--compare-section .boka-lp__compare-heading i,
+.boka-lp--compare-section .boka-lp__compare-text em,
+.boka-lp--compare-section .boka-lp__compare-text i,
+.boka-lp--compare-section .boka-lp__compare-rating em,
+.boka-lp--compare-section .boka-lp__compare-rating i {
+  font-family: "Ivar Display", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
