@@ -1,36 +1,4 @@
 <section class="boka-lp boka-lp--hero-section">
-  <style>
-    .boka-lp--hero-section {
-    font-family: var(--font-body-family);
-    font-style: var(--font-body-style);
-    font-weight: var(--font-body-weight);
-  }
-
-  .boka-lp--hero-section h1,
-  .boka-lp--hero-section h2,
-  .boka-lp--hero-section h3,
-  .boka-lp--hero-section .boka-lp__promo-heading h2,
-  .boka-lp--hero-section .boka-lp__promo-banner h2,
-  .boka-lp--hero-section .boka-lp__proof-number {
-    font-family: var(--font-heading-family);
-    font-style: var(--font-heading-style);
-    font-weight: var(--font-heading-weight);
-  }
-
-  .boka-lp--hero-section p,
-  .boka-lp--hero-section a,
-  .boka-lp--hero-section span,
-  .boka-lp--hero-section button {
-    font-family: inherit;
-  }
-
-  .boka-lp--hero-section em {
-    font-family: var(--font-heading-family);
-    font-style: italic;
-    font-weight: var(--font-heading-weight);
-  }
-</style>
-
   {% if section.settings.show_announcement %}
     <div class="boka-lp__topbar">
       {{ section.settings.announcement_text }}
