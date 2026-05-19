@@ -43,6 +43,9 @@
     },
     "lp_builder": {
       "type": "boka-lp-product-builder",
+      "custom_css": [
+        ".boka-lp__plan-card--starter {padding: 0; overflow: hidden;}"
+      ],
       "settings": {
         "product": "best-of-boka-starter-kit",
         "subscription_only": false,
