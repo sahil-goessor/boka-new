@@ -1,4 +1,11 @@
-<section class="boka-lp boka-lp--hero-section">
+<section
+  class="boka-lp boka-lp--hero-section"
+  style="
+    --boka-hero-button-radius: {{ section.settings.button_corner_radius }}px;
+    --boka-hero-proof-radius: {{ section.settings.proof_bar_corner_radius }}px;
+    --boka-hero-proof-stat-radius: {{ section.settings.proof_stat_corner_radius }}px;
+  "
+>
   {% if section.settings.show_announcement %}
     <div class="boka-lp__topbar">
       {{ section.settings.announcement_text }}
@@ -19,7 +26,9 @@
           {% endif %}
 
           {% if section.settings.promo_banner_subtext != blank %}
-            <p>{{ section.settings.promo_banner_subtext }}</p>
+            <div class="boka-lp__promo-banner-subtext">
+              {{ section.settings.promo_banner_subtext }}
+            </div>
           {% endif %}
 
           {% if section.settings.promo_banner_button_text != blank %}
@@ -116,16 +125,16 @@
       "default": "New Customer Offer"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "promo_banner_heading",
       "label": "Promo banner heading",
       "default": "Start your fluoride-free n-Ha routine for $24.99"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "promo_banner_subtext",
       "label": "Promo banner subtext",
-      "default": "Try Boka with toothpaste, brush, floss, tongue cleaner, and a toiletry bag — plus free shipping on your first order."
+      "default": "<p>Try Boka with toothpaste, brush, floss, tongue cleaner, and a toiletry bag — plus free shipping on your first order.</p>"
     },
     {
       "type": "text",
@@ -137,6 +146,36 @@
       "type": "url",
       "id": "promo_banner_button_link",
       "label": "Promo banner button link"
+    },
+    {
+      "type": "range",
+      "id": "button_corner_radius",
+      "label": "Button corner radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "proof_bar_corner_radius",
+      "label": "Bottom proof bar corner radius",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "proof_stat_corner_radius",
+      "label": "Individual proof stat corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
     },
     {
       "type": "text",
