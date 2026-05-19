@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Ivar Display";
+  src: url("https://cdn.shopify.com/s/files/1/2656/6094/files/IvarDisplay-Italic.woff2?v=1779124872") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 .boka-lp {
   --boka-green-light: #e6f4d4;
   --boka-green: #d3e7c0;
@@ -2076,7 +2084,6 @@
   font-size: 12px;
 }
 
-}
 
 .boka-lp.boka-lp-compare,
 .boka-lp .boka-lp__section--compare {
@@ -3714,39 +3721,27 @@ body:has(.boka-lp) .announcement-bar-section {
 }
 
 /* --------------------------------------------------------------------------
-   Shopify theme typography bridge
+   Boka LP typography bridge
    --------------------------------------------------------------------------
-   These rules make the landing page inherit Typography settings from the theme.
-   Body copy uses the theme body font; headings/display text use the theme heading font.
-*/
-.boka-lp {
-  width: 100%;
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
+   Archivo is controlled by Shopify theme settings:
+   - Theme settings > Typography > Headings: Archivo
+   - Theme settings > Typography > Body text: Archivo
+
+   This block forces this landing page to use the Shopify system Archivo variables,
+   while using Ivar Display Italic for italic/emphasis text only.
+-------------------------------------------------------------------------- */
+.boka-lp,
+.boka-lp *,
+.boka-lp *::before,
+.boka-lp *::after {
+  font-family: var(--font-body-family) !important;
 }
 
 .boka-lp button,
 .boka-lp input,
 .boka-lp select,
-.boka-lp textarea,
-.boka-lp p,
-.boka-lp li,
-.boka-lp a,
-.boka-lp span,
-.boka-lp .boka-lp__section-copy,
-.boka-lp .boka-lp__product-description,
-.boka-lp .boka-lp__subtitle,
-.boka-lp .boka-lp__compare-text,
-.boka-lp .boka-lp__faq-content,
-.boka-lp .boka-lp__info-card p,
-.boka-lp .boka-lp__routine-panel p,
-.boka-lp .boka-lp__routine-panel li,
-.boka-lp .boka-lp__science-card p,
-.boka-lp .boka-lp__proof-label,
-.boka-lp .boka-lp__nav-links {
+.boka-lp textarea {
   font-family: var(--font-body-family) !important;
-  font-style: var(--font-body-style);
 }
 
 .boka-lp h1,
@@ -3755,8 +3750,12 @@ body:has(.boka-lp) .announcement-bar-section {
 .boka-lp h4,
 .boka-lp h5,
 .boka-lp h6,
+.boka-lp .h1,
+.boka-lp .h2,
+.boka-lp .h3,
 .boka-lp .boka-lp__title,
 .boka-lp .boka-lp__section-title,
+.boka-lp .boka-lp__section-title p,
 .boka-lp .boka-lp__product-title,
 .boka-lp .boka-lp__product-title p,
 .boka-lp .boka-lp__product-title strong,
@@ -3772,18 +3771,34 @@ body:has(.boka-lp) .announcement-bar-section {
 .boka-lp .boka-lp__included-bento-copy h3,
 .boka-lp .boka-lp__science-collage-copy .boka-lp__section-title {
   font-family: var(--font-heading-family) !important;
-  font-style: var(--font-heading-style);
 }
 
 .boka-lp em,
+.boka-lp i,
+.boka-lp .brand-italic,
+.boka-lp .boka-italic,
+.boka-lp .brand-highlight,
+.boka-lp [style*="font-style: italic"],
+.boka-lp [style*="font-style:italic"],
+.boka-lp .boka-lp__product-title em,
+.boka-lp .boka-lp__section-title em,
+.boka-lp .boka-lp__promo-banner h2 em,
+.boka-lp .boka-lp__promo-heading h2 em,
+.boka-lp .boka-lp__compare-heading em,
 .boka-lp .boka-lp__compare-brand span,
 .boka-lp .boka-lp__compare-table-card--spotlight .boka-lp__compare-brand span {
-  font-family: var(--font-heading-family) !important;
-  font-style: italic;
+  font-family: "Ivar Display", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
 }
 
-.boka-lp .boka-lp__then-row em {
-  font-family: var(--font-body-family) !important;
-  font-style: normal;
-  font-weight: var(--font-body-weight-bold, 700);
+.boka-lp em *,
+.boka-lp i *,
+.boka-lp .brand-italic *,
+.boka-lp .boka-italic *,
+.boka-lp .brand-highlight * {
+  font-family: "Ivar Display", serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
 }
+
