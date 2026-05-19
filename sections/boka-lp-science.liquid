@@ -1,5 +1,5 @@
 <section class="boka-lp boka-lp-science" id="boka-science-section-{{ section.id }}">
-<div class="boka-lp__section boka-lp__section--science-collage" id="boka-science">
+  <div class="boka-lp__section boka-lp__section--science-collage" id="boka-science">
     <div class="boka-lp__wrap boka-lp__science-collage-wrap">
 
       <div class="boka-lp__science-collage-copy">
@@ -31,18 +31,39 @@
         {% endif %}
 
         <div class="boka-lp__science-card boka-lp__science-card--one">
-          <strong>{{ section.settings.card_1_heading }}</strong>
-          <p>{{ section.settings.card_1_copy }}</p>
+          {% if section.settings.card_1_heading != blank %}
+            <strong>{{ section.settings.card_1_heading }}</strong>
+          {% endif %}
+
+          {% if section.settings.card_1_copy != blank %}
+            <div class="boka-lp__science-card-copy">
+              {{ section.settings.card_1_copy }}
+            </div>
+          {% endif %}
         </div>
 
         <div class="boka-lp__science-card boka-lp__science-card--two">
-          <strong>{{ section.settings.card_2_heading }}</strong>
-          <p>{{ section.settings.card_2_copy }}</p>
+          {% if section.settings.card_2_heading != blank %}
+            <strong>{{ section.settings.card_2_heading }}</strong>
+          {% endif %}
+
+          {% if section.settings.card_2_copy != blank %}
+            <div class="boka-lp__science-card-copy">
+              {{ section.settings.card_2_copy }}
+            </div>
+          {% endif %}
         </div>
 
         <div class="boka-lp__science-card boka-lp__science-card--three">
-          <strong>{{ section.settings.card_3_heading }}</strong>
-          <p>{{ section.settings.card_3_copy }}</p>
+          {% if section.settings.card_3_heading != blank %}
+            <strong>{{ section.settings.card_3_heading }}</strong>
+          {% endif %}
+
+          {% if section.settings.card_3_copy != blank %}
+            <div class="boka-lp__science-card-copy">
+              {{ section.settings.card_3_copy }}
+            </div>
+          {% endif %}
         </div>
       </div>
 
@@ -61,7 +82,7 @@
       "default": "Inspired by nature. Backed by science."
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
       "default": "Thoughtfully formulated oral care for your daily routine."
@@ -78,40 +99,40 @@
       "default": "Boka oral care products arranged on a clean background"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "card_1_heading",
       "label": "Card 1 heading",
       "default": "n-Ha, made simple"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "card_1_copy",
       "label": "Card 1 copy",
-      "default": "n-Ha is a breakthrough material inspired by nature and backed by science, designed to fit into your everyday brushing routine."
+      "default": "<p>n-Ha is inspired by the mineral that makes up teeth and designed to fit into your everyday brushing routine.</p>"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "card_2_heading",
       "label": "Card 2 heading",
       "default": "Fluoride free"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "card_2_copy",
       "label": "Card 2 copy",
-      "default": "Boka toothpaste is fluoride free and thoughtfully formulated for daily use."
+      "default": "<p>Boka toothpaste is fluoride free and thoughtfully formulated for daily use.</p>"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "card_3_heading",
       "label": "Card 3 heading",
       "default": "Daily formulas you’ll love"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "card_3_copy",
       "label": "Card 3 copy",
-      "default": "Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy."
+      "default": "<p>Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy.</p>"
     }
   ],
   "presets": [
