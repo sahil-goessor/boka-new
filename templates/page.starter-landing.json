@@ -108,15 +108,15 @@
       "type": "boka-lp-science",
       "settings": {
         "eyebrow": "Inspired by nature. Backed by science.",
-        "heading": "Thoughtfully formulated oral care for your daily routine.",
+        "heading": "<em>Thoughtfully formulated </em>oral care for your daily routine.",
         "science_image": "shopify://shop_images/Mint_af4d632e-f417-4f8a-8b43-d4ad966ad97b.webp",
         "science_image_alt": "Boka oral care products",
         "card_1_heading": "n-Ha, made simple",
-        "card_1_copy": "n-Ha is a breakthrough material inspired by nature and backed by science, designed to fit into your everyday brushing routine.",
+        "card_1_copy": "<p>n-Ha is a breakthrough material inspired by nature and backed by science, designed to fit into your everyday brushing routine.</p>",
         "card_2_heading": "Fluoride free",
-        "card_2_copy": "Boka toothpaste is fluoride free and thoughtfully formulated for daily use.",
+        "card_2_copy": "<p>Boka toothpaste is fluoride free and thoughtfully formulated for daily use.</p>",
         "card_3_heading": "Daily formulas you’ll love",
-        "card_3_copy": "Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy."
+        "card_3_copy": "<p>Made with great-tasting flavors and a design-forward approach to make your routine feel fresh, simple, and easy to enjoy.</p>"
       }
     },
     "lp_compare": {
