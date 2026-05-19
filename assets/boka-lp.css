@@ -150,6 +150,11 @@
   white-space: nowrap;
 }
 
+.boka-lp__plan-card--starter {
+  padding: 0;
+  overflow: hidden;
+}
+
 .boka-lp .boka-lp__cart-button {
   min-width: 40px;
   min-height: 40px;
