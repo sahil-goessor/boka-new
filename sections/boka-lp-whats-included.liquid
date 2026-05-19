@@ -3,15 +3,23 @@
     <div class="boka-lp__wrap boka-lp__included-bento-wrap">
 
       <div class="boka-lp__included-bento-head">
-        <p class="boka-lp__eyebrow">What’s inside</p>
+        {% if section.settings.eyebrow != blank %}
+          <p class="boka-lp__eyebrow">
+            {{ section.settings.eyebrow }}
+          </p>
+        {% endif %}
 
-        <h2 class="boka-lp__section-title">
-          Everything you need to make your daily routine feel easy.
-        </h2>
+        {% if section.settings.heading != blank %}
+          <h2 class="boka-lp__section-title">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
 
-        <p class="boka-lp__section-copy">
-          Your first box brings daily essentials together in one simple system.
-        </p>
+        {% if section.settings.copy != blank %}
+          <div class="boka-lp__section-copy">
+            {{ section.settings.copy }}
+          </div>
+        {% endif %}
       </div>
 
       <div class="boka-lp__included-bento">
