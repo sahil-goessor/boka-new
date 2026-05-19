@@ -37,6 +37,9 @@
     "lp_included": {
       "type": "boka-lp-whats-included",
       "settings": {
+        "eyebrow": "What’s inside",
+        "heading": "Everything you need to <em>make your daily routine feel easy.</em>",
+        "copy": "<p>Your first box brings daily essentials together in one simple system.</p>",
         "included_toothpaste_image": "shopify://shop_images/ElaMint_Main_Image_1pk.webp",
         "included_brush_image": "shopify://shop_images/Classic_Brush_Mint.jpg",
         "included_floss_image": "shopify://shop_images/Ela_Mint_Floss_1pk_1_e41cabea-4c94-4934-8aac-a0e639dce0eb_1.webp",
