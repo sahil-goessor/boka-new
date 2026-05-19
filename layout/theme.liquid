@@ -372,6 +372,8 @@
     {% endcomment %}
     {%- if request.page_type == 'page' and handle == 'nano-hydroxyapatite' -%} 
       <meta name="robots" content="noindex">
+    {%- elsif template == 'search' -%}
+      <meta name="robots" content="noindex,follow">
     {%- elsif request.page_type == 'product' -%} 
       {% assign productUrl = product.url | within: collection %}
       {%- if productUrl contains '/collections/shop-all/products/ela-mint-coco-ginger-2-pack' -%}
