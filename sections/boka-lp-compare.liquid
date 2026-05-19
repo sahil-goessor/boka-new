@@ -1,33 +1,50 @@
-<section class="boka-lp boka-lp-compare boka-lp--compare-section" id="boka-compare-{{ section.id }}">
-<div class="boka-lp__section boka-lp__section--compare">
+<section
+  class="boka-lp boka-lp-compare boka-lp--compare-section"
+  id="boka-compare-{{ section.id }}"
+  style="
+    --boka-compare-button-radius: {{ section.settings.button_corner_radius }}px;
+    --boka-compare-other-color: {{ section.settings.other_column_text_color }};
+  "
+>
+  <div class="boka-lp__section boka-lp__section--compare">
     <div class="boka-lp__wrap boka-lp__compare-layout">
 
       <div class="boka-lp__compare-copy">
-        <p class="boka-lp__eyebrow">
-          {{ section.settings.eyebrow }}
-        </p>
+        {% if section.settings.eyebrow != blank %}
+          <p class="boka-lp__eyebrow">
+            {{ section.settings.eyebrow }}
+          </p>
+        {% endif %}
 
-        <h2 class="boka-lp__compare-heading">
-          {{ section.settings.heading }}
-        </h2>
+        {% if section.settings.heading != blank %}
+          <h2 class="boka-lp__compare-heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
 
-        <p class="boka-lp__compare-text">
-          {{ section.settings.copy }}
-        </p>
+        {% if section.settings.copy != blank %}
+          <div class="boka-lp__compare-text">
+            {{ section.settings.copy }}
+          </div>
+        {% endif %}
 
         <div class="boka-lp__compare-rating">
-          <span class="boka-lp__compare-stars">
-            {{ section.settings.stars_text }}
-          </span>
+          {% if section.settings.stars_text != blank %}
+            <span class="boka-lp__compare-stars">
+              {{ section.settings.stars_text }}
+            </span>
+          {% endif %}
 
           {% if section.settings.rating_text != blank %}
             <span>{{ section.settings.rating_text }}</span>
           {% endif %}
         </div>
 
-        <a class="boka-lp__compare-button" href="{{ section.settings.button_link | default: '#boka-buybox' }}">
-          {{ section.settings.button_text }}
-        </a>
+        {% if section.settings.button_text != blank %}
+          <a class="boka-lp__compare-button" href="{{ section.settings.button_link | default: '#boka-buybox' }}">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
       </div>
 
       <div class="boka-lp__compare-table-card boka-lp__compare-table-card--three-col boka-lp__compare-table-card--spotlight">
@@ -53,7 +70,9 @@
             </span>
           </div>
 
-          <div>{{ section.settings.other_column_title }}</div>
+          <div class="boka-lp__compare-other-heading">
+            {{ section.settings.other_column_title }}
+          </div>
         </div>
 
         <div class="boka-lp__compare-grid">
@@ -114,25 +133,25 @@
       "default": "The easy switch"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
       "default": "What makes Boka toothpaste different?"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "copy",
       "label": "Copy",
-      "default": "Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, an ingredient inspired by the mineral that makes up teeth."
+      "default": "<p>Keep brushing like usual with a fluoride-free toothpaste that features nano-hydroxyapatite, or n-Ha, an ingredient inspired by the mineral that makes up teeth.</p>"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "stars_text",
       "label": "Stars text",
       "default": "★★★★★ 4.6 stars from 950,000+ customers"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "rating_text",
       "label": "Additional rating text"
     },
@@ -148,6 +167,36 @@
       "label": "Button link"
     },
     {
+      "type": "range",
+      "id": "button_corner_radius",
+      "label": "Button corner radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "other_column_text_color",
+      "label": "Other toothpaste column text color",
+      "default": "#737c5b",
+      "options": [
+        {
+          "value": "#737c5b",
+          "label": "Olive green"
+        },
+        {
+          "value": "#a5be8b",
+          "label": "Soft green"
+        },
+        {
+          "value": "#222721",
+          "label": "Charcoal"
+        }
+      ]
+    },
+    {
       "type": "image_picker",
       "id": "boka_column_logo",
       "label": "Boka column logo"
@@ -159,13 +208,13 @@
       "default": "Boka"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "boka_column_title",
       "label": "Boka column title fallback",
       "default": "Boka Toothpaste"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "other_column_title",
       "label": "Other column title",
       "default": "Other Toothpaste"
