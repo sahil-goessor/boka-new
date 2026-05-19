@@ -1,4 +1,72 @@
 <section class="boka-lp boka-lp-faq" id="boka-faq-section-{{ section.id }}">
+  <style>
+    #boka-faq-section-{{ section.id }} {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    #boka-faq-section-{{ section.id }} *,
+    #boka-faq-section-{{ section.id }} *::before,
+    #boka-faq-section-{{ section.id }} *::after {
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    #boka-faq-section-{{ section.id }} .boka-lp__section-title {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      color: var(--boka-charcoal);
+      max-width: 780px;
+      margin: 0 0 18px;
+    }
+
+    #boka-faq-section-{{ section.id }} .boka-lp__faq-question {
+      font-family: var(--font-heading-family) !important;
+      font-style: var(--font-heading-style) !important;
+      font-weight: var(--font-heading-weight) !important;
+    }
+
+    #boka-faq-section-{{ section.id }} .boka-lp__eyebrow,
+    #boka-faq-section-{{ section.id }} .boka-lp__faq-content,
+    #boka-faq-section-{{ section.id }} .boka-lp__faq-btn {
+      font-family: var(--font-body-family) !important;
+      font-style: var(--font-body-style);
+    }
+
+    #boka-faq-section-{{ section.id }} button {
+      font: inherit;
+    }
+
+    #boka-faq-section-{{ section.id }} .boka-lp__faq-btn {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    @media screen and (max-width: 749px) {
+      #boka-faq-section-{{ section.id }},
+      #boka-faq-section-{{ section.id }} *,
+      #boka-faq-section-{{ section.id }} *::before,
+      #boka-faq-section-{{ section.id }} *::after {
+        font-family: var(--font-body-family) !important;
+      }
+
+      #boka-faq-section-{{ section.id }} .boka-lp__section-title,
+      #boka-faq-section-{{ section.id }} .boka-lp__faq-question {
+        font-family: var(--font-heading-family) !important;
+      }
+
+      #boka-faq-section-{{ section.id }} .boka-lp__section-title {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.04;
+        letter-spacing: -0.045em;
+      }
+    }
+  </style>
+
   <div class="boka-lp__section boka-lp__section--faq" id="boka-faq-{{ section.id }}">
     <div class="boka-lp__wrap boka-lp__wrap--faq">
       <div class="boka-lp__faq-heading">
