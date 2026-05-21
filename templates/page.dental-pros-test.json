@@ -163,21 +163,21 @@
         "commission_rate_1": {
           "type": "commission_rate",
           "settings": {
-            "label": "Tier 1",
+            "label": "Discount: Tier 1",
             "value": "Up to 44% Off"
           }
         },
         "commission_rate_2": {
           "type": "commission_rate",
           "settings": {
-            "label": "Tier 2",
+            "label": "Discount: Tier 2",
             "value": "Up to 50% Off"
           }
         },
         "commission_rate_3": {
           "type": "commission_rate",
           "settings": {
-            "label": "Tier 3",
+            "label": "Discount: Tier 3",
             "value": "Up to 55% Off"
           }
         },
@@ -387,7 +387,7 @@
         "advisor_name": "Dental Advisory Committee Member",
         "advisor_role": "Replace with name, credentials, and specialty once the final video is approved.",
         "how_kicker": "Professional Pricing, Made Simple",
-        "how_heading": "Boka Dental Pro accounts get access to exclusive B2B pricing on qualifying products.",
+        "how_heading": "Get access to exclusive B2B pricing and save more as your practice grows.",
         "how_text": "Once approved, you’ll receive access to exclusive Dental Pro pricing for qualifying Boka products. Your discount tier is based on your approved account type, order volume, or program eligibility.",
         "commission_kicker": "",
         "commission_heading": "Dental Pro Discount Tiers",
