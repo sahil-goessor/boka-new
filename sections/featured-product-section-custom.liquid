@@ -773,10 +773,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sectionId = '{{ section.id }}';
   const sticky = document.getElementById('sticky-atc-featured');
-// Move to <body> so position:fixed isn't broken by transformed parent elements
-if (sticky && sticky.parentElement !== document.body) {
-  document.body.appendChild(sticky);
-}
 
   // Try multiple selectors to find the main form
   let mainForm = document.querySelector(`#product-form-${sectionId}`);
@@ -1006,7 +1002,8 @@ if (sticky && sticky.parentElement !== document.body) {
   }
 
   // ── Show/hide sticky bar on scroll ──
-function handleScroll() {
+  function handleScroll() {
+  // Use multiple fallback anchors — works even when buy_buttons block is removed
   let anchorEl = document.querySelector('.product-form__buttons') ||
                  document.querySelector(`#price-${sectionId}`) ||
                  document.querySelector(`#ProductInfo-${sectionId}`) ||
@@ -1017,40 +1014,26 @@ function handleScroll() {
 
   const anchorRect = anchorEl.getBoundingClientRect();
   const wasHidden = sticky.classList.contains('hidden');
-  const isMobile = window.innerWidth < 750;
 
-  // On desktop only: check if hero banner is in view
+  // Check if hero banner is in view
+  const heroBannerCta = document.querySelector('.boka-hero__containersss'); //removed the setting of hidding the sticky add to cart bar from 1st element
   let heroBannerInView = false;
-  if (!isMobile) {
-    const heroBannerCta = document.querySelector('.boka-hero__containers');
-    if (heroBannerCta) {
-      const heroBannerRect = heroBannerCta.getBoundingClientRect();
-      heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
-    }
+  if (heroBannerCta) {
+    const heroBannerRect = heroBannerCta.getBoundingClientRect();
+    heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
   }
 
+  // Original logic: show when anchor is off-screen (either scrolled past OR not yet reached)
+  // AND hero banner is not in view
   const anchorOffScreen = anchorRect.bottom < 0 || anchorRect.top > window.innerHeight;
 
-  // On mobile: show immediately (ignore hero banner), hide only when anchor is still on screen
-  // On desktop: existing behaviour — hide when hero is in view
-  if (isMobile) {
-    if (anchorOffScreen || heroBannerInView === false) {
-      if (wasHidden) {
-        sticky.classList.remove('hidden');
-        updateSticky();
-      }
-    } else {
-      sticky.classList.add('hidden');
+  if (anchorOffScreen && !heroBannerInView) {
+    if (wasHidden) {
+      sticky.classList.remove('hidden');
+      updateSticky();
     }
   } else {
-    if (anchorOffScreen && !heroBannerInView) {
-      if (wasHidden) {
-        sticky.classList.remove('hidden');
-        updateSticky();
-      }
-    } else {
-      sticky.classList.add('hidden');
-    }
+    sticky.classList.add('hidden');
   }
 }
   window.addEventListener('scroll', handleScroll);
