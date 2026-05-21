@@ -800,6 +800,7 @@
         },
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
           "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
           "settings": {
             "publishId": "liw7h8lj8ye2o"
           }
@@ -915,6 +916,32 @@
         "padding_bottom": 36,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
+      }
+    },
+    "1765896441d3e5261a": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "dty3xh3ozky9q"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
       }
     },
     "featured_product_TGCUYH": {
@@ -1333,33 +1360,6 @@
         "padding_bottom_mobile": 20
       }
     },
-    "1765896441d3e5261a": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
-          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "liw7h8lj8ye2o"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
-      }
-    },
     "featured_collection_RackKr": {
       "type": "featured-collection",
       "custom_css": [
@@ -1638,12 +1638,12 @@
     "176576544784328569",
     "17655422262dd9640d",
     "featured_product_section_custom_UEHaA4",
+    "1765896441d3e5261a",
     "featured_product_TGCUYH",
     "custom_feature_product_9Gkr6x",
     "1765534182fed2e648",
     "custom_liquid_CjtDWw",
     "custom_image_icon_background_FqMNG9",
-    "1765896441d3e5261a",
     "featured_collection_RackKr",
     "custom_collapsible_content_p9cV6M",
     "yotpo_reviews_widget_hbzYf6",
