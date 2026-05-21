@@ -753,12 +753,12 @@
   .dp-commission {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-top: 26px;
+    gap: 34px;
+    margin-top: 34px;
     border-radius: 34px;
-    padding: clamp(28px, 4vw, 52px);
+    padding: clamp(34px, 5vw, 64px);
     background:
-      radial-gradient(circle at 90% 20%, rgba(211, 231, 192, 0.25), transparent 36%),
+      radial-gradient(circle at 90% 20%, rgba(211, 231, 192, 0.22), transparent 36%),
       linear-gradient(135deg, #737c5b 0%, #5f684d 100%);
     color: var(--dp-white);
     overflow: hidden;
@@ -779,7 +779,28 @@
   }
 
   .dp-commission__copy {
-    color: rgba(255, 255, 255, 0.78);
+  max-width: 620px;
+  margin-bottom: 0;
+  color: rgba(250, 250, 245, 0.82) !important;
+  font-size: clamp(16px, 1.25vw, 19px);
+  font-weight: 300;
+  line-height: 1.65;
+  }
+
+  .dp-commission > div:first-child {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  }
+
+  .dp-commission .dp-h3 {
+    margin-bottom: 14px;
+    color: var(--dp-cream);
+    font-family: var(--dp-font-sans);
+    font-size: clamp(30px, 3vw, 46px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
   }
 
   .dp-rates {
@@ -789,17 +810,17 @@
   position: relative;
   z-index: 1;
   max-width: 100%;
-}
+  }
 
   .dp-rate {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 18px;
-    padding: 18px 20px;
-    background: rgba(255, 255, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.09);
   }
 
   .dp-rate span:first-child {
@@ -1143,6 +1164,15 @@
     .dp-final .dp-wrap {
       width: min(100% - 28px, var(--dp-max));
       padding: 32px 22px;
+    }
+    .dp-rate {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .dp-rate span:last-child {
+      font-size: 28px;
     }
   }
 </style>
