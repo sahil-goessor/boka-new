@@ -773,6 +773,10 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sectionId = '{{ section.id }}';
   const sticky = document.getElementById('sticky-atc-featured');
+// Move to <body> so position:fixed isn't broken by transformed parent elements
+if (sticky && sticky.parentElement !== document.body) {
+  document.body.appendChild(sticky);
+}
 
   // Try multiple selectors to find the main form
   let mainForm = document.querySelector(`#product-form-${sectionId}`);
