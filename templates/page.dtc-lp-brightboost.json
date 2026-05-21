@@ -1037,6 +1037,67 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_with_text_8VnP9b": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_P77gVx": {
+          "type": "caption",
+          "settings": {
+            "caption": "Mindful Oral Care",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_37CWJp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Transforming Smiles,\nTwo Minutes at a Time",
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "text_FPFrN6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Boka turns your routine into a ritual worth looking forward to with feel-good flavors, fluoride-free formulas, and enamel-mimicking n-Ha science.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_P77gVx",
+        "heading_37CWJp",
+        "text_FPFrN6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/bb9f300499f061d00a49d243c4506381ddc2dede.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#DAE9CF",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 130,
+        "padding_bottom": 100,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
     "collapsible_content_yGxDGR": {
       "type": "collapsible-content",
       "blocks": {
@@ -1225,67 +1286,6 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
-    },
-    "image_with_text_8VnP9b": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption_P77gVx": {
-          "type": "caption",
-          "settings": {
-            "caption": "Mindful Oral Care",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "heading_37CWJp": {
-          "type": "heading",
-          "settings": {
-            "heading": "Transforming Smiles,\nTwo Minutes at a Time",
-            "heading_size": "h1",
-            "heading_tag": "default"
-          }
-        },
-        "text_FPFrN6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Boka turns your routine into a ritual worth looking forward to with feel-good flavors, fluoride-free formulas, and enamel-mimicking n-Ha science.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "caption_P77gVx",
-        "heading_37CWJp",
-        "text_FPFrN6"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/bb9f300499f061d00a49d243c4506381ddc2dede.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "section_background_color": "#ffffff",
-        "custom_background_color": "#DAE9CF",
-        "custom_text_color": "#FFFFFF",
-        "heading_font_size_mobile": 28,
-        "heading_font_size_desktop": 48,
-        "text_font_size_mobile": 16,
-        "text_font_size_desktop": 18,
-        "caption_font_size_mobile": 14,
-        "caption_font_size_desktop": 16,
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 130,
-        "padding_bottom": 100,
-        "padding_top_tablet": 30,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 50
-      }
     }
   },
   "order": [
@@ -1299,9 +1299,9 @@
     "1765896441d3e5261a",
     "custom_image_icon_background_FqMNG9",
     "featured_collection_RackKr",
+    "image_with_text_8VnP9b",
     "collapsible_content_yGxDGR",
     "yotpo_reviews_widget_kWhWWh",
-    "main",
-    "image_with_text_8VnP9b"
+    "main"
   ]
 }
