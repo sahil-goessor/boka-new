@@ -1181,15 +1181,25 @@
       width: min(100% - 28px, var(--dp-max));
       padding: 32px 22px;
     }
-    .dp-rate {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 8px;
-    }
+    .dp-commission {
+  gap: 26px;
+  padding: 32px 22px;
+  }
 
-    .dp-rate span:last-child {
-      font-size: 28px;
-    }
+  .dp-commission .dp-h3 {
+    font-size: 30px;
+  }
+
+  .dp-rate {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .dp-rate span:last-child {
+    font-size: 34px;
+    white-space: normal;
+  }
   }
 </style>
 
