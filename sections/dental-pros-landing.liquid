@@ -783,21 +783,23 @@
   }
 
   .dp-rates {
-    display: grid;
-    gap: 10px;
-    position: relative;
-    z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
   }
 
   .dp-rate {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 18px;
-    padding: 18px 20px;
-    background: rgba(255, 255, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.09);
   }
 
   .dp-rate span:first-child {
