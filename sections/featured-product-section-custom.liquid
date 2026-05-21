@@ -772,6 +772,14 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const sectionId = '{{ section.id }}';
+
+  // Move sticky to <body> immediately — must happen before anything else
+  // so position:fixed is never trapped inside a transformed/overflow parent
+  const stickyToMove = document.getElementById('sticky-atc-featured');
+  if (stickyToMove && stickyToMove.parentNode !== document.body) {
+    document.body.appendChild(stickyToMove);
+  }
+
   const sticky = document.getElementById('sticky-atc-featured');
 // Move to <body> so position:fixed isn't broken by transformed parent elements
 if (sticky && sticky.parentElement !== document.body) {
@@ -1116,7 +1124,7 @@ function handleScroll() {
 <!-- ADD THIS CSS to the existing <style> section at the bottom -->
 <style>
 /* Sticky ATC for Featured Product */
-.sticky-atc-featured {
+{% comment %} .sticky-atc-featured {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1129,6 +1137,28 @@ function handleScroll() {
 
 .sticky-atc-featured.hidden {
   transform: translateY(100%);
+} {% endcomment %}
+
+.sticky-atc-featured {
+  position: fixed;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  background: var(--color-foreground);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  z-index: 2147483647;
+  transition: bottom 0.3s ease;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: bottom;
+}
+
+.sticky-atc-featured.hidden {
+  bottom: -200px;
+}
+
+.sticky-atc-featured:not(.hidden) {
+  bottom: 0;
 }
 
 .sticky-atc-featured .sticky-atc__inner {
