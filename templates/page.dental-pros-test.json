@@ -191,22 +191,22 @@
         "process_item_2": {
           "type": "process_item",
           "settings": {
-            "title": "Get account info if approved",
-            "text": "Approved members receive account information and next steps by email."
+            "title": "Get approved & access your account",
+            "text": "Once approved, you’ll receive an email with your Boka Pro account details and next steps."
           }
         },
         "process_item_3": {
           "type": "process_item",
           "settings": {
-            "title": "Place discounted practice orders",
-            "text": "Use your Boka Pro account for eligible discounted ordering for your practice."
+            "title": "Choose your sample flavors",
+            "text": "Select from a variety of Boka flavor options so you can offer samples your patients will love!"
           }
         },
         "process_item_4": {
           "type": "process_item",
           "settings": {
-            "title": "Support happier patients and healthier mouths",
-            "text": "Recommend simple daily oral care routines patients can continue at home."
+            "title": "Order for your practice at exclusive pricing",
+            "text": "Use your Boka Pro account to place discounted orders for your practice."
           }
         },
         "quote_1": {
