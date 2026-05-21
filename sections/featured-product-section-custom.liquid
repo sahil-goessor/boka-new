@@ -1002,8 +1002,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ── Show/hide sticky bar on scroll ──
-  function handleScroll() {
-  // Use multiple fallback anchors — works even when buy_buttons block is removed
+function handleScroll() {
   let anchorEl = document.querySelector('.product-form__buttons') ||
                  document.querySelector(`#price-${sectionId}`) ||
                  document.querySelector(`#ProductInfo-${sectionId}`) ||
@@ -1014,26 +1013,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const anchorRect = anchorEl.getBoundingClientRect();
   const wasHidden = sticky.classList.contains('hidden');
+  const isMobile = window.innerWidth < 750;
 
-  // Check if hero banner is in view
-  const heroBannerCta = document.querySelector('.boka-hero__containers'); //removed the setting of hidding the sticky add to cart bar from 1st element
+  // On desktop only: check if hero banner is in view
   let heroBannerInView = false;
-  if (heroBannerCta) {
-    const heroBannerRect = heroBannerCta.getBoundingClientRect();
-    heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
+  if (!isMobile) {
+    const heroBannerCta = document.querySelector('.boka-hero__containers');
+    if (heroBannerCta) {
+      const heroBannerRect = heroBannerCta.getBoundingClientRect();
+      heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
+    }
   }
 
-  // Original logic: show when anchor is off-screen (either scrolled past OR not yet reached)
-  // AND hero banner is not in view
   const anchorOffScreen = anchorRect.bottom < 0 || anchorRect.top > window.innerHeight;
 
-  if (anchorOffScreen && !heroBannerInView) {
-    if (wasHidden) {
-      sticky.classList.remove('hidden');
-      updateSticky();
+  // On mobile: show immediately (ignore hero banner), hide only when anchor is still on screen
+  // On desktop: existing behaviour — hide when hero is in view
+  if (isMobile) {
+    if (anchorOffScreen || heroBannerInView === false) {
+      if (wasHidden) {
+        sticky.classList.remove('hidden');
+        updateSticky();
+      }
+    } else {
+      sticky.classList.add('hidden');
     }
   } else {
-    sticky.classList.add('hidden');
+    if (anchorOffScreen && !heroBannerInView) {
+      if (wasHidden) {
+        sticky.classList.remove('hidden');
+        updateSticky();
+      }
+    } else {
+      sticky.classList.add('hidden');
+    }
   }
 }
   window.addEventListener('scroll', handleScroll);
