@@ -184,8 +184,8 @@
         "process_item_1": {
           "type": "process_item",
           "settings": {
-            "title": "Fill out the application",
-            "text": "Dental professionals apply with practice and contact details."
+            "title": "Apply in minutes",
+            "text": "Share your practice details and contact information to get started."
           }
         },
         "process_item_2": {
