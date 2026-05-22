@@ -11,6 +11,18 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "footer_copyright_bar_9T9VwL": {
+      "type": "footer-copyright-bar",
+      "name": "Copyright Bar",
+      "settings": {
+        "store_name": "Boka.com",
+        "rights_text": "All Rights Reserved",
+        "background_color": "#f5f5f0",
+        "text_color": "#333333",
+        "font_size_desktop": 14,
+        "font_size_mobile": 12
+      }
+    },
     "custom_liquid_7CMmkD": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -95,6 +107,7 @@
     }
   },
   "order": [
+    "footer_copyright_bar_9T9VwL",
     "custom_liquid_7CMmkD",
     "footer"
   ]
