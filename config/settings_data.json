@@ -257,6 +257,11 @@
         "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
         "disabled": true,
         "settings": {}
+      },
+      "7297205921758642463": {
+        "type": "shopify://apps/mappy-store-locator/blocks/bss-sl-script/edfca2bd-82ad-413c-b32c-580d239b17ab",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
