@@ -1127,7 +1127,7 @@
         "description_color": "#222721",
         "description_size": 16,
         "description_size_mobile": 15,
-        "description_max_width": 480,
+        "description_max_width": 540,
         "background_color": "#ffffff",
         "padding_top": 50,
         "padding_bottom": 50
