@@ -683,6 +683,15 @@
     {% if settings.theme_enable_customjs %}<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>{% endif %}
 
     {% render 'amazon-ads' %}
+    {% assign target_pages = 'amz-toothpaste-for-sensitive-teeth,amz-brightboost,ntb-dtc-walmart,edu-ela-mint-toothpaste-for-new-customers,ntb-brightboost-whitening-powder' | split: ',' %}
+    {% if request.page_type == 'page' and target_pages contains page.handle %}
+      <style>
+        nav.header__inline-menu { display: none; }
+        details-modal.header__search { display: none !important; }
+        header-menu.new-customer-account { display: none; }
+        a.header__heading-link.link.link--text.focus-inset { pointer-events: none; }
+      </style>
+    {% endif %}
 </head>
 
   <body class="gradient template-{{ template.name }}{% if template.suffix != blank %} template-{{ template.suffix }}{% endif %}">
