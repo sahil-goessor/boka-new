@@ -1047,6 +1047,41 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_text_new_LdHPeJ": {
+      "type": "image-text-new",
+      "name": "Image Text New",
+      "settings": {
+        "layout": "image_left",
+        "image_width": 50,
+        "column_gap": 60,
+        "mobile_gap": 30,
+        "container_width": 1200,
+        "image": "shopify://shop_images/BrightBoost_About_1.png",
+        "image_border_radius": 0,
+        "subheading": "MINDFUL ORAL CARE",
+        "subheading_color": "#000000",
+        "subheading_size": 16,
+        "subheading_size_mobile": 12,
+        "subheading_weight": "400",
+        "subheading_transform": "uppercase",
+        "subheading_letter_spacing": 1,
+        "subheading_spacing": 12,
+        "heading": "Transforming Smiles, Two Minutes at a Time",
+        "heading_color": "#222721",
+        "heading_size": 36,
+        "heading_size_mobile": 28,
+        "heading_weight": "400",
+        "heading_spacing": 20,
+        "description": "<p>Boka turns your routine into a ritual worth looking forward to with feel-good flavors, fluoride-free formulas, and enamel-mimicking n-Ha science.</p>",
+        "description_color": "#222721",
+        "description_size": 16,
+        "description_size_mobile": 15,
+        "description_max_width": 540,
+        "background_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
     "collapsible_content_yGxDGR": {
       "type": "collapsible-content",
       "blocks": {
@@ -1205,41 +1240,6 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
-    },
-    "image_text_new_LdHPeJ": {
-      "type": "image-text-new",
-      "name": "Image Text New",
-      "settings": {
-        "layout": "image_left",
-        "image_width": 50,
-        "column_gap": 60,
-        "mobile_gap": 30,
-        "container_width": 1200,
-        "image": "shopify://shop_images/BrightBoost_About_1.png",
-        "image_border_radius": 0,
-        "subheading": "MINDFUL ORAL CARE",
-        "subheading_color": "#000000",
-        "subheading_size": 16,
-        "subheading_size_mobile": 12,
-        "subheading_weight": "400",
-        "subheading_transform": "uppercase",
-        "subheading_letter_spacing": 1,
-        "subheading_spacing": 12,
-        "heading": "Transforming Smiles, Two Minutes at a Time",
-        "heading_color": "#222721",
-        "heading_size": 36,
-        "heading_size_mobile": 28,
-        "heading_weight": "400",
-        "heading_spacing": 20,
-        "description": "<p>Boka turns your routine into a ritual worth looking forward to with feel-good flavors, fluoride-free formulas, and enamel-mimicking n-Ha science.</p>",
-        "description_color": "#222721",
-        "description_size": 16,
-        "description_size_mobile": 15,
-        "description_max_width": 540,
-        "background_color": "#ffffff",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
     }
   },
   "order": [
@@ -1253,9 +1253,9 @@
     "1765896441d3e5261a",
     "custom_image_icon_background_FqMNG9",
     "featured_collection_RackKr",
+    "image_text_new_LdHPeJ",
     "collapsible_content_yGxDGR",
     "yotpo_reviews_widget_kWhWWh",
-    "main",
-    "image_text_new_LdHPeJ"
+    "main"
   ]
 }
