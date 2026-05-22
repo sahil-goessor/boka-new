@@ -1,0 +1,467 @@
+{% assign ai_gen_id = section.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ait-section-{{ ai_gen_id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+  }
+
+  .ait-container-{{ ai_gen_id }} {
+    max-width: {{ section.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ait-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ section.settings.column_gap }}px;
+    {% if section.settings.layout == 'image_left' %}
+      flex-direction: row;
+    {% else %}
+      flex-direction: row-reverse;
+    {% endif %}
+  }
+
+  .ait-image-col-{{ ai_gen_id }} {
+    flex: 0 0 {{ section.settings.image_width }}%;
+  }
+
+  .ait-image-wrap-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ section.settings.image_border_radius }}px;
+  }
+
+  .ait-image-wrap-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ait-placeholder-{{ ai_gen_id }} {
+    background-color: #f0f0f0;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ait-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ait-content-col-{{ ai_gen_id }} {
+    flex: 1;
+    text-align: center;
+  }
+
+  .ait-subheading-{{ ai_gen_id }} {
+    display: block;
+    font-size: {{ section.settings.subheading_size }}px;
+    color: {{ section.settings.subheading_color }};
+    letter-spacing: {{ section.settings.subheading_letter_spacing }}px;
+    text-transform: {{ section.settings.subheading_transform }};
+    margin: 0 0 {{ section.settings.subheading_spacing }}px;
+    line-height: 1.4;
+    font-weight: {{ section.settings.subheading_weight }};
+  }
+
+  .ait-heading-{{ ai_gen_id }} {
+    font-size: {{ section.settings.heading_size }}px;
+    color: {{ section.settings.heading_color }};
+    margin: 0 0 {{ section.settings.heading_spacing }}px;
+    line-height: 1.2;
+    font-weight: {{ section.settings.heading_weight }};
+  }
+
+  .ait-description-{{ ai_gen_id }} {
+    font-size: {{ section.settings.description_size }}px;
+    color: {{ section.settings.description_color }};
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: {{ section.settings.description_max_width }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ait-section-{{ ai_gen_id }} {
+      padding: {{ section.settings.padding_top | times: 0.6 | round }}px 0 {{ section.settings.padding_bottom | times: 0.6 | round }}px;
+    }
+
+    .ait-container-{{ ai_gen_id }} {
+      padding: 0 16px;
+    }
+
+    .ait-wrapper-{{ ai_gen_id }} {
+      flex-direction: column !important;
+      gap: {{ section.settings.mobile_gap }}px;
+    }
+
+    .ait-image-col-{{ ai_gen_id }} {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    .ait-content-col-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ait-subheading-{{ ai_gen_id }} {
+      font-size: {{ section.settings.subheading_size_mobile }}px;
+      margin-bottom: {{ section.settings.subheading_spacing | times: 0.8 | round }}px;
+    }
+
+    .ait-heading-{{ ai_gen_id }} {
+      font-size: {{ section.settings.heading_size_mobile }}px;
+      margin-bottom: {{ section.settings.heading_spacing | times: 0.8 | round }}px;
+    }
+
+    .ait-description-{{ ai_gen_id }} {
+      font-size: {{ section.settings.description_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ait-section-{{ ai_gen_id }}" {{ section.shopify_attributes }}>
+  <div class="ait-container-{{ ai_gen_id }}">
+    <div class="ait-wrapper-{{ ai_gen_id }}">
+
+      <div class="ait-image-col-{{ ai_gen_id }}">
+        <div class="ait-image-wrap-{{ ai_gen_id }}">
+          {% if section.settings.image %}
+            <img
+              src="{{ section.settings.image | image_url: width: 1200 }}"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+            >
+          {% else %}
+            <div class="ait-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ait-content-col-{{ ai_gen_id }}">
+        {% if section.settings.subheading != blank %}
+          <span class="ait-subheading-{{ ai_gen_id }}">{{ section.settings.subheading }}</span>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="ait-heading-{{ ai_gen_id }}">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="ait-description-{{ ai_gen_id }}">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Text New",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image position",
+      "options": [
+        { "value": "image_left",  "label": "Image left"  },
+        { "value": "image_right", "label": "Image right" }
+      ],
+      "default": "image_left"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Image column width",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Gap between columns (desktop)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between columns (mobile)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "min": 800,
+      "max": 1800,
+      "step": 100,
+      "unit": "px",
+      "label": "Max container width",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading text",
+      "default": "MINDFUL ORAL CARE"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (desktop)",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (mobile)",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "subheading_weight",
+      "label": "Font weight",
+      "options": [
+        { "value": "400", "label": "Regular"   },
+        { "value": "500", "label": "Medium"    },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold"      }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "select",
+      "id": "subheading_transform",
+      "label": "Text transform",
+      "options": [
+        { "value": "none",       "label": "None"       },
+        { "value": "uppercase",  "label": "Uppercase"  },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "subheading_letter_spacing",
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "label": "Letter spacing",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "subheading_spacing",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Spacing below",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading text",
+      "default": "Transforming Smiles, Two Minutes at a Time"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size (desktop)",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size (mobile)",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Font weight",
+      "options": [
+        { "value": "400", "label": "Regular"   },
+        { "value": "500", "label": "Medium"    },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold"      }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 8,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing below",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Boka turns your routine into a ritual worth looking forward to with feel-good flavors, fluoride-free formulas, and enamel-mimicking n-Ha science.</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (desktop)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size (mobile)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "description_max_width",
+      "min": 200,
+      "max": 700,
+      "step": 20,
+      "unit": "px",
+      "label": "Description max width",
+      "default": 480
+    },
+    {
+      "type": "header",
+      "content": "Section spacing & background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text New"
+    }
+  ]
+}
+{% endschema %}
