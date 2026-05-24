@@ -2856,8 +2856,8 @@ details[open]>.header__menu-item .icon-caret {
     /* Match these two values to your reviews section.
        Open DevTools → inspect a Reviews item → copy the
        padding-left and font-size — paste here. */
-    --boka-faq-gutter: 3rem;
-    --boka-faq-font-size: 0.9375rem; /* 15px — common reviews size */
+    --boka-faq-gutter: 15rem;
+    --boka-faq-font-size: 2rem; /* 15px — common reviews size */
 
     display: flex;
     flex-direction: column;
