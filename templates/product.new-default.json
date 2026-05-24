@@ -754,6 +754,20 @@
     },
     "custom_liquid_gRpM9n": {
       "type": "custom-liquid",
+      "name": "Description long",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n  <h2>The Boka Difference</h2>\n  {{ product.metafields.custom.new_description_long }}\n{% endif %}",
+        "color_scheme": "custom",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#ffffff",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "custom_liquid_Yw8DLN": {
+      "type": "custom-liquid",
       "name": "FAQ",
       "settings": {
         "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n  <h2>FAQs</h2>\n  {{ product.metafields.custom.new_faq }}\n{% endif %}",
@@ -778,6 +792,7 @@
     "672bfbbb-3f35-4988-bf92-66ed4484892b",
     "related-products",
     "1684207833f45c861d",
-    "custom_liquid_gRpM9n"
+    "custom_liquid_gRpM9n",
+    "custom_liquid_Yw8DLN"
   ]
 }
