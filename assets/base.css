@@ -2935,3 +2935,65 @@ details[open]>.header__menu-item .icon-caret {
     text-underline-offset: 2px;
   }
   .boka-faq__answer a:hover { color: #a02525; }
+
+  /* ─── Section heading (shared across custom product sections) ─── */
+.boka-section-heading {
+  /* Match the FAQ's horizontal gutter so headings align with content */
+  --boka-section-gutter: 15rem;
+
+  margin: 4rem 0 1.5rem;
+  padding: 0 var(--boka-section-gutter);
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #1c1c1c;
+}
+
+/* ─── Boka benefits list ─── */
+.boka-benefits {
+  --boka-benefits-gutter: 15rem;
+  --boka-benefits-font-size: 2rem;
+
+  margin: 1rem 0 3rem;
+  padding: 0 var(--boka-benefits-gutter);
+  font-size: var(--boka-benefits-font-size);
+  color: #4a4a4a;
+  line-height: 1.65;
+}
+
+.boka-benefits ul {
+  list-style: none;       /* remove default bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.boka-benefits li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 2rem;
+  border-bottom: 1px solid #e5e1d8;
+}
+
+.boka-benefits li:last-child {
+  border-bottom: none;
+}
+
+/* Custom checkmark bullet */
+.boka-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.3rem;
+  width: 0.6rem;
+  height: 1.1rem;
+  border-right: 2px solid #c43d3d;   /* matches your link accent color */
+  border-bottom: 2px solid #c43d3d;
+  transform: rotate(45deg);
+}
+
+.boka-benefits li strong {
+  color: #1c1c1c;
+  font-weight: 600;
+  margin-right: 0.3em;
+}
