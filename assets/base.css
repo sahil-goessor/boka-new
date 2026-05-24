@@ -2850,93 +2850,92 @@ details[open]>.header__menu-item .icon-caret {
 	}
 }
 
+/* ─── Boka FAQ accordion ─── */
+.boka-faq {
+  /* Match these two values to your reviews section.
+     Open DevTools → inspect a Reviews item → copy the
+     padding-left and font-size — paste here. */
+  --boka-faq-gutter: 15rem;
+  --boka-faq-font-size: 2rem; /* 15px — common reviews size */
 
-   /* ─── Boka FAQ accordion ─── */
-  .boka-faq {
-    /* Match these two values to your reviews section.
-       Open DevTools → inspect a Reviews item → copy the
-       padding-left and font-size — paste here. */
-    --boka-faq-gutter: 15rem;
-    --boka-faq-font-size: 2rem; /* 15px — common reviews size */
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 0 var(--boka-faq-gutter);
+  border-top: 1px solid #e5e1d8;
+  font-size: var(--boka-faq-font-size);
+}
 
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0;
-    padding: 0 var(--boka-faq-gutter);
-    border-top: 1px solid #e5e1d8;
-    font-size: var(--boka-faq-font-size);
-  }
+.boka-faq__item {
+  border-bottom: 1px solid #e5e1d8;
+}
 
-  .boka-faq__item {
-    border-bottom: 1px solid #e5e1d8;
-  }
+/* Hide the default disclosure triangle */
+.boka-faq__item > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.boka-faq__item > summary::-webkit-details-marker {
+  display: none;
+}
 
-  /* Hide the default disclosure triangle */
-  .boka-faq__item > summary {
-    list-style: none;
-    cursor: pointer;  
-  }
-  .boka-faq__item > summary::-webkit-details-marker {
-    display: none;
-  }
-  
-  /* Question row — same font-size as the answer / reviews body */
-  .boka-faq__question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1.25rem 0;
-    font-family: inherit;
-    font-size: inherit; /* pulls var(--boka-faq-font-size) from the parent */
-    font-weight: 600;
-    color: #1c1c1c;   
-    line-height: 1.5;
-    transition: color 120ms ease;
-  }
+/* Question row — same font-size as the answer / reviews body */
+.boka-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  font-family: inherit;
+  font-size: inherit; /* pulls var(--boka-faq-font-size) from the parent */
+  font-weight: 600;
+  color: #1c1c1c;
+  line-height: 1.5;
+  transition: color 120ms ease;
+}
 
-  .boka-faq__question:hover { color: #4a4a4a; }
+.boka-faq__question:hover { color: #4a4a4a; }
 
-  /* Custom chevron */
-  .boka-faq__question::after {  
-    content: "";
-    flex-shrink: 0;
-    width: 0.7rem;
-    height: 0.7rem;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: rotate(45deg);   
-    transform-origin: 60% 60%;
-    transition: transform 200ms ease;
-  }
-  .boka-faq__item[open] > .boka-faq__question::after {
-    transform: rotate(-135deg);
-  }
+/* Custom chevron */
+.boka-faq__question::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transform-origin: 60% 60%;
+  transition: transform 200ms ease;
+}
+.boka-faq__item[open] > .boka-faq__question::after {
+  transform: rotate(-135deg);
+}
 
-  /* Answer body */
-  .boka-faq__answer {
-    padding: 0 0 1.25rem;
-    font-size: inherit;
-    color: #4a4a4a;
-    line-height: 1.65;
-  }
+/* Answer body */
+.boka-faq__answer {
+  padding: 0 0 1.25rem;
+  font-size: inherit;
+  color: #4a4a4a;
+  line-height: 1.65;
+}
 
-  .boka-faq__answer p { margin: 0 0 0.75em; }
-  .boka-faq__answer p:last-child { margin-bottom: 0; }
-  .boka-faq__answer ul,
-  .boka-faq__answer ol {
-    margin: 0 0 0.75em;
-    padding-left: 1.25em;
-  }
-  .boka-faq__answer li { margin: 0.25em 0; }
-  .boka-faq__answer a {
-    color: #c43d3d;   
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  .boka-faq__answer a:hover { color: #a02525; }
+.boka-faq__answer p { margin: 0 0 0.75em; }
+.boka-faq__answer p:last-child { margin-bottom: 0; }
+.boka-faq__answer ul,
+.boka-faq__answer ol {
+  margin: 0 0 0.75em;
+  padding-left: 1.25em;
+}
+.boka-faq__answer li { margin: 0.25em 0; }
+.boka-faq__answer a {
+  color: #c43d3d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.boka-faq__answer a:hover { color: #a02525; }
 
-  /* ─── Section heading (shared across custom product sections) ─── */
+/* ─── Section heading (shared across custom product sections) ─── */
 .boka-section-heading {
   /* Match the FAQ's horizontal gutter so headings align with content */
   --boka-section-gutter: 15rem;
@@ -2996,4 +2995,50 @@ details[open]>.header__menu-item .icon-caret {
   color: #1c1c1c;
   font-weight: 600;
   margin-right: 0.3em;
+}
+
+/* ─── Tablet (≤ 1024px) ─── */
+@media (max-width: 1024px) {
+  .boka-faq {
+    --boka-faq-gutter: 4rem;
+  }
+  .boka-section-heading {
+    --boka-section-gutter: 4rem;
+  }
+  .boka-benefits {
+    --boka-benefits-gutter: 4rem;
+  }
+}
+
+/* ─── Mobile (≤ 768px) ─── */
+@media (max-width: 768px) {
+  .boka-faq {
+    --boka-faq-gutter: 1.5rem;
+    --boka-faq-font-size: 1.6rem;
+  }
+
+  .boka-section-heading {
+    --boka-section-gutter: 1.5rem;
+    font-size: 2.4rem;
+    margin: 3rem 0 1rem;
+  }
+
+  .boka-benefits {
+    --boka-benefits-gutter: 1.5rem;
+    --boka-benefits-font-size: 1.6rem;
+  }
+}
+
+/* ─── Small phones (≤ 480px) ─── */
+@media (max-width: 480px) {
+  .boka-faq {
+    --boka-faq-gutter: 1.2rem;
+  }
+  .boka-section-heading {
+    --boka-section-gutter: 1.2rem;
+    font-size: 2.2rem;
+  }
+  .boka-benefits {
+    --boka-benefits-gutter: 1.2rem;
+  }
 }
