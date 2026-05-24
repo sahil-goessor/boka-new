@@ -756,7 +756,7 @@
       "type": "custom-liquid",
       "name": "Description long",
       "settings": {
-        "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n<h2 class=\"boka-section-heading\">The Boka Difference</h2>\n<div class=\"boka-benefits\">\n  {{ product.metafields.custom.new_description_long }}\n  </div>\n{% endif %}",
+        "custom_liquid": "{% if product.metafields.custom.new_description_long != blank %}\n<h2 class=\"boka-section-heading\">The Boka Difference</h2>\n<div class=\"boka-benefits\">\n  {{ product.metafields.custom.new_description_long }}\n  </div>\n{% endif %}",
         "color_scheme": "custom",
         "custom_background_color": "#fafaf5",
         "custom_text_color": "#ffffff",
