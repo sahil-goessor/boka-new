@@ -4998,3 +4998,82 @@ body:has(.boka-lp) .announcement-bar-section {
   font-style: italic !important;
   font-weight: 400 !important;
 }
+
+ /* ─── Boka FAQ accordion ─── */ 
+  .boka-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem 0;   
+    border-top: 1px solid #e5e1d8;
+  }
+  
+  .boka-faq__item {
+    border-bottom: 1px solid #e5e1d8;
+  }
+
+  /* Hide the default disclosure triangle */
+  .boka-faq__item > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .boka-faq__item > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Question row */
+  .boka-faq__question {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600; 
+    color: #1c1c1c;
+    line-height: 1.4;
+    transition: color 120ms ease;
+  }
+  
+  .boka-faq__question:hover { color: #4a4a4a; }
+  
+  /* Custom chevron — rotates when the item is open */
+  .boka-faq__question::after {
+    content: "";
+    flex-shrink: 0;
+    width: 0.75rem;
+    height: 0.75rem;  
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transform-origin: 60% 60%;  
+    transition: transform 200ms ease;
+  }
+
+  .boka-faq__item[open] > .boka-faq__question::after {
+    transform: rotate(-135deg);
+  }
+
+  /* Answer body */
+  .boka-faq__answer { 
+    padding: 0 0 1.25rem;
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .boka-faq__answer p { margin: 0 0 0.75em; }
+  .boka-faq__answer p:last-child { margin-bottom: 0; }
+  .boka-faq__answer ul,
+  .boka-faq__answer ol { 
+    margin: 0 0 0.75em;
+    padding-left: 1.25em;
+  }
+  .boka-faq__answer li { margin: 0.25em 0; }
+  .boka-faq__answer a {
+    color: #c43d3d;
+    text-decoration: underline; 
+    text-underline-offset: 2px;
+  }
+  .boka-faq__answer a:hover { color: #a02525; }
