@@ -319,7 +319,6 @@
       "disabled": true,
       "name": "A clean you feel good about",
       "settings": {
-        "image": "{{ product.metafields.custom.a_clean_you_can_feel_good_about_image.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -752,6 +751,20 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 30
       }
+    },
+    "custom_liquid_gRpM9n": {
+      "type": "custom-liquid",
+      "name": "FAQ",
+      "settings": {
+        "custom_liquid": "test",
+        "color_scheme": "background-1",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#FFFFFF",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -764,6 +777,7 @@
     "multicolumn_HYhLX7",
     "672bfbbb-3f35-4988-bf92-66ed4484892b",
     "related-products",
-    "1684207833f45c861d"
+    "1684207833f45c861d",
+    "custom_liquid_gRpM9n"
   ]
 }
