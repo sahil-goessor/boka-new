@@ -770,7 +770,7 @@
       "type": "custom-liquid",
       "name": "FAQ",
       "settings": {
-        "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n  <h2>FAQs</h2>\n  {{ product.metafields.custom.new_faq }}\n{% endif %}",
+        "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n  FAQs\n  {{ product.metafields.custom.new_faq }}\n{% endif %}",
         "color_scheme": "custom",
         "custom_background_color": "#fafaf5",
         "custom_text_color": "#ffffff",
