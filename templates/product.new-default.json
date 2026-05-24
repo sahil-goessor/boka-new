@@ -756,8 +756,8 @@
       "type": "custom-liquid",
       "name": "FAQ",
       "settings": {
-        "custom_liquid": "test",
-        "color_scheme": "background-1",
+        "custom_liquid": "{{ product.metafields.custom.new_faq }}",
+        "color_scheme": "custom",
         "custom_background_color": "#fafaf5",
         "custom_text_color": "#FFFFFF",
         "padding_top": 40,
