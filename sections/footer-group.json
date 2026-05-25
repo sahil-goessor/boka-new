@@ -13,6 +13,7 @@
   "sections": {
     "footer_copyright_bar_9T9VwL": {
       "type": "footer-copyright-bar",
+      "disabled": true,
       "name": "Copyright Bar",
       "settings": {
         "store_name": "Boka.com",
