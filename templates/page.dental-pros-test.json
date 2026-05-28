@@ -104,24 +104,24 @@
           "type": "why_card",
           "settings": {
             "icon": "1",
-            "title": "Patients want guidance",
-            "text": "You can point patients toward products that align with their preferences, routine, and oral care goals."
+            "title": "Patients are asking for fluoride-free",
+            "text": "Give your team a clear option when patients want to move away from traditional fluoride toothpaste."
           }
         },
         "why_card_2": {
           "type": "why_card",
           "settings": {
             "icon": "2",
-            "title": "Recommendations should feel simple",
-            "text": "Your link or code gives patients an easy next step after an appointment, follow-up email, or social post."
+            "title": "They want better alternatives",
+            "text": "Point patients toward a modern daily toothpaste that feels elevated, approachable, and easy to add to their routine."
           }
         },
         "why_card_3": {
           "type": "why_card",
           "settings": {
             "icon": "3",
-            "title": "Education creates consistency",
-            "text": "Boka gives you clear ingredient talking points so chair-side education feels confident, modern, and approachable."
+            "title": "Your recommendation matters",
+            "text": "Help patients make confident product choices with simple education around n-Ha, ingredients, and daily oral care habits."
           }
         },
         "how_step_1": {
@@ -375,9 +375,9 @@
         "what_text_2": "",
         "ingredient_kicker": "Why patients ask about it",
         "ingredient_heading": "More mindful oral care, without the scare tactics.",
-        "why_kicker": "Why hygienists",
-        "why_heading": "You are already the trusted voice in the <span class=\"dp-em\">chair</span>.",
-        "why_text": "Hygienists translate oral care into everyday habits. This program is built for the moments when patients ask what to use at home, want a fluoride-free option, or need a routine they will actually stick with.",
+        "why_kicker": "Patient demand",
+        "why_heading": "Patients are switching to fluoride-free. They still need a better alternative.",
+        "why_text": "More patients are rethinking what is in their daily oral care routine. They are asking about fluoride-free toothpaste, looking for cleaner-feeling formulas, and trying to find better product alternatives that still feel credible, modern, and easy to use every day. Boka helps your team answer that demand with a fluoride-free n-Ha toothpaste patients can understand and actually want to stick with.",
         "video_embed_code": "",
         "video_placeholder_text": "Short video from a Boka Dental Advisory Committee member explaining why they recommend Boka.",
         "video_kicker": "Advisory committee perspective",
