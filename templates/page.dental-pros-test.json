@@ -65,15 +65,15 @@
         "what_mini_1": {
           "type": "what_mini_card",
           "settings": {
-            "title": "Science-backed wellness",
-            "text": "Clear education around ingredients, benefits, and daily oral care."
+            "title": "A credible fluoride-free alternative",
+            "text": "Give patients a modern n-Ha toothpaste option when they ask what to use instead of traditional fluoride formulas."
           }
         },
         "what_mini_2": {
           "type": "what_mini_card",
           "settings": {
-            "title": "Elevated experience",
-            "text": "Beautiful formulas, packaging, and flavors patients want to use consistently."
+            "title": "Education your team can explain",
+            "text": "Clear ingredient talking points help make n-Ha, fluoride-free care, and daily oral care routines easier to discuss chairside."
           }
         },
         "ingredient_bullet_1": {
@@ -97,7 +97,7 @@
         "ingredient_bullet_5": {
           "type": "ingredient_bullet",
           "settings": {
-            "text": "Designed to support oral health and daily consistency"
+            "text": "Simple education around ingredients and daily consistency"
           }
         },
         "why_card_1": {
@@ -369,12 +369,12 @@
         "hero_primary_link": "#signup",
         "hero_secondary_label": "See how it works",
         "hero_secondary_link": "#how-it-works",
-        "what_kicker": "What Boka is",
-        "what_heading": "Science-backed care, made for the <span class=\"dp-em\">everyday</span>.",
-        "what_text_1": "Our proprietary and innovative formula includes Nano-hydroxyapatite (n-Ha) - a biomimetic mineral form of the same ingredient that naturally makes up 97% of your enamel and 70% of your dentin. n-Ha has been the subject of significant research for decades with a wide variety of potential benefits across dentistry and oral care",
+        "what_kicker": "The Boka solution",
+        "what_heading": "A fluoride-free n-Ha toothpaste patients can understand and actually want to use.",
+        "what_text_1": "Boka gives dental professionals a clear answer for patients looking for better fluoride-free alternatives. Powered by nano-hydroxyapatite, or n-Ha, Boka is designed to make the ingredient conversation easier while giving patients a modern daily toothpaste experience that feels elevated, approachable, and easy to stick with.",
         "what_text_2": "",
-        "ingredient_kicker": "Why patients ask about it",
-        "ingredient_heading": "More mindful oral care, without the scare tactics.",
+        "ingredient_kicker": "Why Boka is easy to recommend",
+        "ingredient_heading": "A better daily routine, without the scare tactics.",
         "why_kicker": "Patient demand is changing",
         "why_heading": "Patients are looking for fluoride-free alternatives. They still need a trusted recommendation.",
         "why_text": "More patients are questioning what belongs in their daily oral care routine. They may want to move toward fluoride-free toothpaste, but the alternatives can feel crowded, confusing, and hard to evaluate. Between ingredient claims, online reviews, and social recommendations, patients are often left trying to choose products without a trusted professional point of view.",
