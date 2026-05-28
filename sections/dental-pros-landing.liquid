@@ -1581,7 +1581,7 @@
         </div>
       </div>
 
-      <div class="dp-commission" aria-label="Dental Pro discount tiers">
+      <div class="dp-commission" aria-label="Dental Pro professional pricing offer">
         <div>
           {% if section.settings.commission_kicker != blank %}
             <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
@@ -1594,14 +1594,14 @@
           {% endif %}
         </div>
         <div class="dp-rates">
-          {% for block in section.blocks %}
-            {% if block.type == 'commission_rate' %}
-              <div class="dp-rate" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.label }}</span>
-                <span>{{ block.settings.value }}</span>
-              </div>
-            {% endif %}
-          {% endfor %}
+          <div class="dp-rate">
+            <span>Up to</span>
+            <span>55% off</span>
+          </div>
+          <div class="dp-rate">
+            <span>Simple offer</span>
+            <span>More you buy, more you save</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1749,7 +1749,7 @@
       "type": "textarea",
       "id": "hero_text",
       "label": "Hero body text",
-      "default": "Join the Boka Dental Pros Program to access preferred professional pricing, complimentary samples, and simple education resources for recommending Boka with confidence. Boka is the #1 nano-hydroxyapatite toothpaste brand \u2014 built for patients who want a modern, elevated daily oral care routine."
+      "default": "Patients are asking more questions about fluoride-free oral care. The Boka Dental Pros Program helps dental professionals answer those questions with preferred practice pricing, complimentary samples, and simple education resources for patient conversations around n-Ha and daily oral care."
     },
     {
       "type": "image_picker",
@@ -1824,13 +1824,13 @@
       "type": "textarea",
       "id": "what_text_1",
       "label": "Body text 1",
-      "default": "Boka creates modern oral care designed around daily consistency: fluoride-free n-Ha toothpastes, elevated flavors, and simple routines patients actually want to keep using."
+      "default": "Boka makes fluoride-free toothpaste with nano-hydroxyapatite, also known as n-Ha, in elevated flavors and low-foaming formulas patients actually enjoy using."
     },
     {
       "type": "textarea",
       "id": "what_text_2",
       "label": "Body text 2",
-      "default": "Nano-hydroxyapatite, or n-Ha, is a biomimetic mineral form of hydroxyapatite, the mineral that naturally makes up the majority of enamel and dentin. Boka makes that science approachable through formulas, packaging, and education your team can explain clearly."
+      "default": "The goal is simple: help patients build a daily oral care routine they want to keep. Boka makes the science approachable through formulas, packaging, samples, and education your team can explain clearly."
     },
     {
       "type": "text",
@@ -1842,7 +1842,7 @@
       "type": "html",
       "id": "ingredient_heading",
       "label": "Ingredient card heading",
-      "default": "A better-feeling daily routine, without scare tactics."
+      "default": "A modern fluoride-free alternative patients can understand."
     },
     {
       "type": "header",
@@ -1858,13 +1858,13 @@
       "type": "html",
       "id": "why_heading",
       "label": "Heading",
-      "default": "Patients are looking for more mindful oral care. Your team needs a clear <span class=\"dp-em\">answer</span>."
+      "default": "Patients are asking for fluoride-free options. Your team needs a clear <span class=\"dp-em\">answer</span>."
     },
     {
       "type": "textarea",
       "id": "why_text",
       "label": "Body text",
-      "default": "More patients are asking about fluoride-free toothpaste, low-foaming formulas, and ingredients they can understand. Boka gives dental professionals a patient-friendly option to discuss chairside without turning the conversation into a complicated product explanation."
+      "default": "More patients are looking for oral care options that feel modern, ingredient-conscious, and easy to understand. Boka gives hygienists and practice teams a simple way to talk about fluoride-free n-Ha toothpaste without turning the appointment into a complicated product explanation."
     },
     {
       "type": "header",
@@ -1938,25 +1938,25 @@
       "type": "textarea",
       "id": "how_text",
       "label": "Body text",
-      "default": "Apply for a Dental Pro account, get approved, choose sample flavors, and begin ordering qualifying products at professional pricing. The program is designed to make Boka easier to try, stock, and recommend."
+      "default": "Apply for a Dental Pro account, get approved, request sample support where eligible, and begin ordering qualifying products at professional pricing."
     },
     {
       "type": "text",
       "id": "commission_kicker",
       "label": "Commission eyebrow",
-      "default": "Dental Pro Discount Tiers"
+      "default": "Professional pricing"
     },
     {
       "type": "html",
       "id": "commission_heading",
       "label": "Commission heading",
-      "default": "Save more as your qualifying practice orders grow."
+      "default": "Save up to 55% on qualifying practice orders."
     },
     {
       "type": "textarea",
       "id": "commission_text",
       "label": "Commission body text",
-      "default": "Use your Dental Pro discount to stock your office, support patient recommendations, or keep Boka available for your team and customers. Final tier eligibility may vary by account type, order volume, and program requirements."
+      "default": "Dental Pro pricing is designed to support practice stocking, team use, sampling, and patient recommendations. The more you buy, the more you save. Final pricing and eligibility may vary by account type, order volume, and program requirements."
     },
     {
       "type": "header",
@@ -1978,7 +1978,7 @@
       "type": "textarea",
       "id": "b2b_text",
       "label": "Body text",
-      "default": "Approved Dental Pro accounts can access exclusive B2B pricing on qualifying products, with discount tiers designed to support office stocking, team use, sampling, and patient-facing recommendations. That means your practice can meet patient demand while improving product economics versus standard retail purchasing."
+      "default": "Approved Dental Pro accounts can access preferred pricing on qualifying Boka products, making it easier to stock samples, support patient recommendations, and improve product economics compared with buying through standard retail channels."
     },
     {
       "type": "text",
@@ -2018,13 +2018,13 @@
       "type": "text",
       "id": "testimonials_kicker",
       "label": "Eyebrow",
-      "default": "Professional proof"
+      "default": "Dental Advisory Committee"
     },
     {
       "type": "html",
       "id": "testimonials_heading",
       "label": "Heading",
-      "default": "Recommended by dental professionals who care about the daily routine."
+      "default": "Guidance from dental professionals who understand the chairside conversation."
     },
     {
       "type": "header",
@@ -2046,7 +2046,7 @@
       "type": "textarea",
       "id": "form_text",
       "label": "Body text",
-      "default": "Complete the application to request Dental Pro access. Once approved, your practice can unlock preferred professional pricing, sample options, and education resources for patient conversations."
+      "default": "Once approved, your team can access preferred professional pricing, complimentary sample options, and education resources to support patient conversations around fluoride-free n-Ha oral care."
     },
     {
       "type": "text",
@@ -2327,7 +2327,7 @@
     },
     {
       "type": "commission_rate",
-      "name": "Commission rate",
+      "name": "Legacy discount row",
       "settings": [
         {
           "type": "text",
@@ -2550,29 +2550,8 @@
         {
           "type": "process_item",
           "settings": {
-            "title": "Save more as orders grow",
-            "text": "Discount tiers are designed to reward larger qualifying orders and ongoing professional use."
-          }
-        },
-        {
-          "type": "commission_rate",
-          "settings": {
-            "label": "Tier 1",
-            "value": "Up to 44% off"
-          }
-        },
-        {
-          "type": "commission_rate",
-          "settings": {
-            "label": "Tier 2",
-            "value": "Up to 50% off"
-          }
-        },
-        {
-          "type": "commission_rate",
-          "settings": {
-            "label": "Tier 3",
-            "value": "Up to 55% off"
+            "title": "Save more as you order more",
+            "text": "The more your practice buys, the more you can save on qualifying products."
           }
         },
         {
@@ -2658,14 +2637,14 @@
           "type": "faq",
           "settings": {
             "question": "How do Dental Pro discounts work?",
-            "answer": "Approved Dental Pro accounts may receive access to exclusive professional pricing on qualifying products. Discount eligibility and tier placement may vary by account type, order volume, and program requirements."
+            "answer": "Approved Dental Pro accounts may receive access to preferred professional pricing on qualifying products, with potential savings up to 55%. Final pricing and eligibility may vary by account type, order volume, and program requirements."
           }
         },
         {
           "type": "faq",
           "settings": {
             "question": "Can my practice make margin on Boka products?",
-            "answer": "Dental Pro pricing is designed to make practice ordering more financially attractive than standard retail purchasing. Exact margin depends on your approved tier, product mix, order volume, and how your practice chooses to use or offer products."
+            "answer": "Dental Pro pricing is designed to make practice ordering more financially attractive than standard retail purchasing. Exact margin depends on your approved pricing, product mix, order volume, and how your practice chooses to use or offer products."
           }
         },
         {
@@ -2693,7 +2672,7 @@
           "type": "faq",
           "settings": {
             "question": "How do I apply?",
-            "answer": "Submit the Dental Pro application form for review. Once approved, you may receive access to professional pricing, account resources, sample options, and eligible B2B discount tiers."
+            "answer": "Submit the Dental Pro application form for review. Once approved, you may receive access to professional pricing, account resources, sample options, and eligible B2B savings."
           }
         }
       ]
