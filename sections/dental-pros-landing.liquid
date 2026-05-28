@@ -1399,87 +1399,86 @@
   </section>
 
   <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
-  <div class="dp-wrap">
-    <div class="dp-solution-header">
-      {% if section.settings.what_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
-      {% endif %}
+    <div class="dp-wrap">
+      <div class="dp-split">
+        <div>
+          {% if section.settings.what_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
+          {% endif %}
 
-      {% if section.settings.what_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
-      {% endif %}
+          {% if section.settings.what_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
+          {% endif %}
 
-      {% if section.settings.what_text_1 != blank %}
-        <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
-      {% endif %}
+          {% if section.settings.what_text_1 != blank %}
+            <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
+          {% endif %}
 
-      {% if section.settings.what_text_2 != blank %}
-        <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
-      {% endif %}
-    </div>
+          {% if section.settings.what_text_2 != blank %}
+            <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
+          {% endif %}
 
-    <div class="dp-solution-grid">
-      <div class="dp-solution-panel">
-        <div class="dp-mini-grid">
-          {% for block in section.blocks %}
-            {% if block.type == 'what_mini_card' %}
-              <div class="dp-mini" {{ block.shopify_attributes }}>
-                {% if block.settings.title != blank %}
-                  <p class="dp-mini__title">{{ block.settings.title }}</p>
-                {% endif %}
-                {% if block.settings.text != blank %}
-                  <p class="dp-mini__copy">{{ block.settings.text }}</p>
-                {% endif %}
-              </div>
-            {% endif %}
-          {% endfor %}
+          <div class="dp-mini-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'what_mini_card' %}
+                <div class="dp-mini" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <p class="dp-mini__title">{{ block.settings.title }}</p>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <p class="dp-mini__copy">{{ block.settings.text }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="dp-card dp-ingredient-card">
+          {% if section.settings.ingredient_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>
+          {% endif %}
+
+          {% if section.settings.ingredient_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>
+          {% endif %}
+
+          <ul class="dp-check-list">
+            {% for block in section.blocks %}
+              {% if block.type == 'ingredient_bullet' %}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
         </div>
       </div>
+      <div class="dp-proof-band" aria-label="Boka Dental Pros core proof points">
+        <div class="dp-proof-grid">
+          
+          <div class="dp-proof-item">
+            <strong>#1 Toothpaste</strong>
+            <span>On Amazon (Growing at Target, Walmart, CVS)</span>
+          </div>
 
-      <div class="dp-card dp-ingredient-card">
-        {% if section.settings.ingredient_kicker != blank %}
-          <span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>
-        {% endif %}
+          <div class="dp-proof-item">
+            <strong>Up to 55% Off</strong>
+            <span>Practice Savings (More you buy, more you save)</span>
+          </div>
 
-        {% if section.settings.ingredient_heading != blank %}
-          <h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>
-        {% endif %}
+          <div class="dp-proof-item">
+            <strong>n-Ha Powered</strong>
+            <span>The Premier Fluoride-Free Alternative</span>
+          </div>
 
-        <ul class="dp-check-list">
-          {% for block in section.blocks %}
-            {% if block.type == 'ingredient_bullet' %}
-              <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+          <div class="dp-proof-item">
+            <strong>Free Samples</strong>
+            <span>Processed Instantly for Approved Teams</span>
+          </div>
 
-    <div class="dp-proof-band" aria-label="Boka Dental Pros core proof points">
-      <div class="dp-proof-grid">
-        <div class="dp-proof-item">
-          <strong>#1 Toothpaste</strong>
-          <span>On Amazon (Growing at Target, Walmart, CVS)</span>
-        </div>
-
-        <div class="dp-proof-item">
-          <strong>Up to 55% Off</strong>
-          <span>Practice Savings (More you buy, more you save)</span>
-        </div>
-
-        <div class="dp-proof-item">
-          <strong>n-Ha Powered</strong>
-          <span>The Premier Fluoride-Free Alternative</span>
-        </div>
-
-        <div class="dp-proof-item">
-          <strong>Free Samples</strong>
-          <span>Processed Instantly for Approved Teams</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist recommended">
     <div class="dp-wrap">
