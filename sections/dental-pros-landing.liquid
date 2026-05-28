@@ -1550,6 +1550,60 @@
     </div>
   </section>
 
+<section class="dp-section" id="how-it-works" aria-label="How the Dental Pros Program works">
+    <div class="dp-wrap">
+      {% if section.settings.how_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+      {% endif %}
+      {% if section.settings.how_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
+      {% endif %}
+      {% if section.settings.how_text != blank %}
+        <p class="dp-copy">{{ section.settings.how_text }}</p>
+      {% endif %}
+
+      <div class="dp-steps">
+        {% for block in section.blocks %}
+          {% if block.type == 'how_step' %}
+            <article class="dp-step" {{ block.shopify_attributes }}>
+              {% if block.settings.number != blank %}
+                <span class="dp-step__num">{{ block.settings.number }}</span>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="dp-step__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-step__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="dp-commission" aria-label="Dental Pro discount tiers">
+        <div>
+          {% if section.settings.commission_kicker != blank %}
+            <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
+          {% endif %}
+          {% if section.settings.commission_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.commission_heading }}</h3>
+          {% endif %}
+          {% if section.settings.commission_text != blank %}
+            <p class="dp-copy dp-commission__copy">{{ section.settings.commission_text }}</p>
+          {% endif %}
+        </div>
+        <div class="dp-rates">
+          {% for block in section.blocks %}
+            {% if block.type == 'commission_rate' %}
+              <div class="dp-rate" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.label }}</span>
+                <span>{{ block.settings.value }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+  </section>
 
   <section class="dp-section dp-b2b" id="practice-economics" aria-label="Boka Pro practice economics">
     <div class="dp-wrap">
@@ -1598,60 +1652,6 @@
               {% endif %}
             {% endfor %}
           </div>
-        </div>
-      </div>
-
-      <div class="dp-wrap">
-      {% if section.settings.how_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
-      {% endif %}
-      {% if section.settings.how_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
-      {% endif %}
-      {% if section.settings.how_text != blank %}
-        <p class="dp-copy">{{ section.settings.how_text }}</p>
-      {% endif %}
-
-      <div class="dp-steps">
-        {% for block in section.blocks %}
-          {% if block.type == 'how_step' %}
-            <article class="dp-step" {{ block.shopify_attributes }}>
-              {% if block.settings.number != blank %}
-                <span class="dp-step__num">{{ block.settings.number }}</span>
-              {% endif %}
-              {% if block.settings.title != blank %}
-                <h3 class="dp-step__title">{{ block.settings.title }}</h3>
-              {% endif %}
-              {% if block.settings.text != blank %}
-                <p class="dp-step__copy">{{ block.settings.text }}</p>
-              {% endif %}
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-
-      <div class="dp-commission" aria-label="Dental Pro discount tiers">
-        <div>
-          {% if section.settings.commission_kicker != blank %}
-            <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
-          {% endif %}
-          {% if section.settings.commission_heading != blank %}
-            <h3 class="dp-h3">{{ section.settings.commission_heading }}</h3>
-          {% endif %}
-          {% if section.settings.commission_text != blank %}
-            <p class="dp-copy dp-commission__copy">{{ section.settings.commission_text }}</p>
-          {% endif %}
-        </div>
-        <div class="dp-rates">
-          {% for block in section.blocks %}
-            {% if block.type == 'commission_rate' %}
-              <div class="dp-rate" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.label }}</span>
-                <span>{{ block.settings.value }}</span>
-              </div>
-            {% endif %}
-          {% endfor %}
         </div>
       </div>
     </div>
