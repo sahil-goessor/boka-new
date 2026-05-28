@@ -1556,6 +1556,9 @@
     },
     "yotpo_reviews_widget_hbzYf6": {
       "type": "yotpo-reviews-widget",
+      "custom_css": [
+        "div#yotpo-app {background-color: white !important;}"
+      ],
       "name": "Yotpo Reviews Widget",
       "settings": {
         "product": "ela-mint-toothpaste",
@@ -1567,7 +1570,7 @@
         "heading_color": "#000000",
         "heading_alignment": "center",
         "heading_spacing": 32,
-        "container_width": 1350,
+        "container_width": 1600,
         "background_color": "#ffffff",
         "padding_top": 0,
         "padding_bottom": 0,
