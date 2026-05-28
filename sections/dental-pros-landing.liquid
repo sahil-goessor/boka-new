@@ -1850,91 +1850,92 @@
     </div>
   </section>
 
-  <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
-    <div class="dp-wrap">
-      <div class="dp-how-pricing__shell">
-        <div class="dp-pricing-intro">
-          <div class="dp-pricing-intro__copy">
-            {% if section.settings.commission_kicker != blank %}
-              <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
-            {% endif %}
+ <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
+  <div class="dp-wrap">
+    <div class="dp-how-pricing__shell">
+      <div class="dp-pricing-intro">
+        <div class="dp-pricing-intro__copy">
+          {% if section.settings.commission_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
+          {% endif %}
 
-            {% if section.settings.commission_heading != blank %}
-              <h2 class="dp-h2">{{ section.settings.commission_heading }}</h2>
-            {% endif %}
+          {% if section.settings.commission_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.commission_heading }}</h2>
+          {% endif %}
 
-            {% if section.settings.commission_text != blank %}
-              <p class="dp-copy">{{ section.settings.commission_text }}</p>
-            {% endif %}
-          </div>
+          {% if section.settings.commission_text != blank %}
+            <p class="dp-copy">{{ section.settings.commission_text }}</p>
+          {% endif %}
         </div>
-          
-          
-        <div class="dp-pricing-benefit-grid" aria-label="Professional pricing benefits">
+      </div>
 
-          <div class="dp-pricing-stat" aria-label="Dental Pro savings">
-            <span>Save up to</span>
-            <strong>55%</strong>
-            <span>on qualifying practice orders</span>
-          </div>
+      <div class="dp-pricing-benefit-grid" aria-label="Professional pricing benefits">
+        <article class="dp-pricing-benefit-card dp-pricing-benefit-card--stat" aria-label="Dental Pro savings">
+          <span class="dp-pricing-benefit-card__eyebrow">Save up to</span>
+          <strong class="dp-pricing-benefit-card__stat">55%</strong>
+          <span class="dp-pricing-benefit-card__caption">On qualifying practice orders</span>
+        </article>
 
-          <div class="dp-pricing-stat">
-            <strong>Better practice economics</strong>
-            <span>Access preferred B2B pricing designed for approved professional accounts and qualifying products.</span>
-          </div>
+        <article class="dp-pricing-benefit-card">
+          <strong>Better practice economics</strong>
+          <span>Access preferred B2B pricing designed for approved professional accounts and qualifying products.</span>
+        </article>
 
-          <div class="dp-pricing-benefit">
-            <strong>Buy more, save more</strong>
-            <span>Greater savings may be available as qualifying order volume grows.</span>
-          </div>
+        <article class="dp-pricing-benefit-card">
+          <strong>Buy more, save more</strong>
+          <span>Greater savings may be available as qualifying order volume grows.</span>
+        </article>
 
-          <div class="dp-pricing-benefit">
-            <strong>Stock, sample, recommend</strong>
-            <span>Make Boka easier to keep available for your team, your office, and patient conversations.</span>
-          </div>
-        </div>
+        <article class="dp-pricing-benefit-card">
+          <strong>Stock, sample, recommend</strong>
+          <span>Make Boka easier to keep available for your team, your office, and patient conversations.</span>
+        </article>
+      </div>
 
-        <p class="dp-pricing-fine">
-          Final pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
-        </p>
+      <p class="dp-pricing-fine">
+        Final pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
+      </p>
 
-        <div class="dp-pricing-divider" aria-hidden="true"></div>
+      <div class="dp-pricing-divider" aria-hidden="true"></div>
 
-        <div class="dp-how-compact__header">
-          <div class="dp-how-compact__title">
-            {% if section.settings.how_kicker != blank %}
-              <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
-            {% endif %}
-            {% if section.settings.how_heading != blank %}
-              <h3 class="dp-h3">{{ section.settings.how_heading }}</h3>
-            {% endif %}
-          </div>
+      <div class="dp-how-compact__header">
+        <div class="dp-how-compact__title">
+          {% if section.settings.how_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+          {% endif %}
 
-          {% if section.settings.how_text != blank %}
-            <p class="dp-copy">{{ section.settings.how_text }}</p>
+          {% if section.settings.how_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.how_heading }}</h3>
           {% endif %}
         </div>
 
-        <div class="dp-how-steps-compact" aria-label="How it works steps">
-          {% for block in section.blocks %}
-            {% if block.type == 'how_step' %}
-              <article class="dp-how-step-compact" {{ block.shopify_attributes }}>
-                {% if block.settings.number != blank %}
-                  <span class="dp-how-step-compact__num">{{ block.settings.number }}</span>
-                {% endif %}
-                {% if block.settings.title != blank %}
-                  <h4 class="dp-how-step-compact__title">{{ block.settings.title }}</h4>
-                {% endif %}
-                {% if block.settings.text != blank %}
-                  <p class="dp-how-step-compact__copy">{{ block.settings.text }}</p>
-                {% endif %}
-              </article>
-            {% endif %}
-          {% endfor %}
-        </div>
+        {% if section.settings.how_text != blank %}
+          <p class="dp-copy">{{ section.settings.how_text }}</p>
+        {% endif %}
+      </div>
+
+      <div class="dp-how-steps-compact" aria-label="How it works steps">
+        {% for block in section.blocks %}
+          {% if block.type == 'how_step' %}
+            <article class="dp-how-step-compact" {{ block.shopify_attributes }}>
+              {% if block.settings.number != blank %}
+                <span class="dp-how-step-compact__num">{{ block.settings.number }}</span>
+              {% endif %}
+
+              {% if block.settings.title != blank %}
+                <h4 class="dp-how-step-compact__title">{{ block.settings.title }}</h4>
+              {% endif %}
+
+              {% if block.settings.text != blank %}
+                <p class="dp-how-step-compact__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
     <div class="dp-wrap">
