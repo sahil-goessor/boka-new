@@ -882,6 +882,194 @@
     white-space: nowrap;
   }
 
+
+  .dp-pricing-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
+    padding: clamp(30px, 5vw, 62px);
+    background:
+      radial-gradient(circle at 92% 12%, rgba(211, 231, 192, 0.34), transparent 34%),
+      radial-gradient(circle at 10% 90%, rgba(249, 229, 219, 0.18), transparent 30%),
+      rgba(250, 250, 245, 0.88);
+    border: 1px solid rgba(115, 124, 91, 0.16);
+    box-shadow: 0 26px 76px rgba(34, 39, 33, 0.08);
+    backdrop-filter: blur(14px);
+  }
+
+  .dp-pricing-panel::after {
+    content: "";
+    position: absolute;
+    right: -140px;
+    bottom: -160px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(115, 124, 91, 0.18);
+    border-radius: 48% 52% 44% 56%;
+    transform: rotate(18deg);
+    pointer-events: none;
+  }
+
+  .dp-pricing__top {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.72fr);
+    gap: clamp(28px, 5vw, 68px);
+    align-items: stretch;
+  }
+
+  .dp-pricing__content {
+    max-width: 720px;
+  }
+
+  .dp-pricing__content .dp-copy {
+    max-width: 700px;
+  }
+
+  .dp-pricing__copy-secondary {
+    margin-top: -10px;
+  }
+
+  .dp-pricing__cta {
+    margin-top: 26px;
+  }
+
+  .dp-pricing__highlight {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    border-radius: 28px;
+    padding: clamp(26px, 4vw, 42px);
+    background:
+      radial-gradient(circle at 86% 8%, rgba(250, 250, 245, 0.20), transparent 36%),
+      linear-gradient(135deg, #737c5b 0%, #5f684d 100%);
+    color: var(--dp-white);
+    box-shadow: 0 24px 68px rgba(34, 39, 33, 0.13);
+  }
+
+  .dp-pricing__highlight::after {
+    content: "";
+    position: absolute;
+    right: -74px;
+    bottom: -82px;
+    width: 210px;
+    height: 210px;
+    border: 1px solid rgba(250, 250, 245, 0.20);
+    border-radius: 44% 56% 42% 58%;
+    transform: rotate(22deg);
+  }
+
+  .dp-pricing__label {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 22px;
+    border-radius: 999px;
+    padding: 8px 14px;
+    background: rgba(250, 250, 245, 0.14);
+    color: rgba(250, 250, 245, 0.90);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .dp-pricing__stat {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 14px;
+    color: var(--dp-pale);
+    font-family: var(--dp-font-serif);
+    font-size: clamp(56px, 7vw, 92px);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.9;
+  }
+
+  .dp-pricing__stat span {
+    display: block;
+    color: rgba(250, 250, 245, 0.82);
+    font-family: var(--dp-font-sans);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .dp-pricing__highlight-copy {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: rgba(250, 250, 245, 0.82) !important;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .dp-pricing__tiers {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: clamp(26px, 4vw, 42px);
+  }
+
+  .dp-pricing__tier {
+    border: 1px solid rgba(34, 39, 33, 0.09);
+    border-radius: 22px;
+    padding: 20px 18px;
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 14px 42px rgba(34, 39, 33, 0.045);
+  }
+
+  .dp-pricing__tier-label {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: 12px;
+    border-radius: 999px;
+    padding: 7px 11px;
+    background: var(--dp-frost);
+    color: var(--dp-forest);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .dp-pricing__tier-value {
+    display: block;
+    color: var(--dp-ink);
+    font-family: var(--dp-font-serif);
+    font-size: clamp(28px, 2.8vw, 42px);
+    font-style: italic;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  .dp-pricing__benefits {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .dp-pricing__benefits .dp-process__item {
+    min-height: 100%;
+  }
+
   .dp-quote-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1323,6 +1511,41 @@
     }
   }
 
+
+  @media (max-width: 990px) {
+    .dp-pricing__top,
+    .dp-pricing__benefits {
+      grid-template-columns: 1fr;
+    }
+
+    .dp-pricing__tiers {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 680px) {
+    .dp-pricing-panel,
+    .dp-pricing__highlight {
+      border-radius: 26px;
+    }
+
+    .dp-pricing-panel {
+      padding: 32px 22px;
+    }
+
+    .dp-pricing__tiers {
+      grid-template-columns: 1fr;
+    }
+
+    .dp-pricing__tier {
+      padding: 18px;
+    }
+
+    .dp-pricing__stat {
+      font-size: 58px;
+    }
+  }
+
 </style>
 
 
@@ -1550,7 +1773,89 @@
     </div>
   </section>
 
-<section class="dp-section" id="how-it-works" aria-label="How the Dental Pros Program works">
+  <section class="dp-section dp-b2b" id="practice-economics" aria-label="Boka Pro professional pricing">
+    <div class="dp-wrap">
+      <div class="dp-pricing-panel">
+        <div class="dp-pricing__top">
+          <div class="dp-pricing__content">
+            {% if section.settings.b2b_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.b2b_kicker }}</span>
+            {% endif %}
+
+            {% if section.settings.b2b_heading != blank %}
+              <h2 class="dp-h2">{{ section.settings.b2b_heading }}</h2>
+            {% endif %}
+
+            {% if section.settings.b2b_text != blank %}
+              <p class="dp-copy">{{ section.settings.b2b_text }}</p>
+            {% endif %}
+
+            {% if section.settings.commission_text != blank %}
+              <p class="dp-copy dp-pricing__copy-secondary">{{ section.settings.commission_text }}</p>
+            {% endif %}
+
+            <div class="dp-btn-row dp-pricing__cta">
+              {% if section.settings.b2b_primary_label != blank %}
+                <a class="dp-btn dp-btn--primary" href="{{ section.settings.b2b_primary_link }}">
+                  {{ section.settings.b2b_primary_label }}
+                </a>
+              {% endif %}
+              {% if section.settings.b2b_secondary_label != blank %}
+                <a class="dp-btn" href="{{ section.settings.b2b_secondary_link }}">
+                  {{ section.settings.b2b_secondary_label }}
+                </a>
+              {% endif %}
+            </div>
+
+            {% if section.settings.b2b_note != blank %}
+              <p class="dp-note">{{ section.settings.b2b_note }}</p>
+            {% endif %}
+          </div>
+
+          <div class="dp-pricing__highlight" aria-label="Dental Pro maximum savings">
+            <div>
+              {% if section.settings.commission_kicker != blank %}
+                <span class="dp-pricing__label">{{ section.settings.commission_kicker }}</span>
+              {% endif %}
+              <p class="dp-pricing__stat">55% off <span>Up to professional savings</span></p>
+            </div>
+
+            {% if section.settings.commission_heading != blank %}
+              <p class="dp-pricing__highlight-copy">{{ section.settings.commission_heading }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="dp-pricing__tiers" aria-label="Dental Pro discount tiers">
+          {% for block in section.blocks %}
+            {% if block.type == 'commission_rate' %}
+              <div class="dp-pricing__tier" {{ block.shopify_attributes }}>
+                <span class="dp-pricing__tier-label">{{ block.settings.label }}</span>
+                <span class="dp-pricing__tier-value">{{ block.settings.value }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="dp-pricing__benefits" aria-label="How practices can use Dental Pro pricing">
+          {% for block in section.blocks %}
+            {% if block.type == 'process_item' %}
+              <div class="dp-process__item" {{ block.shopify_attributes }}>
+                {% if block.settings.title != blank %}
+                  <p class="dp-process__title">{{ block.settings.title }}</p>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <p class="dp-process__copy">{{ block.settings.text }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section" id="how-it-works" aria-label="How the Dental Pros Program works">
     <div class="dp-wrap">
       {% if section.settings.how_kicker != blank %}
         <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
@@ -1578,82 +1883,6 @@
             </article>
           {% endif %}
         {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="dp-section dp-b2b" id="practice-economics" aria-label="Boka Pro practice economics">
-    <div class="dp-wrap">
-      <div class="dp-b2b-box">
-        <div>
-          {% if section.settings.b2b_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.b2b_kicker }}</span>
-          {% endif %}
-          {% if section.settings.b2b_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.b2b_heading }}</h2>
-          {% endif %}
-          {% if section.settings.b2b_text != blank %}
-            <p class="dp-copy">{{ section.settings.b2b_text }}</p>
-          {% endif %}
-
-          <div class="dp-btn-row">
-            {% if section.settings.b2b_primary_label != blank %}
-              <a class="dp-btn dp-btn--primary" href="{{ section.settings.b2b_primary_link }}">
-                {{ section.settings.b2b_primary_label }}
-              </a>
-            {% endif %}
-            {% if section.settings.b2b_secondary_label != blank %}
-              <a class="dp-btn" href="{{ section.settings.b2b_secondary_link }}">
-                {{ section.settings.b2b_secondary_label }}
-              </a>
-            {% endif %}
-          </div>
-
-          {% if section.settings.b2b_note != blank %}
-            <p class="dp-note">{{ section.settings.b2b_note }}</p>
-          {% endif %}
-        </div>
-
-        <div>
-          <div class="dp-process">
-            {% for block in section.blocks %}
-              {% if block.type == 'process_item' %}
-                <div class="dp-process__item" {{ block.shopify_attributes }}>
-                  {% if block.settings.title != blank %}
-                    <p class="dp-process__title">{{ block.settings.title }}</p>
-                  {% endif %}
-                  {% if block.settings.text != blank %}
-                    <p class="dp-process__copy">{{ block.settings.text }}</p>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-
-      <div class="dp-commission" aria-label="Dental Pro discount tiers">
-        <div>
-          {% if section.settings.commission_kicker != blank %}
-            <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
-          {% endif %}
-          {% if section.settings.commission_heading != blank %}
-            <h3 class="dp-h3">{{ section.settings.commission_heading }}</h3>
-          {% endif %}
-          {% if section.settings.commission_text != blank %}
-            <p class="dp-copy dp-commission__copy">{{ section.settings.commission_text }}</p>
-          {% endif %}
-        </div>
-        <div class="dp-rates">
-          {% for block in section.blocks %}
-            {% if block.type == 'commission_rate' %}
-              <div class="dp-rate" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.label }}</span>
-                <span>{{ block.settings.value }}</span>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
       </div>
     </div>
   </section>
