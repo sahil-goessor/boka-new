@@ -1973,11 +1973,24 @@
           </ul>
         </div>
 
+        <div class="dp-form">
+          {% assign app_blocks = section.blocks | where: 'type', '@app' %}
 
-       <div class="dp-form">
+          {% if app_blocks.size > 0 %}
+            {% for block in app_blocks %}
+              {% render block %}
+            {% endfor %}
+          {% else %}
+            <p class="dp-copy">
+              Add your form app block here in Theme Editor and use Form ID 103662.
+            </p>
+          {% endif %}
+        </div>
+
+      <div class="dp-form">
           <div class="klaviyo-form-VvZypp"></div>
         </div>
-  
+        
       </div>
     </div>
   </section>
