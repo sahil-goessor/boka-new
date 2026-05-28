@@ -785,145 +785,154 @@
   }
 
   .dp-how-pricing__shell {
+    position: relative;
+    overflow: hidden;
     border-radius: 34px;
-    padding: clamp(30px, 5vw, 64px);
+    padding: clamp(32px, 5vw, 68px);
     background:
-      radial-gradient(circle at 88% 8%, rgba(211, 231, 192, 0.34), transparent 30%),
-      radial-gradient(circle at 12% 92%, rgba(249, 229, 219, 0.24), transparent 28%),
-      rgba(250, 250, 245, 0.82);
+      radial-gradient(circle at 88% 10%, rgba(211, 231, 192, 0.38), transparent 28%),
+      radial-gradient(circle at 10% 92%, rgba(249, 229, 219, 0.30), transparent 26%),
+      rgba(250, 250, 245, 0.84);
     border: 1px solid rgba(115, 124, 91, 0.14);
-    box-shadow: 0 24px 74px rgba(34, 39, 33, 0.07);
+    box-shadow: 0 28px 90px rgba(34, 39, 33, 0.075);
     backdrop-filter: blur(12px);
   }
 
   .dp-pricing-intro {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.36fr);
-    gap: clamp(28px, 5vw, 70px);
+    grid-template-columns: minmax(0, 0.78fr) minmax(260px, 0.22fr);
+    gap: clamp(24px, 5vw, 72px);
     align-items: end;
+    margin-bottom: clamp(28px, 4vw, 46px);
   }
 
   .dp-pricing-intro__copy {
-    max-width: 820px;
+    max-width: 850px;
   }
 
-  .dp-pricing-intro__copy .dp-copy {
-    max-width: 720px;
+  .dp-pricing-intro .dp-copy {
+    max-width: 760px;
     margin-bottom: 0;
   }
 
-  .dp-pricing-stat {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(115, 124, 91, 0.18);
-    border-radius: 28px;
-    padding: clamp(24px, 3.2vw, 38px);
-    background:
-      radial-gradient(circle at 100% 0%, rgba(191, 214, 165, 0.42), transparent 36%),
-      rgba(255, 255, 255, 0.62);
-    box-shadow: 0 18px 54px rgba(34, 39, 33, 0.055);
+  .dp-pricing-benefit-grid {
+    display: grid;
+    grid-template-columns: 1.1fr repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
   }
 
-  .dp-pricing-stat::after {
+  .dp-pricing-benefit-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 178px;
+    border: 1px solid rgba(34, 39, 33, 0.10);
+    border-radius: 22px;
+    padding: clamp(18px, 2.2vw, 26px);
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 18px 54px rgba(34, 39, 33, 0.055);
+    backdrop-filter: blur(10px);
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .dp-pricing-benefit-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(115, 124, 91, 0.20);
+    box-shadow: 0 24px 68px rgba(34, 39, 33, 0.08);
+  }
+
+  .dp-pricing-benefit-card strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--dp-ink);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .dp-pricing-benefit-card span {
+    display: block;
+    color: rgba(34, 39, 33, 0.66);
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .dp-pricing-benefit-card--stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-color: rgba(115, 124, 91, 0.20);
+    background:
+      radial-gradient(circle at 90% 10%, rgba(211, 231, 192, 0.34), transparent 34%),
+      rgba(255, 255, 255, 0.70);
+  }
+
+  .dp-pricing-benefit-card--stat::after {
     content: "";
     position: absolute;
-    right: -78px;
-    bottom: -90px;
-    width: 210px;
-    height: 210px;
+    right: -90px;
+    bottom: -105px;
+    width: 230px;
+    height: 230px;
     border: 1px solid rgba(115, 124, 91, 0.18);
     border-radius: 48% 52% 44% 56%;
     transform: rotate(18deg);
     pointer-events: none;
   }
 
-  .dp-pricing-stat span {
+  .dp-pricing-benefit-card__eyebrow,
+  .dp-pricing-benefit-card__caption {
     position: relative;
     z-index: 1;
-    display: block;
-    color: rgba(34, 39, 33, 0.62);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    line-height: 1.4;
+    color: rgba(34, 39, 33, 0.62) !important;
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.25 !important;
     text-transform: uppercase;
   }
 
-  .dp-pricing-stat strong {
+  .dp-pricing-benefit-card__stat {
     position: relative;
     z-index: 1;
-    display: block;
-    margin: 10px 0;
-    color: var(--dp-forest);
-    font-family: var(--dp-font-serif);
-    font-size: clamp(68px, 8.5vw, 122px);
+    margin: 8px 0 2px !important;
+    color: var(--dp-forest) !important;
+    font-family: var(--dp-font-serif) !important;
+    font-size: clamp(68px, 7vw, 110px) !important;
     font-style: italic;
-    font-weight: 400;
-    letter-spacing: -0.08em;
-    line-height: 0.82;
+    font-weight: 400 !important;
+    letter-spacing: -0.075em !important;
+    line-height: 0.82 !important;
+    text-transform: none !important;
   }
 
-  .dp-pricing-benefit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    margin-top: clamp(24px, 4vw, 42px);
-  }
-
-  .dp-pricing-benefit {
-    border: 1px solid rgba(34, 39, 33, 0.09);
-    border-radius: 20px;
-    padding: clamp(18px, 2.2vw, 24px);
-    background: rgba(255, 255, 255, 0.62);
-    box-shadow: 0 14px 42px rgba(34, 39, 33, 0.045);
-    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
-  }
-
-  .dp-pricing-benefit:hover {
-    transform: translateY(-2px);
-    border-color: rgba(115, 124, 91, 0.18);
-    box-shadow: 0 22px 58px rgba(34, 39, 33, 0.07);
-  }
-
-  .dp-pricing-benefit strong {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--dp-ink);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    line-height: 1.3;
-    text-transform: uppercase;
-  }
-
-  .dp-pricing-benefit span {
-    display: block;
-    color: rgba(34, 39, 33, 0.66);
-    font-size: 13px;
-    line-height: 1.55;
+  .dp-pricing-fine {
+    margin: 14px 0 0;
+    color: rgba(34, 39, 33, 0.48);
+    font-size: 11px;
+    line-height: 1.5;
   }
 
   .dp-pricing-divider {
+    width: 100%;
     height: 1px;
-    margin: clamp(28px, 4vw, 46px) 0;
-    background: rgba(115, 124, 91, 0.16);
+    margin: clamp(34px, 5vw, 58px) 0;
+    background: rgba(34, 39, 33, 0.10);
   }
 
   .dp-how-compact__header {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.58fr);
+    gap: clamp(22px, 4vw, 58px);
     align-items: end;
-    margin-bottom: 22px;
+    margin-bottom: clamp(24px, 3vw, 38px);
   }
 
   .dp-how-compact__header .dp-copy {
-    max-width: 620px;
+    max-width: 540px;
     margin-bottom: 0;
-  }
-
-  .dp-how-compact__title {
-    max-width: 520px;
   }
 
   .dp-how-compact__title .dp-h3 {
@@ -937,28 +946,36 @@
   .dp-how-steps-compact {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
+    gap: 14px;
   }
 
   .dp-how-step-compact {
+    position: relative;
     border: 1px solid rgba(34, 39, 33, 0.09);
     border-radius: 20px;
-    padding: 18px;
-    background: rgba(255, 255, 255, 0.58);
-    box-shadow: 0 14px 42px rgba(34, 39, 33, 0.04);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 14px 42px rgba(34, 39, 33, 0.045);
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .dp-how-step-compact:hover {
+    transform: translateY(-2px);
+    border-color: rgba(115, 124, 91, 0.18);
+    box-shadow: 0 22px 58px rgba(34, 39, 33, 0.07);
   }
 
   .dp-how-step-compact__num {
     display: grid;
     place-items: center;
-    width: 38px;
-    height: 38px;
-    margin-bottom: 16px;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
     border-radius: 999px;
     background: var(--dp-frost);
     color: var(--dp-forest);
     font-family: var(--dp-font-serif);
-    font-size: 17px;
+    font-size: 18px;
     font-style: italic;
     line-height: 1;
   }
@@ -966,611 +983,35 @@
   .dp-how-step-compact__title {
     margin: 0 0 8px;
     color: var(--dp-ink);
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     letter-spacing: -0.02em;
-    line-height: 1.18;
+    line-height: 1.2;
   }
 
   .dp-how-step-compact__copy {
     margin: 0;
     color: rgba(34, 39, 33, 0.66);
     font-size: 13px;
-    line-height: 1.55;
+    line-height: 1.58;
   }
 
-  .dp-pricing-fine {
-    margin: 18px 0 0;
-    color: rgba(34, 39, 33, 0.48);
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .dp-commission {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 34px;
-    margin-top: 34px;
-    border-radius: 34px;
-    padding: clamp(34px, 5vw, 64px);
-    background:
-      radial-gradient(circle at 90% 20%, rgba(211, 231, 192, 0.22), transparent 36%),
-      linear-gradient(135deg, #737c5b 0%, #5f684d 100%);
-    color: var(--dp-white);
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 30px 80px rgba(34, 39, 33, 0.13);
-  }
-
-  .dp-commission::after {
-    content: "";
-    position: absolute;
-    right: -120px;
-    bottom: -140px;
-    width: 340px;
-    height: 340px;
-    border-radius: 48% 52% 44% 56%;
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    transform: rotate(18deg);
-  }
-
-  .dp-commission__copy {
-  max-width: 620px;
-  margin-bottom: 0;
-  color: rgba(250, 250, 245, 0.82) !important;
-  font-size: clamp(16px, 1.25vw, 19px);
-  font-weight: 300;
-  line-height: 1.65;
-  }
-
-  .dp-commission > div:first-child {
-  position: relative;
-  z-index: 1;
-  max-width: 680px;
-  }
-
-  .dp-commission .dp-h3 {
-    margin-bottom: 14px;
-    color: var(--dp-cream);
-    font-family: var(--dp-font-sans);
-    font-size: clamp(30px, 3vw, 46px);
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-  }
-
-  .dp-rates {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  position: relative;
-  z-index: 1;
-  max-width: 100%;
-  }
-
-  .dp-rate {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 0.66fr);
-  align-items: center;
-  gap: 24px;
-  border: 1px solid rgba(250, 250, 245, 0.22);
-  border-radius: 20px;
-  padding: 20px 26px;
-  background: rgba(250, 250, 245, 0.10);
-  box-shadow: inset 0 1px 0 rgba(250, 250, 245, 0.08);
-  }
-
-  .dp-rate span:first-child {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    min-height: 34px;
-    border-radius: 999px;
-    padding: 8px 14px;
-    background: rgba(250, 250, 245, 0.14);
-    color: rgba(250, 250, 245, 0.92);
-    font-family: var(--dp-font-sans);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-
-  .dp-rate span:last-child {
-    color: var(--dp-pale);
-    font-family: var(--dp-font-serif);
-    font-size: clamp(32px, 3.2vw, 50px);
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    text-align: left;
-    white-space: nowrap;
-  }
-
-  .dp-quote-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 40px;
-  }
-
-  .dp-quote {
-    padding: clamp(24px, 3vw, 38px);
-  }
-
-  .dp-quote__text {
-    margin: 0 0 24px;
-    color: rgba(34, 39, 33, 0.82);
-    font-family: var(--dp-font-serif);
-    font-size: 20px;
-    font-style: italic;
-    line-height: 1.5;
-    letter-spacing: -0.025em;
-  }
-
-  .dp-quote__name {
-    margin: 0 0 4px;
-    color: var(--dp-forest);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .dp-quote__role {
-    margin: 0;
-    color: rgba(34, 39, 33, 0.56);
-    font-size: 12px;
-  }
-
-  .dp-em,
-  .dp-step__num,
-  .dp-process__item::before,
-  .dp-info-card__icon,
-  .dp-advisor__avatar,
-  .dp-rate span:last-child,
-  .dp-quote__text {
-    font-family: var(--dp-font-serif);
-  }
-
-  .dp-form-shell {
-    display: grid;
-    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-    gap: clamp(30px, 5vw, 72px);
-    align-items: start;
-  }
-
-  .dp-form {
-    border-radius: 34px;
-    padding: clamp(24px, 4vw, 46px);
-  }
-
-  .dp-form :where(input, select, textarea, button, label, p, span, a, div) {
-    font-family: var(--dp-font-sans) !important;
-  }
-
-  .dp-fields {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .dp-field--full {
-    grid-column: 1 / -1;
-  }
-
-  .dp-label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--dp-forest);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.11em;
-    text-transform: uppercase;
-  }
-
-  .dp-input,
-  .dp-select,
-  .dp-textarea {
-    width: 100%;
-    border: 1px solid rgba(34, 39, 33, 0.18);
-    border-radius: 14px;
-    padding: 14px 15px;
-    background: var(--dp-white);
-    color: var(--dp-ink);
-    font-family: var(--dp-font-sans);
-    font-size: 15px;
-    outline: none;
-    transition: border-color 160ms ease, box-shadow 160ms ease;
-    -webkit-appearance: none;
-  }
-
-  .dp-textarea {
-    min-height: 108px;
-    resize: vertical;
-  }
-
-  .dp-input:focus,
-  .dp-select:focus,
-  .dp-textarea:focus {
-    border-color: var(--dp-forest);
-    box-shadow: 0 0 0 4px rgba(115, 124, 91, 0.12);
-  }
-
-  .dp-checkbox {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin: 22px 0 28px;
-    color: rgba(34, 39, 33, 0.66);
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  .dp-checkbox input {
-    flex: 0 0 18px;
-    width: 18px;
-    height: 18px;
-    margin-top: 2px;
-    accent-color: var(--dp-forest);
-  }
-
-  .dp-form .dp-btn {
-    width: 100%;
-  }
-
-  .dp-form__fine {
-    margin: 14px 0 0;
-    color: rgba(34, 39, 33, 0.48);
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  .dp-faq .dp-wrap {
-    padding: clamp(28px, 4vw, 54px);
-    border-radius: 34px;
-    background: rgba(211, 231, 192, 0.36);
-    border: 1px solid rgba(115, 124, 91, 0.14);
-  }
-
-  .dp-faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 18px;
-    margin-top: 38px;
-  }
-
-  .dp-faq-item {
-    border-top: 1px solid rgba(34, 39, 33, 0.14);
-    padding-top: 20px;
-  }
-
-  .dp-faq-item h3 {
-    margin: 0 0 8px;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-  }
-
-  .dp-faq-item p {
-    margin: 0;
-    color: rgba(34, 39, 33, 0.66);
-    font-size: 14px;
-    line-height: 1.62;
-  }
-
-  .dp-final {
-    position: relative;
-    padding: clamp(64px, 7vw, 104px) 0;
-    background: var(--dp-cream);
-    color: var(--dp-ink);
-    text-align: center;
-  }
-
-  .dp-final .dp-wrap {
-    max-width: 900px;
-    padding: clamp(34px, 5vw, 64px);
-    border: 1px solid rgba(115, 124, 91, 0.16);
-    border-radius: 34px;
-    background: rgba(255, 255, 255, 0.58);
-    box-shadow: 0 28px 90px rgba(34, 39, 33, 0.08);
-    backdrop-filter: blur(14px);
-  }
-
-  .dp-final .dp-copy {
-    margin-inline: auto;
-    color: rgba(34, 39, 33, 0.68);
-  }
-
-  .dp-final .dp-btn--light {
-    border-color: var(--dp-forest);
-    background: var(--dp-forest);
-    color: var(--dp-white);
-  }
-
-  .dp-final .dp-btn--light:hover {
-    border-color: var(--dp-ink);
-    background: var(--dp-ink);
-    color: var(--dp-white);
-  }
-
-  @media (max-width: 990px) {
-    .dp-hero__grid,
-    .dp-split,
-    .dp-split--reverse,
-    .dp-b2b-box,
-    .dp-form-shell,
-    .dp-commission {
-      grid-template-columns: 1fr;
+  @media (max-width: 1100px) {
+    .dp-pricing-benefit-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .dp-hero__media-card,
-    .dp-hero__image {
-      min-height: 430px;
-      height: 430px;
-    }
-
-    .dp-strip__grid,
-    .dp-card-grid,
-    .dp-steps {
+    .dp-how-steps-compact {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-
-  @media (max-width: 990px) {
-    .dp-solution-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
 
   @media (max-width: 990px) {
     .dp-pricing-intro,
     .dp-how-compact__header {
       grid-template-columns: 1fr;
-      display: grid;
-      align-items: start;
-    }
-
-    .dp-pricing-benefit-grid,
-    .dp-how-steps-compact {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-
-  @media (max-width: 680px) {
-    .dp-wrap {
-      width: min(100% - 28px, var(--dp-max));
-    }
-
-    .dp-h1 {
-      font-size: clamp(42px, 15vw, 64px);
-    }
-
-    .dp-h2 {
-      line-height: 1.04;
-    }
-
-    .dp-copy {
-      line-height: 1.62;
-    }
-
-    .dp-btn-row,
-    .dp-btn {
-      width: 100%;
-    }
-
-    .dp-hero {
-      padding-top: 42px;
-      padding-bottom: 86px;
-    }
-
-    .dp-hero + .dp-b2b {
-      margin-top: -54px;
-      padding-bottom: 54px;
-    }
-
-    .dp-hero__media-card,
-    .dp-hero__image {
-      min-height: 360px;
-      height: 360px;
-      border-radius: 26px;
-    }
-
-    .dp-hero__image {
-      padding: 14px;
-    }
-
-    .dp-logo-mark {
-      font-size: 34px;
-    }
-
-    .dp-hero__note {
-      position: static;
-      width: auto;
-      margin: 14px;
-    }
-
-    .dp-section {
-      padding: 56px 0;
-    }
-
-    .dp-solution-header {
-      margin-bottom: 28px;
-    }
-
-    .dp-b2b-box,
-    .dp-commission,
-    .dp-form,
-    .dp-faq .dp-wrap,
-    .dp-final .dp-wrap {
-      border-radius: 26px;
-    }
-
-    .dp-process__item {
-      padding: 18px 18px 18px 64px;
-    }
-
-    .dp-strip {
-      margin-top: -50px;
-      padding-bottom: 22px;
-    }
-
-    .dp-strip__grid,
-    .dp-card-grid,
-    .dp-mini-grid,
-    .dp-steps,
-    .dp-quote-grid,
-    .dp-fields,
-    .dp-faq-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .dp-strip__cell {
-      min-height: auto;
-      padding: 24px;
-    }
-
-    .dp-final {
-      padding: 56px 0;
-    }
-
-    .dp-final .dp-wrap {
-      width: min(100% - 28px, var(--dp-max));
-      padding: 32px 22px;
-    }
-    .dp-commission {
-  gap: 26px;
-  padding: 32px 22px;
-  }
-
-  .dp-commission .dp-h3 {
-    font-size: 30px;
-  }
-
-  .dp-rate {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 18px;
-  }
-
-  .dp-rate span:last-child {
-    font-size: 34px;
-    white-space: normal;
-  }
-  }
-
-  .dp-proof-band {
-    margin-top: 38px;
-    border-radius: 30px;
-    padding: clamp(22px, 3vw, 34px);
-    background: rgba(250, 250, 245, 0.78);
-    border: 1px solid rgba(115, 124, 91, 0.14);
-    box-shadow: 0 20px 64px rgba(34, 39, 33, 0.055);
-  }
-
-  .dp-proof-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-  }
-
-  .dp-proof-item {
-    border-left: 1px solid rgba(115, 124, 91, 0.22);
-    padding-left: 18px;
-  }
-
-  .dp-proof-item:first-child {
-    border-left: 0;
-    padding-left: 0;
-  }
-
-  .dp-proof-item strong {
-    display: block;
-    margin-bottom: 6px;
-    color: var(--dp-forest);
-    font-size: clamp(22px, 2.6vw, 38px);
-    font-weight: 400;
-    letter-spacing: -0.045em;
-    line-height: 1;
-  }
-
-  .dp-proof-item span {
-    display: block;
-    color: rgba(34, 39, 33, 0.66);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
-    text-transform: uppercase;
-  }
-
-  .dp-disclaimer {
-    margin-top: 14px;
-    color: rgba(34, 39, 33, 0.50);
-    font-size: 11px;
-    line-height: 1.45;
-  }
-
-  @media (max-width: 990px) {
-    .dp-proof-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .dp-proof-item:nth-child(3) {
-      border-left: 0;
-      padding-left: 0;
-    }
-  }
-
-  @media (max-width: 680px) {
-    .dp-proof-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .dp-proof-item,
-    .dp-proof-item:nth-child(3) {
-      border-left: 0;
-      border-top: 1px solid rgba(115, 124, 91, 0.16);
-      padding-top: 14px;
-      padding-left: 0;
-    }
-
-    .dp-proof-item:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-  }
-
-
-  @media (max-width: 680px) {
-    .dp-how-pricing__shell {
-      border-radius: 26px;
-      padding: 30px 18px;
-    }
-
-    .dp-pricing-benefit-grid,
-    .dp-how-steps-compact {
-      grid-template-columns: 1fr;
-    }
-
-    .dp-pricing-stat {
-      border-radius: 24px;
-      padding: 24px 20px;
-    }
-
-    .dp-pricing-stat strong {
-      font-size: 76px;
-    }
-
-    .dp-how-compact__header {
-      gap: 16px;
-    }
-  }
-
 </style>
 
 
@@ -1850,92 +1291,92 @@
     </div>
   </section>
 
- <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
-  <div class="dp-wrap">
-    <div class="dp-how-pricing__shell">
-      <div class="dp-pricing-intro">
-        <div class="dp-pricing-intro__copy">
-          {% if section.settings.commission_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
-          {% endif %}
+  <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
+    <div class="dp-wrap">
+      <div class="dp-how-pricing__shell">
+        <div class="dp-pricing-intro">
+          <div class="dp-pricing-intro__copy">
+            {% if section.settings.commission_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
+            {% endif %}
 
-          {% if section.settings.commission_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.commission_heading }}</h2>
-          {% endif %}
+            {% if section.settings.commission_heading != blank %}
+              <h2 class="dp-h2">{{ section.settings.commission_heading }}</h2>
+            {% endif %}
 
-          {% if section.settings.commission_text != blank %}
-            <p class="dp-copy">{{ section.settings.commission_text }}</p>
-          {% endif %}
-        </div>
-      </div>
-
-      <div class="dp-pricing-benefit-grid" aria-label="Professional pricing benefits">
-        <article class="dp-pricing-benefit-card dp-pricing-benefit-card--stat" aria-label="Dental Pro savings">
-          <span class="dp-pricing-benefit-card__eyebrow">Save up to</span>
-          <strong class="dp-pricing-benefit-card__stat">55%</strong>
-          <span class="dp-pricing-benefit-card__caption">On qualifying practice orders</span>
-        </article>
-
-        <article class="dp-pricing-benefit-card">
-          <strong>Better practice economics</strong>
-          <span>Access preferred B2B pricing designed for approved professional accounts and qualifying products.</span>
-        </article>
-
-        <article class="dp-pricing-benefit-card">
-          <strong>Buy more, save more</strong>
-          <span>Greater savings may be available as qualifying order volume grows.</span>
-        </article>
-
-        <article class="dp-pricing-benefit-card">
-          <strong>Stock, sample, recommend</strong>
-          <span>Make Boka easier to keep available for your team, your office, and patient conversations.</span>
-        </article>
-      </div>
-
-      <p class="dp-pricing-fine">
-        Final pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
-      </p>
-
-      <div class="dp-pricing-divider" aria-hidden="true"></div>
-
-      <div class="dp-how-compact__header">
-        <div class="dp-how-compact__title">
-          {% if section.settings.how_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
-          {% endif %}
-
-          {% if section.settings.how_heading != blank %}
-            <h3 class="dp-h3">{{ section.settings.how_heading }}</h3>
-          {% endif %}
+            {% if section.settings.commission_text != blank %}
+              <p class="dp-copy">{{ section.settings.commission_text }}</p>
+            {% endif %}
+          </div>
         </div>
 
-        {% if section.settings.how_text != blank %}
-          <p class="dp-copy">{{ section.settings.how_text }}</p>
-        {% endif %}
-      </div>
+        <div class="dp-pricing-benefit-grid" aria-label="Professional pricing benefits">
+          <article class="dp-pricing-benefit-card dp-pricing-benefit-card--stat" aria-label="Dental Pro savings">
+            <span class="dp-pricing-benefit-card__eyebrow">Save up to</span>
+            <strong class="dp-pricing-benefit-card__stat">55%</strong>
+            <span class="dp-pricing-benefit-card__caption">On qualifying practice orders</span>
+          </article>
 
-      <div class="dp-how-steps-compact" aria-label="How it works steps">
-        {% for block in section.blocks %}
-          {% if block.type == 'how_step' %}
-            <article class="dp-how-step-compact" {{ block.shopify_attributes }}>
-              {% if block.settings.number != blank %}
-                <span class="dp-how-step-compact__num">{{ block.settings.number }}</span>
-              {% endif %}
+          <article class="dp-pricing-benefit-card">
+            <strong>Better practice economics</strong>
+            <span>Access preferred B2B pricing designed for approved professional accounts and qualifying products.</span>
+          </article>
 
-              {% if block.settings.title != blank %}
-                <h4 class="dp-how-step-compact__title">{{ block.settings.title }}</h4>
-              {% endif %}
+          <article class="dp-pricing-benefit-card">
+            <strong>Buy more, save more</strong>
+            <span>Greater savings may be available as qualifying order volume grows.</span>
+          </article>
 
-              {% if block.settings.text != blank %}
-                <p class="dp-how-step-compact__copy">{{ block.settings.text }}</p>
-              {% endif %}
-            </article>
+          <article class="dp-pricing-benefit-card">
+            <strong>Stock, sample, recommend</strong>
+            <span>Make Boka easier to keep available for your team, your office, and patient conversations.</span>
+          </article>
+        </div>
+
+        <p class="dp-pricing-fine">
+          Final pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
+        </p>
+
+        <div class="dp-pricing-divider" aria-hidden="true"></div>
+
+        <div class="dp-how-compact__header">
+          <div class="dp-how-compact__title">
+            {% if section.settings.how_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+            {% endif %}
+
+            {% if section.settings.how_heading != blank %}
+              <h3 class="dp-h3">{{ section.settings.how_heading }}</h3>
+            {% endif %}
+          </div>
+
+          {% if section.settings.how_text != blank %}
+            <p class="dp-copy">{{ section.settings.how_text }}</p>
           {% endif %}
-        {% endfor %}
+        </div>
+
+        <div class="dp-how-steps-compact" aria-label="How it works steps">
+          {% for block in section.blocks %}
+            {% if block.type == 'how_step' %}
+              <article class="dp-how-step-compact" {{ block.shopify_attributes }}>
+                {% if block.settings.number != blank %}
+                  <span class="dp-how-step-compact__num">{{ block.settings.number }}</span>
+                {% endif %}
+
+                {% if block.settings.title != blank %}
+                  <h4 class="dp-how-step-compact__title">{{ block.settings.title }}</h4>
+                {% endif %}
+
+                {% if block.settings.text != blank %}
+                  <p class="dp-how-step-compact__copy">{{ block.settings.text }}</p>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
     <div class="dp-wrap">
@@ -2041,13 +1482,13 @@
       "type": "html",
       "id": "hero_heading",
       "label": "Hero heading",
-      "default": "Give patients the fluoride-free n-Ha toothpaste they\u2019re already <span class=\"dp-em\">asking</span> about."
+      "default": "Give patients the fluoride-free n-Ha toothpaste they’re already <span class=\"dp-em\">asking</span> about."
     },
     {
       "type": "textarea",
       "id": "hero_text",
       "label": "Hero body text",
-      "default": "Join the Boka Dental Pros Program to access preferred professional pricing, complimentary samples, and simple education resources for recommending Boka with confidence. Boka is the #1 nano-hydroxyapatite toothpaste brand \u2014 built for patients who want a modern, elevated daily oral care routine."
+      "default": "Join the Boka Dental Pros Program to access preferred professional pricing, complimentary samples, and simple education resources for recommending Boka with confidence. Boka is the #1 nano-hydroxyapatite toothpaste brand — built for patients who want a modern, elevated daily oral care routine."
     },
     {
       "type": "image_picker",
@@ -2248,13 +1689,13 @@
       "type": "html",
       "id": "commission_heading",
       "label": "Commission heading",
-      "default": "Get access to preferred B2B pricing and save more as your practice grows."
+      "default": "Get access to exclusive B2B pricing and save more as your practice grows."
     },
     {
       "type": "textarea",
       "id": "commission_text",
       "label": "Commission body text",
-      "default": "Approved Dental Pro accounts can access preferred pricing on qualifying Boka products. Savings may increase as qualifying order volume grows, with up to 55% savings available based on account type, product eligibility, and program requirements."
+      "default": "Approved Dental Pro accounts can access preferred pricing on qualifying Boka products, with greater savings available as qualifying order volume grows."
     },
     {
       "type": "header",
@@ -2356,7 +1797,7 @@
       "type": "text",
       "id": "form_success_message",
       "label": "Success message",
-      "default": "Thank you for applying. We\u2019ll review your information and follow up by email."
+      "default": "Thank you for applying. We’ll review your information and follow up by email."
     },
     {
       "type": "text",
@@ -2446,7 +1887,7 @@
       "type": "textarea",
       "id": "form_consent_text",
       "label": "Consent text",
-      "default": "I confirm I am a dental professional or applying on behalf of a dental practice and agree to Boka\u2019s program terms and privacy policy. I understand Dental Pro pricing is intended for approved professional accounts and qualifying practice orders."
+      "default": "I confirm I am a dental professional or applying on behalf of a dental practice and agree to Boka’s program terms and privacy policy. I understand Dental Pro pricing is intended for approved professional accounts and qualifying practice orders."
     },
     {
       "type": "text",
