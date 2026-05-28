@@ -1329,10 +1329,6 @@
               {% endif %}
             {% endfor %}
           </div>
-
-          <p class="dp-disclaimer">
-            *Use “#1 nano-hydroxyapatite toothpaste brand” only where substantiated by your approved claim support.
-          </p>
         </div>
 
         <div class="dp-hero__visual">
@@ -1369,8 +1365,8 @@
       <div class="dp-proof-band" aria-label="Boka Dental Pros proof points">
         <div class="dp-proof-grid">
           <div class="dp-proof-item">
-            <strong>#1*</strong>
-            <span>n-Ha toothpaste brand</span>
+            <strong>#1 n-Ha toothpaste</strong>
+            <span> on Amazon</span>
           </div>
           <div class="dp-proof-item">
             <strong>55%</strong>
@@ -1381,44 +1377,10 @@
             <span>Fluoride-free toothpaste options</span>
           </div>
           <div class="dp-proof-item">
-            <strong>2 min</strong>
-            <span>Dental Pro application</span>
+            <strong>Samples</strong>
+            <span>For approved Dental Pros</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="dp-section dp-why" id="patient-demand" aria-label="Why patients are asking about Boka">
-    <div class="dp-wrap">
-      {% if section.settings.why_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
-      {% endif %}
-
-      {% if section.settings.why_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
-      {% endif %}
-
-      {% if section.settings.why_text != blank %}
-        <p class="dp-copy">{{ section.settings.why_text }}</p>
-      {% endif %}
-
-      <div class="dp-card-grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'why_card' %}
-            <article class="dp-info-card" {{ block.shopify_attributes }}>
-              {% if block.settings.icon != blank %}
-                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
-              {% endif %}
-              {% if block.settings.title != blank %}
-                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
-              {% endif %}
-              {% if block.settings.text != blank %}
-                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
-              {% endif %}
-            </article>
-          {% endif %}
-        {% endfor %}
       </div>
     </div>
   </section>
@@ -1480,81 +1442,36 @@
     </div>
   </section>
 
-  <section class="dp-section" id="why-boka" aria-label="Why choose Boka">
+  <section class="dp-section dp-why" id="patient-demand" aria-label="Why patients are asking about Boka">
     <div class="dp-wrap">
-      <span class="dp-kicker">Brand proof</span>
-      <h2 class="dp-h2">A fast-growing oral care brand patients already recognize.</h2>
-      <p class="dp-copy">Boka is a leading nano-hydroxyapatite toothpaste brand with strong consumer demand across major retail channels, including Amazon, Walmart, Target, and CVS. That makes it easier for patients to recognize, try, and continue using Boka after their visit.</p>
+      {% if section.settings.why_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
+      {% endif %}
 
-      <div class="dp-proof-band" aria-label="Boka brand proof points">
-        <div class="dp-proof-grid">
-          <div class="dp-proof-item">
-            <strong>#1*</strong>
-            <span>n-Ha toothpaste brand on Amazon</span>
-          </div>
-          <div class="dp-proof-item">
-            <strong>Retail</strong>
-            <span>Growing on Walmart, Target, and CVS</span>
-          </div>
-          <div class="dp-proof-item">
-            <strong>n-Ha</strong>
-            <span>Fluoride-free ingredient story</span>
-          </div>
-          <div class="dp-proof-item">
-            <strong>Pro</strong>
-            <span>Built for dental practice teams</span>
-          </div>
-        </div>
-        <p class="dp-disclaimer">*Use “#1” and retailer growth claims only where substantiated by current approved claim support.</p>
-      </div>
-    </div>
-  </section>
+      {% if section.settings.why_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
+      {% endif %}
 
-  <section class="dp-section dp-video" id="dental-advisory-committee" aria-label="Boka Dental Advisory Committee">
-    <div class="dp-wrap">
-      <div class="dp-split dp-split--reverse">
-        <div>
-          <div class="dp-video-card">
-            {% if section.settings.video_embed_code != blank %}
-              {{ section.settings.video_embed_code }}
-            {% else %}
-              <div class="dp-video-placeholder">
-                <div>
-                  <div class="dp-play" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-                  </div>
-                  <p>{{ section.settings.video_placeholder_text }}</p>
-                </div>
-              </div>
-            {% endif %}
-          </div>
-        </div>
+      {% if section.settings.why_text != blank %}
+        <p class="dp-copy">{{ section.settings.why_text }}</p>
+      {% endif %}
 
-        <div>
-          {% if section.settings.video_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.video_kicker }}</span>
-          {% endif %}
-          {% if section.settings.video_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.video_heading }}</h2>
-          {% endif %}
-          {% if section.settings.video_text != blank %}
-            <p class="dp-copy">{{ section.settings.video_text }}</p>
-          {% endif %}
-
-          <div class="dp-advisor">
-            {% if section.settings.advisor_avatar != blank %}
-              <div class="dp-advisor__avatar">{{ section.settings.advisor_avatar }}</div>
-            {% endif %}
-            <div>
-              {% if section.settings.advisor_name != blank %}
-                <p class="dp-advisor__name">{{ section.settings.advisor_name }}</p>
+      <div class="dp-card-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'why_card' %}
+            <article class="dp-info-card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
               {% endif %}
-              {% if section.settings.advisor_role != blank %}
-                <p class="dp-advisor__role">{{ section.settings.advisor_role }}</p>
+              {% if block.settings.title != blank %}
+                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
               {% endif %}
-            </div>
-          </div>
-        </div>
+              {% if block.settings.text != blank %}
+                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -1609,7 +1526,7 @@
         </div>
       </div>
 
-      <div class="dp-commission" aria-label="Dental Pro professional pricing offer">
+      <div class="dp-commission" aria-label="Dental Pro discount tiers">
         <div>
           {% if section.settings.commission_kicker != blank %}
             <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
@@ -1622,23 +1539,14 @@
           {% endif %}
         </div>
         <div class="dp-rates">
-          {% assign pricing_stat_rendered = false %}
           {% for block in section.blocks %}
-            {% if block.type == 'commission_rate' and pricing_stat_rendered == false %}
+            {% if block.type == 'commission_rate' %}
               <div class="dp-rate" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.label }}</span>
                 <span>{{ block.settings.value }}</span>
               </div>
-              {% assign pricing_stat_rendered = true %}
             {% endif %}
           {% endfor %}
-
-          {% unless pricing_stat_rendered %}
-            <div class="dp-rate">
-              <span>Up to</span>
-              <span>55% off</span>
-            </div>
-          {% endunless %}
         </div>
       </div>
     </div>
@@ -1684,6 +1592,27 @@
       {% if section.settings.testimonials_heading != blank %}
         <h2 class="dp-h2">{{ section.settings.testimonials_heading }}</h2>
       {% endif %}
+
+      <div class="dp-proof-band" aria-label="Boka professional proof">
+        <div class="dp-proof-grid">
+          <div class="dp-proof-item">
+            <strong>Pros</strong>
+            <span>Built for hygienists, dentists, and practice teams</span>
+          </div>
+          <div class="dp-proof-item">
+            <strong>n-Ha</strong>
+            <span>Ingredient education patients can understand</span>
+          </div>
+          <div class="dp-proof-item">
+            <strong>Daily</strong>
+            <span>Routines patients can continue at home</span>
+          </div>
+          <div class="dp-proof-item">
+            <strong>Boka</strong>
+            <span>Elevated oral care experience</span>
+          </div>
+        </div>
+      </div>
 
       <div class="dp-quote-grid">
         {% for block in section.blocks %}
@@ -1809,13 +1738,13 @@
       "type": "html",
       "id": "hero_heading",
       "label": "Hero heading",
-      "default": "Give patients a fluoride-free n-Ha toothpaste option they\u2019re already <span class=\"dp-em\">asking</span> about."
+      "default": "Give patients the fluoride-free n-Ha toothpaste they\u2019re already <span class=\"dp-em\">asking</span> about."
     },
     {
       "type": "textarea",
       "id": "hero_text",
       "label": "Hero body text",
-      "default": "Patients are asking more questions about fluoride-free oral care. Boka helps dental professionals answer those questions with a modern n-Ha toothpaste, complimentary samples, patient-friendly education, and preferred practice pricing."
+      "default": "Join the Boka Dental Pros Program to access preferred professional pricing, complimentary samples, and simple education resources for recommending Boka with confidence. Boka is the #1 nano-hydroxyapatite toothpaste brand \u2014 built for patients who want a modern, elevated daily oral care routine."
     },
     {
       "type": "image_picker",
@@ -1850,7 +1779,7 @@
       "type": "text",
       "id": "hero_primary_label",
       "label": "Primary button label",
-      "default": "Apply to join Boka Dental Pros"
+      "default": "Apply now"
     },
     {
       "type": "text",
@@ -1890,19 +1819,19 @@
       "type": "textarea",
       "id": "what_text_1",
       "label": "Body text 1",
-      "default": "Boka makes fluoride-free toothpaste with nano-hydroxyapatite, also known as n-Ha, in elevated flavors and low-foaming formulas patients actually enjoy using."
+      "default": "Boka creates modern oral care designed around daily consistency: fluoride-free n-Ha toothpastes, elevated flavors, and simple routines patients actually want to keep using."
     },
     {
       "type": "textarea",
       "id": "what_text_2",
       "label": "Body text 2",
-      "default": "The goal is simple: help patients build a daily routine they want to keep while giving your team clear, patient-friendly education to support the conversation."
+      "default": "Nano-hydroxyapatite, or n-Ha, is a biomimetic mineral form of hydroxyapatite, the mineral that naturally makes up the majority of enamel and dentin. Boka makes that science approachable through formulas, packaging, and education your team can explain clearly."
     },
     {
       "type": "text",
       "id": "ingredient_kicker",
       "label": "Ingredient card eyebrow",
-      "default": "Why Boka works chairside"
+      "default": "Why patients ask about it"
     },
     {
       "type": "html",
@@ -1924,13 +1853,13 @@
       "type": "html",
       "id": "why_heading",
       "label": "Heading",
-      "default": "Patients are asking for fluoride-free options. Your team needs a clear <span class=\"dp-em\">answer</span>."
+      "default": "Patients are looking for more mindful oral care. Your team needs a clear <span class=\"dp-em\">answer</span>."
     },
     {
       "type": "textarea",
       "id": "why_text",
       "label": "Body text",
-      "default": "More patients are looking for oral care options that feel modern, ingredient-conscious, and easy to understand. Boka gives hygienists and practice teams a simple way to talk about fluoride-free n-Ha toothpaste without turning the appointment into a complicated product explanation."
+      "default": "More patients are asking about fluoride-free toothpaste, low-foaming formulas, and ingredients they can understand. Boka gives dental professionals a patient-friendly option to discuss chairside without turning the conversation into a complicated product explanation."
     },
     {
       "type": "header",
@@ -1952,19 +1881,19 @@
       "type": "text",
       "id": "video_kicker",
       "label": "Video eyebrow",
-      "default": "Dental Advisory Committee"
+      "default": "Advisory committee perspective"
     },
     {
       "type": "html",
       "id": "video_heading",
       "label": "Video heading",
-      "default": "Guidance from dental professionals who understand the chairside conversation."
+      "default": "A quick expert note before patients buy."
     },
     {
       "type": "textarea",
       "id": "video_text",
       "label": "Video body text",
-      "default": "Boka’s Dental Advisory Committee helps shape how we educate around n-Ha, daily oral care, and patient-friendly routines. Their perspective helps make Boka easier for dental teams to understand, recommend, and explain."
+      "default": "Use this space for a short, human video that gives hygienists and patients confidence. The best version should be under 60 seconds, clearly explain why the advisor recommends Boka, and end with a simple invitation to try the routine."
     },
     {
       "type": "text",
@@ -2004,25 +1933,25 @@
       "type": "textarea",
       "id": "how_text",
       "label": "Body text",
-      "default": "Apply for a Dental Pro account, get approved, request eligible sample support, and begin ordering qualifying products at professional pricing. The program is designed to make Boka easier to try, stock, and recommend."
+      "default": "Apply for a Dental Pro account, get approved, choose sample flavors, and begin ordering qualifying products at professional pricing. The program is designed to make Boka easier to try, stock, and recommend."
     },
     {
       "type": "text",
       "id": "commission_kicker",
       "label": "Commission eyebrow",
-      "default": "Professional pricing"
+      "default": "Dental Pro Discount Tiers"
     },
     {
       "type": "html",
       "id": "commission_heading",
       "label": "Commission heading",
-      "default": "Save up to 55% on qualifying practice orders."
+      "default": "Save more as your qualifying practice orders grow."
     },
     {
       "type": "textarea",
       "id": "commission_text",
       "label": "Commission body text",
-      "default": "Dental Pro pricing is designed to support practice stocking, team use, sampling, and patient recommendations. The more you buy, the more you save. Final pricing and eligibility may vary by account type, order volume, and program requirements."
+      "default": "Use your Dental Pro discount to stock your office, support patient recommendations, or keep Boka available for your team and customers. Final tier eligibility may vary by account type, order volume, and program requirements."
     },
     {
       "type": "header",
@@ -2044,7 +1973,7 @@
       "type": "textarea",
       "id": "b2b_text",
       "label": "Body text",
-      "default": "Approved Dental Pro accounts can access preferred pricing on qualifying Boka products, making it easier to stock samples, support patient recommendations, and improve product economics compared with buying through standard retail channels."
+      "default": "Approved Dental Pro accounts can access exclusive B2B pricing on qualifying products, with discount tiers designed to support office stocking, team use, sampling, and patient-facing recommendations. That means your practice can meet patient demand while improving product economics versus standard retail purchasing."
     },
     {
       "type": "text",
@@ -2090,7 +2019,7 @@
       "type": "html",
       "id": "testimonials_heading",
       "label": "Heading",
-      "default": "Professional perspective on the daily routine."
+      "default": "Recommended by dental professionals who care about the daily routine."
     },
     {
       "type": "header",
@@ -2112,7 +2041,7 @@
       "type": "textarea",
       "id": "form_text",
       "label": "Body text",
-      "default": "Once approved, your team can access preferred professional pricing, complimentary sample options, and education resources to support patient conversations around fluoride-free n-Ha oral care."
+      "default": "Complete the application to request Dental Pro access. Once approved, your practice can unlock preferred professional pricing, sample options, and education resources for patient conversations."
     },
     {
       "type": "text",
@@ -2220,13 +2149,13 @@
       "type": "text",
       "id": "form_submit_label",
       "label": "Submit button label",
-      "default": "Apply to join Boka Dental Pros"
+      "default": "Apply to be a Boka Pro"
     },
     {
       "type": "textarea",
       "id": "form_fine_print",
       "label": "Fine print",
-      "default": "Applications are subject to approval. Pricing, sample availability, and eligibility may vary by account type, qualifying products, order volume, and program requirements."
+      "default": "Applications are subject to approval. Pricing, sample availability, discount tiers, and eligibility may vary by account type, order volume, and program requirements."
     },
     {
       "type": "header",
@@ -2393,19 +2322,19 @@
     },
     {
       "type": "commission_rate",
-      "name": "Pricing stat",
+      "name": "Commission rate",
       "settings": [
         {
           "type": "text",
           "id": "label",
           "label": "Label",
-          "default": "Up to"
+          "default": "Tier 1"
         },
         {
           "type": "text",
           "id": "value",
           "label": "Value",
-          "default": "55% off"
+          "default": "Up to 44% off"
         }
       ]
     },
@@ -2616,15 +2545,29 @@
         {
           "type": "process_item",
           "settings": {
-            "title": "Save more as you order more",
-            "text": "The more your practice buys, the more you can save on qualifying orders."
+            "title": "Save more as orders grow",
+            "text": "Discount tiers are designed to reward larger qualifying orders and ongoing professional use."
           }
         },
         {
           "type": "commission_rate",
           "settings": {
-            "label": "Up to",
-            "value": "55% off"
+            "label": "Tier 1",
+            "value": "Up to 44% off"
+          }
+        },
+        {
+          "type": "commission_rate",
+          "settings": {
+            "label": "Tier 2",
+            "value": "Up to 50% off"
+          }
+        },
+        {
+          "type": "commission_rate",
+          "settings": {
+            "label": "Tier 3",
+            "value": "Up to 55% off"
           }
         },
         {
@@ -2678,25 +2621,25 @@
         {
           "type": "form_bullet",
           "settings": {
-            "text": "Preferred professional pricing"
+            "text": "Dental professional application review"
           }
         },
         {
           "type": "form_bullet",
           "settings": {
-            "text": "Complimentary samples where eligible"
+            "text": "Preferred professional pricing after approval"
           }
         },
         {
           "type": "form_bullet",
           "settings": {
-            "text": "Patient conversation resources"
+            "text": "Complimentary sample options where eligible"
           }
         },
         {
           "type": "form_bullet",
           "settings": {
-            "text": "Simple Dental Pro account setup"
+            "text": "Educational resources for patient conversations"
           }
         },
         {
@@ -2710,14 +2653,14 @@
           "type": "faq",
           "settings": {
             "question": "How do Dental Pro discounts work?",
-            "answer": "Approved Dental Pro accounts may receive access to exclusive professional pricing on qualifying products. Discount eligibility may vary by account type, qualifying products, order volume, and program requirements. In general, the more you buy, the more you can save."
+            "answer": "Approved Dental Pro accounts may receive access to exclusive professional pricing on qualifying products. Discount eligibility and tier placement may vary by account type, order volume, and program requirements."
           }
         },
         {
           "type": "faq",
           "settings": {
             "question": "Can my practice make margin on Boka products?",
-            "answer": "Dental Pro pricing is designed to make practice ordering more financially attractive than standard retail purchasing. Exact margin depends on your product mix, approved pricing, order volume, and how your practice chooses to use or offer products."
+            "answer": "Dental Pro pricing is designed to make practice ordering more financially attractive than standard retail purchasing. Exact margin depends on your approved tier, product mix, order volume, and how your practice chooses to use or offer products."
           }
         },
         {
@@ -2745,7 +2688,7 @@
           "type": "faq",
           "settings": {
             "question": "How do I apply?",
-            "answer": "Submit the Dental Pro application form for review. Once approved, you may receive access to professional pricing, account resources, sample options, and eligible professional pricing."
+            "answer": "Submit the Dental Pro application form for review. Once approved, you may receive access to professional pricing, account resources, sample options, and eligible B2B discount tiers."
           }
         }
       ]
