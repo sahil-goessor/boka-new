@@ -1390,40 +1390,6 @@
     </div>
   </section>
 
-  <section class="dp-section dp-why" id="patient-demand" aria-label="Why patients are asking about Boka">
-    <div class="dp-wrap">
-      {% if section.settings.why_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
-      {% endif %}
-
-      {% if section.settings.why_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
-      {% endif %}
-
-      {% if section.settings.why_text != blank %}
-        <p class="dp-copy">{{ section.settings.why_text }}</p>
-      {% endif %}
-
-      <div class="dp-card-grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'why_card' %}
-            <article class="dp-info-card" {{ block.shopify_attributes }}>
-              {% if block.settings.icon != blank %}
-                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
-              {% endif %}
-              {% if block.settings.title != blank %}
-                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
-              {% endif %}
-              {% if block.settings.text != blank %}
-                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
-              {% endif %}
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
   <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
     <div class="dp-wrap">
       <div class="dp-split">
@@ -1477,6 +1443,40 @@
             {% endfor %}
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dp-section dp-why" id="patient-demand" aria-label="Why patients are asking about Boka">
+    <div class="dp-wrap">
+      {% if section.settings.why_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
+      {% endif %}
+
+      {% if section.settings.why_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.why_text != blank %}
+        <p class="dp-copy">{{ section.settings.why_text }}</p>
+      {% endif %}
+
+      <div class="dp-card-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'why_card' %}
+            <article class="dp-info-card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </section>
