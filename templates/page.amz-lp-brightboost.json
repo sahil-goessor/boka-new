@@ -1214,7 +1214,7 @@
     "yotpo_reviews_widget_kWhWWh": {
       "type": "yotpo-reviews-widget",
       "custom_css": [
-        "div#yotpo-app {background-color: white;}"
+        "div#yotpo-app {background-color: white !important;}"
       ],
       "name": "Yotpo Reviews Widget",
       "settings": {
