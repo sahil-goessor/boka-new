@@ -19,10 +19,10 @@
         -o-animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
 
-        animation-delay: 1250ms;
-        -moz-animation-delay: 1250ms;
-        -o-animation-delay: 1250ms;
-        -webkit-animation-delay: 1250ms;
+        animation-delay: 750ms;
+        -moz-animation-delay: 750ms;
+        -o-animation-delay: 750ms;
+        -webkit-animation-delay: 750ms;
     }
 
     @keyframes vslyAntiFlickerFadeIn {
@@ -56,14 +56,14 @@
     }
 
     window.vslyAntiFlickerReveal = function () {
-        setTimeout(_vslyAntiFlickerRevealInner, 50);
+        setTimeout(_vslyAntiFlickerRevealInner, 70);
     }
 
     fallbackTimer = setTimeout(() => {
         console.debug('vsly-anti-flicker', 'Falling back after timeout');
         window._vslyAntiFlickerRevealInner()
         clearTimeout(retryTimer)
-    }, 1250)
+    }, 750)
 </script>
 <!--End - Anti Flicker-->
 <link rel="preconnect"  href="https://live.visually-io.com/" crossorigin data-em-disable>
