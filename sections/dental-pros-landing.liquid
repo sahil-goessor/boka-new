@@ -1385,6 +1385,40 @@
     </div>
   </section>
 
+  <section class="dp-section dp-why" id="patient-demand" aria-label="Why patients are asking about Boka">
+    <div class="dp-wrap">
+      {% if section.settings.why_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
+      {% endif %}
+
+      {% if section.settings.why_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.why_text != blank %}
+        <p class="dp-copy">{{ section.settings.why_text }}</p>
+      {% endif %}
+
+      <div class="dp-card-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'why_card' %}
+            <article class="dp-info-card" {{ block.shopify_attributes }}>
+              {% if block.settings.icon != blank %}
+                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
     <div class="dp-wrap">
       <div class="dp-split">
@@ -1442,32 +1476,48 @@
     </div>
   </section>
 
-  <section class="dp-section dp-why" id="patient-demand" aria-label="Why patients are asking about Boka">
+  <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist recommended">
     <div class="dp-wrap">
-      {% if section.settings.why_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.why_kicker }}</span>
+      {% if section.settings.testimonials_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.testimonials_kicker }}</span>
+      {% endif %}
+      {% if section.settings.testimonials_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.testimonials_heading }}</h2>
       {% endif %}
 
-      {% if section.settings.why_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.why_heading }}</h2>
-      {% endif %}
+      <div class="dp-proof-band" aria-label="Boka professional proof">
+        <div class="dp-proof-grid">
+          <div class="dp-proof-item">
+            <strong>Pros</strong>
+            <span>Built for hygienists, dentists, and practice teams</span>
+          </div>
+          <div class="dp-proof-item">
+            <strong>n-Ha</strong>
+            <span>Ingredient education patients can understand</span>
+          </div>
+          <div class="dp-proof-item">
+            <strong>Daily</strong>
+            <span>Routines patients can continue at home</span>
+          </div>
+          <div class="dp-proof-item">
+            <strong>Boka</strong>
+            <span>Elevated oral care experience</span>
+          </div>
+        </div>
+      </div>
 
-      {% if section.settings.why_text != blank %}
-        <p class="dp-copy">{{ section.settings.why_text }}</p>
-      {% endif %}
-
-      <div class="dp-card-grid">
+      <div class="dp-quote-grid">
         {% for block in section.blocks %}
-          {% if block.type == 'why_card' %}
-            <article class="dp-info-card" {{ block.shopify_attributes }}>
-              {% if block.settings.icon != blank %}
-                <div class="dp-info-card__icon">{{ block.settings.icon }}</div>
+          {% if block.type == 'quote' %}
+            <article class="dp-quote" {{ block.shopify_attributes }}>
+              {% if block.settings.quote != blank %}
+                <p class="dp-quote__text">“{{ block.settings.quote }}”</p>
               {% endif %}
-              {% if block.settings.title != blank %}
-                <h3 class="dp-info-card__title">{{ block.settings.title }}</h3>
+              {% if block.settings.name != blank %}
+                <p class="dp-quote__name">{{ block.settings.name }}</p>
               {% endif %}
-              {% if block.settings.text != blank %}
-                <p class="dp-info-card__copy">{{ block.settings.text }}</p>
+              {% if block.settings.role != blank %}
+                <p class="dp-quote__role">{{ block.settings.role }}</p>
               {% endif %}
             </article>
           {% endif %}
@@ -1576,56 +1626,6 @@
               {% endif %}
               {% if block.settings.text != blank %}
                 <p class="dp-step__copy">{{ block.settings.text }}</p>
-              {% endif %}
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist recommended">
-    <div class="dp-wrap">
-      {% if section.settings.testimonials_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.testimonials_kicker }}</span>
-      {% endif %}
-      {% if section.settings.testimonials_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.testimonials_heading }}</h2>
-      {% endif %}
-
-      <div class="dp-proof-band" aria-label="Boka professional proof">
-        <div class="dp-proof-grid">
-          <div class="dp-proof-item">
-            <strong>Pros</strong>
-            <span>Built for hygienists, dentists, and practice teams</span>
-          </div>
-          <div class="dp-proof-item">
-            <strong>n-Ha</strong>
-            <span>Ingredient education patients can understand</span>
-          </div>
-          <div class="dp-proof-item">
-            <strong>Daily</strong>
-            <span>Routines patients can continue at home</span>
-          </div>
-          <div class="dp-proof-item">
-            <strong>Boka</strong>
-            <span>Elevated oral care experience</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="dp-quote-grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'quote' %}
-            <article class="dp-quote" {{ block.shopify_attributes }}>
-              {% if block.settings.quote != blank %}
-                <p class="dp-quote__text">“{{ block.settings.quote }}”</p>
-              {% endif %}
-              {% if block.settings.name != blank %}
-                <p class="dp-quote__name">{{ block.settings.name }}</p>
-              {% endif %}
-              {% if block.settings.role != blank %}
-                <p class="dp-quote__role">{{ block.settings.role }}</p>
               {% endif %}
             </article>
           {% endif %}
