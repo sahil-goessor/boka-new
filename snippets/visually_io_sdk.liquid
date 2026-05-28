@@ -1,5 +1,71 @@
 <!--LOOMI SDK-->
 <!--DO NOT EDIT-->
+<!--Start - Anti Flicker-->
+<style id="vslyAntiFlickerStyle-AE29">
+    .boka-hero__container {
+        opacity: 0!important;
+    }
+</style>
+<style id="vslyAntiFlickerStyle-BC82">
+    .boka-hero__container {
+
+        animation: vslyAntiFlickerFadeIn 0.1s linear;
+        -moz-animation: vslyAntiFlickerFadeIn 0.1s linear;
+        -o-animation: vslyAntiFlickerFadeIn 0.1s linear;
+        -webkit-animation: vslyAntiFlickerFadeIn 0.1s linear;
+
+        animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+
+        animation-delay: 500ms;
+        -moz-animation-delay: 500ms;
+        -o-animation-delay: 500ms;
+        -webkit-animation-delay: 500ms;
+    }
+
+    @keyframes vslyAntiFlickerFadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<script id="vslyAntiFlickerScript-OJ93" data-em-disable>
+    console.debug('vsly-anti-flicker', 'Anti Flicker Script Loaded');
+    let fallbackTimer = -1;
+    let retryTimer = -1;
+    let retries = 0;
+
+    function _vslyAntiFlickerRevealInner() {
+        try {
+            console.debug('vsly-anti-flicker', 'Revealing');
+            const hideElem = document.querySelector('#vslyAntiFlickerStyle-AE29');
+            if (hideElem) {
+                hideElem.remove();
+            }
+            clearTimeout(fallbackTimer);
+            console.debug('vsly-anti-flicker', 'Revealing done');
+        } catch (ex) {
+            console.error('vsly-anti-flicker', ex);
+            if (retries > 15) {
+                setTimeout(window.vslyAntiFlickerReveal, 10);
+                retries += 1;
+            }
+        }
+    }
+
+    window.vslyAntiFlickerReveal = function () {
+        setTimeout(_vslyAntiFlickerRevealInner, 50);
+    }
+
+    fallbackTimer = setTimeout(() => {
+        console.debug('vsly-anti-flicker', 'Falling back after timeout');
+        window._vslyAntiFlickerRevealInner()
+        clearTimeout(retryTimer)
+    }, 500)
+</script>
+<!--End - Anti Flicker-->
 <link rel="preconnect"  href="https://live.visually-io.com/" crossorigin data-em-disable>
 <link rel="dns-prefetch" href="https://live.visually-io.com/" data-em-disable>
 <script>
