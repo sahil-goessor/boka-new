@@ -1602,86 +1602,60 @@
     </div>
   </section>
 
-  <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
-  <div class="dp-wrap">
-    <div class="dp-how-pricing__shell">
-      <div class="dp-how-pricing__header">
-        {% if section.settings.how_kicker != blank %}
-          <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
-        {% endif %}
+  <section class="dp-section" id="how-it-works" aria-label="How the Dental Pros Program works">
+    <div class="dp-wrap">
+      {% if section.settings.how_kicker != blank %}
+        <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+      {% endif %}
+      {% if section.settings.how_heading != blank %}
+        <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
+      {% endif %}
+      {% if section.settings.how_text != blank %}
+        <p class="dp-copy">{{ section.settings.how_text }}</p>
+      {% endif %}
 
-        {% if section.settings.how_heading != blank %}
-          <h2 class="dp-h2">{{ section.settings.how_heading }}</h2>
-        {% endif %}
-
-        {% if section.settings.how_text != blank %}
-          <p class="dp-copy">{{ section.settings.how_text }}</p>
-        {% endif %}
+      <div class="dp-steps">
+        {% for block in section.blocks %}
+          {% if block.type == 'how_step' %}
+            <article class="dp-step" {{ block.shopify_attributes }}>
+              {% if block.settings.number != blank %}
+                <span class="dp-step__num">{{ block.settings.number }}</span>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="dp-step__title">{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="dp-step__copy">{{ block.settings.text }}</p>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
-
-      <div class="dp-how-pricing__grid">
-        <div class="dp-how-pricing__steps" aria-label="How it works steps">
+      <div class="dp-commission" aria-label="Dental Pro discount tiers">
+        <div>
+          {% if section.settings.commission_kicker != blank %}
+            <span class="dp-kicker" style="color: var(--dp-pale);">{{ section.settings.commission_kicker }}</span>
+          {% endif %}
+          {% if section.settings.commission_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.commission_heading }}</h3>
+          {% endif %}
+          {% if section.settings.commission_text != blank %}
+            <p class="dp-copy dp-commission__copy">{{ section.settings.commission_text }}</p>
+          {% endif %}
+        </div>
+        <div class="dp-rates">
           {% for block in section.blocks %}
-            {% if block.type == 'how_step' %}
-              <article class="dp-how-step" {{ block.shopify_attributes }}>
-                {% if block.settings.number != blank %}
-                  <span class="dp-how-step__num">{{ block.settings.number }}</span>
-                {% endif %}
-
-                <div class="dp-how-step__body">
-                  {% if block.settings.title != blank %}
-                    <h3 class="dp-how-step__title">{{ block.settings.title }}</h3>
-                  {% endif %}
-
-                  {% if block.settings.text != blank %}
-                    <p class="dp-how-step__copy">{{ block.settings.text }}</p>
-                  {% endif %}
-                </div>
-              </article>
+            {% if block.type == 'commission_rate' %}
+              <div class="dp-rate" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.label }}</span>
+                <span>{{ block.settings.value }}</span>
+              </div>
             {% endif %}
           {% endfor %}
         </div>
-
-        <aside class="dp-pricing-card" aria-label="Dental Pro pricing">
-          <div class="dp-pricing-card__top">
-            {% if section.settings.commission_kicker != blank %}
-              <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
-            {% endif %}
-
-            {% if section.settings.commission_heading != blank %}
-              <h3 class="dp-h3">{{ section.settings.commission_heading }}</h3>
-            {% endif %}
-
-            {% if section.settings.commission_text != blank %}
-              <p class="dp-pricing-card__copy">{{ section.settings.commission_text }}</p>
-            {% endif %}
-          </div>
-
-          <div class="dp-pricing-card__highlight">
-            <span>Save up to</span>
-            <strong>55%</strong>
-            <span>on qualifying practice orders</span>
-          </div>
-
-          <div class="dp-pricing-card__rates">
-            {% for block in section.blocks %}
-              {% if block.type == 'commission_rate' %}
-                <div class="dp-pricing-rate" {{ block.shopify_attributes }}>
-                  <span>{{ block.settings.label }}</span>
-                  <strong>{{ block.settings.value }}</strong>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-
-          <p class="dp-pricing-card__fine">
-            Final pricing and eligibility may vary by account type, order volume, and program requirements.
-          </p>
-        </aside>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
