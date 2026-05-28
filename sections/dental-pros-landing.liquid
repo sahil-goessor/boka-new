@@ -484,6 +484,36 @@
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   }
 
+  .dp-solution-header {
+    max-width: 900px;
+    margin: 0 0 clamp(30px, 4vw, 52px);
+  }
+
+  .dp-solution-header .dp-copy {
+    max-width: 780px;
+  }
+
+  .dp-solution-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(22px, 4vw, 56px);
+    align-items: stretch;
+  }
+
+  .dp-solution-panel {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .dp-solution-panel .dp-mini-grid {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .dp-solution-grid .dp-ingredient-card {
+    min-height: 100%;
+  }
+
   .dp-ingredient-card {
     position: relative;
     overflow: hidden;
@@ -1083,6 +1113,12 @@
     }
   }
 
+  @media (max-width: 990px) {
+    .dp-solution-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: 680px) {
     .dp-wrap {
       width: min(100% - 28px, var(--dp-max));
@@ -1138,6 +1174,10 @@
 
     .dp-section {
       padding: 56px 0;
+    }
+
+    .dp-solution-header {
+      margin-bottom: 28px;
     }
 
     .dp-b2b-box,
@@ -1400,24 +1440,26 @@
 
   <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
     <div class="dp-wrap">
-      <div class="dp-split">
-        <div>
-          {% if section.settings.what_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
-          {% endif %}
+      <div class="dp-solution-header">
+        {% if section.settings.what_kicker != blank %}
+          <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
+        {% endif %}
 
-          {% if section.settings.what_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
-          {% endif %}
+        {% if section.settings.what_heading != blank %}
+          <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
+        {% endif %}
 
-          {% if section.settings.what_text_1 != blank %}
-            <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
-          {% endif %}
+        {% if section.settings.what_text_1 != blank %}
+          <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
+        {% endif %}
 
-          {% if section.settings.what_text_2 != blank %}
-            <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
-          {% endif %}
+        {% if section.settings.what_text_2 != blank %}
+          <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
+        {% endif %}
+      </div>
 
+      <div class="dp-solution-grid">
+        <div class="dp-solution-panel">
           <div class="dp-mini-grid">
             {% for block in section.blocks %}
               {% if block.type == 'what_mini_card' %}
@@ -1452,9 +1494,9 @@
           </ul>
         </div>
       </div>
+
       <div class="dp-proof-band" aria-label="Boka Dental Pros core proof points">
         <div class="dp-proof-grid">
-          
           <div class="dp-proof-item">
             <strong>#1 Toothpaste</strong>
             <span>On Amazon (Growing at Target, Walmart, CVS)</span>
@@ -1474,7 +1516,6 @@
             <strong>Free Samples</strong>
             <span>Processed Instantly for Approved Teams</span>
           </div>
-
         </div>
       </div>
     </div>
