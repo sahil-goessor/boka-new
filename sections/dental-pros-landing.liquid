@@ -175,41 +175,203 @@
 .dp-info-card__title { grid-column: 2; margin: 0 0 8px; font-size: clamp(20px, 2vw, 26px); font-weight: 300; letter-spacing: -0.03em; line-height: 1.15; }
 .dp-info-card__copy { grid-column: 2; margin: 0; max-width: 640px; color: rgba(34, 39, 33, 0.66); font-size: 15px; line-height: 1.62; }
 
-/* ---------- WHAT IS BOKA → asymmetric split, focal panel ---------- */
-.dp-solution-header { max-width: 880px; margin: 0 0 clamp(28px, 4vw, 48px); }
-.dp-solution-header .dp-copy { max-width: 760px; }
+/* ---------- WHAT IS BOKA → succinct two-column solution flow ---------- */
+#what-is-boka {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(211, 231, 192, 0.22), transparent 34%),
+    radial-gradient(circle at 8% 88%, rgba(249, 229, 219, 0.14), transparent 32%),
+    transparent;
+}
+
 .dp-solution-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);  /* panel slightly wider */
-  gap: clamp(28px, 5vw, 64px);
-  align-items: stretch;
+  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 0.92fr);
+  gap: clamp(38px, 6vw, 88px);
+  align-items: center;
 }
-.dp-solution-panel { display: flex; align-items: stretch; }
-.dp-solution-panel .dp-mini-grid { width: 100%; margin-top: 0; }
-.dp-solution-grid .dp-ingredient-card { min-height: 100%; }
 
-.dp-mini-grid { display: grid; grid-template-columns: 1fr; gap: 0; }  /* clean vertical list */
+.dp-solution-copy { min-width: 0; }
+.dp-solution-header {
+  max-width: 700px;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+.dp-solution-header .dp-h2 {
+  max-width: 680px;
+  margin-bottom: 18px;
+  font-size: clamp(36px, 4.7vw, 64px);
+  line-height: 0.98;
+}
+.dp-solution-header .dp-copy {
+  max-width: 640px;
+  margin-bottom: 0;
+}
+
+.dp-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 640px;
+}
 .dp-mini {
-  background: none; border: 0; box-shadow: none; border-radius: 0;
-  padding: clamp(18px, 2.4vw, 24px) 0;
-  border-top: 1px solid rgba(34, 39, 33, 0.12);
+  position: relative;
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  grid-template-areas:
+    "icon title"
+    "icon copy";
+  column-gap: clamp(18px, 2.5vw, 30px);
+  align-items: center;
+  padding: clamp(20px, 2.7vw, 30px) 0;
+  border-top: 1px solid rgba(34, 39, 33, 0.11);
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 .dp-mini:first-child { border-top: 0; padding-top: 0; }
-.dp-mini__title { margin: 0 0 8px; color: var(--dp-ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-.dp-mini__copy { margin: 0; color: rgba(34, 39, 33, 0.68); font-size: 14px; line-height: 1.6; }
+.dp-mini::before {
+  content: "✓";
+  grid-area: icon;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(115, 124, 91, 0.13);
+  color: var(--dp-forest);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
+.dp-mini:nth-child(2)::before { content: "↔"; }
+.dp-mini:nth-child(3)::before { content: "✦"; }
+.dp-mini:nth-child(4)::before { content: "•"; }
+.dp-mini__title {
+  grid-area: title;
+  margin: 0 0 8px;
+  color: var(--dp-ink);
+  font-size: clamp(17px, 1.55vw, 21px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  text-transform: none;
+}
+.dp-mini__copy {
+  grid-area: copy;
+  margin: 0;
+  max-width: 520px;
+  color: rgba(34, 39, 33, 0.66);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.55;
+}
 
-.dp-card, .dp-ingredient-card { background: var(--dp-pale); border: 0; border-radius: var(--dp-radius); box-shadow: none; }
+.dp-card,
 .dp-ingredient-card {
-  position: relative; overflow: hidden; padding: clamp(30px, 4vw, 54px);
-  background: radial-gradient(circle at 92% 0%, rgba(255, 255, 255, 0.45), transparent 38%), var(--dp-pale);
+  background: var(--dp-pale);
+  border: 0;
+  border-radius: var(--dp-radius);
+  box-shadow: none;
+}
+.dp-ingredient-card {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(520px, 48vw, 620px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(36px, 5.2vw, 70px);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.52), transparent 34%),
+    radial-gradient(circle at 92% 8%, rgba(255, 255, 255, 0.28), transparent 30%),
+    var(--dp-pale);
+  border-radius: clamp(22px, 2.5vw, 34px);
 }
 .dp-ingredient-card::after {
-  content: ""; position: absolute; width: 220px; height: 220px; right: -70px; bottom: -70px;
-  border: 1px solid rgba(170, 122, 107, 0.22); border-radius: 44% 56% 42% 58%; transform: rotate(20deg);
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -118px;
+  bottom: -118px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  box-shadow:
+    -34px -34px 0 -1px transparent,
+    -34px -34px 0 0 rgba(255, 255, 255, 0.28),
+    -68px -68px 0 -1px transparent,
+    -68px -68px 0 0 rgba(255, 255, 255, 0.22);
+  pointer-events: none;
 }
-.dp-check-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
-.dp-check-list li { display: flex; gap: 12px; align-items: flex-start; color: rgba(34, 39, 33, 0.76); font-size: 14px; line-height: 1.55; }
-.dp-check-list li::before { content: ""; flex: 0 0 8px; width: 8px; height: 8px; margin-top: 7px; border-radius: 999px; background: var(--dp-forest); }
+.dp-ingredient-card > * {
+  position: relative;
+  z-index: 1;
+}
+.dp-ingredient-card .dp-kicker {
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+.dp-ingredient-card .dp-h3 {
+  max-width: 460px;
+  margin-bottom: clamp(26px, 4vw, 42px);
+  font-size: clamp(30px, 3.35vw, 48px);
+  line-height: 1.04;
+}
+
+.dp-check-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dp-check-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: rgba(34, 39, 33, 0.76);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.dp-check-list li::before {
+  content: "";
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: var(--dp-forest);
+}
+.dp-ingredient-card .dp-check-list {
+  gap: 0;
+  max-width: 520px;
+}
+.dp-ingredient-card .dp-check-list li {
+  gap: 18px;
+  align-items: center;
+  min-height: 62px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(34, 39, 33, 0.10);
+  color: rgba(34, 39, 33, 0.74);
+  font-size: clamp(14px, 1.18vw, 16px);
+  font-weight: 300;
+  line-height: 1.38;
+}
+.dp-ingredient-card .dp-check-list li:first-child { border-top: 0; }
+.dp-ingredient-card .dp-check-list li::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  margin-top: 0;
+  border-radius: 999px;
+  background: var(--dp-forest);
+  color: var(--dp-white);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+}
 
 /* ---------- TESTIMONIALS → centered intro + staggered pull-quotes ---------- */
 .dp-testimonials { background: transparent; text-align: center; }
@@ -539,27 +701,27 @@
 
   <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
     <div class="dp-wrap">
-      <div class="dp-solution-header">
-        {% if section.settings.what_kicker != blank %}
-          <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
-        {% endif %}
-
-        {% if section.settings.what_heading != blank %}
-          <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
-        {% endif %}
-
-        {% if section.settings.what_text_1 != blank %}
-          <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
-        {% endif %}
-
-        {% if section.settings.what_text_2 != blank %}
-          <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
-        {% endif %}
-      </div>
-
       <div class="dp-solution-grid">
-        <div class="dp-solution-panel">
-          <div class="dp-mini-grid">
+        <div class="dp-solution-copy">
+          <div class="dp-solution-header">
+            {% if section.settings.what_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
+            {% endif %}
+
+            {% if section.settings.what_heading != blank %}
+              <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
+            {% endif %}
+
+            {% if section.settings.what_text_1 != blank %}
+              <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
+            {% endif %}
+
+            {% if section.settings.what_text_2 != blank %}
+              <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
+            {% endif %}
+          </div>
+
+          <div class="dp-mini-grid" aria-label="Boka solution benefits">
             {% for block in section.blocks %}
               {% if block.type == 'what_mini_card' %}
                 <div class="dp-mini" {{ block.shopify_attributes }}>
@@ -761,7 +923,7 @@
     </div>
   </section>
 
-  <section class="dp-section dp-signup"  <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
+  <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
     <div class="dp-wrap">
       <div class="dp-form-shell">
         <div>
@@ -931,31 +1093,31 @@
       "type": "html",
       "id": "what_heading",
       "label": "Heading",
-      "default": "Fluoride-free oral care powered by nano-hydroxyapatite."
+      "default": "A simple fluoride-free option your patients can actually understand."
     },
     {
       "type": "textarea",
       "id": "what_text_1",
       "label": "Body text 1",
-      "default": "Boka creates modern oral care designed around daily consistency: fluoride-free n-Ha toothpastes, elevated flavors, and simple routines patients actually want to keep using."
+      "default": "Boka gives dental professionals a clear, modern answer for patients looking beyond traditional toothpaste. Powered by nano-hydroxyapatite, or n-Ha, Boka makes the ingredient conversation easier while supporting a daily routine that feels elevated, approachable, and easy to maintain."
     },
     {
       "type": "textarea",
       "id": "what_text_2",
       "label": "Body text 2",
-      "default": "Nano-hydroxyapatite, or n-Ha, is a biomimetic mineral form of hydroxyapatite, the mineral that naturally makes up the majority of enamel and dentin. Boka makes that science approachable through formulas, packaging, and education your team can explain clearly."
+      "default": "-"
     },
     {
       "type": "text",
       "id": "ingredient_kicker",
       "label": "Ingredient card eyebrow",
-      "default": "Why patients ask about it"
+      "default": "Why dental pros recommend Boka"
     },
     {
       "type": "html",
       "id": "ingredient_heading",
       "label": "Ingredient card heading",
-      "default": "A better-feeling daily routine, without scare tactics."
+      "default": "Clear benefits, in one easy flow."
     },
     {
       "type": "header",
@@ -1368,13 +1530,13 @@
           "type": "text",
           "id": "title",
           "label": "Title",
-          "default": "Patient-friendly science"
+          "default": "A credible alternative"
         },
         {
           "type": "textarea",
           "id": "text",
           "label": "Text",
-          "default": "A fluoride-free n-Ha routine your team can explain simply and patients can use consistently."
+          "default": "Fluoride-free n-Ha toothpaste options for patients asking what to use instead of traditional formulas."
         }
       ]
     },
@@ -1386,7 +1548,7 @@
           "type": "text",
           "id": "text",
           "label": "Text",
-          "default": "Fluoride-free nano-hydroxyapatite toothpaste options"
+          "default": "Fluoride-free n-Ha toothpaste options"
         }
       ]
     },
@@ -1584,29 +1746,22 @@
         {
           "type": "what_mini_card",
           "settings": {
-            "title": "Nano-hydroxyapatite",
-            "text": "A biomimetic mineral form of hydroxyapatite, the mineral that naturally makes up the majority of enamel and dentin."
+            "title": "A credible alternative",
+            "text": "Fluoride-free n-Ha toothpaste options for patients asking what to use instead of traditional formulas."
           }
         },
         {
           "type": "what_mini_card",
           "settings": {
-            "title": "Fluoride-free formulas",
-            "text": "Boka gives patients a fluoride-free n-Ha toothpaste option with an elevated brushing experience."
+            "title": "Easy to explain chairside",
+            "text": "Simple talking points around n-Ha, ingredient transparency, and daily oral care consistency."
           }
         },
         {
           "type": "what_mini_card",
           "settings": {
-            "title": "Elevated experience",
-            "text": "Modern packaging, low-foaming texture, and flavors designed to make the daily routine feel easier to love."
-          }
-        },
-        {
-          "type": "what_mini_card",
-          "settings": {
-            "title": "Education-ready",
-            "text": "Simple ingredient and routine talking points for chairside conversations and practice follow-up."
+            "title": "Easy for patients to stick with",
+            "text": "SLS-free, paraben-free, low-foaming formulas with a more approachable daily brushing experience."
           }
         },
         {
