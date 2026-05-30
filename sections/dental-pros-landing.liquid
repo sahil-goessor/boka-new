@@ -537,64 +537,25 @@
     </div>
   </section>
 
-  <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
-    <div class="dp-wrap">
-      <div class="dp-solution-header">
-        {% if section.settings.what_kicker != blank %}
-          <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
-        {% endif %}
-
-        {% if section.settings.what_heading != blank %}
-          <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
-        {% endif %}
-
-        {% if section.settings.what_text_1 != blank %}
-          <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
-        {% endif %}
-
-        {% if section.settings.what_text_2 != blank %}
-          <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
-        {% endif %}
-      </div>
-
-      <div class="dp-solution-grid">
-        <div class="dp-solution-panel">
-          <div class="dp-mini-grid">
-            {% for block in section.blocks %}
-              {% if block.type == 'what_mini_card' %}
-                <div class="dp-mini" {{ block.shopify_attributes }}>
-                  {% if block.settings.title != blank %}
-                    <p class="dp-mini__title">{{ block.settings.title }}</p>
-                  {% endif %}
-                  {% if block.settings.text != blank %}
-                    <p class="dp-mini__copy">{{ block.settings.text }}</p>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-
-        <div class="dp-card dp-ingredient-card">
-          {% if section.settings.ingredient_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>
-          {% endif %}
-
-          {% if section.settings.ingredient_heading != blank %}
-            <h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>
-          {% endif %}
-
-          <ul class="dp-check-list">
-            {% for block in section.blocks %}
-              {% if block.type == 'ingredient_bullet' %}
-                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
+  <section class="dp-section" id="solution" aria-label="What Boka is">
+  <div class="dp-wrap">
+    <div class="dp-solution-header">
+      {% if section.settings.solution_kicker != blank %}<span class="dp-kicker">{{ section.settings.solution_kicker }}</span>{% endif %}
+      {% if section.settings.solution_heading != blank %}<h2 class="dp-h2">{{ section.settings.solution_heading }}</h2>{% endif %}
+      {% if section.settings.solution_text != blank %}<p class="dp-copy">{{ section.settings.solution_text }}</p>{% endif %}
     </div>
-  </section>
+ 
+    <div class="dp-solution-panel">
+      {% if section.settings.ingredient_kicker != blank %}<span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>{% endif %}
+      {% if section.settings.ingredient_heading != blank %}<h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>{% endif %}
+      <ul class="dp-solution-features">
+        {% for block in section.blocks %}{% if block.type == 'ingredient_bullet' %}
+          <li {{ block.shopify_attributes }}><span>{{ block.settings.text }}</span></li>
+        {% endif %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
 
   <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist recommended">
     <div class="dp-wrap">
