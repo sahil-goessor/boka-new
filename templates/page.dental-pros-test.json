@@ -104,8 +104,8 @@
           "type": "why_card",
           "settings": {
             "icon": "1",
-            "title": "Patients are asking for fluoride-free options",
-            "text": "More patients are questioning traditional toothpaste formulas and asking whether fluoride-free options make sense for their daily routine."
+            "title": "More patients are questioning what belongs in their daily oral care routine.",
+            "text": "They may want to move toward fluoride-free toothpaste, but the alternatives can feel crowded, confusing, and hard to evaluate."
           }
         },
         "why_card_2": {
@@ -121,7 +121,7 @@
           "settings": {
             "icon": "3",
             "title": "They lack trusted product guidance",
-            "text": "Most product discovery happens through search, social media, or reviews, leaving patients to sort through mixed claims without a professional voice to guide them."
+            "text": "Between ingredient claims, online reviews, and social recommendations, patients are often left trying to choose products without a trusted professional point of view."
           }
         },
         "how_step_1": {
@@ -370,14 +370,14 @@
         "hero_secondary_label": "See how it works",
         "hero_secondary_link": "#how-it-works",
         "what_kicker": "The Boka solution",
-        "what_heading": "A simple answer for patients looking beyond traditional toothpaste.",
+        "what_heading": "A simple answer for patients beyond traditional toothpaste.",
         "what_text_1": "Boka gives dental professionals a clear answer for patients looking for better fluoride-free alternatives. Powered by nano-hydroxyapatite, or n-Ha, Boka is designed to make the ingredient conversation easier while giving patients a modern daily toothpaste experience that feels elevated, approachable, and easy to stick with.",
         "what_text_2": "",
         "ingredient_kicker": "Why Boka is easy to recommend",
         "ingredient_heading": "A better daily routine, without the scare tactics.",
         "why_kicker": "Patient demand is changing",
         "why_heading": "Patients are looking for fluoride-free alternatives. They still need a trusted recommendation.",
-        "why_text": "More patients are questioning what belongs in their daily oral care routine. They may want to move toward fluoride-free toothpaste, but the alternatives can feel crowded, confusing, and hard to evaluate. Between ingredient claims, online reviews, and social recommendations, patients are often left trying to choose products without a trusted professional point of view.",
+        "why_text": "",
         "video_embed_code": "",
         "video_placeholder_text": "Short video from a Boka Dental Advisory Committee member explaining why they recommend Boka.",
         "video_kicker": "Advisory committee perspective",
