@@ -462,9 +462,39 @@
 .dp-how-step-compact__copy { margin: 0; color: rgba(34, 39, 33, 0.64); font-size: 13px; line-height: 1.56; }
 
 /* ---------- SIGNUP (warm-tinted band) ---------- */
-.dp-form-shell { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: clamp(30px, 5vw, 64px); align-items: start; }
-.dp-form { background: rgba(255, 255, 255, 0.8); border: 1px solid var(--dp-line); border-radius: 28px; box-shadow: var(--dp-shadow); padding: clamp(24px, 4vw, 42px); }
+.dp-form-shell { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: clamp(30px, 5vw, 64px); align-items: start; min-width: 0; }
+.dp-form {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--dp-line);
+  border-radius: 28px;
+  box-shadow: var(--dp-shadow);
+  padding: clamp(24px, 4vw, 42px);
+}
 .dp-form :where(input, select, textarea, button, label, p, span, a, div) { font-family: var(--dp-font-sans) !important; }
+.dp-form .klaviyo-form-VvZypp,
+.dp-form .klaviyo-form,
+.dp-form form,
+.dp-form form > div,
+.dp-form [data-testid="klaviyo-form"],
+.dp-form [class*="kl-private-reset-css"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+.dp-form input,
+.dp-form select,
+.dp-form textarea,
+.dp-form button {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
 
 /* ---------- FAQ ---------- */
 .dp-faq .dp-wrap { padding: clamp(28px, 4vw, 50px); border-radius: 28px; background: rgba(255, 255, 255, 0.5); border: 1px solid var(--dp-line); }
@@ -537,9 +567,24 @@
   .dp-h2 { line-height: 1.06; }
   .dp-btn-row, .dp-btn { width: 100%; }
 
-  .dp-hero { padding-top: 40px; padding-bottom: 78px; }
-  .dp-hero + .dp-b2b { margin-top: -50px; padding-bottom: 50px; }
-  .dp-hero__media-card, .dp-hero__image { min-height: 340px; height: 340px; border-radius: 24px; }
+  .dp-hero { padding-top: 40px; padding-bottom: 58px; }
+
+  /* On mobile: eyebrow + heading, then image, then paragraph/buttons. */
+  .dp-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .dp-hero__content { display: contents; }
+  .dp-hero__content .dp-kicker { order: 1; }
+  .dp-hero__content .dp-h1 { order: 2; margin-bottom: 2px; }
+  .dp-hero__visual { order: 3; }
+  .dp-hero__content .dp-hero__sub { order: 4; margin: 4px 0 20px; }
+  .dp-hero__content .dp-btn-row { order: 5; }
+  .dp-hero__content .dp-hero__trust { order: 6; }
+
+  .dp-hero + .dp-b2b { margin-top: -36px; padding-bottom: 50px; }
+  .dp-hero__media-card, .dp-hero__image { min-height: 300px; height: 300px; border-radius: 24px; }
   .dp-hero__image { padding: 14px; }
   .dp-logo-mark { font-size: 34px; }
 
@@ -548,17 +593,85 @@
   .dp-b2b-box, .dp-form, .dp-faq .dp-wrap, .dp-final .dp-wrap, .dp-how-pricing__shell, .dp-ingredient-card { border-radius: 22px; }
   .dp-how-pricing__shell { padding: 30px 18px; }
 
-  .dp-quote-grid, .dp-faq-grid, .dp-pricing-benefit-grid, .dp-how-steps-compact, .dp-proof-grid { grid-template-columns: 1fr; }
+  .dp-quote-grid, .dp-faq-grid, .dp-pricing-benefit-grid, .dp-how-steps-compact { grid-template-columns: 1fr; }
   .dp-quote-grid .dp-quote:nth-child(even) { margin-top: 0; }
+
+  /* Mobile proof band: compact 2x2 cards instead of tall stacked rows. */
+  .dp-proof-band {
+    margin-top: 22px;
+    padding: 14px;
+    border-radius: 20px;
+  }
+  .dp-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .dp-proof-item,
+  .dp-proof-item:nth-child(3) {
+    min-width: 0;
+    border: 1px solid rgba(170, 122, 107, 0.18);
+    border-radius: 16px;
+    padding: 13px 12px;
+    background: rgba(255, 255, 255, 0.46);
+  }
+  .dp-proof-item:first-child { border: 1px solid rgba(170, 122, 107, 0.18); padding: 13px 12px; }
+  .dp-proof-item strong {
+    margin-bottom: 5px;
+    font-size: clamp(18px, 5.2vw, 22px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+  .dp-proof-item span {
+    font-size: 10px;
+    line-height: 1.28;
+    letter-spacing: 0.025em;
+    text-transform: none;
+  }
 
   /* Patient-demand rows: keep number + text aligned on small screens */
   .dp-info-card { grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; padding: 22px 0; }
 
-  .dp-proof-item, .dp-proof-item:nth-child(3) { border-left: 0; border-top: 1px solid var(--dp-line-warm); padding-top: 14px; padding-left: 0; }
-  .dp-proof-item:first-child { border-top: 0; padding-top: 0; }
+  /* Signup form: prevent Klaviyo's embedded widths from pushing past the viewport. */
+  .dp-signup .dp-wrap { width: min(100% - 24px, var(--dp-max)); }
+  .dp-form-shell { gap: 24px; }
+  .dp-form { padding: 18px 12px; overflow: hidden; }
+  .dp-form .klaviyo-form-VvZypp,
+  .dp-form .klaviyo-form,
+  .dp-form form,
+  .dp-form form > div,
+  .dp-form [data-testid="klaviyo-form"],
+  .dp-form [class*="kl-private-reset-css"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .dp-form [style*="width"] { max-width: 100% !important; }
+  .dp-form [style*="min-width"] { min-width: 0 !important; }
+  .dp-form input,
+  .dp-form select,
+  .dp-form textarea,
+  .dp-form button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
 
   .dp-final { padding: 52px 0; }
   .dp-final .dp-wrap { width: min(100% - 28px, var(--dp-max)); padding: 32px 22px; }
+}
+
+@media (max-width: 390px) {
+  .dp-proof-band { padding: 12px; }
+  .dp-proof-grid { gap: 8px; }
+  .dp-proof-item,
+  .dp-proof-item:first-child,
+  .dp-proof-item:nth-child(3) { padding: 12px 10px; }
+  .dp-proof-item strong { font-size: 17px; }
+  .dp-proof-item span { font-size: 9.5px; line-height: 1.24; }
+  .dp-form { padding: 16px 10px; }
 }
 
 </style>
