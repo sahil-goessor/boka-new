@@ -787,59 +787,6 @@
     </div>
   </section>
 
-
-  <section class="dp-section dp-b2b" id="practice-economics" aria-label="Boka Pro practice economics">
-    <div class="dp-wrap">
-      <div class="dp-b2b-box">
-        <div>
-          {% if section.settings.b2b_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.b2b_kicker }}</span>
-          {% endif %}
-          {% if section.settings.b2b_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.b2b_heading }}</h2>
-          {% endif %}
-          {% if section.settings.b2b_text != blank %}
-            <p class="dp-copy">{{ section.settings.b2b_text }}</p>
-          {% endif %}
-
-          <div class="dp-btn-row">
-            {% if section.settings.b2b_primary_label != blank %}
-              <a class="dp-btn dp-btn--primary" href="{{ section.settings.b2b_primary_link }}">
-                {{ section.settings.b2b_primary_label }}
-              </a>
-            {% endif %}
-            {% if section.settings.b2b_secondary_label != blank %}
-              <a class="dp-btn" href="{{ section.settings.b2b_secondary_link }}">
-                {{ section.settings.b2b_secondary_label }}
-              </a>
-            {% endif %}
-          </div>
-
-          {% if section.settings.b2b_note != blank %}
-            <p class="dp-note">{{ section.settings.b2b_note }}</p>
-          {% endif %}
-        </div>
-
-        <div>
-          <div class="dp-process">
-            {% for block in section.blocks %}
-              {% if block.type == 'process_item' %}
-                <div class="dp-process__item" {{ block.shopify_attributes }}>
-                  {% if block.settings.title != blank %}
-                    <p class="dp-process__title">{{ block.settings.title }}</p>
-                  {% endif %}
-                  {% if block.settings.text != blank %}
-                    <p class="dp-process__copy">{{ block.settings.text }}</p>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
     <div class="dp-wrap">
       <div class="dp-how-pricing__shell">
@@ -922,6 +869,60 @@
       </div>
     </div>
   </section>
+
+  <section class="dp-section dp-b2b" id="practice-economics" aria-label="Boka Pro practice economics">
+    <div class="dp-wrap">
+      <div class="dp-b2b-box">
+        <div>
+          {% if section.settings.b2b_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.b2b_kicker }}</span>
+          {% endif %}
+          {% if section.settings.b2b_heading != blank %}
+            <h2 class="dp-h2">{{ section.settings.b2b_heading }}</h2>
+          {% endif %}
+          {% if section.settings.b2b_text != blank %}
+            <p class="dp-copy">{{ section.settings.b2b_text }}</p>
+          {% endif %}
+
+          <div class="dp-btn-row">
+            {% if section.settings.b2b_primary_label != blank %}
+              <a class="dp-btn dp-btn--primary" href="{{ section.settings.b2b_primary_link }}">
+                {{ section.settings.b2b_primary_label }}
+              </a>
+            {% endif %}
+            {% if section.settings.b2b_secondary_label != blank %}
+              <a class="dp-btn" href="{{ section.settings.b2b_secondary_link }}">
+                {{ section.settings.b2b_secondary_label }}
+              </a>
+            {% endif %}
+          </div>
+
+          {% if section.settings.b2b_note != blank %}
+            <p class="dp-note">{{ section.settings.b2b_note }}</p>
+          {% endif %}
+        </div>
+
+        <div>
+          <div class="dp-process">
+            {% for block in section.blocks %}
+              {% if block.type == 'process_item' %}
+                <div class="dp-process__item" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <p class="dp-process__title">{{ block.settings.title }}</p>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <p class="dp-process__copy">{{ block.settings.text }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
 
   <section class="dp-section dp-signup" id="signup" aria-label="Apply to the Dental Pros Program">
     <div class="dp-wrap">
