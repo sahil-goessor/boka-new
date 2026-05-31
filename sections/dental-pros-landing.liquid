@@ -561,156 +561,6 @@
   .dp-final .dp-wrap { width: min(100% - 28px, var(--dp-max)); padding: 32px 22px; }
 }
 
-
-
-/* ---------- REVIEW-FOLLOWING VALUE PROPS: PATIENT + PROGRAM ---------- */
-.dp-benefits-split {
-  position: relative;
-  background:
-    radial-gradient(circle at 88% 18%, rgba(211, 231, 192, 0.16), transparent 34%),
-    radial-gradient(circle at 8% 84%, rgba(249, 229, 219, 0.12), transparent 32%),
-    transparent;
-}
-
-.dp-testimonials + .dp-benefits-split {
-  padding-top: clamp(38px, 4.8vw, 72px);
-}
-
-.dp-benefits-shell {
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  align-items: stretch;
-  border: 1px solid var(--dp-line);
-  border-radius: clamp(24px, 2.8vw, 34px);
-  background:
-    radial-gradient(circle at 94% 10%, rgba(211, 231, 192, 0.22), transparent 28%),
-    rgba(255, 255, 255, 0.66);
-  box-shadow: var(--dp-shadow);
-}
-
-.dp-benefit-half {
-  position: relative;
-  min-height: auto;
-  padding: clamp(28px, 4.2vw, 52px);
-  background: transparent;
-}
-
-.dp-benefit-half--program {
-  border-left: 1px solid var(--dp-line);
-}
-
-.dp-benefit-half .dp-kicker {
-  margin-bottom: 14px;
-}
-
-.dp-benefit-half .dp-h2 {
-  max-width: 560px;
-  margin-bottom: 14px;
-  font-size: clamp(30px, 3.1vw, 46px);
-  line-height: 1.03;
-}
-
-.dp-benefit-half .dp-copy {
-  max-width: 560px;
-  margin-bottom: clamp(22px, 2.4vw, 32px);
-  font-size: clamp(14px, 1.05vw, 16px);
-  line-height: 1.56;
-}
-
-.dp-benefits-list,
-.dp-finance-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.dp-benefits-list li,
-.dp-finance-list li {
-  position: relative;
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
-  min-height: 54px;
-  padding: 12px 0;
-  border-top: 1px solid rgba(34, 39, 33, 0.10);
-  color: rgba(34, 39, 33, 0.74);
-  font-size: clamp(14px, 1.08vw, 16px);
-  font-weight: 300;
-  line-height: 1.38;
-}
-
-.dp-benefits-list li:first-child,
-.dp-finance-list li:first-child {
-  border-top: 0;
-}
-
-.dp-benefits-list li::before,
-.dp-finance-list li::before {
-  content: "✓";
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
-  background: var(--dp-forest);
-  color: var(--dp-white);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.dp-finance-list li::before {
-  content: "$";
-  font-size: 13px;
-}
-
-.dp-finance-list strong {
-  display: block;
-  margin-bottom: 3px;
-  color: var(--dp-ink);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.dp-finance-list span {
-  display: block;
-  color: rgba(34, 39, 33, 0.64);
-}
-
-.dp-benefits-fine {
-  max-width: 980px;
-  margin: 14px auto 0;
-  color: rgba(34, 39, 33, 0.46);
-  font-size: 11px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-@media (max-width: 990px) {
-  .dp-benefits-shell { grid-template-columns: 1fr; }
-  .dp-benefit-half--program { border-left: 0; border-top: 1px solid var(--dp-line); }
-}
-
-@media (max-width: 680px) {
-  .dp-testimonials + .dp-benefits-split { padding-top: 34px; }
-  .dp-benefit-half { padding: 28px 20px; }
-  .dp-benefit-half .dp-h2 { font-size: clamp(30px, 10vw, 42px); }
-  .dp-benefits-list li,
-  .dp-finance-list li { grid-template-columns: 32px minmax(0, 1fr); gap: 12px; min-height: 50px; padding: 11px 0; }
-  .dp-benefits-list li::before,
-  .dp-finance-list li::before { width: 30px; height: 30px; }
-}
-
 </style>
 
 
@@ -849,6 +699,65 @@
     </div>
   </section>
 
+  <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
+    <div class="dp-wrap">
+      <div class="dp-solution-grid">
+        <div class="dp-solution-copy">
+          <div class="dp-solution-header">
+            {% if section.settings.what_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
+            {% endif %}
+
+            {% if section.settings.what_heading != blank %}
+              <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
+            {% endif %}
+
+            {% if section.settings.what_text_1 != blank %}
+              <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
+            {% endif %}
+
+            {% if section.settings.what_text_2 != blank %}
+              <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
+            {% endif %}
+          </div>
+
+          <div class="dp-mini-grid" aria-label="Boka solution benefits">
+            {% for block in section.blocks %}
+              {% if block.type == 'what_mini_card' %}
+                <div class="dp-mini" {{ block.shopify_attributes }}>
+                  {% if block.settings.title != blank %}
+                    <p class="dp-mini__title">{{ block.settings.title }}</p>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <p class="dp-mini__copy">{{ block.settings.text }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="dp-card dp-ingredient-card">
+          {% if section.settings.ingredient_kicker != blank %}
+            <span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>
+          {% endif %}
+
+          {% if section.settings.ingredient_heading != blank %}
+            <h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>
+          {% endif %}
+
+          <ul class="dp-check-list">
+            {% for block in section.blocks %}
+              {% if block.type == 'ingredient_bullet' %}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist recommended">
     <div class="dp-wrap">
       {% if section.settings.testimonials_kicker != blank %}
@@ -878,63 +787,86 @@
     </div>
   </section>
 
-  <section class="dp-section dp-benefits-split" id="program-benefits" aria-label="Boka toothpaste and program benefits">
+  <section class="dp-section dp-how-pricing" id="how-it-works" aria-label="How the Dental Pros Program works">
     <div class="dp-wrap">
-      <div class="dp-benefits-shell">
-        <article class="dp-benefit-half dp-benefit-half--toothpaste" aria-label="Toothpaste value props">
-          {% if section.settings.what_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
+      <div class="dp-how-pricing__shell">
+        <div class="dp-pricing-intro">
+          <div class="dp-pricing-intro__copy">
+            {% if section.settings.commission_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
+            {% endif %}
+
+            {% if section.settings.commission_heading != blank %}
+              <h2 class="dp-h2">{{ section.settings.commission_heading }}</h2>
+            {% endif %}
+
+            {% if section.settings.commission_text != blank %}
+              <p class="dp-copy">{{ section.settings.commission_text }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="dp-pricing-benefit-grid" aria-label="Professional pricing benefits">
+          <article class="dp-pricing-benefit-card">
+            <strong>Save up to 55%</strong>
+            <span>Unlock exclusive savings through Dental Pros that benefit your practice and your patients.</span>
+          </article>
+
+          <article class="dp-pricing-benefit-card">
+            <strong>Better practice economics</strong>
+            <span>Access preferred B2B pricing designed for approved professional accounts and qualifying products.</span>
+          </article>
+
+          <article class="dp-pricing-benefit-card">
+            <strong>Buy more, save more</strong>
+            <span>Greater savings may be available as qualifying order volume grows.</span>
+          </article>
+
+          <article class="dp-pricing-benefit-card">
+            <strong>Stock, sample, recommend</strong>
+            <span>Make Boka easier to keep available for your team, your office, and patient conversations.</span>
+          </article>
+        </div>
+
+        <p class="dp-pricing-fine">
+          Final pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
+        </p>
+
+        <div class="dp-pricing-divider" aria-hidden="true"></div>
+
+        <div class="dp-how-compact__header">
+          <div class="dp-how-compact__title">
+            {% if section.settings.how_kicker != blank %}
+              <span class="dp-kicker">{{ section.settings.how_kicker }}</span>
+            {% endif %}
+            {% if section.settings.how_heading != blank %}
+              <h3 class="dp-h3">{{ section.settings.how_heading }}</h3>
+            {% endif %}
+          </div>
+
+          {% if section.settings.how_text != blank %}
+            <p class="dp-copy">{{ section.settings.how_text }}</p>
           {% endif %}
+        </div>
 
-          {% if section.settings.what_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
-          {% endif %}
-
-          {% if section.settings.what_text_1 != blank %}
-            <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
-          {% endif %}
-
-          <ul class="dp-benefits-list">
-            <li>Fluoride-free n-Ha toothpaste options</li>
-            <li>Simple ingredient education for patients</li>
-            <li>SLS-free and paraben-free formulas</li>
-            <li>Low-foaming daily brushing experience</li>
-          </ul>
-        </article>
-
-        <article class="dp-benefit-half dp-benefit-half--program" aria-label="Program financial value props">
-          {% if section.settings.commission_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.commission_kicker }}</span>
-          {% endif %}
-
-          {% if section.settings.commission_heading != blank %}
-            <h2 class="dp-h2">{{ section.settings.commission_heading }}</h2>
-          {% endif %}
-
-          {% if section.settings.commission_text != blank %}
-            <p class="dp-copy">{{ section.settings.commission_text }}</p>
-          {% endif %}
-
-          <ul class="dp-finance-list">
-            <li>
-              <span><strong>Save up to 55%</strong>Preferred professional pricing for approved accounts.</span>
-            </li>
-            <li>
-              <span><strong>Better practice economics</strong>Support office stocking, sampling, and team use.</span>
-            </li>
-            <li>
-              <span><strong>Buy more, save more</strong>Savings may increase as qualifying volume grows.</span>
-            </li>
-            <li>
-              <span><strong>Easy to recommend</strong>Keep Boka available for patient conversations.</span>
-            </li>
-          </ul>
-        </article>
+        <div class="dp-how-steps-compact" aria-label="How it works steps">
+          {% for block in section.blocks %}
+            {% if block.type == 'how_step' %}
+              <article class="dp-how-step-compact" {{ block.shopify_attributes }}>
+                {% if block.settings.number != blank %}
+                  <span class="dp-how-step-compact__num">{{ block.settings.number }}</span>
+                {% endif %}
+                {% if block.settings.title != blank %}
+                  <h4 class="dp-how-step-compact__title">{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <p class="dp-how-step-compact__copy">{{ block.settings.text }}</p>
+                {% endif %}
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-
-      <p class="dp-benefits-fine">
-        Final pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
-      </p>
     </div>
   </section>
 
@@ -1087,7 +1019,7 @@
       "type": "html",
       "id": "hero_heading",
       "label": "Hero heading",
-      "default": "Give patients the fluoride-free n-Ha toothpaste they are already asking about."
+      "default": "Give patients the fluoride-free n-Ha toothpaste they\u2019re already <span class=\"dp-em\">asking</span> about."
     },
     {
       "type": "textarea",
@@ -1146,7 +1078,7 @@
       "type": "text",
       "id": "hero_secondary_link",
       "label": "Secondary button link",
-      "default": "#program-benefits"
+      "default": "#practice-economics"
     },
     {
       "type": "header",
@@ -1156,19 +1088,19 @@
       "type": "text",
       "id": "what_kicker",
       "label": "Eyebrow",
-      "default": "Toothpaste benefits"
+      "default": "The Boka solution"
     },
     {
       "type": "html",
       "id": "what_heading",
       "label": "Heading",
-      "default": "A simple fluoride-free option patients can understand."
+      "default": "A simple fluoride-free option your patients can actually understand."
     },
     {
       "type": "textarea",
       "id": "what_text_1",
       "label": "Body text 1",
-      "default": "Boka gives dental professionals a clear answer for patients looking for better fluoride-free alternatives."
+      "default": "Boka gives dental professionals a clear, modern answer for patients looking beyond traditional toothpaste. Powered by nano-hydroxyapatite, or n-Ha, Boka makes the ingredient conversation easier while supporting a daily routine that feels elevated, approachable, and easy to maintain."
     },
     {
       "type": "textarea",
@@ -1202,7 +1134,7 @@
       "type": "html",
       "id": "why_heading",
       "label": "Heading",
-      "default": "Patients are looking for more mindful oral care. Your team needs a clear answer."
+      "default": "Patients are looking for more mindful oral care. Your team needs a clear <span class=\"dp-em\">answer</span>."
     },
     {
       "type": "textarea",
@@ -1294,13 +1226,13 @@
       "type": "html",
       "id": "commission_heading",
       "label": "Commission heading",
-      "default": "Professional pricing that helps Boka make sense for the practice, too."
+      "default": "Get access to preferred B2B pricing and save more as your practice grows."
     },
     {
       "type": "textarea",
       "id": "commission_text",
       "label": "Commission body text",
-      "default": "Approved Dental Pro accounts can access preferred pricing on qualifying Boka products, with savings designed to support office stocking, team use, sampling, and patient-facing recommendations."
+      "default": "Approved Dental Pro accounts can access preferred pricing on qualifying Boka products. Savings may increase as qualifying order volume grows, with up to 55% savings available based on account type, product eligibility, and program requirements."
     },
     {
       "type": "header",
