@@ -689,19 +689,25 @@
 
 .dp-committee__person {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: 88px minmax(0, 1fr);
   gap: 18px;
   align-items: center;
-  margin-top: auto;
-  padding-top: clamp(28px, 4vw, 42px);
+  margin: 0 0 clamp(22px, 3vw, 32px);
+  padding: 0 0 clamp(20px, 3vw, 30px);
+  border-bottom: 1px solid rgba(34, 39, 33, 0.09);
+}
+
+.dp-committee__person--top {
+  margin-top: 0;
 }
 
 .dp-committee__photo {
-  width: 72px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
   border-radius: 999px;
   object-fit: cover;
   background: var(--dp-frost);
+  box-shadow: 0 12px 30px rgba(34, 39, 33, 0.07);
 }
 
 .dp-committee__name,
@@ -854,14 +860,15 @@
   }
 
   .dp-committee__person {
-    grid-template-columns: 58px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
     gap: 14px;
-    padding-top: 26px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
   }
 
   .dp-committee__photo {
-    width: 58px;
-    height: 58px;
+    width: 64px;
+    height: 64px;
   }
 
   .dp-committee__members {
@@ -1033,6 +1040,8 @@
     .dp-info-card,
     .dp-mini,
     .dp-quote,
+    .dp-committee__quote-card,
+    .dp-committee__member,
     .dp-process__item,
     .dp-pricing-benefit-card,
     .dp-how-step-compact,
@@ -1508,7 +1517,7 @@
             {% endif %}
 
             {% if section.settings.hero_secondary_label != blank %}
-              <a class="dp-btn" href="{{ section.settings.hero_secondary_link }}">
+              <a class="dp-btn" href="#what-is-boka">
                 {{ section.settings.hero_secondary_label }}
               </a>
             {% endif %}
@@ -1677,7 +1686,7 @@
 
           <div class="dp-solution-cta__actions">
             <a class="dp-solution-cta__btn dp-solution-cta__btn--primary" href="#signup">Apply Now <span aria-hidden="true">→</span></a>
-            <a class="dp-solution-cta__btn dp-solution-cta__btn--secondary" href="https://account.boka.com">Log In</a>
+            <a class="dp-solution-cta__btn dp-solution-cta__btn--secondary" href="#faq">Have Questions?</a>
           </div>
         </div>
       </div>
@@ -1706,12 +1715,7 @@
 
       <div class="dp-committee__featured">
         <article class="dp-committee__quote-card">
-          <div class="dp-committee__quote-mark" aria-hidden="true">“</div>
-          <p class="dp-committee__quote">
-            It is all in the science. Boka utilizes nano-hydroxyapatite technology. I would recommend this product to anyone interested in a high-quality, innovative product.
-          </p>
-
-          <div class="dp-committee__person">
+          <div class="dp-committee__person dp-committee__person--top">
             <img
               class="dp-committee__photo"
               src="{{ 'Foti_1.webp' | file_img_url: '240x240', crop: 'center' }}"
@@ -1723,15 +1727,15 @@
               <p class="dp-committee__role">DMD, PhD, MEd, MBA</p>
             </div>
           </div>
+
+          <div class="dp-committee__quote-mark" aria-hidden="true">“</div>
+          <p class="dp-committee__quote">
+            It is all in the science. Boka utilizes nano-hydroxyapatite technology. I would recommend this product to anyone interested in a high-quality, innovative product.
+          </p>
         </article>
 
         <article class="dp-committee__quote-card">
-          <div class="dp-committee__quote-mark" aria-hidden="true">“</div>
-          <p class="dp-committee__quote">
-            Oral hygiene is considered a tedious chore by many. Boka products provide consumers a choice they find pleasurable to use — supporting oral health and overall well-being.
-          </p>
-
-          <div class="dp-committee__person">
+          <div class="dp-committee__person dp-committee__person--top">
             <img
               class="dp-committee__photo"
               src="{{ 'Raj_1.webp' | file_img_url: '240x240', crop: 'center' }}"
@@ -1743,6 +1747,11 @@
               <p class="dp-committee__role">Former EVP of Global R&amp;D, Colgate-Palmolive</p>
             </div>
           </div>
+
+          <div class="dp-committee__quote-mark" aria-hidden="true">“</div>
+          <p class="dp-committee__quote">
+            Oral hygiene is considered a tedious chore by many. Boka products provide consumers a choice they find pleasurable to use — supporting oral health and overall well-being.
+          </p>
         </article>
       </div>
 
@@ -1917,7 +1926,7 @@
     </div>
   </section>
 
-  <section class="dp-section dp-faq" aria-label="Dental Pros Program FAQ">
+  <section class="dp-section dp-faq" id="faq" aria-label="Dental Pros Program FAQ">
     <div class="dp-wrap">
       {% if section.settings.faq_kicker != blank %}
         <span class="dp-kicker">{{ section.settings.faq_kicker }}</span>
