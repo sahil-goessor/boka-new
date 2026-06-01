@@ -1206,6 +1206,87 @@
   }
 }
 
+
+/* ---------- KLAVIYO DROPDOWN / SELECTED TEXT VISIBILITY FIX ----------
+   Klaviyo dropdowns render as Downshift combobox inputs, not native selects.
+   These overrides keep the selected value visible after a state/option is chosen. */
+.dp-form input[role="combobox"],
+.dp-form input[aria-autocomplete="list"],
+.dp-form input[id^="downshift-"],
+.dp-form .needsclick input[role="combobox"],
+.dp-form .needsclick input[aria-autocomplete="list"],
+.dp-form .needsclick input[id^="downshift-"] {
+  color: var(--dp-ink) !important;
+  -webkit-text-fill-color: var(--dp-ink) !important;
+  opacity: 1 !important;
+  caret-color: var(--dp-ink) !important;
+  background-color: var(--dp-white) !important;
+}
+
+/* Keep placeholder text softer, but still visible. */
+.dp-form input[role="combobox"]::placeholder,
+.dp-form input[aria-autocomplete="list"]::placeholder,
+.dp-form input[id^="downshift-"]::placeholder,
+.dp-form .needsclick input[role="combobox"]::placeholder,
+.dp-form .needsclick input[aria-autocomplete="list"]::placeholder,
+.dp-form .needsclick input[id^="downshift-"]::placeholder {
+  color: rgba(34, 39, 33, 0.48) !important;
+  -webkit-text-fill-color: rgba(34, 39, 33, 0.48) !important;
+  opacity: 1 !important;
+}
+
+/* Make dropdown menu and option text readable. */
+.dp-form [role="listbox"],
+.dp-form [role="option"],
+.dp-form [id^="downshift-"][role="listbox"],
+.dp-form [id^="downshift-"] [role="option"],
+.dp-form .needsclick [role="listbox"],
+.dp-form .needsclick [role="option"] {
+  color: var(--dp-ink) !important;
+  -webkit-text-fill-color: var(--dp-ink) !important;
+  opacity: 1 !important;
+}
+
+/* Prevent Klaviyo private reset classes from forcing white/invisible text in form fields. */
+.dp-form [class*="kl-private-reset-css"] input,
+.dp-form [class*="kl-private-reset-css"] textarea,
+.dp-form [class*="kl-private-reset-css"] select,
+.dp-form [class*="kl-private-reset-css"] [role="combobox"],
+.dp-form [class*="kl-private-reset-css"] [role="option"] {
+  color: var(--dp-ink) !important;
+  -webkit-text-fill-color: var(--dp-ink) !important;
+  opacity: 1 !important;
+}
+
+/* Aggressive fallback for Klaviyo's injected inline/generated classes. */
+.dp-form .needsclick input,
+.dp-form .needsclick textarea,
+.dp-form .needsclick select {
+  color: var(--dp-ink) !important;
+  -webkit-text-fill-color: var(--dp-ink) !important;
+  opacity: 1 !important;
+}
+
+/* Keep autofill readable too. */
+.dp-form input:-webkit-autofill,
+.dp-form input:-webkit-autofill:hover,
+.dp-form input:-webkit-autofill:focus,
+.dp-form textarea:-webkit-autofill,
+.dp-form textarea:-webkit-autofill:hover,
+.dp-form textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--dp-ink) !important;
+  caret-color: var(--dp-ink) !important;
+  box-shadow: 0 0 0 1000px var(--dp-white) inset !important;
+}
+
+/* Dropdown arrow should stay visible but not overpower the field. */
+.dp-form input[role="combobox"] + button svg,
+.dp-form input[id^="downshift-"] + button svg,
+.dp-form .needsclick input[role="combobox"] + button svg,
+.dp-form .needsclick input[id^="downshift-"] + button svg {
+  fill: rgba(34, 39, 33, 0.56) !important;
+}
+
 </style>
 
 
