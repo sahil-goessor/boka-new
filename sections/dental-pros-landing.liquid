@@ -731,7 +731,7 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
-  margin-bottom: clamp(28px, 4vw, 46px);
+  margin-bottom: clamp(32px, 5vw, 56px);
 }
 
 .dp-committee__member {
@@ -1713,12 +1713,91 @@
         </p>
       </div>
 
+      <!-- Committee member images/cards now appear above the featured quote cards. -->
+      <div class="dp-committee__members" aria-label="Committee members">
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Dianne_1.webp' | file_url }}"
+            alt="Diane Cummins"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Diane Cummins</p>
+            <p class="dp-committee__member-bio">
+              Globally respected oral health scientist and consultant with experience leading oral care innovation, claims support, and clinical validation.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Foti_1.webp' | file_url }}"
+            alt="Dr. Foti Panagakos"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Dr. Foti Panagakos</p>
+            <p class="dp-committee__member-bio">
+              Founding Dean of the School of Dental Medicine at Pacific Northwest University of Health Sciences.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Raj_1.webp' | file_url }}"
+            alt="Raj Kohli, PhD"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Raj Kohli, PhD</p>
+            <p class="dp-committee__member-bio">
+              Retired EVP of Global R&amp;D and Technology Strategy at Colgate-Palmolive with 40 years of CPG experience.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Allan_1.webp' | file_url }}"
+            alt="Alan Wolpert"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Alan Wolpert</p>
+            <p class="dp-committee__member-bio">
+              Former President of Consumer Brands at Henkel North America with deep experience in brand growth and innovation.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Victoria.webp' | file_url }}"
+            alt="Dr. Victoria Sampson"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Dr. Victoria Sampson</p>
+            <p class="dp-committee__member-bio">
+              Functional dentist and researcher focused on oral microbiome testing, salivary diagnostics, and whole-body health.
+            </p>
+          </div>
+        </article>
+      </div>
+
+
       <div class="dp-committee__featured">
         <article class="dp-committee__quote-card">
           <div class="dp-committee__person dp-committee__person--top">
             <img
               class="dp-committee__photo"
-              src="{{ 'Foti_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+              src="{{ 'Foti_1.webp' | file_url }}"
               alt="Dr. Foti Panagakos"
               loading="lazy"
             >
@@ -1738,7 +1817,7 @@
           <div class="dp-committee__person dp-committee__person--top">
             <img
               class="dp-committee__photo"
-              src="{{ 'Raj_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+              src="{{ 'Raj_1.webp' | file_url }}"
               alt="Raj Kohli, PhD"
               loading="lazy"
             >
@@ -1752,83 +1831,6 @@
           <p class="dp-committee__quote">
             Oral hygiene is considered a tedious chore by many. Boka products provide consumers a choice they find pleasurable to use — supporting oral health and overall well-being.
           </p>
-        </article>
-      </div>
-
-      <div class="dp-committee__members" aria-label="Committee members">
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Dianne_1.webp' | file_img_url: '240x240', crop: 'center' }}"
-            alt="Diane Cummins"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Diane Cummins</p>
-            <p class="dp-committee__member-bio">
-              Globally respected oral health scientist and consultant with experience leading oral care innovation, claims support, and clinical validation.
-            </p>
-          </div>
-        </article>
-
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Foti_1.webp' | file_img_url: '240x240', crop: 'center' }}"
-            alt="Dr. Foti Panagakos"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Dr. Foti Panagakos</p>
-            <p class="dp-committee__member-bio">
-              Founding Dean of the School of Dental Medicine at Pacific Northwest University of Health Sciences.
-            </p>
-          </div>
-        </article>
-
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Raj_1.webp' | file_img_url: '240x240', crop: 'center' }}"
-            alt="Raj Kohli, PhD"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Raj Kohli, PhD</p>
-            <p class="dp-committee__member-bio">
-              Retired EVP of Global R&amp;D and Technology Strategy at Colgate-Palmolive with 40 years of CPG experience.
-            </p>
-          </div>
-        </article>
-
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Allan_1.webp' | file_img_url: '240x240', crop: 'center' }}"
-            alt="Alan Wolpert"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Alan Wolpert</p>
-            <p class="dp-committee__member-bio">
-              Former President of Consumer Brands at Henkel North America with deep experience in brand growth and innovation.
-            </p>
-          </div>
-        </article>
-
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Victoria.webp' | file_img_url: '240x240', crop: 'center' }}"
-            alt="Dr. Victoria Sampson"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Dr. Victoria Sampson</p>
-            <p class="dp-committee__member-bio">
-              Functional dentist and researcher focused on oral microbiome testing, salivary diagnostics, and whole-body health.
-            </p>
-          </div>
         </article>
       </div>
 
