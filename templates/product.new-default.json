@@ -147,7 +147,7 @@
         "custom_liquid_DTihCy": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% if product.metafields.custom.new_ingredients_list != blank %}\n  <div class=\"boka-product-accordion\">\n    <details class=\"boka-product-accordion__item\" open>\n      <summary class=\"boka-product-accordion__summary\">\n        <span>Ingredients</span>\n        <span class=\"boka-product-accordion__icon\" aria-hidden=\"true\">⌃</span>\n      </summary>\n\n      <div class=\"boka-product-accordion__content\">\n        {{ product.metafields.custom.new_ingredients_list | metafield_tag }}\n      </div>\n    </details>\n  </div>\n{% endif %}"
+            "custom_liquid": "{% assign ingredients = product.metafields.custom.new_ingredients_list.value %}\n\n{% if ingredients != blank %}\n  <div class=\"boka-product-accordion\">\n    <details class=\"boka-product-accordion__item\" open>\n      <summary class=\"boka-product-accordion__summary\">\n        <span>Ingredients</span>\n        <span class=\"boka-product-accordion__icon\" aria-hidden=\"true\">⌃</span>\n      </summary>\n\n      <div class=\"boka-product-accordion__content\">\n        <p class=\"boka-ingredients\">\n          {{ ingredients }}\n        </p>\n      </div>\n    </details>\n  </div>\n{% endif %}"
           }
         }
       },
