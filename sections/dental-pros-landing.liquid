@@ -1207,11 +1207,15 @@
   }
 }
 
-.dp-form .klaviyo-dropdown input[id^="downshift-"] {
+.dp-form .klaviyo-dropdown [role="option"],
+.dp-form [id^="downshift-"] [role="option"],
+.dp-page .klaviyo-dropdown [role="option"],
+.dp-page [id^="downshift-"] [role="option"] {
   color: #222721 !important;
   -webkit-text-fill-color: #222721 !important;
+  background: #ffffff !important;
+  opacity: 1 !important;
 }
-
 </style>
 
 
