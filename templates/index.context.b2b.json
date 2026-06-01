@@ -17,6 +17,10 @@
       "disabled": true,
       "settings": {},
       "blocks": {
+        "template--15124824358955__d0c5cff0-67a0-44b2-909d-a8de23fae9f1-16836973977ea3509a-0": {
+          "disabled": true,
+          "settings": {}
+        },
         "announcement_D4r3x": {
           "type": "announcement",
           "disabled": false,
@@ -26,20 +30,26 @@
             "text_alignment": "center",
             "color_scheme": "background-1",
             "link": "",
-            "header-51eb169a437ba218de07f9515b7681b4": null,
+            "header-c21769d7b3158fa5aecc135217db3248": null,
             "custom_background_color": "#333333",
-            "custom_text_color": "#FFFFFF"
+            "custom_text_color": "#ffffff"
           }
-        },
-        "template--15124824358955__d0c5cff0-67a0-44b2-909d-a8de23fae9f1-16836973977ea3509a-0": {
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
         "template--15124824358955__d0c5cff0-67a0-44b2-909d-a8de23fae9f1-16836973977ea3509a-0",
         "announcement_D4r3x"
       ]
+    },
+    "e88125fd-54b1-4dc4-a7be-094d886854f5": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "c6a93dd1-8311-4974-b863-f220a9ebe858": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   },
   "order": [
