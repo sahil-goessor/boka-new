@@ -1287,6 +1287,122 @@
   fill: rgba(34, 39, 33, 0.56) !important;
 }
 
+
+/* ---------- KLAVIYO DROPDOWN SELECTED TEXT FIX ---------- */
+
+/* Force all Klaviyo form field text to be visible */
+.dp-page .klaviyo-form input,
+.dp-page .klaviyo-form textarea,
+.dp-page .klaviyo-form select,
+.dp-page .klaviyo-form [role="combobox"],
+.dp-page .klaviyo-form [aria-autocomplete="list"],
+.dp-page .klaviyo-form input[id^="downshift-"],
+.dp-form input,
+.dp-form textarea,
+.dp-form select,
+.dp-form [role="combobox"],
+.dp-form [aria-autocomplete="list"],
+.dp-form input[id^="downshift-"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  caret-color: #222721 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* Specifically target Klaviyo dropdown component */
+.dp-page .klaviyo-dropdown input,
+.dp-page .klaviyo-dropdown input[role="combobox"],
+.dp-page .klaviyo-dropdown input[id^="downshift-"],
+.dp-form .klaviyo-dropdown input,
+.dp-form .klaviyo-dropdown input[role="combobox"],
+.dp-form .klaviyo-dropdown input[id^="downshift-"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 2 !important;
+  padding-right: 42px !important;
+}
+
+/* Placeholder should be lighter, but still visible */
+.dp-page .klaviyo-form input::placeholder,
+.dp-page .klaviyo-form textarea::placeholder,
+.dp-page .klaviyo-form [role="combobox"]::placeholder,
+.dp-page .klaviyo-form input[id^="downshift-"]::placeholder,
+.dp-form input::placeholder,
+.dp-form textarea::placeholder,
+.dp-form [role="combobox"]::placeholder,
+.dp-form input[id^="downshift-"]::placeholder {
+  color: rgba(34, 39, 33, 0.48) !important;
+  -webkit-text-fill-color: rgba(34, 39, 33, 0.48) !important;
+  opacity: 1 !important;
+}
+
+/* Keep the dropdown arrow clickable but not covering text */
+.dp-page .klaviyo-dropdown button[id^="downshift-"][id$="toggle-button"],
+.dp-form .klaviyo-dropdown button[id^="downshift-"][id$="toggle-button"] {
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 3 !important;
+  background: transparent !important;
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  padding: 0 !important;
+}
+
+/* Make sure the wrapper allows the input text to show */
+.dp-page .klaviyo-dropdown,
+.dp-page .klaviyo-dropdown > div,
+.dp-page .klaviyo-dropdown [class*="go"],
+.dp-form .klaviyo-dropdown,
+.dp-form .klaviyo-dropdown > div,
+.dp-form .klaviyo-dropdown [class*="go"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  overflow: visible !important;
+}
+
+/* Dropdown menu + options text */
+.dp-page .klaviyo-form [role="listbox"],
+.dp-page .klaviyo-form [role="option"],
+.dp-page .klaviyo-dropdown [role="listbox"],
+.dp-page .klaviyo-dropdown [role="option"],
+.dp-form [role="listbox"],
+.dp-form [role="option"],
+.dp-form .klaviyo-dropdown [role="listbox"],
+.dp-form .klaviyo-dropdown [role="option"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Chrome/Safari autofill/text rendering override */
+.dp-page .klaviyo-form input:-webkit-autofill,
+.dp-page .klaviyo-form input:-webkit-autofill:hover,
+.dp-page .klaviyo-form input:-webkit-autofill:focus,
+.dp-form input:-webkit-autofill,
+.dp-form input:-webkit-autofill:hover,
+.dp-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #222721 !important;
+  color: #222721 !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+}
+
+/* Last-resort override for Klaviyo reset classes */
+.dp-page .needsclick,
+.dp-page [class*="kl-private-reset-css"],
+.dp-form .needsclick,
+.dp-form [class*="kl-private-reset-css"] {
+  color: #222721 !important;
+}
 </style>
 
 
