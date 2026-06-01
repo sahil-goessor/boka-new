@@ -603,134 +603,300 @@
   line-height: 1.4;
   text-align: center;
 }
-/* ---------- TESTIMONIALS / ADVISORY COMMITTEE PROOF ---------- */
-.dp-testimonials {
+/* ---------- ORAL HEALTH ADVISORY COMMITTEE ---------- */
+.dp-committee {
   position: relative;
   overflow: hidden;
   background:
     radial-gradient(circle at 50% 0%, rgba(211, 231, 192, 0.34), transparent 42%),
     linear-gradient(180deg, rgba(211, 231, 192, 0.16), rgba(250, 250, 245, 0));
+}
+
+.dp-committee .dp-wrap {
+  max-width: 1180px;
+}
+
+.dp-committee__header {
+  max-width: 880px;
+  margin: 0 auto clamp(36px, 5vw, 64px);
   text-align: center;
 }
-.dp-testimonials .dp-wrap { max-width: 1180px; }
-.dp-testimonials .dp-kicker {
+
+.dp-committee__header .dp-kicker {
   justify-content: center;
   color: var(--dp-terracotta);
   font-size: 12px;
   letter-spacing: 0.20em;
 }
-.dp-testimonials .dp-kicker::before { display: none; }
-.dp-testimonials .dp-h2 {
+
+.dp-committee__header .dp-kicker::before {
+  display: none;
+}
+
+.dp-committee__header .dp-h2 {
   max-width: 980px;
-  margin-inline: auto;
-  margin-bottom: 18px;
+  margin: 0 auto 18px;
   font-size: clamp(36px, 4.5vw, 64px);
   line-height: 1.02;
 }
-.dp-testimonials__intro {
-  max-width: 740px;
+
+.dp-committee__intro {
+  max-width: 760px;
   margin: 0 auto;
-  color: rgba(34, 39, 33, 0.62);
-  font-size: 32px;
+  color: rgba(34, 39, 33, 0.64);
+  font-size: clamp(16px, 1.6vw, 21px);
   font-weight: 300;
-  line-height: 1.48;
+  line-height: 1.58;
 }
-.dp-quote-grid {
+
+.dp-committee__featured {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(24px, 4vw, 44px);
-  margin-top: clamp(48px, 7vw, 82px);
-  text-align: left;
+  gap: clamp(22px, 4vw, 44px);
+  margin-bottom: clamp(28px, 4vw, 48px);
 }
-.dp-quote {
+
+.dp-committee__quote-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: clamp(330px, 28vw, 420px);
-  padding: clamp(30px, 4vw, 52px);
+  min-height: 360px;
+  padding: clamp(28px, 4vw, 48px);
   border: 1px solid rgba(34, 39, 33, 0.10);
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.84);
   box-shadow: 0 22px 58px rgba(34, 39, 33, 0.08);
 }
-.dp-quote::before {
-  content: "\201C";
-  display: block;
-  margin: 0 0 20px;
-  color: rgba(170, 122, 107, 0.28);
+
+.dp-committee__quote-mark {
+  margin-bottom: 8px;
+  color: rgba(170, 122, 107, 0.30);
   font-family: var(--dp-font-serif);
+  font-size: clamp(62px, 6vw, 86px);
   font-style: italic;
-  font-size: clamp(58px, 5vw, 82px);
-  line-height: 0.7;
+  line-height: 0.72;
 }
-.dp-quote-grid .dp-quote:nth-child(even) { margin-top: 0; }
-.dp-quote__text {
+
+.dp-committee__quote {
   margin: 0;
-  color: rgba(34, 39, 33, 0.90);
+  color: rgba(34, 39, 33, 0.88);
   font-family: var(--dp-font-serif);
-  font-size: clamp(21px, 2vw, 30px);
+  font-size: clamp(20px, 1.8vw, 28px);
   font-style: italic;
-  line-height: 1.44;
+  line-height: 1.45;
   letter-spacing: -0.025em;
 }
-.dp-quote__person {
+
+.dp-committee__person {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
-  gap: 20px;
+  gap: 18px;
   align-items: center;
   margin-top: auto;
   padding-top: clamp(28px, 4vw, 42px);
 }
-.dp-quote__avatar {
-  display: grid;
-  place-items: center;
+
+.dp-committee__photo {
   width: 72px;
   height: 72px;
   border-radius: 999px;
+  object-fit: cover;
   background: var(--dp-frost);
-  color: var(--dp-forest);
-  font-family: var(--dp-font-serif);
-  font-size: 27px;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.04em;
 }
-.dp-quote__name {
+
+.dp-committee__name,
+.dp-committee__member-name {
   margin: 0 0 5px;
   color: var(--dp-ink);
-  font-size: clamp(17px, 1.45vw, 22px);
+  font-size: clamp(17px, 1.35vw, 21px);
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   line-height: 1.18;
-  text-transform: none;
 }
-.dp-quote__role {
+
+.dp-committee__role {
   margin: 0;
   color: rgba(34, 39, 33, 0.60);
-  font-size: clamp(14px, 1.25vw, 18px);
+  font-size: clamp(13px, 1.05vw, 16px);
   line-height: 1.35;
 }
-.dp-testimonials__footer {
+
+.dp-committee__members {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: clamp(28px, 4vw, 46px);
+}
+
+.dp-committee__member {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(34, 39, 33, 0.09);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 12px 30px rgba(34, 39, 33, 0.045);
+}
+
+.dp-committee__member-photo {
+  display: block;
+  width: 74px;
+  height: 74px;
+  margin: 0 0 16px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: var(--dp-frost);
+}
+
+.dp-committee__member-name {
+  font-size: 16px;
+}
+
+.dp-committee__member-bio {
+  margin: 0;
+  color: rgba(34, 39, 33, 0.62);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.dp-committee__footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 18px;
-  margin-top: clamp(34px, 5vw, 54px);
   color: rgba(34, 39, 33, 0.62);
-  font-size: clamp(14px, 1.45vw, 18px);
+  font-size: clamp(14px, 1.35vw, 18px);
   line-height: 1.4;
+  text-align: center;
 }
-.dp-testimonials__link {
+
+.dp-committee__link {
   color: var(--dp-forest);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-thickness: 1px;
 }
-.dp-testimonials__link:hover,
-.dp-testimonials__link:focus-visible { color: var(--dp-ink); }
+
+.dp-committee__link:hover,
+.dp-committee__link:focus-visible {
+  color: var(--dp-ink);
+}
+
+@media (max-width: 1100px) {
+  .dp-committee__members {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .dp-committee__featured {
+    grid-template-columns: 1fr;
+  }
+
+  .dp-committee__members {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .dp-committee {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .dp-committee .dp-wrap {
+    width: min(100% - 28px, var(--dp-max));
+  }
+
+  .dp-committee__header {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .dp-committee__header .dp-kicker {
+    justify-content: flex-start;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    line-height: 1.25;
+  }
+
+  .dp-committee__header .dp-h2 {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1.02;
+  }
+
+  .dp-committee__intro {
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+
+  .dp-committee__featured {
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .dp-committee__quote-card {
+    min-height: 0;
+    padding: 26px 20px;
+    border-radius: 24px;
+  }
+
+  .dp-committee__quote-mark {
+    margin-bottom: 8px;
+    font-size: 60px;
+  }
+
+  .dp-committee__quote {
+    font-size: clamp(19px, 5.8vw, 24px);
+    line-height: 1.42;
+  }
+
+  .dp-committee__person {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 14px;
+    padding-top: 26px;
+  }
+
+  .dp-committee__photo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .dp-committee__members {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dp-committee__member {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .dp-committee__member-photo {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+  }
+
+  .dp-committee__member-bio {
+    font-size: 12.5px;
+  }
+
+  .dp-committee__footer {
+    display: grid;
+    gap: 10px;
+    margin-top: 24px;
+    font-size: 14px;
+    text-align: left;
+    justify-content: start;
+  }
+}
 
 /* ---------- B2B / PRACTICE (contained panel, kept distinct) ---------- */
 .dp-b2b { position: relative; background: transparent; }
@@ -1518,48 +1684,150 @@
     </div>
   </section>
 
-  <section class="dp-section dp-testimonials" aria-label="Dentist and hygienist recommended">
+  <section class="dp-section dp-committee" aria-label="Boka Oral Health Advisory Committee">
     <div class="dp-wrap">
-      {% if section.settings.testimonials_kicker != blank %}
-        <span class="dp-kicker">{{ section.settings.testimonials_kicker }}</span>
-      {% endif %}
-      {% if section.settings.testimonials_heading != blank %}
-        <h2 class="dp-h2">{{ section.settings.testimonials_heading }}</h2>
-      {% endif %}
-      <p class="dp-testimonials__intro">
-        With a collective 120+ years of industry experience, the Boka Oral Health Advisory Committee exists to ensure that every product is backed by legitimate science, crafted with the highest quality ingredients, and proven for safety and performance.
-      </p>
+      <div class="dp-committee__header">
+        {% if section.settings.testimonials_kicker != blank %}
+          <span class="dp-kicker">{{ section.settings.testimonials_kicker }}</span>
+        {% else %}
+          <span class="dp-kicker">The proof</span>
+        {% endif %}
 
-      <div class="dp-quote-grid">
-        {% for block in section.blocks %}
-          {% if block.type == 'quote' %}
-            <article class="dp-quote" {{ block.shopify_attributes }}>
-              {% if block.settings.quote != blank %}
-                <p class="dp-quote__text">{{ block.settings.quote }}</p>
-              {% endif %}
+        {% if section.settings.testimonials_heading != blank %}
+          <h2 class="dp-h2">{{ section.settings.testimonials_heading }}</h2>
+        {% else %}
+          <h2 class="dp-h2">Backed by our Oral Health Advisory Committee.</h2>
+        {% endif %}
 
-              <div class="dp-quote__person">
-                {% if block.settings.name != blank %}
-                  {% assign quote_name_parts = block.settings.name | split: ' ' %}
-                  {% assign quote_first_initial = quote_name_parts[0] | slice: 0, 1 %}
-                  {% assign quote_last_initial = quote_name_parts[1] | slice: 0, 1 %}
-                  <span class="dp-quote__avatar" aria-hidden="true">{{ quote_first_initial }}{{ quote_last_initial }}</span>
-                  <div>
-                    <p class="dp-quote__name">{{ block.settings.name }}</p>
-                    {% if block.settings.role != blank %}
-                      <p class="dp-quote__role">{{ block.settings.role }}</p>
-                    {% endif %}
-                  </div>
-                {% endif %}
-              </div>
-            </article>
-          {% endif %}
-        {% endfor %}
+        <p class="dp-committee__intro">
+          With a collective 120+ years of industry experience, the Boka Oral Health Advisory Committee helps ensure every product is backed by legitimate science, crafted with high-quality ingredients, and reviewed for safety and performance.
+        </p>
       </div>
 
-      <div class="dp-testimonials__footer">
-        <span>Reviewed by a full committee of dental &amp; health-science experts.</span>
-        <a class="dp-testimonials__link" href="https://www.boka.com/pages/oral-health-advisory-committee">Meet the committee →</a>
+      <div class="dp-committee__featured">
+        <article class="dp-committee__quote-card">
+          <div class="dp-committee__quote-mark" aria-hidden="true">“</div>
+          <p class="dp-committee__quote">
+            It is all in the science. Boka utilizes nano-hydroxyapatite technology. I would recommend this product to anyone interested in a high-quality, innovative product.
+          </p>
+
+          <div class="dp-committee__person">
+            <img
+              class="dp-committee__photo"
+              src="{{ 'Foti_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+              alt="Dr. Foti Panagakos"
+              loading="lazy"
+            >
+            <div>
+              <p class="dp-committee__name">Dr. Foti Panagakos</p>
+              <p class="dp-committee__role">DMD, PhD, MEd, MBA</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="dp-committee__quote-card">
+          <div class="dp-committee__quote-mark" aria-hidden="true">“</div>
+          <p class="dp-committee__quote">
+            Oral hygiene is considered a tedious chore by many. Boka products provide consumers a choice they find pleasurable to use — supporting oral health and overall well-being.
+          </p>
+
+          <div class="dp-committee__person">
+            <img
+              class="dp-committee__photo"
+              src="{{ 'Raj_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+              alt="Raj Kohli, PhD"
+              loading="lazy"
+            >
+            <div>
+              <p class="dp-committee__name">Raj Kohli, PhD</p>
+              <p class="dp-committee__role">Former EVP of Global R&amp;D, Colgate-Palmolive</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="dp-committee__members" aria-label="Committee members">
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Dianne_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+            alt="Diane Cummins"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Diane Cummins</p>
+            <p class="dp-committee__member-bio">
+              Globally respected oral health scientist and consultant with experience leading oral care innovation, claims support, and clinical validation.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Foti_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+            alt="Dr. Foti Panagakos"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Dr. Foti Panagakos</p>
+            <p class="dp-committee__member-bio">
+              Founding Dean of the School of Dental Medicine at Pacific Northwest University of Health Sciences.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Raj_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+            alt="Raj Kohli, PhD"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Raj Kohli, PhD</p>
+            <p class="dp-committee__member-bio">
+              Retired EVP of Global R&amp;D and Technology Strategy at Colgate-Palmolive with 40 years of CPG experience.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Allan_1.webp' | file_img_url: '240x240', crop: 'center' }}"
+            alt="Alan Wolpert"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Alan Wolpert</p>
+            <p class="dp-committee__member-bio">
+              Former President of Consumer Brands at Henkel North America with deep experience in brand growth and innovation.
+            </p>
+          </div>
+        </article>
+
+        <article class="dp-committee__member">
+          <img
+            class="dp-committee__member-photo"
+            src="{{ 'Victoria.webp' | file_img_url: '240x240', crop: 'center' }}"
+            alt="Dr. Victoria Sampson"
+            loading="lazy"
+          >
+          <div>
+            <p class="dp-committee__member-name">Dr. Victoria Sampson</p>
+            <p class="dp-committee__member-bio">
+              Functional dentist and researcher focused on oral microbiome testing, salivary diagnostics, and whole-body health.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="dp-committee__footer">
+        <span>Reviewed by a full committee of dental and health-science experts.</span>
+        <a class="dp-committee__link" href="https://www.boka.com/pages/oral-health-advisory-committee">
+          Meet the committee →
+        </a>
       </div>
     </div>
   </section>
