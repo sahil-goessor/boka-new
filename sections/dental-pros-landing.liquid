@@ -1207,7 +1207,110 @@
   }
 }
 
+/* ---------- KLAVIYO DROPDOWN / STATE SELECT FIX ---------- */
 
+/* Force State dropdown selected value to show */
+.dp-form .klaviyo-dropdown input[role="combobox"],
+.dp-form .klaviyo-dropdown input[id^="downshift-"],
+.dp-page .klaviyo-dropdown input[role="combobox"],
+.dp-page .klaviyo-dropdown input[id^="downshift-"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  caret-color: #222721 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Keep placeholder gray */
+.dp-form .klaviyo-dropdown input[role="combobox"]::placeholder,
+.dp-form .klaviyo-dropdown input[id^="downshift-"]::placeholder,
+.dp-page .klaviyo-dropdown input[role="combobox"]::placeholder,
+.dp-page .klaviyo-dropdown input[id^="downshift-"]::placeholder {
+  color: #8f928c !important;
+  -webkit-text-fill-color: #8f928c !important;
+  opacity: 1 !important;
+}
+
+/* Fix dropdown menu layering */
+.dp-form .klaviyo-dropdown,
+.dp-form .klaviyo-dropdown > div,
+.dp-form .klaviyo-dropdown [class*="go"],
+.dp-page .klaviyo-dropdown,
+.dp-page .klaviyo-dropdown > div,
+.dp-page .klaviyo-dropdown [class*="go"] {
+  overflow: visible !important;
+}
+
+/* Make the open dropdown menu readable and above nearby fields */
+.dp-form .klaviyo-dropdown [role="listbox"],
+.dp-form [id^="downshift-"][role="listbox"],
+.dp-page .klaviyo-dropdown [role="listbox"],
+.dp-page [id^="downshift-"][role="listbox"] {
+  z-index: 999999 !important;
+  position: absolute !important;
+  background: #ffffff !important;
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  border: 1px solid rgba(34, 39, 33, 0.18) !important;
+  border-radius: 0 0 8px 8px !important;
+  box-shadow: 0 16px 34px rgba(34, 39, 33, 0.14) !important;
+  max-height: 280px !important;
+  overflow-y: auto !important;
+}
+
+/* Dropdown option text */
+.dp-form .klaviyo-dropdown [role="option"],
+.dp-form [id^="downshift-"] [role="option"],
+.dp-page .klaviyo-dropdown [role="option"],
+.dp-page [id^="downshift-"] [role="option"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+  background: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Option hover/focus */
+.dp-form .klaviyo-dropdown [role="option"]:hover,
+.dp-form .klaviyo-dropdown [role="option"][aria-selected="true"],
+.dp-page .klaviyo-dropdown [role="option"]:hover,
+.dp-page .klaviyo-dropdown [role="option"][aria-selected="true"] {
+  background: #e6f4d4 !important;
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+}
+
+/* Keep dropdown arrow from covering selected text */
+.dp-form .klaviyo-dropdown button[id^="downshift-"][id$="toggle-button"],
+.dp-page .klaviyo-dropdown button[id^="downshift-"][id$="toggle-button"] {
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 4 !important;
+  background: transparent !important;
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+}
+
+/* Give selected input room before the arrow */
+.dp-form .klaviyo-dropdown input[id^="downshift-"],
+.dp-page .klaviyo-dropdown input[id^="downshift-"] {
+  padding-right: 44px !important;
+}
+
+/* Last-resort override for Klaviyo private reset classes inside the form */
+.dp-form .klaviyo-dropdown .needsclick,
+.dp-form .klaviyo-dropdown [class*="kl-private-reset-css"],
+.dp-page .klaviyo-dropdown .needsclick,
+.dp-page .klaviyo-dropdown [class*="kl-private-reset-css"] {
+  color: #222721 !important;
+  -webkit-text-fill-color: #222721 !important;
+}
 </style>
 
 
