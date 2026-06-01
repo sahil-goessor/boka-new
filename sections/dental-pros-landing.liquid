@@ -373,6 +373,237 @@
   line-height: 1;
 }
 
+
+
+/* ---------- BOKA SOLUTION / PRACTICE VALUE MOCKUP ---------- */
+#what-is-boka {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(211, 231, 192, 0.18), transparent 42%),
+    var(--dp-cream);
+}
+.dp-solution-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(34, 39, 33, 0.10);
+  border-radius: clamp(24px, 3vw, 36px);
+  padding: clamp(34px, 5vw, 64px);
+  background:
+    radial-gradient(circle at 88% 2%, rgba(211, 231, 192, 0.18), transparent 34%),
+    rgba(255, 255, 255, 0.66);
+  box-shadow: var(--dp-shadow);
+}
+.dp-solution-panel__header {
+  max-width: 820px;
+  margin: 0 auto clamp(34px, 5vw, 56px);
+  text-align: center;
+}
+.dp-solution-panel__header .dp-kicker {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.dp-solution-panel__header .dp-kicker::before { background: var(--dp-terracotta); }
+.dp-solution-panel__title {
+  max-width: 920px;
+  margin: 0 auto 14px;
+  color: var(--dp-ink);
+  font-family: var(--dp-font-heading);
+  font-size: clamp(38px, 5.4vw, 72px);
+  font-weight: 300;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+.dp-solution-panel__sub {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(34, 39, 33, 0.64);
+  font-size: clamp(16px, 1.45vw, 20px);
+  font-weight: 300;
+  line-height: 1.55;
+}
+.dp-solution-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+.dp-solution-feature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(20px, 3vw, 34px) clamp(20px, 3.2vw, 46px);
+  border-left: 1px solid rgba(34, 39, 33, 0.10);
+}
+.dp-solution-feature:first-child { border-left: 0; padding-left: 0; }
+.dp-solution-feature:last-child { padding-right: 0; }
+.dp-solution-feature__icon {
+  display: grid;
+  place-items: center;
+  width: clamp(58px, 6vw, 78px);
+  height: clamp(58px, 6vw, 78px);
+  margin: 0 0 24px;
+  border-radius: 999px;
+  background: var(--dp-frost);
+  color: var(--dp-forest);
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1;
+}
+.dp-solution-feature__title {
+  margin: 0 0 16px;
+  color: var(--dp-ink);
+  font-size: clamp(24px, 2.45vw, 34px);
+  font-weight: 650;
+  letter-spacing: -0.055em;
+  line-height: 1.06;
+}
+.dp-solution-feature__copy {
+  margin: 0 0 22px;
+  color: rgba(34, 39, 33, 0.66);
+  font-size: clamp(14px, 1.15vw, 16px);
+  font-weight: 300;
+  line-height: 1.55;
+}
+.dp-solution-feature__checks {
+  display: grid;
+  gap: 12px;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+.dp-solution-feature__checks li,
+.dp-solution-strip__item {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+  color: rgba(34, 39, 33, 0.72);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.dp-solution-feature__checks li::before,
+.dp-solution-strip__item::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 999px;
+  background: var(--dp-forest);
+  color: var(--dp-white);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+.dp-solution-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 24px;
+  border: 1px solid rgba(115, 124, 91, 0.14);
+  border-radius: 18px;
+  background: rgba(230, 244, 212, 0.30);
+}
+.dp-solution-strip__item {
+  padding: 18px 24px;
+  border-left: 1px solid rgba(34, 39, 33, 0.08);
+  font-size: 14px;
+  font-weight: 500;
+}
+.dp-solution-strip__item:first-child { border-left: 0; }
+.dp-solution-cta {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: center;
+  border-radius: 22px;
+  padding: clamp(24px, 3.5vw, 38px);
+  background:
+    radial-gradient(circle at 96% 50%, rgba(255,255,255,0.52), transparent 26%),
+    linear-gradient(135deg, rgba(211, 231, 192, 0.72), rgba(230, 244, 212, 0.36));
+}
+.dp-solution-cta::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  bottom: -120px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  box-shadow:
+    -34px -34px 0 -1px transparent,
+    -34px -34px 0 0 rgba(255, 255, 255, 0.24),
+    -68px -68px 0 -1px transparent,
+    -68px -68px 0 0 rgba(255, 255, 255, 0.20);
+  pointer-events: none;
+}
+.dp-solution-cta > * { position: relative; z-index: 1; }
+.dp-solution-cta__title {
+  margin: 0 0 8px;
+  color: var(--dp-ink);
+  font-size: clamp(22px, 2.1vw, 30px);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+.dp-solution-cta__copy {
+  max-width: 440px;
+  margin: 0;
+  color: rgba(34, 39, 33, 0.66);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.dp-solution-cta__actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
+  gap: 18px;
+  align-items: center;
+}
+.dp-solution-cta__btn {
+  display: inline-flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 1px solid rgba(115, 124, 91, 0.92);
+  border-radius: 999px;
+  padding: 18px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+.dp-solution-cta__btn--primary {
+  background: var(--dp-forest);
+  color: var(--dp-white);
+  border-color: var(--dp-forest);
+  box-shadow: 0 14px 30px rgba(115, 124, 91, 0.20);
+}
+.dp-solution-cta__btn--secondary {
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--dp-forest);
+}
+.dp-solution-cta__btn:hover,
+.dp-solution-cta__btn:focus-visible {
+  transform: translateY(-1px);
+  background: var(--dp-ink);
+  border-color: var(--dp-ink);
+  color: var(--dp-white) !important;
+}
+.dp-solution-fine {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: rgba(34, 39, 33, 0.50);
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
 /* ---------- TESTIMONIALS / ADVISORY COMMITTEE PROOF ---------- */
 .dp-testimonials {
   position: relative;
@@ -791,6 +1022,44 @@
   .dp-form { padding: 16px 10px; }
 }
 
+
+
+@media (max-width: 990px) {
+  .dp-solution-panel { padding: 34px 22px; }
+  .dp-solution-columns { grid-template-columns: 1fr; }
+  .dp-solution-feature,
+  .dp-solution-feature:first-child,
+  .dp-solution-feature:last-child {
+    border-left: 0;
+    border-top: 1px solid rgba(34, 39, 33, 0.10);
+    padding: 26px 0;
+  }
+  .dp-solution-feature:first-child { border-top: 0; padding-top: 0; }
+  .dp-solution-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dp-solution-strip__item:nth-child(odd) { border-left: 0; }
+  .dp-solution-strip__item:nth-child(n+3) { border-top: 1px solid rgba(34, 39, 33, 0.08); }
+  .dp-solution-cta { grid-template-columns: 1fr; }
+  .dp-solution-cta__actions { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .dp-solution-panel__header { text-align: left; margin-bottom: 28px; }
+  .dp-solution-panel__header .dp-kicker { justify-content: flex-start; }
+  .dp-solution-panel__title { font-size: clamp(36px, 11vw, 52px); }
+  .dp-solution-panel__sub { font-size: 16px; }
+  .dp-solution-feature__icon { width: 58px; height: 58px; margin-bottom: 18px; }
+  .dp-solution-feature__title { font-size: 26px; }
+  .dp-solution-strip { grid-template-columns: 1fr; }
+  .dp-solution-strip__item,
+  .dp-solution-strip__item:nth-child(odd) {
+    border-left: 0;
+    border-top: 1px solid rgba(34, 39, 33, 0.08);
+  }
+  .dp-solution-strip__item:first-child { border-top: 0; }
+  .dp-solution-cta { padding: 24px 18px; }
+  .dp-solution-cta__actions { grid-template-columns: 1fr; gap: 12px; }
+  .dp-solution-cta__btn { width: 100%; min-height: 54px; font-size: 15px; }
+  .dp-solution-fine { text-align: left; }
+}
 </style>
 
 
@@ -929,60 +1198,82 @@
     </div>
   </section>
 
-  <section class="dp-section" id="what-is-boka" aria-label="What Boka is">
+  <section class="dp-section" id="what-is-boka" aria-label="Why practices choose Boka">
     <div class="dp-wrap">
-      <div class="dp-solution-grid">
-        <div class="dp-solution-copy">
-          <div class="dp-solution-header">
-            {% if section.settings.what_kicker != blank %}
-              <span class="dp-kicker">{{ section.settings.what_kicker }}</span>
-            {% endif %}
-
-            {% if section.settings.what_heading != blank %}
-              <h2 class="dp-h2">{{ section.settings.what_heading }}</h2>
-            {% endif %}
-
-            {% if section.settings.what_text_1 != blank %}
-              <p class="dp-copy">{{ section.settings.what_text_1 }}</p>
-            {% endif %}
-
-            {% if section.settings.what_text_2 != blank %}
-              <p class="dp-copy">{{ section.settings.what_text_2 }}</p>
-            {% endif %}
-          </div>
-
-          <div class="dp-mini-grid" aria-label="Boka solution benefits">
-            {% for block in section.blocks %}
-              {% if block.type == 'what_mini_card' %}
-                <div class="dp-mini" {{ block.shopify_attributes }}>
-                  {% if block.settings.title != blank %}
-                    <p class="dp-mini__title">{{ block.settings.title }}</p>
-                  {% endif %}
-                  {% if block.settings.text != blank %}
-                    <p class="dp-mini__copy">{{ block.settings.text }}</p>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+      <div class="dp-solution-panel">
+        <div class="dp-solution-panel__header">
+          <span class="dp-kicker">The Boka Solution for Dental Professionals</span>
+          <h2 class="dp-solution-panel__title">Why practices choose Boka</h2>
+          <p class="dp-solution-panel__sub">
+            Help patients choose a better fluoride-free alternative—with nano-hydroxyapatite.
+            Unlock exclusive professional pricing that grows with your practice.
+          </p>
         </div>
 
-        <div class="dp-card dp-ingredient-card">
-          {% if section.settings.ingredient_kicker != blank %}
-            <span class="dp-kicker">{{ section.settings.ingredient_kicker }}</span>
-          {% endif %}
+        <div class="dp-solution-columns" aria-label="Boka benefits for patients and practices">
+          <article class="dp-solution-feature">
+            <div class="dp-solution-feature__icon" aria-hidden="true">⌁</div>
+            <h3 class="dp-solution-feature__title">Patient-friendly ingredients</h3>
+            <p class="dp-solution-feature__copy">
+              Fluoride-free n-Ha toothpaste options that are gentle, effective, and easy for your team to recommend.
+            </p>
+            <ul class="dp-solution-feature__checks">
+              <li>Powered by nano-hydroxyapatite</li>
+              <li>SLS-free &amp; paraben-free</li>
+              <li>Low-foaming, feel-good brushing</li>
+            </ul>
+          </article>
 
-          {% if section.settings.ingredient_heading != blank %}
-            <h3 class="dp-h3">{{ section.settings.ingredient_heading }}</h3>
-          {% endif %}
+          <article class="dp-solution-feature">
+            <div class="dp-solution-feature__icon" aria-hidden="true">$</div>
+            <h3 class="dp-solution-feature__title">Professional pricing up to 55% off</h3>
+            <p class="dp-solution-feature__copy">
+              Access exclusive B2B pricing on qualifying products designed to reward larger orders and professional use.
+            </p>
+            <ul class="dp-solution-feature__checks">
+              <li>Save up to 55% on qualifying products</li>
+              <li>Better practice economics</li>
+              <li>Buy more, save more</li>
+            </ul>
+          </article>
 
-          <ul class="dp-check-list">
-            {% for block in section.blocks %}
-              {% if block.type == 'ingredient_bullet' %}
-                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
-              {% endif %}
-            {% endfor %}
-          </ul>
+          <article class="dp-solution-feature">
+            <div class="dp-solution-feature__icon" aria-hidden="true">□</div>
+            <h3 class="dp-solution-feature__title">Free samples + easy recommendation</h3>
+            <p class="dp-solution-feature__copy">
+              Samples make it simple to try and share. Clear talking points help your team recommend with confidence.
+            </p>
+            <ul class="dp-solution-feature__checks">
+              <li>Stock, sample, recommend</li>
+              <li>Simple education for your team</li>
+              <li>Better patient conversations</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="dp-solution-strip" aria-label="Boka quick benefits">
+          <div class="dp-solution-strip__item">Fluoride-free n-Ha</div>
+          <div class="dp-solution-strip__item">SLS-free &amp; paraben-free</div>
+          <div class="dp-solution-strip__item">Low-foaming brushing</div>
+          <div class="dp-solution-strip__item">Buy more, save more</div>
+        </div>
+
+        <div class="dp-solution-cta">
+          <div>
+            <h3 class="dp-solution-cta__title">Ready to get started?</h3>
+            <p class="dp-solution-cta__copy">
+              Apply for a Boka Dental Pro account to unlock exclusive pricing and professional benefits.
+            </p>
+          </div>
+
+          <div class="dp-solution-cta__actions">
+            <a class="dp-solution-cta__btn dp-solution-cta__btn--primary" href="#signup">Apply Now <span aria-hidden="true">→</span></a>
+            <a class="dp-solution-cta__btn dp-solution-cta__btn--secondary" href="https://account.boka.com">Log In</a>
+          </div>
+
+          <p class="dp-solution-fine">
+            Pricing and eligibility may vary by account type, order volume, qualifying products, and program requirements.
+          </p>
         </div>
       </div>
     </div>
