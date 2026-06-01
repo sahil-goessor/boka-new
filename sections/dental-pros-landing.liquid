@@ -729,9 +729,10 @@
 
 .dp-committee__members {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
-  margin-bottom: clamp(32px, 5vw, 56px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+  max-width: 940px;
+  margin: 0 auto clamp(32px, 5vw, 56px);
 }
 
 .dp-committee__member {
@@ -1713,7 +1714,7 @@
         </p>
       </div>
 
-      <!-- Committee member images/cards now appear above the featured quote cards. -->
+      <!-- Three committee member cards appear above the featured quote cards. -->
       <div class="dp-committee__members" aria-label="Committee members">
         <article class="dp-committee__member">
           <img
@@ -1726,36 +1727,6 @@
             <p class="dp-committee__member-name">Diane Cummins</p>
             <p class="dp-committee__member-bio">
               Globally respected oral health scientist and consultant with experience leading oral care innovation, claims support, and clinical validation.
-            </p>
-          </div>
-        </article>
-
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Foti_1.webp' | file_url }}"
-            alt="Dr. Foti Panagakos"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Dr. Foti Panagakos</p>
-            <p class="dp-committee__member-bio">
-              Founding Dean of the School of Dental Medicine at Pacific Northwest University of Health Sciences.
-            </p>
-          </div>
-        </article>
-
-        <article class="dp-committee__member">
-          <img
-            class="dp-committee__member-photo"
-            src="{{ 'Raj_1.webp' | file_url }}"
-            alt="Raj Kohli, PhD"
-            loading="lazy"
-          >
-          <div>
-            <p class="dp-committee__member-name">Raj Kohli, PhD</p>
-            <p class="dp-committee__member-bio">
-              Retired EVP of Global R&amp;D and Technology Strategy at Colgate-Palmolive with 40 years of CPG experience.
             </p>
           </div>
         </article>
