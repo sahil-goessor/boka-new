@@ -1,4 +1,3 @@
-
 {% liquid
   assign active_collection = collection
   assign products_to_show = section.settings.product_limit
@@ -159,7 +158,7 @@
           {% endif %}
         </div>
 
-        <div class="boka-collection-scroll__quiz" data-product-count="{{ products_to_show }}">
+        <div class="boka-collection-scroll__quiz is-taking-quiz" data-product-count="{{ products_to_show }}">
           <div class="boka-collection-scroll__quiz-main">
             <div class="boka-collection-scroll__quiz-topline">
               <p class="boka-collection-scroll__quiz-step js-boka-quiz-step">Question 1 of 4</p>
@@ -307,13 +306,22 @@
                   {% endif %}
                 </div>
 
-                <button
-                  type="button"
-                  class="boka-collection-scroll__button boka-collection-scroll__quiz-cta js-boka-quiz-scroll"
-                  data-target="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
-                >
-                  {{ section.settings.quiz_cta_label }} →
-                </button>
+                <div class="boka-collection-scroll__quiz-result-actions">
+                  <button
+                    type="button"
+                    class="boka-collection-scroll__button boka-collection-scroll__quiz-cta js-boka-quiz-scroll"
+                    data-target="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
+                  >
+                    {{ section.settings.quiz_cta_label }} →
+                  </button>
+
+                  <button
+                    type="button"
+                    class="boka-collection-scroll__quiz-restart js-boka-quiz-restart"
+                  >
+                    {{ section.settings.quiz_restart_label }}
+                  </button>
+                </div>
               </div>
             {% endfor %}
           </div>
@@ -983,6 +991,30 @@
       box-shadow: 0 26px 90px rgba(17, 17, 17, 0.07);
     }
 
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-taking-quiz {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 980px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-taking-quiz .boka-collection-scroll__quiz-results {
+      display: none;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-result-visible {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 980px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-result-visible .boka-collection-scroll__quiz-main {
+      display: none;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-result-visible .boka-collection-scroll__quiz-results {
+      grid-column: 1 / -1;
+      display: block;
+      min-height: 0;
+    }
+
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-main,
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result {
       border: 1px solid rgba(17, 17, 17, 0.06);
@@ -1272,6 +1304,33 @@
       margin: 24px 0 0;
       border: 0;
       cursor: pointer;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-actions .boka-collection-scroll__quiz-cta {
+      margin-top: 0;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-restart {
+      width: 100%;
+      min-height: 50px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,0.16);
+      background: rgba(255,255,255,0.72);
+      color: {{ section.settings.text_color }};
+      font-weight: var(--heading-font-weight, 700);
+      cursor: pointer;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-restart:hover {
+      transform: translateY(-2px);
+      opacity: 0.82;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-note {
@@ -1891,10 +1950,13 @@
         display: none;
       }
 
-      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-cta {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-actions {
         grid-column: 1 / -1;
-        min-height: 50px;
         margin-top: 10px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-actions .boka-collection-scroll__quiz-cta {
+        min-height: 50px;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-note {
@@ -1973,6 +2035,7 @@
         const answers = {};
         let currentQuestion = 1;
         let activeProductIndex = 1;
+        let resultRevealed = false;
 
         const getSafeProductIndex = (rawIndex) => {
           const requestedIndex = parseInt(rawIndex, 10) || 1;
@@ -2032,6 +2095,9 @@
             nextButton.disabled = !answers[currentQuestion];
             nextButton.textContent = currentQuestion === totalQuestions ? 'See match →' : 'Next →';
           }
+
+          quiz.classList.toggle('is-taking-quiz', !resultRevealed);
+          quiz.classList.toggle('is-result-visible', resultRevealed);
         };
 
         const recordAnswer = (button) => {
@@ -2046,6 +2112,7 @@
             scores[previousAnswer] = Math.max((scores[previousAnswer] || 1) - 1, 0);
           }
 
+          resultRevealed = false;
           answers[questionIndex] = selectedIndex;
           scores[selectedIndex] = (scores[selectedIndex] || 0) + 1;
 
@@ -2085,13 +2152,13 @@
               return;
             }
 
-            const activeResult = resultCards.find((card) => card.classList.contains('is-active'));
-            const targetSelector = activeResult ? activeResult.dataset.target : null;
-            const target = targetSelector ? section.querySelector(targetSelector) : null;
+            resultRevealed = true;
+            updateResult();
+            updateQuizState();
 
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            window.setTimeout(() => {
+              quiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 80);
           });
         }
 
@@ -2103,6 +2170,24 @@
             if (target) {
               target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+          });
+        });
+
+        quiz.querySelectorAll('.js-boka-quiz-restart').forEach((button) => {
+          button.addEventListener('click', () => {
+            Object.keys(scores).forEach((key) => delete scores[key]);
+            Object.keys(answers).forEach((key) => delete answers[key]);
+            activeProductIndex = 1;
+            currentQuestion = 1;
+            resultRevealed = false;
+
+            quiz.querySelectorAll('.boka-collection-scroll__quiz-option').forEach((option) => {
+              option.classList.remove('is-selected');
+            });
+
+            updateResult();
+            updateQuizState();
+            quiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
           });
         });
 
@@ -2509,6 +2594,12 @@
       "id": "quiz_cta_label",
       "label": "Quiz CTA label",
       "default": "See My Match"
+    },
+    {
+      "type": "text",
+      "id": "quiz_restart_label",
+      "label": "Quiz restart label",
+      "default": "Start over"
     },
     {
       "type": "text",
