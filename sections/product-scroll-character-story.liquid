@@ -257,6 +257,18 @@
                 assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
                 assign metafield_bg = flavor_product.metafields.custom.flavor_background_color.value
                 assign quiz_description = flavor_product.metafields.custom.flavor_scroll_description.value | default: flavor_product.description | strip_html | truncate: 105
+                assign quiz_character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
+                assign quiz_character_quote = flavor_product.metafields.custom.character_quote.value
+                assign quiz_character_traits = flavor_product.metafields.custom.flavor_scroll_bullets.value
+                assign quiz_character_image = flavor_product.metafields.custom.character_image.value
+
+                if quiz_character_image != blank
+                  assign quiz_character_image_url = quiz_character_image | image_url: width: 420
+                elsif flavor_product.featured_image != blank
+                  assign quiz_character_image_url = flavor_product.featured_image | image_url: width: 420
+                else
+                  assign quiz_character_image_url = blank
+                endif
 
                 if section.settings.enable_metafield_color_overrides and metafield_accent != blank
                   assign accent_color = metafield_accent
@@ -305,6 +317,41 @@
                   {% if flavor_product.price %}
                     <small>{{ flavor_product.price | money }}</small>
                   {% endif %}
+                </div>
+
+                <div class="boka-collection-scroll__quiz-character">
+                  {% if quiz_character_image_url != blank %}
+                    <div class="boka-collection-scroll__quiz-character-image">
+                      <img
+                        src="{{ quiz_character_image_url }}"
+                        alt="{{ quiz_character_name | escape }}"
+                        loading="lazy"
+                      >
+                    </div>
+                  {% endif %}
+
+                  <div class="boka-collection-scroll__quiz-character-copy">
+                    <p class="boka-collection-scroll__quiz-character-label">{{ section.settings.quiz_character_label }}</p>
+                    <h4>{{ quiz_character_name }}</h4>
+
+                    {% if quiz_character_quote != blank %}
+                      <p class="boka-collection-scroll__quiz-character-quote">{{ quiz_character_quote }}</p>
+                    {% else %}
+                      <p class="boka-collection-scroll__quiz-character-quote">{{ section.settings.quiz_character_fallback_text }}</p>
+                    {% endif %}
+
+                    <div class="boka-collection-scroll__quiz-character-traits" aria-label="Character attributes">
+                      {% if quiz_character_traits != blank %}
+                        {% for trait in quiz_character_traits limit: 3 %}
+                          <span>{{ trait }}</span>
+                        {% endfor %}
+                      {% else %}
+                        <span>{{ section.settings.quiz_character_trait_1 }}</span>
+                        <span>{{ section.settings.quiz_character_trait_2 }}</span>
+                        <span>{{ section.settings.quiz_character_trait_3 }}</span>
+                      {% endif %}
+                    </div>
+                  </div>
                 </div>
 
                 <div class="boka-collection-scroll__quiz-result-actions">
@@ -1300,6 +1347,78 @@
       color: {{ section.settings.text_color }};
     }
 
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character {
+      margin-top: 22px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      border: 1px solid color-mix(in srgb, var(--quiz-result-accent) 22%, rgba(17,17,17,0.08));
+      border-radius: 24px;
+      background: rgba(255,255,255,0.64);
+      text-align: left;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-image {
+      width: 86px;
+      height: 86px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--quiz-result-bg) 78%, white);
+      overflow: hidden;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-image img {
+      width: 86%;
+      height: 86%;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 10px 16px rgba(17,17,17,0.08));
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-label {
+      margin: 0 0 5px;
+      color: color-mix(in srgb, var(--quiz-result-accent) 72%, {{ section.settings.text_color }});
+      font-size: 0.72rem;
+      line-height: 1.1;
+      font-weight: var(--heading-font-weight, 700);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character h4 {
+      margin: 0;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-quote {
+      margin: 8px 0 0;
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-traits span {
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--quiz-result-accent) 12%, white);
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.72rem;
+      line-height: 1;
+    }
+
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-cta {
       width: 100%;
       margin: 24px 0 0;
@@ -1993,6 +2112,32 @@
         display: none;
       }
 
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character {
+        grid-column: 1 / -1;
+        margin-top: 6px;
+        grid-template-columns: 70px minmax(0, 1fr);
+        padding: 12px;
+        border-radius: 20px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 18px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character h4 {
+        font-size: 1.2rem;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-quote {
+        font-size: 0.84rem;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-character-traits span {
+        font-size: 0.68rem;
+      }
+
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-actions {
         grid-column: 1 / -1;
         margin-top: 10px;
@@ -2650,6 +2795,36 @@
       "id": "quiz_result_label",
       "label": "Quiz result label",
       "default": "Your match preview"
+    },
+    {
+      "type": "text",
+      "id": "quiz_character_label",
+      "label": "Character match label",
+      "default": "Character match"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_character_fallback_text",
+      "label": "Fallback character personality text",
+      "default": "A flavor personality that matches your routine, taste, and daily smile goals."
+    },
+    {
+      "type": "text",
+      "id": "quiz_character_trait_1",
+      "label": "Fallback character trait 1",
+      "default": "Flavor-forward"
+    },
+    {
+      "type": "text",
+      "id": "quiz_character_trait_2",
+      "label": "Fallback character trait 2",
+      "default": "Fresh-focused"
+    },
+    {
+      "type": "text",
+      "id": "quiz_character_trait_3",
+      "label": "Fallback character trait 3",
+      "default": "Routine-ready"
     },
     {
       "type": "text",
