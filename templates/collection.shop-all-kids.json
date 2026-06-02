@@ -65,67 +65,9 @@
     },
     "product_scroll_character_story_7hgqLy": {
       "type": "product-scroll-character-story",
-      "blocks": {
-        "flavor_product_i63Gmp": {
-          "type": "flavor_product",
-          "settings": {
-            "product": "blueberry-dragonfruit-n-ha-toothpaste",
-            "scene_label": "Flavor profile",
-            "fallback_quote": "A fresh way to brush every day.",
-            "fallback_accent_color": "#ddefe6",
-            "fallback_background_color": "#f8fbf7"
-          }
-        },
-        "flavor_product_EpmCYX": {
-          "type": "flavor_product",
-          "settings": {
-            "product": "orange-cream-n-ha-toothpaste",
-            "scene_label": "Flavor profile",
-            "fallback_quote": "A fresh way to brush every day.",
-            "fallback_accent_color": "#ddefe6",
-            "fallback_background_color": "#f8fbf7"
-          }
-        },
-        "flavor_product_YXeXTG": {
-          "type": "flavor_product",
-          "settings": {
-            "product": "strawberry-mango-n-ha-toothpaste",
-            "scene_label": "Flavor profile",
-            "fallback_quote": "A fresh way to brush every day.",
-            "fallback_accent_color": "#ddefe6",
-            "fallback_background_color": "#f8fbf7"
-          }
-        },
-        "flavor_product_h3nJjN": {
-          "type": "flavor_product",
-          "settings": {
-            "product": "",
-            "scene_label": "Flavor profile",
-            "fallback_quote": "A fresh way to brush every day.",
-            "fallback_accent_color": "#ddefe6",
-            "fallback_background_color": "#f8fbf7"
-          }
-        },
-        "flavor_product_ytdBdr": {
-          "type": "flavor_product",
-          "settings": {
-            "product": "",
-            "scene_label": "Flavor profile",
-            "fallback_quote": "A fresh way to brush every day.",
-            "fallback_accent_color": "#ddefe6",
-            "fallback_background_color": "#f8fbf7"
-          }
-        }
-      },
-      "block_order": [
-        "flavor_product_i63Gmp",
-        "flavor_product_EpmCYX",
-        "flavor_product_YXeXTG",
-        "flavor_product_h3nJjN",
-        "flavor_product_ytdBdr"
-      ],
       "name": "Product scroll character",
       "settings": {
+        "product_limit": 5,
         "hero_eyebrow": "Meet the Boka flavor crew",
         "hero_heading": "Every flavor has a personality.",
         "hero_subheading": "Scroll through the Boka flavor world and find the toothpaste that fits your routine, taste, and vibe.",
@@ -135,16 +77,17 @@
         "hero_blob_1": "#f2d6c9",
         "hero_blob_2": "#ddefe6",
         "hero_blob_3": "#e6eaf5",
-        "eyebrow": "Meet the flavors",
-        "heading": "Choose your character.",
-        "subheading": "Each Boka flavor has its own personality, taste profile, and daily routine fit.",
-        "card_button_label": "Shop this flavor",
+        "hero_blob_4": "#f8e7b8",
+        "scene_eyebrow": "Choose your flavor",
+        "scene_heading": "Find your daily brushing vibe.",
+        "scene_text": "Each product has its own flavor profile, character, and routine fit.",
+        "scene_card_label": "Flavor profile",
+        "product_button_label": "Shop this flavor",
         "default_background": "#ffffff",
         "text_color": "#111111",
         "muted_text_color": "#5f5a52",
         "button_background": "#111111",
         "button_text_color": "#ffffff",
-        "timeline_line_color": "#beb7aa",
         "enable_metafield_color_overrides": true,
         "alt_accent_color_1": "#ddefe6",
         "alt_background_color_1": "#f8fbf7",
@@ -165,7 +108,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
