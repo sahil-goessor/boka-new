@@ -1,28 +1,3 @@
-{% comment %}
-  Section: Collection Flavor Scroll Page
-  For Shopify collection templates.
-
-  Flow:
-  1. Hero banner with optional lifestyle/image background
-  2. Collection product list
-  3. One full scroll section per product
-
-  Recommended product metafields:
-  - custom.flavor_scroll_headline        Single line text
-  - custom.flavor_scroll_description     Multi-line text
-  - custom.flavor_scroll_bullets         List of single line text
-  - custom.character_name                Single line text
-  - custom.character_quote               Single line text
-  - custom.character_image               File
-  - custom.character_hover_image         File / GIF / image
-  - custom.flavor_accent_color           Color
-  - custom.flavor_background_color       Color
-
-  Optional collection metafields:
-  - custom.scroll_hero_eyebrow           Single line text
-  - custom.scroll_hero_heading           Single line text
-  - custom.scroll_hero_text              Multi-line text
-{% endcomment %}
 
 {% liquid
   assign active_collection = collection
@@ -165,7 +140,7 @@
 
     <div
       id="boka-collection-list-{{ section.id }}"
-      class="boka-collection-scroll__list-section"
+      class="boka-collection-scroll__list-section boka-collection-scroll__quiz-section"
     >
       <div class="boka-collection-scroll__list-inner">
         <div class="boka-collection-scroll__list-header">
@@ -184,82 +159,166 @@
           {% endif %}
         </div>
 
-        <div class="boka-collection-scroll__product-list">
-          {% for flavor_product in active_collection.products limit: products_to_show %}
-            {% liquid
-              assign loop_mod = forloop.index0 | modulo: 2
+        <div class="boka-collection-scroll__quiz" data-product-count="{{ products_to_show }}">
+          <div class="boka-collection-scroll__quiz-main">
+            <div class="boka-collection-scroll__quiz-topline">
+              <p class="boka-collection-scroll__quiz-step js-boka-quiz-step">Question 1 of 4</p>
+              <div class="boka-collection-scroll__quiz-progress" aria-hidden="true">
+                <span class="js-boka-quiz-progress"></span>
+              </div>
+            </div>
 
-              if loop_mod == 0
-                assign fallback_accent = section.settings.alt_accent_color_1
-                assign fallback_bg = section.settings.alt_background_color_1
-              else
-                assign fallback_accent = section.settings.alt_accent_color_2
-                assign fallback_bg = section.settings.alt_background_color_2
-              endif
+            <div class="boka-collection-scroll__quiz-questions">
+              <div class="boka-collection-scroll__quiz-question is-active" data-question-index="1">
+                <h3>{{ section.settings.quiz_question_1 }}</h3>
+                <p>{{ section.settings.quiz_question_1_text }}</p>
 
-              assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
-              assign metafield_bg = flavor_product.metafields.custom.flavor_background_color.value
-              assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
-              assign character_image = flavor_product.metafields.custom.character_image.value
-              assign character_hover_image = flavor_product.metafields.custom.character_hover_image.value
-
-              if section.settings.enable_metafield_color_overrides and metafield_accent != blank
-                assign accent_color = metafield_accent
-              else
-                assign accent_color = fallback_accent
-              endif
-
-              if section.settings.enable_metafield_color_overrides and metafield_bg != blank
-                assign background_color = metafield_bg
-              else
-                assign background_color = fallback_bg
-              endif
-
-              if character_image != blank
-                assign list_image_url = character_image | image_url: width: 1000
-              elsif flavor_product.featured_image != blank
-                assign list_image_url = flavor_product.featured_image | image_url: width: 1000
-              else
-                assign list_image_url = blank
-              endif
-
-              if character_hover_image != blank
-                assign list_hover_url = character_hover_image | image_url: width: 1000
-              else
-                assign list_hover_url = list_image_url
-              endif
-            %}
-
-            <a
-              href="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
-              class="boka-collection-scroll__list-card js-boka-hover-swap"
-              style="
-                --list-accent: {{ accent_color }};
-                --list-bg: {{ background_color }};
-              "
-              data-default-src="{{ list_image_url }}"
-              data-hover-src="{{ list_hover_url }}"
-            >
-              <div class="boka-collection-scroll__list-card-image">
-                {% if list_image_url != blank %}
-                  <img
-                    src="{{ list_image_url }}"
-                    alt="{{ character_name | escape }}"
-                    loading="lazy"
-                  >
-                {% endif %}
+                <div class="boka-collection-scroll__quiz-options">
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="1">
+                    <span class="boka-collection-scroll__quiz-icon is-orange">☼</span>
+                    <span><strong>{{ section.settings.quiz_answer_1_1 }}</strong><small>{{ section.settings.quiz_answer_1_1_text }}</small></span>
+                  </button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="2">
+                    <span class="boka-collection-scroll__quiz-icon is-green">⌁</span>
+                    <span><strong>{{ section.settings.quiz_answer_1_2 }}</strong><small>{{ section.settings.quiz_answer_1_2_text }}</small></span>
+                  </button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="3">
+                    <span class="boka-collection-scroll__quiz-icon is-pink">♡</span>
+                    <span><strong>{{ section.settings.quiz_answer_1_3 }}</strong><small>{{ section.settings.quiz_answer_1_3_text }}</small></span>
+                  </button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="4">
+                    <span class="boka-collection-scroll__quiz-icon is-blue">✦</span>
+                    <span><strong>{{ section.settings.quiz_answer_1_4 }}</strong><small>{{ section.settings.quiz_answer_1_4_text }}</small></span>
+                  </button>
+                </div>
               </div>
 
-              <div class="boka-collection-scroll__list-card-copy">
-                <p>{{ character_name }}</p>
-                <span>{{ flavor_product.title }}</span>
+              <div class="boka-collection-scroll__quiz-question" data-question-index="2">
+                <h3>{{ section.settings.quiz_question_2 }}</h3>
+                <p>{{ section.settings.quiz_question_2_text }}</p>
 
-                {% if flavor_product.price %}
-                  <small>{{ flavor_product.price | money }}</small>
-                {% endif %}
+                <div class="boka-collection-scroll__quiz-options is-compact">
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="1"><span class="boka-collection-scroll__quiz-icon is-orange">🍊</span><span><strong>{{ section.settings.quiz_answer_2_1 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="2"><span class="boka-collection-scroll__quiz-icon is-green">🌿</span><span><strong>{{ section.settings.quiz_answer_2_2 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="3"><span class="boka-collection-scroll__quiz-icon is-pink">🍓</span><span><strong>{{ section.settings.quiz_answer_2_3 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="5"><span class="boka-collection-scroll__quiz-icon is-blue">🫐</span><span><strong>{{ section.settings.quiz_answer_2_4 }}</strong></span></button>
+                </div>
               </div>
-            </a>
-          {% endfor %}
+
+              <div class="boka-collection-scroll__quiz-question" data-question-index="3">
+                <h3>{{ section.settings.quiz_question_3 }}</h3>
+                <p>{{ section.settings.quiz_question_3_text }}</p>
+
+                <div class="boka-collection-scroll__quiz-options is-compact">
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="1"><span class="boka-collection-scroll__quiz-icon is-orange">1</span><span><strong>{{ section.settings.quiz_answer_3_1 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="2"><span class="boka-collection-scroll__quiz-icon is-green">2</span><span><strong>{{ section.settings.quiz_answer_3_2 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="3"><span class="boka-collection-scroll__quiz-icon is-pink">3</span><span><strong>{{ section.settings.quiz_answer_3_3 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="4"><span class="boka-collection-scroll__quiz-icon is-blue">4</span><span><strong>{{ section.settings.quiz_answer_3_4 }}</strong></span></button>
+                </div>
+              </div>
+
+              <div class="boka-collection-scroll__quiz-question" data-question-index="4">
+                <h3>{{ section.settings.quiz_question_4 }}</h3>
+                <p>{{ section.settings.quiz_question_4_text }}</p>
+
+                <div class="boka-collection-scroll__quiz-options is-compact">
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="1"><span class="boka-collection-scroll__quiz-icon is-orange">☀</span><span><strong>{{ section.settings.quiz_answer_4_1 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="2"><span class="boka-collection-scroll__quiz-icon is-green">☁</span><span><strong>{{ section.settings.quiz_answer_4_2 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="3"><span class="boka-collection-scroll__quiz-icon is-pink">✿</span><span><strong>{{ section.settings.quiz_answer_4_3 }}</strong></span></button>
+                  <button type="button" class="boka-collection-scroll__quiz-option" data-match-index="5"><span class="boka-collection-scroll__quiz-icon is-blue">✦</span><span><strong>{{ section.settings.quiz_answer_4_4 }}</strong></span></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="boka-collection-scroll__quiz-nav">
+              <button type="button" class="boka-collection-scroll__quiz-back js-boka-quiz-back" disabled>
+                ← Back
+              </button>
+              <span class="js-boka-quiz-nav-label">Step 1 of 4</span>
+              <button type="button" class="boka-collection-scroll__quiz-next js-boka-quiz-next" disabled>
+                Next →
+              </button>
+            </div>
+          </div>
+
+          <div class="boka-collection-scroll__quiz-results">
+            {% for flavor_product in active_collection.products limit: products_to_show %}
+              {% liquid
+                assign loop_mod = forloop.index0 | modulo: 2
+
+                if loop_mod == 0
+                  assign fallback_accent = section.settings.alt_accent_color_1
+                  assign fallback_bg = section.settings.alt_background_color_1
+                else
+                  assign fallback_accent = section.settings.alt_accent_color_2
+                  assign fallback_bg = section.settings.alt_background_color_2
+                endif
+
+                assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
+                assign metafield_bg = flavor_product.metafields.custom.flavor_background_color.value
+                assign quiz_description = flavor_product.metafields.custom.flavor_scroll_description.value | default: flavor_product.description | strip_html | truncate: 105
+
+                if section.settings.enable_metafield_color_overrides and metafield_accent != blank
+                  assign accent_color = metafield_accent
+                else
+                  assign accent_color = fallback_accent
+                endif
+
+                if section.settings.enable_metafield_color_overrides and metafield_bg != blank
+                  assign background_color = metafield_bg
+                else
+                  assign background_color = fallback_bg
+                endif
+              %}
+
+              <div
+                class="boka-collection-scroll__quiz-result{% if forloop.first %} is-active{% endif %}"
+                data-product-index="{{ forloop.index }}"
+                data-target="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
+                style="--quiz-result-accent: {{ accent_color }}; --quiz-result-bg: {{ background_color }};"
+              >
+                <p class="boka-collection-scroll__quiz-result-label">✦ {{ section.settings.quiz_result_label }}</p>
+
+                {% if flavor_product.featured_image != blank %}
+                  <div class="boka-collection-scroll__quiz-result-image">
+                    <img
+                      src="{{ flavor_product.featured_image | image_url: width: 700 }}"
+                      alt="{{ flavor_product.featured_image.alt | default: flavor_product.title | escape }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+
+                <div class="boka-collection-scroll__quiz-result-copy">
+                  <h3>{{ flavor_product.title }}</h3>
+
+                  {% if quiz_description != blank %}
+                    <p>{{ quiz_description }}</p>
+                  {% endif %}
+
+                  <div class="boka-collection-scroll__quiz-badges" aria-label="Product benefits">
+                    <span>Freshens</span>
+                    <span>Strengthens</span>
+                    <span>Protects</span>
+                  </div>
+
+                  {% if flavor_product.price %}
+                    <small>{{ flavor_product.price | money }}</small>
+                  {% endif %}
+                </div>
+
+                <button
+                  type="button"
+                  class="boka-collection-scroll__button boka-collection-scroll__quiz-cta js-boka-quiz-scroll"
+                  data-target="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
+                >
+                  {{ section.settings.quiz_cta_label }} →
+                </button>
+              </div>
+            {% endfor %}
+          </div>
+
+          <p class="boka-collection-scroll__quiz-note">⌕ {{ section.settings.quiz_note }}</p>
         </div>
       </div>
     </div>
@@ -907,6 +966,323 @@
       line-height: 1.55;
     }
 
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.72fr);
+      gap: clamp(22px, 3vw, 42px);
+      align-items: stretch;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: clamp(22px, 3vw, 42px);
+      border-radius: 42px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.82), rgba(255,255,255,0.56)),
+        radial-gradient(circle at 12% 8%, rgba(255, 212, 152, 0.22), transparent 32%),
+        radial-gradient(circle at 92% 88%, rgba(159, 215, 214, 0.24), transparent 34%);
+      box-shadow: 0 26px 90px rgba(17, 17, 17, 0.07);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-main,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result {
+      border: 1px solid rgba(17, 17, 17, 0.06);
+      border-radius: 32px;
+      background: rgba(255,255,255,0.62);
+      box-shadow: 0 16px 48px rgba(17,17,17,0.04);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-main {
+      padding: clamp(22px, 3vw, 42px);
+      display: flex;
+      flex-direction: column;
+      min-height: 560px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-step {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: var(--heading-font-weight, 700);
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-progress {
+      width: 100%;
+      height: 8px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(17,17,17,0.08);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-progress span {
+      display: block;
+      width: 25%;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #F3B13F, color-mix(in srgb, {{ section.settings.button_background }} 24%, #F3B13F));
+      transition: width 240ms ease;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-questions {
+      position: relative;
+      flex: 1 1 auto;
+      margin-top: clamp(26px, 4vw, 48px);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-question {
+      display: none;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-question.is-active {
+      display: block;
+      animation: boka-quiz-fade-{{ section.id }} 220ms ease;
+    }
+
+    @keyframes boka-quiz-fade-{{ section.id }} {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-question h3 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.2rem, 4.4vw, 5.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-question > p {
+      margin: 16px 0 0;
+      color: {{ section.settings.muted_text_color }};
+      font-size: clamp(1rem, 1.2vw, 1.12rem);
+      line-height: 1.45;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(12px, 1.5vw, 18px);
+      margin-top: clamp(24px, 3vw, 38px);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-options.is-compact {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      min-height: 98px;
+      padding: 18px 20px;
+      border: 1px solid rgba(17,17,17,0.08);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.78);
+      color: {{ section.settings.text_color }};
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 14px 36px rgba(17,17,17,0.045);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+      appearance: none;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option:hover,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option.is-selected {
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, {{ section.settings.button_background }} 34%, transparent);
+      background: #ffffff;
+      box-shadow: 0 22px 52px rgba(17,17,17,0.08);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-icon {
+      width: 58px;
+      height: 58px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      font-size: 1.45rem;
+      line-height: 1;
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-icon.is-orange { background: #F8D29B; }
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-icon.is-green { background: #CDEFE4; }
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-icon.is-pink { background: #F7D0CF; }
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-icon.is-blue { background: #D7DDFC; }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option strong,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option small {
+      display: block;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option strong {
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      line-height: 1.2;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option small {
+      margin-top: 5px;
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.92rem;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-nav {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 14px;
+      align-items: center;
+      margin-top: clamp(24px, 4vw, 48px);
+      padding-top: 18px;
+      border-top: 1px solid rgba(17,17,17,0.06);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-nav span {
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-back,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-next {
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,0.1);
+      cursor: pointer;
+      font-weight: var(--heading-font-weight, 700);
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-back {
+      justify-self: start;
+      background: rgba(255,255,255,0.72);
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-next {
+      justify-self: end;
+      background: {{ section.settings.button_background }};
+      color: #ffffff;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-back:disabled,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-next:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-results {
+      position: relative;
+      min-height: 560px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result {
+      display: none;
+      height: 100%;
+      min-height: 560px;
+      padding: clamp(22px, 2.6vw, 34px);
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 26%, rgba(255,255,255,0.96), rgba(255,255,255,0.42) 50%, transparent 70%),
+        linear-gradient(160deg, color-mix(in srgb, var(--quiz-result-bg) 88%, white), rgba(255,255,255,0.78));
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result.is-active {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      animation: boka-quiz-fade-{{ section.id }} 220ms ease;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-label {
+      width: fit-content;
+      margin: 0 auto 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.62);
+      color: color-mix(in srgb, var(--quiz-result-accent) 72%, {{ section.settings.text_color }});
+      font-weight: var(--heading-font-weight, 700);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-image {
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      margin: 6px auto 18px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-image img {
+      width: min(82%, 260px);
+      max-height: 270px;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 24px rgba(17,17,17,0.1));
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy h3 {
+      margin: 0 auto;
+      max-width: 360px;
+      font-size: clamp(1.75rem, 2.7vw, 2.55rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy p {
+      margin: 14px auto 0;
+      max-width: 390px;
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.98rem;
+      line-height: 1.45;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-badges span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.7);
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.78rem;
+      line-height: 1;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy small {
+      display: block;
+      margin-top: 14px;
+      font-weight: var(--heading-font-weight, 700);
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-cta {
+      width: 100%;
+      margin: 24px 0 0;
+      border: 0;
+      cursor: pointer;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-note {
+      grid-column: 1 / -1;
+      margin: 4px auto 0;
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.92rem;
+      line-height: 1.3;
+      text-align: center;
+    }
+
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1286,6 +1662,52 @@
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz {
+        grid-template-columns: 1fr;
+        max-width: 860px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-main,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-results,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result {
+        min-height: auto;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result.is-active {
+        display: grid;
+        grid-template-columns: minmax(120px, 0.42fr) minmax(0, 1fr);
+        gap: 18px 24px;
+        align-items: center;
+        text-align: left;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-label,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-cta {
+        grid-column: 1 / -1;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-label {
+        margin-left: 0;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-image {
+        min-height: 180px;
+        margin: 0;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-image img {
+        max-height: 210px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy h3,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy p {
+        margin-left: 0;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-badges {
+        justify-content: flex-start;
+      }
+
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-inner {
         grid-template-columns: 1fr;
@@ -1366,6 +1788,119 @@
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
         grid-template-columns: 1fr;
       }
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-section {
+        padding: 58px 0 78px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-header {
+        margin-bottom: 28px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-header h2 {
+        font-size: clamp(3rem, 15vw, 5.4rem);
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz {
+        width: min(100%, calc(100% - 32px));
+        padding: 18px;
+        border-radius: 32px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-main,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result {
+        border-radius: 26px;
+        padding: 22px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-questions {
+        margin-top: 30px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-question h3 {
+        font-size: clamp(2.2rem, 11vw, 3.4rem);
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-options,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-options.is-compact {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option {
+        min-height: 86px;
+        padding: 14px;
+        border-radius: 20px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.22rem;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-nav {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-nav span {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        text-align: center;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-back,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-next {
+        width: 100%;
+        justify-self: stretch;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result.is-active {
+        display: grid;
+        grid-template-columns: 0.46fr 0.54fr;
+        gap: 14px;
+        align-items: center;
+        text-align: left;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-label {
+        grid-column: 1 / -1;
+        margin: 0 0 2px;
+        font-size: 0.72rem;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-image {
+        min-height: 150px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-image img {
+        width: min(100%, 150px);
+        max-height: 170px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy h3 {
+        font-size: clamp(1.35rem, 7vw, 2rem);
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-result-copy p {
+        display: none;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-badges {
+        display: none;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-cta {
+        grid-column: 1 / -1;
+        min-height: 50px;
+        margin-top: 10px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-note {
+        font-size: 0.86rem;
+      }
+
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card {
         min-height: 360px;
@@ -1422,6 +1957,158 @@
     (() => {
       const section = document.querySelector('#boka-collection-scroll-{{ section.id }}');
       if (!section) return;
+
+      const quiz = section.querySelector('.boka-collection-scroll__quiz');
+
+      if (quiz) {
+        const questions = Array.from(quiz.querySelectorAll('.boka-collection-scroll__quiz-question'));
+        const resultCards = Array.from(quiz.querySelectorAll('.boka-collection-scroll__quiz-result'));
+        const progress = quiz.querySelector('.js-boka-quiz-progress');
+        const stepLabel = quiz.querySelector('.js-boka-quiz-step');
+        const navLabel = quiz.querySelector('.js-boka-quiz-nav-label');
+        const backButton = quiz.querySelector('.js-boka-quiz-back');
+        const nextButton = quiz.querySelector('.js-boka-quiz-next');
+        const totalQuestions = questions.length;
+        const scores = {};
+        const answers = {};
+        let currentQuestion = 1;
+        let activeProductIndex = 1;
+
+        const getSafeProductIndex = (rawIndex) => {
+          const requestedIndex = parseInt(rawIndex, 10) || 1;
+          const requestedCard = resultCards.find((card) => parseInt(card.dataset.productIndex, 10) === requestedIndex);
+
+          if (requestedCard) return requestedIndex;
+
+          const firstCard = resultCards[0];
+          return firstCard ? parseInt(firstCard.dataset.productIndex, 10) || 1 : 1;
+        };
+
+        const updateResult = () => {
+          let winningIndex = activeProductIndex;
+          let winningScore = -1;
+
+          Object.keys(scores).forEach((index) => {
+            const score = scores[index];
+            const numericIndex = parseInt(index, 10);
+
+            if (score > winningScore) {
+              winningScore = score;
+              winningIndex = numericIndex;
+            }
+          });
+
+          activeProductIndex = getSafeProductIndex(winningIndex);
+
+          resultCards.forEach((card) => {
+            const cardIndex = parseInt(card.dataset.productIndex, 10);
+            card.classList.toggle('is-active', cardIndex === activeProductIndex);
+          });
+        };
+
+        const updateQuizState = () => {
+          questions.forEach((question) => {
+            const questionIndex = parseInt(question.dataset.questionIndex, 10);
+            question.classList.toggle('is-active', questionIndex === currentQuestion);
+          });
+
+          if (progress) {
+            progress.style.width = `${(currentQuestion / totalQuestions) * 100}%`;
+          }
+
+          if (stepLabel) {
+            stepLabel.textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+          }
+
+          if (navLabel) {
+            navLabel.textContent = `Step ${currentQuestion} of ${totalQuestions}`;
+          }
+
+          if (backButton) {
+            backButton.disabled = currentQuestion <= 1;
+          }
+
+          if (nextButton) {
+            nextButton.disabled = !answers[currentQuestion];
+            nextButton.textContent = currentQuestion === totalQuestions ? 'See match →' : 'Next →';
+          }
+        };
+
+        const recordAnswer = (button) => {
+          const question = button.closest('.boka-collection-scroll__quiz-question');
+          if (!question) return;
+
+          const questionIndex = parseInt(question.dataset.questionIndex, 10);
+          const previousAnswer = answers[questionIndex];
+          const selectedIndex = getSafeProductIndex(button.dataset.matchIndex);
+
+          if (previousAnswer) {
+            scores[previousAnswer] = Math.max((scores[previousAnswer] || 1) - 1, 0);
+          }
+
+          answers[questionIndex] = selectedIndex;
+          scores[selectedIndex] = (scores[selectedIndex] || 0) + 1;
+
+          question.querySelectorAll('.boka-collection-scroll__quiz-option').forEach((option) => {
+            option.classList.toggle('is-selected', option === button);
+          });
+
+          updateResult();
+          updateQuizState();
+
+          if (questionIndex < totalQuestions) {
+            window.setTimeout(() => {
+              if (currentQuestion === questionIndex) {
+                currentQuestion += 1;
+                updateQuizState();
+              }
+            }, 240);
+          }
+        };
+
+        quiz.querySelectorAll('.boka-collection-scroll__quiz-option').forEach((button) => {
+          button.addEventListener('click', () => recordAnswer(button));
+        });
+
+        if (backButton) {
+          backButton.addEventListener('click', () => {
+            currentQuestion = Math.max(1, currentQuestion - 1);
+            updateQuizState();
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', () => {
+            if (currentQuestion < totalQuestions) {
+              currentQuestion += 1;
+              updateQuizState();
+              return;
+            }
+
+            const activeResult = resultCards.find((card) => card.classList.contains('is-active'));
+            const targetSelector = activeResult ? activeResult.dataset.target : null;
+            const target = targetSelector ? section.querySelector(targetSelector) : null;
+
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        }
+
+        quiz.querySelectorAll('.js-boka-quiz-scroll').forEach((button) => {
+          button.addEventListener('click', () => {
+            const targetSelector = button.dataset.target;
+            const target = targetSelector ? section.querySelector(targetSelector) : null;
+
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+
+        updateResult();
+        updateQuizState();
+      }
 
       const swapImage = (image, src) => {
         if (!image || !src || image.getAttribute('src') === src) return;
@@ -1522,7 +2209,7 @@
 
 {% schema %}
 {
-  "name": "Collection flavor scroll",
+  "name": "Collection flavor quiz",
   "settings": [
     {
       "type": "header",
@@ -1577,7 +2264,7 @@
       "type": "text",
       "id": "hero_button_label",
       "label": "Hero button label",
-      "default": "Explore flavors"
+      "default": "Take the quiz"
     },
     {
       "type": "color",
@@ -1629,19 +2316,205 @@
       "type": "text",
       "id": "list_heading",
       "label": "List heading",
-      "default": "Pick your starting point."
+      "default": "Find Your Match Take The Quiz"
     },
     {
       "type": "textarea",
       "id": "list_text",
       "label": "List text",
-      "default": "Jump into a flavor, or keep scrolling to explore each one."
+      "default": "Answer a few quick questions and we'll match you with the flavor that fits your smile."
     },
     {
       "type": "color",
       "id": "list_background",
       "label": "List background",
       "default": "#FFF4F6"
+    },
+    {
+      "type": "text",
+      "id": "quiz_question_1",
+      "label": "Question 1 heading",
+      "default": "What’s most important in your daily toothpaste?"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_question_1_text",
+      "label": "Question 1 helper text",
+      "default": "Choose the option that fits you best."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_1",
+      "label": "Question 1 answer 1",
+      "default": "Brightens & freshens"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_1_text",
+      "label": "Question 1 answer 1 description",
+      "default": "For a clean, confident smile."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_2",
+      "label": "Question 1 answer 2",
+      "default": "Naturally effective"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_2_text",
+      "label": "Question 1 answer 2 description",
+      "default": "Plant-powered & gentle."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_3",
+      "label": "Question 1 answer 3",
+      "default": "Strengthens enamel"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_3_text",
+      "label": "Question 1 answer 3 description",
+      "default": "For long-term protection."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_4",
+      "label": "Question 1 answer 4",
+      "default": "Whitening & stain care"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_1_4_text",
+      "label": "Question 1 answer 4 description",
+      "default": "For a visibly brighter smile."
+    },
+    {
+      "type": "text",
+      "id": "quiz_question_2",
+      "label": "Question 2 heading",
+      "default": "Which flavor profile sounds best?"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_question_2_text",
+      "label": "Question 2 helper text",
+      "default": "Pick the flavor vibe you’d reach for every day."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_2_1",
+      "label": "Question 2 answer 1",
+      "default": "Citrus & bright"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_2_2",
+      "label": "Question 2 answer 2",
+      "default": "Minty & clean"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_2_3",
+      "label": "Question 2 answer 3",
+      "default": "Fruity & fresh"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_2_4",
+      "label": "Question 2 answer 4",
+      "default": "Berry & smooth"
+    },
+    {
+      "type": "text",
+      "id": "quiz_question_3",
+      "label": "Question 3 heading",
+      "default": "How fresh do you like it?"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_question_3_text",
+      "label": "Question 3 helper text",
+      "default": "Choose the freshness level that fits your routine."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_3_1",
+      "label": "Question 3 answer 1",
+      "default": "Mild"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_3_2",
+      "label": "Question 3 answer 2",
+      "default": "Medium"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_3_3",
+      "label": "Question 3 answer 3",
+      "default": "Strong"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_3_4",
+      "label": "Question 3 answer 4",
+      "default": "Extra strong"
+    },
+    {
+      "type": "text",
+      "id": "quiz_question_4",
+      "label": "Question 4 heading",
+      "default": "How would you describe your vibe?"
+    },
+    {
+      "type": "textarea",
+      "id": "quiz_question_4_text",
+      "label": "Question 4 helper text",
+      "default": "Last one — choose the option that feels most like you."
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_4_1",
+      "label": "Question 4 answer 1",
+      "default": "Bright & energetic"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_4_2",
+      "label": "Question 4 answer 2",
+      "default": "Calm & chill"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_4_3",
+      "label": "Question 4 answer 3",
+      "default": "Playful & fun"
+    },
+    {
+      "type": "text",
+      "id": "quiz_answer_4_4",
+      "label": "Question 4 answer 4",
+      "default": "Sweet & smooth"
+    },
+    {
+      "type": "text",
+      "id": "quiz_result_label",
+      "label": "Quiz result label",
+      "default": "Your match preview"
+    },
+    {
+      "type": "text",
+      "id": "quiz_cta_label",
+      "label": "Quiz CTA label",
+      "default": "See My Match"
+    },
+    {
+      "type": "text",
+      "id": "quiz_note",
+      "label": "Quiz note",
+      "default": "Takes 30 seconds • No signup required"
     },
     {
       "type": "header",
@@ -1730,7 +2603,7 @@
   ],
   "presets": [
     {
-      "name": "Collection flavor scroll"
+      "name": "Collection flavor quiz"
     }
   ]
 }
