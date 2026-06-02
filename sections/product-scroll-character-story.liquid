@@ -1,0 +1,746 @@
+
+<section
+  id="boka-character-story-{{ section.id }}"
+  class="boka-character-story"
+  data-section-id="{{ section.id }}"
+>
+  <div class="boka-character-story__background"></div>
+
+  <div class="boka-character-story__intro">
+    {% if section.settings.eyebrow != blank %}
+      <p class="boka-character-story__eyebrow">
+        {{ section.settings.eyebrow }}
+      </p>
+    {% endif %}
+
+    {% if section.settings.heading != blank %}
+      <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.subheading != blank %}
+      <p>{{ section.settings.subheading }}</p>
+    {% endif %}
+  </div>
+
+  <div class="boka-character-story__layout">
+    <aside class="boka-character-story__sticky">
+      <div class="boka-character-story__character-shell">
+        <div class="boka-character-story__blob"></div>
+
+        <img
+          class="boka-character-story__character-image"
+          src=""
+          alt=""
+          loading="lazy"
+        >
+
+        <div class="boka-character-story__character-copy">
+          <p class="boka-character-story__character-kicker">
+            Current flavor
+          </p>
+          <h3 class="boka-character-story__character-name"></h3>
+          <p class="boka-character-story__character-quote"></p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="boka-character-story__scenes">
+      {% for block in section.blocks %}
+        {% assign flavor_product = block.settings.product %}
+
+        {% if flavor_product != blank %}
+          {% assign headline = flavor_product.metafields.custom.flavor_scroll_headline.value | default: flavor_product.title %}
+          {% assign description = flavor_product.metafields.custom.flavor_scroll_description.value | default: flavor_product.description | strip_html %}
+          {% assign bullets = flavor_product.metafields.custom.flavor_scroll_bullets.value %}
+          {% assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title %}
+          {% assign character_quote = flavor_product.metafields.custom.character_quote.value | default: block.settings.fallback_quote %}
+          {% assign character_image = flavor_product.metafields.custom.character_image.value %}
+          {% assign accent_color = flavor_product.metafields.custom.flavor_accent_color.value | default: block.settings.fallback_accent_color %}
+          {% assign background_color = flavor_product.metafields.custom.flavor_background_color.value | default: block.settings.fallback_background_color %}
+
+          {% if character_image != blank %}
+            {% assign character_image_url = character_image | image_url: width: 1000 %}
+          {% elsif flavor_product.featured_image != blank %}
+            {% assign character_image_url = flavor_product.featured_image | image_url: width: 1000 %}
+          {% else %}
+            {% assign character_image_url = blank %}
+          {% endif %}
+
+          <article
+            class="boka-character-story__scene"
+            style="
+              --flavor-accent: {{ accent_color }};
+              --flavor-bg: {{ background_color }};
+            "
+            data-character-src="{{ character_image_url }}"
+            data-character-alt="{{ character_name | escape }}"
+            data-character-name="{{ character_name | escape }}"
+            data-character-quote="{{ character_quote | strip_html | escape }}"
+            data-scene-bg="{{ background_color }}"
+            {{ block.shopify_attributes }}
+          >
+            <div class="boka-character-story__scene-card">
+              <div class="boka-character-story__scene-main">
+                <p class="boka-character-story__scene-label">
+                  {{ block.settings.scene_label | default: 'Flavor profile' }}
+                </p>
+
+                <h3>{{ headline }}</h3>
+
+                {% if description != blank %}
+                  <p class="boka-character-story__description">
+                    {{ description }}
+                  </p>
+                {% endif %}
+
+                {% if bullets != blank %}
+                  <div class="boka-character-story__bullets">
+                    {% for bullet in bullets %}
+                      <div class="boka-character-story__bullet">
+                        <span></span>
+                        <p>{{ bullet }}</p>
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="boka-character-story__product-card">
+                {% if flavor_product.featured_image != blank %}
+                  <div class="boka-character-story__product-image">
+                    <img
+                      src="{{ flavor_product.featured_image | image_url: width: 600 }}"
+                      alt="{{ flavor_product.featured_image.alt | default: flavor_product.title | escape }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+
+                <div class="boka-character-story__product-info">
+                  <p>{{ flavor_product.title }}</p>
+
+                  {% if flavor_product.price %}
+                    <span>{{ flavor_product.price | money }}</span>
+                  {% endif %}
+
+                  <a href="{{ flavor_product.url }}" class="boka-character-story__button">
+                    Shop this flavor
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  #boka-character-story-{{ section.id }} {
+    position: relative;
+    overflow: clip;
+    background: {{ section.settings.default_background }};
+    color: {{ section.settings.text_color }};
+    padding: clamp(56px, 8vw, 120px) 0;
+  }
+
+  #boka-character-story-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__background {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 12% 18%, rgba(203, 231, 218, 0.55), transparent 28%),
+      radial-gradient(circle at 86% 36%, rgba(242, 224, 198, 0.65), transparent 30%),
+      radial-gradient(circle at 50% 100%, rgba(226, 237, 244, 0.65), transparent 36%);
+    pointer-events: none;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__intro,
+  #boka-character-story-{{ section.id }} .boka-character-story__layout {
+    position: relative;
+    z-index: 1;
+    width: min(1240px, calc(100% - 32px));
+    margin-inline: auto;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__intro {
+    text-align: center;
+    max-width: 820px;
+    margin-bottom: clamp(36px, 6vw, 76px);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__eyebrow,
+  #boka-character-story-{{ section.id }} .boka-character-story__scene-label,
+  #boka-character-story-{{ section.id }} .boka-character-story__character-kicker {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-size: 0.76rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: {{ section.settings.muted_text_color }};
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__intro h2 {
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 6.8rem);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__intro > p:not(.boka-character-story__eyebrow) {
+    margin: 18px auto 0;
+    max-width: 660px;
+    color: {{ section.settings.muted_text_color }};
+    font-size: clamp(1rem, 1.35vw, 1.22rem);
+    line-height: 1.55;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(28px, 5vw, 84px);
+    align-items: start;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__sticky {
+    position: sticky;
+    top: 104px;
+    min-height: calc(100vh - 128px);
+    display: flex;
+    align-items: center;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__character-shell {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 42px;
+    padding: clamp(20px, 3vw, 40px);
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 24px 90px rgba(17, 17, 17, 0.08);
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__blob {
+    position: absolute;
+    inset: 10%;
+    border-radius: 999px;
+    background: var(--active-scene-bg, #DDEFE6);
+    filter: blur(4px);
+    opacity: 0.62;
+    transform: scale(0.9);
+    transition: background 300ms ease, transform 300ms ease;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__character-image {
+    position: relative;
+    z-index: 2;
+    width: min(92%, 420px);
+    max-height: 430px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    transform: translateY(0) rotate(0deg);
+    transition:
+      opacity 240ms ease,
+      transform 220ms ease;
+    animation: boka-character-float-{{ section.id }} 4.5s ease-in-out infinite;
+  }
+
+  @keyframes boka-character-float-{{ section.id }} {
+    0% {
+      translate: 0 0;
+      rotate: 0deg;
+    }
+
+    25% {
+      translate: 0 -5px;
+      rotate: 1.5deg;
+    }
+
+    75% {
+      translate: 0 5px;
+      rotate: -1.5deg;
+    }
+
+    100% {
+      translate: 0 0;
+      rotate: 0deg;
+    }
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__character-copy {
+    position: relative;
+    z-index: 2;
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__character-name {
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 5rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__character-quote {
+    margin: 16px auto 0;
+    max-width: 360px;
+    color: {{ section.settings.muted_text_color }};
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__scenes {
+    display: grid;
+    gap: clamp(30px, 9vh, 96px);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__scene {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    opacity: 0.38;
+    transform: translateY(24px) scale(0.985);
+    transition:
+      opacity 260ms ease,
+      transform 260ms ease;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__scene.is-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__scene-card {
+    width: 100%;
+    display: grid;
+    gap: 28px;
+    border-radius: 38px;
+    padding: clamp(24px, 4vw, 52px);
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--flavor-bg) 78%, white),
+        color-mix(in srgb, var(--flavor-accent) 24%, white)
+      );
+    border: 1px solid color-mix(in srgb, var(--flavor-accent) 42%, white);
+    box-shadow: 0 20px 70px rgba(17, 17, 17, 0.07);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__scene-main h3 {
+    margin: 0;
+    max-width: 740px;
+    font-size: clamp(2.1rem, 4.8vw, 5.8rem);
+    line-height: 0.93;
+    letter-spacing: -0.06em;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__description {
+    margin: 18px 0 0;
+    max-width: 620px;
+    color: {{ section.settings.muted_text_color }};
+    font-size: clamp(1rem, 1.3vw, 1.18rem);
+    line-height: 1.6;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__bullets {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__bullet {
+    min-height: 68px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 18px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__bullet span {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 auto;
+    margin-top: 6px;
+    border-radius: 999px;
+    background: var(--flavor-accent);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__bullet p {
+    margin: 0;
+    line-height: 1.45;
+    font-size: 0.98rem;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__product-card {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 18px;
+    align-items: center;
+    width: min(100%, 520px);
+    border-radius: 24px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__product-image {
+    height: 132px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background: white;
+    overflow: hidden;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__product-image img {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__product-info p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__product-info span {
+    display: block;
+    margin-top: 6px;
+    color: {{ section.settings.muted_text_color }};
+    font-size: 0.95rem;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__button {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    min-height: 42px;
+    padding: 0 20px;
+    border-radius: 999px;
+    background: {{ section.settings.button_background }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  #boka-character-story-{{ section.id }} .boka-character-story__button:hover {
+    transform: translateY(-1px);
+    opacity: 0.88;
+  }
+
+  @media screen and (max-width: 900px) {
+    #boka-character-story-{{ section.id }} {
+      padding: 48px 0;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__sticky {
+      top: 72px;
+      z-index: 3;
+      min-height: auto;
+      display: block;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__character-shell {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 16px;
+      align-items: center;
+      border-radius: 24px;
+      padding: 14px;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__blob {
+      inset: 8px auto 8px 8px;
+      width: 96px;
+      border-radius: 20px;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__character-image {
+      width: 88px;
+      max-height: 112px;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__character-copy {
+      margin: 0;
+      text-align: left;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__character-name {
+      font-size: 1.7rem;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__character-quote {
+      display: none;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__scene {
+      min-height: 72vh;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__scene-card {
+      border-radius: 28px;
+      padding: 24px;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__bullets {
+      grid-template-columns: 1fr;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__product-card {
+      grid-template-columns: 96px 1fr;
+    }
+
+    #boka-character-story-{{ section.id }} .boka-character-story__product-image {
+      height: 96px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #boka-character-story-{{ section.id }} *,
+    #boka-character-story-{{ section.id }} *::before,
+    #boka-character-story-{{ section.id }} *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+
+<script>
+  (() => {
+    const section = document.querySelector('#boka-character-story-{{ section.id }}');
+    if (!section) return;
+
+    const scenes = Array.from(section.querySelectorAll('.boka-character-story__scene'));
+    const characterImage = section.querySelector('.boka-character-story__character-image');
+    const characterName = section.querySelector('.boka-character-story__character-name');
+    const characterQuote = section.querySelector('.boka-character-story__character-quote');
+    const characterBlob = section.querySelector('.boka-character-story__blob');
+
+    if (!scenes.length || !characterImage || !characterName || !characterQuote) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const setActiveScene = (scene) => {
+      scenes.forEach((item) => {
+        item.classList.toggle('is-active', item === scene);
+      });
+
+      const src = scene.dataset.characterSrc || '';
+      const alt = scene.dataset.characterAlt || '';
+      const name = scene.dataset.characterName || '';
+      const quote = scene.dataset.characterQuote || '';
+      const sceneBg = scene.dataset.sceneBg || '#DDEFE6';
+
+      section.style.setProperty('--active-scene-bg', sceneBg);
+
+      if (characterBlob) {
+        characterBlob.style.background = sceneBg;
+      }
+
+      if (src && characterImage.getAttribute('src') !== src) {
+        if (!prefersReducedMotion) {
+          characterImage.style.opacity = '0';
+        }
+
+        window.setTimeout(() => {
+          characterImage.setAttribute('src', src);
+          characterImage.setAttribute('alt', alt);
+          characterImage.style.opacity = '1';
+        }, prefersReducedMotion ? 0 : 140);
+      }
+
+      characterName.textContent = name;
+      characterQuote.textContent = quote;
+    };
+
+    setActiveScene(scenes[0]);
+
+    const observer = new IntersectionObserver((entries) => {
+      const activeEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (activeEntry) {
+        setActiveScene(activeEntry.target);
+      }
+    }, {
+      root: null,
+      threshold: [0.22, 0.35, 0.5, 0.65, 0.78]
+    });
+
+    scenes.forEach((scene) => observer.observe(scene));
+
+    let ticking = false;
+
+    const updateCharacterScrollMotion = () => {
+      const rect = section.getBoundingClientRect();
+      const scrollable = rect.height - window.innerHeight;
+      const progress = scrollable > 0
+        ? Math.min(Math.max(-rect.top / scrollable, 0), 1)
+        : 0;
+
+      const yMove = window.innerWidth < 900 ? progress * 8 : progress * 64;
+      const rotate = window.innerWidth < 900 ? 0 : (progress - 0.5) * 4;
+
+      if (!prefersReducedMotion) {
+        characterImage.style.transform = `translateY(${yMove}px) rotate(${rotate}deg)`;
+      }
+
+      ticking = false;
+    };
+
+    const requestUpdate = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateCharacterScrollMotion);
+        ticking = true;
+      }
+    };
+
+    updateCharacterScrollMotion();
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Product scroll character",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Meet the flavors"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Choose your character."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Each Boka flavor has its own personality, taste profile, and daily routine fit."
+    },
+    {
+      "type": "color",
+      "id": "default_background",
+      "label": "Default background",
+      "default": "#F8F5EF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "muted_text_color",
+      "label": "Muted text color",
+      "default": "#5F5A52"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "flavor_product",
+      "name": "Flavor product",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "scene_label",
+          "label": "Scene label",
+          "default": "Flavor profile"
+        },
+        {
+          "type": "text",
+          "id": "fallback_quote",
+          "label": "Fallback character quote",
+          "default": "A fresh way to brush every day."
+        },
+        {
+          "type": "color",
+          "id": "fallback_accent_color",
+          "label": "Fallback accent color",
+          "default": "#DDEFE6"
+        },
+        {
+          "type": "color",
+          "id": "fallback_background_color",
+          "label": "Fallback background color",
+          "default": "#F8FBF7"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product scroll character",
+      "blocks": [
+        {
+          "type": "flavor_product"
+        },
+        {
+          "type": "flavor_product"
+        },
+        {
+          "type": "flavor_product"
+        },
+        {
+          "type": "flavor_product"
+        },
+        {
+          "type": "flavor_product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
