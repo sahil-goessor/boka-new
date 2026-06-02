@@ -160,12 +160,6 @@
         </div>
 
         <div class="boka-collection-scroll__quiz is-taking-quiz" data-product-count="{{ products_to_show }}">
-          <div class="boka-collection-scroll__quiz-intro" aria-hidden="false">
-            <span class="boka-collection-scroll__quiz-intro-icon">✦</span>
-            <h3>{{ section.settings.quiz_side_heading }}</h3>
-            <p>{{ section.settings.quiz_side_text }}</p>
-          </div>
-
           <div class="boka-collection-scroll__quiz-main">
             <div class="boka-collection-scroll__quiz-topline">
               <p class="boka-collection-scroll__quiz-step js-boka-quiz-step">Question 1 of 4</p>
@@ -2136,9 +2130,9 @@
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz {
       display: grid;
-      grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-      gap: clamp(34px, 5vw, 84px);
-      max-width: 1240px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: clamp(24px, 4vw, 56px);
+      max-width: 1040px;
       margin: 0 auto;
       padding: 0;
       border-radius: 0;
@@ -2149,8 +2143,8 @@
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-taking-quiz,
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-result-visible {
-      grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
-      max-width: 1240px;
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 1040px;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-intro {
@@ -2262,9 +2256,9 @@
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-note {
-      grid-column: 2 / 3;
+      grid-column: 1 / -1;
       margin-top: 22px;
-      text-align: left;
+      text-align: center;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-benefits {
@@ -2358,6 +2352,21 @@
         grid-template-columns: 1fr 1fr;
         gap: 14px;
       }
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-back,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-next {
+      border-radius: 10px !important;
+    }
+
+
+    /* Final quiz cleanup: no side intro and 10px quiz controls */
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-taking-quiz,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz.is-result-visible {
+      grid-template-columns: minmax(0, 1fr) !important;
+      max-width: 1040px !important;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option,
@@ -2957,18 +2966,6 @@
       "id": "quiz_restart_label",
       "label": "Quiz restart label",
       "default": "Start over"
-    },
-    {
-      "type": "text",
-      "id": "quiz_side_heading",
-      "label": "Quiz side heading",
-      "default": "Made for every smile and every preference."
-    },
-    {
-      "type": "textarea",
-      "id": "quiz_side_text",
-      "label": "Quiz side text",
-      "default": "Answer a few quick questions and we’ll recommend the flavor that fits your routine, your smile, and your lifestyle."
     },
     {
       "type": "header",
