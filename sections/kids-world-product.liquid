@@ -2,6 +2,19 @@
   assign kids_main_accent_color = product.metafields.custom.kids_accent_color.value | default: product.metafields.custom.flavor_accent_color.value | default: '#F8B8C9'
   assign kids_main_background_color = product.metafields.custom.kids_background_color.value | default: product.metafields.custom.flavor_background_color.value | default: '#FFF4F6'
   assign kids_main_muted_color = '#5F5A52'
+  assign kids_character_name = product.metafields.custom.kids_character_name.value | default: product.metafields.custom.character_name.value | default: product.title
+  assign kids_character_tagline = product.metafields.custom.kids_character_tagline.value | default: product.metafields.custom.character_quote.value | default: 'A flavor friend made to make brushing feel more fun.'
+  assign kids_character_description = product.metafields.custom.kids_character_description.value | default: 'A playful brushing buddy matched to this flavor personality.'
+  assign kids_character_image = product.metafields.custom.kids_character_image.value | default: product.metafields.custom.character_image.value
+  assign kids_character_traits = product.metafields.custom.kids_character_traits.value | default: product.metafields.custom.flavor_scroll_bullets.value
+
+  if kids_character_image != blank
+    assign kids_character_image_url = kids_character_image | image_url: width: 700
+  elsif product.featured_image != blank
+    assign kids_character_image_url = product.featured_image | image_url: width: 700
+  else
+    assign kids_character_image_url = blank
+  endif
 %}
 
 <section
@@ -78,6 +91,40 @@
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} desktop-sticky-atc">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'custom-badge', product: product %}
+
+      <aside class="boka-kids-pdp-character-card" aria-label="Product character match">
+        <p class="boka-kids-pdp-character-card__label">Meet their match</p>
+
+        {% if kids_character_image_url != blank %}
+          <div class="boka-kids-pdp-character-card__image">
+            <img
+              src="{{ kids_character_image_url }}"
+              alt="{{ kids_character_name | escape }}"
+              loading="lazy"
+            >
+          </div>
+        {% endif %}
+
+        <div class="boka-kids-pdp-character-card__copy">
+          <h2>{{ kids_character_name }}</h2>
+
+          {% if kids_character_tagline != blank %}
+            <p>{{ kids_character_tagline }}</p>
+          {% endif %}
+
+          <div class="boka-kids-pdp-character-card__traits">
+            {% if kids_character_traits != blank %}
+              {% for trait in kids_character_traits limit: 3 %}
+                <span>{{ trait }}</span>
+              {% endfor %}
+            {% else %}
+              <span>Playful</span>
+              <span>Flavor Explorer</span>
+              <span>Routine Helper</span>
+            {% endif %}
+          </div>
+        </div>
+      </aside>
 
       {% comment %} {% render 'product-media-gallery', variant_images: variant_images, lazyload: section.settings.lazyload %} {% endcomment %}
        {% render 'product-media-gallery', variant_images: variant_images, lazyload: section.settings.lazyload, thumbnail_position: section.settings.thumbnail_position %}
@@ -2068,10 +2115,10 @@ div#sticky-atc__button{
 
 /* ============================================================
    Boka Kids World main product section styling
-   This is for the REAL main-product.liquid section.
-   It keeps your existing blocks/forms/gallery/Recharge/sticky ATC
-   while forcing the product hero into a true desktop two-column
-   Kids World layout and a clean mobile stack.
+   - Adds character panel to the left of the media
+   - Moves media/gallery content up
+   - Pushes thumbnails below the main image where supported
+   - Fixes CTA/Recharge/variant button styling
    ============================================================ */
 
 #MainProduct-{{ section.id }}.boka-kids-main-product {
@@ -2085,8 +2132,8 @@ div#sticky-atc__button{
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(circle at 15% 12%, color-mix(in srgb, var(--kids-main-accent) 18%, white), transparent 30%),
-    radial-gradient(circle at 87% 80%, color-mix(in srgb, var(--kids-main-accent) 14%, white), transparent 32%),
+    radial-gradient(circle at 12% 10%, color-mix(in srgb, var(--kids-main-accent) 18%, white), transparent 30%),
+    radial-gradient(circle at 88% 80%, color-mix(in srgb, var(--kids-main-accent) 14%, white), transparent 32%),
     linear-gradient(135deg, var(--kids-main-bg), color-mix(in srgb, var(--kids-main-bg) 72%, white));
   color: var(--kids-main-text);
 }
@@ -2118,21 +2165,19 @@ div#sticky-atc__button{
   opacity: 0.65;
 }
 
-/* Force true desktop PDP hero grid. This fixes the issue where the whole product
-   content stayed in a narrow left column with empty space on the right. */
 @media screen and (min-width: 990px) {
   #MainProduct-{{ section.id }}.boka-kids-main-product > .product {
     position: relative;
     z-index: 1;
-    width: min(1420px, calc(100% - 64px)) !important;
-    max-width: 1420px !important;
+    width: min(1480px, calc(100% - 64px)) !important;
+    max-width: 1480px !important;
     margin: 0 auto !important;
-    min-height: clamp(720px, 86vh, 980px);
+    min-height: auto !important;
     display: grid !important;
-    grid-template-columns: minmax(0, 1.08fr) minmax(430px, 0.92fr) !important;
-    column-gap: clamp(44px, 6vw, 96px) !important;
+    grid-template-columns: minmax(0, 1.12fr) minmax(430px, 0.88fr) !important;
+    column-gap: clamp(44px, 5.8vw, 96px) !important;
     row-gap: 0 !important;
-    align-items: center !important;
+    align-items: start !important;
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper {
@@ -2141,7 +2186,12 @@ div#sticky-atc__button{
     max-width: none !important;
     min-width: 0 !important;
     margin: 0 !important;
-    align-self: center !important;
+    align-self: start !important;
+    display: grid !important;
+    grid-template-columns: minmax(180px, 240px) minmax(0, 1fr) !important;
+    gap: clamp(22px, 3vw, 42px) !important;
+    align-items: start !important;
+    padding-top: 0 !important;
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__info-wrapper {
@@ -2151,7 +2201,7 @@ div#sticky-atc__button{
     min-width: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
-    align-self: center !important;
+    align-self: start !important;
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__info-container {
@@ -2160,13 +2210,19 @@ div#sticky-atc__button{
     margin: 0 !important;
   }
 
-  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper + .product__info-wrapper {
-    padding-left: 0 !important;
-  }
-
   #MainProduct-{{ section.id }}.boka-kids-main-product .grid__item {
     width: 100% !important;
     max-width: none !important;
+  }
+
+  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper > media-gallery,
+  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper > product-gallery,
+  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper > .product-media-gallery,
+  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper > .product__media-gallery,
+  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper > .product__media-list,
+  #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper > .slider-mobile-gutter {
+    grid-column: 2 !important;
+    min-width: 0 !important;
   }
 }
 
@@ -2178,7 +2234,9 @@ div#sticky-atc__button{
 #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper::before {
   content: "";
   position: absolute;
-  inset: clamp(12px, 3vw, 46px);
+  inset: clamp(22px, 5vw, 84px) clamp(8px, 2vw, 28px) auto auto;
+  width: min(46vw, 620px);
+  aspect-ratio: 1 / 1;
   z-index: -1;
   border-radius: 999px;
   background:
@@ -2186,7 +2244,96 @@ div#sticky-atc__button{
   box-shadow: 0 30px 100px rgba(17, 17, 17, 0.08);
 }
 
-/* Keep product images from becoming tiny inside the real gallery */
+/* Character card to the left of the product image */
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card {
+  position: sticky;
+  top: 110px;
+  grid-column: 1;
+  align-self: start;
+  display: block;
+  padding: 18px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 80% 10%, color-mix(in srgb, var(--kids-main-accent) 18%, white), transparent 36%),
+    rgba(255,255,255,0.68);
+  box-shadow: 0 18px 58px rgba(17,17,17,0.07);
+  backdrop-filter: blur(10px);
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__label {
+  margin: 0 0 12px;
+  color: var(--kids-main-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.74);
+  overflow: hidden;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__image img {
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(17,17,17,0.08));
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__copy h2 {
+  margin: 16px 0 0;
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__copy p {
+  margin: 8px 0 0;
+  color: var(--kids-main-muted);
+  font-size: 0.92rem;
+  line-height: 1.38;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__traits span {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--kids-main-accent) 12%, white);
+  color: var(--kids-main-muted);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+/* Move the gallery/product image up and make thumbnails sit underneath when the gallery supports Dawn-style classes */
+#MainProduct-{{ section.id }}.boka-kids-main-product media-gallery,
+#MainProduct-{{ section.id }}.boka-kids-main-product product-gallery {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  align-items: center !important;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .product__media-list,
+#MainProduct-{{ section.id }}.boka-kids-main-product .product__media-list.contains-media,
+#MainProduct-{{ section.id }}.boka-kids-main-product .product__media-list.slider {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
 #MainProduct-{{ section.id }}.boka-kids-main-product .product__media,
 #MainProduct-{{ section.id }}.boka-kids-main-product .product-media-container,
 #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-item {
@@ -2196,7 +2343,32 @@ div#sticky-atc__button{
 
 #MainProduct-{{ section.id }}.boka-kids-main-product .product__media img,
 #MainProduct-{{ section.id }}.boka-kids-main-product .product-media-container img {
-  object-fit: contain;
+  object-fit: contain !important;
+  max-height: min(68vh, 700px) !important;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail-slider,
+#MainProduct-{{ section.id }}.boka-kids-main-product thumbnail-slider,
+#MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail-list {
+  width: 100% !important;
+  max-width: 620px !important;
+  margin: 0 auto !important;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail-list {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  overflow-x: auto !important;
+  padding: 4px 0 10px !important;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail-list__item,
+#MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail {
+  width: 72px !important;
+  height: 72px !important;
+  flex: 0 0 72px !important;
 }
 
 #MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail,
@@ -2204,6 +2376,7 @@ div#sticky-atc__button{
   border-radius: 10px !important;
 }
 
+/* Header/title/pills */
 #MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-title-eyebrow {
   margin: 0 0 12px;
   color: var(--kids-main-muted);
@@ -2253,6 +2426,7 @@ div#sticky-atc__button{
   box-shadow: 0 10px 28px rgba(17, 17, 17, 0.035);
 }
 
+/* Button/form cleanup */
 #MainProduct-{{ section.id }}.boka-kids-main-product .price,
 #MainProduct-{{ section.id }}.boka-kids-main-product .price * {
   color: var(--kids-main-text);
@@ -2272,7 +2446,12 @@ div#sticky-atc__button{
 #MainProduct-{{ section.id }}.boka-kids-main-product .quantity,
 #MainProduct-{{ section.id }}.boka-kids-main-product select,
 #MainProduct-{{ section.id }}.boka-kids-main-product .select__select,
-#MainProduct-{{ section.id }}.boka-kids-main-product .product-form__input input[type="radio"] + label {
+#MainProduct-{{ section.id }}.boka-kids-main-product .product-form__input input[type="radio"] + label,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-widget,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-template__radio,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-radio,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-selling-plans,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-selling-plans select {
   border-radius: 10px !important;
 }
 
@@ -2282,7 +2461,7 @@ div#sticky-atc__button{
   min-height: 56px;
   background: var(--kids-main-button) !important;
   color: #ffffff !important;
-  border-color: var(--kids-main-button) !important;
+  border: 1px solid var(--kids-main-button) !important;
   box-shadow: none !important;
 }
 
@@ -2291,6 +2470,10 @@ div#sticky-atc__button{
 #MainProduct-{{ section.id }}.boka-kids-main-product button[name="add"] *,
 #MainProduct-{{ section.id }}.boka-kids-main-product .button * {
   color: inherit !important;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .shopify-payment-button__button {
+  min-height: 54px;
 }
 
 #MainProduct-{{ section.id }}.boka-kids-main-product .product__accordion,
@@ -2303,13 +2486,23 @@ div#sticky-atc__button{
   display: none;
 }
 
-/* Mobile: image first, then copy/form. */
-@media screen and (max-width: 989px) {
-  #MainProduct-{{ section.id }}.boka-kids-main-product {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+/* Recharge widget visual cleanup */
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-widget {
+  overflow: visible;
+}
 
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-template__radio,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-radio {
+  background: rgba(255,255,255,0.66) !important;
+}
+
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-radio__label,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-option__text,
+#MainProduct-{{ section.id }}.boka-kids-main-product .rc-selling-plans__label {
+  color: var(--kids-main-text) !important;
+}
+
+@media screen and (max-width: 989px) {
   #MainProduct-{{ section.id }}.boka-kids-main-product > .product {
     position: relative;
     z-index: 1;
@@ -2325,8 +2518,12 @@ div#sticky-atc__button{
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper {
     order: 1 !important;
     width: 100% !important;
-    max-width: 460px !important;
+    max-width: 560px !important;
     margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding-top: 0 !important;
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__info-wrapper {
@@ -2341,6 +2538,25 @@ div#sticky-atc__button{
     width: 100%;
     max-width: 620px !important;
     margin: 0 auto !important;
+  }
+
+  #MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card {
+    position: relative;
+    top: auto;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    order: 2;
+  }
+
+  #MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__image {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  #MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-character-card__traits {
+    justify-content: center;
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .boka-kids-pdp-pills {
@@ -2376,7 +2592,15 @@ div#sticky-atc__button{
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__media-wrapper::before {
-    inset: 20px;
+    inset: 44px 10px auto auto;
+    width: 100%;
+  }
+
+  #MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail-list__item,
+  #MainProduct-{{ section.id }}.boka-kids-main-product .thumbnail {
+    width: 58px !important;
+    height: 58px !important;
+    flex-basis: 58px !important;
   }
 
   #MainProduct-{{ section.id }}.boka-kids-main-product .product__title h1,
@@ -2399,13 +2623,6 @@ div#sticky-atc__button{
     min-height: 36px;
     padding: 0 12px;
     font-size: 0.86rem;
-  }
-
-  #MainProduct-{{ section.id }}.boka-kids-main-product .product-form__submit,
-  #MainProduct-{{ section.id }}.boka-kids-main-product .product-buy-buttons button,
-  #MainProduct-{{ section.id }}.boka-kids-main-product button[name="add"] {
-    min-height: 56px;
-    color: #ffffff !important;
   }
 }
 
