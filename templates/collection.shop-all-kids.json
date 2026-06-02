@@ -68,7 +68,7 @@
       "name": "Product scroll character",
       "settings": {
         "product_limit": 5,
-        "hero_eyebrow": "Meet the Boka flavor crew",
+        "hero_eyebrow": "",
         "hero_heading": "Every flavor has a personality.",
         "hero_subheading": "Scroll through the Boka flavor world and find the toothpaste that fits your routine, taste, and vibe.",
         "hero_button_label": "Explore flavors",
@@ -78,9 +78,10 @@
         "hero_blob_2": "#ddefe6",
         "hero_blob_3": "#e6eaf5",
         "hero_blob_4": "#f8e7b8",
-        "scene_eyebrow": "Choose your flavor",
-        "scene_heading": "Find your daily brushing vibe.",
-        "scene_text": "Each product has its own flavor profile, character, and routine fit.",
+        "list_eyebrow": "Choose your flavor",
+        "list_heading": "Pick your starting point.",
+        "list_text": "Jump into a flavor, or keep scrolling to explore each one.",
+        "list_background": "#f8f5ef",
         "scene_card_label": "Flavor profile",
         "product_button_label": "Shop this flavor",
         "default_background": "#ffffff",
@@ -108,6 +109,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
