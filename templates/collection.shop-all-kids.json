@@ -69,8 +69,9 @@
       "settings": {
         "product_limit": 5,
         "hero_eyebrow": "",
-        "hero_heading": "Every flavor has a personality.",
-        "hero_subheading": "Scroll through the Boka flavor world and find the toothpaste that fits your routine, taste, and vibe.",
+        "hero_heading": "Boka Kids World",
+        "hero_subheading": "Scroll through the Boka kids world and find the toothpaste that fits your routine, taste, and vibe.",
+        "hero_image_overlay_opacity": 20,
         "hero_button_label": "Explore flavors",
         "hero_background_1": "#f8f5ef",
         "hero_background_2": "#ddefe6",
