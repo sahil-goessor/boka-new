@@ -1,15 +1,11 @@
 {% comment %}
-  Section: Collection Scroll Flavor World
-  Best used on Shopify collection templates.
+  Section: Collection Flavor Scroll Page
+  For Shopify collection templates.
 
-  What it does:
-  - Uses the current collection's products
-  - Full-width immersive hero
-  - Floating product / character cards
-  - Sticky scroll scene switcher
-  - Product content changes as user scrolls
-  - Hover image / GIF support
-  - Product metafield driven content
+  Flow:
+  1. Hero banner
+  2. Collection product list
+  3. One full scroll section per product
 
   Recommended product metafields:
   - custom.flavor_scroll_headline        Single line text
@@ -39,21 +35,21 @@
 
 {% if active_collection != blank and active_collection.products_count > 0 %}
   <section
-    id="boka-collection-world-{{ section.id }}"
-    class="boka-collection-world"
+    id="boka-collection-scroll-{{ section.id }}"
+    class="boka-collection-scroll"
   >
-    <div class="boka-collection-world__hero">
-      <div class="boka-collection-world__hero-sky">
-        <span class="boka-collection-world__blob is-one"></span>
-        <span class="boka-collection-world__blob is-two"></span>
-        <span class="boka-collection-world__blob is-three"></span>
-        <span class="boka-collection-world__blob is-four"></span>
+    <div class="boka-collection-scroll__hero">
+      <div class="boka-collection-scroll__hero-bg">
+        <span class="boka-collection-scroll__blob is-one"></span>
+        <span class="boka-collection-scroll__blob is-two"></span>
+        <span class="boka-collection-scroll__blob is-three"></span>
+        <span class="boka-collection-scroll__blob is-four"></span>
       </div>
 
-      <div class="boka-collection-world__hero-inner">
-        <div class="boka-collection-world__hero-copy">
+      <div class="boka-collection-scroll__hero-inner">
+        <div class="boka-collection-scroll__hero-copy">
           {% if hero_eyebrow != blank %}
-            <p class="boka-collection-world__eyebrow">
+            <p class="boka-collection-scroll__eyebrow">
               {{ hero_eyebrow }}
             </p>
           {% endif %}
@@ -65,22 +61,22 @@
           {% endif %}
 
           {% if hero_text != blank %}
-            <p class="boka-collection-world__hero-text">
+            <p class="boka-collection-scroll__hero-text">
               {{ hero_text }}
             </p>
           {% endif %}
 
           {% if section.settings.hero_button_label != blank %}
             <a
-              href="#boka-collection-world-scenes-{{ section.id }}"
-              class="boka-collection-world__button"
+              href="#boka-collection-list-{{ section.id }}"
+              class="boka-collection-scroll__button"
             >
               {{ section.settings.hero_button_label }}
             </a>
           {% endif %}
         </div>
 
-        <div class="boka-collection-world__float-stage">
+        <div class="boka-collection-scroll__hero-products">
           {% for flavor_product in active_collection.products limit: products_to_show %}
             {% liquid
               assign loop_mod = forloop.index0 | modulo: 2
@@ -120,11 +116,11 @@
             %}
 
             <a
-              href="{{ flavor_product.url }}"
-              class="boka-collection-world__float-card is-float-{{ forloop.index }}"
+              href="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
+              class="boka-collection-scroll__hero-card is-card-{{ forloop.index }}"
               style="
-                --float-accent: {{ accent_color }};
-                --float-bg: {{ background_color }};
+                --card-accent: {{ accent_color }};
+                --card-bg: {{ background_color }};
               "
             >
               {% if character_image_url != blank %}
@@ -141,117 +137,35 @@
         </div>
       </div>
 
-      <div class="boka-collection-world__curve" aria-hidden="true">
-        <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
-          <path d="M0,80 C180,130 360,130 540,80 C720,30 900,30 1080,80 C1260,130 1350,110 1440,80 L1440,140 L0,140 Z"></path>
+      <div class="boka-collection-scroll__curve is-hero-curve" aria-hidden="true">
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+          <path d="M0,78 C180,132 340,136 520,82 C710,24 890,24 1080,82 C1235,130 1345,118 1440,76 L1440,150 L0,150 Z"></path>
         </svg>
       </div>
     </div>
 
     <div
-      id="boka-collection-world-scenes-{{ section.id }}"
-      class="boka-collection-world__scene-section"
+      id="boka-collection-list-{{ section.id }}"
+      class="boka-collection-scroll__list-section"
     >
-      <div class="boka-collection-world__intro">
-        {% if section.settings.scene_eyebrow != blank %}
-          <p class="boka-collection-world__eyebrow">
-            {{ section.settings.scene_eyebrow }}
-          </p>
-        {% endif %}
+      <div class="boka-collection-scroll__list-inner">
+        <div class="boka-collection-scroll__list-header">
+          {% if section.settings.list_eyebrow != blank %}
+            <p class="boka-collection-scroll__eyebrow">
+              {{ section.settings.list_eyebrow }}
+            </p>
+          {% endif %}
 
-        {% if section.settings.scene_heading != blank %}
-          <h2>{{ section.settings.scene_heading }}</h2>
-        {% endif %}
+          {% if section.settings.list_heading != blank %}
+            <h2>{{ section.settings.list_heading }}</h2>
+          {% endif %}
 
-        {% if section.settings.scene_text != blank %}
-          <p>{{ section.settings.scene_text }}</p>
-        {% endif %}
-      </div>
-
-      <div class="boka-collection-world__sticky-wrap">
-        <div class="boka-collection-world__sticky-stage">
-          <div class="boka-collection-world__stage-bg"></div>
-
-          <div class="boka-collection-world__stage-inner">
-            <div class="boka-collection-world__stage-copy">
-              <p class="boka-collection-world__active-kicker"></p>
-              <h3 class="boka-collection-world__active-title"></h3>
-              <p class="boka-collection-world__active-description"></p>
-              <p class="boka-collection-world__active-quote"></p>
-
-              <div class="boka-collection-world__active-bullets"></div>
-
-              <div class="boka-collection-world__active-product">
-                <div class="boka-collection-world__active-product-image-wrap">
-                  <img
-                    class="boka-collection-world__active-product-image"
-                    src=""
-                    alt=""
-                    loading="lazy"
-                  >
-                </div>
-
-                <div>
-                  <p class="boka-collection-world__active-product-title"></p>
-                  <span class="boka-collection-world__active-product-price"></span>
-                </div>
-
-                <a class="boka-collection-world__active-link" href="#">
-                  {{ section.settings.product_button_label }}
-                </a>
-              </div>
-            </div>
-
-            <div class="boka-collection-world__stage-visual">
-              <div class="boka-collection-world__visual-orbit">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <img
-                class="boka-collection-world__active-character"
-                src=""
-                alt=""
-                loading="lazy"
-              >
-            </div>
-          </div>
-
-          <div class="boka-collection-world__flavor-nav">
-            {% for flavor_product in active_collection.products limit: products_to_show %}
-              {% liquid
-                assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
-                assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
-
-                assign loop_mod = forloop.index0 | modulo: 2
-                if loop_mod == 0
-                  assign fallback_accent = section.settings.alt_accent_color_1
-                else
-                  assign fallback_accent = section.settings.alt_accent_color_2
-                endif
-
-                if section.settings.enable_metafield_color_overrides and metafield_accent != blank
-                  assign nav_accent = metafield_accent
-                else
-                  assign nav_accent = fallback_accent
-                endif
-              %}
-
-              <button
-                type="button"
-                class="boka-collection-world__flavor-dot"
-                data-scene-index="{{ forloop.index0 }}"
-                style="--dot-color: {{ nav_accent }};"
-                aria-label="{{ character_name | escape }}"
-              >
-                <span></span>
-              </button>
-            {% endfor %}
-          </div>
+          {% if section.settings.list_text != blank %}
+            <p>{{ section.settings.list_text }}</p>
+          {% endif %}
         </div>
 
-        <div class="boka-collection-world__scroll-scenes">
+        <div class="boka-collection-scroll__product-list">
           {% for flavor_product in active_collection.products limit: products_to_show %}
             {% liquid
               assign loop_mod = forloop.index0 | modulo: 2
@@ -264,14 +178,9 @@
                 assign fallback_bg = section.settings.alt_background_color_2
               endif
 
-              assign headline = flavor_product.metafields.custom.flavor_scroll_headline.value | default: flavor_product.title
-              assign description = flavor_product.metafields.custom.flavor_scroll_description.value | default: flavor_product.description | strip_html | truncate: 340
-              assign bullets = flavor_product.metafields.custom.flavor_scroll_bullets.value
-              assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
-              assign character_quote = flavor_product.metafields.custom.character_quote.value
-
               assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
               assign metafield_bg = flavor_product.metafields.custom.flavor_background_color.value
+              assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
 
               if section.settings.enable_metafield_color_overrides and metafield_accent != blank
                 assign accent_color = metafield_accent
@@ -284,89 +193,238 @@
               else
                 assign background_color = fallback_bg
               endif
-
-              assign character_image = flavor_product.metafields.custom.character_image.value
-              assign character_hover_image = flavor_product.metafields.custom.character_hover_image.value
-
-              if character_image != blank
-                assign character_image_url = character_image | image_url: width: 1100
-              elsif flavor_product.featured_image != blank
-                assign character_image_url = flavor_product.featured_image | image_url: width: 1100
-              else
-                assign character_image_url = blank
-              endif
-
-              if character_hover_image != blank
-                assign character_hover_image_url = character_hover_image | image_url: width: 1100
-              else
-                assign character_hover_image_url = character_image_url
-              endif
-
-              if flavor_product.featured_image != blank
-                assign product_image_url = flavor_product.featured_image | image_url: width: 500
-              else
-                assign product_image_url = character_image_url
-              endif
-
-              assign bullet_string = ''
-              if bullets != blank
-                for bullet in bullets
-                  assign clean_bullet = bullet | strip_html | escape
-                  if forloop.first
-                    assign bullet_string = clean_bullet
-                  else
-                    assign bullet_string = bullet_string | append: '||' | append: clean_bullet
-                  endif
-                endfor
-              endif
             %}
 
-            <article
-              class="boka-collection-world__scene-trigger"
-              data-index="{{ forloop.index0 }}"
-              data-kicker="{{ section.settings.scene_card_label | escape }}"
-              data-title="{{ headline | strip_html | escape }}"
-              data-description="{{ description | strip_html | escape }}"
-              data-quote="{{ character_quote | strip_html | escape }}"
-              data-bullets="{{ bullet_string }}"
-              data-character-src="{{ character_image_url }}"
-              data-character-hover-src="{{ character_hover_image_url }}"
-              data-character-alt="{{ character_name | escape }}"
-              data-product-src="{{ product_image_url }}"
-              data-product-alt="{{ flavor_product.title | escape }}"
-              data-product-title="{{ flavor_product.title | escape }}"
-              data-product-price="{{ flavor_product.price | money | escape }}"
-              data-product-url="{{ flavor_product.url }}"
-              data-accent="{{ accent_color }}"
-              data-bg="{{ background_color }}"
+            <a
+              href="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
+              class="boka-collection-scroll__list-card"
+              style="
+                --list-accent: {{ accent_color }};
+                --list-bg: {{ background_color }};
+              "
             >
-              <div class="boka-collection-world__scene-marker">
-                <span>{{ forloop.index }}</span>
-                <p>{{ character_name }}</p>
+              <div class="boka-collection-scroll__list-card-image">
+                {% if flavor_product.featured_image != blank %}
+                  <img
+                    src="{{ flavor_product.featured_image | image_url: width: 500 }}"
+                    alt="{{ flavor_product.featured_image.alt | default: flavor_product.title | escape }}"
+                    loading="lazy"
+                  >
+                {% endif %}
               </div>
-            </article>
+
+              <div>
+                <p>{{ character_name }}</p>
+                <span>{{ flavor_product.title }}</span>
+              </div>
+            </a>
           {% endfor %}
         </div>
       </div>
     </div>
+
+    <div class="boka-collection-scroll__scenes">
+      {% for flavor_product in active_collection.products limit: products_to_show %}
+        {% liquid
+          assign loop_mod = forloop.index0 | modulo: 2
+
+          if loop_mod == 0
+            assign scene_class = 'is-even'
+            assign fallback_accent = section.settings.alt_accent_color_1
+            assign fallback_bg = section.settings.alt_background_color_1
+            assign next_bg = section.settings.alt_background_color_2
+          else
+            assign scene_class = 'is-odd'
+            assign fallback_accent = section.settings.alt_accent_color_2
+            assign fallback_bg = section.settings.alt_background_color_2
+            assign next_bg = section.settings.alt_background_color_1
+          endif
+
+          assign headline = flavor_product.metafields.custom.flavor_scroll_headline.value | default: flavor_product.title
+          assign description = flavor_product.metafields.custom.flavor_scroll_description.value | default: flavor_product.description | strip_html | truncate: 420
+          assign bullets = flavor_product.metafields.custom.flavor_scroll_bullets.value
+          assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
+          assign character_quote = flavor_product.metafields.custom.character_quote.value
+
+          assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
+          assign metafield_bg = flavor_product.metafields.custom.flavor_background_color.value
+
+          if section.settings.enable_metafield_color_overrides and metafield_accent != blank
+            assign accent_color = metafield_accent
+          else
+            assign accent_color = fallback_accent
+          endif
+
+          if section.settings.enable_metafield_color_overrides and metafield_bg != blank
+            assign background_color = metafield_bg
+          else
+            assign background_color = fallback_bg
+          endif
+
+          assign next_product = active_collection.products[forloop.index]
+
+          if next_product != blank
+            assign next_loop_mod = forloop.index | modulo: 2
+
+            if next_loop_mod == 0
+              assign next_fallback_bg = section.settings.alt_background_color_1
+            else
+              assign next_fallback_bg = section.settings.alt_background_color_2
+            endif
+
+            assign next_metafield_bg = next_product.metafields.custom.flavor_background_color.value
+
+            if section.settings.enable_metafield_color_overrides and next_metafield_bg != blank
+              assign next_bg = next_metafield_bg
+            else
+              assign next_bg = next_fallback_bg
+            endif
+          else
+            assign next_bg = section.settings.default_background
+          endif
+
+          assign character_image = flavor_product.metafields.custom.character_image.value
+          assign character_hover_image = flavor_product.metafields.custom.character_hover_image.value
+
+          if character_image != blank
+            assign character_image_url = character_image | image_url: width: 1200
+          elsif flavor_product.featured_image != blank
+            assign character_image_url = flavor_product.featured_image | image_url: width: 1200
+          else
+            assign character_image_url = blank
+          endif
+
+          if character_hover_image != blank
+            assign character_hover_image_url = character_hover_image | image_url: width: 1200
+          else
+            assign character_hover_image_url = character_image_url
+          endif
+        %}
+
+        <article
+          id="boka-product-scene-{{ section.id }}-{{ forloop.index }}"
+          class="boka-collection-scroll__scene {{ scene_class }}"
+          style="
+            --scene-bg: {{ background_color }};
+            --next-bg: {{ next_bg }};
+            --scene-accent: {{ accent_color }};
+          "
+          data-default-src="{{ character_image_url }}"
+          data-hover-src="{{ character_hover_image_url }}"
+        >
+          <div class="boka-collection-scroll__scene-bg">
+            <span class="boka-collection-scroll__scene-blob is-a"></span>
+            <span class="boka-collection-scroll__scene-blob is-b"></span>
+            <span class="boka-collection-scroll__scene-blob is-c"></span>
+          </div>
+
+          <div class="boka-collection-scroll__scene-inner">
+            <div class="boka-collection-scroll__scene-copy">
+              <p class="boka-collection-scroll__eyebrow">
+                {{ section.settings.scene_card_label }}
+              </p>
+
+              <h2>{{ headline }}</h2>
+
+              {% if description != blank %}
+                <p class="boka-collection-scroll__description">
+                  {{ description }}
+                </p>
+              {% endif %}
+
+              {% if character_quote != blank %}
+                <p class="boka-collection-scroll__quote">
+                  {{ character_quote }}
+                </p>
+              {% endif %}
+
+              {% if bullets != blank %}
+                <div class="boka-collection-scroll__bullets">
+                  {% for bullet in bullets %}
+                    <div class="boka-collection-scroll__bullet">
+                      <span></span>
+                      <p>{{ bullet }}</p>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <div class="boka-collection-scroll__product-row">
+                {% if flavor_product.featured_image != blank %}
+                  <div class="boka-collection-scroll__product-row-image">
+                    <img
+                      src="{{ flavor_product.featured_image | image_url: width: 500 }}"
+                      alt="{{ flavor_product.featured_image.alt | default: flavor_product.title | escape }}"
+                      loading="lazy"
+                    >
+                  </div>
+                {% endif %}
+
+                <div>
+                  <p>{{ flavor_product.title }}</p>
+
+                  {% if flavor_product.price %}
+                    <span>{{ flavor_product.price | money }}</span>
+                  {% endif %}
+                </div>
+
+                <a href="{{ flavor_product.url }}" class="boka-collection-scroll__button is-small">
+                  {{ section.settings.product_button_label }}
+                </a>
+              </div>
+            </div>
+
+            <div class="boka-collection-scroll__scene-visual">
+              <div class="boka-collection-scroll__orbit">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              {% if character_image_url != blank %}
+                <img
+                  class="boka-collection-scroll__character-image"
+                  src="{{ character_image_url }}"
+                  alt="{{ character_name | escape }}"
+                  loading="lazy"
+                >
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="boka-collection-scroll__curve is-scene-curve" aria-hidden="true">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+              <path d="M0,78 C180,132 340,136 520,82 C710,24 890,24 1080,82 C1235,130 1345,118 1440,76 L1440,150 L0,150 Z"></path>
+            </svg>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
   </section>
 
   <style>
-    #boka-collection-world-{{ section.id }} {
+    #boka-collection-scroll-{{ section.id }} {
       position: relative;
+      width: 100%;
       overflow: hidden;
       background: {{ section.settings.default_background }};
       color: {{ section.settings.text_color }};
+      scroll-behavior: smooth;
     }
 
-    #boka-collection-world-{{ section.id }} * {
+    #boka-collection-scroll-{{ section.id }} * {
       box-sizing: border-box;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__hero {
-      position: relative;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-section,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene {
       width: 100vw;
       margin-left: calc(50% - 50vw);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero {
+      position: relative;
       min-height: clamp(720px, 96vh, 1040px);
       display: flex;
       align-items: center;
@@ -379,23 +437,25 @@
         );
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__hero-sky {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-bg,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-bg {
       position: absolute;
       inset: 0;
       overflow: hidden;
       pointer-events: none;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__blob {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-blob {
       position: absolute;
       display: block;
       border-radius: 999px;
-      opacity: 0.56;
       filter: blur(2px);
-      animation: boka-world-blob-{{ section.id }} 8s ease-in-out infinite;
+      opacity: 0.56;
+      animation: boka-scroll-blob-{{ section.id }} 8s ease-in-out infinite;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__blob.is-one {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-one {
       width: 420px;
       height: 420px;
       left: -120px;
@@ -403,7 +463,7 @@
       background: {{ section.settings.hero_blob_1 }};
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__blob.is-two {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-two {
       width: 520px;
       height: 520px;
       right: -160px;
@@ -412,7 +472,7 @@
       animation-delay: -2s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__blob.is-three {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-three {
       width: 260px;
       height: 260px;
       right: 42%;
@@ -421,7 +481,7 @@
       animation-delay: -4s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__blob.is-four {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-four {
       width: 220px;
       height: 220px;
       left: 44%;
@@ -430,7 +490,7 @@
       animation-delay: -6s;
     }
 
-    @keyframes boka-world-blob-{{ section.id }} {
+    @keyframes boka-scroll-blob-{{ section.id }} {
       0% {
         transform: translateY(0) rotate(0deg) scale(1);
       }
@@ -444,7 +504,7 @@
       }
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__hero-inner {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-inner {
       position: relative;
       z-index: 2;
       width: min(1500px, calc(100% - 40px));
@@ -453,10 +513,10 @@
       grid-template-columns: minmax(0, 0.84fr) minmax(440px, 1.16fr);
       gap: clamp(36px, 6vw, 100px);
       align-items: center;
-      padding: clamp(72px, 9vw, 140px) 0;
+      padding: clamp(72px, 9vw, 140px) 0 clamp(130px, 12vw, 190px);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__eyebrow {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__eyebrow {
       margin: 0 0 14px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -466,15 +526,15 @@
       color: {{ section.settings.muted_text_color }};
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__hero-copy h1 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-copy h1 {
       margin: 0;
-      max-width: 780px;
+      max-width: 820px;
       font-size: clamp(3.6rem, 8.4vw, 10.6rem);
       line-height: 0.84;
       letter-spacing: -0.08em;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__hero-text {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-text {
       margin: 26px 0 0;
       max-width: 590px;
       color: {{ section.settings.muted_text_color }};
@@ -482,46 +542,42 @@
       line-height: 1.55;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__button,
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-link {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button {
       width: fit-content;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 52px;
+      padding: 0 28px;
+      margin-top: 34px;
       border-radius: 999px;
       background: {{ section.settings.button_background }};
       color: {{ section.settings.button_text_color }};
       text-decoration: none;
       font-weight: 800;
+      font-size: 0.96rem;
       transition: transform 180ms ease, opacity 180ms ease;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__button {
-      min-height: 52px;
-      padding: 0 28px;
-      margin-top: 34px;
-      font-size: 0.96rem;
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-link {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button.is-small {
       min-height: 42px;
+      margin-top: 0;
       padding: 0 20px;
       font-size: 0.88rem;
       white-space: nowrap;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__button:hover,
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-link:hover {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button:hover {
       transform: translateY(-2px);
       opacity: 0.88;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-stage {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-products {
       position: relative;
       min-height: 640px;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card {
       position: absolute;
       width: clamp(140px, 13vw, 228px);
       min-height: clamp(170px, 16vw, 280px);
@@ -535,90 +591,64 @@
       background:
         linear-gradient(
           135deg,
-          color-mix(in srgb, var(--float-bg) 88%, white),
-          color-mix(in srgb, var(--float-accent) 30%, white)
+          color-mix(in srgb, var(--card-bg) 88%, white),
+          color-mix(in srgb, var(--card-accent) 30%, white)
         );
       box-shadow: 0 24px 80px rgba(17, 17, 17, 0.1);
       text-decoration: none;
       color: {{ section.settings.text_color }};
-      animation: boka-world-float-card-{{ section.id }} 5.8s ease-in-out infinite;
+      animation: boka-scroll-float-card-{{ section.id }} 5.8s ease-in-out infinite;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card img {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card img {
       width: 84%;
       max-height: 175px;
       object-fit: contain;
       display: block;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card span {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card span {
       font-size: 0.92rem;
       font-weight: 800;
       line-height: 1.15;
       text-align: center;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card:hover {
-      z-index: 6;
-      transform: translateY(-8px) rotate(0deg);
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-1 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card.is-card-1 {
       left: 4%;
       top: 4%;
       rotate: -5deg;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-2 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card.is-card-2 {
       right: 8%;
       top: 2%;
       rotate: 4deg;
       animation-delay: -1s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-3 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card.is-card-3 {
       left: 34%;
       top: 34%;
       rotate: 2deg;
       animation-delay: -2s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-4 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card.is-card-4 {
       left: 0;
       bottom: 6%;
       rotate: 5deg;
       animation-delay: -3s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-5 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card.is-card-5 {
       right: 2%;
       bottom: 10%;
       rotate: -4deg;
       animation-delay: -4s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-6 {
-      right: 36%;
-      bottom: 0;
-      rotate: 3deg;
-      animation-delay: -5s;
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-7 {
-      right: 42%;
-      top: 0;
-      rotate: -2deg;
-      animation-delay: -2.5s;
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__float-card.is-float-8 {
-      left: 22%;
-      bottom: 0;
-      rotate: 4deg;
-      animation-delay: -3.5s;
-    }
-
-    @keyframes boka-world-float-card-{{ section.id }} {
+    @keyframes boka-scroll-float-card-{{ section.id }} {
       0% {
         translate: 0 0;
       }
@@ -632,171 +662,245 @@
       }
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__curve {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__curve {
       position: absolute;
       left: 0;
       right: 0;
       bottom: -1px;
-      height: 140px;
-      z-index: 3;
-      color: {{ section.settings.default_background }};
+      height: 150px;
+      z-index: 4;
       pointer-events: none;
+      color: {{ section.settings.list_background }};
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__curve svg {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__curve svg {
       width: 100%;
       height: 100%;
       display: block;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__curve path {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__curve path {
       fill: currentColor;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__scene-section {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      background: {{ section.settings.default_background }};
-      padding: clamp(60px, 8vw, 118px) 0 clamp(72px, 10vw, 150px);
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-section {
+      position: relative;
+      background: {{ section.settings.list_background }};
+      padding: clamp(64px, 9vw, 130px) 0 clamp(74px, 9vw, 140px);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__intro {
-      width: min(900px, calc(100% - 40px));
-      margin: 0 auto clamp(48px, 7vw, 96px);
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-inner {
+      width: min(1320px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-header {
+      max-width: 760px;
+      margin: 0 auto clamp(34px, 5vw, 62px);
       text-align: center;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__intro h2 {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-header h2 {
       margin: 0;
-      font-size: clamp(2.7rem, 6.4vw, 7.4rem);
+      font-size: clamp(2.5rem, 6vw, 7rem);
       line-height: 0.9;
       letter-spacing: -0.065em;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__intro > p:not(.boka-collection-world__eyebrow) {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-header > p:not(.boka-collection-scroll__eyebrow) {
       margin: 18px auto 0;
-      max-width: 690px;
+      max-width: 640px;
       color: {{ section.settings.muted_text_color }};
-      font-size: clamp(1rem, 1.35vw, 1.22rem);
-      line-height: 1.58;
+      font-size: clamp(1rem, 1.3vw, 1.18rem);
+      line-height: 1.55;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__sticky-wrap {
-      position: relative;
-      width: min(1340px, calc(100% - 40px));
-      margin: 0 auto;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__sticky-stage {
-      position: sticky;
-      top: 92px;
-      z-index: 4;
-      min-height: calc(100vh - 120px);
-      border-radius: clamp(32px, 5vw, 64px);
-      overflow: hidden;
-      background: var(--active-bg, {{ section.settings.alt_background_color_1 }});
-      box-shadow: 0 28px 100px rgba(17, 17, 17, 0.08);
-      transition: background 260ms ease;
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__stage-bg {
-      position: absolute;
-      inset: 0;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 14px;
+      align-items: center;
+      min-height: 132px;
+      padding: 14px;
+      border-radius: 26px;
       background:
-        radial-gradient(circle at 78% 24%, color-mix(in srgb, var(--active-accent, {{ section.settings.alt_accent_color_1 }}) 34%, transparent), transparent 28%),
-        radial-gradient(circle at 18% 78%, rgba(255,255,255,0.62), transparent 32%);
-      pointer-events: none;
+        linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--list-bg) 86%, white),
+          color-mix(in srgb, var(--list-accent) 28%, white)
+        );
+      box-shadow: 0 18px 60px rgba(17, 17, 17, 0.07);
+      text-decoration: none;
+      color: {{ section.settings.text_color }};
+      transition: transform 180ms ease, box-shadow 180ms ease;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__stage-inner {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 76px rgba(17, 17, 17, 0.1);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card-image {
+      width: 86px;
+      height: 86px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.76);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card-image img {
+      width: 82%;
+      height: 82%;
+      object-fit: contain;
+      display: block;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card p {
+      margin: 0;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card span {
+      display: block;
+      margin-top: 5px;
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.88rem;
+      line-height: 1.25;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--scene-bg);
+      color: {{ section.settings.text_color }};
+      scroll-margin-top: 0;
+      padding: clamp(72px, 9vw, 130px) 0 clamp(150px, 12vw, 210px);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-blob.is-a {
+      width: 480px;
+      height: 480px;
+      right: -120px;
+      top: 10%;
+      background: color-mix(in srgb, var(--scene-accent) 44%, white);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-blob.is-b {
+      width: 320px;
+      height: 320px;
+      left: -90px;
+      bottom: 12%;
+      background: rgba(255,255,255,0.58);
+      animation-delay: -2s;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-blob.is-c {
+      width: 180px;
+      height: 180px;
+      left: 45%;
+      top: 10%;
+      background: color-mix(in srgb, var(--scene-accent) 30%, white);
+      animation-delay: -4s;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-inner {
       position: relative;
       z-index: 2;
-      min-height: calc(100vh - 120px);
+      width: min(1380px, calc(100% - 40px));
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
-      gap: clamp(28px, 5vw, 80px);
+      grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+      gap: clamp(32px, 6vw, 96px);
       align-items: center;
-      padding: clamp(28px, 5vw, 72px);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-kicker {
-      margin: 0 0 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 0.75rem;
-      line-height: 1.2;
-      font-weight: 800;
-      color: {{ section.settings.muted_text_color }};
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-odd .boka-collection-scroll__scene-copy {
+      order: 2;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-title {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-odd .boka-collection-scroll__scene-visual {
+      order: 1;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-copy h2 {
       margin: 0;
-      font-size: clamp(2.8rem, 6vw, 7.8rem);
+      max-width: 720px;
+      font-size: clamp(3rem, 7vw, 8.4rem);
       line-height: 0.86;
       letter-spacing: -0.075em;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-description {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__description {
       margin: 22px 0 0;
-      max-width: 570px;
+      max-width: 580px;
       color: {{ section.settings.muted_text_color }};
       font-size: clamp(1rem, 1.25vw, 1.16rem);
       line-height: 1.62;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-quote {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quote {
       margin: 18px 0 0;
       max-width: 540px;
       font-weight: 800;
       line-height: 1.45;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-bullets {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__bullets {
       margin-top: 24px;
       display: grid;
       gap: 10px;
       max-width: 560px;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__bullet {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__bullet {
       display: flex;
       gap: 10px;
       align-items: flex-start;
       padding: 12px 14px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255,255,255,0.72);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__bullet span {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__bullet span {
       width: 9px;
       height: 9px;
       margin-top: 7px;
       border-radius: 999px;
-      background: var(--active-accent, {{ section.settings.alt_accent_color_1 }});
+      background: var(--scene-accent);
       flex: 0 0 auto;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__bullet p {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__bullet p {
       margin: 0;
       line-height: 1.4;
       font-size: 0.95rem;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-product {
-      margin-top: 28px;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row {
+      margin-top: 30px;
       display: grid;
       grid-template-columns: 78px minmax(0, 1fr) auto;
       gap: 14px;
       align-items: center;
-      max-width: 610px;
+      max-width: 640px;
       padding: 12px;
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255,255,255,0.78);
+      box-shadow: 0 18px 54px rgba(17,17,17,0.06);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-product-image-wrap {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row-image {
       width: 78px;
       height: 78px;
       display: grid;
@@ -805,58 +909,57 @@
       background: white;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-product-image {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row-image img {
       width: 84%;
       height: 84%;
       object-fit: contain;
       display: block;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-product-title {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row p {
       margin: 0;
       font-weight: 800;
       line-height: 1.25;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-product-price {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row span {
       display: block;
       margin-top: 5px;
       color: {{ section.settings.muted_text_color }};
       font-size: 0.92rem;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__stage-visual {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-visual {
       position: relative;
-      min-height: 520px;
+      min-height: 560px;
       display: grid;
       place-items: center;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__visual-orbit {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__orbit {
       position: absolute;
-      inset: 10%;
+      inset: 8%;
       border-radius: 999px;
-      background: color-mix(in srgb, var(--active-accent, {{ section.settings.alt_accent_color_1 }}) 28%, white);
+      background: color-mix(in srgb, var(--scene-accent) 28%, white);
       opacity: 0.88;
-      transition: background 260ms ease;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__visual-orbit span {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__orbit span {
       position: absolute;
       display: block;
       border-radius: 999px;
       background: rgba(255,255,255,0.72);
-      animation: boka-world-orbit-{{ section.id }} 6s ease-in-out infinite;
+      animation: boka-scroll-orbit-{{ section.id }} 6s ease-in-out infinite;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__visual-orbit span:nth-child(1) {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__orbit span:nth-child(1) {
       width: 74px;
       height: 74px;
       left: 6%;
       top: 22%;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__visual-orbit span:nth-child(2) {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__orbit span:nth-child(2) {
       width: 46px;
       height: 46px;
       right: 14%;
@@ -864,7 +967,7 @@
       animation-delay: -2s;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__visual-orbit span:nth-child(3) {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__orbit span:nth-child(3) {
       width: 62px;
       height: 62px;
       right: 8%;
@@ -872,7 +975,7 @@
       animation-delay: -4s;
     }
 
-    @keyframes boka-world-orbit-{{ section.id }} {
+    @keyframes boka-scroll-orbit-{{ section.id }} {
       0% {
         transform: translateY(0) scale(1);
       }
@@ -886,22 +989,22 @@
       }
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__active-character {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__character-image {
       position: relative;
       z-index: 2;
-      width: min(86%, 520px);
-      max-height: 560px;
+      width: min(86%, 560px);
+      max-height: 620px;
       object-fit: contain;
       display: block;
       transition: opacity 180ms ease, transform 260ms ease;
-      animation: boka-world-character-{{ section.id }} 4.8s ease-in-out infinite;
+      animation: boka-scroll-character-{{ section.id }} 4.8s ease-in-out infinite;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__stage-visual:hover .boka-collection-world__active-character {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-visual:hover .boka-collection-scroll__character-image {
       transform: translateY(-8px) scale(1.03);
     }
 
-    @keyframes boka-world-character-{{ section.id }} {
+    @keyframes boka-scroll-character-{{ section.id }} {
       0% {
         translate: 0 0;
         rotate: 0deg;
@@ -918,117 +1021,101 @@
       }
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__flavor-nav {
-      position: absolute;
-      z-index: 5;
-      right: 24px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: grid;
-      gap: 12px;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene .is-scene-curve {
+      color: var(--next-bg);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__flavor-dot {
-      width: 18px;
-      height: 18px;
-      border: 0;
-      border-radius: 999px;
-      padding: 0;
-      background: transparent;
-      cursor: pointer;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene:last-child .is-scene-curve {
+      color: {{ section.settings.default_background }};
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__flavor-dot span {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border-radius: 999px;
-      background: var(--dot-color);
-      opacity: 0.38;
-      transform: scale(0.76);
-      transition: opacity 180ms ease, transform 180ms ease, box-shadow 180ms ease;
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__flavor-dot.is-active span {
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-in-view .boka-collection-scroll__scene-copy,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-in-view .boka-collection-scroll__scene-visual {
       opacity: 1;
-      transform: scale(1);
-      box-shadow: 0 0 0 8px color-mix(in srgb, var(--dot-color) 22%, transparent);
+      transform: translateY(0);
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__scroll-scenes {
-      position: relative;
-      margin-top: calc(-100vh + 120px);
-      pointer-events: none;
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-copy,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-visual {
+      opacity: 0.42;
+      transform: translateY(28px);
+      transition: opacity 420ms ease, transform 420ms ease;
     }
 
-    #boka-collection-world-{{ section.id }} .boka-collection-world__scene-trigger {
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    #boka-collection-world-{{ section.id }} .boka-collection-world__scene-marker {
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-
-    @media screen and (max-width: 1100px) {
-      #boka-collection-world-{{ section.id }} .boka-collection-world__hero-inner {
+    @media screen and (max-width: 1180px) {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__hero-copy h1,
-      #boka-collection-world-{{ section.id }} .boka-collection-world__hero-text {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-copy h1,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-text {
         margin-left: auto;
         margin-right: auto;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__button {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button {
         margin-left: auto;
         margin-right: auto;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__float-stage {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-products {
         min-height: 540px;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__stage-inner {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-inner {
         grid-template-columns: 1fr;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__stage-visual {
-        min-height: 380px;
-        order: -1;
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-odd .boka-collection-scroll__scene-copy,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-odd .boka-collection-scroll__scene-visual {
+        order: initial;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__active-character {
-        max-height: 360px;
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-visual {
+        min-height: 420px;
+        order: -1 !important;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__character-image {
+        max-height: 420px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-copy {
+        text-align: center;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__description,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quote,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__bullets,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
     @media screen and (max-width: 800px) {
-      #boka-collection-world-{{ section.id }} .boka-collection-world__hero {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero {
         min-height: auto;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__hero-inner {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-inner {
         width: min(100%, calc(100% - 32px));
-        padding: 54px 0 100px;
+        padding: 54px 0 120px;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__float-stage {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-products {
         min-height: auto;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__float-card {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card {
         position: relative;
         inset: auto !important;
         width: 100%;
@@ -1036,62 +1123,51 @@
         rotate: 0deg !important;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__sticky-wrap {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-inner,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-inner {
         width: min(100%, calc(100% - 32px));
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__sticky-stage {
-        position: relative;
-        top: auto;
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
+        grid-template-columns: 1fr;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene {
         min-height: auto;
+        padding: 72px 0 150px;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__stage-inner {
-        min-height: auto;
-        padding: 24px;
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-copy h2 {
+        font-size: clamp(2.7rem, 13vw, 4.6rem);
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__active-title {
-        font-size: clamp(2.5rem, 13vw, 4.2rem);
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-visual {
+        min-height: 300px;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__flavor-nav {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        margin: 0 0 24px;
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__character-image {
+        max-height: 300px;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__scroll-scenes {
-        margin-top: 0;
-      }
-
-      #boka-collection-world-{{ section.id }} .boka-collection-world__scene-trigger {
-        min-height: 0;
-      }
-
-      #boka-collection-world-{{ section.id }} .boka-collection-world__active-product {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row {
         grid-template-columns: 68px 1fr;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__active-link {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row .boka-collection-scroll__button {
         grid-column: 1 / -1;
         width: 100%;
       }
 
-      #boka-collection-world-{{ section.id }} .boka-collection-world__active-product-image-wrap {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-row-image {
         width: 68px;
         height: 68px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      #boka-collection-world-{{ section.id }} *,
-      #boka-collection-world-{{ section.id }} *::before,
-      #boka-collection-world-{{ section.id }} *::after {
+      #boka-collection-scroll-{{ section.id }} *,
+      #boka-collection-scroll-{{ section.id }} *::before,
+      #boka-collection-scroll-{{ section.id }} *::after {
         animation: none !important;
         transition: none !important;
         scroll-behavior: auto !important;
@@ -1101,156 +1177,63 @@
 
   <script>
     (() => {
-      const section = document.querySelector('#boka-collection-world-{{ section.id }}');
+      const section = document.querySelector('#boka-collection-scroll-{{ section.id }}');
       if (!section) return;
 
-      const triggers = Array.from(section.querySelectorAll('.boka-collection-world__scene-trigger'));
-      const dots = Array.from(section.querySelectorAll('.boka-collection-world__flavor-dot'));
+      const scenes = Array.from(section.querySelectorAll('.boka-collection-scroll__scene'));
 
-      const stage = section.querySelector('.boka-collection-world__sticky-stage');
-      const kicker = section.querySelector('.boka-collection-world__active-kicker');
-      const title = section.querySelector('.boka-collection-world__active-title');
-      const description = section.querySelector('.boka-collection-world__active-description');
-      const quote = section.querySelector('.boka-collection-world__active-quote');
-      const bulletsWrap = section.querySelector('.boka-collection-world__active-bullets');
-      const character = section.querySelector('.boka-collection-world__active-character');
-      const productImage = section.querySelector('.boka-collection-world__active-product-image');
-      const productTitle = section.querySelector('.boka-collection-world__active-product-title');
-      const productPrice = section.querySelector('.boka-collection-world__active-product-price');
-      const productLink = section.querySelector('.boka-collection-world__active-link');
-      const visual = section.querySelector('.boka-collection-world__stage-visual');
-
-      if (!triggers.length || !stage || !character) return;
-
-      let activeIndex = -1;
-      let activeDefaultSrc = '';
-      let activeHoverSrc = '';
-      let isHovering = false;
-
-      const setImage = (img, src, alt, immediate = false) => {
-        if (!img || !src || img.getAttribute('src') === src) return;
-
-        if (!immediate) img.style.opacity = '0';
-
-        window.setTimeout(() => {
-          img.setAttribute('src', src);
-          img.setAttribute('alt', alt || '');
-          img.style.opacity = '1';
-        }, immediate ? 0 : 140);
-      };
-
-      const setActive = (index) => {
-        const trigger = triggers[index];
-        if (!trigger || index === activeIndex) return;
-
-        activeIndex = index;
-
-        const data = trigger.dataset;
-        const accent = data.accent || '#DDEFE6';
-        const bg = data.bg || '#F8FBF7';
-
-        section.style.setProperty('--active-accent', accent);
-        section.style.setProperty('--active-bg', bg);
-
-        stage.style.background = bg;
-
-        activeDefaultSrc = data.characterSrc || '';
-        activeHoverSrc = data.characterHoverSrc || activeDefaultSrc;
-
-        if (kicker) kicker.textContent = data.kicker || '';
-        if (title) title.textContent = data.title || '';
-        if (description) description.textContent = data.description || '';
-        if (quote) quote.textContent = data.quote || '';
-
-        setImage(character, isHovering ? activeHoverSrc : activeDefaultSrc, data.characterAlt || '');
-
-        setImage(productImage, data.productSrc || activeDefaultSrc, data.productAlt || data.productTitle || '', true);
-
-        if (productTitle) productTitle.textContent = data.productTitle || '';
-        if (productPrice) productPrice.textContent = data.productPrice || '';
-
-        if (productLink) {
-          productLink.setAttribute('href', data.productUrl || '#');
-        }
-
-        if (bulletsWrap) {
-          bulletsWrap.innerHTML = '';
-
-          if (data.bullets) {
-            data.bullets.split('||').forEach((bullet) => {
-              if (!bullet.trim()) return;
-
-              const item = document.createElement('div');
-              item.className = 'boka-collection-world__bullet';
-
-              const dot = document.createElement('span');
-              const text = document.createElement('p');
-              text.textContent = bullet;
-
-              item.appendChild(dot);
-              item.appendChild(text);
-              bulletsWrap.appendChild(item);
-            });
-          }
-        }
-
-        dots.forEach((dot, dotIndex) => {
-          dot.classList.toggle('is-active', dotIndex === index);
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('is-in-view', entry.isIntersecting);
         });
-      };
-
-      setActive(0);
-
-      const observer = new IntersectionObserver((entries) => {
-        const activeEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (activeEntry) {
-          setActive(Number(activeEntry.target.dataset.index));
-        }
       }, {
         root: null,
-        threshold: [0.22, 0.35, 0.5, 0.65]
+        threshold: 0.25
       });
 
-      triggers.forEach((trigger) => observer.observe(trigger));
-
-      dots.forEach((dot) => {
-        dot.addEventListener('click', () => {
-          const index = Number(dot.dataset.sceneIndex);
-          const trigger = triggers[index];
-
-          if (trigger) {
-            trigger.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-          }
-
-          setActive(index);
-        });
+      scenes.forEach((scene) => {
+        revealObserver.observe(scene);
       });
 
-      if (visual) {
+      scenes.forEach((scene) => {
+        const visual = scene.querySelector('.boka-collection-scroll__scene-visual');
+        const image = scene.querySelector('.boka-collection-scroll__character-image');
+
+        if (!visual || !image) return;
+
+        const defaultSrc = scene.dataset.defaultSrc;
+        const hoverSrc = scene.dataset.hoverSrc || defaultSrc;
+
         visual.addEventListener('mouseenter', () => {
           if (window.innerWidth < 800) return;
-          isHovering = true;
-          setImage(character, activeHoverSrc, character.getAttribute('alt') || '', true);
+          if (!hoverSrc || image.getAttribute('src') === hoverSrc) return;
+
+          image.style.opacity = '0';
+
+          window.setTimeout(() => {
+            image.setAttribute('src', hoverSrc);
+            image.style.opacity = '1';
+          }, 120);
         });
 
         visual.addEventListener('mouseleave', () => {
-          isHovering = false;
-          setImage(character, activeDefaultSrc, character.getAttribute('alt') || '', true);
+          if (!defaultSrc || image.getAttribute('src') === defaultSrc) return;
+
+          image.style.opacity = '0';
+
+          window.setTimeout(() => {
+            image.setAttribute('src', defaultSrc);
+            image.style.opacity = '1';
+          }, 120);
         });
-      }
+      });
     })();
   </script>
 {% endif %}
 
 {% schema %}
 {
-  "name": "Collection flavor world",
+  "name": "Collection flavor scroll",
   "settings": [
     {
       "type": "header",
@@ -1261,13 +1244,13 @@
       "id": "product_limit",
       "label": "Products to show",
       "min": 2,
-      "max": 8,
+      "max": 5,
       "step": 1,
       "default": 5
     },
     {
       "type": "header",
-      "content": "Hero"
+      "content": "Hero banner"
     },
     {
       "type": "text",
@@ -1331,30 +1314,40 @@
     },
     {
       "type": "header",
-      "content": "Scroll scene"
+      "content": "Collection list"
     },
     {
       "type": "text",
-      "id": "scene_eyebrow",
-      "label": "Scene eyebrow",
+      "id": "list_eyebrow",
+      "label": "List eyebrow",
       "default": "Choose your flavor"
     },
     {
       "type": "text",
-      "id": "scene_heading",
-      "label": "Scene heading",
-      "default": "Find your daily brushing vibe."
+      "id": "list_heading",
+      "label": "List heading",
+      "default": "Pick your starting point."
     },
     {
       "type": "textarea",
-      "id": "scene_text",
-      "label": "Scene text",
-      "default": "Each product has its own flavor profile, character, and routine fit."
+      "id": "list_text",
+      "label": "List text",
+      "default": "Jump into a flavor, or keep scrolling to explore each one."
+    },
+    {
+      "type": "color",
+      "id": "list_background",
+      "label": "List background",
+      "default": "#F8F5EF"
+    },
+    {
+      "type": "header",
+      "content": "Product scroll sections"
     },
     {
       "type": "text",
       "id": "scene_card_label",
-      "label": "Active scene label",
+      "label": "Product section label",
       "default": "Flavor profile"
     },
     {
@@ -1370,7 +1363,7 @@
     {
       "type": "color",
       "id": "default_background",
-      "label": "Default section background",
+      "label": "Default page background",
       "default": "#F8F5EF"
     },
     {
@@ -1434,7 +1427,7 @@
   ],
   "presets": [
     {
-      "name": "Collection flavor world"
+      "name": "Collection flavor scroll"
     }
   ]
 }
