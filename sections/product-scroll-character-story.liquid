@@ -164,13 +164,6 @@
             <span class="boka-collection-scroll__quiz-intro-icon">✦</span>
             <h3>{{ section.settings.quiz_side_heading }}</h3>
             <p>{{ section.settings.quiz_side_text }}</p>
-            <div class="boka-collection-scroll__quiz-intro-note">
-              <span class="boka-collection-scroll__quiz-intro-note-icon">⌁</span>
-              <div>
-                <strong>{{ section.settings.quiz_side_note_heading }}</strong>
-                <small>{{ section.settings.quiz_side_note_text }}</small>
-              </div>
-            </div>
           </div>
 
           <div class="boka-collection-scroll__quiz-main">
@@ -254,14 +247,7 @@
             </div>
           </div>
 
-          <p class="boka-collection-scroll__quiz-note">⌕ {{ section.settings.quiz_note }}</p>
 
-          <div class="boka-collection-scroll__quiz-benefits" aria-label="Quiz benefits">
-            <span>✓ {{ section.settings.quiz_benefit_1 }}</span>
-            <span>✓ {{ section.settings.quiz_benefit_2 }}</span>
-            <span>✓ {{ section.settings.quiz_benefit_3 }}</span>
-            <span>✓ {{ section.settings.quiz_benefit_4 }}</span>
-          </div>
         </div>
       </div>
     </div>
@@ -1045,7 +1031,7 @@
       min-height: 98px;
       padding: 18px 20px;
       border: 1px solid rgba(17,17,17,0.08);
-      border-radius: 22px;
+      border-radius: 10px;
       background: rgba(255,255,255,0.78);
       color: {{ section.settings.text_color }};
       text-align: left;
@@ -2374,6 +2360,12 @@
       }
     }
 
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-option,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-back,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__quiz-next {
+      border-radius: 10px !important;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       #boka-collection-scroll-{{ section.id }} *,
       #boka-collection-scroll-{{ section.id }} *::before,
@@ -2968,12 +2960,6 @@
     },
     {
       "type": "text",
-      "id": "quiz_note",
-      "label": "Quiz note",
-      "default": "Takes 30 seconds • No signup required"
-    },
-    {
-      "type": "text",
       "id": "quiz_side_heading",
       "label": "Quiz side heading",
       "default": "Made for every smile and every preference."
@@ -2983,42 +2969,6 @@
       "id": "quiz_side_text",
       "label": "Quiz side text",
       "default": "Answer a few quick questions and we’ll recommend the flavor that fits your routine, your smile, and your lifestyle."
-    },
-    {
-      "type": "text",
-      "id": "quiz_side_note_heading",
-      "label": "Quiz side note heading",
-      "default": "Not sure? No worries."
-    },
-    {
-      "type": "textarea",
-      "id": "quiz_side_note_text",
-      "label": "Quiz side note text",
-      "default": "You can explore all our flavors further down the page."
-    },
-    {
-      "type": "text",
-      "id": "quiz_benefit_1",
-      "label": "Quiz benefit 1",
-      "default": "Clean ingredients"
-    },
-    {
-      "type": "text",
-      "id": "quiz_benefit_2",
-      "label": "Quiz benefit 2",
-      "default": "SLS-free"
-    },
-    {
-      "type": "text",
-      "id": "quiz_benefit_3",
-      "label": "Quiz benefit 3",
-      "default": "Vegan & cruelty-free"
-    },
-    {
-      "type": "text",
-      "id": "quiz_benefit_4",
-      "label": "Quiz benefit 4",
-      "default": "Made in the USA"
     },
     {
       "type": "header",
