@@ -16,13 +16,13 @@
     "486363a0-4f38-49ec-8de8-3bcdfd569298": {
       "custom_css": [],
       "settings": {
+        "title": "",
         "collection": "shop-all",
         "products_to_show": 25,
         "columns_desktop": 5,
-        "enable_desktop_slider": false,
-        "title": "",
+        "full_width": false,
         "show_view_all": true,
-        "full_width": true
+        "enable_desktop_slider": false
       },
       "blocks": {}
     }
