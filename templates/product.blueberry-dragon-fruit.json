@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "kids-world-product",
+      "type": "main-product",
       "blocks": {
         "title": {
           "type": "title",
