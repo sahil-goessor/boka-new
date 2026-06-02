@@ -108,15 +108,15 @@
               endif
 
               if character_image != blank
-                assign character_image_url = character_image | image_url: width: 800
+                assign character_image_url = character_image | image_url: width: 900
               elsif flavor_product.featured_image != blank
-                assign character_image_url = flavor_product.featured_image | image_url: width: 800
+                assign character_image_url = flavor_product.featured_image | image_url: width: 900
               else
                 assign character_image_url = blank
               endif
 
               if character_hover_image != blank
-                assign character_hover_image_url = character_hover_image | image_url: width: 800
+                assign character_hover_image_url = character_hover_image | image_url: width: 900
               else
                 assign character_hover_image_url = character_image_url
               endif
@@ -206,15 +206,15 @@
               endif
 
               if character_image != blank
-                assign list_image_url = character_image | image_url: width: 900
+                assign list_image_url = character_image | image_url: width: 1000
               elsif flavor_product.featured_image != blank
-                assign list_image_url = flavor_product.featured_image | image_url: width: 900
+                assign list_image_url = flavor_product.featured_image | image_url: width: 1000
               else
                 assign list_image_url = blank
               endif
 
               if character_hover_image != blank
-                assign list_hover_url = character_hover_image | image_url: width: 900
+                assign list_hover_url = character_hover_image | image_url: width: 1000
               else
                 assign list_hover_url = list_image_url
               endif
@@ -316,15 +316,15 @@
           assign character_hover_image = flavor_product.metafields.custom.character_hover_image.value
 
           if character_image != blank
-            assign character_image_url = character_image | image_url: width: 1300
+            assign character_image_url = character_image | image_url: width: 1400
           elsif flavor_product.featured_image != blank
-            assign character_image_url = flavor_product.featured_image | image_url: width: 1300
+            assign character_image_url = flavor_product.featured_image | image_url: width: 1400
           else
             assign character_image_url = blank
           endif
 
           if character_hover_image != blank
-            assign character_hover_image_url = character_hover_image | image_url: width: 1300
+            assign character_hover_image_url = character_hover_image | image_url: width: 1400
           else
             assign character_hover_image_url = character_image_url
           endif
@@ -607,16 +607,25 @@
       min-height: 52px;
       padding: 0 28px;
       margin-top: 34px;
-      border-radius: 999px;
+      border-radius: 10px !important;
       background: {{ section.settings.button_background }};
-      color: {{ section.settings.button_text_color }};
+      color: #ffffff !important;
       text-decoration: none;
       font-size: 0.96rem;
       transition: transform 180ms ease, opacity 180ms ease;
     }
 
-    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button:visited {
-      color: {{ section.settings.button_text_color }};
+    #boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button,
+    #boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:link,
+    #boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:visited,
+    #boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:hover,
+    #boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:active,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button *,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button.is-small,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button.is-small:visited,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button.is-small:hover {
+      color: #ffffff !important;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button.is-small {
@@ -625,12 +634,12 @@
       padding: 0 20px;
       font-size: 0.88rem;
       white-space: nowrap;
+      border-radius: 10px !important;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button:hover {
       transform: translateY(-2px);
       opacity: 0.88;
-      color: {{ section.settings.button_text_color }};
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-products {
@@ -640,46 +649,88 @@
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card {
       position: absolute;
-      width: clamp(150px, 13vw, 240px);
-      min-height: clamp(190px, 16vw, 300px);
+      width: clamp(160px, 14vw, 260px);
+      aspect-ratio: 1 / 1;
+      min-height: unset;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 14px;
-      padding: 18px;
-      border-radius: 34px;
+      gap: 10px;
+      padding: clamp(18px, 2vw, 28px);
+      border-radius: 999px;
       background:
-        linear-gradient(
-          135deg,
-          color-mix(in srgb, var(--card-bg) 88%, white),
-          color-mix(in srgb, var(--card-accent) 30%, white)
+        radial-gradient(
+          circle at 32% 24%,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.72) 28%,
+          color-mix(in srgb, var(--card-bg) 86%, white) 58%,
+          color-mix(in srgb, var(--card-accent) 38%, white) 100%
         );
-      box-shadow: 0 24px 80px rgba(17, 17, 17, 0.1);
+      box-shadow:
+        inset 18px 18px 34px rgba(255, 255, 255, 0.46),
+        inset -18px -18px 34px color-mix(in srgb, var(--card-accent) 18%, transparent),
+        0 26px 80px rgba(17, 17, 17, 0.1);
       text-decoration: none;
       color: {{ section.settings.text_color }};
       animation: boka-scroll-float-card-{{ section.id }} 5.8s ease-in-out infinite;
       transition: transform 180ms ease, box-shadow 180ms ease;
+      overflow: visible;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card::before {
+      content: "";
+      position: absolute;
+      top: 16%;
+      left: 22%;
+      width: 22%;
+      height: 14%;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      filter: blur(1px);
+      transform: rotate(-24deg);
+      pointer-events: none;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.52);
+      pointer-events: none;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card img {
-      width: 88%;
-      max-height: 190px;
+      position: relative;
+      z-index: 2;
+      width: 76%;
+      max-height: 72%;
       object-fit: contain;
       display: block;
       transition: opacity 150ms ease, transform 180ms ease;
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card span {
-      font-size: 0.92rem;
+      position: relative;
+      z-index: 2;
+      max-width: 82%;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      font-size: 0.86rem;
       font-weight: var(--heading-font-weight, 700);
       line-height: 1.15;
       text-align: center;
+      backdrop-filter: blur(6px);
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card:hover {
       z-index: 5;
-      box-shadow: 0 30px 90px rgba(17, 17, 17, 0.14);
+      box-shadow:
+        inset 18px 18px 34px rgba(255, 255, 255, 0.58),
+        inset -18px -18px 34px color-mix(in srgb, var(--card-accent) 22%, transparent),
+        0 34px 100px rgba(17, 17, 17, 0.16);
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card:hover img {
@@ -1137,19 +1188,6 @@
       transform: translateY(28px);
       transition: opacity 420ms ease, transform 420ms ease;
     }
-    #boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button,
-#boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:link,
-#boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:visited,
-#boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:hover,
-#boka-collection-scroll-{{ section.id }} a.boka-collection-scroll__button:active,
-#boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button,
-#boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button * {
-  color: #ffffff !important;
-}
-
-#boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button {
-  border-radius: 10px !important;
-}
 
     @media screen and (max-width: 1180px) {
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-inner {
@@ -1228,7 +1266,8 @@
         position: relative;
         inset: auto !important;
         width: 100%;
-        min-height: 190px;
+        aspect-ratio: 1 / 1;
+        min-height: unset;
         rotate: 0deg !important;
       }
 
