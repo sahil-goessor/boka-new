@@ -63,8 +63,82 @@
         "padding_bottom_mobile": 80
       }
     },
+    "product_scroll_character_story_7hgqLy": {
+      "type": "product-scroll-character-story",
+      "blocks": {
+        "flavor_product_i63Gmp": {
+          "type": "flavor_product",
+          "settings": {
+            "product": "blueberry-dragonfruit-n-ha-toothpaste",
+            "scene_label": "Flavor profile",
+            "fallback_quote": "A fresh way to brush every day.",
+            "fallback_accent_color": "#DDEFE6",
+            "fallback_background_color": "#F8FBF7"
+          }
+        },
+        "flavor_product_EpmCYX": {
+          "type": "flavor_product",
+          "settings": {
+            "product": "",
+            "scene_label": "Flavor profile",
+            "fallback_quote": "A fresh way to brush every day.",
+            "fallback_accent_color": "#DDEFE6",
+            "fallback_background_color": "#F8FBF7"
+          }
+        },
+        "flavor_product_YXeXTG": {
+          "type": "flavor_product",
+          "settings": {
+            "product": "",
+            "scene_label": "Flavor profile",
+            "fallback_quote": "A fresh way to brush every day.",
+            "fallback_accent_color": "#DDEFE6",
+            "fallback_background_color": "#F8FBF7"
+          }
+        },
+        "flavor_product_h3nJjN": {
+          "type": "flavor_product",
+          "settings": {
+            "product": "",
+            "scene_label": "Flavor profile",
+            "fallback_quote": "A fresh way to brush every day.",
+            "fallback_accent_color": "#DDEFE6",
+            "fallback_background_color": "#F8FBF7"
+          }
+        },
+        "flavor_product_ytdBdr": {
+          "type": "flavor_product",
+          "settings": {
+            "product": "",
+            "scene_label": "Flavor profile",
+            "fallback_quote": "A fresh way to brush every day.",
+            "fallback_accent_color": "#DDEFE6",
+            "fallback_background_color": "#F8FBF7"
+          }
+        }
+      },
+      "block_order": [
+        "flavor_product_i63Gmp",
+        "flavor_product_EpmCYX",
+        "flavor_product_YXeXTG",
+        "flavor_product_h3nJjN",
+        "flavor_product_ytdBdr"
+      ],
+      "name": "Product scroll character",
+      "settings": {
+        "eyebrow": "Meet the flavors",
+        "heading": "Choose your character.",
+        "subheading": "Each Boka flavor has its own personality, taste profile, and daily routine fit.",
+        "default_background": "#ffffff",
+        "text_color": "#111111",
+        "muted_text_color": "#5F5A52",
+        "button_background": "#111111",
+        "button_text_color": "#FFFFFF"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -75,6 +149,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
@@ -194,6 +269,7 @@
   },
   "order": [
     "e9540f45-142d-4b00-acd5-49caf5c23d70",
+    "product_scroll_character_story_7hgqLy",
     "banner",
     "product-grid",
     "e1c2be8a-c503-489a-b63e-982e50c35a28"
