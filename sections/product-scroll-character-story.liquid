@@ -3,25 +3,28 @@
   For Shopify collection templates.
 
   Flow:
-  1. Hero banner with optional lifestyle/image background
+  1. Hero banner with optional lifestyle background
   2. Collection product list
-  3. One full scroll section per product
+  3. Featured product showcase
+  4. Benefits section
+  5. Review section
+  6. One full scroll section per product
 
   Recommended product metafields:
-  - custom.flavor_scroll_headline        Single line text
-  - custom.flavor_scroll_description     Multi-line text
-  - custom.flavor_scroll_bullets         List of single line text
-  - custom.character_name                Single line text
-  - custom.character_quote               Single line text
-  - custom.character_image               File
-  - custom.character_hover_image         File / GIF / image
-  - custom.flavor_accent_color           Color
-  - custom.flavor_background_color       Color
+  - custom.flavor_scroll_headline
+  - custom.flavor_scroll_description
+  - custom.flavor_scroll_bullets
+  - custom.character_name
+  - custom.character_quote
+  - custom.character_image
+  - custom.character_hover_image
+  - custom.flavor_accent_color
+  - custom.flavor_background_color
 
   Optional collection metafields:
-  - custom.scroll_hero_eyebrow           Single line text
-  - custom.scroll_hero_heading           Single line text
-  - custom.scroll_hero_text              Multi-line text
+  - custom.scroll_hero_eyebrow
+  - custom.scroll_hero_heading
+  - custom.scroll_hero_text
 {% endcomment %}
 
 {% liquid
@@ -34,10 +37,7 @@
 %}
 
 {% if active_collection != blank and active_collection.products_count > 0 %}
-  <section
-    id="boka-collection-scroll-{{ section.id }}"
-    class="boka-collection-scroll"
-  >
+  <section id="boka-collection-scroll-{{ section.id }}" class="boka-collection-scroll">
     <div
       class="boka-collection-scroll__hero"
       {% if section.settings.hero_background_image != blank %}
@@ -59,9 +59,7 @@
       <div class="boka-collection-scroll__hero-inner">
         <div class="boka-collection-scroll__hero-copy">
           {% if hero_eyebrow != blank %}
-            <p class="boka-collection-scroll__eyebrow">
-              {{ hero_eyebrow }}
-            </p>
+            <p class="boka-collection-scroll__eyebrow">{{ hero_eyebrow }}</p>
           {% endif %}
 
           {% if hero_heading != blank %}
@@ -71,16 +69,11 @@
           {% endif %}
 
           {% if hero_text != blank %}
-            <p class="boka-collection-scroll__hero-text">
-              {{ hero_text }}
-            </p>
+            <p class="boka-collection-scroll__hero-text">{{ hero_text }}</p>
           {% endif %}
 
           {% if section.settings.hero_button_label != blank %}
-            <a
-              href="#boka-collection-list-{{ section.id }}"
-              class="boka-collection-scroll__button"
-            >
+            <a href="#boka-collection-list-{{ section.id }}" class="boka-collection-scroll__button">
               {{ section.settings.hero_button_label }}
             </a>
           {% endif %}
@@ -135,21 +128,13 @@
             <a
               href="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
               class="boka-collection-scroll__hero-card is-card-{{ forloop.index }} js-boka-hover-swap"
-              style="
-                --card-accent: {{ accent_color }};
-                --card-bg: {{ background_color }};
-              "
+              style="--card-accent: {{ accent_color }}; --card-bg: {{ background_color }};"
               data-default-src="{{ character_image_url }}"
               data-hover-src="{{ character_hover_image_url }}"
             >
               {% if character_image_url != blank %}
-                <img
-                  src="{{ character_image_url }}"
-                  alt="{{ character_name | escape }}"
-                  loading="lazy"
-                >
+                <img src="{{ character_image_url }}" alt="{{ character_name | escape }}" loading="lazy">
               {% endif %}
-
               <span>{{ character_name }}</span>
             </a>
           {% endfor %}
@@ -163,16 +148,11 @@
       </div>
     </div>
 
-    <div
-      id="boka-collection-list-{{ section.id }}"
-      class="boka-collection-scroll__list-section"
-    >
+    <div id="boka-collection-list-{{ section.id }}" class="boka-collection-scroll__list-section">
       <div class="boka-collection-scroll__list-inner">
         <div class="boka-collection-scroll__list-header">
           {% if section.settings.list_eyebrow != blank %}
-            <p class="boka-collection-scroll__eyebrow">
-              {{ section.settings.list_eyebrow }}
-            </p>
+            <p class="boka-collection-scroll__eyebrow">{{ section.settings.list_eyebrow }}</p>
           {% endif %}
 
           {% if section.settings.list_heading != blank %}
@@ -233,20 +213,13 @@
             <a
               href="#boka-product-scene-{{ section.id }}-{{ forloop.index }}"
               class="boka-collection-scroll__list-card js-boka-hover-swap"
-              style="
-                --list-accent: {{ accent_color }};
-                --list-bg: {{ background_color }};
-              "
+              style="--list-accent: {{ accent_color }}; --list-bg: {{ background_color }};"
               data-default-src="{{ list_image_url }}"
               data-hover-src="{{ list_hover_url }}"
             >
               <div class="boka-collection-scroll__list-card-image">
                 {% if list_image_url != blank %}
-                  <img
-                    src="{{ list_image_url }}"
-                    alt="{{ character_name | escape }}"
-                    loading="lazy"
-                  >
+                  <img src="{{ list_image_url }}" alt="{{ character_name | escape }}" loading="lazy">
                 {% endif %}
               </div>
 
@@ -263,6 +236,242 @@
         </div>
       </div>
     </div>
+
+    {% if section.settings.show_showcase %}
+      <section id="boka-product-showcase-{{ section.id }}" class="boka-collection-scroll__showcase">
+        <div class="boka-collection-scroll__showcase-inner">
+          <div class="boka-collection-scroll__showcase-header">
+            {% if section.settings.showcase_eyebrow != blank %}
+              <p class="boka-collection-scroll__eyebrow">{{ section.settings.showcase_eyebrow }}</p>
+            {% endif %}
+
+            {% if section.settings.showcase_heading != blank %}
+              <h2>{{ section.settings.showcase_heading }}</h2>
+            {% endif %}
+
+            {% if section.settings.showcase_text != blank %}
+              <p>{{ section.settings.showcase_text }}</p>
+            {% endif %}
+          </div>
+
+          <div class="boka-collection-scroll__showcase-grid">
+            <div class="boka-collection-scroll__showcase-tabs" role="tablist" aria-label="Featured products">
+              {% for flavor_product in active_collection.products limit: products_to_show %}
+                {% liquid
+                  assign loop_mod = forloop.index0 | modulo: 2
+
+                  if loop_mod == 0
+                    assign fallback_accent = section.settings.alt_accent_color_1
+                    assign fallback_bg = section.settings.alt_background_color_1
+                  else
+                    assign fallback_accent = section.settings.alt_accent_color_2
+                    assign fallback_bg = section.settings.alt_background_color_2
+                  endif
+
+                  assign headline = flavor_product.metafields.custom.flavor_scroll_headline.value | default: flavor_product.title
+                  assign description = flavor_product.metafields.custom.flavor_scroll_description.value | default: flavor_product.description | strip_html | truncate: 240
+                  assign character_name = flavor_product.metafields.custom.character_name.value | default: flavor_product.title
+                  assign character_quote = flavor_product.metafields.custom.character_quote.value | default: section.settings.showcase_default_note
+                  assign metafield_accent = flavor_product.metafields.custom.flavor_accent_color.value
+                  assign metafield_bg = flavor_product.metafields.custom.flavor_background_color.value
+                  assign character_image = flavor_product.metafields.custom.character_image.value
+                  assign character_hover_image = flavor_product.metafields.custom.character_hover_image.value
+
+                  if section.settings.enable_metafield_color_overrides and metafield_accent != blank
+                    assign accent_color = metafield_accent
+                  else
+                    assign accent_color = fallback_accent
+                  endif
+
+                  if section.settings.enable_metafield_color_overrides and metafield_bg != blank
+                    assign background_color = metafield_bg
+                  else
+                    assign background_color = fallback_bg
+                  endif
+
+                  if character_image != blank
+                    assign showcase_image_url = character_image | image_url: width: 1400
+                  elsif flavor_product.featured_image != blank
+                    assign showcase_image_url = flavor_product.featured_image | image_url: width: 1400
+                  else
+                    assign showcase_image_url = blank
+                  endif
+
+                  if character_hover_image != blank
+                    assign showcase_hover_url = character_hover_image | image_url: width: 1400
+                  else
+                    assign showcase_hover_url = showcase_image_url
+                  endif
+                %}
+
+                <button
+                  type="button"
+                  class="boka-collection-scroll__showcase-tab{% if forloop.first %} is-active{% endif %}"
+                  role="tab"
+                  aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                  data-showcase-index="{{ forloop.index0 }}"
+                  data-title="{{ headline | strip_html | escape }}"
+                  data-description="{{ description | strip_html | escape }}"
+                  data-note="{{ character_quote | strip_html | escape }}"
+                  data-name="{{ character_name | strip_html | escape }}"
+                  data-product-title="{{ flavor_product.title | escape }}"
+                  data-price="{{ flavor_product.price | money | escape }}"
+                  data-url="{{ flavor_product.url }}"
+                  data-default-src="{{ showcase_image_url }}"
+                  data-hover-src="{{ showcase_hover_url }}"
+                  data-accent="{{ accent_color }}"
+                  data-bg="{{ background_color }}"
+                >
+                  <span class="boka-collection-scroll__showcase-tab-dot" style="--tab-color: {{ accent_color }};"></span>
+                  <span class="boka-collection-scroll__showcase-tab-copy">
+                    <strong>{{ character_name }}</strong>
+                    <small>{{ flavor_product.title }}</small>
+                  </span>
+                </button>
+              {% endfor %}
+            </div>
+
+            <div class="boka-collection-scroll__showcase-stage">
+              <div class="boka-collection-scroll__showcase-bg"></div>
+
+              <div class="boka-collection-scroll__showcase-card is-top">
+                <p class="boka-collection-scroll__showcase-kicker">{{ section.settings.showcase_card_top_label }}</p>
+                <strong class="js-showcase-name"></strong>
+                <span class="js-showcase-note"></span>
+              </div>
+
+              <div class="boka-collection-scroll__showcase-image-wrap js-showcase-hover-area">
+                <div class="boka-collection-scroll__showcase-orbit">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <img class="boka-collection-scroll__showcase-image js-showcase-image" src="" alt="" loading="lazy">
+              </div>
+
+              <div class="boka-collection-scroll__showcase-card is-bottom">
+                <p class="boka-collection-scroll__showcase-kicker">{{ section.settings.showcase_card_bottom_label }}</p>
+                <strong class="js-showcase-product-title"></strong>
+                <span class="js-showcase-price"></span>
+                <a class="boka-collection-scroll__button is-small js-showcase-link" href="#">
+                  {{ section.settings.product_button_label }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boka-collection-scroll__curve is-showcase-curve" aria-hidden="true">
+          <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+            <path d="M0,78 C180,132 340,136 520,82 C710,24 890,24 1080,82 C1235,130 1345,118 1440,76 L1440,150 L0,150 Z"></path>
+          </svg>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if section.settings.show_benefits %}
+      <section class="boka-collection-scroll__benefits">
+        <div class="boka-collection-scroll__benefits-inner">
+          <div class="boka-collection-scroll__benefits-header">
+            {% if section.settings.benefits_eyebrow != blank %}
+              <p class="boka-collection-scroll__eyebrow">{{ section.settings.benefits_eyebrow }}</p>
+            {% endif %}
+
+            {% if section.settings.benefits_heading != blank %}
+              <h2>{{ section.settings.benefits_heading }}</h2>
+            {% endif %}
+          </div>
+
+          <div class="boka-collection-scroll__benefits-grid">
+            <div class="boka-collection-scroll__benefit-card">
+              <div class="boka-collection-scroll__benefit-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M32 7c10 0 18 8 18 18 0 14-18 32-18 32S14 39 14 25C14 15 22 7 32 7Z"></path>
+                  <circle cx="32" cy="25" r="7"></circle>
+                </svg>
+              </div>
+              <h3>{{ section.settings.benefit_1_title }}</h3>
+              <p>{{ section.settings.benefit_1_text }}</p>
+            </div>
+
+            <div class="boka-collection-scroll__benefit-card">
+              <div class="boka-collection-scroll__benefit-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M16 18c0-6 5-11 11-11h10c6 0 11 5 11 11v28c0 6-5 11-11 11H27c-6 0-11-5-11-11V18Z"></path>
+                  <path d="M25 21h14M25 31h14M25 41h10"></path>
+                </svg>
+              </div>
+              <h3>{{ section.settings.benefit_2_title }}</h3>
+              <p>{{ section.settings.benefit_2_text }}</p>
+            </div>
+
+            <div class="boka-collection-scroll__benefit-card">
+              <div class="boka-collection-scroll__benefit-icon">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M32 8 52 20v24L32 56 12 44V20L32 8Z"></path>
+                  <path d="M22 32h20M32 22v20"></path>
+                </svg>
+              </div>
+              <h3>{{ section.settings.benefit_3_title }}</h3>
+              <p>{{ section.settings.benefit_3_text }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if section.settings.show_reviews %}
+      <section class="boka-collection-scroll__reviews">
+        <div class="boka-collection-scroll__reviews-inner">
+          <div class="boka-collection-scroll__reviews-header">
+            {% if section.settings.reviews_eyebrow != blank %}
+              <p class="boka-collection-scroll__eyebrow">{{ section.settings.reviews_eyebrow }}</p>
+            {% endif %}
+
+            {% if section.settings.reviews_heading != blank %}
+              <h2>{{ section.settings.reviews_heading }}</h2>
+            {% endif %}
+          </div>
+
+          <div class="boka-collection-scroll__stat-grid">
+            <div class="boka-collection-scroll__stat-card">
+              <strong>{{ section.settings.stat_1_number }}</strong>
+              <span>{{ section.settings.stat_1_label }}</span>
+            </div>
+
+            <div class="boka-collection-scroll__stat-card">
+              <strong>{{ section.settings.stat_2_number }}</strong>
+              <span>{{ section.settings.stat_2_label }}</span>
+            </div>
+
+            <div class="boka-collection-scroll__stat-card">
+              <strong>{{ section.settings.stat_3_number }}</strong>
+              <span>{{ section.settings.stat_3_label }}</span>
+            </div>
+          </div>
+
+          <div class="boka-collection-scroll__review-grid">
+            <div class="boka-collection-scroll__review-card">
+              <div class="boka-collection-scroll__stars">★★★★★</div>
+              <p>“{{ section.settings.review_1_text }}”</p>
+              <span>{{ section.settings.review_1_name }}</span>
+            </div>
+
+            <div class="boka-collection-scroll__review-card">
+              <div class="boka-collection-scroll__stars">★★★★★</div>
+              <p>“{{ section.settings.review_2_text }}”</p>
+              <span>{{ section.settings.review_2_name }}</span>
+            </div>
+
+            <div class="boka-collection-scroll__review-card">
+              <div class="boka-collection-scroll__stars">★★★★★</div>
+              <p>“{{ section.settings.review_3_text }}”</p>
+              <span>{{ section.settings.review_3_name }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endif %}
 
     <div class="boka-collection-scroll__scenes">
       {% for flavor_product in active_collection.products limit: products_to_show %}
@@ -343,11 +552,7 @@
         <article
           id="boka-product-scene-{{ section.id }}-{{ forloop.index }}"
           class="boka-collection-scroll__scene {{ scene_class }}"
-          style="
-            --scene-bg: {{ background_color }};
-            --next-bg: {{ next_bg }};
-            --scene-accent: {{ accent_color }};
-          "
+          style="--scene-bg: {{ background_color }}; --next-bg: {{ next_bg }}; --scene-accent: {{ accent_color }};"
           data-default-src="{{ character_image_url }}"
           data-hover-src="{{ character_hover_image_url }}"
         >
@@ -359,22 +564,16 @@
 
           <div class="boka-collection-scroll__scene-inner">
             <div class="boka-collection-scroll__scene-copy">
-              <p class="boka-collection-scroll__eyebrow">
-                {{ section.settings.scene_card_label }}
-              </p>
+              <p class="boka-collection-scroll__eyebrow">{{ section.settings.scene_card_label }}</p>
 
               <h2>{{ headline }}</h2>
 
               {% if description != blank %}
-                <p class="boka-collection-scroll__description">
-                  {{ description }}
-                </p>
+                <p class="boka-collection-scroll__description">{{ description }}</p>
               {% endif %}
 
               {% if character_quote != blank %}
-                <p class="boka-collection-scroll__quote">
-                  {{ character_quote }}
-                </p>
+                <p class="boka-collection-scroll__quote">{{ character_quote }}</p>
               {% endif %}
 
               {% if bullets != blank %}
@@ -485,6 +684,9 @@
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero,
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-section,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__reviews,
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene {
       width: 100vw;
       margin-left: calc(50% - 50vw);
@@ -530,16 +732,8 @@
           rgba(255, 246, 244, var(--hero-overlay-opacity)) 62%,
           rgba(255, 246, 244, 0.12) 100%
         ),
-        radial-gradient(
-          circle at 18% 22%,
-          rgba(255, 255, 255, 0.72),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 80% 68%,
-          rgba(255, 158, 176, 0.24),
-          transparent 34%
-        );
+        radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.72), transparent 28%),
+        radial-gradient(circle at 80% 68%, rgba(255, 158, 176, 0.24), transparent 34%);
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-bg,
@@ -600,17 +794,9 @@
     }
 
     @keyframes boka-scroll-blob-{{ section.id }} {
-      0% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
-
-      50% {
-        transform: translateY(-22px) rotate(5deg) scale(1.04);
-      }
-
-      100% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
+      0% { transform: translateY(0) rotate(0deg) scale(1); }
+      50% { transform: translateY(-22px) rotate(5deg) scale(1.04); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-inner {
@@ -841,17 +1027,9 @@
     }
 
     @keyframes boka-scroll-float-card-{{ section.id }} {
-      0% {
-        translate: 0 0;
-      }
-
-      50% {
-        translate: 0 -18px;
-      }
-
-      100% {
-        translate: 0 0;
-      }
+      0% { translate: 0 0; }
+      50% { translate: 0 -18px; }
+      100% { translate: 0 0; }
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__curve {
@@ -986,6 +1164,417 @@
       color: {{ section.settings.text_color }};
       font-size: 0.9rem;
       line-height: 1.2;
+      font-weight: var(--heading-font-weight, 700);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase {
+      position: relative;
+      background: {{ section.settings.showcase_background }};
+      color: {{ section.settings.text_color }};
+      padding: clamp(70px, 10vw, 150px) 0 clamp(150px, 12vw, 220px);
+      overflow: hidden;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-inner {
+      width: min(1380px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-header {
+      max-width: 780px;
+      margin: 0 auto clamp(38px, 6vw, 76px);
+      text-align: center;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-header h2 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6.5vw, 7.6rem);
+      line-height: 0.88;
+      letter-spacing: -0.07em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-header > p:not(.boka-collection-scroll__eyebrow) {
+      margin: 18px auto 0;
+      max-width: 640px;
+      color: {{ section.settings.muted_text_color }};
+      font-size: clamp(1rem, 1.3vw, 1.18rem);
+      line-height: 1.55;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr);
+      gap: clamp(28px, 6vw, 96px);
+      align-items: center;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tabs {
+      display: grid;
+      gap: 12px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 18px 20px;
+      border: 0;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.6);
+      color: {{ section.settings.text_color }};
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 14px 40px rgba(17, 17, 17, 0.05);
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab:hover,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab.is-active {
+      transform: translateX(6px);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 18px 54px rgba(17, 17, 17, 0.08);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: var(--tab-color);
+      box-shadow: 0 0 0 7px color-mix(in srgb, var(--tab-color) 20%, transparent);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab-copy {
+      display: grid;
+      gap: 5px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab-copy strong {
+      font-family: var(--heading-font-family, var(--text-font-family, inherit));
+      font-weight: var(--heading-font-weight, 700);
+      font-size: clamp(1.35rem, 2.2vw, 2.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab-copy small {
+      color: {{ section.settings.muted_text_color }};
+      font-size: 0.92rem;
+      line-height: 1.25;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-stage {
+      position: relative;
+      min-height: 660px;
+      display: grid;
+      place-items: center;
+      border-radius: 52px;
+      overflow: hidden;
+      background: var(--showcase-bg, {{ section.settings.alt_background_color_1 }});
+      box-shadow: 0 28px 100px rgba(17, 17, 17, 0.08);
+      transition: background 260ms ease;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 72% 18%, color-mix(in srgb, var(--showcase-accent, {{ section.settings.alt_accent_color_1 }}) 38%, white), transparent 34%),
+        radial-gradient(circle at 14% 82%, rgba(255,255,255,0.74), transparent 32%);
+      pointer-events: none;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-image-wrap {
+      position: relative;
+      z-index: 2;
+      width: min(78%, 560px);
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-orbit {
+      position: absolute;
+      inset: 6%;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--showcase-accent, {{ section.settings.alt_accent_color_1 }}) 24%, white);
+      opacity: 0.82;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-orbit span {
+      position: absolute;
+      display: block;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.76);
+      animation: boka-showcase-orbit-{{ section.id }} 6s ease-in-out infinite;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-orbit span:nth-child(1) {
+      width: 70px;
+      height: 70px;
+      left: 8%;
+      top: 20%;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-orbit span:nth-child(2) {
+      width: 46px;
+      height: 46px;
+      right: 14%;
+      top: 12%;
+      animation-delay: -2s;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-orbit span:nth-child(3) {
+      width: 58px;
+      height: 58px;
+      right: 10%;
+      bottom: 18%;
+      animation-delay: -4s;
+    }
+
+    @keyframes boka-showcase-orbit-{{ section.id }} {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-12px) scale(1.05); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-image {
+      position: relative;
+      z-index: 2;
+      width: min(88%, 520px);
+      max-height: 580px;
+      object-fit: contain;
+      display: block;
+      transition: opacity 160ms ease, transform 260ms ease;
+      filter: drop-shadow(0 24px 34px rgba(17, 17, 17, 0.12));
+      animation: boka-showcase-float-{{ section.id }} 4.8s ease-in-out infinite;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-image-wrap:hover .boka-collection-scroll__showcase-image {
+      transform: translateY(-8px) scale(1.035);
+    }
+
+    @keyframes boka-showcase-float-{{ section.id }} {
+      0% { translate: 0 0; rotate: 0deg; }
+      50% { translate: 0 -12px; rotate: 1.2deg; }
+      100% { translate: 0 0; rotate: 0deg; }
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card {
+      position: absolute;
+      z-index: 4;
+      width: min(330px, calc(100% - 48px));
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 18px 60px rgba(17, 17, 17, 0.09);
+      backdrop-filter: blur(12px);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card.is-top {
+      top: 34px;
+      left: 34px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card.is-bottom {
+      right: 34px;
+      bottom: 34px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-kicker {
+      margin: 0 0 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-size: 0.72rem;
+      font-weight: var(--heading-font-weight, 700);
+      color: {{ section.settings.muted_text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card strong {
+      display: block;
+      font-family: var(--heading-font-family, var(--text-font-family, inherit));
+      font-weight: var(--heading-font-weight, 700);
+      font-size: clamp(1.3rem, 2vw, 2rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card span {
+      display: block;
+      margin-top: 8px;
+      color: {{ section.settings.muted_text_color }};
+      line-height: 1.35;
+      font-size: 0.95rem;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card .boka-collection-scroll__button {
+      margin-top: 14px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits {
+      position: relative;
+      background: {{ section.settings.benefits_background }};
+      color: {{ section.settings.benefits_text_color }};
+      padding: clamp(70px, 10vw, 150px) 0;
+      overflow: hidden;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      left: -160px;
+      top: -220px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-inner,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__reviews-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-header,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__reviews-header {
+      max-width: 780px;
+      margin: 0 auto clamp(38px, 6vw, 76px);
+      text-align: center;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-header h2,
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__reviews-header h2 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 6.8rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits .boka-collection-scroll__eyebrow {
+      color: color-mix(in srgb, {{ section.settings.benefits_text_color }} 70%, transparent);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(22px, 4vw, 70px);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefit-card {
+      text-align: center;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefit-icon {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 24px;
+      display: grid;
+      place-items: center;
+      color: {{ section.settings.benefits_icon_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefit-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefit-card h3 {
+      margin: 0;
+      font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefit-card p {
+      margin: 16px auto 0;
+      max-width: 320px;
+      color: color-mix(in srgb, {{ section.settings.benefits_text_color }} 72%, transparent);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__reviews {
+      position: relative;
+      background: {{ section.settings.reviews_background }};
+      padding: clamp(70px, 10vw, 150px) 0;
+      color: {{ section.settings.text_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stat-card {
+      min-height: 170px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 20px 70px rgba(17, 17, 17, 0.07);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stat-card strong {
+      display: block;
+      font-family: var(--heading-font-family, var(--text-font-family, inherit));
+      font-size: clamp(2rem, 4.4vw, 4.8rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stat-card span {
+      display: block;
+      margin-top: 10px;
+      color: {{ section.settings.muted_text_color }};
+      line-height: 1.35;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__review-card {
+      min-height: 240px;
+      padding: 28px;
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.86), rgba(255,255,255,0.58));
+      box-shadow: 0 20px 70px rgba(17, 17, 17, 0.07);
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stars {
+      letter-spacing: 0.12em;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+      color: {{ section.settings.review_star_color }};
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__review-card p {
+      margin: 0;
+      font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+      line-height: 1.5;
+    }
+
+    #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__review-card span {
+      display: block;
+      margin-top: 20px;
+      color: {{ section.settings.muted_text_color }};
       font-weight: var(--heading-font-weight, 700);
     }
 
@@ -1191,17 +1780,9 @@
     }
 
     @keyframes boka-scroll-orbit-{{ section.id }} {
-      0% {
-        transform: translateY(0) scale(1);
-      }
-
-      50% {
-        transform: translateY(-12px) scale(1.05);
-      }
-
-      100% {
-        transform: translateY(0) scale(1);
-      }
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-12px) scale(1.05); }
+      100% { transform: translateY(0) scale(1); }
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__character-image {
@@ -1221,20 +1802,9 @@
     }
 
     @keyframes boka-scroll-character-{{ section.id }} {
-      0% {
-        translate: 0 0;
-        rotate: 0deg;
-      }
-
-      50% {
-        translate: 0 -12px;
-        rotate: 1.4deg;
-      }
-
-      100% {
-        translate: 0 0;
-        rotate: 0deg;
-      }
+      0% { translate: 0 0; rotate: 0deg; }
+      50% { translate: 0 -12px; rotate: 1.4deg; }
+      100% { translate: 0 0; rotate: 0deg; }
     }
 
     #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene .is-scene-curve {
@@ -1283,12 +1853,20 @@
         min-height: 540px;
       }
 
-      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-grid,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stat-grid,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__review-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-grid,
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-inner {
         grid-template-columns: 1fr;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-stage {
+        min-height: 600px;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene.is-odd .boka-collection-scroll__scene-copy,
@@ -1321,49 +1899,141 @@
     @media screen and (max-width: 800px) {
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero {
         min-height: auto;
+        align-items: flex-start;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-photo {
+        background-position: center top;
+        opacity: 0.72;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-photo-overlay {
         background:
           linear-gradient(
             180deg,
-            rgba(255, 246, 244, 0.9) 0%,
-            rgba(255, 246, 244, 0.68) 48%,
-            rgba(255, 246, 244, 0.22) 100%
+            rgba(255, 246, 244, 0.94) 0%,
+            rgba(255, 246, 244, 0.82) 38%,
+            rgba(255, 246, 244, 0.46) 72%,
+            rgba(255, 246, 244, 0.2) 100%
           );
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-inner {
-        width: min(100%, calc(100% - 32px));
-        padding: 54px 0 120px;
+        width: 100%;
+        display: block;
+        padding: 28px 0 72px;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-copy {
+        width: calc(100% - 32px);
+        margin: 0 auto 28px;
+        padding: 30px 20px;
         border-radius: 28px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: 0 18px 60px rgba(17, 17, 17, 0.06);
+        backdrop-filter: blur(10px);
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-copy h1 {
+        font-size: clamp(2.85rem, 13vw, 4.25rem);
+        line-height: 0.86;
+        letter-spacing: -0.075em;
+        max-width: 340px;
+        margin-inline: auto;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-text {
+        max-width: 300px;
+        margin: 18px auto 0;
+        font-size: 0.98rem;
+        line-height: 1.45;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__button {
+        min-height: 48px;
+        margin-top: 24px;
+        padding: 0 22px;
+        border-radius: 10px !important;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-products {
+        width: 100%;
         min-height: auto;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: flex;
         gap: 14px;
+        overflow-x: auto;
+        padding: 4px 16px 18px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-products::-webkit-scrollbar {
+        display: none;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card {
         position: relative;
         inset: auto !important;
-        width: 100%;
+        flex: 0 0 168px;
+        width: 168px;
         aspect-ratio: 1 / 1;
         min-height: unset;
         rotate: 0deg !important;
+        scroll-snap-align: center;
+        animation: none;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card img {
+        width: 68%;
+        max-height: 62%;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__hero-card span {
+        max-width: 88%;
+        font-size: 0.78rem;
+        padding: 6px 9px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob {
+        opacity: 0.28;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-one {
+        width: 260px;
+        height: 260px;
+        left: -120px;
+        top: 12%;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-two {
+        width: 300px;
+        height: 300px;
+        right: -160px;
+        bottom: 8%;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-three,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__blob.is-four {
+        display: none;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__curve {
+        height: 88px;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-inner,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-inner,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-inner,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__reviews-inner,
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene-inner {
         width: min(100%, calc(100% - 32px));
       }
 
-      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list {
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__product-list,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__benefits-grid,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__stat-grid,
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__review-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1373,6 +2043,55 @@
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__list-card-image {
         min-height: 220px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase {
+        padding: 64px 0 132px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tabs {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding: 2px 2px 16px;
+        scroll-snap-type: x mandatory;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-tab {
+        flex: 0 0 230px;
+        scroll-snap-align: center;
+        transform: none !important;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-stage {
+        min-height: 560px;
+        border-radius: 34px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card {
+        width: calc(100% - 32px);
+        left: 16px !important;
+        right: 16px !important;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card.is-top {
+        top: 16px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-card.is-bottom {
+        bottom: 16px;
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-image-wrap {
+        width: min(86%, 360px);
+      }
+
+      #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__showcase-image {
+        max-height: 320px;
       }
 
       #boka-collection-scroll-{{ section.id }} .boka-collection-scroll__scene {
@@ -1452,6 +2171,72 @@
           swapImage(image, defaultSrc);
         });
       });
+
+      const showcase = section.querySelector('.boka-collection-scroll__showcase');
+      if (showcase) {
+        const showcaseStage = showcase.querySelector('.boka-collection-scroll__showcase-stage');
+        const showcaseImage = showcase.querySelector('.js-showcase-image');
+        const showcaseHoverArea = showcase.querySelector('.js-showcase-hover-area');
+        const showcaseTabs = Array.from(showcase.querySelectorAll('.boka-collection-scroll__showcase-tab'));
+        const showcaseName = showcase.querySelector('.js-showcase-name');
+        const showcaseNote = showcase.querySelector('.js-showcase-note');
+        const showcaseProductTitle = showcase.querySelector('.js-showcase-product-title');
+        const showcasePrice = showcase.querySelector('.js-showcase-price');
+        const showcaseLink = showcase.querySelector('.js-showcase-link');
+
+        let showcaseDefaultSrc = '';
+        let showcaseHoverSrc = '';
+
+        const setShowcase = (tab) => {
+          if (!tab || !showcaseStage || !showcaseImage) return;
+
+          showcaseTabs.forEach((item) => {
+            const isActive = item === tab;
+            item.classList.toggle('is-active', isActive);
+            item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          const data = tab.dataset;
+
+          showcaseDefaultSrc = data.defaultSrc || '';
+          showcaseHoverSrc = data.hoverSrc || showcaseDefaultSrc;
+
+          showcaseStage.style.setProperty('--showcase-bg', data.bg || '#FFF4F6');
+          showcaseStage.style.setProperty('--showcase-accent', data.accent || '#F8B8C9');
+
+          if (showcaseName) showcaseName.textContent = data.name || '';
+          if (showcaseNote) showcaseNote.textContent = data.note || '';
+          if (showcaseProductTitle) showcaseProductTitle.textContent = data.productTitle || '';
+          if (showcasePrice) showcasePrice.textContent = data.price || '';
+          if (showcaseLink) showcaseLink.setAttribute('href', data.url || '#');
+
+          swapImage(showcaseImage, showcaseDefaultSrc);
+          showcaseImage.setAttribute('alt', data.name || data.productTitle || '');
+        };
+
+        if (showcaseTabs[0]) {
+          setShowcase(showcaseTabs[0]);
+        }
+
+        showcaseTabs.forEach((tab) => {
+          tab.addEventListener('click', () => setShowcase(tab));
+          tab.addEventListener('mouseenter', () => {
+            if (window.innerWidth < 800) return;
+            setShowcase(tab);
+          });
+        });
+
+        if (showcaseHoverArea && showcaseImage) {
+          showcaseHoverArea.addEventListener('mouseenter', () => {
+            if (window.innerWidth < 800) return;
+            swapImage(showcaseImage, showcaseHoverSrc);
+          });
+
+          showcaseHoverArea.addEventListener('mouseleave', () => {
+            swapImage(showcaseImage, showcaseDefaultSrc);
+          });
+        }
+      }
 
       const scenes = Array.from(section.querySelectorAll('.boka-collection-scroll__scene'));
 
@@ -1642,6 +2427,241 @@
       "id": "list_background",
       "label": "List background",
       "default": "#FFF4F6"
+    },
+    {
+      "type": "header",
+      "content": "Product showcase"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_showcase",
+      "label": "Show product showcase",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "showcase_eyebrow",
+      "label": "Showcase eyebrow",
+      "default": "Explore the lineup"
+    },
+    {
+      "type": "text",
+      "id": "showcase_heading",
+      "label": "Showcase heading",
+      "default": "Pick a flavor, meet the character."
+    },
+    {
+      "type": "textarea",
+      "id": "showcase_text",
+      "label": "Showcase text",
+      "default": "Tap through each product to see its personality, flavor profile, and routine fit."
+    },
+    {
+      "type": "text",
+      "id": "showcase_card_top_label",
+      "label": "Top card label",
+      "default": "Character"
+    },
+    {
+      "type": "text",
+      "id": "showcase_card_bottom_label",
+      "label": "Bottom card label",
+      "default": "Featured product"
+    },
+    {
+      "type": "text",
+      "id": "showcase_default_note",
+      "label": "Fallback showcase note",
+      "default": "A fresh way to brush every day."
+    },
+    {
+      "type": "color",
+      "id": "showcase_background",
+      "label": "Showcase background",
+      "default": "#FFF4F6"
+    },
+    {
+      "type": "header",
+      "content": "Benefits section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_benefits",
+      "label": "Show benefits section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "benefits_eyebrow",
+      "label": "Benefits eyebrow",
+      "default": "Why kids love it"
+    },
+    {
+      "type": "text",
+      "id": "benefits_heading",
+      "label": "Benefits heading",
+      "default": "Brushing benefits made fun."
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Benefit 1 title",
+      "default": "Made for daily brushing"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_text",
+      "label": "Benefit 1 text",
+      "default": "Playful flavors help make the everyday routine feel easier and more exciting."
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Benefit 2 title",
+      "default": "Powered by n-Ha"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_text",
+      "label": "Benefit 2 text",
+      "default": "Formula storytelling can highlight nano-hydroxyapatite in a simple, parent-friendly way."
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Benefit 3 title",
+      "default": "Flavor personalities"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_text",
+      "label": "Benefit 3 text",
+      "default": "Each flavor has its own character, making it easier for kids to find their favorite."
+    },
+    {
+      "type": "color",
+      "id": "benefits_background",
+      "label": "Benefits background",
+      "default": "#08083F"
+    },
+    {
+      "type": "color",
+      "id": "benefits_text_color",
+      "label": "Benefits text color",
+      "default": "#B9B8FF"
+    },
+    {
+      "type": "color",
+      "id": "benefits_icon_color",
+      "label": "Benefits icon color",
+      "default": "#A7A6FF"
+    },
+    {
+      "type": "header",
+      "content": "Reviews section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show reviews section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "reviews_eyebrow",
+      "label": "Reviews eyebrow",
+      "default": "Social proof"
+    },
+    {
+      "type": "text",
+      "id": "reviews_heading",
+      "label": "Reviews heading",
+      "default": "Loved by families."
+    },
+    {
+      "type": "text",
+      "id": "stat_1_number",
+      "label": "Stat 1 number",
+      "default": "4.8★"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_label",
+      "label": "Stat 1 label",
+      "default": "Average rating"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_number",
+      "label": "Stat 2 number",
+      "default": "100k+"
+    },
+    {
+      "type": "text",
+      "id": "stat 2 label",
+      "id": "stat_2_label",
+      "label": "Stat 2 label",
+      "default": "Happy brushers"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_number",
+      "label": "Stat 3 number",
+      "default": "5"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_label",
+      "label": "Stat 3 label",
+      "default": "Flavor personalities"
+    },
+    {
+      "type": "textarea",
+      "id": "review_1_text",
+      "label": "Review 1 text",
+      "default": "My kids actually look forward to brushing now."
+    },
+    {
+      "type": "text",
+      "id": "review_1_name",
+      "label": "Review 1 name",
+      "default": "Boka customer"
+    },
+    {
+      "type": "textarea",
+      "id": "review_2_text",
+      "label": "Review 2 text",
+      "default": "The flavors are fun without feeling too sweet."
+    },
+    {
+      "type": "text",
+      "id": "review_2_name",
+      "label": "Review 2 name",
+      "default": "Parent review"
+    },
+    {
+      "type": "textarea",
+      "id": "review_3_text",
+      "label": "Review 3 text",
+      "default": "The characters make the whole routine feel playful."
+    },
+    {
+      "type": "text",
+      "id": "review_3_name",
+      "label": "Review 3 name",
+      "default": "Verified buyer"
+    },
+    {
+      "type": "color",
+      "id": "reviews_background",
+      "label": "Reviews background",
+      "default": "#FFF4F6"
+    },
+    {
+      "type": "color",
+      "id": "review_star_color",
+      "label": "Review star color",
+      "default": "#FF8FA8"
     },
     {
       "type": "header",
