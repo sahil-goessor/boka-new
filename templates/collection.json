@@ -193,10 +193,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n  <h2 class=\"boka-section-heading\">FAQs</h2>\n  {{ product.metafields.custom.new_faq }}\n{% endif %}",
+        "custom_liquid": "{% if collection.metafields.custom.new_faq != blank %}\n  <h2 class=\"boka-section-heading\">FAQs</h2>\n  {{ collection.metafields.custom.new_faq }}\n{% endif %}",
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 52,
         "padding_top_mobile": 36,
