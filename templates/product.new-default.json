@@ -96,6 +96,13 @@
             "page": ""
           }
         },
+        "custom_liquid_tPLiew": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{%- assign product_description = product.description -%}\n{%- assign how_to_use_description = product.metafields.custom.new_how_to_use -%}\n{%- assign ingredients_description = product.metafields.custom.new_ingredients_list -%}\n\n{%- if product_description != blank or how_to_use_description != blank or ingredients_description != blank -%}\n  <div class=\"boka-product-metafield-accordions\">\n\n    {%- if product_description != blank -%}\n      <details class=\"boka-product-metafield-accordions__item\">\n        <summary>Description</summary>\n        <div class=\"boka-product-metafield-accordions__content\">\n          {{ product_description }}\n        </div>\n      </details>\n    {%- endif -%}\n\n    {%- if how_to_use_description != blank -%}\n      <details class=\"boka-product-metafield-accordions__item\">\n        <summary>How to use</summary>\n        <div class=\"boka-product-metafield-accordions__content\">\n          {{ how_to_use_description.value }}\n        </div>\n      </details>\n    {%- endif -%}\n\n    {%- if ingredients_description != blank -%}\n      <details class=\"boka-product-metafield-accordions__item\">\n        <summary>Ingredients</summary>\n        <div class=\"boka-product-metafield-accordions__content\">\n          {{ ingredients_description.value }}\n        </div>\n      </details>\n    {%- endif -%}\n\n  </div>\n\n  <style>\n    .boka-product-metafield-accordions {\n      border-top: 1px solid rgba(34, 39, 33, 0.14);\n    }\n\n    .boka-product-metafield-accordions__item {\n      border-bottom: 1px solid rgba(34, 39, 33, 0.14);\n    }\n\n    .boka-product-metafield-accordions__item summary {\n      list-style: none;\n      cursor: pointer;\n      padding: 18px 0;\n      font-weight: 700;\n      color: #222721;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .boka-product-metafield-accordions__item summary::-webkit-details-marker {\n      display: none;\n    }\n\n    .boka-product-metafield-accordions__item summary::after {\n      content: \"+\";\n      font-size: 20px;\n      line-height: 1;\n    }\n\n    .boka-product-metafield-accordions__item[open] summary::after {\n      content: \"−\";\n    }\n\n    .boka-product-metafield-accordions__content {\n      padding: 0 0 18px;\n      color: #222721;\n      font-size: 14px;\n      line-height: 1.55;\n    }\n\n    .boka-product-metafield-accordions__content p {\n      margin: 0 0 12px;\n    }\n\n    .boka-product-metafield-accordions__content p:last-child {\n      margin-bottom: 0;\n    }\n  </style>\n{%- endif -%}"
+          }
+        },
         "icon_with_text_V6zWW9": {
           "type": "icon-with-text",
           "name": "Claims 3 & 4",
@@ -167,6 +174,7 @@
         "description",
         "collapsible_tab_9Ri3zn",
         "collapsible_tab_NnPN3E",
+        "custom_liquid_tPLiew",
         "icon_with_text_V6zWW9",
         "af067451-b82f-4114-8006-9a547e9c2157",
         "8f4ac970-3a15-4b7d-823a-82ce6560b8df",
