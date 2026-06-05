@@ -402,7 +402,13 @@
         {%- endif -%}
         {%- if section.settings.show_walmart_banner -%}
   
-          <a class="boka-walmart" {% if section.settings.walmart_url != blank %}href="{{ section.settings.walmart_url }}" rel="noopener"{% endif %} >
+          <a class="boka-walmart"
+              {%- if section.settings.walmart_section_id != blank -%}
+                href="#{{ section.settings.walmart_section_id }}"
+              {%- elsif section.settings.walmart_url != blank -%}
+                href="{{ section.settings.walmart_url }}" rel="noopener" target="_blank"
+              {%- endif -%}
+            >
             <!-- Walmart spark -->
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
               <path d="M12 2.4a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0V3.5A1.1 1.1 0 0 1 12 2.4Z" fill="#FFC220"/>
@@ -418,7 +424,7 @@
               <p class="boka-walmart-eyebrow">Also available in-store</p>
               <p class="boka-walmart-label">{{ section.settings.walmart_text }}</p>
             </div>
-            {%- if section.settings.walmart_url != blank -%}
+            {%- if section.settings.walmart_section_id != blank or section.settings.walmart_url != blank -%}
               <svg class="boka-walmart-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -891,6 +897,12 @@
       "id": "walmart_url",
       "label": "Walmart Product URL",
       "info": "Optional — if filled, the banner becomes a clickable link"
+    },
+    {
+      "type": "text",
+      "id": "walmart_section_id",
+      "label": "Scroll-to Section ID (on-page anchor)",
+      "info": "Enter the HTML id of the section to scroll to on this page, e.g. shopify-section-template--123. If filled, this takes priority over the Walmart URL above."
     },
     {
       "type": "color",
