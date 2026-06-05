@@ -202,6 +202,20 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "custom_liquid_8R6pBT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if collection.metafields.custom.new_description_long != blank %}\n<h2 class=\"boka-section-heading\">The Boka Difference</h2>\n<div class=\"boka-benefits\">\n  {{ collection.metafields.custom.new_description_long }}\n  </div>\n{% endif %}",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -209,6 +223,7 @@
     "product-grid",
     "collapsible_content_4J9xbR",
     "collapsible_content_TQFrGX",
-    "custom_liquid_PrzrFc"
+    "custom_liquid_PrzrFc",
+    "custom_liquid_8R6pBT"
   ]
 }
