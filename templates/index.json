@@ -101,18 +101,18 @@
         "image_RJU7Ux": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Cherry_Blossom_Main_Banner_Desktop.webp",
-            "image_mobile": "shopify://shop_images/Cherry_Blossom_Main_Banner_Mobile.webp",
-            "heading": "Back By <em>Popular Demand</em> </span>",
-            "image_link": "shopify://products/cherry-blossom-n-ha-toothpaste",
-            "heading_font_size": 46,
-            "heading_font_size_mobile": 30,
+            "image": "shopify://shop_images/Renew_Mouthwash_HP_Desktop.webp",
+            "image_mobile": "shopify://shop_images/Renew_Mouthwash_HP_Mobile.webp",
+            "heading": "A Better Formula. <em>A Better Bottle.</em>",
+            "image_link": "shopify://products/boka-renew-liquid-mouthwash",
+            "heading_font_size": 40,
+            "heading_font_size_mobile": 22,
             "heading_tag": "default",
-            "subheading": "Cherry Blossom  n-Ha Toothpaste is here to stay. Enjoy spring’s best flavor, forever.",
+            "subheading": "The same clean, alcohol-free mouthwash you love. Now with xylitol, a mess-free pour, and a bottle that’s kinder to the planet.",
             "subheading_font_size": 18,
-            "subheading_font_size_mobile": 17,
+            "subheading_font_size_mobile": 15,
             "button_label": "SHOP NOW",
-            "link": "shopify://products/cherry-blossom-n-ha-toothpaste",
+            "link": "shopify://products/boka-renew-liquid-mouthwash",
             "button_style_secondary": false,
             "button_label2": "",
             "link2": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
@@ -131,7 +131,7 @@
             "button_foreground_color_mobile": "#ffffff",
             "bottom_text_background_color": "#000000",
             "bottom_text_foreground_color": "#000000",
-            "text_alignment_mobile": "center",
+            "text_alignment_mobile": "left",
             "mobile_content_position": "top"
           }
         }
