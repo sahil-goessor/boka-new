@@ -205,7 +205,7 @@
         "process_item_3": {
           "type": "process_item",
           "settings": {
-            "title": "Choose your sample flavors",
+            "title": "Receive your samples",
             "text": "Give patients a low-friction way to try fluoride-free n-Ha toothpaste before they commit to a new daily routine."
           }
         },
@@ -401,7 +401,7 @@
         "commission_heading": "Get access to exclusive B2B pricing and save more as your practice grows.",
         "commission_text": "Boka Dental Pro accounts get access to exclusive B2B pricing on qualifying products, with discount tiers designed to reward larger qualifying orders and ongoing professional use. Once approved, your Dental Pro pricing is based on your account type, order volume, and program eligibility.",
         "b2b_kicker": "Practice benefits",
-        "b2b_heading": "How Boka Dental Pros Works.",
+        "b2b_heading": "How Boka Dental Pros Works",
         "b2b_text": "",
         "b2b_primary_label": "Apply now",
         "b2b_primary_link": "#signup",
