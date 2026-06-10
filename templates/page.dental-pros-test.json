@@ -365,7 +365,7 @@
         ".dp-subline {display: block; margin-top: 28px; max-width: 520px; font-size: clamp(34px, 5vw, 64px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 400;}"
       ],
       "settings": {
-        "hero_kicker": "Boka Dental Pros",
+        "hero_kicker": "",
         "hero_heading": "<span class=\"dp-headline-main\">\n  Boka Dental Pros</span>",
         "hero_text": "You’re likely seeing more patients asking for alternatives to fluoride. The Dental Pros Program makes it easy for hygienists and dental professionals to confidently introduce Boka to those patients, while unlocking exclusive practice discounts, complimentary samples, and access to a community of like-minded professionals.<strong> Ask for your samples now!</strong>",
         "hero_image": "shopify://shop_images/81BTsIMEbTL._AC_SL1500.jpg",
