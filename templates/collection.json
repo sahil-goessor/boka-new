@@ -15,8 +15,8 @@
         ".collection-hero__description {max-width: 100%;}"
       ],
       "settings": {
-        "show_collection_description": false,
-        "show_collection_image": false,
+        "show_collection_description": true,
+        "show_collection_image": true,
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
         "custom_text_color": "#ffffff"
@@ -210,7 +210,7 @@
         "custom_liquid": "{% if collection.metafields.custom.new_description_long != blank %}\n<h2 class=\"boka-section-heading\">The Boka Difference</h2>\n<div class=\"boka-benefits\">\n  {{ collection.metafields.custom.new_description_long }}\n  </div>\n{% endif %}",
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
-        "custom_text_color": "#FFFFFF",
+        "custom_text_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 52,
         "padding_top_mobile": 36,
