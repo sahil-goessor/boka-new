@@ -152,14 +152,6 @@
             "image_ratio": "square",
             "enable_quick_add": true
           }
-        },
-        "custom_liquid_DTihCy": {
-          "type": "custom_liquid",
-          "name": "New Ingredients Metafield ",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "{% assign ingredients = product.metafields.custom.new_ingredients_list.value %}\n\n{% if ingredients != blank %}\n  <div class=\"boka-product-accordion\">\n    <details class=\"boka-product-accordion__item\" open>\n      <summary class=\"boka-product-accordion__summary\">\n        <span>Ingredients</span>\n        <span class=\"boka-product-accordion__icon\" aria-hidden=\"true\">⌃</span>\n      </summary>\n\n      <div class=\"boka-product-accordion__content\">\n        <p class=\"boka-ingredients\">\n          {{ ingredients }}\n        </p>\n      </div>\n    </details>\n  </div>\n{% endif %}"
-          }
         }
       },
       "block_order": [
@@ -179,8 +171,7 @@
         "custom_liquid_tPLiew",
         "icon_with_text_V6zWW9",
         "af067451-b82f-4114-8006-9a547e9c2157",
-        "8f4ac970-3a15-4b7d-823a-82ce6560b8df",
-        "custom_liquid_DTihCy"
+        "8f4ac970-3a15-4b7d-823a-82ce6560b8df"
       ],
       "custom_css": [
         "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}",
