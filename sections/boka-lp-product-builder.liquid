@@ -18,15 +18,15 @@
           {% endif %}
 
           {% if lp_product.featured_image != blank %}
-  {{
-    lp_product.featured_image
-    | image_url: width: 1600
-    | image_tag:
-      loading: 'eager',
-      fetchpriority: 'high',
-      alt: lp_product.featured_image.alt | default: lp_product.title
-  }}
-{% elsif section.settings.hero_image != blank %}
+            {{
+              lp_product.featured_image
+              | image_url: width: 1600
+              | image_tag:
+                loading: 'eager',
+                fetchpriority: 'high',
+                alt: lp_product.featured_image.alt | default: lp_product.title
+            }}
+          {% elsif section.settings.hero_image != blank %}
             {{
               section.settings.hero_image
               | image_url: width: 1600
