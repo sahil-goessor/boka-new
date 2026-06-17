@@ -8,6 +8,18 @@
   endif
 %}
 
+<style>
+  #boka-product-builder-{{ section.id }} {
+    padding-top: 60px;
+  }
+
+  @media screen and (max-width: 749px) {
+    #boka-product-builder-{{ section.id }} {
+      padding-top: 30px;
+    }
+  }
+</style>
+
 <section id="boka-product-builder-{{ section.id }}" class="boka-lp boka-lp--starter-offer" data-section-id="{{ section.id }}">
 <div class="boka-lp__hero" id="boka-buybox-{{ section.id }}">
     <div class="boka-lp__gallery-wrap">
