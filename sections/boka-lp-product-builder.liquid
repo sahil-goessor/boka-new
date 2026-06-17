@@ -59,26 +59,41 @@
           {% endif %}
 
           {% if lp_product != blank %}
-            {% for variant in lp_product.variants %}
-              <button
-                type="button"
-                class="boka-lp__thumb {% if variant.id == first_variant.id %}is-active{% endif %}"
-                data-thumb-src="{% if variant.featured_image != blank %}{{ variant.featured_image | image_url: width: 1600 }}{% endif %}"
-                data-thumb-variant="{{ variant.id }}"
-                aria-label="Show {{ variant.title | escape }} image"
-              >
-                {% if variant.featured_image != blank %}
+            {% for media in lp_product.media %}
+              {% if media.media_type == 'image' %}
+                {%- assign media_image = media.preview_image -%}
+                {%- assign attached_variant_id = blank -%}
+
+                {%- for variant in lp_product.variants -%}
+                  {%- if variant.featured_media.id == media.id -%}
+                    {%- assign attached_variant_id = variant.id -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endfor -%}
+
+                <button
+                  type="button"
+                  class="boka-lp__thumb
+                    {% if media.id == first_variant.featured_media.id %} is-active{% endif %}
+                  "
+                  data-thumb-src="{{ media_image | image_url: width: 1600 }}"
+                  data-thumb-media-id="{{ media.id }}"
+                  {% if attached_variant_id != blank %}
+                    data-thumb-variant="{{ attached_variant_id }}"
+                  {% endif %}
+                  aria-label="Show image {{ forloop.index }} for {{ lp_product.title | escape }}"
+                >
                   {{
-                    variant.featured_image
+                    media_image
                     | image_url: width: 220
                     | image_tag:
                       loading: 'lazy',
-                      alt: variant.title
+                      widths: '110, 165, 220',
+                      sizes: '80px',
+                      alt: media.alt | default: lp_product.title
                   }}
-                {% else %}
-                  <span class="boka-lp__thumb-placeholder">{{ variant.title | truncate: 18 }}</span>
-                {% endif %}
-              </button>
+                </button>
+              {% endif %}
             {% endfor %}
           {% endif %}
         </div>
