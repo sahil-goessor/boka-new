@@ -74,7 +74,7 @@
                 <button
                   type="button"
                   class="boka-lp__thumb
-                    {% if media.id == first_variant.featured_media.id %} is-active{% endif %}
+                    {% if media.id == lp_product.featured_media.id %} is-active{% endif %}
                   "
                   data-thumb-src="{{ media_image | image_url: width: 1600 }}"
                   data-thumb-media-id="{{ media.id }}"
@@ -367,6 +367,7 @@
       let selectedVariantId = Number(variantInput?.value);
       let selectedPlanType = 'subscribe';
       let selectedQuantity = 1;
+      let initialRender = true;
 
       const formatMoney = (cents) => {
         if (window.Shopify && typeof window.Shopify.formatMoney === 'function') {
@@ -431,12 +432,20 @@
           btn.classList.toggle('is-active', Number(btn.dataset.quantity) === Number(selectedQuantity));
         });
 
-        if (variant.image) setMainImage(variant.image, variant.title);
+        if (!initialRender && variant.image) {
+          setMainImage(variant.image, variant.title);
+        }
 
-        thumbs.forEach(btn => {
-          const thumbVariant = btn.dataset.thumbVariant;
-          btn.classList.toggle('is-active', thumbVariant && Number(thumbVariant) === Number(variant.id));
-        });
+        if (!initialRender) {
+          thumbs.forEach(btn => {
+            const thumbVariant = btn.dataset.thumbVariant;
+            const isVariantImage =
+              thumbVariant &&
+              Number(thumbVariant) === Number(variant.id);
+
+            btn.classList.toggle('is-active', Boolean(isVariantImage));
+          });
+        }
 
         if (onetimePrice) {
           const discountedOtpPrice = 3549 * selectedQuantity;
@@ -525,14 +534,28 @@
       thumbs.forEach(btn => {
         btn.addEventListener('click', () => {
           const variantId = btn.dataset.thumbVariant;
+          const imageSrc = btn.dataset.thumbSrc;
+          const imageAlt =
+            btn.querySelector('img')?.alt ||
+            btn.getAttribute('aria-label') ||
+            'Product image';
 
-          if (variantId) selectedVariantId = Number(variantId);
-          if (btn.dataset.thumbSrc) setMainImage(btn.dataset.thumbSrc, btn.getAttribute('aria-label') || 'Product image');
+          if (variantId) {
+            selectedVariantId = Number(variantId);
+            renderVariant();
+          }
 
-          thumbs.forEach(t => t.classList.remove('is-active'));
-          btn.classList.add('is-active');
+          if (imageSrc) {
+            setMainImage(imageSrc, imageAlt);
+          }
 
-          renderVariant();
+          thumbs.forEach(thumb => {
+            thumb.classList.toggle('is-active', thumb === btn);
+          });
+
+          if (message) {
+            message.textContent = '';
+          }
         });
       });
 
@@ -692,6 +715,7 @@
       });
 
       renderVariant();
+      initialRender = false;
       updateCartCount();
     })();
   </script>
