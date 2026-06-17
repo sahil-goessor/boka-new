@@ -255,11 +255,14 @@
         console.warn('Boka purchase options: unable to parse variant selling plan data', error);
       }
 
-      const formId = root.querySelector('[form]')?.getAttribute('form');
-      const form = formId ? document.getElementById(formId) : root.closest('form');
-      const getVariantInput = () => form ? form.querySelector('[name="id"]') : null;
+      const formId = root.querySelector('[data-boka-selling-plan-input]')?.getAttribute('form');
+      const getForm = () => formId ? document.getElementById(formId) : root.closest('form');
+      const getVariantInput = () => {
+        const currentForm = getForm();
+        return currentForm ? currentForm.querySelector('input[name="id"], select[name="id"]') : null;
+      };
 
-      let currentVariantId = getVariantInput()?.value || null;
+      let currentVariantId = null;
 
       const getVariantById = (variantId) => {
         return variantData.variants.find((variant) => String(variant.id) === String(variantId));
@@ -375,22 +378,25 @@
         });
       }
 
+      const syncFromProductForm = () => {
+        const nextVariantId = getVariantInput()?.value;
+        if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
+          updateForVariant(nextVariantId);
+        }
+      };
+
+      const form = getForm();
       if (form) {
-        form.addEventListener('change', () => {
-          const nextVariantId = getVariantInput()?.value;
+        form.addEventListener('change', () => requestAnimationFrame(syncFromProductForm));
+        form.addEventListener('input', () => requestAnimationFrame(syncFromProductForm));
 
-          if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
-            updateForVariant(nextVariantId);
-          }
-        });
-
-        form.addEventListener('input', () => {
-          const nextVariantId = getVariantInput()?.value;
-
-          if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
-            updateForVariant(nextVariantId);
-          }
-        });
+        const variantInput = getVariantInput();
+        if (variantInput) {
+          new MutationObserver(syncFromProductForm).observe(variantInput, {
+            attributes: true,
+            attributeFilter: ['value']
+          });
+        }
       }
 
       document.addEventListener('variant:change', (event) => {
@@ -401,16 +407,13 @@
         }
       });
 
-      setInterval(() => {
-        const nextVariantId = getVariantInput()?.value;
+      setInterval(syncFromProductForm, 250);
 
-        if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
-          updateForVariant(nextVariantId);
-        }
-      }, 250);
-
-      updateForVariant(currentVariantId);
-      setActivePlan('subscribe');
+      requestAnimationFrame(() => {
+        currentVariantId = getVariantInput()?.value || null;
+        if (currentVariantId) updateForVariant(currentVariantId);
+        setActivePlan('subscribe');
+      });
     })();
   </script>
 
