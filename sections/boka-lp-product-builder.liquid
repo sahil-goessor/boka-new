@@ -17,14 +17,14 @@
             <div class="boka-lp__media-badge">{{ section.settings.image_badge }}</div>
           {% endif %}
 
-          {% if first_variant.featured_image != blank %}
+          {% if lp_product.featured_image != blank %}
             {{
-              first_variant.featured_image
+              lp_product.featured_image
               | image_url: width: 1600
               | image_tag:
                 loading: 'eager',
                 fetchpriority: 'high',
-                alt: first_variant.title
+                alt: lp_product.featured_image.alt | default: lp_product.title
             }}
           {% elsif section.settings.hero_image != blank %}
             {{
