@@ -1,0 +1,1265 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "boka_listicle_hero_banner_znr8Bg": {
+      "type": "boka_listicle_hero_banner",
+      "custom_css": [
+        ".boka-review-text {text-decoration: underline;}",
+        "@media only screen and (min-width: 1200px) {.boka-right video {height: 158%; }}",
+        "@media only screen and (max-width: 767px) {.boka-review-text {font-size: 12px; } .boka-stars {gap: 5px; }}",
+        ".boka-walmart {display: none;}"
+      ],
+      "name": "Listicle Hero Banner",
+      "settings": {
+        "background_color": "#f5f3ee",
+        "section_height": 520,
+        "left_padding": 60,
+        "mobile_padding": 20,
+        "show_reviews": true,
+        "star_count": 5,
+        "star_color": "#f5a623",
+        "review_text": "See Why Customers Love It",
+        "reviews_section_id": "shopify-section-template--25935046148139__yotpo_reviews_widget_kWhWWh",
+        "review_text_color": "#333333",
+        "review_font_size": 15,
+        "heading_text": "The Easy Way to Get a Brighter Smile (Without Harsh Whitening)",
+        "heading_color": "#1a1a1a",
+        "heading_font_size": 32,
+        "mobile_heading_font_size": 26,
+        "subheading_text": "Coffee. Tea. Wine. Everyday foods slowly stain your teeth.",
+        "subheading_color": "#555555",
+        "subheading_font_size": 18,
+        "body_font_size": 14,
+        "cta_text": "",
+        "cta_url": "",
+        "amazon_url": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+        "button_action": "link",
+        "variant_id": "",
+        "product_quantity": 1,
+        "button_bg_color": "#1a1a1a",
+        "button_text_color": "#ffffff",
+        "button_font_size": 14,
+        "button_border_radius": 4,
+        "show_walmart_banner": true,
+        "walmart_text": "Find it at your nearest Walmart",
+        "walmart_url": "",
+        "walmart_bg_color": "#fff8e7",
+        "walmart_border_color": "#ffc220",
+        "walmart_text_color": "#1a1a1a",
+        "show_timer": false,
+        "timer_label_text": "",
+        "timer_end_date": "",
+        "timer_text_color": "#333333",
+        "timer_countdown_color": "#1a1a1a",
+        "show_shipping_banner": false,
+        "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#fae5db",
+        "shipping_text_color": "#000000",
+        "show_promo_banner": true,
+        "promo_heading": "",
+        "promo_text": "",
+        "promo_bg_color": "#fff3cd",
+        "promo_text_color": "#856404",
+        "video_width_percent": 35,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/562d35e8399145cbb662dcb9f24fd063.mp4",
+        "video_aria_label": "Customer toothpaste review video",
+        "video_autoplay": true,
+        "video_loop": true,
+        "video_muted": true,
+        "mobile_video_height": 520
+      }
+    },
+    "review_hero_banner_YtFMBD": {
+      "type": "review-hero-banner",
+      "blocks": {
+        "feature_yAiJpT": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Screenshot_2026-02-26_at_2.06.34_PM.png",
+            "feature_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science"
+          }
+        },
+        "feature_6L3cGy": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Screenshot_2026-02-26_at_2.06.42_PM.png",
+            "feature_text": "Fluoride-free & clean ingredients"
+          }
+        },
+        "review_mPdWdd": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Mikayla M.",
+            "star_rating": 5,
+            "review_text": "Best Toothpaste I've ever tried! Actually whitens!! My teeth felt cleaner and looked brighter after 1 use."
+          }
+        },
+        "review_maj4j6": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Betsie P.",
+            "star_rating": 5,
+            "review_text": "I've been using Boka Mint for several years now. Can't be without it. And I recommend it to my friends!"
+          }
+        },
+        "review_KpppAL": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Patricia M.",
+            "star_rating": 5,
+            "review_text": "I love this toothpaste you only need a very small amount on your toothbrush. It is very refreshing and my teeth feel so clean."
+          }
+        },
+        "review_wPgR3V": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Diane P.",
+            "star_rating": 5,
+            "review_text": "Love all the flavors but the mint is my go to. My gums no longer hurt.... Thank you so much!"
+          }
+        }
+      },
+      "block_order": [
+        "feature_yAiJpT",
+        "feature_6L3cGy",
+        "review_mPdWdd",
+        "review_maj4j6",
+        "review_KpppAL",
+        "review_wPgR3V"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p.boka-hero__timer-line {display: none !important;}"
+      ],
+      "name": "Review Hero Banner",
+      "settings": {
+        "left_column_width": 50,
+        "columns_gap": 60,
+        "bg_color": "#fafaf6",
+        "text_color": "#1a1a1a",
+        "heading_color": "#0d0d0d",
+        "card_bg_color": "#111111",
+        "card_text_color": "#ffffff",
+        "show_stars": true,
+        "star_color": "#f5a623",
+        "review_text": "See Why Customers Love It",
+        "reviews_anchor": "shopify-section-template--17740738527275__yotpo_reviews_widget_kWhWWh",
+        "heading": "“This product is incredible...No harmful ingredients. It’s perfect!”",
+        "heading_size": 40,
+        "description": "Brighten your smile with Boka BrightBoost Whitening Powder. It gently whitens and soothes with nano-hydroxyapatite, aloe, and essential vitamins.",
+        "cta_text": "TRY NOW FOR $20.99",
+        "cta_url": "",
+        "amazon_url": "",
+        "cta_bg_color": "#111111",
+        "cta_text_color": "#ffffff",
+        "button_action": "add_and_cart",
+        "variant_id": "41190050627627",
+        "product_quantity": 1,
+        "show_timer": true,
+        "timer_text": "Grab everyone's favorite BrightBoost Whitening Powder Now!",
+        "timer_label": "Offer Ends in",
+        "timer_deadline": "Dec 31, 2025 23:59:59",
+        "show_shipping_banner": true,
+        "shipping_text": "Free Shipping on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#fae5db",
+        "shipping_text_color": "#090909"
+      }
+    },
+    "17657702727ebbe56b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_501d6ba_Jf8wrN": {
+          "type": "ai_gen_block_501d6ba",
+          "settings": {
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "content_gap": 20,
+            "section_padding_top_mobile": 40,
+            "section_padding_bottom_mobile": 40,
+            "content_gap_mobile": 20,
+            "show_reviews": true,
+            "review_text": "3,700+ Reviews",
+            "reviews_scroll_target": "",
+            "star_color": "#ffd700",
+            "star_size": 20,
+            "review_text_size": 14,
+            "headline": "“This product is incredible...No harmful ingredients. It’s perfect!”",
+            "headline_size": 40,
+            "headline_font_weight": "700",
+            "show_customer_badge": true,
+            "badge_icon": "shopify://shop_images/verified_buyer_icon_0923ddab-a122-4edd-851c-ffdc83011514.svg",
+            "badge_icon_size": 16,
+            "customer_name": "Carol S.",
+            "customer_name_size": 14,
+            "show_verified_text": true,
+            "verified_text": "Verified Buyer",
+            "verified_text_size": 12,
+            "verified_text_color": "#22b053",
+            "body_text": "Brighten your smile with Boka BrightBoost Whitening Powder. It gently whitens and soothes with nano-hydroxyapatite, aloe, and essential vitamins.",
+            "body_text_size": 16,
+            "show_claim_1": true,
+            "claim_1_icon": "shopify://shop_images/swwai_asset__9_c21d9618f174fc8ba0bd7b20ecb8b436e90dd7208cd01fba676abb17afeeff05.png",
+            "claim_1_text": "Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science",
+            "show_claim_2": true,
+            "claim_2_icon": "shopify://shop_images/swwai_asset__9_70f1cde8701033cab5cab2e6cfd71925057c08e3fde0154d01ebf2bcdbd8575d_1.avif",
+            "claim_2_text": "Fluoride-free & clean ingredients",
+            "claim_icon_size": 40,
+            "claim_text_size": 14,
+            "button_action": "link",
+            "variant_id": "",
+            "product_quantity": 1,
+            "button_text": "TRY NOW FOR $21.00",
+            "button_link": "",
+            "button_bg_color": "#000000",
+            "button_hover_bg_color": "#333333",
+            "button_text_color": "#ffffff",
+            "button_text_size": 16,
+            "button_border_radius": 0,
+            "button_width": 200,
+            "button_height": 52,
+            "button_width_mobile": 100,
+            "button_height_mobile": 52,
+            "hero_image": "shopify://shop_images/Brightboost_Hero_Banner.webp",
+            "hero_video": "",
+            "hero_image_mobile": "shopify://shop_images/Brightboost_Hero_Banner.webp",
+            "hero_video_mobile": "",
+            "media_border_radius": 0,
+            "mobile_content_alignment": "center",
+            "mobile_layout_order": "image_first"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_501d6ba_Jf8wrN"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "a {color: #ffffff !important;}"
+      ],
+      "name": "Hero banner 1",
+      "settings": {}
+    },
+    "17657747600d7cde40": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_01dc9c9_KTh4Wi": {
+          "type": "ai_gen_block_01dc9c9",
+          "settings": {
+            "item_1_enabled": true,
+            "item_1_icon": "shopify://shop_images/Stain-Targeting_PAP.png",
+            "item_1_text": "Stain-Targeting PAP",
+            "item_2_enabled": true,
+            "item_2_icon": "shopify://shop_images/Enamel-supporting_Nano-hydroxyapatite.png",
+            "item_2_text": "Enamel-supporting Nano-hydroxyapatite",
+            "item_3_enabled": true,
+            "item_3_icon": "shopify://shop_images/Gentle-polishing_perlite_and_kaolin.png",
+            "item_3_text": "Gentle-polishing perlite and kaolin",
+            "item_4_enabled": false,
+            "item_4_icon": "shopify://shop_images/no_sls_icon_c02a375f-12a5-4ee2-8a42-e918e37ad410.png",
+            "item_4_text": "",
+            "item_5_enabled": false,
+            "item_5_icon": "shopify://shop_images/no_parabens_icon_a27a7b53-47b6-4769-874c-d54b9cf0cb4d.png",
+            "item_5_text": "",
+            "item_6_enabled": false,
+            "item_6_icon": "shopify://shop_images/Dentist-Approved.webp",
+            "item_6_text": "Gentle Polishing Perlite & Kaolin",
+            "background_color": "#e6f4d4",
+            "container_height": 60,
+            "padding_top": 12,
+            "padding_bottom": 12,
+            "text_color": "#000000",
+            "text_size": 16,
+            "text_weight": "400",
+            "icon_size": 36,
+            "icon_text_gap": 8,
+            "item_spacing": 80,
+            "animation_speed": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_01dc9c9_KTh4Wi"
+      ],
+      "name": "auto sliding icons+text",
+      "settings": {}
+    },
+    "176576544784328569": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_46677d3_QNQPJq": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_left",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/Brightboost_Benefit_1.webp",
+            "image_border_radius": 0,
+            "heading": "1. Peroxide-Free PAP",
+            "subheadline_1": "Powered by PAP",
+            "subheadline_1_icon": "shopify://shop_images/Science-Backed_1.png",
+            "subheadline_1_popup_text": "",
+            "subheadline_1_popup_link_text": "View Key Ingredients",
+            "subheadline_1_popup_scroll_target": "",
+            "subheadline_2": "Peroxide-Free",
+            "subheadline_2_icon": "shopify://shop_images/Peroxide-Free.png",
+            "subheadline_2_popup_text": "",
+            "subheadline_2_popup_link_text": "View Key Ingredients",
+            "subheadline_2_popup_scroll_target": "",
+            "subheadline_icon_size": 28,
+            "body": "<p>A modern whitening ingredient that helps reduce surface stains without hydrogen peroxide.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 15,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#fafaf5",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "#fafaf6",
+            "subheadline_2_text_color": "#000000",
+            "button_text": "SHOP NOW",
+            "button_link": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+            "review_1_highlight": "My teeth are 3 shades whiter",
+            "review_1_quote": "“Finding Boka products with NaH its been a total game changer. My enamel feels so much stronger, and my teeth brighter. The whitening effect just improves every time you use it, and especially if you pair it with the Boka whitening toothpaste. My teeth are 3 shades whiter than they were before. “",
+            "review_1_author": "Karen W.",
+            "review_2_highlight": "Can't believe it actually works!",
+            "review_2_quote": "“I heard about this through Dr Ken Berry who mentioned using it for himself and his family. I decided to give it a try was NOT disappointed. I got the whitening kit and on the very first time using it I noticed an improvement to the whiteness and brightness of my teeth. I see myself becoming a long time customer from here on out.”",
+            "review_2_author": "-Jonathan N.",
+            "review_3_highlight": "Love the whitener",
+            "review_3_quote": "\"I have used your toothpaste for several years. Adding the whitener has enhanced my experience. I can see a definite whitening and am very pleased with the product.\"",
+            "review_3_author": "-Deana Q.",
+            "review_bg_color": "#e6f4d4",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#57623c",
+            "quote_color": "#57623c",
+            "author_color": "#000000",
+            "verified_color": "#22b053",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_action": "link",
+            "reviews_variant_id": "",
+            "reviews_product_quantity": 0,
+            "reviews_button_text": "",
+            "reviews_button_link": "",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_46677d3_4ktG94": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_right",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/A_Content_How_To_Use_Cucumber_Mint_2_e1cec8ff-07e1-4636-acea-7791354ce6f0.webp",
+            "image_border_radius": 0,
+            "heading": "2. Nano-Hydroxyapatite",
+            "subheadline_1": "Clean Ingredients",
+            "subheadline_1_icon": "shopify://shop_images/Clean_Ingredients.png",
+            "subheadline_1_popup_text": "",
+            "subheadline_1_popup_link_text": "View Key Ingredients",
+            "subheadline_1_popup_scroll_target": "",
+            "subheadline_2": "Freshens Breath",
+            "subheadline_2_icon": "shopify://shop_images/Freshens_Breath.png",
+            "subheadline_2_popup_text": "",
+            "subheadline_2_popup_link_text": "View Key Ingredients",
+            "subheadline_2_popup_scroll_target": "",
+            "subheadline_icon_size": 28,
+            "body": "<p>A revolutionary material that mimics tooth enamel and supports oral wellness.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#fafaf5",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "#fafaf5",
+            "subheadline_2_text_color": "#090909",
+            "button_text": "SHOP NOW",
+            "button_link": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+            "review_1_highlight": "A boost to my overall dental health",
+            "review_1_quote": "“I am so happy with this powder! I dip my toothpaste in it and my teeth feel so much healthier and cleaner. My gums have a nicer healthier color to them. I don’t really use this for its whitening properties, but rather as a boost to my overall dental health. Love it.”",
+            "review_1_author": "Kristina",
+            "review_2_highlight": "Exceptional Products!",
+            "review_2_quote": "\"I am very pleased with the purchase of the above products. I do feel like I am doing something healthy for my teeth besides simply brushing them. The flavor and texture of the toothpaste is easy to use! I will purchase again and I do recommend these products.\"",
+            "review_2_author": "Tamara C.",
+            "review_3_highlight": "Great products & results!",
+            "review_3_quote": "\"I did buy the mint toothpaste and the watermelon mint toothpaste and the brush and the whitening powder! I was surprised how much whiter my teeth were even after a few applications! Both toothpaste are excellent & the brush was surprisingly efficient with the tall thin bristles! I highly recommend all the products!\"",
+            "review_3_author": "Chris S.",
+            "review_bg_color": "#e6f4d4",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#57623c",
+            "quote_color": "#57623c",
+            "author_color": "#000000",
+            "verified_color": "#22b053",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_action": "add_and_cart",
+            "reviews_variant_id": "41190050627627",
+            "reviews_product_quantity": 1,
+            "reviews_button_text": "",
+            "reviews_button_link": "",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_46677d3_fVcWbb": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_left",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/Brightboost_Benefit_3.webp",
+            "image_border_radius": 0,
+            "heading": "3. Perlite & Kaolin",
+            "subheadline_1": "Gentle Polishing",
+            "subheadline_1_icon": "shopify://shop_images/Gentle_Formula.png",
+            "subheadline_1_popup_text": "",
+            "subheadline_1_popup_link_text": "View Key Ingredients",
+            "subheadline_1_popup_scroll_target": "",
+            "subheadline_2": "Travel Friendly",
+            "subheadline_2_icon": "shopify://shop_images/Travel_Friendly.png",
+            "subheadline_2_popup_text": "",
+            "subheadline_2_popup_link_text": "View Key Ingredients",
+            "subheadline_2_popup_scroll_target": "",
+            "subheadline_icon_size": 20,
+            "body": "<p>Ingredients that gently polish the surface of teeth to help maintain brightness and remove buildup.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#fafaf5",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "#fafaf5",
+            "subheadline_2_text_color": "#000000",
+            "button_text": "SHOP NOW",
+            "button_link": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+            "review_1_highlight": "Very sensitive teeth .. this product helped me!",
+            "review_1_quote": "“I’ve tried the toothpaste, mouthwash and now whitening powder. I have very sensitive teeth and this is the first product that has helped me and the whitening actually works!”",
+            "review_1_author": "Anna W.",
+            "review_2_highlight": "It does not cause sensitivity",
+            "review_2_quote": "\"I have used Boka for several months now and I like the fact that it cleans , and polishes without making my sensitive teeth more sensitive , it does not cause/ create sensitivity. . yay\"",
+            "review_2_author": "Kelly F.",
+            "review_3_highlight": "My Teeth Are Definitely Brighter",
+            "review_3_quote": "I really like the whitening powder. I haven't used strips or anything in years since I have sensitive teeth, but I put this on my toothpaste about 2x/week and i's great. My teeth are definitely brighter without looking unnaturally white. It's great and I think it will last a long time.",
+            "review_3_author": "Kari H.",
+            "review_bg_color": "#e6f4d4",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#57623c",
+            "quote_color": "#57623c",
+            "author_color": "#000000",
+            "verified_color": "#22b053",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_action": "link",
+            "reviews_variant_id": "",
+            "reviews_product_quantity": 0,
+            "reviews_button_text": "",
+            "reviews_button_link": "",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_46677d3_QNQPJq",
+        "ai_gen_block_46677d3_4ktG94",
+        "ai_gen_block_46677d3_fVcWbb"
+      ],
+      "custom_css": [
+        "a {color: #ffffff !important;}"
+      ],
+      "name": "image+text+reviews",
+      "settings": {}
+    },
+    "featured_product_section_custom_UEHaA4": {
+      "type": "featured-product-section-custom",
+      "blocks": {
+        "icon_text_row_7jwFNT": {
+          "type": "icon_text_row",
+          "disabled": true,
+          "settings": {
+            "icon_1_text": "Fluoride Free Care",
+            "icon_2_text": "Freshens Breath",
+            "icon_3_text": "Fresh Mint Clean",
+            "icon_4_text": "",
+            "desktop_alignment": "space-between",
+            "gap_desktop": 40,
+            "icon_size_desktop": 24,
+            "font_size_desktop": 16,
+            "mobile_alignment": "flex-start",
+            "mobile_wrap": "wrap",
+            "gap_mobile": 20,
+            "icon_size_mobile": 20,
+            "font_size_mobile": 14,
+            "icon_text_gap": 8,
+            "font_family": "'Neue Haas Unica Pro', Helvetica, Arial, sans-serif",
+            "font_weight": "400",
+            "text_color": "#000000",
+            "margin_top": 20,
+            "margin_bottom": 20
+          }
+        },
+        "text_pCjw83": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_d4zgQE": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "h1"
+          }
+        },
+        "yotpo_widget_YBJTAy": {
+          "type": "yotpo_widget",
+          "settings": {
+            "yotpo_product_id": "7277090537515",
+            "yotpo_scroll_target": "shopify-section-template--17740738527275__yotpo_reviews_widget_kWhWWh"
+          }
+        },
+        "price_T7pXW7": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_QPkKgn": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_CharbJ": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "amazon_button_iTPjYa": {
+          "type": "amazon_button",
+          "settings": {
+            "amazon_url": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
+            "replace_sticky_atc": true
+          }
+        },
+        "buy_buttons_j3VN3h": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
+          "settings": {
+            "publishId": "5bxk8y1xuye8t"
+          }
+        },
+        "description_9m494J": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab_X4QUJA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "none",
+            "content": "<p>Lightly wet your toothbrush and dip it into the powder to coat. Brush as usual for a refreshing clean. For added whitening, apply toothpaste first, then dip into the powder.<br/><br/>Use at least once a week, increasing as desired.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_chH3cF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>Calcium Carbonate, Hydrated Silica, Kaolin, Yeast, Cyclodextrin, Sodium Coco-Sulfate, Perlite, Acacia Senegal Gum, Mentha Arvensis Leaf Oil, Phthalimidoperoxycaproic Acid, Aroma, Hydroxyapatite (nano), Menthol, Stevioside, Mentha Piperita (Peppermint) Oil, Aloe Vera Leaf Extract, Ascorbic Acid (Vitamin C), Retinol (Vitamin A), Tocopheryl Succinate (Vitamin E), Silica, Lactobacillus Ferment, Geraniol, Limonene, Citral, Linalool</p>",
+            "page": ""
+          }
+        },
+        "icon_with_text_kfTBKq": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Stain-targeting_PAP_Claims.png",
+            "heading_1": "<strong>Stain-targeting PAP</strong>",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Enamel-supporting_nano-_hydroxyapatite_Claims.png",
+            "heading_2": "<strong>Enamel-supporting nano-hydroxyapatite</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "icon_with_text_HedUMR": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Antioxidant-Rich_Green_Tea.png",
+            "heading_1": "<strong>Gentle-polishing perlite and kaolin</strong>",
+            "icon_2": "none",
+            "heading_2": "",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_row_7jwFNT",
+        "text_pCjw83",
+        "title_d4zgQE",
+        "yotpo_widget_YBJTAy",
+        "price_T7pXW7",
+        "variant_picker_QPkKgn",
+        "quantity_selector_CharbJ",
+        "amazon_button_iTPjYa",
+        "buy_buttons_j3VN3h",
+        "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB",
+        "description_9m494J",
+        "collapsible_tab_X4QUJA",
+        "collapsible_tab_chH3cF",
+        "icon_with_text_kfTBKq",
+        "icon_with_text_HedUMR"
+      ],
+      "custom_css": [
+        "a.link.product__view-details.animate-arrow {display: none;}",
+        "h1.product__title.h1 {font-size: 30px;}",
+        ".price .price-item {margin: 0 0 0 0;}",
+        "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}"
+      ],
+      "name": "feature product section new",
+      "settings": {
+        "product": "brightboost-whitening-powder",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "lazyload": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "rich_text_ibVXfB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9f8B6C": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Routines in Action",
+            "heading_size": "h0",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9f8B6C"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": false,
+        "color_scheme": "custom",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#000000",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "1765896441d3e5261a": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "9xt9akry8myme"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_n3k3yY"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "custom_image_icon_background_FqMNG9": {
+      "type": "custom-image-icon-background",
+      "blocks": {
+        "heading_MzYbMk": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Makes BrightBoost Work",
+            "heading_size": "h1",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 30,
+            "heading_tag": "default"
+          }
+        },
+        "icon_text_wHgEtm": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Peroxide-free PAP",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Hydrogen peroxide-free formula helps reduce surface stains gently and effectively.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_ryTd4U": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/perlite.png",
+            "icon_alt": "Icon",
+            "heading": "Perlite & Kaolin",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Mineral ingredients that gently polish the tooth surface to help maintain brightness.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_w8JqDJ": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/vitamins.png",
+            "icon_alt": "Icon",
+            "heading": "Vitamins A, C & E",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Support overall oral wellness while complementing the formula's effectiveness.</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_nKAcBR": {
+          "type": "icon_text",
+          "disabled": true,
+          "settings": {
+            "icon": "shopify://shop_images/peppermint.webp",
+            "icon_alt": "Icon",
+            "heading": "Mint",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Freshens breath</p>",
+            "text_style": "body"
+          }
+        },
+        "button_bpWGPA": {
+          "type": "button",
+          "settings": {
+            "button_action": "link",
+            "variant_id": "",
+            "product_quantity": 1,
+            "button_label": "",
+            "button_link": "",
+            "second_button_action": "link",
+            "second_variant_id": "",
+            "second_product_quantity": 1,
+            "second_button_label": "",
+            "second_button_link": "",
+            "popup_button_label": "VIEW FULL INGREDIENTS",
+            "popup_button_style_secondary": false,
+            "popup_title": "Full Ingredients List",
+            "popup_content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MzYbMk",
+        "icon_text_wHgEtm",
+        "icon_text_ryTd4U",
+        "icon_text_w8JqDJ",
+        "icon_text_nKAcBR",
+        "button_bpWGPA"
+      ],
+      "custom_css": [
+        ".icon-text-item__content {text-align: left;}",
+        "@media only screen and (max-width: 749px) {.image-with-text__heading {text-align: center; } a.button.button--primary {width: 100%; max-width: 100%; }}"
+      ],
+      "name": "Image/gif icon bg text",
+      "settings": {
+        "media_type": "image",
+        "image": "shopify://shop_images/Brightboost_Ingredients_Banner_Updated.webp",
+        "mobile_image": "shopify://shop_images/Ingredients_Section_Mobile_2.webp_4.webp",
+        "background_video": "",
+        "video_overlay_opacity": 30,
+        "desktop_content_alignment": "left",
+        "text_color": "#ffffff",
+        "container_text_color": "#000000",
+        "icon_heading_color": "#000000",
+        "icon_text_color": "#666666",
+        "mobile_text_color": "#000000",
+        "mobile_container_text_color": "#000000",
+        "mobile_icon_heading_color": "#000000",
+        "mobile_icon_text_color": "#666666",
+        "container_background_color": "#ffffff",
+        "container_border_radius": 12,
+        "icon_size": 60,
+        "section_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "featured_collection_RackKr": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        "h1 {text-align: center; font-size: 40px;}",
+        "@media only screen and (max-width: 767px) {.title {font-size: 30px !important; }}",
+        ".learn-more.small-hide.medium-hide {display: none !important;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "You Might Also Like",
+        "heading_size": "h0",
+        "heading_tag": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nano-hydroxyapatite_n-ha_toothpaste",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 50,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_text_new_LdHPeJ": {
+      "type": "image-text-new",
+      "name": "Image Text New",
+      "settings": {
+        "layout": "image_left",
+        "image_width": 50,
+        "column_gap": 60,
+        "mobile_gap": 30,
+        "container_width": 1200,
+        "image": "shopify://shop_images/BrightBoost_About_1.png",
+        "image_border_radius": 0,
+        "subheading": "MINDFUL ORAL CARE",
+        "subheading_color": "#000000",
+        "subheading_size": 16,
+        "subheading_size_mobile": 12,
+        "subheading_weight": "400",
+        "subheading_transform": "uppercase",
+        "subheading_letter_spacing": 1,
+        "subheading_spacing": 12,
+        "heading": "Transforming Smiles, Two Minutes at a Time",
+        "heading_color": "#222721",
+        "heading_size": 36,
+        "heading_size_mobile": 28,
+        "heading_weight": "400",
+        "heading_spacing": 20,
+        "description": "<p>Boka turns your routine into a ritual worth looking forward to with feel-good flavors, fluoride-free formulas, and enamel-mimicking n-Ha science.</p>",
+        "description_color": "#222721",
+        "description_size": 16,
+        "description_size_mobile": 15,
+        "description_max_width": 540,
+        "background_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "collapsible_content_yGxDGR": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_qJgpbq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does Boka BrightBoost Whitening Powder work?",
+            "icon": "none",
+            "row_content": "<p>BrightBoost is an innovative, multi-benefit peroxide-free whitening formula. Formulated with stain-targeting PAP (Phthalimido-Peroxy-Caproic Acid), nano-hydroxyapatite, and probiotics, it is designed to gently brighten teeth, support enamel care, and promote oral wellness. BrightBoost powder removes surface stains without the harsh chemicals or sensitivity often found in traditional teeth whitening products.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8eKAd6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do you use whitening powder with n-Ha toothpaste?",
+            "icon": "none",
+            "row_content": "<p>It’s simple! Apply your favorite nano-hydroxyapatite toothpaste to your brush, then dip the bristles into the BrightBoost powder. Brush thoroughly for two minutes and spit. For the best results, skip the rinse to allow the biomimetic minerals to stay in contact with your teeth longer.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UedG3C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How to use whitening powder without toothpaste?",
+            "icon": "none",
+            "row_content": "<p>To use BrightBoost powder without toothpaste, lightly wet the toothbrush and dip the bristles into the powder to coat, then brush as usual. It’s a water-free, portable option that’s perfect for travel or a quick on-the-go refresh.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_a9yPEf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does BrightBoost use hydrogen peroxide?",
+            "icon": "none",
+            "row_content": "<p>No. We’ve swapped harsh bleaching agents for PAP to help remove surface stains gently and effectively. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tGJ8At": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this whitening powder safe for sensitive teeth?",
+            "icon": "none",
+            "row_content": "<p>Absolutely. Many people search for whitening for sensitive teeth, and BrightBoost powder is thoughtfully formulated to be exactly that. Our powder is also infused with aloe vera to ensure your whitening ritual is gentle and feel-good.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KQENhP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is PAP whitening and how does it work?",
+            "icon": "none",
+            "row_content": "<p>Stain-targeting PAP is a science-backed ingredient that focuses on breaking down discolorations from coffee, tea, or wine while remaining gentle on your enamel. It’s a nature-inspired way to achieve a bright, healthy-looking smile through regular brushing.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DJy4D8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use BrightBoost Whitening Powder every day?",
+            "icon": "none",
+            "row_content": "<p>Yes! BrightBoost is safe for daily use and is a seamless addition to your morning or nightly oral hygiene routine to boost your pearly whites.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VpVBX9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does BrightBoost Whitening Powder contain nano-hydroxyapatite (n-Ha)?",
+            "icon": "none",
+            "row_content": "<p>It does. We included n-Ha because it mimics tooth enamel. While the PAP polishes teeth, the nano-hydroxyapatite supports enamel care, providing a holistic approach to your smile’s health. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PknFhE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the best ingredients for natural teeth polishing?",
+            "icon": "none",
+            "row_content": "<p>We use Perlite and Kaolin, which are gentle, mineral-derived ingredients. These natural polishers work to smooth the tooth surface, helping to maintain brightness and leave your teeth feeling incredibly clean.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FNKwU7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Boka BrightBoost Whitening Powder vegan and cruelty-free?",
+            "icon": "none",
+            "row_content": "<p>Integrity is our priority. BrightBoost Whitening Powder is PETA cruelty-free certified, vegan, and dye-free. It’s also packed with Vitamins A, C, and E to support your oral wellness while keeping your breath fresh with lemongrass mint.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_qJgpbq",
+        "collapsible_row_8eKAd6",
+        "collapsible_row_UedG3C",
+        "collapsible_row_a9yPEf",
+        "collapsible_row_tGJ8At",
+        "collapsible_row_KQENhP",
+        "collapsible_row_DJy4D8",
+        "collapsible_row_VpVBX9",
+        "collapsible_row_PknFhE",
+        "collapsible_row_FNKwU7"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "yotpo_reviews_widget_kWhWWh": {
+      "type": "yotpo-reviews-widget",
+      "custom_css": [
+        "div#yotpo-app {background-color: white !important;}"
+      ],
+      "name": "Yotpo Reviews Widget",
+      "settings": {
+        "product": "brightboost-whitening-powder",
+        "product_handle": "",
+        "yotpo_instance_id": "1002005",
+        "show_heading": true,
+        "heading_text": "",
+        "heading_size": 32,
+        "heading_color": "#000000",
+        "heading_alignment": "center",
+        "heading_spacing": 32,
+        "container_width": 1600,
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "boka_listicle_hero_banner_znr8Bg",
+    "review_hero_banner_YtFMBD",
+    "17657702727ebbe56b",
+    "17657747600d7cde40",
+    "176576544784328569",
+    "featured_product_section_custom_UEHaA4",
+    "rich_text_ibVXfB",
+    "1765896441d3e5261a",
+    "custom_image_icon_background_FqMNG9",
+    "featured_collection_RackKr",
+    "image_text_new_LdHPeJ",
+    "collapsible_content_yGxDGR",
+    "yotpo_reviews_widget_kWhWWh",
+    "main"
+  ]
+}
