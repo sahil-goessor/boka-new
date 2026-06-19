@@ -1410,13 +1410,14 @@ padding: unset;
 }
 
 .boka-pdp-pulse-box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-color: var(--boka-pulse-bg, #DFF0D8);
   border: 2px solid var(--boka-pulse-border, #7BAF7B);
   padding: 16px 16px;
   border-radius: 6px;
-  margin-bottom: 12px;
+  margin: 0 auto 12px auto;
   animation: boka-pdp-pulse 1.8s ease-in-out infinite;
   width: fit-content;
   max-width: 100%;
