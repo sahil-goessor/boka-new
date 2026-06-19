@@ -361,6 +361,18 @@
       font-size: 18px;
       margin: 0;
       line-height: 1.4;
+      position: relative;
+      z-index: 2;
+    }
+    #shopify-section-{{ section.id }} .boka-pulse-box::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 6px;
+      background: {{ section.settings.pulse_border_color }};
+      animation: boka-sonar-{{ section.id }} 1.8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
     }
     #shopify-section-{{ section.id }} .boka-pulse-box p strong {
       font-weight: 700;
@@ -371,6 +383,10 @@
     @keyframes boka-pulse-{{ section.id }} {
       0%, 100% { transform: scale(1); }
       50%       { transform: scale(1.05); }
+    }
+    @keyframes boka-pulse-{{ section.id }} {
+      0%, 100% { box-shadow: 0 0 0 0 {{ section.settings.pulse_border_color }}66; }
+      50%       { box-shadow: 0 0 0 10px {{ section.settings.pulse_border_color }}00; }
     }
     @media (max-width: 768px) {
       #shopify-section-{{ section.id }} .boka-walmart {
