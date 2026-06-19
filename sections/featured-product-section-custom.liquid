@@ -378,6 +378,17 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
+              {%- when 'pulse_box' -%}
+                {%- if block.settings.pulse_heading != blank or block.settings.pulse_text != blank -%}
+                  <div class="boka-pdp-pulse-box" {{ block.shopify_attributes }}>
+                    <p>
+                      {%- if block.settings.pulse_heading != blank -%}
+                        <strong>{{ block.settings.pulse_heading }}</strong>&nbsp;
+                      {%- endif -%}
+                      {{ block.settings.pulse_text }}
+                    </p>
+                  </div>
+                {%- endif -%}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'amazon_button' -%}
@@ -1398,9 +1409,51 @@ padding: unset;
   font-size: 15px;
 }
 
+.boka-pdp-pulse-box {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--boka-pulse-bg, #DFF0D8);
+  border: 2px solid var(--boka-pulse-border, #7BAF7B);
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  animation: boka-pdp-pulse 1.8s ease-in-out infinite;
+  width: fit-content;
+  max-width: 100%;
+}
+.boka-pdp-pulse-box p {
+  color: var(--boka-pulse-text, #1A1A1A);
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.4;
+}
+.boka-pdp-pulse-box p strong {
+  font-weight: 700;
+}
+.boka-pdp-pulse-box p s {
+  opacity: 0.6;
+}
+@keyframes boka-pdp-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--boka-pulse-border, #7BAF7B66);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+@media screen and (max-width: 749px) {
+  .boka-pdp-pulse-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 span.h4.inline-richtext > strong {
 font-family: "archivo";
 }
+
 </style>
 
 <script type="application/ld+json">
@@ -1744,6 +1797,43 @@ font-family: "archivo";
       "type": "description",
       "name": "Description",
       "limit": 1
+    },
+    {
+      "type": "pulse_box",
+      "name": "Pulse Text Box",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pulse_heading",
+          "label": "Bold Label Text",
+          "default": "Black Friday Cyber Monday Sale:",
+          "info": "Appears bold at the start. Leave blank to skip."
+        },
+        {
+          "type": "text",
+          "id": "pulse_text",
+          "label": "Body Text (supports HTML like <s> for strikethrough)",
+          "default": "<s>$13.00</s> $9.99 our best deal this year!"
+        },
+        {
+          "type": "color",
+          "id": "pulse_bg_color",
+          "label": "Box Background Color",
+          "default": "#DFF0D8"
+        },
+        {
+          "type": "color",
+          "id": "pulse_border_color",
+          "label": "Box Border & Pulse Color",
+          "default": "#7BAF7B"
+        },
+        {
+          "type": "color",
+          "id": "pulse_text_color",
+          "label": "Text Color",
+          "default": "#1A1A1A"
+        }
+      ]
     },
     {
       "type": "custom_liquid",
