@@ -349,21 +349,18 @@
       align-items: center;
       background-color: {{ section.settings.pulse_bg_color }};
       border: 2px solid {{ section.settings.pulse_border_color }};
-      padding: 10px 16px;
+      padding: 16px 16px;
       border-radius: 6px;
       margin-bottom: 12px;
       animation: boka-pulse-{{ section.id }} 1.8s ease-in-out infinite;
       align-self: flex-start;
       width: fit-content;
-      position: relative;
     }
     #shopify-section-{{ section.id }} .boka-pulse-box p {
       color: {{ section.settings.pulse_text_color }};
-      font-size: {{ section.settings.body_font_size }}px;
+      font-size: 18px;
       margin: 0;
       line-height: 1.4;
-      position: relative;
-      z-index: 2;
     }
     #shopify-section-{{ section.id }} .boka-pulse-box p strong {
       font-weight: 700;
@@ -371,19 +368,9 @@
     #shopify-section-{{ section.id }} .boka-pulse-box p s {
       opacity: 0.6;
     }
-    #shopify-section-{{ section.id }} .boka-pulse-box::after {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 6px;
-      background: {{ section.settings.pulse_border_color }};
-      animation: boka-sonar-{{ section.id }} 1.8s ease-in-out infinite;
-      pointer-events: none;
-      z-index: 1;
-    }
     @keyframes boka-pulse-{{ section.id }} {
-      0%, 100% { box-shadow: 0 0 0 0 {{ section.settings.pulse_border_color }}66; }
-      50%       { box-shadow: 0 0 0 6px {{ section.settings.pulse_border_color }}00; }
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.05); }
     }
     @media (max-width: 768px) {
       #shopify-section-{{ section.id }} .boka-walmart {
@@ -393,7 +380,6 @@
       #shopify-section-{{ section.id }} .boka-pulse-box {
         width: 100%;
         box-sizing: border-box;
-      }
     }
   </style>
 
