@@ -719,6 +719,16 @@
             "replace_sticky_atc": true
           }
         },
+        "pulse_box_LheHPb": {
+          "type": "pulse_box",
+          "settings": {
+            "pulse_heading": "Prime Day Sale:",
+            "pulse_text": "Enjoy upto 30% Off",
+            "pulse_bg_color": "#dff0d8",
+            "pulse_border_color": "#000000",
+            "pulse_text_color": "#1a1a1a"
+          }
+        },
         "buy_buttons_j3VN3h": {
           "type": "buy_buttons",
           "disabled": true,
@@ -794,6 +804,7 @@
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
         "amazon_button_iTPjYa",
+        "pulse_box_LheHPb",
         "buy_buttons_j3VN3h",
         "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB",
         "description_9m494J",
