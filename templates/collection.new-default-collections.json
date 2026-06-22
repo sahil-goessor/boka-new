@@ -9,8 +9,72 @@
  */
 {
   "sections": {
+    "video_slideshow_j9M4zb": {
+      "type": "video-slideshow",
+      "blocks": {
+        "image_796my9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HP_Banner_Desktop.png",
+            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_1.png",
+            "heading": "Image slide",
+            "image_link": "",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 36,
+            "heading_tag": "default",
+            "subheading": "Tell your brand's story through images",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
+            "button_label": "SHOP",
+            "link": "",
+            "button_style_secondary": false,
+            "button_label2": "LEARN MORE",
+            "link2": "",
+            "button_style_secondary2": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "custom_background_color": "#333333",
+            "custom_text_color": "#FFFFFF",
+            "mobile_custom_text_color": "#000000",
+            "button_background_color": "#000000",
+            "button_foreground_color": "#FFFFFF",
+            "button_background_color_mobile": "#000000",
+            "button_foreground_color_mobile": "#FFFFFF",
+            "bottom_text_background_color": "#DCE6CF",
+            "bottom_text_foreground_color": "#000000",
+            "text_alignment_mobile": "center",
+            "mobile_content_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "image_796my9"
+      ],
+      "custom_css": [
+        ".slideshow__text {background: linear-gradient( 180deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.14) ) !important; padding: 24px 28px !important; border-radius: 0px !important; max-width: 620px;}",
+        ".slideshow__text .banner__heading,.slideshow__text .banner__text,.slideshow__text .banner__text p,.slideshow__text .inline-richtext {color: #ffffff !important;}",
+        "@media screen and (max-width: 749px) {.slideshow__text {padding: 18px 20px !important; border-radius: 0px !important; max-width: calc(100vw - 32px); margin-left: auto; margin-right: auto; }}"
+      ],
+      "name": "Slideshow with Video",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "enable_video_buttons": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "fadein_enabled": true,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -60,6 +124,7 @@
     }
   },
   "order": [
+    "video_slideshow_j9M4zb",
     "banner",
     "product-grid"
   ]
