@@ -125,6 +125,9 @@
     },
     "featured_collection_v2_KFa34f": {
       "type": "featured-collection-v2",
+      "custom_css": [
+        ".product-grid .card-information .price .col_disc {display: none !important;}"
+      ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "",
