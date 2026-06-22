@@ -17,10 +17,10 @@
           "settings": {
             "image": "shopify://shop_images/HP_Banner_Desktop.png",
             "image_mobile": "shopify://shop_images/HP_Banner_Mobile_2_7ab66368-cee5-40ea-aafa-d1980609b519.webp",
-            "heading": "Boka Favorites, <em>Prime Day Prices</em>",
+            "heading": "Boka Prime Day Deals",
             "image_link": "",
             "heading_font_size": 40,
-            "heading_font_size_mobile": 20,
+            "heading_font_size_mobile": 30,
             "heading_tag": "default",
             "subheading": "Preview select Boka favorites that will be featured in our Prime Day price match event, with limited-time deal pricing coming soon to Boka.com.",
             "subheading_font_size": 18,
