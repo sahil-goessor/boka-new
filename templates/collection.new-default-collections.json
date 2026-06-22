@@ -24,7 +24,7 @@
             "heading_tag": "default",
             "subheading": "Preview select Boka favorites that will be featured in our Prime Day price match event, with limited-time deal pricing coming soon to Boka.com.",
             "subheading_font_size": 18,
-            "subheading_font_size_mobile": 16,
+            "subheading_font_size_mobile": 14,
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -43,7 +43,7 @@
             "button_foreground_color": "#ffffff",
             "button_background_color_mobile": "#000000",
             "button_foreground_color_mobile": "#ffffff",
-            "bottom_text_background_color": "#9CB0C1",
+            "bottom_text_background_color": "#dce6cf",
             "bottom_text_foreground_color": "#000000",
             "text_alignment_mobile": "center",
             "mobile_content_position": "bottom"
