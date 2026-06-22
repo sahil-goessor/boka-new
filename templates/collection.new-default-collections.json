@@ -16,11 +16,11 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/HP_Banner_Desktop.png",
-            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_1.png",
+            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_2_7ab66368-cee5-40ea-aafa-d1980609b519.webp",
             "heading": "Boka Favorites, <em>Prime Day Prices</em>",
             "image_link": "",
             "heading_font_size": 40,
-            "heading_font_size_mobile": 34,
+            "heading_font_size_mobile": 26,
             "heading_tag": "default",
             "subheading": "Preview select Boka favorites that will be featured in our Prime Day price match event, with limited-time deal pricing coming soon to Boka.com.",
             "subheading_font_size": 18,
@@ -46,7 +46,7 @@
             "bottom_text_background_color": "#dce6cf",
             "bottom_text_foreground_color": "#000000",
             "text_alignment_mobile": "center",
-            "mobile_content_position": "bottom"
+            "mobile_content_position": "top"
           }
         }
       },
@@ -61,14 +61,14 @@
       "name": "Slideshow with Video",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "adapt_image",
         "slider_visual": "counter",
         "enable_video_buttons": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
         "fadein_enabled": true,
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
