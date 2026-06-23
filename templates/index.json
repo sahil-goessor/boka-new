@@ -112,7 +112,7 @@
             "subheading_font_size": 16,
             "subheading_font_size_mobile": 14,
             "button_label": "SHOP SAVINGS",
-            "link": "",
+            "link": "shopify://collections/all-products",
             "button_style_secondary": false,
             "button_label2": "",
             "link2": "",
