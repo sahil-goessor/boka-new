@@ -137,6 +137,7 @@
         },
         "image_RJU7Ux": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Renew_Mouthwash_HP_Desktop.webp",
             "image_mobile": "shopify://shop_images/Renew_Mouthwash_HP_Mobile.webp",
