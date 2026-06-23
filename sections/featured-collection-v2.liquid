@@ -35,6 +35,12 @@
       width: 100% !important;
     }
   }
+
+  {%- if template.name == 'collection' and template.suffix == 'new-default-collections' -%}
+    #shopify-section-{{ section.id }} .card-information .price .col_disc {
+      display: none !important;
+    }
+  {%- endif -%}
 {%- endstyle -%} 
 
 {% if section.settings.color_scheme == 'custom' %}
