@@ -98,6 +98,43 @@
     "e88125fd-54b1-4dc4-a7be-094d886854f5": {
       "type": "video-slideshow",
       "blocks": {
+        "image_Ae8zKC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HP_Banner_Desktop.png",
+            "image_mobile": "shopify://shop_images/HP_Banner_Mobile_2.webp",
+            "heading": "Boka Start of Summer Sale",
+            "image_link": "",
+            "heading_font_size": 40,
+            "heading_font_size_mobile": 24,
+            "heading_tag": "default",
+            "subheading": "Save up to 34% on select Boka favorites, including toothpaste, floss, whitening, mouthwash, and brush essentials. Stock up on your daily routine while limited-time pricing lasts through 6/26!",
+            "subheading_font_size": 16,
+            "subheading_font_size_mobile": 14,
+            "button_label": "SHOP SAVINGS",
+            "link": "",
+            "button_style_secondary": false,
+            "button_label2": "",
+            "link2": "",
+            "button_style_secondary2": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "custom",
+            "custom_background_color": "#333333",
+            "custom_text_color": "#ffffff",
+            "mobile_custom_text_color": "#000000",
+            "button_background_color": "#222721",
+            "button_foreground_color": "#ffffff",
+            "button_background_color_mobile": "#000000",
+            "button_foreground_color_mobile": "#ffffff",
+            "bottom_text_background_color": "#dce6cf",
+            "bottom_text_foreground_color": "#000000",
+            "text_alignment_mobile": "center",
+            "mobile_content_position": "top"
+          }
+        },
         "image_RJU7Ux": {
           "type": "image",
           "settings": {
@@ -137,6 +174,7 @@
         }
       },
       "block_order": [
+        "image_Ae8zKC",
         "image_RJU7Ux"
       ],
       "custom_css": [
