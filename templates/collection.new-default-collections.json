@@ -125,7 +125,9 @@
     },
     "featured_collection_v2_KFa34f": {
       "type": "featured-collection-v2",
-      "custom_css": [],
+      "custom_css": [
+        ".product-grid .card-information .price .col_disc {display: none !important;}"
+      ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "",
@@ -143,7 +145,7 @@
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "custom_background_color": "#333333",
-        "custom_text_color": "#ffffff",
+        "custom_text_color": "#FFFFFF",
         "image_ratio": "adapt",
         "show_secondary_image": false,
         "show_vendor": false,
