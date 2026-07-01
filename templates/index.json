@@ -12,6 +12,13 @@
     "quick_button_caEbwf": {
       "type": "quick-button",
       "blocks": {
+        "button_ELddG9": {
+          "type": "button",
+          "settings": {
+            "button_text": "Subscribe & Save",
+            "button_link": "shopify://pages/subscribe"
+          }
+        },
         "button_FhD7Dx": {
           "type": "button",
           "settings": {
@@ -63,6 +70,7 @@
         }
       },
       "block_order": [
+        "button_ELddG9",
         "button_FhD7Dx",
         "button_4Nw6gC",
         "button_gnHgxC",
