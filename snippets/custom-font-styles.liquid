@@ -1,5 +1,6 @@
 {% style %}
 /* Custom Fonts */
+{% comment %}
 @font-face {
     font-family: 'IvarDisplayItalic';
     src: url('{{ "IvarDisplayItalic.woff2" | asset_url }}') format('woff2'), url('{{ "IvarDisplayItalic.woff" | asset_url }}') format('woff');
@@ -53,4 +54,5 @@
     src: url('{{ "CeraProBlack.woff2" | asset_url }}') format('woff2'), url('{{ "CeraProBlack.woff" | asset_url }}') format('woff');
     font-display: swap;
 }
+    {%endcomment %}
 {% endstyle %}
