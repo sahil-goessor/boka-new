@@ -300,15 +300,31 @@
           
         <div class="yotpo-widget-instance" data-yotpo-instance-id="1019166" data-yotpo-product-id="{{card_product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="collection"></div> 
         <script>
-          function initYotpoWidgets() {
-            if (typeof yotpoWidgetsContainer !== 'undefined') {
-            if (yotpoWidgetsContainer.yotpo_widget_initializer.length === 1) {
-            yotpoWidgetsContainer.initWidgets(false);
+          if (!window.bokaYotpoInitScriptLoaded) {
+            window.bokaYotpoInitScriptLoaded = true;
+
+            function initYotpoWidgets() {
+              if (
+                typeof window.yotpoWidgetsContainer !== 'undefined' &&
+                window.yotpoWidgetsContainer &&
+                Array.isArray(window.yotpoWidgetsContainer.yotpo_widget_initializer) &&
+                window.yotpoWidgetsContainer.yotpo_widget_initializer.length >= 1 &&
+                typeof window.yotpoWidgetsContainer.initWidgets === 'function'
+              ) {
+                window.yotpoWidgetsContainer.initWidgets(false);
+                return;
+              }
+
+              window.bokaYotpoInitAttempts = window.bokaYotpoInitAttempts || 0;
+
+              if (window.bokaYotpoInitAttempts < 10) {
+                window.bokaYotpoInitAttempts += 1;
+                setTimeout(initYotpoWidgets, 500);
+              }
             }
+
+            initYotpoWidgets();
           }
-          setTimeout(initYotpoWidgets, 2000);
-          }
-          initYotpoWidgets();
         </script>
           <div class="card-information">
           {% comment %}  {% if card_product.metafields.heyday.hide_okendo_star_ratings_in_plp != true %}{% render 'yotpo-reviews-product-rating-summary', product: card_product %}{% endif %} {% endcomment %}
