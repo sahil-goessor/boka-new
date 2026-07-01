@@ -17,7 +17,8 @@
 .template-cart .cart-item .cart-item__details dd,
 .upsell-header span,
 strong {
-    font-family: CeraProBold
+    font-family: var(--font-body-family);
+    font-weight: 700;
 }
 
 .banner em,
@@ -619,7 +620,8 @@ quick-add-modal .rc_radio {
 }
 
 .custom-collapsible-content .accordion__title {
-    font-family: CeraProBold;
+    font-family: var(--font-body-family);
+    font-weight: 700;
     letter-spacing: .4px;
     font-size: calc(var(--font-heading-scale) * 1.6rem);
     line-height: calc(1.5 / var(--font-heading-scale))
@@ -1434,9 +1436,9 @@ cart-drawer.drawer .nudge-offer input.bttn {
 
 #CartDrawer .cart-items .cart-item .cart-item__name {
     text-transform: uppercase;
-    font-family: CeraProBold;
+    font-family: var(--font-body-family);
     font-size: calc(var(--font-body-scale) * 1.8rem);
-    font-weight: 900
+    font-weight: 900;
 }
 
 #CartDrawer .cart-items .cart-item .cart-item__details {
@@ -1444,8 +1446,8 @@ cart-drawer.drawer .nudge-offer input.bttn {
 }
 
 #CartDrawer .cart-items .cart-item dl .product-option dd {
-    font-family: CeraProBold;
-    font-weight: 900
+   font-family: var(--font-body-family);
+    font-weight: 900;
 }
 
 #CartDrawer .cart-items .cart-item .cart-item__quantity {
@@ -1545,8 +1547,8 @@ cart-drawer.drawer .nudge-offer input.bttn {
 }
 
 .template-cart .cart-item .cart-item__details a {
-    font-family: CeraProBold;
-    text-transform: uppercase
+    font-family: var(--font-body-family);    
+    text-transform: uppercase;
 }
 
 .template-cart .cart-item .cart-item__details .product-upgrade a {
@@ -2108,7 +2110,7 @@ quick-add-modal .product-form__input input[type=radio]+label {
 }
 
 .custom-image-with-text .image-with-text__text.body strong {
-    font-family: CeraProBold;
+    font-family: var(--font-body-family);    
     letter-spacing: .4px
 }
 
@@ -2473,8 +2475,8 @@ quick-add-modal .product-form__input input[type=radio]+label {
 .homepage-review-section .okeReviews-reviewsCarousel-review-content-heading {
     font-size: 1.6rem !important;
     line-height: 2.4rem !important;
-    font-family: CeraProBold;
-    margin-bottom: 8px
+    font-family: var(--font-body-family);
+    margin-bottom: 8px;
 }
 
 .homepage-review-section .okeReviews-reviewsCarousel-review-content-body {
