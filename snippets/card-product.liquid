@@ -122,7 +122,14 @@
           {% if template.suffix != 'subscription' %}
             {%- if enable_learn_more -%}
               <div class="learn-more small-hide medium-hide">
-                <a aria-label="Learn More about {{ card_product.title | escape }}" class="button button--full-width button--secondary" href="{% if settings.theme_include_collection_url %}{{ card_product.url | within: collection }}{% else %}{{ card_product.url }}{% endif %}">Learn More</a>
+                <a
+                  aria-label="Learn more about {{ card_product.title | escape }}"
+                  class="button button--full-width button--secondary"
+                  href="{% if settings.theme_include_collection_url %}{{ card_product.url | within: collection }}{% else %}{{ card_product.url }}{% endif %}"
+                >
+                  Learn More
+                  <span class="visually-hidden"> about {{ card_product.title | escape }}</span>
+                </a>
               </div>
             {%- endif -%}
           {% endif %}
@@ -355,7 +362,14 @@
         {% if template.suffix != 'subscription' %}
           {%- if enable_learn_more -%}
             <div class="learn-more small-hide medium-hide">
-              <a aria-label="Learn More about {{ card_product.title | escape }}" class="button button--full-width button--secondary" href="{% if settings.theme_include_collection_url %}{{ card_product.url | within: collection }}{% else %}{{ card_product.url }}{% endif %}">Learn More</a>
+              <a
+                  aria-label="Learn more about {{ card_product.title | escape }}"
+                  class="button button--full-width button--secondary"
+                  href="{% if settings.theme_include_collection_url %}{{ card_product.url | within: collection }}{% else %}{{ card_product.url }}{% endif %}"
+                >
+                  Learn More
+                  <span class="visually-hidden"> about {{ card_product.title | escape }}</span>
+                </a>
             </div>
           {%- endif -%}
         {% endif %}
