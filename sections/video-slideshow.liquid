@@ -22,16 +22,6 @@
     pointer-events: auto;
   }
 }
-/* ADD THIS */
-@media screen and (max-width: 749px) {
-  .slideshow__text-wrapper {
-    pointer-events: none;
-  }
-  .slideshow__text-wrapper a,
-  .slideshow__text-wrapper button {
-    pointer-events: auto;
-  }
-}
 
 </style>
 
@@ -182,14 +172,6 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
-        @media screen and (max-width: 749px) {
-          #Slide-{{ section.id }}-{{ forloop.index }} .banner__heading {
-            font-size: {{ block.settings.heading_font_size_mobile }}px !important;
-          }
-          #Slide-{{ section.id }}-{{ forloop.index }} .banner__text p {
-            font-size: {{ block.settings.subheading_font_size_mobile }}px !important;
-          }
-        }
       </style>
 
       {% if block.settings.color_scheme == 'custom' %}
@@ -311,17 +293,13 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }} mobile-banner--{{ block.settings.mobile_content_position }}">
             {%- if block.settings.heading != blank -%}
-              {% comment %} <{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %} class="banner__heading inline-richtext{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %} {{ block.settings.heading_size }}"> {% endcomment %}
-              <{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %} class="banner__heading inline-richtext{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %}" style="font-size: {{ block.settings.heading_font_size }}px;">
-              {{ block.settings.heading }}
+              <{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %} class="banner__heading inline-richtext{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %} {{ block.settings.heading_size }}">
+                {{ block.settings.heading }}
               </{% if block.settings.heading_tag != 'default' %}{{ block.settings.heading_tag }}{% else %}div{% endif %}>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              {% comment %} <div class="banner__text custom_text rte{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %}" {{ block.shopify_attributes }}>
-                <p>{{ block.settings.subheading }}</p>
-              </div> {% endcomment %}
               <div class="banner__text custom_text rte{% if section.settings.fadein_enabled %} fadeInAnimate{% endif %}" {{ block.shopify_attributes }}>
-                <p style="font-size: {{ block.settings.subheading_font_size }}px;">{{ block.settings.subheading }}</p>
+                <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
@@ -332,7 +310,7 @@
                   {% else %}
                     role="link" aria-disabled="true"
                   {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %} {% if page.handle == 'dental-innovation-forum' %}klaviyo_form_trigger {% endif %}"
+                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
                 >
                   {{- block.settings.button_label | escape -}}
                 </a>
@@ -589,13 +567,6 @@
 
 </script>
 
-<script type="text/javascript">
-	document.querySelector('.klaviyo_form_trigger')?.addEventListener('click', function (){
-		window._klOnsite = window._klOnsite || []; 
-		window._klOnsite.push(['openForm', 'X2GpR4']);
-	});
-</script>
-
 {% schema %}
 {
   "name": "Slideshow with Video",
@@ -771,24 +742,24 @@
           "label": "Image Link"
         },
         {
-          "type": "range",
-          "id": "heading_font_size",
-          "min": 20,
-          "max": 120,
-          "step": 2,
-          "unit": "px",
-          "label": "Heading font size",
-          "default": 52
-        },
-        {
-          "type": "range",
-          "id": "heading_font_size_mobile",
-          "min": 16,
-          "max": 80,
-          "step": 2,
-          "unit": "px",
-          "label": "Heading font size (mobile)",
-          "default": 36
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
         },
         {
           "type": "select",
@@ -832,26 +803,6 @@
           "id": "subheading",
           "default": "Tell your brand's story through images",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
-        },
-        {
-          "type": "range",
-          "id": "subheading_font_size",
-          "min": 12,
-          "max": 48,
-          "step": 1,
-          "unit": "px",
-          "label": "Subheading font size",
-          "default": 16
-        },
-        {
-          "type": "range",
-          "id": "subheading_font_size_mobile",
-          "min": 12,
-          "max": 36,
-          "step": 1,
-          "unit": "px",
-          "label": "Subheading font size (mobile)",
-          "default": 14
         },
         {
           "type": "paragraph",
