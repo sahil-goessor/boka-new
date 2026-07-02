@@ -22,6 +22,29 @@
   {% endstyle %}
 {% endif %}
 
+{% if template.name == 'collection' and collection %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": {{ shop.url | append: routes.root_url | json }}
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ collection.title | strip_html | json }},
+        "item": {{ shop.url | append: collection.url | json }}
+      }
+    ]
+  }
+  </script>
+{% endif %}
+
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width">
     <div class="collection-hero__text-wrapper">
