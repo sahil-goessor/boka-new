@@ -103,7 +103,27 @@
 
 <div class="section-{{ section.id }}-padding">
   {%- paginate collection.products by products_per_page -%}
-    {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
+    {% if template.name == 'collection' and collection.products.size > 0 %}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": {{ collection.title | strip_html | json }},
+        "url": {{ shop.url | append: collection.url | json }},
+        "numberOfItems": {{ collection.products.size | json }},
+        "itemListElement": [
+          {% for product in collection.products %}
+            {
+              "@type": "ListItem",
+              "position": {{ forloop.index | plus: paginate.current_offset }},
+              "url": {{ shop.url | append: product.url | json }},
+              "name": {{ product.title | strip_html | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ]
+      }
+      </script>
+    {% endif %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
         <form class="facets-vertical-form" id="FacetSortForm">
