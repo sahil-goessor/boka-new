@@ -51,9 +51,16 @@
         "show_walmart_banner": true,
         "walmart_text": "Find it at your nearest Walmart",
         "walmart_url": "",
+        "walmart_section_id": "",
         "walmart_bg_color": "#fff8e7",
         "walmart_border_color": "#ffc220",
         "walmart_text_color": "#1a1a1a",
+        "show_pulse_box": false,
+        "pulse_heading": "Black Friday Cyber Monday Sale:",
+        "pulse_text": "<s>$13.00</s> $9.99 our best deal this year!",
+        "pulse_bg_color": "#dff0d8",
+        "pulse_border_color": "#7baf7b",
+        "pulse_text_color": "#1a1a1a",
         "show_timer": false,
         "timer_label_text": "",
         "timer_end_date": "",
@@ -690,6 +697,10 @@
             "yotpo_scroll_target": "shopify-section-template--17740738527275__yotpo_reviews_widget_kWhWWh"
           }
         },
+        "boka_purchase_options_h8rLV9": {
+          "type": "boka_purchase_options",
+          "settings": {}
+        },
         "price_T7pXW7": {
           "type": "price",
           "settings": {}
@@ -774,6 +785,7 @@
         "text_pCjw83",
         "title_d4zgQE",
         "yotpo_widget_YBJTAy",
+        "boka_purchase_options_h8rLV9",
         "price_T7pXW7",
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
