@@ -1,0 +1,843 @@
+{%- liquid
+  assign selected_variant = product.selected_or_first_available_variant
+  assign first_selling_plan = nil
+  assign first_selling_plan_allocation = nil
+
+  for selling_plan_group in product.selling_plan_groups
+    for selling_plan in selling_plan_group.selling_plans
+      if first_selling_plan == nil
+        assign first_selling_plan = selling_plan
+      endif
+    endfor
+  endfor
+
+  if selected_variant != blank and selected_variant.selling_plan_allocations.size > 0
+    if first_selling_plan != blank
+      for allocation in selected_variant.selling_plan_allocations
+        if allocation.selling_plan.id == first_selling_plan.id
+          assign first_selling_plan_allocation = allocation
+          break
+        endif
+      endfor
+    endif
+
+    if first_selling_plan_allocation == nil
+      assign first_selling_plan_allocation = selected_variant.selling_plan_allocations.first
+    endif
+  endif
+
+  assign initial_savings = 0
+
+  if first_selling_plan_allocation != blank and selected_variant.price > first_selling_plan_allocation.price
+    assign initial_savings = selected_variant.price | minus: first_selling_plan_allocation.price
+  elsif first_selling_plan_allocation != blank and first_selling_plan_allocation.compare_at_price > first_selling_plan_allocation.price
+    assign initial_savings = first_selling_plan_allocation.compare_at_price | minus: first_selling_plan_allocation.price
+  endif
+-%}
+
+{%- if product.selling_plan_groups.size > 0 and selected_variant != blank -%}
+  <div class="boka-purchase-options" data-boka-purchase-options>
+    <input
+      type="hidden"
+      name="selling_plan"
+      value="{% if first_selling_plan_allocation != blank %}{{ first_selling_plan_allocation.selling_plan.id }}{% elsif first_selling_plan != blank %}{{ first_selling_plan.id }}{% endif %}"
+      form="{{ product_form_id }}"
+      data-boka-selling-plan-input
+    >
+
+    <div
+      class="boka-purchase-options__card boka-purchase-options__card--subscribe is-active"
+      data-boka-plan-card="subscribe"
+    >
+      <button
+        type="button"
+        class="boka-purchase-options__card-button"
+        data-boka-plan-option="subscribe"
+        aria-pressed="true"
+      >
+        <span class="boka-purchase-options__radio" aria-hidden="true"></span>
+
+        <span class="boka-purchase-options__content">
+          <span class="boka-purchase-options__top">
+            <span class="boka-purchase-options__header-stack">
+              <span class="boka-purchase-options__badge boka-purchase-options__badge--popular">
+                ✦ Most Popular
+              </span>
+
+              <span class="boka-purchase-options__title">
+                Subscribe &amp; Save 15%
+              </span>
+            </span>
+
+            <span class="boka-purchase-options__savings-badge" data-boka-subscription-saving>
+              {%- if initial_savings > 0 -%}
+                Save {{ initial_savings | money_without_trailing_zeros }} <span>per order</span>
+              {%- else -%}
+                Save 15% <span>per order</span>
+              {%- endif -%}
+            </span>
+          </span>
+
+          <span class="boka-purchase-options__copy">
+            Ships automatically. Pause, skip, or cancel anytime.
+          </span>
+
+          <span class="boka-purchase-options__price" data-boka-subscription-price>
+            {%- if first_selling_plan_allocation != blank -%}
+              {{ first_selling_plan_allocation.price | money }}
+              {%- if selected_variant.price > first_selling_plan_allocation.price -%}
+                <s>{{ selected_variant.price | money }}</s>
+              {%- elsif first_selling_plan_allocation.compare_at_price > first_selling_plan_allocation.price -%}
+                <s>{{ first_selling_plan_allocation.compare_at_price | money }}</s>
+              {%- endif -%}
+            {%- else -%}
+              {{ selected_variant.price | money }}
+            {%- endif -%}
+          </span>
+
+          <span class="boka-purchase-options__perks">
+            <span class="boka-purchase-options__perk">Auto Refills</span>
+            <span class="boka-purchase-options__perk">Skip anytime</span>
+            <span class="boka-purchase-options__perk">Cancel anytime</span>
+          </span>
+        </span>
+      </button>
+
+      <div class="boka-purchase-options__frequency-wrap" data-boka-frequency-wrap>
+        <label class="boka-purchase-options__frequency-label" for="boka-selling-plan-{{ product.id }}-{{ section.id }}">
+          Delivery frequency
+        </label>
+
+        <div class="boka-purchase-options__frequency-select-wrap">
+          <select
+            id="boka-selling-plan-{{ product.id }}-{{ section.id }}"
+            class="boka-purchase-options__frequency-select"
+            data-boka-frequency-select
+            aria-label="Delivery frequency"
+          >
+            {%- assign rendered_plan_count = 0 -%}
+
+            {%- for selling_plan_group in product.selling_plan_groups -%}
+              {%- for selling_plan in selling_plan_group.selling_plans -%}
+                {%- assign rendered_plan_count = rendered_plan_count | plus: 1 -%}
+                {%- assign matching_allocation = nil -%}
+                {%- assign option_savings = 0 -%}
+
+                {%- if selected_variant.selling_plan_allocations.size > 0 -%}
+                  {%- for allocation in selected_variant.selling_plan_allocations -%}
+                    {%- if allocation.selling_plan.id == selling_plan.id -%}
+                      {%- assign matching_allocation = allocation -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if matching_allocation != blank and selected_variant.price > matching_allocation.price -%}
+                  {%- assign option_savings = selected_variant.price | minus: matching_allocation.price -%}
+                {%- elsif matching_allocation != blank and matching_allocation.compare_at_price > matching_allocation.price -%}
+                  {%- assign option_savings = matching_allocation.compare_at_price | minus: matching_allocation.price -%}
+                {%- endif -%}
+
+                <option
+                  value="{{ selling_plan.id }}"
+                  data-selling-plan-price="{% if matching_allocation != blank %}{{ matching_allocation.price | money | escape }}{% else %}{{ selected_variant.price | money | escape }}{% endif %}"
+                  data-selling-plan-compare="{% if matching_allocation != blank and selected_variant.price > matching_allocation.price %}{{ selected_variant.price | money | escape }}{% elsif matching_allocation != blank and matching_allocation.compare_at_price > matching_allocation.price %}{{ matching_allocation.compare_at_price | money | escape }}{% endif %}"
+                  data-selling-plan-saving="{% if option_savings > 0 %}{{ option_savings | money_without_trailing_zeros | escape }}{% endif %}"
+                  {% if first_selling_plan_allocation != blank and matching_allocation != blank and matching_allocation.selling_plan.id == first_selling_plan_allocation.selling_plan.id %}selected{% elsif first_selling_plan_allocation == blank and rendered_plan_count == 1 %}selected{% endif %}
+                >
+                  {{ selling_plan.name }}
+                </option>
+              {%- endfor -%}
+            {%- endfor -%}
+          </select>
+
+          <span class="boka-purchase-options__frequency-chevron" aria-hidden="true">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="boka-purchase-options__card boka-purchase-options__card--onetime"
+      data-boka-plan-card="onetime"
+      data-boka-plan-option="onetime"
+      aria-pressed="false"
+    >
+      <span class="boka-purchase-options__radio" aria-hidden="true"></span>
+
+      <span class="boka-purchase-options__content">
+        <span class="boka-purchase-options__top">
+          <span class="boka-purchase-options__title">One-time purchase</span>
+        </span>
+
+        <span class="boka-purchase-options__copy">
+          Buy once with no discounts or automatic refills.
+        </span>
+
+        <span class="boka-purchase-options__price" data-boka-onetime-price>
+          {{ selected_variant.price | money }}
+        </span>
+      </span>
+    </button>
+
+    <script type="application/json" data-boka-purchase-options-data>
+      {
+        "variants": [
+          {%- for variant in product.variants -%}
+            {
+              "id": {{ variant.id | json }},
+              "price": {{ variant.price | money | json }},
+              "plans": [
+                {%- assign plan_index = 0 -%}
+                {%- for selling_plan_group in product.selling_plan_groups -%}
+                  {%- for selling_plan in selling_plan_group.selling_plans -%}
+                    {%- assign matching_allocation = nil -%}
+                    {%- assign plan_savings = 0 -%}
+
+                    {%- if variant.selling_plan_allocations.size > 0 -%}
+                      {%- for allocation in variant.selling_plan_allocations -%}
+                        {%- if allocation.selling_plan.id == selling_plan.id -%}
+                          {%- assign matching_allocation = allocation -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+
+                    {%- if matching_allocation != blank and variant.price > matching_allocation.price -%}
+                      {%- assign plan_savings = variant.price | minus: matching_allocation.price -%}
+                    {%- elsif matching_allocation != blank and matching_allocation.compare_at_price > matching_allocation.price -%}
+                      {%- assign plan_savings = matching_allocation.compare_at_price | minus: matching_allocation.price -%}
+                    {%- endif -%}
+
+                    {%- if plan_index > 0 -%},{%- endif -%}
+                    {
+                      "id": {{ selling_plan.id | json }},
+                      "name": {{ selling_plan.name | json }},
+                      "price": {% if matching_allocation != blank %}{{ matching_allocation.price | money | json }}{% else %}{{ variant.price | money | json }}{% endif %},
+                      "compare": {% if matching_allocation != blank and variant.price > matching_allocation.price %}{{ variant.price | money | json }}{% elsif matching_allocation != blank and matching_allocation.compare_at_price > matching_allocation.price %}{{ matching_allocation.compare_at_price | money | json }}{% else %}""{% endif %},
+                      "saving": {% if plan_savings > 0 %}{{ plan_savings | money_without_trailing_zeros | json }}{% else %}""{% endif %}
+                    }
+                    {%- assign plan_index = plan_index | plus: 1 -%}
+                  {%- endfor -%}
+                {%- endfor -%}
+              ]
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        ]
+      }
+    </script>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.currentScript.previousElementSibling;
+      if (!root || root.dataset.initialized === 'true') return;
+      root.dataset.initialized = 'true';
+
+      const input = root.querySelector('[data-boka-selling-plan-input]');
+      const planCards = [...root.querySelectorAll('[data-boka-plan-card]')];
+      const planButtons = [...root.querySelectorAll('[data-boka-plan-option]')];
+      const frequencySelect = root.querySelector('[data-boka-frequency-select]');
+      const subscriptionPrice = root.querySelector('[data-boka-subscription-price]');
+      const subscriptionSaving = root.querySelector('[data-boka-subscription-saving]');
+      const oneTimePrice = root.querySelector('[data-boka-onetime-price]');
+      const dataScript = root.querySelector('[data-boka-purchase-options-data]');
+
+      let variantData = { variants: [] };
+
+      try {
+        variantData = JSON.parse(dataScript?.textContent || '{"variants":[]}');
+      } catch (error) {
+        console.warn('Boka purchase options: unable to parse variant selling plan data', error);
+      }
+
+      const formId = root.querySelector('[form]')?.getAttribute('form');
+      const form = formId ? document.getElementById(formId) : root.closest('form');
+      const getVariantInput = () => form ? form.querySelector('[name="id"]') : null;
+
+      let currentVariantId = getVariantInput()?.value || null;
+
+      const getVariantById = (variantId) => {
+        return variantData.variants.find((variant) => String(variant.id) === String(variantId));
+      };
+
+      const getSelectedFrequencyOption = () => {
+        return frequencySelect ? frequencySelect.options[frequencySelect.selectedIndex] : null;
+      };
+
+      const renderPrice = (price, compare) => {
+        return compare ? `${price} <s>${compare}</s>` : price;
+      };
+
+      const updateSubscriptionPrice = () => {
+        const selectedOption = getSelectedFrequencyOption();
+        if (!subscriptionPrice || !selectedOption) return;
+
+        const price = selectedOption.dataset.sellingPlanPrice;
+        const compare = selectedOption.dataset.sellingPlanCompare;
+        const saving = selectedOption.dataset.sellingPlanSaving;
+
+        if (price) {
+          subscriptionPrice.innerHTML = renderPrice(price, compare);
+        }
+
+        if (subscriptionSaving) {
+          subscriptionSaving.innerHTML = saving
+            ? `Save ${saving} <span>per order</span>`
+            : `Save 15% <span>per order</span>`;
+        }
+      };
+
+      const rebuildFrequencyOptions = (variant) => {
+        if (!frequencySelect || !variant || !Array.isArray(variant.plans)) return;
+
+        const previousPlanId = frequencySelect.value;
+        frequencySelect.innerHTML = '';
+
+        variant.plans.forEach((plan) => {
+          const option = document.createElement('option');
+          option.value = plan.id;
+          option.textContent = plan.name;
+          option.dataset.sellingPlanPrice = plan.price || variant.price || '';
+          option.dataset.sellingPlanCompare = plan.compare || '';
+          option.dataset.sellingPlanSaving = plan.saving || '';
+          frequencySelect.appendChild(option);
+        });
+
+        if (previousPlanId && [...frequencySelect.options].some((option) => option.value === previousPlanId)) {
+          frequencySelect.value = previousPlanId;
+        } else if (frequencySelect.options.length > 0) {
+          frequencySelect.selectedIndex = 0;
+        }
+      };
+
+      const updateForVariant = (variantId) => {
+        const variant = getVariantById(variantId);
+        if (!variant) return;
+
+        currentVariantId = String(variantId);
+
+        if (oneTimePrice && variant.price) {
+          oneTimePrice.textContent = variant.price;
+        }
+
+        rebuildFrequencyOptions(variant);
+
+        const isSubscribeActive = root.querySelector('[data-boka-plan-card="subscribe"]')?.classList.contains('is-active');
+
+        if (input && isSubscribeActive) {
+          input.disabled = false;
+          input.value = frequencySelect ? frequencySelect.value : '';
+        }
+
+        updateSubscriptionPrice();
+      };
+
+      const setActivePlan = (type) => {
+        planCards.forEach((card) => {
+          card.classList.toggle('is-active', card.dataset.bokaPlanCard === type);
+        });
+
+        planButtons.forEach((button) => {
+          const isActive = button.dataset.bokaPlanOption === type;
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
+        if (!input) return;
+
+        if (type === 'subscribe') {
+          input.disabled = false;
+          input.value = frequencySelect ? frequencySelect.value : '';
+          updateSubscriptionPrice();
+        } else {
+          input.value = '';
+          input.disabled = true;
+        }
+      };
+
+      planButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          setActivePlan(button.dataset.bokaPlanOption);
+        });
+      });
+
+      if (frequencySelect) {
+        frequencySelect.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
+
+        frequencySelect.addEventListener('change', () => {
+          setActivePlan('subscribe');
+        });
+      }
+
+      if (form) {
+        form.addEventListener('change', () => {
+          const nextVariantId = getVariantInput()?.value;
+
+          if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
+            updateForVariant(nextVariantId);
+          }
+        });
+
+        form.addEventListener('input', () => {
+          const nextVariantId = getVariantInput()?.value;
+
+          if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
+            updateForVariant(nextVariantId);
+          }
+        });
+      }
+
+      document.addEventListener('variant:change', (event) => {
+        const variantId = event.detail?.variant?.id || event.detail?.id;
+
+        if (variantId) {
+          updateForVariant(variantId);
+        }
+      });
+
+      setInterval(() => {
+        const nextVariantId = getVariantInput()?.value;
+
+        if (nextVariantId && String(nextVariantId) !== String(currentVariantId)) {
+          updateForVariant(nextVariantId);
+        }
+      }, 250);
+
+      updateForVariant(currentVariantId);
+      setActivePlan('subscribe');
+    })();
+  </script>
+
+  <style>
+    .boka-purchase-options {
+      --boka-card-bg: #FAFAF5;
+      --boka-card-border: #D7D2C8;
+      --boka-card-text: #222721;
+      --boka-active-bg: #F7FCF0;
+      --boka-active-border: #9EBD7F;
+      --boka-muted-text: rgba(34, 39, 33, 0.68);
+      --boka-badge-bg: #24452F;
+      --boka-badge-text: #FAFAF5;
+      --boka-pill-bg: #E6F4D4;
+      --boka-pill-border: #D7EAC5;
+
+      display: grid;
+      gap: 0.85rem;
+      width: 100%;
+    }
+
+    .boka-purchase-options,
+    .boka-purchase-options * {
+      box-sizing: border-box;
+    }
+
+    .boka-purchase-options__card {
+      width: 100%;
+      border: 1px solid var(--boka-card-border);
+      border-radius: 18px;
+      background: var(--boka-card-bg);
+      color: var(--boka-card-text);
+      text-align: left;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .boka-purchase-options__card.is-active {
+      border-color: var(--boka-active-border);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(230, 244, 212, 0.85), transparent 42%),
+        var(--boka-active-bg);
+      box-shadow: 0 14px 34px rgba(34, 39, 33, 0.08);
+    }
+
+    .boka-purchase-options__card-button {
+      width: 100%;
+      padding: 18px 18px 0;
+      display: flex;
+      gap: 0.85rem;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .boka-purchase-options__card--onetime {
+      padding: 18px;
+      display: flex;
+      gap: 0.85rem;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .boka-purchase-options__card--onetime:not(.is-active) {
+      background: var(--boka-card-bg);
+      border-color: var(--boka-card-border);
+      box-shadow: none;
+    }
+
+    .boka-purchase-options__radio {
+      width: 20px;
+      height: 20px;
+      border: 1.5px solid var(--boka-card-text);
+      border-radius: 999px;
+      margin-top: 34px;
+      flex: 0 0 20px;
+      background: transparent;
+    }
+
+    .boka-purchase-options__card--onetime .boka-purchase-options__radio {
+      margin-top: 2px;
+    }
+
+    .boka-purchase-options__card.is-active .boka-purchase-options__radio {
+      background: var(--boka-card-text);
+      box-shadow: inset 0 0 0 5px var(--boka-active-bg);
+    }
+
+    .boka-purchase-options__card--onetime.is-active .boka-purchase-options__radio {
+      box-shadow: inset 0 0 0 5px var(--boka-active-bg);
+    }
+
+    .boka-purchase-options__content {
+      display: grid;
+      gap: 0.55rem;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .boka-purchase-options__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .boka-purchase-options__header-stack {
+      display: grid;
+      gap: 0.7rem;
+      min-width: 0;
+    }
+
+    .boka-purchase-options__title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .boka-purchase-options__badge {
+      width: max-content;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .boka-purchase-options__badge--popular {
+      padding: 0.45rem 0.75rem;
+      background: var(--boka-badge-bg);
+      color: var(--boka-badge-text);
+      font-size: 0.68rem;
+    }
+
+    .boka-purchase-options__savings-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 86px;
+      padding: 0.6rem 0.7rem;
+      border: 1px solid var(--boka-pill-border);
+      border-radius: 10px;
+      background: var(--boka-pill-bg);
+      color: #24452F;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.15;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .boka-purchase-options__savings-badge span {
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .boka-purchase-options__copy {
+      max-width: 360px;
+      font-size: 0.92rem;
+      color: var(--boka-muted-text);
+      line-height: 1.4;
+    }
+
+    .boka-purchase-options__price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.55rem;
+      color: var(--boka-card-text);
+      font-weight: 800;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .boka-purchase-options__price s {
+      color: var(--boka-muted-text);
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.55;
+      letter-spacing: 0;
+    }
+
+    .boka-purchase-options__perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.15rem;
+    }
+
+    .boka-purchase-options__perk {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.38rem 0.62rem;
+      border-radius: 999px;
+      background: var(--boka-pill-bg);
+      color: #24452F;
+      font-size: 0.74rem;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .boka-purchase-options__frequency-wrap {
+      padding: 1rem 18px 18px 52px;
+      display: grid;
+      gap: 0.55rem;
+      background: transparent;
+    }
+
+    .boka-purchase-options__frequency-label {
+      font-size: 0.8rem;
+      color: var(--boka-card-text);
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .boka-purchase-options__frequency-select-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .boka-purchase-options__frequency-select {
+      width: 100%;
+      min-height: 48px;
+      padding: 11px 44px 11px 14px;
+      border: 1px solid rgba(34, 39, 33, 0.45);
+      border-radius: 10px;
+      background: #fffef9;
+      color: var(--boka-card-text);
+      font: inherit;
+      font-size: 0.93rem;
+      line-height: 1.2;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .boka-purchase-options__frequency-select:hover,
+    .boka-purchase-options__frequency-select:focus {
+      border-color: rgba(34, 39, 33, 0.8);
+    }
+
+    .boka-purchase-options__frequency-select:focus {
+      outline: 2px solid rgba(158, 189, 127, 0.35);
+      outline-offset: 2px;
+    }
+
+    .boka-purchase-options__frequency-chevron {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .boka-purchase-options__card--onetime .boka-purchase-options__content {
+      gap: 0.45rem;
+    }
+
+    .boka-purchase-options__card--onetime .boka-purchase-options__title {
+      font-size: 1rem;
+    }
+
+    .boka-purchase-options__card--onetime .boka-purchase-options__price {
+      margin-top: 0.15rem;
+      font-size: 1.22rem;
+    }
+
+    .boka-purchase-options__savings-badge br {
+      display: none !important;
+    }
+
+    .boka-purchase-options__savings-badge span {
+      display: inline !important;
+      margin-left: 4px;
+    }
+
+    @media screen and (max-width: 699px) {
+      .boka-purchase-options {
+        max-width: 560px;
+        margin-inline: auto;
+        gap: 0.75rem;
+      }
+
+      .boka-purchase-options__card {
+        border-radius: 20px;
+      }
+
+      .boka-purchase-options__card-button,
+      .boka-purchase-options__card--onetime {
+        padding: 16px;
+        gap: 0.65rem;
+        align-items: flex-start;
+      }
+
+      .boka-purchase-options__card-button {
+        padding-bottom: 0;
+      }
+
+      .boka-purchase-options__radio {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+        margin-top: 4px;
+      }
+
+      .boka-purchase-options__content {
+        text-align: left;
+      }
+
+      .boka-purchase-options__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .boka-purchase-options__header-stack {
+        gap: 0.55rem;
+      }
+
+      .boka-purchase-options__badge--popular {
+        padding: 0.4rem 0.65rem;
+        font-size: 0.63rem;
+      }
+
+      .boka-purchase-options__title {
+        font-size: 1.05rem;
+        line-height: 1.15;
+        max-width: 210px;
+      }
+
+      .boka-purchase-options__savings-badge {
+        flex: 0 0 auto;
+        min-width: auto;
+        padding: 0.45rem 0.58rem;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        line-height: 1.1;
+        white-space: nowrap;
+      }
+
+      .boka-purchase-options__savings-badge br {
+        display: none !important;
+      }
+
+      .boka-purchase-options__savings-badge span {
+        display: inline !important;
+        margin-left: 4px;
+        font-size: 0.68rem;
+      }
+
+      .boka-purchase-options__copy {
+        font-size: 0.86rem;
+        line-height: 1.35;
+      }
+
+      .boka-purchase-options__price {
+        font-size: 1.45rem;
+        line-height: 1.1;
+      }
+
+      .boka-purchase-options__price s {
+        font-size: 0.9rem;
+      }
+
+      .boka-purchase-options__perks {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.35rem;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .boka-purchase-options__perks::-webkit-scrollbar {
+        display: none;
+      }
+
+      .boka-purchase-options__perk {
+        flex: 0 0 auto;
+        padding: 0.34rem 0.5rem;
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+
+      .boka-purchase-options__frequency-wrap {
+        padding: 0.85rem 16px 16px 40px;
+        gap: 0.5rem;
+      }
+
+      .boka-purchase-options__frequency-label {
+        font-size: 0.82rem;
+      }
+
+      .boka-purchase-options__frequency-select {
+        min-height: 46px;
+        padding: 10px 40px 10px 13px;
+        border-radius: 14px;
+        font-size: 0.88rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .boka-purchase-options__card--onetime .boka-purchase-options__title {
+        max-width: none;
+        font-size: 1.05rem;
+      }
+
+      .boka-purchase-options__card--onetime .boka-purchase-options__price {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+{%- endif -%}
