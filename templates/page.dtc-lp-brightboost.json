@@ -697,10 +697,6 @@
             "yotpo_scroll_target": "shopify-section-template--17740738527275__yotpo_reviews_widget_kWhWWh"
           }
         },
-        "boka_purchase_options_h8rLV9": {
-          "type": "boka_purchase_options",
-          "settings": {}
-        },
         "price_T7pXW7": {
           "type": "price",
           "settings": {}
@@ -714,6 +710,10 @@
         },
         "quantity_selector_CharbJ": {
           "type": "quantity_selector",
+          "settings": {}
+        },
+        "boka_purchase_options_h8rLV9": {
+          "type": "boka_purchase_options",
           "settings": {}
         },
         "buy_buttons_j3VN3h": {
@@ -785,10 +785,10 @@
         "text_pCjw83",
         "title_d4zgQE",
         "yotpo_widget_YBJTAy",
-        "boka_purchase_options_h8rLV9",
         "price_T7pXW7",
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
+        "boka_purchase_options_h8rLV9",
         "buy_buttons_j3VN3h",
         "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB",
         "description_9m494J",
