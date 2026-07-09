@@ -290,7 +290,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "nano-hydroxyapatite_n-ha_toothpaste",
-            "image": "shopify://shop_images/Boka_Homepage_PLP_Toothpaste_320x310_ec97aedc-afa7-484f-8101-33264d28481e.jpg",
+            "image": "shopify://shop_images/ela_mint_hero_banner.webp",
             "custom_title": "TOOTHPASTE"
           }
         },
@@ -314,7 +314,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "mouthwash",
-            "image": "shopify://shop_images/Homepage_Liquid-Mouthwash_Mobile_Option-1.jpg",
+            "image": "shopify://shop_images/boka-renew-alcohol-free-moutwash-free-of.webp",
             "custom_title": "MOUTHWASH"
           }
         },
@@ -322,7 +322,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "boka-probiotics",
-            "image": "shopify://shop_images/Collection_Banner.webp",
+            "image": "shopify://shop_images/Probiotics_HP_Mobile.webp",
             "custom_title": "BOKA PROBIOTICS"
           }
         }
