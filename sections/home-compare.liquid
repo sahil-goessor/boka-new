@@ -1,0 +1,509 @@
+<section
+  class="boka-science-icons"
+  id="boka-science-icons-{{ section.id }}"
+  style="
+    --boka-bg: {{ section.settings.background_color }};
+    --boka-text: {{ section.settings.text_color }};
+    --boka-muted: {{ section.settings.muted_text_color }};
+    --boka-button-bg: {{ section.settings.button_background }};
+    --boka-button-text: {{ section.settings.button_text_color }};
+    --boka-button-radius: {{ section.settings.button_corner_radius }}px;
+    --boka-icon-size: {{ section.settings.icon_size }}px;
+  "
+>
+  <div class="boka-science-icons__inner">
+    <div class="boka-science-icons__copy">
+      {% if section.settings.heading != blank %}
+        <h2 class="boka-science-icons__heading">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.copy != blank %}
+        <div class="boka-science-icons__text">
+          {{ section.settings.copy }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.stars_text != blank or section.settings.rating_text != blank %}
+        <div class="boka-science-icons__rating">
+          {% if section.settings.stars_text != blank %}
+            <span>{{ section.settings.stars_text }}</span>
+          {% endif %}
+
+          {% if section.settings.rating_text != blank %}
+            <span>{{ section.settings.rating_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if section.settings.button_text != blank %}
+        <a
+          class="boka-science-icons__button"
+          href="{{ section.settings.button_link | default: '/pages/science' }}"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    {% if section.blocks.size > 0 %}
+      <div class="boka-science-icons__grid" role="list">
+        {% for block in section.blocks %}
+          <div class="boka-science-icons__item" role="listitem" {{ block.shopify_attributes }}>
+            {% if block.settings.icon != blank %}
+              <div class="boka-science-icons__icon">
+                {{
+                  block.settings.icon
+                  | image_url: width: 400
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '90, 120, 160, 220, 320, 400',
+                    sizes: '(max-width: 749px) 90px, 160px',
+                    class: 'boka-science-icons__icon-image',
+                    alt: block.settings.title
+                }}
+              </div>
+            {% elsif section.settings.show_placeholder_icons %}
+              <div class="boka-science-icons__icon boka-science-icons__icon--placeholder">
+                <span>{{ block.settings.placeholder_text | default: '✓' }}</span>
+              </div>
+            {% endif %}
+
+            {% if block.settings.title != blank %}
+              <h3 class="boka-science-icons__item-title">
+                {{ block.settings.title | escape }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <div class="boka-science-icons__item-text">
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  #boka-science-icons-{{ section.id }} {
+    background: var(--boka-bg);
+    color: var(--boka-text);
+  }
+
+  #boka-science-icons-{{ section.id }} *,
+  #boka-science-icons-{{ section.id }} *::before,
+  #boka-science-icons-{{ section.id }} *::after {
+    box-sizing: border-box;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__inner {
+    width: min(100% - 72px, 1900px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(320px, 0.75fr) minmax(620px, 1.25fr);
+    align-items: center;
+    gap: clamp(56px, 7vw, 120px);
+    padding: clamp(64px, 8vw, 130px) 0;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__copy {
+    max-width: 680px;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__heading {
+    margin: 0;
+    color: var(--boka-text);
+    font-size: clamp(36px, 3.1vw, 58px);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    font-weight: 400;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__heading em,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__heading i {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__text {
+    max-width: 660px;
+    margin: 38px 0 0;
+    color: var(--boka-muted);
+    font-size: clamp(18px, 1.25vw, 26px);
+    line-height: 1.45;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__text p {
+    margin: 0;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    margin: 56px 0 0;
+    color: var(--boka-text);
+    font-size: clamp(15px, 1vw, 20px);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button:link,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button:visited,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button:hover,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button:focus,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button:active {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 665px);
+    min-height: 86px;
+    margin-top: 42px;
+    padding: 20px 32px;
+    border: 1px solid var(--boka-button-bg) !important;
+    border-radius: var(--boka-button-radius);
+    background: var(--boka-button-bg) !important;
+    color: var(--boka-button-text) !important;
+    -webkit-text-fill-color: var(--boka-button-text) !important;
+    font-size: clamp(13px, 0.95vw, 18px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    opacity: 1 !important;
+    box-shadow: none !important;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button::before,
+  #boka-science-icons-{{ section.id }} .boka-science-icons__button::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(54px, 6vw, 130px);
+    row-gap: clamp(54px, 5vw, 95px);
+    align-items: start;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__item {
+    min-width: 0;
+    text-align: center;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__icon {
+    width: var(--boka-icon-size);
+    height: var(--boka-icon-size);
+    margin: 0 auto 28px;
+    display: grid;
+    place-items: center;
+    color: var(--boka-text);
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__icon-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__icon--placeholder {
+    border: 3px solid var(--boka-text);
+    border-radius: 999px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__item-title {
+    margin: 0;
+    color: var(--boka-text);
+    font-size: clamp(18px, 1.35vw, 30px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__item-text {
+    margin-top: 8px;
+    color: var(--boka-muted);
+    font-size: clamp(14px, 0.9vw, 16px);
+    line-height: 1.5;
+  }
+
+  #boka-science-icons-{{ section.id }} .boka-science-icons__item-text p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 989px) {
+    #boka-science-icons-{{ section.id }} .boka-science-icons__inner {
+      width: min(100% - 32px, 720px);
+      grid-template-columns: 1fr;
+      gap: 46px;
+      padding: 52px 0 64px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__copy {
+      max-width: 100%;
+      text-align: left;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__heading {
+      font-size: clamp(38px, 10vw, 54px);
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__text {
+      margin-top: 22px;
+      font-size: 17px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__rating {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__button,
+    #boka-science-icons-{{ section.id }} .boka-science-icons__button:link,
+    #boka-science-icons-{{ section.id }} .boka-science-icons__button:visited,
+    #boka-science-icons-{{ section.id }} .boka-science-icons__button:hover,
+    #boka-science-icons-{{ section.id }} .boka-science-icons__button:focus,
+    #boka-science-icons-{{ section.id }} .boka-science-icons__button:active {
+      width: 100%;
+      min-height: 58px;
+      margin-top: 24px;
+      padding: 16px 22px;
+      font-size: 13px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 28px;
+      row-gap: 38px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__icon {
+      width: min(var(--boka-icon-size), 104px);
+      height: min(var(--boka-icon-size), 104px);
+      margin-bottom: 16px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__item-title {
+      font-size: 17px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    #boka-science-icons-{{ section.id }} .boka-science-icons__inner {
+      width: calc(100% - 28px);
+      padding: 44px 0 56px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__heading {
+      font-size: 38px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__grid {
+      gap: 34px 18px;
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__icon {
+      width: min(var(--boka-icon-size), 90px);
+      height: min(var(--boka-icon-size), 90px);
+    }
+
+    #boka-science-icons-{{ section.id }} .boka-science-icons__item-title {
+      font-size: 15px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Boka science icon grid",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What makes our toothpaste <em>different?</em>"
+    },
+    {
+      "type": "richtext",
+      "id": "copy",
+      "label": "Copy",
+      "default": "<p>Keep brushing like usual with a fluoride-free toothpaste that features Nano-hydroxyapatite, or n-Ha, a breakthrough material inspired by nature and backed by science.</p>"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "stars_text",
+      "label": "Stars text",
+      "default": "★★★★★ 4.6 stars from 950,000+ customers"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "rating_text",
+      "label": "Additional rating text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Our Science"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "button_corner_radius",
+      "label": "Button corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 80,
+      "max": 220,
+      "step": 10,
+      "unit": "px",
+      "default": 160
+    },
+    {
+      "type": "checkbox",
+      "id": "show_placeholder_icons",
+      "label": "Show placeholder icons when no image is selected",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f9e5db"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#202720"
+    },
+    {
+      "type": "color",
+      "id": "muted_text_color",
+      "label": "Muted text color",
+      "default": "#5b6159"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#202720"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_item",
+      "name": "Icon item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "placeholder_text",
+          "label": "Placeholder text",
+          "default": "✓"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Optional text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Boka science icon grid",
+      "blocks": [
+        {
+          "type": "icon_item",
+          "settings": {
+            "title": "Fluoride-free",
+            "placeholder_text": "F"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "title": "SLS-free",
+            "placeholder_text": "SLS"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "title": "Paraben-free",
+            "placeholder_text": "P"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "title": "Vegan",
+            "placeholder_text": "V"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "title": "n-Ha Formulas",
+            "placeholder_text": "+"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "title": "Backed by Science",
+            "placeholder_text": "⚗"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
