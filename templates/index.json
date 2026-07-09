@@ -359,48 +359,88 @@
         "padding_bottom_mobile": 20
       }
     },
-    "custom_liquid_Pw6kPw": {
-      "type": "custom-liquid",
-      "custom_css": [
-        ".subscribe-btn {color: #ffffff !important; background-color: #000000 !important;}"
-      ],
-      "name": "Custom Liquid - Subscriptions",
-      "settings": {
-        "custom_liquid": "<section class=\"boka-subscribe-hero\">\n  <div class=\"boka-subscribe-hero__inner\">\n    <div class=\"boka-subscribe-hero__image\">\n      <img \n        src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Happy_Smiles-Big_Savings.webp?v=1763703089\" \n        alt=\"Happy smiles, big savings subscription image\" \n        loading=\"lazy\"\n      >\n    </div>\n\n    <div class=\"boka-subscribe-hero__content\">\n      <p class=\"boka-subscribe-hero__eyebrow\">Subscribe &amp; Save</p>\n\n      <h2 class=\"boka-subscribe-hero__heading\">\n        Keep Your Routine <em>Stocked</em> and Save 15%\n      </h2>\n\n      <p class=\"boka-subscribe-hero__text\">\n        Get your Boka essentials delivered right when you need them. Save 15% on every shipment, enjoy subscriber perks, and easily swap, pause, or cancel anytime.\n      </p>\n\n      <div class=\"boka-subscribe-hero__benefits\">\n        <div class=\"boka-subscribe-hero__benefit\">\n          <img \n            src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Icon_1.webp?v=1763703368\" \n            alt=\"Save 15%\" \n            loading=\"lazy\"\n          >\n          <span>Save 15% every order</span>\n        </div>\n\n        <div class=\"boka-subscribe-hero__benefit\">\n          <img \n            src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Icon_2.webp?v=1763703368\" \n            alt=\"Subscriber rewards\" \n            loading=\"lazy\"\n          >\n          <span>Exclusive subscriber rewards</span>\n        </div>\n\n        <div class=\"boka-subscribe-hero__benefit\">\n          <img \n            src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Icon_3.webp?v=1763703368\" \n            alt=\"Manage subscription\" \n            loading=\"lazy\"\n          >\n          <span>Swap, pause, or cancel anytime</span>\n        </div>\n      </div>\n\n      <div class=\"boka-subscribe-hero__actions\">\n        <a href=\"/collections/subscription-favs\" class=\"boka-subscribe-hero__button\">\n          Shop Subscriptions\n        </a>\n\n        <span class=\"boka-subscribe-hero__note\">\n          Flexible deliveries. No commitment.\n        </span>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n  .boka-subscribe-hero {\n    background: #e6f4d4;\n    color: rgb(34 39 33);\n    padding: 0;\n  }\n\n  .boka-subscribe-hero__inner {\n    width: min(1200px, calc(100% - 40px));\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);\n    align-items: center;\n    gap: clamp(36px, 5vw, 76px);\n    padding: clamp(42px, 6vw, 88px) 0;\n  }\n\n  .boka-subscribe-hero__image {\n    order: 2;\n    overflow: hidden;\n    border-radius: 28px;\n    background: #f4f1e8;\n  }\n\n  .boka-subscribe-hero__image img {\n    display: block;\n    width: 100%;\n    height: auto;\n    object-fit: cover;\n  }\n\n  .boka-subscribe-hero__content {\n    order: 1;\n    max-width: 640px;\n    text-align: left;\n  }\n\n  .boka-subscribe-hero__eyebrow {\n    margin: 0 0 16px;\n    color: rgb(34 39 33 / 0.68);\n    font-size: clamp(12px, 0.78vw, 14px);\n    font-weight: 700;\n    letter-spacing: 0.18em;\n    line-height: 1.2;\n    text-transform: uppercase;\n  }\n\n  .boka-subscribe-hero__heading {\n    margin: 0;\n    color: rgb(34 39 33);\n    font-size: clamp(44px, 5vw, 76px);\n    line-height: 0.95;\n    letter-spacing: -0.05em;\n    font-weight: 400;\n  }\n\n  .boka-subscribe-hero__heading em {\n    font-style: italic;\n    font-weight: inherit;\n  }\n\n  .boka-subscribe-hero__text {\n    max-width: 560px;\n    margin: 24px 0 0;\n    color: rgb(34 39 33 / 0.82);\n    font-size: clamp(16px, 1.08vw, 20px);\n    line-height: 1.45;\n  }\n\n  .boka-subscribe-hero__benefits {\n    display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 12px;\n    margin-top: 34px;\n  }\n\n  .boka-subscribe-hero__benefit {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 10px;\n    min-width: 0;\n    padding: 16px;\n    border: 1px solid rgb(34 39 33 / 0.14);\n    border-radius: 18px;\n    background: rgb(255 255 255 / 0.42);\n  }\n\n  .boka-subscribe-hero__benefit img {\n    width: 42px;\n    height: 42px;\n    object-fit: contain;\n  }\n\n  .boka-subscribe-hero__benefit span {\n    color: rgb(34 39 33);\n    font-size: 14px;\n    line-height: 1.25;\n    font-weight: 700;\n    letter-spacing: -0.01em;\n  }\n\n  .boka-subscribe-hero__actions {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: 18px;\n    margin-top: 34px;\n  }\n\n  .boka-subscribe-hero__button,\n  .boka-subscribe-hero__button:link,\n  .boka-subscribe-hero__button:visited,\n  .boka-subscribe-hero__button:hover,\n  .boka-subscribe-hero__button:focus,\n  .boka-subscribe-hero__button:active {\n    appearance: none;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    min-width: 230px;\n    min-height: 58px;\n    padding: 16px 28px;\n    border: 1px solid #000000 !important;\n    border-radius: 10px;\n    background: #000000 !important;\n    color: #ffffff !important;\n    -webkit-text-fill-color: #ffffff !important;\n    font-size: clamp(12px, 0.8vw, 14px);\n    font-weight: 700;\n    letter-spacing: 0.075em;\n    line-height: 1;\n    text-align: center;\n    text-decoration: none !important;\n    text-transform: uppercase;\n    opacity: 1 !important;\n    box-shadow: none !important;\n  }\n\n  .boka-subscribe-hero__button::before,\n  .boka-subscribe-hero__button::after {\n    display: none !important;\n    content: none !important;\n  }\n\n  .boka-subscribe-hero__note {\n    color: rgb(34 39 33 / 0.68);\n    font-size: 14px;\n    line-height: 1.35;\n  }\n\n  @media screen and (max-width: 989px) {\n    .boka-subscribe-hero__inner {\n      width: min(100% - 32px, 720px);\n      grid-template-columns: 1fr;\n      gap: 30px;\n      padding: 44px 0 52px;\n    }\n\n    .boka-subscribe-hero__image {\n      order: 1;\n      border-radius: 22px;\n    }\n\n    .boka-subscribe-hero__content {\n      order: 2;\n      max-width: 100%;\n      text-align: left;\n    }\n\n    .boka-subscribe-hero__heading {\n      font-size: clamp(38px, 10vw, 56px);\n    }\n\n    .boka-subscribe-hero__benefits {\n      grid-template-columns: 1fr;\n      gap: 10px;\n      margin-top: 28px;\n    }\n\n    .boka-subscribe-hero__benefit {\n      flex-direction: row;\n      align-items: center;\n      padding: 14px;\n    }\n\n    .boka-subscribe-hero__benefit img {\n      width: 38px;\n      height: 38px;\n      flex-shrink: 0;\n    }\n\n    .boka-subscribe-hero__actions {\n      align-items: stretch;\n      gap: 12px;\n      margin-top: 28px;\n    }\n\n    .boka-subscribe-hero__button,\n    .boka-subscribe-hero__button:link,\n    .boka-subscribe-hero__button:visited,\n    .boka-subscribe-hero__button:hover,\n    .boka-subscribe-hero__button:focus,\n    .boka-subscribe-hero__button:active {\n      width: 100%;\n      min-height: 52px;\n      padding: 15px 20px;\n      font-size: 12px;\n    }\n\n    .boka-subscribe-hero__note {\n      width: 100%;\n      text-align: center;\n    }\n  }\n\n  @media screen and (max-width: 420px) {\n    .boka-subscribe-hero__inner {\n      width: calc(100% - 28px);\n      padding: 38px 0 44px;\n    }\n\n    .boka-subscribe-hero__heading {\n      font-size: 38px;\n    }\n\n    .boka-subscribe-hero__text {\n      margin-top: 18px;\n      font-size: 16px;\n    }\n  }\n</style>",
-        "color_scheme": "background-1",
-        "custom_background_color": "#fafaf5",
-        "custom_text_color": "#fafaf5",
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
-    },
-    "1761582983a017a1e7": {
-      "type": "apps",
+    "home_compare_8Yi6WK": {
+      "type": "home-compare",
       "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
-          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+        "icon_item_kxytkY": {
+          "type": "icon_item",
           "settings": {
-            "publishId": "ult1uqdfdzl9f"
+            "icon": "shopify://shop_images/Fluoride-Free_Claims.png",
+            "placeholder_text": "F",
+            "title": "Fluoride-free",
+            "text": ""
+          }
+        },
+        "icon_item_V9GA6c": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/BOKA_IconSet_General_1__4.png",
+            "placeholder_text": "SLS",
+            "title": "SLS-free",
+            "text": ""
+          }
+        },
+        "icon_item_nFE8V9": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/BOKA_IconSet_General_1__3.png",
+            "placeholder_text": "P",
+            "title": "Paraben-free",
+            "text": ""
+          }
+        },
+        "icon_item_FE9bed": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/BOKA_IconSet_General_1__1.png",
+            "placeholder_text": "V",
+            "title": "Vegan",
+            "text": ""
+          }
+        },
+        "icon_item_Ew83qG": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/BOKA_IconSet_General_1__17.png",
+            "placeholder_text": "+",
+            "title": "n-Ha Formulas",
+            "text": ""
+          }
+        },
+        "icon_item_EmdFRq": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/Dentist-_Formulated_Claims.png",
+            "placeholder_text": "⚗",
+            "title": "Backed by Science",
+            "text": ""
           }
         }
       },
       "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_gife6h"
+        "icon_item_kxytkY",
+        "icon_item_V9GA6c",
+        "icon_item_nFE8V9",
+        "icon_item_FE9bed",
+        "icon_item_Ew83qG",
+        "icon_item_EmdFRq"
       ],
-      "name": "Apps - Tolstoy",
+      "name": "Boka science icon grid",
       "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
+        "heading": "What makes our toothpaste <em>different?</em>",
+        "copy": "<p>Keep brushing like usual with a fluoride-free toothpaste that features Nano-hydroxyapatite, or n-Ha, a breakthrough material inspired by nature and backed by science.</p>",
+        "stars_text": "★★★★★ 4.6 stars from 950,000+ customers",
+        "rating_text": "",
+        "button_text": "Our Science",
+        "button_link": "",
+        "button_corner_radius": 12,
+        "icon_size": 160,
+        "show_placeholder_icons": true,
+        "background_color": "#f9e5db",
+        "text_color": "#202720",
+        "muted_text_color": "#5b6159",
+        "button_background": "#202720",
+        "button_text_color": "#ffffff"
       }
     },
     "multicolumn_BWCRzU": {
@@ -463,6 +503,50 @@
         "padding_bottom_mobile": 0
       }
     },
+    "1761582983a017a1e7": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "ult1uqdfdzl9f"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_gife6h"
+      ],
+      "name": "Apps - Tolstoy",
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "custom_liquid_Pw6kPw": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".subscribe-btn {color: #ffffff !important; background-color: #000000 !important;}"
+      ],
+      "name": "Custom Liquid - Subscriptions",
+      "settings": {
+        "custom_liquid": "<section class=\"boka-subscribe-hero\">\n  <div class=\"boka-subscribe-hero__inner\">\n    <div class=\"boka-subscribe-hero__image\">\n      <img \n        src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Happy_Smiles-Big_Savings.webp?v=1763703089\" \n        alt=\"Happy smiles, big savings subscription image\" \n        loading=\"lazy\"\n      >\n    </div>\n\n    <div class=\"boka-subscribe-hero__content\">\n      <p class=\"boka-subscribe-hero__eyebrow\">Subscribe &amp; Save</p>\n\n      <h2 class=\"boka-subscribe-hero__heading\">\n        Keep Your Routine <em>Stocked</em> and Save 15%\n      </h2>\n\n      <p class=\"boka-subscribe-hero__text\">\n        Get your Boka essentials delivered right when you need them. Save 15% on every shipment, enjoy subscriber perks, and easily swap, pause, or cancel anytime.\n      </p>\n\n      <div class=\"boka-subscribe-hero__benefits\">\n        <div class=\"boka-subscribe-hero__benefit\">\n          <img \n            src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Icon_1.webp?v=1763703368\" \n            alt=\"Save 15%\" \n            loading=\"lazy\"\n          >\n          <span>Save 15% every order</span>\n        </div>\n\n        <div class=\"boka-subscribe-hero__benefit\">\n          <img \n            src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Icon_2.webp?v=1763703368\" \n            alt=\"Subscriber rewards\" \n            loading=\"lazy\"\n          >\n          <span>Exclusive subscriber rewards</span>\n        </div>\n\n        <div class=\"boka-subscribe-hero__benefit\">\n          <img \n            src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/Icon_3.webp?v=1763703368\" \n            alt=\"Manage subscription\" \n            loading=\"lazy\"\n          >\n          <span>Swap, pause, or cancel anytime</span>\n        </div>\n      </div>\n\n      <div class=\"boka-subscribe-hero__actions\">\n        <a href=\"/collections/subscription-favs\" class=\"boka-subscribe-hero__button\">\n          Shop Subscriptions\n        </a>\n\n        <span class=\"boka-subscribe-hero__note\">\n          Flexible deliveries. No commitment.\n        </span>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n  .boka-subscribe-hero {\n    background: #e6f4d4;\n    color: rgb(34 39 33);\n    padding: 0;\n  }\n\n  .boka-subscribe-hero__inner {\n    width: min(1200px, calc(100% - 40px));\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);\n    align-items: center;\n    gap: clamp(36px, 5vw, 76px);\n    padding: clamp(42px, 6vw, 88px) 0;\n  }\n\n  .boka-subscribe-hero__image {\n    order: 2;\n    overflow: hidden;\n    border-radius: 28px;\n    background: #f4f1e8;\n  }\n\n  .boka-subscribe-hero__image img {\n    display: block;\n    width: 100%;\n    height: auto;\n    object-fit: cover;\n  }\n\n  .boka-subscribe-hero__content {\n    order: 1;\n    max-width: 640px;\n    text-align: left;\n  }\n\n  .boka-subscribe-hero__eyebrow {\n    margin: 0 0 16px;\n    color: rgb(34 39 33 / 0.68);\n    font-size: clamp(12px, 0.78vw, 14px);\n    font-weight: 700;\n    letter-spacing: 0.18em;\n    line-height: 1.2;\n    text-transform: uppercase;\n  }\n\n  .boka-subscribe-hero__heading {\n    margin: 0;\n    color: rgb(34 39 33);\n    font-size: clamp(44px, 5vw, 76px);\n    line-height: 0.95;\n    letter-spacing: -0.05em;\n    font-weight: 400;\n  }\n\n  .boka-subscribe-hero__heading em {\n    font-style: italic;\n    font-weight: inherit;\n  }\n\n  .boka-subscribe-hero__text {\n    max-width: 560px;\n    margin: 24px 0 0;\n    color: rgb(34 39 33 / 0.82);\n    font-size: clamp(16px, 1.08vw, 20px);\n    line-height: 1.45;\n  }\n\n  .boka-subscribe-hero__benefits {\n    display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 12px;\n    margin-top: 34px;\n  }\n\n  .boka-subscribe-hero__benefit {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 10px;\n    min-width: 0;\n    padding: 16px;\n    border: 1px solid rgb(34 39 33 / 0.14);\n    border-radius: 18px;\n    background: rgb(255 255 255 / 0.42);\n  }\n\n  .boka-subscribe-hero__benefit img {\n    width: 42px;\n    height: 42px;\n    object-fit: contain;\n  }\n\n  .boka-subscribe-hero__benefit span {\n    color: rgb(34 39 33);\n    font-size: 14px;\n    line-height: 1.25;\n    font-weight: 700;\n    letter-spacing: -0.01em;\n  }\n\n  .boka-subscribe-hero__actions {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: 18px;\n    margin-top: 34px;\n  }\n\n  .boka-subscribe-hero__button,\n  .boka-subscribe-hero__button:link,\n  .boka-subscribe-hero__button:visited,\n  .boka-subscribe-hero__button:hover,\n  .boka-subscribe-hero__button:focus,\n  .boka-subscribe-hero__button:active {\n    appearance: none;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    min-width: 230px;\n    min-height: 58px;\n    padding: 16px 28px;\n    border: 1px solid #000000 !important;\n    border-radius: 10px;\n    background: #000000 !important;\n    color: #ffffff !important;\n    -webkit-text-fill-color: #ffffff !important;\n    font-size: clamp(12px, 0.8vw, 14px);\n    font-weight: 700;\n    letter-spacing: 0.075em;\n    line-height: 1;\n    text-align: center;\n    text-decoration: none !important;\n    text-transform: uppercase;\n    opacity: 1 !important;\n    box-shadow: none !important;\n  }\n\n  .boka-subscribe-hero__button::before,\n  .boka-subscribe-hero__button::after {\n    display: none !important;\n    content: none !important;\n  }\n\n  .boka-subscribe-hero__note {\n    color: rgb(34 39 33 / 0.68);\n    font-size: 14px;\n    line-height: 1.35;\n  }\n\n  @media screen and (max-width: 989px) {\n    .boka-subscribe-hero__inner {\n      width: min(100% - 32px, 720px);\n      grid-template-columns: 1fr;\n      gap: 30px;\n      padding: 44px 0 52px;\n    }\n\n    .boka-subscribe-hero__image {\n      order: 1;\n      border-radius: 22px;\n    }\n\n    .boka-subscribe-hero__content {\n      order: 2;\n      max-width: 100%;\n      text-align: left;\n    }\n\n    .boka-subscribe-hero__heading {\n      font-size: clamp(38px, 10vw, 56px);\n    }\n\n    .boka-subscribe-hero__benefits {\n      grid-template-columns: 1fr;\n      gap: 10px;\n      margin-top: 28px;\n    }\n\n    .boka-subscribe-hero__benefit {\n      flex-direction: row;\n      align-items: center;\n      padding: 14px;\n    }\n\n    .boka-subscribe-hero__benefit img {\n      width: 38px;\n      height: 38px;\n      flex-shrink: 0;\n    }\n\n    .boka-subscribe-hero__actions {\n      align-items: stretch;\n      gap: 12px;\n      margin-top: 28px;\n    }\n\n    .boka-subscribe-hero__button,\n    .boka-subscribe-hero__button:link,\n    .boka-subscribe-hero__button:visited,\n    .boka-subscribe-hero__button:hover,\n    .boka-subscribe-hero__button:focus,\n    .boka-subscribe-hero__button:active {\n      width: 100%;\n      min-height: 52px;\n      padding: 15px 20px;\n      font-size: 12px;\n    }\n\n    .boka-subscribe-hero__note {\n      width: 100%;\n      text-align: center;\n    }\n  }\n\n  @media screen and (max-width: 420px) {\n    .boka-subscribe-hero__inner {\n      width: calc(100% - 28px);\n      padding: 38px 0 44px;\n    }\n\n    .boka-subscribe-hero__heading {\n      font-size: 38px;\n    }\n\n    .boka-subscribe-hero__text {\n      margin-top: 18px;\n      font-size: 16px;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#fafaf5",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "yotpo_reviews_widget_PhXApc": {
       "type": "yotpo-reviews-widget",
       "name": "Yotpo Reviews Widget",
@@ -476,7 +560,7 @@
         "heading_color": "#000000",
         "heading_alignment": "center",
         "heading_spacing": 32,
-        "container_width": 1200,
+        "container_width": 1450,
         "background_color": "#fafaf5",
         "padding_top": 60,
         "padding_bottom": 60,
@@ -705,9 +789,10 @@
     "rich_text_AU4LYa",
     "custom_liquid_acJyKE",
     "3d719ebc-5747-4557-bde5-5de02b7b2fc5",
-    "custom_liquid_Pw6kPw",
-    "1761582983a017a1e7",
+    "home_compare_8Yi6WK",
     "multicolumn_BWCRzU",
+    "1761582983a017a1e7",
+    "custom_liquid_Pw6kPw",
     "yotpo_reviews_widget_PhXApc",
     "rich_text_Bh9cg6",
     "9862c4aa-f495-4304-9fba-832988e68c27",
