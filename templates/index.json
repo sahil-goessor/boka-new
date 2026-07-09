@@ -359,6 +359,33 @@
         "padding_bottom_mobile": 20
       }
     },
+    "1761582983a017a1e7": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "ult1uqdfdzl9f"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_gife6h"
+      ],
+      "name": "Apps - Tolstoy",
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": false,
+        "custom_background_color": "",
+        "padding_top": 0,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 10
+      }
+    },
     "multicolumn_BWCRzU": {
       "type": "multicolumn",
       "blocks": {
@@ -417,33 +444,6 @@
         "padding_bottom": 0,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 0
-      }
-    },
-    "1761582983a017a1e7": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_quiz_carousel_block_gife6h": {
-          "type": "shopify://apps/tolstoy-ads-image-video/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "ult1uqdfdzl9f"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_quiz_carousel_block_gife6h"
-      ],
-      "name": "Apps - Tolstoy",
-      "settings": {
-        "include_margins": true,
-        "css_class": "",
-        "custom_color_enabled": false,
-        "custom_background_color": "",
-        "padding_top": 0,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 10
       }
     },
     "yotpo_reviews_widget_PhXApc": {
@@ -705,11 +705,11 @@
     "rich_text_AU4LYa",
     "custom_liquid_acJyKE",
     "3d719ebc-5747-4557-bde5-5de02b7b2fc5",
-    "multicolumn_BWCRzU",
+    "custom_liquid_Pw6kPw",
     "1761582983a017a1e7",
+    "multicolumn_BWCRzU",
     "yotpo_reviews_widget_PhXApc",
     "rich_text_Bh9cg6",
-    "custom_liquid_Pw6kPw",
     "9862c4aa-f495-4304-9fba-832988e68c27",
     "collapsible_content_HXMWKe",
     "7bdc6d37-1f4e-420c-8fbe-90c6654468b5"
