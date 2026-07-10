@@ -26,9 +26,16 @@
 {% endcomment %}
 
 {%- liquid
-  unless lazy_load == false
-    assign lazy = 'lazy'
-  endunless
+  assign image_loading = 'lazy'
+  assign image_fetchpriority = 'auto'
+
+  if lazy_load == false
+    assign image_loading = 'eager'
+
+    if fetch_priority == 'high'
+      assign image_fetchpriority = 'high'
+    endif
+  endif
 
   assign desktop_columns = 1
   if desktop_layout == 'columns' and media_count > 1
@@ -104,7 +111,8 @@
     <div class="product__media media media--transparent">
       {{ media.preview_image | image_url: width: 1946 | image_tag:
         class: image_class,
-        loading: lazy,
+        loading: image_loading,
+        fetchpriority: image_fetchpriority,
         sizes: sizes,
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
       }}
