@@ -16,10 +16,9 @@
       "blocks": {
         "announcement_PwBWjd": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Mother’s Day Sale: Free Shipping + Spring Flavor Mini Trio with Every Gift Set",
-            "link": "shopify://collections/mothers-day"
+            "text": "Subscribe and Save 15% on every routine refill",
+            "link": "shopify://pages/subscribe"
           }
         },
         "announcement_zEHeqc": {
