@@ -9,6 +9,50 @@
 {%- endif -%}
 
 {%- style -%}
+
+.footer__content-policies .policies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 20px;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.footer__content-policies .policies li {
+  display: flex;
+  align-items: center;
+}
+
+.footer__content-policies .policies a {
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+
+.footer__content-policies .policies a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.footer__content-policies .truevault-polaris-optout {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer__content-policies .truevault-polaris-optout img {
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 749px) {
+  .footer__content-policies .policies {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
@@ -273,24 +317,58 @@
   {%- endif -%}
 
   {%- if section.settings.show_policy -%}
-  <div class="footer__content-policies">
+  <div class="footer__content-policies page-width">
     <ul class="policies list-unstyled">
+      {% for link in section.settings.policy_menu.links %}
+        {% unless link.title == 'California Privacy Notice'
+          or link.title == 'Your Privacy Choices'
+        %}
+          <li>
+            <small>
+              <a href="{{ link.url }}">
+                {{ link.title }}
+              </a>
+            </small>
+          </li>
+        {% endunless %}
+      {% endfor %}
 
-      {% for link in section.settings.policy_menu.links -%}
-        <li>
-          {% unless link.title == 'California Privacy Notice' %}
-            <small><a href="{{ link.url }}">{{ link.title }}</a></small>
-          {% else %}
-            {% comment %} <small><a class="truevault-polaris-privacy-notice" href="{{ link.url }}" noreferrer noopener hidden>{{ link.title }}</a></small> {% endcomment %}
-          {% endunless %}
-        </li>
-      {%- endfor %}
+      <li>
+        <small>
+          <a
+            class="truevault-polaris-privacy-notice"
+            href="https://privacy.boka.com/privacy-policy#california-privacy-notice"
+            rel="noopener noreferrer"
+            hidden
+          >
+            California Privacy Notice
+          </a>
+        </small>
+      </li>
+
+      <li>
+        <small>
+          <a
+            class="truevault-polaris-optout"
+            href="https://privacy.boka.com/opt-out"
+            rel="noopener noreferrer"
+            hidden
+          >
+            <img
+              src="https://polaris.truevaultcdn.com/static/assets/icons/optout-icon-blue.svg"
+              alt=""
+              width="14"
+              height="14"
+              loading="lazy"
+              style="vertical-align: middle;"
+            >
+            <span>Your Privacy Choices</span>
+          </a>
+        </small>
+      </li>
     </ul>
-    {% comment %} <div style="margin-top: 10px;">
-      <a class="truevault-polaris-optout" style="text-decoration: none; color: #212529 !important;" href="https://privacy.boka.com/opt-out" noreferrer noopener hidden><img src="https://polaris.truevaultcdn.com/static/assets/icons/optout-icon-black.svg" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" style="vertical-align:middle" height="14px" loading="lazy" />Your Privacy Choices</a>
-    </div> {% endcomment %}
   </div>
-  {%- endif -%}
+{%- endif -%}
 
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
