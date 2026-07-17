@@ -429,6 +429,9 @@
             data-button-link="{{ section.settings.cta_url }}"
             data-variant-id="{{ section.settings.variant_id }}"
             data-product-quantity="{{ section.settings.product_quantity }}"
+            {% if page.handle == 'amz-amb-brightboost' %}
+              onclick="window.trbClick('B0CQPPDQM9')"
+            {% endif %}
           >
             <span class="boka-cta-text">{{ section.settings.cta_text }}</span>
             <span class="boka-cta-loader" style="display:none;">
