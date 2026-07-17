@@ -405,6 +405,16 @@
                     </svg>
                   </a>
                 {% endif %}
+              {%- when 'custom_button' -%}
+                {% if block.settings.button_text != blank %}
+                  
+                   <a href="{{ block.settings.button_url | default: '#' }}"
+                    class="boka-featured-amazon-btn"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ block.settings.button_text }}
+                  </a>
+                {% endif %}
               {%- when 'promo_banner' -%}
                 <div
                   class="promo-banner-{{ section.id }}"
@@ -1780,6 +1790,23 @@ font-family: "archivo";
           "label": "Replace sticky Add to Cart with Amazon button",
           "default": false,
           "info": "When enabled, the sticky bar's Add to Cart button will be replaced with the Buy on Amazon button"
+        }
+      ]
+    },
+    {
+      "type": "custom_button",
+      "name": "Custom Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Buy Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
         }
       ]
     },
