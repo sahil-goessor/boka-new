@@ -712,8 +712,16 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "custom_button_yxYGgg": {
+          "type": "custom_button",
+          "settings": {
+            "button_text": "BUY NOW",
+            "button_url": "https://t.amobeez.com?redirection_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0CQPPDQM9&trbid=TR_ndWwU1xfMZ&meta=1"
+          }
+        },
         "amazon_button_iTPjYa": {
           "type": "amazon_button",
+          "disabled": true,
           "settings": {
             "amazon_url": "https://www.amazon.com/Tooth-Whitening-Powder/dp/B0CQPPDQM9?maas=maas_adg_812BBCB1FC1762E9FBDEEFF6F1195A63_afap_abs&ref_=aa_maas&tag=maas",
             "replace_sticky_atc": true
@@ -793,6 +801,7 @@
         "price_T7pXW7",
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
+        "custom_button_yxYGgg",
         "amazon_button_iTPjYa",
         "buy_buttons_j3VN3h",
         "tolstoy_shoppable_video_quiz_stories_block_4Tk8CB",
