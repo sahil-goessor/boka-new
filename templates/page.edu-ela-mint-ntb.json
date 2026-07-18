@@ -53,6 +53,12 @@
         "walmart_bg_color": "#fff8e7",
         "walmart_border_color": "#ffc220",
         "walmart_text_color": "#1a1a1a",
+        "show_pulse_box": false,
+        "pulse_heading": "Black Friday Cyber Monday Sale:",
+        "pulse_text": "<s>$13.00</s> $9.99 our best deal this year!",
+        "pulse_bg_color": "#dff0d8",
+        "pulse_border_color": "#7baf7b",
+        "pulse_text_color": "#1a1a1a",
         "show_timer": true,
         "timer_label_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
         "timer_end_date": "Dec 31, 2025 23:59:59",
@@ -763,6 +769,7 @@
         },
         "price_T7pXW7": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "variant_picker_QPkKgn": {
@@ -773,6 +780,10 @@
         },
         "quantity_selector_CharbJ": {
           "type": "quantity_selector",
+          "settings": {}
+        },
+        "boka_purchase_options_4P4ARa": {
+          "type": "boka_purchase_options",
           "settings": {}
         },
         "buy_buttons_j3VN3h": {
@@ -881,6 +892,7 @@
         "price_T7pXW7",
         "variant_picker_QPkKgn",
         "quantity_selector_CharbJ",
+        "boka_purchase_options_4P4ARa",
         "buy_buttons_j3VN3h",
         "promo_banner_XkEUYc",
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
