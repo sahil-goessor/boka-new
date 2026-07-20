@@ -11,13 +11,158 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_nJJtfF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yDHCzC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Science: Oral care that works with your mouth, not against it.",
+            "heading_size": "h2",
+            "heading_tag": "default"
+          }
+        },
+        "text_nmUNQ4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe the best oral care starts with ingredients your body already understands. Our formulas are powered by science-backed ingredients, inspired by nature, and feel-good daily rituals designed to support a healthier mouth.<br/><br/>Because when your mouth feels good, the rest of you does too.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_pXAjzi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop n-Ha Toothpaste",
+            "button_link": "shopify://collections/nano-hydroxyapatite_n-ha_toothpaste",
+            "second_button_label": "",
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_yDHCzC",
+        "text_nmUNQ4",
+        "button_pXAjzi"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/EM_4oz_7.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#FFFFFF",
+        "custom_background_color": "#DAE9CF",
+        "custom_text_color": "#FFFFFF",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 130,
+        "padding_bottom": 100,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "home_compare_majUG9": {
+      "type": "home-compare",
+      "blocks": {
+        "icon_item_weaqK6": {
+          "type": "icon_item",
+          "settings": {
+            "placeholder_text": "F",
+            "title": "Fluoride-free",
+            "text": ""
+          }
+        },
+        "icon_item_E39ULi": {
+          "type": "icon_item",
+          "settings": {
+            "placeholder_text": "SLS",
+            "title": "SLS-free",
+            "text": ""
+          }
+        },
+        "icon_item_GNqaLA": {
+          "type": "icon_item",
+          "settings": {
+            "placeholder_text": "P",
+            "title": "Paraben-free",
+            "text": ""
+          }
+        },
+        "icon_item_GLYKNg": {
+          "type": "icon_item",
+          "settings": {
+            "placeholder_text": "V",
+            "title": "Vegan",
+            "text": ""
+          }
+        },
+        "icon_item_XcriQV": {
+          "type": "icon_item",
+          "settings": {
+            "placeholder_text": "+",
+            "title": "n-Ha Formulas",
+            "text": ""
+          }
+        },
+        "icon_item_BQL9qY": {
+          "type": "icon_item",
+          "settings": {
+            "placeholder_text": "⚗",
+            "title": "Backed by Science",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_item_weaqK6",
+        "icon_item_E39ULi",
+        "icon_item_GNqaLA",
+        "icon_item_GLYKNg",
+        "icon_item_XcriQV",
+        "icon_item_BQL9qY"
+      ],
+      "name": "Boka science icon grid",
+      "settings": {
+        "heading": "What is Nano-hydroxyapetite, or n-Ha for short?",
+        "copy": "",
+        "stars_text": "★★★★★ 4.6 stars from 950,000+ customers",
+        "rating_text": "",
+        "button_text": "Our Science",
+        "button_link": "",
+        "button_corner_radius": 12,
+        "icon_size": 160,
+        "show_placeholder_icons": true,
+        "background_color": "#f9e5db",
+        "text_color": "#202720",
+        "muted_text_color": "#5b6159",
+        "button_background": "#202720",
+        "button_text_color": "#ffffff"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_nJJtfF",
+    "home_compare_majUG9"
   ]
 }
