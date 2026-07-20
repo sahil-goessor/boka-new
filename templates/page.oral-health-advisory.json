@@ -74,6 +74,34 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
       }
+    },
+    "custom_liquid_cDzVbU": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"boka-ohac\">\n  <section class=\"boka-ohac__section boka-ohac__section--soft\">\n    <div class=\"boka-ohac__container\">\n      <div class=\"boka-ohac__process\">\n        <div class=\"boka-ohac__process-copy\">\n          <p class=\"boka-ohac__eyebrow\">How it works</p>\n          <h2>Expert review across the product <em>journey</em>.</h2>\n          <p>\n            From formulation to education, the committee helps Boka evaluate products through the lens of science, safety, quality, and consumer experience.\n          </p>\n        </div>\n\n        <div class=\"boka-ohac__process-grid\">\n          <article class=\"boka-ohac__process-card\">\n            <span class=\"boka-ohac__process-icon\">🧪</span>\n            <h3>Clinical testing protocols</h3>\n            <p>Guidance on how products are evaluated and how performance is supported.</p>\n          </article>\n\n          <article class=\"boka-ohac__process-card\">\n            <span class=\"boka-ohac__process-icon\">✓</span>\n            <h3>Safety and compliance</h3>\n            <p>Review with safety, standards, and responsible claims in mind.</p>\n          </article>\n\n          <article class=\"boka-ohac__process-card\">\n            <span class=\"boka-ohac__process-icon\">✦</span>\n            <h3>Ingredient research</h3>\n            <p>Support for ingredient selection, best practices, and emerging oral care science.</p>\n          </article>\n\n          <article class=\"boka-ohac__process-card\">\n            <span class=\"boka-ohac__process-icon\">☼</span>\n            <h3>Dental care trends</h3>\n            <p>Insight into where consumer needs, clinical priorities, and oral care innovation are heading.</p>\n          </article>\n\n          <article class=\"boka-ohac__process-card\">\n            <span class=\"boka-ohac__process-icon\">♡</span>\n            <h3>User outcomes and perceptions</h3>\n            <p>Consideration of how products fit into real routines and support better oral care habits.</p>\n          </article>\n\n          <article class=\"boka-ohac__process-card\">\n            <span class=\"boka-ohac__process-icon\">★</span>\n            <h3>Product quality</h3>\n            <p>Guidance around consistency, experience, and standards across Boka’s product portfolio.</p>\n          </article>\n        </div>\n      </div>\n    </div>\n  </section>\n</div>",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "custom_liquid_DKM8VG": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"boka-ohac\">\n  <section class=\"boka-ohac__cta\">\n    <div class=\"boka-ohac__container\">\n      <div class=\"boka-ohac__cta-inner\">\n        <div>\n          <h2>Meet the formulas guided by science.</h2>\n          <p>\n            Explore Boka oral care powered by thoughtful ingredients, elevated flavors, and expert-informed formulation.\n          </p>\n        </div>\n\n        <div class=\"boka-ohac__cta-actions\">\n          <a class=\"boka-ohac__button boka-ohac__button--light\" href=\"/collections/nano-hydroxyapatite_n-ha_toothpaste\">\n            Shop Toothpaste\n          </a>\n          <a class=\"boka-ohac__button boka-ohac__button--outline\" href=\"/pages/nano-hydroxyapatite\">\n            Learn the Science\n          </a>\n        </div>\n      </div>\n    </div>\n  </section>\n</div>",
+        "color_scheme": "custom",
+        "custom_background_color": "#FAFAF5",
+        "custom_text_color": "#FAFAF5",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
     }
   },
   "order": [
@@ -81,6 +109,8 @@
     "custom_liquid_pwGXiQ",
     "custom_liquid_QqnDUg",
     "custom_liquid_DhygK4",
-    "custom_liquid_dfzXAH"
+    "custom_liquid_dfzXAH",
+    "custom_liquid_cDzVbU",
+    "custom_liquid_DKM8VG"
   ]
 }
