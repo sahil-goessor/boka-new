@@ -1,0 +1,848 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 30
+          }
+        },
+        "yotpo_product_reviews_star_rating_Jpxdwz": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
+          }
+        },
+        "custom_liquid_6LJfFx": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign short_description = product.metafields.custom.new_description_short.value -%}\n\n{%- if short_description != blank -%}\n  <div\n    class=\"boka-product-short-description\"\n    {{ block.shopify_attributes }}\n  >\n    <div class=\"boka-product-short-description__text\">\n      {{ short_description | escape | newline_to_br }}\n    </div>\n  </div>\n{%- endif -%}\n\n<style>\n.boka-product-short-description {\n  margin-top: 12px;\n  margin-bottom: 16px;\n}\n\n.boka-product-short-description__text {\n  margin: 0;\n  font-size: 15px;\n  line-height: 1.5;\n  color: rgb(var(--text-color));\n}\n\n@media screen and (max-width: 699px) {\n  .boka-product-short-description {\n    margin-top: 10px;\n    margin-bottom: 14px;\n  }\n\n  .boka-product-short-description__text {\n    font-size: 14px;\n    line-height: 1.45;\n  }\n}\n</style>"
+          }
+        },
+        "google_youtube_automated_discounts_price_L3KbmA": {
+          "type": "shopify://apps/google-youtube/blocks/automated_discounts_price/14ec7bd0-ac77-49a9-9417-90752398bdff",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_names": "",
+            "color_hex": ""
+          }
+        },
+        "recharge_subscriptions_subscription_widget_v2_YmxgLa": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
+        "richtext_QNXnBD": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.text_above_buy_buttons.value }}</p>",
+            "text_style": "body",
+            "quick_add_hide": false
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_HeVqad": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "dp9z6mvai6cz4"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_tab_9Ri3zn": {
+          "type": "collapsible_tab",
+          "name": "How to use",
+          "disabled": true,
+          "settings": {
+            "heading": "{{ product.metafields.custom.how_to_use.value }}",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.how_to_use_description | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_NnPN3E": {
+          "type": "collapsible_tab",
+          "name": "Ingredients",
+          "disabled": true,
+          "settings": {
+            "heading": "{{ product.metafields.custom.ingredients.value }}",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.ingredients_description | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "custom_liquid_tPLiew": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign product_description = product.description -%}\n{%- assign how_to_use_description = product.metafields.custom.new_how_to_use -%}\n{%- assign ingredients_description = product.metafields.custom.new_ingredients_list -%}\n\n{%- if product_description != blank or how_to_use_description != blank or ingredients_description != blank -%}\n  <div class=\"boka-product-metafield-accordions\">\n\n    {%- if product_description != blank -%}\n      <details class=\"boka-product-metafield-accordions__item\">\n        <summary>Description</summary>\n        <div class=\"boka-product-metafield-accordions__content\">\n          {{ product_description }}\n        </div>\n      </details>\n    {%- endif -%}\n\n    {%- if how_to_use_description != blank -%}\n      <details class=\"boka-product-metafield-accordions__item\">\n        <summary>How to use</summary>\n        <div class=\"boka-product-metafield-accordions__content\">\n          {{ how_to_use_description.value }}\n        </div>\n      </details>\n    {%- endif -%}\n\n    {%- if ingredients_description != blank -%}\n      <details class=\"boka-product-metafield-accordions__item\">\n        <summary>Ingredients</summary>\n        <div class=\"boka-product-metafield-accordions__content\">\n          {{ ingredients_description.value }}\n        </div>\n      </details>\n    {%- endif -%}\n\n  </div>\n\n  <style>\n    .boka-product-metafield-accordions {\n      border-top: 1px solid rgba(34, 39, 33, 0.14);\n    }\n\n    .boka-product-metafield-accordions__item {\n      border-bottom: 1px solid rgba(34, 39, 33, 0.14);\n    }\n\n    .boka-product-metafield-accordions__item summary {\n      list-style: none;\n      cursor: pointer;\n      padding: 18px 0;\n      font-weight: 700;\n      color: #222721;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .boka-product-metafield-accordions__item summary::-webkit-details-marker {\n      display: none;\n    }\n\n    .boka-product-metafield-accordions__item summary::after {\n      content: \"+\";\n      font-size: 20px;\n      line-height: 1;\n    }\n\n    .boka-product-metafield-accordions__item[open] summary::after {\n      content: \"−\";\n    }\n\n    .boka-product-metafield-accordions__content {\n      padding: 0 0 18px;\n      color: #222721;\n      font-size: 14px;\n      line-height: 1.55;\n    }\n\n    .boka-product-metafield-accordions__content p {\n      margin: 0 0 12px;\n    }\n\n    .boka-product-metafield-accordions__content p:last-child {\n      margin-bottom: 0;\n    }\n  </style>\n{%- endif -%}"
+          }
+        },
+        "icon_with_text_V6zWW9": {
+          "type": "icon-with-text",
+          "name": "Claims 3 & 4",
+          "disabled": true,
+          "settings": {
+            "orientation": "inlined",
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "{{ product.metafields.custom.icon_w_claims_image_3.value }}",
+            "heading_1": "{{ product.metafields.custom.icon_w_claims_title_3.value }}",
+            "icon_2": "none",
+            "image_2": "{{ product.metafields.custom.icon_w_claims_image_4.value }}",
+            "heading_2": "{{ product.metafields.custom.icon_w_claims_title_4.value }}",
+            "padding_top": 14,
+            "padding_bottom": 0
+          }
+        },
+        "af067451-b82f-4114-8006-9a547e9c2157": {
+          "type": "icon-with-text",
+          "name": "Claims 1 & 2",
+          "disabled": true,
+          "settings": {
+            "orientation": "inlined",
+            "layout": "horizontal",
+            "icon_1": "none",
+            "image_1": "{{ product.metafields.custom.icon_w_claims_image_1.value }}",
+            "heading_1": "{{ product.metafields.custom.icon_w_claims_3.value }}",
+            "icon_2": "none",
+            "image_2": "{{ product.metafields.custom.icon_w_claims_image_2.value }}",
+            "heading_2": "{{ product.metafields.custom.icon_w_claims_title_2.value }}",
+            "padding_top": 14,
+            "padding_bottom": 0
+          }
+        },
+        "8f4ac970-3a15-4b7d-823a-82ce6560b8df": {
+          "type": "complementary",
+          "name": "Pairs well with",
+          "settings": {
+            "block_heading": "{{ product.metafields.custom.title_pairs_well_with.value }}",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "yotpo_product_reviews_star_rating_Jpxdwz",
+        "price",
+        "custom_liquid_6LJfFx",
+        "google_youtube_automated_discounts_price_L3KbmA",
+        "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_YmxgLa",
+        "richtext_QNXnBD",
+        "quantity_selector",
+        "buy_buttons",
+        "tolstoy_shoppable_video_quiz_stories_block_HeVqad",
+        "description",
+        "collapsible_tab_9Ri3zn",
+        "collapsible_tab_NnPN3E",
+        "custom_liquid_tPLiew",
+        "icon_with_text_V6zWW9",
+        "af067451-b82f-4114-8006-9a547e9c2157",
+        "8f4ac970-3a15-4b7d-823a-82ce6560b8df"
+      ],
+      "custom_css": [
+        "@media only screen and (max-width: 1200px) {.product-card-wrapper .card__content .cta-buttons {order: 1 !important; }}",
+        ".boka-product-accordion {border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; margin-top: 24px;}",
+        ".boka-product-accordion__summary {cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; font-size: 16px; font-weight: 600; color: #111;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "enable_sticky_atc": true,
+        "media_size": "medium",
+        "lazyload": true,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "bottom",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 100,
+        "padding_top_tablet": 36,
+        "padding_bottom_tablet": 70,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "custom_liquid_gqtDLL": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{%- liquid\n  assign clean_feel_id = section.id\n  assign heading = 'A clean you can feel good about'\n  assign heading_tag = 'h2'\n  assign heading_size_class = 'h1'\n\n  assign layout = 'image_first'\n  assign desktop_image_width = 'medium'\n  assign desktop_content_position = 'center'\n  assign desktop_text_alignment = 'left'\n  assign mobile_text_alignment = 'left'\n\n  assign use_clean_feel_image_metafield = false\n  assign fallback_image_url = ''\n\n  assign show_fallback_claims = false\n  assign fallback_claim_1 = ''\n  assign fallback_claim_1_icon_url = ''\n  assign fallback_claim_2 = ''\n  assign fallback_claim_2_icon_url = ''\n  assign fallback_claim_3 = ''\n  assign fallback_claim_3_icon_url = ''\n\n  assign button_label = ''\n  assign button_link = ''\n  assign second_button_label = ''\n  assign second_button_link = ''\n\n  assign section_background_color = '#DAE9CF'\n  assign text_background_color = '#DAE9CF'\n  assign image_background_color = '#F8F7F2'\n  assign text_color = '#222721'\n  assign heading_color = '#222721'\n  assign description_color = '#222721'\n  assign claim_text_color = '#222721'\n\n  assign button_background = '#222721'\n  assign button_text_color = '#FFFFFF'\n  assign second_button_background = '#FFFFFF'\n  assign second_button_text_color = '#222721'\n\n  assign desktop_min_height = 580\n  assign mobile_image_min_height = 340\n  assign desktop_corner_radius = 0\n  assign mobile_corner_radius = 0\n  assign desktop_content_padding = 72\n  assign mobile_content_padding = 32\n  assign description_size_desktop = 16\n  assign description_size_mobile = 15\n  assign claim_text_size_desktop = 16\n  assign claim_text_size_mobile = 15\n  assign claim_gap_desktop = 16\n  assign claim_gap_mobile = 14\n  assign claim_icon_size_desktop = 38\n  assign claim_icon_size_mobile = 34\n\n  assign padding_top_desktop = 96\n  assign padding_bottom_desktop = 96\n  assign padding_top_tablet = 48\n  assign padding_bottom_tablet = 48\n  assign padding_top_mobile = 40\n  assign padding_bottom_mobile = 40\n\n  comment\n    -----------------------------\n    PRODUCT CONTENT\n    -----------------------------\n  endcomment\n\n  assign second_product_media = product.media[1]\n  assign second_product_image = blank\n\n  if second_product_media != blank\n    assign second_product_image = second_product_media.preview_image\n  endif\n\n  assign clean_feel_image_metafield = product.metafields.custom.a_clean_you_can_feel_good_about_image.value\n\n  if use_clean_feel_image_metafield and clean_feel_image_metafield != blank\n    assign section_image = clean_feel_image_metafield\n  else\n    assign section_image = second_product_image\n  endif\n\n  assign product_claims = product.metafields.custom.new_claims.value\n\n  assign section_image_alt = product.title\n  if section_image != blank and section_image.alt != blank\n    assign section_image_alt = section_image.alt\n  endif\n\n  assign default_description = 'Boka ' | append: product.title | append: ' is designed for daily care, combining n-Ha and science-backed ingredients with a crisp, refreshing taste.'\n\n  assign has_claims = false\n  if product_claims != blank\n    assign has_claims = true\n  endif\n\n  assign has_fallback_claims = false\n  if show_fallback_claims\n    if fallback_claim_1 != blank or fallback_claim_2 != blank or fallback_claim_3 != blank\n      assign has_fallback_claims = true\n    endif\n  endif\n\n  case desktop_image_width\n    when 'small'\n      assign desktop_columns = '0.85fr 1.15fr'\n    when 'large'\n      assign desktop_columns = '1.15fr 0.85fr'\n    else\n      assign desktop_columns = '1fr 1fr'\n  endcase\n\n  case mobile_text_alignment\n    when 'center'\n      assign mobile_button_alignment = 'center'\n    when 'right'\n      assign mobile_button_alignment = 'flex-end'\n    else\n      assign mobile_button_alignment = 'flex-start'\n  endcase\n\n  case desktop_text_alignment\n    when 'center'\n      assign desktop_button_alignment = 'center'\n    when 'right'\n      assign desktop_button_alignment = 'flex-end'\n    else\n      assign desktop_button_alignment = 'flex-start'\n  endcase\n-%}\n\n{%- if product != blank -%}\n  <style>\n    #clean-feel-{{ clean_feel_id }} {\n      --clean-section-bg: {{ section_background_color }};\n      --clean-panel-bg: {{ text_background_color }};\n      --clean-image-bg: {{ image_background_color }};\n      --clean-text: {{ text_color }};\n      --clean-heading: {{ heading_color }};\n      --clean-description: {{ description_color }};\n      --clean-claim-text: {{ claim_text_color }};\n      --clean-desktop-columns: {{ desktop_columns }};\n      --clean-desktop-min-height: {{ desktop_min_height }}px;\n      --clean-mobile-image-min-height: {{ mobile_image_min_height }}px;\n      --clean-desktop-radius: {{ desktop_corner_radius }}px;\n      --clean-mobile-radius: {{ mobile_corner_radius }}px;\n      --clean-desktop-padding: {{ desktop_content_padding }}px;\n      --clean-mobile-padding: {{ mobile_content_padding }}px;\n      --clean-description-desktop: {{ description_size_desktop }}px;\n      --clean-description-mobile: {{ description_size_mobile }}px;\n      --clean-claim-size-desktop: {{ claim_text_size_desktop }}px;\n      --clean-claim-size-mobile: {{ claim_text_size_mobile }}px;\n      --clean-claim-gap-desktop: {{ claim_gap_desktop }}px;\n      --clean-claim-gap-mobile: {{ claim_gap_mobile }}px;\n      --clean-icon-size-desktop: {{ claim_icon_size_desktop }}px;\n      --clean-icon-size-mobile: {{ claim_icon_size_mobile }}px;\n\n      background: var(--clean-section-bg);\n      color: var(--clean-text);\n      padding-top: {{ padding_top_mobile }}px;\n      padding-bottom: {{ padding_bottom_mobile }}px;\n    }\n\n    #clean-feel-{{ clean_feel_id }} * {\n      box-sizing: border-box;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__inner {\n      display: grid;\n      grid-template-columns: minmax(0, 1fr);\n      gap: 0;\n      width: 100%;\n      max-width: var(--container-max-width, 1600px);\n      margin-inline: auto;\n      padding-inline: var(--container-gutter, 20px);\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__media-wrap {\n      min-width: 0;\n      overflow: hidden;\n      background: var(--clean-image-bg);\n      border-radius: var(--clean-mobile-radius) var(--clean-mobile-radius) 0 0;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__media {\n      position: relative;\n      width: 100%;\n      min-height: var(--clean-mobile-image-min-height);\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__media img,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__placeholder {\n      display: block;\n      width: 100%;\n      height: 100%;\n      min-height: var(--clean-mobile-image-min-height);\n      object-fit: cover;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__content {\n      display: flex;\n      min-width: 0;\n      flex-direction: column;\n      justify-content: {{ desktop_content_position }};\n      padding: var(--clean-mobile-padding);\n      background: var(--clean-panel-bg);\n      color: var(--clean-text);\n      border-radius: 0 0 var(--clean-mobile-radius) var(--clean-mobile-radius);\n      text-align: {{ mobile_text_alignment }};\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__heading {\n      margin: 0;\n      color: var(--clean-heading);\n      line-height: 0.98;\n      letter-spacing: -0.04em;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__description {\n      margin-top: 16px;\n      color: var(--clean-description);\n      font-size: var(--clean-description-mobile);\n      line-height: 1.45;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__description > *:first-child {\n      margin-top: 0;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__description > *:last-child {\n      margin-bottom: 0;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__description p {\n      margin-block: 0;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims {\n      margin-top: 30px;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claims,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-list {\n      display: grid;\n      grid-template-columns: minmax(0, 1fr);\n      gap: var(--clean-claim-gap-mobile);\n      margin: 0 !important;\n      padding: 0 !important;\n      list-style: none !important;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-claim {\n      margin: 0 !important;\n      list-style: none !important;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim::marker,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-claim::marker {\n      content: \"\" !important;\n      font-size: 0 !important;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim::before,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim::after,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-claim::before,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-claim::after {\n      display: none !important;\n      content: none !important;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-claim {\n      display: flex;\n      min-width: 0;\n      align-items: center;\n      gap: 14px;\n      padding: 14px 16px;\n      border: 1px solid rgb(34 39 33 / 14%);\n      border-radius: 14px;\n      background: rgb(255 255 255 / 32%);\n      color: var(--clean-claim-text);\n      text-align: left;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim__image,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-icon {\n      display: block;\n      width: var(--clean-icon-size-mobile);\n      height: var(--clean-icon-size-mobile);\n      flex: 0 0 var(--clean-icon-size-mobile);\n      object-fit: contain;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim__text,\n    #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-text {\n      display: block;\n      min-width: 0;\n      color: var(--clean-claim-text);\n      font-size: var(--clean-claim-size-mobile);\n      font-weight: 700;\n      line-height: 1.25;\n      letter-spacing: -0.01em;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__claims img {\n      max-width: 100%;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__buttons {\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: {{ mobile_button_alignment }};\n      gap: 12px;\n      margin-top: 34px;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__button {\n      display: inline-flex;\n      min-height: 48px;\n      align-items: center;\n      justify-content: center;\n      padding: 12px 24px;\n      border: 1px solid transparent;\n      border-radius: var(--button-border-radius, 999px);\n      text-decoration: none;\n      font: inherit;\n      font-weight: 700;\n      line-height: 1.2;\n      transition: opacity 180ms ease, transform 180ms ease;\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__button:hover {\n      opacity: 0.88;\n      transform: translateY(-1px);\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__button--primary {\n      background: {{ button_background }};\n      color: {{ button_text_color }};\n    }\n\n    #clean-feel-{{ clean_feel_id }} .clean-feel__button--secondary {\n      background: {{ second_button_background }};\n      color: {{ second_button_text_color }};\n    }\n\n    @media only screen and (min-width: 640px) and (max-width: 999px) {\n      #clean-feel-{{ clean_feel_id }} {\n        padding-top: {{ padding_top_tablet }}px;\n        padding-bottom: {{ padding_bottom_tablet }}px;\n      }\n    }\n\n    @media screen and (min-width: 1000px) {\n      #clean-feel-{{ clean_feel_id }} {\n        padding-top: {{ padding_top_desktop }}px;\n        padding-bottom: {{ padding_bottom_desktop }}px;\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__inner {\n        grid-template-columns: var(--clean-desktop-columns);\n        align-items: stretch;\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__inner--text-first .clean-feel__media-wrap {\n        order: 2;\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__inner--text-first .clean-feel__content {\n        order: 1;\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__media-wrap {\n        border-radius:\n          {% if layout == 'text_first' %}\n            0 var(--clean-desktop-radius) var(--clean-desktop-radius) 0\n          {% else %}\n            var(--clean-desktop-radius) 0 0 var(--clean-desktop-radius)\n          {% endif %};\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__content {\n        min-height: var(--clean-desktop-min-height);\n        padding: var(--clean-desktop-padding);\n        border-radius:\n          {% if layout == 'text_first' %}\n            var(--clean-desktop-radius) 0 0 var(--clean-desktop-radius)\n          {% else %}\n            0 var(--clean-desktop-radius) var(--clean-desktop-radius) 0\n          {% endif %};\n        text-align: {{ desktop_text_alignment }};\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__media,\n      #clean-feel-{{ clean_feel_id }} .clean-feel__media img,\n      #clean-feel-{{ clean_feel_id }} .clean-feel__placeholder {\n        min-height: var(--clean-desktop-min-height);\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__description {\n        font-size: var(--clean-description-desktop);\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claims,\n      #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-list {\n        gap: var(--clean-claim-gap-desktop);\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim,\n      #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-claim {\n        padding: 16px 18px;\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim__image,\n      #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-icon {\n        width: var(--clean-icon-size-desktop);\n        height: var(--clean-icon-size-desktop);\n        flex-basis: var(--clean-icon-size-desktop);\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__claims .boka-claim__text,\n      #clean-feel-{{ clean_feel_id }} .clean-feel__fallback-text {\n        font-size: var(--clean-claim-size-desktop);\n      }\n\n      #clean-feel-{{ clean_feel_id }} .clean-feel__buttons {\n        justify-content: {{ desktop_button_alignment }};\n      }\n    }\n  </style>\n\n  <section id=\"clean-feel-{{ clean_feel_id }}\" class=\"clean-feel\" aria-labelledby=\"clean-feel-heading-{{ clean_feel_id }}\">\n    <div class=\"clean-feel__inner{% if layout == 'text_first' %} clean-feel__inner--text-first{% endif %}\">\n      <div class=\"clean-feel__media-wrap\">\n        <div class=\"clean-feel__media\">\n          {%- if section_image != blank -%}\n            {{-\n              section_image\n              | image_url: width: 1600\n              | image_tag:\n                loading: 'lazy',\n                sizes: '(max-width: 999px) 100vw, 50vw',\n                widths: '300,400,500,600,800,1000,1200,1400,1600',\n                alt: section_image_alt\n            -}}\n          {%- elsif fallback_image_url != blank -%}\n            <img\n              src=\"{{ fallback_image_url | escape }}\"\n              alt=\"{{ product.title | escape }}\"\n              width=\"1600\"\n              height=\"1600\"\n              loading=\"lazy\"\n            >\n          {%- else -%}\n            {{ 'image' | placeholder_svg_tag: 'clean-feel__placeholder' }}\n          {%- endif -%}\n        </div>\n      </div>\n\n      <div class=\"clean-feel__content\">\n        {%- if heading != blank -%}\n          <{{ heading_tag }} id=\"clean-feel-heading-{{ clean_feel_id }}\" class=\"clean-feel__heading {{ heading_size_class }}\">\n            {{ heading }}\n          </{{ heading_tag }}>\n        {%- endif -%}\n\n        <div class=\"clean-feel__description\">\n          <p>{{ default_description }}</p>\n        </div>\n\n        {%- if has_claims -%}\n          <div class=\"clean-feel__claims\">\n            {{ product_claims }}\n          </div>\n        {%- elsif has_fallback_claims -%}\n          <div class=\"clean-feel__claims\">\n            <ul class=\"clean-feel__fallback-list\">\n              {%- if fallback_claim_1 != blank -%}\n                <li class=\"clean-feel__fallback-claim\">\n                  {%- if fallback_claim_1_icon_url != blank -%}\n                    <img class=\"clean-feel__fallback-icon\" src=\"{{ fallback_claim_1_icon_url | escape }}\" alt=\"\" width=\"120\" height=\"120\" loading=\"lazy\">\n                  {%- endif -%}\n                  <span class=\"clean-feel__fallback-text\">{{ fallback_claim_1 }}</span>\n                </li>\n              {%- endif -%}\n\n              {%- if fallback_claim_2 != blank -%}\n                <li class=\"clean-feel__fallback-claim\">\n                  {%- if fallback_claim_2_icon_url != blank -%}\n                    <img class=\"clean-feel__fallback-icon\" src=\"{{ fallback_claim_2_icon_url | escape }}\" alt=\"\" width=\"120\" height=\"120\" loading=\"lazy\">\n                  {%- endif -%}\n                  <span class=\"clean-feel__fallback-text\">{{ fallback_claim_2 }}</span>\n                </li>\n              {%- endif -%}\n\n              {%- if fallback_claim_3 != blank -%}\n                <li class=\"clean-feel__fallback-claim\">\n                  {%- if fallback_claim_3_icon_url != blank -%}\n                    <img class=\"clean-feel__fallback-icon\" src=\"{{ fallback_claim_3_icon_url | escape }}\" alt=\"\" width=\"120\" height=\"120\" loading=\"lazy\">\n                  {%- endif -%}\n                  <span class=\"clean-feel__fallback-text\">{{ fallback_claim_3 }}</span>\n                </li>\n              {%- endif -%}\n            </ul>\n          </div>\n        {%- endif -%}\n\n        {%- if button_label != blank or second_button_label != blank -%}\n          <div class=\"clean-feel__buttons\">\n            {%- if button_label != blank -%}\n              <a class=\"clean-feel__button clean-feel__button--primary\" href=\"{{ button_link | default: '#' }}\">\n                {{ button_label }}\n              </a>\n            {%- endif -%}\n\n            {%- if second_button_label != blank -%}\n              <a class=\"clean-feel__button clean-feel__button--secondary\" href=\"{{ second_button_link | default: '#' }}\">\n                {{ second_button_label }}\n              </a>\n            {%- endif -%}\n          </div>\n        {%- endif -%}\n      </div>\n    </div>\n  </section>\n{%- endif -%}",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "featured_collection_bk6RWf": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Complete Your Routine",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_iqzxwN": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_XDQHTg": {
+          "type": "caption",
+          "settings": {
+            "caption": "{{ product.metafields.custom.a_title.value }}",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "text_NtbKgX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.a_description | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_XDQHTg",
+        "text_NtbKgX"
+      ],
+      "disabled": true,
+      "name": "A+ Content 1",
+      "settings": {
+        "image": "{{ product.metafields.custom.a_image.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "section_background_color": "#fafaf5",
+        "custom_background_color": "#dae9cf",
+        "custom_text_color": "#ffffff",
+        "heading_font_size_mobile": 28,
+        "heading_font_size_desktop": 48,
+        "text_font_size_mobile": 16,
+        "text_font_size_desktop": 18,
+        "caption_font_size_mobile": 14,
+        "caption_font_size_desktop": 16,
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 130,
+        "padding_bottom": 100,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "a02ced5f-9a2c-4bfd-989c-12be8442c58a": {
+      "type": "image-with-bulleted-text",
+      "blocks": {
+        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0": {
+          "type": "text",
+          "name": "BP 1",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom[\"1st_bp_a_clean_you_can_feel\"].value }}</p>",
+            "text_style": "body"
+          }
+        },
+        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b": {
+          "type": "text",
+          "name": "BP 2",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom[\"2nd_bp_a_clean_you_can_feel\"].value }}</p>",
+            "text_style": "body"
+          }
+        },
+        "93b178e4-2598-45c7-b4a1-fd50f417768b": {
+          "type": "text",
+          "name": "BP 3",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom[\"3th_bp_a_clean_you_can_feel\"].value }}</p>",
+            "text_style": "body"
+          }
+        },
+        "6f829075-8538-46cf-852c-3bb0c8fb002d": {
+          "type": "text",
+          "name": "BP 4",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom[\"4th_bp_a_clean_you_can_feel\"].value }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15124824588331__a02ced5f-9a2c-4bfd-989c-12be8442c58a-16843740867ef11f43-0",
+        "a0ac8f6f-6799-4755-a95f-5f059a6f0b5b",
+        "93b178e4-2598-45c7-b4a1-fd50f417768b",
+        "6f829075-8538-46cf-852c-3bb0c8fb002d"
+      ],
+      "disabled": true,
+      "name": "A clean you feel good about",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "heading": "A clean you can feel <em>good</em> about",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "caption": "{{ product.metafields.custom.description_a_clean_you_can_feel | metafield_text }}",
+        "text_style": "subtitle",
+        "text_size": "medium",
+        "button_label": "",
+        "button_link": "",
+        "second_button_label": "",
+        "second_button_link": "",
+        "content_layout": "overlap",
+        "color_scheme": "custom",
+        "section_background_color": "#ffffff",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#433033",
+        "bullets_color": "#433033",
+        "bullets_line_color": "#433033",
+        "enable_scroll_animation": false,
+        "image_behavior": "none",
+        "mobile_heading_alignment": "center",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 18,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "multicolumn_6G7iCQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DXwrC6": {
+          "type": "column",
+          "name": "Step 1",
+          "settings": {
+            "image": "{{ product.metafields.custom.image1_how_to_use_refresh_your_routine.value }}",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.title_image_1_how_to_use_refresh_your_routine.value }}",
+            "text": "<p>{{ product.metafields.custom.description_image_1_how_to_use_refresh_your_routine | metafield_tag }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4nTd9b": {
+          "type": "column",
+          "name": "Step 2",
+          "settings": {
+            "image": "{{ product.metafields.custom.image2_how_to_use_refresh_your_routine.value }}",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.title_image_2_how_to_use_refresh_your_routine.value }}",
+            "text": "<p>{{ product.metafields.custom.description_image_2_how_to_use_refresh_your_routine | metafield_tag }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3U6yrb": {
+          "type": "column",
+          "name": "Step 3",
+          "settings": {
+            "image": "{{ product.metafields.custom.image3_how_to_use_refresh_your_routine.value }}",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.title_image_3_how_to_use_refresh_your_routine.value }}",
+            "text": "<p>{{ product.metafields.custom.description_image_3_how_to_use_refresh_your_routine | metafield_tag }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_DXwrC6",
+        "column_4nTd9b",
+        "column_3U6yrb"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".inline-richtext {margin: auto;}",
+        "@media screen and (max-width: 749px) {.inline-richtext {margin-left: auto !important; margin-right: auto !important; text-align: center !important; }}"
+      ],
+      "name": "How to Use: Refresh Your Routine",
+      "settings": {
+        "title": "{{ product.metafields.custom.heading_how_to_use_refresh_your_routine.value }}",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "full_width_enabled": false,
+        "button_label": "",
+        "button_link": "",
+        "fadein_enabled": false,
+        "column_heading_background_color": "",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "columns_tablet": "1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".title {text-align: center; font-size: 52px;}",
+        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
+      ],
+      "name": "Complete your Routine",
+      "settings": {
+        "title": "{{ product.metafields.custom.title_complete_your_routine.value }}",
+        "heading_size": "h1",
+        "heading_tag": "h3",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "{{ product.metafields.custom.complete_your_routine_collection.value }}",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "custom",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#433033",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 50,
+        "padding_bottom": 40,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_liquid_VrGMDc": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{%- assign ingredient_cards_html = product.metafields.custom.new_ingredients_card.value -%}\n\n{%- if ingredient_cards_html != blank -%}\n  <div class=\"ingredient-grid-section\">\n    <div class=\"ingredient-grid-section__inner\">\n      {{ ingredient_cards_html }}\n    </div>\n  </div>\n\n  <style>\n    .ingredient-grid-section {\n      padding: 40px 0;\n      background: #fff;\n      color: #222721;\n    }\n\n    .ingredient-grid-section__inner {\n      max-width: 1280px;\n      margin: 0 auto;\n      padding: 0 20px;\n    }\n\n    .ingredient-grid-section__cards {\n      display: flex;\n      gap: 14px;\n      overflow-x: auto;\n      padding-bottom: 10px;\n      scrollbar-width: none;\n    }\n\n    .ingredient-grid-section__cards::-webkit-scrollbar {\n      display: none;\n    }\n\n    .ingredient-grid-section__card {\n      flex: 0 0 78%;\n      max-width: 310px;\n      min-height: 330px;\n      padding: 18px;\n      border: 1px solid #D9D9E3;\n      border-radius: 14px;\n      background: #fff;\n      display: flex;\n      flex-direction: column;\n      justify-content: space-between;\n    }\n\n    .ingredient-grid-section__image-wrap {\n      height: 190px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      margin-bottom: 18px;\n    }\n\n    .ingredient-grid-section__image {\n      width: 116%;\n      height: 116%;\n      object-fit: contain;\n      filter: drop-shadow(0 14px 18px rgba(34, 39, 33, 0.12));\n    }\n\n    .ingredient-grid-section__content {\n      margin-top: auto;\n      text-align: center;\n    }\n\n    .ingredient-grid-section__title {\n      margin: 0;\n      color: #222721;\n      font-size: 22px;\n      line-height: 1.12;\n      letter-spacing: -0.035em;\n    }\n\n    .ingredient-grid-section__desc {\n      max-width: 92%;\n      margin: 10px auto 0;\n      color: #222721;\n      font-size: 13px;\n      line-height: 1.45;\n    }\n\n    .ingredient-grid-section__desc p {\n      margin: 0;\n    }\n\n    @media screen and (min-width: 1000px) {\n      .ingredient-grid-section {\n        padding: 80px 0;\n      }\n\n      .ingredient-grid-section__cards {\n        display: grid;\n        grid-template-columns: repeat(auto-fit, minmax(220px, 260px));\n        justify-content: center;\n        gap: 22px;\n        overflow: visible;\n        padding-bottom: 0;\n      }\n\n      .ingredient-grid-section__card {\n        flex: none;\n        max-width: none;\n        min-height: 350px;\n      }\n\n      .ingredient-grid-section__image-wrap {\n        height: 220px;\n      }\n\n      .ingredient-grid-section__image {\n        width: 112%;\n        height: 112%;\n      }\n\n      .ingredient-grid-section__title {\n        font-size: 24px;\n      }\n    }\n  </style>\n{%- endif -%}",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "multicolumn_HYhLX7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_aLh4Wp": {
+          "type": "column",
+          "name": "Ing 1",
+          "settings": {
+            "image": "shopify://shop_images/Nano-hydroxyapatite.webp",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.ingredients1_a_blend_of_science_flavor.value }}",
+            "text": "<p>{{ product.metafields.custom.description_ingredients1_a_blend_of_science_flavor.value }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Wch8RT": {
+          "type": "column",
+          "name": "Ing 2",
+          "settings": {
+            "image": "{{ product.metafields.custom.a_blend_of_science_flavor_2_ingredient_image.value }}",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.a_blend_of_science_flavor_2_ingredient_title.value }}",
+            "text": "<p>{{ product.metafields.custom.a_blend_of_science_flavor_2_ingredient_desc.value }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_68Mc7p": {
+          "type": "column",
+          "name": "Ing 3",
+          "settings": {
+            "image": "{{ product.metafields.custom.a_blend_of_science_flavor_3_ingredient_image.value }}",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.a_blend_of_science_flavor_3_ingredient_title.value }}",
+            "text": "<p>{{ product.metafields.custom.a_blend_of_science_flavor_3_ingredient_desc.value }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GefQYG": {
+          "type": "column",
+          "name": "Ing 4",
+          "settings": {
+            "image": "{{ product.metafields.custom.a_blend_of_science_flavor_4_ingredient_image.value }}",
+            "image_link": "",
+            "title": "{{ product.metafields.custom.a_blend_of_science_flavor_4_ingredient_title.value }}",
+            "text": "<p>{{ product.metafields.custom.a_blend_of_science_flavor_4_ingredient_desc.value }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_aLh4Wp",
+        "column_Wch8RT",
+        "column_68Mc7p",
+        "column_GefQYG"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".title-wrapper-with-link .title {margin: auto !important; text-align: center !important; margin-top: 50px !important;}",
+        ".multicolumn-card {background-color: #fafaf5 !important;}",
+        ".multicolumn-card__info {padding: 3rem;}",
+        "@media screen and (max-width: 749px) {.title {font-size: 30px; }}"
+      ],
+      "name": "A Blend of Sience & Flavor",
+      "settings": {
+        "title": "{{ product.metafields.custom.title_a_blend_of_science_flavor.value }}",
+        "heading_size": "h0",
+        "heading_tag": "h2",
+        "image_width": "half",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "full_width_enabled": false,
+        "button_label": "",
+        "button_link": "",
+        "fadein_enabled": false,
+        "column_heading_background_color": "",
+        "color_scheme": "custom",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#433033",
+        "columns_tablet": "1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 69,
+        "padding_bottom": 100,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 49
+      }
+    },
+    "672bfbbb-3f35-4988-bf92-66ed4484892b": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1": {
+          "type": "collapsible_row",
+          "name": "Q1",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"1_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"1_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2": {
+          "type": "collapsible_row",
+          "name": "Q2",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"2_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"2_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3": {
+          "type": "collapsible_row",
+          "name": "Q3",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"3_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"3_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4": {
+          "type": "collapsible_row",
+          "name": "Q4",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"4_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"4_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9qinTJ": {
+          "type": "collapsible_row",
+          "name": "Q5",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"5_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"5_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rVMB4W": {
+          "type": "collapsible_row",
+          "name": "Q6",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"6_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"6_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_bXhKjK": {
+          "type": "collapsible_row",
+          "name": "Q7",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"7_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"7_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Fe6kif": {
+          "type": "collapsible_row",
+          "name": "Q8",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"8_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"8_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QcLBtp": {
+          "type": "collapsible_row",
+          "name": "Q9",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"9_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"9_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dnEjhR": {
+          "type": "collapsible_row",
+          "name": "Q10",
+          "settings": {
+            "heading": "{{ product.metafields.custom[\"10_faqs_title\"].value }}",
+            "icon": "question_mark",
+            "row_content": "<p>{{ product.metafields.custom[\"10_faqs_desc\"].value }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-1",
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-2",
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-3",
+        "template--15200207929387__672bfbbb-3f35-4988-bf92-66ed4484892b-collapsible_row-4",
+        "collapsible_row_9qinTJ",
+        "collapsible_row_rVMB4W",
+        "collapsible_row_bXhKjK",
+        "collapsible_row_Fe6kif",
+        "collapsible_row_QcLBtp",
+        "collapsible_row_dnEjhR"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 749px) {h1 {font-size: 30px; }}"
+      ],
+      "name": "Frequently Asked Questions",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h0",
+        "heading_tag": "h1",
+        "heading_alignment": "center",
+        "description": "",
+        "layout": "none",
+        "color_scheme": "custom",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#433033",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Best Sellers",
+        "heading_alignment": "center",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "1684207833f45c861d": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_M3QVqX": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_M3QVqX"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_class": "",
+        "custom_color_enabled": true,
+        "custom_background_color": "#fafaf5",
+        "padding_top": 0,
+        "padding_bottom": 26,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "custom_liquid_gRpM9n": {
+      "type": "custom-liquid",
+      "name": "Description long",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.new_description_long != blank %}\n<h2 class=\"boka-section-heading\">The Boka Difference</h2>\n<div class=\"boka-benefits\">\n  {{ product.metafields.custom.new_description_long }}\n  </div>\n{% endif %}",
+        "color_scheme": "custom",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#ffffff",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10
+      }
+    },
+    "custom_liquid_Yw8DLN": {
+      "type": "custom-liquid",
+      "name": "FAQ",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.new_faq != blank %}\n  <h2 class=\"boka-section-heading\">FAQs</h2>\n  {{ product.metafields.custom.new_faq }}\n{% endif %}",
+        "color_scheme": "custom",
+        "custom_background_color": "#fafaf5",
+        "custom_text_color": "#ffffff",
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "padding_top_mobile": 10,
+        "padding_bottom_mobile": 10
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_gqtDLL",
+    "featured_collection_bk6RWf",
+    "image_with_text_iqzxwN",
+    "a02ced5f-9a2c-4bfd-989c-12be8442c58a",
+    "multicolumn_6G7iCQ",
+    "9b1024e4-3a86-4b1c-aa31-f83e584dd2b8",
+    "custom_liquid_VrGMDc",
+    "multicolumn_HYhLX7",
+    "672bfbbb-3f35-4988-bf92-66ed4484892b",
+    "related-products",
+    "1684207833f45c861d",
+    "custom_liquid_gRpM9n",
+    "custom_liquid_Yw8DLN"
+  ]
+}
