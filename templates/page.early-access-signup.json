@@ -11,13 +11,31 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_liquid_ptJpbB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"boka-early-access\">\n  <div class=\"boka-early-access__card\">\n    <div class=\"klaviyo-form-RHAWDn\"></div>\n\n    <p class=\"boka-early-access__note\">\n      Already signed up? We’ll be in touch soon!\n    </p>\n  </div>\n</section>\n\n<style>\n  .boka-early-access {\n    position: relative;\n    left: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100vw;\n    min-height: 72vh;\n    margin-left: -50vw;\n    padding: 88px 24px;\n    background: #fff0f0;\n  }\n\n  .boka-early-access *,\n  .boka-early-access *::before,\n  .boka-early-access *::after {\n    box-sizing: border-box;\n  }\n\n  .boka-early-access__card {\n    width: min(100%, 1120px);\n    padding: 54px 48px;\n    border-radius: 24px;\n    background: #ffffff;\n    text-align: center;\n  }\n\n  .boka-early-access .klaviyo-form-RHAWDn {\n    width: 100%;\n  }\n\n  .boka-early-access__note {\n    margin: 24px 0 0;\n    color: #111111;\n    font-size: 16px;\n    line-height: 1.35;\n    font-weight: 700;\n    text-align: center;\n  }\n\n  @media screen and (max-width: 749px) {\n    .boka-early-access {\n      min-height: 68vh;\n      padding: 56px 16px;\n    }\n\n    .boka-early-access__card {\n      padding: 34px 18px 32px;\n      border-radius: 22px;\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#FFFFFF",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_ptJpbB"
   ]
 }
