@@ -1,0 +1,1443 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "boka_listicle_hero_banner_X9DaRL": {
+      "type": "boka_listicle_hero_banner",
+      "custom_css": [
+        ".boka-timer-row {display: none;}",
+        ".boka-review-text {text-decoration: underline;}",
+        "a.boka-walmart {display: none !important;}"
+      ],
+      "name": "Listicle Hero Banner",
+      "settings": {
+        "background_color": "#f5f3ee",
+        "section_height": 720,
+        "left_padding": 100,
+        "mobile_padding": 20,
+        "show_reviews": true,
+        "star_count": 5,
+        "star_color": "#f1c232",
+        "review_text": "See Why Customers Love It",
+        "reviews_section_id": "shopify-section-template--25895203602475__yotpo_reviews_widget_hbzYf6",
+        "review_text_color": "#090909",
+        "review_font_size": 16,
+        "heading_text": "Sensitivity Toothpaste without the Fluoride",
+        "heading_color": "#090909",
+        "heading_font_size": 40,
+        "mobile_heading_font_size": 20,
+        "subheading_text": "Boka's first toothpaste formulated specifically for tooth sensitivity with 5% potassium nitrate to help reduce and prevent painful tooth sensitivity.*",
+        "subheading_color": "#555555",
+        "subheading_font_size": 18,
+        "body_font_size": 14,
+        "cta_text": "",
+        "cta_url": "",
+        "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_B6C9CA76B8B7B5D5FC3DA534B7CE81D2_afap_abs&ref_=aa_maas&tag=maas&th=1",
+        "button_action": "link",
+        "variant_id": "",
+        "product_quantity": 0,
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_font_size": 16,
+        "button_border_radius": 4,
+        "show_walmart_banner": true,
+        "walmart_text": "Find it at your nearest Walmart",
+        "walmart_url": "",
+        "walmart_bg_color": "#fff8e7",
+        "walmart_border_color": "#ffc220",
+        "walmart_text_color": "#1a1a1a",
+        "show_timer": false,
+        "timer_label_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
+        "timer_end_date": "Dec 31, 2025 23:59:59",
+        "timer_text_color": "#333333",
+        "timer_countdown_color": "#1a1a1a",
+        "show_shipping_banner": false,
+        "shipping_text": "Boka's first toothpaste formulated specifically for tooth sensitivity with 5% potassium nitrate.",
+        "shipping_banner_bg": "#dff0d8",
+        "shipping_text_color": "#090909",
+        "show_promo_banner": false,
+        "promo_heading": "Black Friday Cyber Monday Sale:",
+        "promo_text": "Save up to 30% off on Ela Mint n-Ha Toothpaste now!",
+        "promo_bg_color": "#fff3cd",
+        "promo_text_color": "#856404",
+        "video_width_percent": 30,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/1e36f1da89524f28af9c600185bd7145.mp4",
+        "video_aria_label": "Customer toothpaste review video",
+        "video_autoplay": true,
+        "video_loop": true,
+        "video_muted": true,
+        "mobile_video_height": 380
+      }
+    },
+    "review_hero_banner_VHPeMD": {
+      "type": "review-hero-banner",
+      "blocks": {
+        "feature_mBh9NP": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Screenshot_2026-02-26_at_2.06.34_PM.png",
+            "feature_text": "Has Nano-Hydroxyapatite (n-Ha), a breakthrough material backed by science"
+          }
+        },
+        "feature_TAyGGd": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Screenshot_2026-02-26_at_2.06.42_PM.png",
+            "feature_text": "Fluoride-free & clean ingredients"
+          }
+        },
+        "review_pJXwiM": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Mikayla M.",
+            "star_rating": 5,
+            "review_text": "Best Toothpaste I've ever tried! Actually whitens!! My teeth felt cleaner and looked brighter after 1 use."
+          }
+        },
+        "review_tfWcnL": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Betsie P.",
+            "star_rating": 5,
+            "review_text": "I've been using Boka Mint for several years now. Can't be without it. And I recommend it to my friends!"
+          }
+        },
+        "review_kDLRQa": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Patricia M.",
+            "star_rating": 5,
+            "review_text": "I love this toothpaste you only need a very small amount on your toothbrush. It is very refreshing and my teeth feel so clean."
+          }
+        },
+        "review_XDyKCG": {
+          "type": "review",
+          "settings": {
+            "reviewer_name": "Diane P.",
+            "star_rating": 5,
+            "review_text": "Love all the flavors but the mint is my go to. My gums no longer hurt.... Thank you so much!"
+          }
+        }
+      },
+      "block_order": [
+        "feature_mBh9NP",
+        "feature_TAyGGd",
+        "review_pJXwiM",
+        "review_tfWcnL",
+        "review_kDLRQa",
+        "review_XDyKCG"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p.boka-hero__timer-line {display: none !important;}"
+      ],
+      "name": "Review Hero Banner",
+      "settings": {
+        "left_column_width": 50,
+        "columns_gap": 60,
+        "bg_color": "#fafaf6",
+        "text_color": "#1a1a1a",
+        "heading_color": "#0d0d0d",
+        "card_bg_color": "#111111",
+        "card_text_color": "#ffffff",
+        "show_stars": false,
+        "star_color": "#f5a623",
+        "review_text": "3815+ Reviews",
+        "reviews_anchor": "shopify-section-template--17574539231275__yotpo_reviews_widget_hbzYf6",
+        "heading": "Sensitivity Toothpaste Without the Fluoride",
+        "heading_size": 40,
+        "description": "Boka's first toothpaste formulated specifically for tooth sensitivity with 5% potassium nitrate.",
+        "cta_text": "",
+        "cta_url": "",
+        "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_AE70DAEF8AF0BDBFD73A9E14700B81E0_afap_abs&ref_=aa_maas&tag=maas",
+        "cta_bg_color": "#0077f6",
+        "cta_text_color": "#ffffff",
+        "button_action": "link",
+        "variant_id": "7744260046891",
+        "product_quantity": 1,
+        "show_timer": true,
+        "timer_text": "Helps reduce and prevent painful tooth sensitivity!*",
+        "timer_label": "Offer Ends in",
+        "timer_deadline": "Dec 31, 2025 23:59:59",
+        "show_shipping_banner": false,
+        "shipping_text": "Free Shipping* on your first order with code: NEWTOBOKA",
+        "shipping_banner_bg": "#fae5db",
+        "shipping_text_color": "#090909"
+      }
+    },
+    "17657747600d7cde40": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_01dc9c9_KTh4Wi": {
+          "type": "ai_gen_block_01dc9c9",
+          "settings": {
+            "item_1_enabled": true,
+            "item_1_icon": "shopify://shop_images/Science-Backed_1.png",
+            "item_1_text": "Science-Backed",
+            "item_2_enabled": true,
+            "item_2_icon": "shopify://shop_images/Fluoride-Free.png",
+            "item_2_text": "Fluoride-Free",
+            "item_3_enabled": true,
+            "item_3_icon": "shopify://shop_images/For_Sensitive_Teeth.png",
+            "item_3_text": "For Sensitive Teeth",
+            "item_4_enabled": true,
+            "item_4_icon": "shopify://shop_images/Nano-Hydroxyapatite_c11186da-1160-424c-9f50-0402c5fcfe49.png",
+            "item_4_text": "Nano-Hydroxyapatite",
+            "item_5_enabled": true,
+            "item_5_icon": "shopify://shop_images/Non-Toxic__Oral_Care.png",
+            "item_5_text": "Non-Toxic* Oral Care",
+            "item_6_enabled": true,
+            "item_6_icon": "shopify://shop_images/Dentist-Formulated.png",
+            "item_6_text": "Dentist-Formulated",
+            "background_color": "#ffffff",
+            "container_height": 60,
+            "padding_top": 12,
+            "padding_bottom": 12,
+            "text_color": "#000000",
+            "text_size": 16,
+            "text_weight": "400",
+            "icon_size": 36,
+            "icon_text_gap": 8,
+            "item_spacing": 80,
+            "animation_speed": 60
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_01dc9c9_KTh4Wi"
+      ],
+      "name": "scrolling icons",
+      "settings": {}
+    },
+    "176576544784328569": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_46677d3_QNQPJq": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_left",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/2_2.webp",
+            "image_border_radius": 0,
+            "heading": "Relief for Sensitive Teeth",
+            "subheadline_1": "Reduces Tooth Sensitivity",
+            "subheadline_1_icon": "shopify://shop_images/Reduces_Tooth_Sensitivity.png",
+            "subheadline_1_popup_text": "",
+            "subheadline_1_popup_link_text": "",
+            "subheadline_1_popup_scroll_target": "",
+            "subheadline_2": "Builds Protection",
+            "subheadline_2_icon": "shopify://shop_images/Builds_Protection.png",
+            "subheadline_2_popup_text": "",
+            "subheadline_2_popup_link_text": "",
+            "subheadline_2_popup_scroll_target": "",
+            "subheadline_icon_size": 20,
+            "body": "<p>Powered by <strong>5% potassium nitrate</strong>, commonly used ingredient in sensitivity formulas that helps calm the nerves inside teeth over time.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 15,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "rgba(0,0,0,0)",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "rgba(0,0,0,0)",
+            "subheadline_2_text_color": "#000000",
+            "button_text": "",
+            "button_link": "",
+            "review_1_highlight": "\"Great toothpaste for sensitive teeth\"",
+            "review_1_quote": "\"I bought this toothpaste because I have very sensitive teeth and gums. I’ve been using it for about a week now, and I can already notice a difference... If you have sensitive teeth, this toothpaste is definitely worth trying.\"\"",
+            "review_1_author": "Anna S.",
+            "review_2_highlight": "\"HIGHLY RECOMMEND\"",
+            "review_2_quote": "\"Excellent. Teeth feel clean. Fresh breath.\"",
+            "review_2_author": "JWolfe",
+            "review_3_highlight": "\"Nice, mild flavor\"",
+            "review_3_quote": "\"I have always used sensitive toothpaste, as my teeth have cold sensitivity. With this one, I can brush and then eat or drink right away, and my food still tastes normal.\"",
+            "review_3_author": "Florida B.",
+            "review_bg_color": "#acd3da",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#000000",
+            "quote_color": "#000000",
+            "author_color": "#000000",
+            "verified_color": "#f5f3ee",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_action": "link",
+            "reviews_variant_id": "",
+            "reviews_product_quantity": 0,
+            "reviews_button_text": "",
+            "reviews_button_link": "",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_46677d3_4ktG94": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_right",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/1_2.webp",
+            "image_border_radius": 0,
+            "heading": "Proprietary and innovative formula",
+            "subheadline_1": "Mimics tooth enamel",
+            "subheadline_1_icon": "shopify://shop_images/Mimics_tooth_enamel.png",
+            "subheadline_1_popup_text": "",
+            "subheadline_1_popup_link_text": "",
+            "subheadline_1_popup_scroll_target": "",
+            "subheadline_2": "Fluoride-Free",
+            "subheadline_2_icon": "shopify://shop_images/Fluoride-Free.png",
+            "subheadline_2_popup_text": "",
+            "subheadline_2_popup_link_text": "",
+            "subheadline_2_popup_scroll_target": "",
+            "subheadline_icon_size": 20,
+            "body": "<p>Includes Nano-hydroxyapatite (n-Ha) - a biomimetic mineral form of the same ingredient that naturally makes up 97% of your teeth material and 70% of your dentin.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "rgba(0,0,0,0)",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "rgba(0,0,0,0)",
+            "subheadline_2_text_color": "#000000",
+            "button_text": "",
+            "button_link": "",
+            "review_1_highlight": "\"Perfect for sensitive teeth\"",
+            "review_1_quote": "\"I ordered this toothpaste because my boyfriend and I have sensitive teeth. The tube came sealed and the shape of the cap made it easier to twist on/off. This toothpaste worked really well for us and didn't bother us at all! Our teeth didn't hurt after using this and it cleaned very well. \"",
+            "review_1_author": "Jennie",
+            "review_2_highlight": "\"Light mint, gentle on sensitivity, and consistent with Boka quality\"",
+            "review_2_quote": "\"What I love most is the nano-hydroxyapatite formula for enamel support, plus being fluoride-free, sulfate-free, and free from artificial additives. It feels like I’m actually supporting my teeth long-term instead of just masking problems.\n\nIf you already like Boka or want a gentle sensitivity toothpaste with a soft mint flavor, this one is definitely worth trying.\"\"",
+            "review_2_author": "Allie",
+            "review_3_highlight": "\"Ride or Die Toothpaste (Yes, Really)\"",
+            "review_3_quote": "\"First off: the sensitivity relief is real. I used to brace myself before sipping cold water or eating ice cream. After consistent twice-daily brushing, that sharp zing? Basically gone. The combo of potassium nitrate + nano hydroxyapatite has my teeth feeling protected instead of dramatic.\"",
+            "review_3_author": "Normal L.",
+            "review_bg_color": "#acd3da",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#000000",
+            "quote_color": "#000000",
+            "author_color": "#000000",
+            "verified_color": "#ffffff",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_action": "link",
+            "reviews_variant_id": "",
+            "reviews_product_quantity": 0,
+            "reviews_button_text": "",
+            "reviews_button_link": "",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_46677d3_fVcWbb": {
+          "type": "ai_gen_block_46677d3",
+          "settings": {
+            "layout": "image_left",
+            "image_width": 50,
+            "vertical_alignment": "center",
+            "gap": 40,
+            "mobile_gap": 30,
+            "container_width": 1200,
+            "image": "shopify://shop_images/7.webp",
+            "image_border_radius": 0,
+            "heading": "Refreshing Mint Cream Flavor",
+            "subheadline_1": "Gentle Formula",
+            "subheadline_1_icon": "shopify://shop_images/Gentle_Formula.png",
+            "subheadline_1_popup_text": "",
+            "subheadline_1_popup_link_text": "",
+            "subheadline_1_popup_scroll_target": "",
+            "subheadline_2": "Freshens Breath",
+            "subheadline_2_icon": "shopify://shop_images/Freshens_Breath.png",
+            "subheadline_2_popup_text": "",
+            "subheadline_2_popup_link_text": "",
+            "subheadline_2_popup_scroll_target": "",
+            "subheadline_icon_size": 20,
+            "body": "<p>A smooth mint cream flavor that freshens breath while making brushing a more pleasant daily routine.</p>",
+            "text_alignment": "left",
+            "subheadline_font_size": 14,
+            "subheadline_padding_vertical": 8,
+            "subheadline_padding_horizontal": 16,
+            "subheadline_gap": 8,
+            "subheadline_1_bg_color": "#fafaf5",
+            "subheadline_1_text_color": "#000000",
+            "subheadline_2_bg_color": "#fafaf5",
+            "subheadline_2_text_color": "#000000",
+            "button_text": "",
+            "button_link": "",
+            "review_1_highlight": "\"Love this toothpaste\"",
+            "review_1_quote": "\"After consistent use, my teeth feel protected, my gums are happy, and I don’t get that sharp zing anymore. It genuinely feels like a premium, science-backed toothpaste that delivers real results. If you struggle with sensitivity and want something gentle, effective, and thoughtfully formulated, this one is absolutely worth it.\"",
+            "review_1_author": "Drowsy D.",
+            "review_2_highlight": "\"Mild mint, works well\"",
+            "review_2_quote": "\"I've purchased boka toothpaste before so I was excited to try this one when I saw it. The mint flavor is pleasant and very mild. This leaves my teeth feeling clean. I'm happy with this and will definitely use it all and hope to try the other flavor options in the future. A little pricey, but very high quality.\"",
+            "review_2_author": "Yong",
+            "review_3_highlight": "\"Good Sensitive Teeth Toothpaste\"",
+            "review_3_quote": "\"This Boka toothpaste has helped with cold sensitivity in my teeth. It's not a cure, but after a week or so of daily use, I'm noticing I'm able to tolerate very cold food like ice cream and chilled water without wincing as much. The taste is fine, it's not overpowering, and texture wise doesn't feel any different then other toothpaste I've used.\"",
+            "review_3_author": "Catus",
+            "review_bg_color": "#acd3da",
+            "review_border_radius": 12,
+            "review_padding": 30,
+            "highlight_size_desktop": 18,
+            "quote_size_desktop": 16,
+            "author_size_desktop": 14,
+            "highlight_size_mobile": 18,
+            "quote_size_mobile": 14,
+            "author_size_mobile": 12,
+            "highlight_color": "#000000",
+            "quote_color": "#000000",
+            "author_color": "#000000",
+            "verified_color": "#ffffff",
+            "star_size": 20,
+            "star_color": "#ffd700",
+            "nav_size": 40,
+            "nav_bg_color": "#ffffff",
+            "nav_hover_bg_color": "#f0f0f0",
+            "nav_color": "#000000",
+            "dot_size": 10,
+            "dot_color": "#cccccc",
+            "dot_active_color": "#000000",
+            "reviews_button_action": "link",
+            "reviews_variant_id": "",
+            "reviews_product_quantity": 0,
+            "reviews_button_text": "",
+            "reviews_button_link": "",
+            "reviews_cta_font_size": 16,
+            "reviews_cta_padding_vertical": 12,
+            "reviews_cta_padding_horizontal": 32,
+            "reviews_cta_border_radius": 0,
+            "reviews_cta_bg_color": "#000000",
+            "reviews_cta_text_color": "#ffffff",
+            "reviews_cta_hover_bg_color": "#333333",
+            "reviews_cta_hover_text_color": "#ffffff",
+            "amazon_url": "",
+            "amazon_btn_bg_color": "#1a98ff",
+            "amazon_btn_width": 100,
+            "amazon_btn_spacing": 12,
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "heading_spacing": 20,
+            "subheadline_spacing": 20,
+            "body_spacing": 25,
+            "slider_spacing": 30,
+            "highlight_spacing": 16,
+            "stars_spacing": 16,
+            "quote_spacing": 20,
+            "pagination_spacing": 20,
+            "cta_spacing": 20,
+            "background_color": "#fafaf5",
+            "heading_color": "#000000",
+            "body_color": "#000000",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "body_size": 16,
+            "button_font_size": 16,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_46677d3_QNQPJq",
+        "ai_gen_block_46677d3_4ktG94",
+        "ai_gen_block_46677d3_fVcWbb"
+      ],
+      "custom_css": [
+        "a {color: #ffffff !important;}"
+      ],
+      "name": "Images+Text+Reviews",
+      "settings": {}
+    },
+    "17655422262dd9640d": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "featured_product_section_custom_UEHaA4": {
+      "type": "featured-product-section-custom",
+      "blocks": {
+        "text_pCjw83": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_d4zgQE": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2",
+            "heading_tag": "h4"
+          }
+        },
+        "yotpo_widget_aEd8ik": {
+          "type": "yotpo_widget",
+          "settings": {
+            "yotpo_product_id": "7788398772267",
+            "yotpo_scroll_target": "shopify-section-template--25895203602475__yotpo_reviews_widget_hbzYf6"
+          }
+        },
+        "price_T7pXW7": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons_j3VN3h": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "amazon_button_C8Byrd": {
+          "type": "amazon_button",
+          "settings": {
+            "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_B6C9CA76B8B7B5D5FC3DA534B7CE81D2_afap_abs&ref_=aa_maas&tag=maas&th=1",
+            "replace_sticky_atc": true
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_nibVCx": {
+          "type": "shopify://apps/tolstoy-ads-image-video/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "2xltcx7temkfn"
+          }
+        },
+        "description_9m494J": {
+          "type": "description",
+          "settings": {}
+        },
+        "complementary_T3Ybgg": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
+        "collapsible_tab_X4QUJA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "none",
+            "content": "<p>Apply at least 1-inch strip of toothpaste onto a soft bristle toothbrush. Brush teeth thoroughly for 2 minutes twice a day.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_chH3cF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
+            "page": ""
+          }
+        },
+        "icon_with_text_HedUMR": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Made_for_Sensitive_Teeth_Claims_1cfe0548-7e0f-41b1-8b47-f35c76f6b4c7.png",
+            "heading_1": "<strong>Made for Sensitive Teeth</strong>",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/Dentist-_Formulated_Claims.png",
+            "heading_2": "<strong>Dentist-Formulated</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "icon_with_text_kfTBKq": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/Fluoride-Free_Claims.png",
+            "heading_1": "<strong>Fluoride-Free</strong>",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/Science-backed_Claims.png",
+            "heading_2": "<strong>Science-backed</strong>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_pCjw83",
+        "title_d4zgQE",
+        "yotpo_widget_aEd8ik",
+        "price_T7pXW7",
+        "buy_buttons_j3VN3h",
+        "amazon_button_C8Byrd",
+        "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
+        "description_9m494J",
+        "complementary_T3Ybgg",
+        "collapsible_tab_X4QUJA",
+        "collapsible_tab_chH3cF",
+        "icon_with_text_HedUMR",
+        "icon_with_text_kfTBKq"
+      ],
+      "custom_css": [
+        "h1.product__title.h1 {font-size: 30px;}",
+        ".price .price-item {margin: 0 0 0 0;}",
+        "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
+        "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add {height: 45px;}",
+        "span.yotpo-sr-bottom-line-right-panel,span.yotpo-sr-vertical-border,div#sticky-atc-variant-featured,a.link.product__view-details.animate-arrow {display: none !important;}",
+        "span.h4 > strong {font-family: \"Archivo\";}"
+      ],
+      "name": "feature product section new",
+      "settings": {
+        "product": "toothpaste-for-sensitive-teeth",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "lazyload": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "featured_product_TGCUYH": {
+      "type": "featured-product",
+      "blocks": {
+        "rating_QEkXF4": {
+          "type": "rating",
+          "settings": {}
+        },
+        "title_T9DDRE": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "default"
+          }
+        },
+        "price_46i4nh": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_xDenk8": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"icon-text-container\">\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_3.avif?v=1765793186\" alt=\"Icon 1\">\n    <span>Fluoride Free Care</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_2_534f46da-868d-4985-bed9-a528d00ebea3.webp?v=1765793186\" alt=\"Icon 2\">\n    <span>Freshens Breath</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_1.png?v=1765793186\" alt=\"Icon 3\">\n    <span>Fresh Mint Clean</span>\n  </div>\n</div>\n\n<style>\n  .icon-text-container {\n    display: flex;\n    justify-content: space-between; /* Spread evenly on desktop */\n    align-items: center;\n    gap: 40px;\n    flex-wrap: nowrap; /* Keep one line on desktop */\n  }\n\n  .icon-text {\n    display: flex;\n    align-items: center;\n    gap: 8px; /* Space between icon and text */\n    white-space: nowrap; /* Keep each icon + text inline */\n  }\n\n  .icon-text img {\n    width: 24px;\n    height: 24px;\n  }\n\n  .icon-text span {\n    font-family: 'Neue Haas Unica Pro', Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    color: #000;\n  }\n\n  /* Mobile: allow wrapping container into 2 lines and align left */\n  @media screen and (max-width: 768px) {\n    .icon-text-container {\n      flex-wrap: wrap; /* Container can wrap to 2 lines */\n      justify-content: flex-start; /* Align left on mobile */\n      gap: 20px;\n    }\n\n    .icon-text img {\n      width: 20px;\n      height: 20px;\n    }\n\n    .icon-text span {\n      font-size: 14px;\n    }\n  }\n</style>"
+          }
+        },
+        "text_YRpR7X": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Boka’s formula features n-Ha</strong>, a science-backed mineral that mimics tooth enamel. Safe for daily use, it helps keep your smile clean, fresh, and bright.",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_ANajtC": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "variant_picker_XeaPGM": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_qer7jh": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_LXDgzw": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "icon_with_text_mfVAW3": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "truck",
+            "heading_1": "Enjoy Free Shipping on your first order with code: NEWTOBOKA",
+            "icon_2": "return",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "custom_liquid_Qpix6f": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .accordion {\n    border-top: 1px solid #e5e5e5;\n    max-width: 800px;\n    color: #000;\n    font-family: \"Neue Haas Unica Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  }\n\n  .accordion details {\n    border-bottom: 1px solid #e5e5e5;\n    padding: 16px 0;\n    font-family: inherit;\n    color: inherit;\n  }\n\n  .accordion summary {\n    cursor: pointer;\n    font-weight: 600;\n    list-style: none;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion summary::-webkit-details-marker {\n    display: none;\n  }\n\n  .accordion summary::after {\n    content: \"+\";\n    font-size: 20px;\n    color: inherit;\n  }\n\n  .accordion details[open] summary::after {\n    content: \"–\";\n  }\n\n  .accordion .content {\n    padding-top: 12px;\n    font-size: 14px;\n    line-height: 1.6;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion .content p,\n  .accordion .content li,\n  .accordion .content a {\n    margin-bottom: 8px;\n    color: inherit;\n    font-family: inherit;\n  }\n\n  .accordion .content a {\n    text-decoration: underline;\n  }\n</style>\n\n<div class=\"accordion\">\n\n  <details>\n    <summary>Ingredients</summary>\n    <div class=\"content\">\n      <p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (Aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>\n    </div>\n  </details>\n\n  <details>\n    <summary>How to Use</summary>\n    <div class=\"content\">\n      <p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>\n    </div>\n  </details>\n\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "rating_QEkXF4",
+        "title_T9DDRE",
+        "price_46i4nh",
+        "custom_liquid_xDenk8",
+        "text_YRpR7X",
+        "icon_with_text_ANajtC",
+        "variant_picker_XeaPGM",
+        "quantity_selector_qer7jh",
+        "buy_buttons_LXDgzw",
+        "icon_with_text_mfVAW3",
+        "custom_liquid_Qpix6f"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
+        ".product-form__input input[type=\"radio\"] + label {padding: 1.8rem 2rem; border-radius: 20px;}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "ela-mint-toothpaste",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_feature_product_9Gkr6x": {
+      "type": "custom-feature-product",
+      "blocks": {
+        "icon_text_row_YH3FYW": {
+          "type": "icon_text_row",
+          "disabled": true,
+          "settings": {
+            "icon_1_image": "shopify://shop_images/icon_1.png",
+            "icon_1_text": "Fluoride Free Care",
+            "icon_2_text": "Freshens Breath",
+            "icon_3_text": "Fresh Mint Clean",
+            "icon_4_text": "",
+            "desktop_alignment": "space-between",
+            "gap_desktop": 40,
+            "icon_size_desktop": 24,
+            "font_size_desktop": 16,
+            "mobile_alignment": "flex-start",
+            "mobile_wrap": "wrap",
+            "gap_mobile": 20,
+            "icon_size_mobile": 20,
+            "font_size_mobile": 14,
+            "icon_text_gap": 8,
+            "font_family": "'Neue Haas Unica Pro', Helvetica, Arial, sans-serif",
+            "font_weight": "400",
+            "text_color": "#000000",
+            "margin_top": 20,
+            "margin_bottom": 20
+          }
+        },
+        "custom_liquid_nB3TRi": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"icon-text-container\">\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_3.avif?v=1765793186\" alt=\"Icon 1\">\n    <span>Fluoride Free Care</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_2_534f46da-868d-4985-bed9-a528d00ebea3.webp?v=1765793186\" alt=\"Icon 2\">\n    <span>Freshens Breath</span>\n  </div>\n  <div class=\"icon-text\">\n    <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/icon_1.png?v=1765793186\" alt=\"Icon 3\">\n    <span>Fresh Mint Clean</span>\n  </div>\n</div>\n\n<style>\n  .icon-text-container {\n    display: flex;\n    justify-content: space-between; /* Spread evenly on desktop */\n    align-items: center;\n    gap: 40px;\n    flex-wrap: nowrap; /* Keep one line on desktop */\n  }\n\n  .icon-text {\n    display: flex;\n    align-items: center;\n    gap: 8px; /* Space between icon and text */\n    white-space: nowrap; /* Keep each icon + text inline */\n  }\n\n  .icon-text img {\n    width: 24px;\n    height: 24px;\n  }\n\n  .icon-text span {\n    font-family: 'Neue Haas Unica Pro', Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    color: #000;\n  }\n\n  /* Mobile: allow wrapping container into 2 lines and align left */\n  @media screen and (max-width: 768px) {\n    .icon-text-container {\n      flex-wrap: wrap; /* Container can wrap to 2 lines */\n      justify-content: flex-start; /* Align left on mobile */\n      gap: 20px;\n    }\n\n    .icon-text img {\n      width: 20px;\n      height: 20px;\n    }\n\n    .icon-text span {\n      font-size: 14px;\n    }\n  }\n</style>"
+          }
+        },
+        "title_G7MRdz": {
+          "type": "title",
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
+        },
+        "price_iedtX3": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
+          }
+        },
+        "variant_picker_7CE7P9": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_names": "white, blue, mint, pink",
+            "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
+          }
+        },
+        "buy_buttons_EEKMLy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description_wpqWEy": {
+          "type": "description",
+          "settings": {}
+        },
+        "complementary_jxPWce": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
+        "collapsible_tab_9Bf7bQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Use",
+            "icon": "none",
+            "content": "<p>Apply a pea-sized amount to a dry toothbrush. Brush thoroughly for two minutes, twice daily. Spit after brushing—skip the rinse to allow the formula to work effectively.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KEHY4h": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "<p>Water, Vegetable Glycerin, Hydrated Silica, Sorbitol Powder, Silica, Hydroxyapatite (Nano), Sodium Benzoate, Sodium Lauroyl Sarcosinate, Mentha Piperita Essential (Peppermint) Oil, Mentha Viridis (Spearmint) Oil, Illicium Verum (Star Anise) Oil, Gaultheria Procumberis (Wintergreen) Oil, Xylitol, Xanthan Gum, Stevia Rebaudiana Extract Powder, Methylsulfonylmethane, Aloe Barbadensis (aloe Vera) Leaf Juice, Sodium Bicarbonate, Camellia Sinensis (Green Tea) Leaf Extract, Cucumis Sativus (Cucumber) Fruit Extract, Persea Gratissima (Avocado) Fruit Extract, Mangifera Indica (Mango) Fruit Extract, Menthol, Elettaria Cardamomum Miniscula Seed (Cardamom), Potassium Chloride.</p>",
+            "page": ""
+          }
+        },
+        "icon_with_text_8D7pgH": {
+          "type": "icon-with-text",
+          "settings": {
+            "orientation": "inlined",
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "<strong>Soothing Aloe Vera</strong>",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_row_YH3FYW",
+        "custom_liquid_nB3TRi",
+        "title_G7MRdz",
+        "price_iedtX3",
+        "variant_picker_7CE7P9",
+        "buy_buttons_EEKMLy",
+        "description_wpqWEy",
+        "complementary_jxPWce",
+        "collapsible_tab_9Bf7bQ",
+        "collapsible_tab_KEHY4h",
+        "icon_with_text_8D7pgH"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".product-form__input input[type=\"radio\"]:checked + label {padding: 1.8rem 2rem; border-radius: 20px;}",
+        ".product-form__input input[type=\"radio\"] + label {padding: 1.8rem 2rem; border-radius: 20px;}"
+      ],
+      "name": "Product Display",
+      "settings": {
+        "product_handle": "ela-mint-toothpaste",
+        "enable_sticky_info": true,
+        "enable_sticky_atc": true,
+        "media_size": "large",
+        "lazyload": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "thumbnail_position": "left",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_tablet": 36,
+        "padding_bottom_tablet": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "1765534182fed2e648": {
+      "type": "_blocks",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_liquid_CjtDWw": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"as-seen-on-section\">\n  <h1 class=\"as-seen-on-title\">As Seen On</h1>\n  <div class=\"as-seen-on-logos-wrapper\">\n    <div class=\"as-seen-on-logos\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n      <!-- Duplicate logos for infinite scrolling -->\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vogue_3baa2d92-7316-4c7a-9f72-dd0e92ea3117.png?v=1739261765\" alt=\"Vogue logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/GQ_933a5a5b-db74-4b3e-a87f-874ec19c7bbf.png?v=1739261765\" alt=\"GQ logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/goop_ee8d5cc2-51db-4251-b0f8-4796fcada2d4.png?v=1739261765\" alt=\"Goop logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/fastcompany_1.png?v=1739265589\" alt=\"Fast Company logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/harpersbazaar.png?v=1739261764\" alt=\"Harper's Bazaar logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/vice.png?v=1739261765\" alt=\"Vice logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/oprahdaily.png?v=1739261765\" alt=\"Oprah Daily logo\">\n      <img src=\"https://cdn.shopify.com/s/files/1/2656/6094/files/theeverygirl.png?v=1739261765\" alt=\"The Every Girl logo\">\n    </div>\n  </div>\n</div>\n\n<style>\n  .as-seen-on-section {\n    text-align: center;\n    padding: 40px 20px;\n    overflow: hidden;\n    background: #ffffff;\n    padding-bottom: 80px;\n    padding-top: 10px;\n  }\n\n  .as-seen-on-title {\n    font-size: 40px;\n    font-weight: regular;\n    margin-bottom: 80px;\n  }\n\n@media (max-width: 768px) {\n    .as-seen-on-title {\n      font-size: 30px;\n      margin-bottom: 40px;\n    }\n  }\n\n  .as-seen-on-logos-wrapper {\n    white-space: nowrap;\n    position: relative;\n    width: 100%;\n  }\n\n  .as-seen-on-logos {\n    display: flex;\n    gap: 50px;\n    align-items: center;\n    animation: scroll-logos 25s linear infinite;\n    width: max-content;\n  }\n\n  .as-seen-on-logos img {\n    max-width: 160px;\n    height: auto;\n    display: inline-block;\n  }\n\n  @keyframes scroll-logos {\n  from {\n    transform: translateX(0);\n  }\n  to {\n    transform: translateX(-50%);\n    }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 6
+      }
+    },
+    "custom_image_icon_background_FqMNG9": {
+      "type": "custom-image-icon-background",
+      "blocks": {
+        "heading_MzYbMk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Key Ingredients",
+            "heading_size": "h1",
+            "heading_font_size_desktop": 40,
+            "heading_font_size_mobile": 30,
+            "heading_tag": "default"
+          }
+        },
+        "icon_text_wHgEtm": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Potassium_Nitrate.png",
+            "icon_alt": "Icon",
+            "heading": "5% Potassium Nitrate",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Helps reduce sensitivity*</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_ryTd4U": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Oral_Probiotics.webp",
+            "icon_alt": "Icon",
+            "heading": "Nano-Hydroxyapatite",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Acts as an antioxidant</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_nKAcBR": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Mint_Cream_Flavor.png",
+            "icon_alt": "Icon",
+            "heading": "Mint Cream Flavor",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Freshens breath</p>",
+            "text_style": "body"
+          }
+        },
+        "icon_text_w8JqDJ": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify://shop_images/Xylitol_19069d56-c52b-4886-8315-38fa980b02b6.webp",
+            "icon_alt": "Icon",
+            "heading": "Xylitol",
+            "heading_font_size_desktop": 18,
+            "text_font_size_desktop": 16,
+            "heading_font_size_mobile": 18,
+            "text_font_size_mobile": 14,
+            "text": "<p>Refreshes your mouth with a mild, clean flavor.</p>",
+            "text_style": "body"
+          }
+        },
+        "text_KQdfaj": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>*with twice daily brushing and when used as directed - see packaging for details.</h5>",
+            "text_style": "body"
+          }
+        },
+        "button_bpWGPA": {
+          "type": "button",
+          "settings": {
+            "button_action": "add_and_checkout",
+            "variant_id": "7744260046891",
+            "product_quantity": 1,
+            "button_label": "",
+            "button_link": "",
+            "second_button_action": "link",
+            "second_variant_id": "",
+            "second_product_quantity": 1,
+            "second_button_label": "",
+            "second_button_link": "",
+            "popup_button_label": "VIEW FULL INGREDIENTS",
+            "popup_button_style_secondary": false,
+            "popup_title": "Full Ingredients List",
+            "popup_content": "<p>Potassium Nitrate (5%), Water, Glycerin, Hydrated Silica, Sorbitol, Silica, Hydroxyapatite (nano), Sodium Lauroyl Sarcosinate, Sodium Benzoate, Xanthan Gum, Xylitol, Triacetin, Natural Flavors, Potassium Chloride, Stevia Rebaudiana Leaf/Stem Extract, Dimethyl Sulfone, Peppermint (Mentha Piperita) Oil, Sodium Bicarbonate, Spearmint (Mentha Viridis) Leaf Oil, , Menthol, Wintergreen (Gaultheria Procumbens) Leaf Oil, Anise (Illicium Verum) oil, Aloe Vera (Aloe Barbadensis) Leaf Juice, Green Tea (Camellia Sinensis) Leaf Extract, Cucumber (Cucumis Sativus) Fruit Extract, Mango (Mangifera Indica) Fruit Extract, Avocado (Persea Gratissima) Fruit Extract</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MzYbMk",
+        "icon_text_wHgEtm",
+        "icon_text_ryTd4U",
+        "icon_text_nKAcBR",
+        "icon_text_w8JqDJ",
+        "text_KQdfaj",
+        "button_bpWGPA"
+      ],
+      "custom_css": [
+        ".icon-text-item__content {text-align: left;}",
+        "@media only screen and (max-width: 749px) {.image-with-text__heading {text-align: center; } a.button.button--primary {width: 100%; max-width: 100%; }}"
+      ],
+      "name": "Image/gif icon bg text",
+      "settings": {
+        "media_type": "image",
+        "image": "shopify://shop_images/Sensitive_HP_Banner_-_Desktop_2.webp",
+        "mobile_image": "shopify://shop_images/Sensitive_PDP_A_Content.webp",
+        "background_video": "",
+        "video_overlay_opacity": 30,
+        "desktop_content_alignment": "left",
+        "text_color": "#ffffff",
+        "container_text_color": "#000000",
+        "icon_heading_color": "#000000",
+        "icon_text_color": "#666666",
+        "mobile_text_color": "#000000",
+        "mobile_container_text_color": "#000000",
+        "mobile_icon_heading_color": "#000000",
+        "mobile_icon_text_color": "#666666",
+        "container_background_color": "#ffffff",
+        "container_border_radius": 12,
+        "icon_size": 60,
+        "section_background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_TnxPaa": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rmTWDt": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>*with twice daily brushing and when used as directed - see packaging for details.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_rmTWDt"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "fadein_enabled": false,
+        "color_scheme": "background-1",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "custom_collapsible_content_p9cV6M": {
+      "type": "custom-collapsible-content",
+      "blocks": {
+        "collapsible_row_giWPe8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does Boka toothpaste for sensitive teeth work?",
+            "row_content": "<p>Our toothpaste for sensitive teeth uses 5% potassium nitrate, a science-backed ingredient that reduces and prevents sensitivity by soothing the nerves. With twice-daily brushing for two minutes, it builds protection against common triggers like cold, heat, acids, and sweets.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3brPNJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " What makes Boka Sensitive Toothpaste different from other sensitivity toothpastes?",
+            "row_content": "<p>Unlike many traditional options, Boka offers a fluoride-free sensitivity toothpaste powered by a combination of potassium nitrate and nano-hydroxyapatite (n-Ha). Originally developed for astronauts in the 1970s, n-Ha is a revolutionary material that mimics tooth enamel. </p><p>While potassium nitrate makes our paste appropriate for sensitive teeth, the addition of n-Ha means you’re brushing with a science-backed ingredient that naturally makes up 97% of your enamel. It’s a biocompatible, thoughtfully formulated solution that is free from SLS, parabens, and artificial colors.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xnRnWY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does this toothpaste provide 24/7 sensitivity protection?",
+            "row_content": "<p>Yes. With twice-daily brushing and when used as directed, Boka Sensitive Toothpaste helps provide 24/7 protection against tooth sensitivity by building protection against cold drinks, ice cream, hot soup, acidic beverages, and other triggers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9VYexg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What does \"Mint Cream\" taste like?",
+            "row_content": "<p>Our Mint Cream flavor is a mild and refreshing blend of Mint, Coconut, and Cream. It’s a silky-smooth flavor designed to make your daily brush more pleasant, providing a delicious taste without the use of artificial colors, sodium saccharin, or sucralose.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zy7XFj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " Is Boka sensitive toothpaste safe for children?",
+            "row_content": "<p>Boka Sensitive toothpaste is recommended for adults and children 12 years of age and older. For children under 12 years of age, we recommend consulting a dentist or doctor before use.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_APpybE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use Boka Sensitivity Toothpaste for best results?",
+            "row_content": "<p>Apply at least a 1-inch strip of toothpaste onto a soft-bristle toothbrush. Brush thoroughly for two minutes, twice daily, making sure to focus on all sensitive areas of the teeth. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PbXL77": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does this toothpaste help with bad breath?",
+            "row_content": "<p>Yes. Along with providing sensitivity relief, our formula contains Xylitol and botanical extracts that refresh your mouth with a mild, clean flavor. It effectively freshens breath while you brush, leaving your mouth feeling invigorated.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UUDFxQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use Boka Sensitive Toothpaste every day?",
+            "row_content": "<p>Yes. Boka Sensitive Toothpaste is safe for daily use and non-toxic when used as directed. This way, you maintain sensitivity relief and keep your mouth feeling fresh.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_DajVkF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Boka Sensitive Toothpaste vegan and cruelty-free?",
+            "row_content": "<p>Integrity is our priority. Our sensitive toothpaste is PETA cruelty-free certified and 100% vegan.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7dTA9p": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you have more questions about Boka?",
+            "row_content": "<p>Please <a href=\"mailto:hello@boka.com\" target=\"_blank\" title=\"mailto:hello@boka.com\">contact us </a>and we’ll get back to you as soon as possible.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dXKLmM": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Processing and Shipping Times",
+            "row_content": "<p>For orders placed with standard shipping, please allow 1-2 business days for processing and up to 5 business days for delivery. Exact timing can vary depending on size of the order and delivery destination. Orders placed after 1 p.m. EST on Fridays, over the weekend, or on major U.S. holidays will likely not be processed until the following business day. </p><p>Expedited orders placed after 10 a.m. EST may be shipped the following business day.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_giWPe8",
+        "collapsible_row_3brPNJ",
+        "collapsible_row_xnRnWY",
+        "collapsible_row_9VYexg",
+        "collapsible_row_zy7XFj",
+        "collapsible_row_APpybE",
+        "collapsible_row_PbXL77",
+        "collapsible_row_UUDFxQ",
+        "collapsible_row_DajVkF",
+        "collapsible_row_7dTA9p",
+        "collapsible_row_dXKLmM"
+      ],
+      "disabled": true,
+      "name": "Custom Collapsible Cont",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_tag": "default",
+        "heading_alignment": "center",
+        "description": "",
+        "heading_font_size": 16,
+        "heading_line_height": 14,
+        "icon_size": 24,
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "custom_background_color": "#333333",
+        "custom_text_color": "#ffffff",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "yotpo_reviews_widget_hbzYf6": {
+      "type": "yotpo-reviews-widget",
+      "custom_css": [
+        "div#yotpo-app {background-color: white !important;}"
+      ],
+      "name": "Yotpo Reviews Widget",
+      "settings": {
+        "product": "toothpaste-for-sensitive-teeth",
+        "product_handle": "",
+        "yotpo_instance_id": "1002005",
+        "show_heading": false,
+        "heading_text": "Customer Reviews",
+        "heading_size": 32,
+        "heading_color": "#000000",
+        "heading_alignment": "center",
+        "heading_spacing": 32,
+        "container_width": 1600,
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_feature_product_section_4f3nQW": {
+      "type": "custom-feature-product-section",
+      "blocks": {
+        "title_ytVQy6": {
+          "type": "title",
+          "settings": {
+            "title_font_size_mobile": 24,
+            "title_font_size_desktop": 40
+          }
+        },
+        "price_wQEKVG": {
+          "type": "price",
+          "settings": {
+            "hide_on_subscription_products": false
+          }
+        },
+        "variant_picker_6tqKaH": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_names": "white, blue, mint, pink",
+            "color_hex": "#FFFFFF, #46627B, #D5EBCD, #F4B6B7"
+          }
+        },
+        "buy_buttons_9jfMhw": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "title_ytVQy6",
+        "price_wQEKVG",
+        "variant_picker_6tqKaH",
+        "buy_buttons_9jfMhw"
+      ],
+      "disabled": true,
+      "name": "Product Display-new-2",
+      "settings": {
+        "product_handle": "ela-mint-toothpaste",
+        "enable_sticky_info": true,
+        "enable_sticky_atc": true,
+        "media_size": "large",
+        "lazyload": false,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "thumbnail_position": "bottom",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_tablet": 36,
+        "padding_bottom_tablet": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "footer_copyright_bar_JTwate": {
+      "type": "footer-copyright-bar",
+      "name": "Copyright Bar",
+      "settings": {
+        "store_name": "Boka.com",
+        "rights_text": "All Rights Reserved",
+        "background_color": "#f5f5f0",
+        "text_color": "#333333",
+        "font_size_desktop": 14,
+        "font_size_mobile": 12
+      }
+    }
+  },
+  "order": [
+    "boka_listicle_hero_banner_X9DaRL",
+    "review_hero_banner_VHPeMD",
+    "17657747600d7cde40",
+    "176576544784328569",
+    "17655422262dd9640d",
+    "featured_product_section_custom_UEHaA4",
+    "featured_product_TGCUYH",
+    "custom_feature_product_9Gkr6x",
+    "1765534182fed2e648",
+    "custom_liquid_CjtDWw",
+    "custom_image_icon_background_FqMNG9",
+    "rich_text_TnxPaa",
+    "custom_collapsible_content_p9cV6M",
+    "yotpo_reviews_widget_hbzYf6",
+    "main",
+    "custom_feature_product_section_4f3nQW",
+    "footer_copyright_bar_JTwate"
+  ]
+}
