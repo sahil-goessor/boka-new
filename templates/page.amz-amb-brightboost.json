@@ -710,6 +710,7 @@
         },
         "quantity_selector_CharbJ": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {}
         },
         "custom_button_yxYGgg": {
