@@ -13,8 +13,7 @@
       "type": "boka_listicle_hero_banner",
       "custom_css": [
         ".boka-timer-row {display: none;}",
-        ".boka-review-text {text-decoration: underline;}",
-        "a.boka-walmart {display: none !important;}"
+        ".boka-review-text {text-decoration: underline;}"
       ],
       "name": "Listicle Hero Banner",
       "settings": {
@@ -39,7 +38,7 @@
         "body_font_size": 14,
         "cta_text": "",
         "cta_url": "",
-        "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_B6C9CA76B8B7B5D5FC3DA534B7CE81D2_afap_abs&ref_=aa_maas&tag=maas&th=1",
+        "amazon_url": "",
         "button_action": "link",
         "variant_id": "",
         "product_quantity": 0,
@@ -49,10 +48,17 @@
         "button_border_radius": 4,
         "show_walmart_banner": true,
         "walmart_text": "Find it at your nearest Walmart",
-        "walmart_url": "",
+        "walmart_url": "https://www.walmart.com/ip/Boka-Fluoride-Free-Toothpaste-Nano-Hydroxyapatite-Toothpaste-Sensitive-Toothpaste-Mint-Cream-Flavor-3-4oz/18061968796",
+        "walmart_section_id": "",
         "walmart_bg_color": "#fff8e7",
         "walmart_border_color": "#ffc220",
         "walmart_text_color": "#1a1a1a",
+        "show_pulse_box": false,
+        "pulse_heading": "Black Friday Cyber Monday Sale:",
+        "pulse_text": "$13.00 $9.99 our best deal this year!",
+        "pulse_bg_color": "#dff0d8",
+        "pulse_border_color": "#7baf7b",
+        "pulse_text_color": "#1a1a1a",
         "show_timer": false,
         "timer_label_text": "Grab everyone's favorite Ela Mint n-Ha Toothpaste Now!",
         "timer_end_date": "Dec 31, 2025 23:59:59",
