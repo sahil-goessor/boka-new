@@ -718,7 +718,7 @@
         "@media (min-width: 990px) and (max-width: 1300px) {.featured-product .product__media-list {width: 90% !important; }}",
         "button.quick-add__submit.button.button--full-width.button--primary.card--horizontal__quick-add {height: 45px;}",
         "span.yotpo-sr-bottom-line-right-panel,span.yotpo-sr-vertical-border,div#sticky-atc-variant-featured,a.link.product__view-details.animate-arrow {display: none !important;}",
-        "span.h4 > strong {font-family: \"Archivo\";}"
+        ".sticky-atc__price-wrapper {display: none;}"
       ],
       "name": "feature product section new",
       "settings": {
