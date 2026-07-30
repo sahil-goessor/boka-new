@@ -405,6 +405,23 @@
                     </svg>
                   </a>
                 {% endif %}
+                {%- when 'walmart_button' -%}
+                {% if block.settings.walmart_url != blank %}
+                  <a href="{{ block.settings.walmart_url }}" target="_blank" rel="noopener" class="boka-featured-walmart-btn" {{ block.shopify_attributes }}>
+                    <strong>Buy on</strong>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.4a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0V3.5A1.1 1.1 0 0 1 12 2.4Z" fill="#FFC220"/>
+                      <path d="M12 16.1a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-2.2 0v-3.3a1.1 1.1 0 0 1 1.1-1.1Z" fill="#FFC220"/>
+                      <path d="M21.6 12a1.1 1.1 0 0 1-1.1 1.1h-3.3a1.1 1.1 0 0 1 0-2.2h3.3A1.1 1.1 0 0 1 21.6 12Z" fill="#FFC220"/>
+                      <path d="M7.9 12a1.1 1.1 0 0 1-1.1 1.1H3.5a1.1 1.1 0 0 1 0-2.2h3.3A1.1 1.1 0 0 1 7.9 12Z" fill="#FFC220"/>
+                      <path d="M18.98 5.02a1.1 1.1 0 0 1 0 1.556l-2.334 2.334a1.1 1.1 0 1 1-1.556-1.556L17.424 5.02a1.1 1.1 0 0 1 1.556 0Z" fill="#FFC220"/>
+                      <path d="M8.91 15.09a1.1 1.1 0 0 1 0 1.556L6.576 18.98a1.1 1.1 0 1 1-1.556-1.556L7.354 15.09a1.1 1.1 0 0 1 1.556 0Z" fill="#FFC220"/>
+                      <path d="M5.02 5.02a1.1 1.1 0 0 1 1.556 0L8.91 7.354a1.1 1.1 0 1 1-1.556 1.556L5.02 6.576a1.1 1.1 0 0 1 0-1.556Z" fill="#FFC220"/>
+                      <path d="M15.09 15.09a1.1 1.1 0 0 1 1.556 0l2.334 2.334a1.1 1.1 0 1 1-1.556 1.556L15.09 16.646a1.1 1.1 0 0 1 0-1.556Z" fill="#FFC220"/>
+                    </svg>
+                    <strong>Walmart</strong>
+                  </a>
+                {% endif %}
               {%- when 'custom_button' -%}
                 {% if block.settings.button_text != blank %}
                   
@@ -770,10 +787,13 @@
 -%}
 
 <!-- Sticky Add to Cart Bar -->
+<!-- Sticky Add to Cart Bar -->
 {% assign amazon_block = section.blocks | where: "type", "amazon_button" | first %}
+{% assign walmart_block = section.blocks | where: "type", "walmart_button" | first %}
 <div id="sticky-atc-featured" 
   class="sticky-atc sticky-atc-featured hidden"
-  data-amazon-url="{% if amazon_block and amazon_block.settings.replace_sticky_atc %}{{ amazon_block.settings.amazon_url }}{% endif %}">
+  data-amazon-url="{% if amazon_block and amazon_block.settings.replace_sticky_atc %}{{ amazon_block.settings.amazon_url }}{% endif %}"
+  data-walmart-url="{% if walmart_block and walmart_block.settings.replace_sticky_atc %}{{ walmart_block.settings.walmart_url }}{% endif %}">
   <div class="sticky-atc__inner">
     <div class="sticky-atc__left">
       <img id="sticky-atc-media-featured" class="sticky-atc__media" src="" alt="">
@@ -813,20 +833,21 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Featured Product - Section ID:', sectionId);
   console.log('Featured Product - Form found:', mainForm);
 
-  // Get amazon URL from sticky bar data attribute
+ // Get amazon/walmart URLs from sticky bar data attributes
   const amazonUrl = sticky ? sticky.getAttribute('data-amazon-url') : '';
+  const walmartUrl = sticky ? sticky.getAttribute('data-walmart-url') : '';
 
   // Check if a custom button exists on this page
   const customButtonPresent = !!document.querySelector('.featured-product .boka-custom-button');
 
-  // Only bail if BOTH form and amazon URL are missing
+  // Only bail if form, amazon URL, walmart URL, AND custom button are all missing
   if (!sticky) {
     console.error('Featured Product - Sticky bar not found');
     return;
   }
 
-  if (!mainForm && !amazonUrl && !customButtonPresent) {
-    console.error('Featured Product - No form, no Amazon URL, and no custom button, sticky bar disabled');
+  if (!mainForm && !amazonUrl && !walmartUrl && !customButtonPresent) {
+    console.error('Featured Product - No form, no Amazon/Walmart URL, and no custom button, sticky bar disabled');
     return;
   }
 
@@ -1448,25 +1469,73 @@ span.h4.inline-richtext {
   background-color: #0e85e8;
 }
 
+.boka-featured-walmart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #0071ce;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 13px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 100%;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.boka-featured-walmart-btn strong {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.boka-featured-walmart-btn svg {
+  display: block;
+}
+
+.boka-featured-walmart-btn:hover {
+  background-color: #005ca8;
+}
+
 @media screen and (max-width: 749px) {
-  .boka-featured-amazon-btn {
+  .boka-featured-amazon-btn,
+  .boka-featured-walmart-btn {
     width: 100%;
     padding: 13px 20px;
   }
 }
 
-.sticky-atc__button > .boka-featured-amazon-btn {
+.sticky-atc__button > .boka-featured-amazon-btn,
+.sticky-atc__button > .boka-featured-walmart-btn {
 padding: unset;
 }
 
-.sticky-atc__button > .boka-featured-amazon-btn svg {
+.sticky-atc__button > .boka-featured-amazon-btn svg,
+.sticky-atc__button > .boka-featured-walmart-btn svg {
   margin-top: 8px;
 }
 
-.sticky-atc__button > .boka-featured-amazon-btn strong {
+.sticky-atc__button > .boka-featured-amazon-btn strong,
+.sticky-atc__button > .boka-featured-walmart-btn strong {
   font-size: 15px;
 }
 
+.sticky-atc__button.sticky-atc__button--dual {
+  display: flex;
+  gap: 8px;
+}
+
+.sticky-atc__button--dual .boka-featured-amazon-btn,
+.sticky-atc__button--dual .boka-featured-walmart-btn {
+  margin-top: 0;
+  flex: 1;
+}
 .boka-pdp-pulse-box {
   display: flex;
   align-items: center;
@@ -1833,6 +1902,25 @@ font-family: "archivo";
           "label": "Replace sticky Add to Cart with Amazon button",
           "default": false,
           "info": "When enabled, the sticky bar's Add to Cart button will be replaced with the Buy on Amazon button"
+        }
+      ]
+    },
+    {
+      "type": "walmart_button",
+      "name": "Walmart Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "walmart_url",
+          "label": "Walmart Product URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "replace_sticky_atc",
+          "label": "Replace sticky Add to Cart with Walmart button",
+          "default": false,
+          "info": "When enabled, the sticky bar's Add to Cart button will include the Buy on Walmart button"
         }
       ]
     },
