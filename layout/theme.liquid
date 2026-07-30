@@ -683,7 +683,7 @@
     {% if settings.theme_enable_customjs %}<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>{% endif %}
 
     {% render 'amazon-ads' %}
-    {% assign target_pages = 'amz-toothpaste-for-sensitive-teeth,amz-brightboost,ntb-dtc-walmart,edu-ela-mint-toothpaste-for-new-customers,ntb-brightboost-whitening-powder,ugc-video-listicle-2,ela-mint-static-listicle-ntb-sns,ugc-video-listicle-amz-2-promo,ugc-video-listicle-amz-3-promo,ela-mint-static-listicle,ugc-video-listicle-amz-2,ugc-video-listicle-amz-3' | split: ',' %}
+    {% assign target_pages = 'amz-toothpaste-for-sensitive-teeth,amz-brightboost,ntb-dtc-walmart,edu-ela-mint-toothpaste-for-new-customers,ntb-brightboost-whitening-powder,ugc-video-listicle-2,ela-mint-static-listicle-ntb-sns,ugc-video-listicle-amz-2-promo,ugc-video-listicle-amz-3-promo,ela-mint-static-listicle,ugc-video-listicle-amz-2,ugc-video-listicle-amz-3,wmt-toothpaste-for-sensitive-teeth' | split: ',' %}
     {% if request.page_type == 'page' and target_pages contains page.handle %}
       <style>
         nav.header__inline-menu { display: none; }
