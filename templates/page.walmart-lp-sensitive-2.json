@@ -609,8 +609,16 @@
             "show_dynamic_checkout": false
           }
         },
+        "walmart_button_R4MbrG": {
+          "type": "walmart_button",
+          "settings": {
+            "walmart_url": "https://www.walmart.com/ip/Boka-Fluoride-Free-Toothpaste-Nano-Hydroxyapatite-Toothpaste-Sensitive-Toothpaste-Mint-Cream-Flavor-3-4oz/18061968796",
+            "replace_sticky_atc": true
+          }
+        },
         "amazon_button_C8Byrd": {
           "type": "amazon_button",
+          "disabled": true,
           "settings": {
             "amazon_url": "https://www.amazon.com/Sensitivity-Toothpaste-Mint-Coconut-Cream/dp/B0CYJ5ZS34?maas=maas_adg_B6C9CA76B8B7B5D5FC3DA534B7CE81D2_afap_abs&ref_=aa_maas&tag=maas&th=1",
             "replace_sticky_atc": true
@@ -694,6 +702,7 @@
         "yotpo_widget_aEd8ik",
         "price_T7pXW7",
         "buy_buttons_j3VN3h",
+        "walmart_button_R4MbrG",
         "amazon_button_C8Byrd",
         "tolstoy_shoppable_video_quiz_stories_block_nibVCx",
         "description_9m494J",
