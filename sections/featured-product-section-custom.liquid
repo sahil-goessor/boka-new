@@ -787,7 +787,6 @@
 -%}
 
 <!-- Sticky Add to Cart Bar -->
-<!-- Sticky Add to Cart Bar -->
 {% assign amazon_block = section.blocks | where: "type", "amazon_button" | first %}
 {% assign walmart_block = section.blocks | where: "type", "walmart_button" | first %}
 <div id="sticky-atc-featured" 
@@ -833,7 +832,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Featured Product - Section ID:', sectionId);
   console.log('Featured Product - Form found:', mainForm);
 
- // Get amazon/walmart URLs from sticky bar data attributes
+  // Get amazon/walmart URLs from sticky bar data attributes
   const amazonUrl = sticky ? sticky.getAttribute('data-amazon-url') : '';
   const walmartUrl = sticky ? sticky.getAttribute('data-walmart-url') : '';
 
@@ -860,7 +859,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let currentProduct = null;
 
-  // ── Render Amazon button in sticky bar ──
   // ── Render Amazon / Walmart buttons in sticky bar ──
   function buildAmazonBtn() {
     const amazonBtn = document.createElement('a');
@@ -950,8 +948,8 @@ document.addEventListener('DOMContentLoaded', function() {
       priceEl.innerHTML = '$' + (productPrice / 100).toFixed(2);
     }
 
-    // Render the Amazon button
-    renderAmazonButton();
+    // Render the Amazon/Walmart button(s)
+    renderPartnerButtons();
   }
 
   // ── Custom button mode (clones the on-page custom button) ──
@@ -985,7 +983,6 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonContainerEl.appendChild(clonedBtn);
   }
 
-  // ── Main updateSticky ──
   // ── Main updateSticky ──
   function updateSticky() {
     console.log('Featured Product - Updating sticky bar...');
@@ -1134,48 +1131,48 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ── Show/hide sticky bar on scroll ──
-function handleScroll() {
-  let anchorEl = document.querySelector('.product-form__buttons') ||
-                 document.querySelector(`#price-${sectionId}`) ||
-                 document.querySelector(`#ProductInfo-${sectionId}`) ||
-                 document.querySelector('.featured-product .product__info-wrapper') ||
-                 document.querySelector('.featured-product');
+  function handleScroll() {
+    let anchorEl = document.querySelector('.product-form__buttons') ||
+                   document.querySelector(`#price-${sectionId}`) ||
+                   document.querySelector(`#ProductInfo-${sectionId}`) ||
+                   document.querySelector('.featured-product .product__info-wrapper') ||
+                   document.querySelector('.featured-product');
 
-  if (!anchorEl) return;
+    if (!anchorEl) return;
 
-  const isMobile = window.innerWidth < 750;
+    const isMobile = window.innerWidth < 750;
 
-  // ── Mobile: always show sticky bar from page load ──
-  if (isMobile) {
-    if (sticky.classList.contains('hidden')) {
-      sticky.classList.remove('hidden');
-      updateSticky();
+    // ── Mobile: always show sticky bar from page load ──
+    if (isMobile) {
+      if (sticky.classList.contains('hidden')) {
+        sticky.classList.remove('hidden');
+        updateSticky();
+      }
+      return;
     }
-    return;
-  }
 
-  // ── Desktop: original logic unchanged ──
-  const anchorRect = anchorEl.getBoundingClientRect();
-  const wasHidden = sticky.classList.contains('hidden');
+    // ── Desktop: original logic unchanged ──
+    const anchorRect = anchorEl.getBoundingClientRect();
+    const wasHidden = sticky.classList.contains('hidden');
 
-  const heroBannerCta = document.querySelector('.boka-hero__container');
-  let heroBannerInView = false;
-  if (heroBannerCta) {
-    const heroBannerRect = heroBannerCta.getBoundingClientRect();
-    heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
-  }
-
-  const anchorOffScreen = anchorRect.bottom < 0 || anchorRect.top > window.innerHeight;
-
-  if (anchorOffScreen && !heroBannerInView) {
-    if (wasHidden) {
-      sticky.classList.remove('hidden');
-      updateSticky();
+    const heroBannerCta = document.querySelector('.boka-hero__container');
+    let heroBannerInView = false;
+    if (heroBannerCta) {
+      const heroBannerRect = heroBannerCta.getBoundingClientRect();
+      heroBannerInView = heroBannerRect.top < window.innerHeight && heroBannerRect.bottom > 0;
     }
-  } else {
-    sticky.classList.add('hidden');
+
+    const anchorOffScreen = anchorRect.bottom < 0 || anchorRect.top > window.innerHeight;
+
+    if (anchorOffScreen && !heroBannerInView) {
+      if (wasHidden) {
+        sticky.classList.remove('hidden');
+        updateSticky();
+      }
+    } else {
+      sticky.classList.add('hidden');
+    }
   }
-}
   window.addEventListener('scroll', handleScroll);
 
   // ── Variant change listeners ──
@@ -1230,15 +1227,14 @@ function handleScroll() {
     }
   }
 
-  // Initial updates
-// Initial updates — show immediately on mobile without waiting for scroll
-if (window.innerWidth < 750) {
-  sticky.classList.remove('hidden');
-  updateSticky();
-}
+  // Initial updates — show immediately on mobile without waiting for scroll
+  if (window.innerWidth < 750) {
+    sticky.classList.remove('hidden');
+    updateSticky();
+  }
 
-setTimeout(() => { updateSticky(); }, 500);
-setTimeout(() => { updateSticky(); }, 1500);
+  setTimeout(() => { updateSticky(); }, 500);
+  setTimeout(() => { updateSticky(); }, 1500);
 });
 </script>
 
